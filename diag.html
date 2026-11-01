@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>知识地图诊断</title>
+<style>
+  body { background:#0b1020; color:#e8ecf5; font-family:"SF Mono",Menlo,monospace; padding:28px; line-height:1.7; }
+  h1 { color:#f2d79a; font-size:20px; }
+  #log { white-space:pre-wrap; font-size:13px; background:#111a2e; border:1px solid #2a3a5a; border-radius:8px; padding:16px; }
+  .ok { color:#8fe3c0; } .bad { color:#ff9aa8; } .dim { color:#8b98b3; }
+</style>
+</head>
+<body>
+<h1>知识地图 · 加载诊断</h1>
+<div id="log"></div>
+<script>
+  var box = document.getElementById('log');
+  function log(msg, cls) {
+    var line = document.createElement('div');
+    if (cls) line.className = cls;
+    line.textContent = msg;
+    box.appendChild(line);
+  }
+  window.addEventListener('error', function (e) {
+    log('脚本错误：' + (e.message || e.error) + '  @ ' + (e.filename || '?') + ':' + (e.lineno || 0), 'bad');
+  }, true);
+
+  var files = [
+    'overview.js',
+    'analysis.js', 'analysis-b.js', 'analysis-c.js',
+    'foundations-a.js', 'foundations-b.js',
+    'algebra-a.js', 'algebra-b.js',
+    'numbertheory-a.js', 'numbertheory-b.js',
+    'geometry-a.js', 'geometry-b.js',
+    'applied-a.js', 'applied-b.js',
+    'discrete-a.js', 'discrete-b.js',
+    'probability-a.js', 'probability-b.js',
+    'extras-analysis-a.js', 'extras-analysis-b.js', 'extras-analysis-c.js',
+    'extras-foundations.js', 'extras-algebra.js', 'extras-numbertheory.js',
+    'extras-geometry.js', 'extras-applied.js', 'extras-discrete.js', 'extras-probability.js'
+  ];
+  var i = 0;
+  function next() {
+    if (i >= files.length) {
+      var subs = (window.ATLAS && window.ATLAS.subjects) || {};
+      var names = Object.keys(subs);
+      var total = 0, branches = 0;
+      names.forEach(function (k) {
+        (subs[k].branches || []).forEach(function (b) { branches++; total += (b.topics || []).length; });
+      });
+      log('—'.repeat(40), 'dim');
+      log('数据加载完成：' + names.length + ' 个学科 / ' + branches + ' 个分支 / ' + total + ' 个知识点', names.length === 8 ? 'ok' : 'bad');
+      log('总览数据：' + (window.ATLAS && window.ATLAS.overview ? '正常' : '缺失'), window.ATLAS && window.ATLAS.overview ? 'ok' : 'bad');
+      log('现在可以关闭本页，打开 index.html。若上方有红色错误，请把红色文字发给我。', 'dim');
+      return;
+    }
+    var f = files[i++];
+    var s = document.createElement('script');
+    s.src = 'js/data/' + f;
+    s.onload = function () { log('已加载  ' + f, 'ok'); next(); };
+    s.onerror = function () { log('加载失败 ' + f, 'bad'); next(); };
+    document.body.appendChild(s);
+  }
+  next();
+</script>
+</body>
+</html>

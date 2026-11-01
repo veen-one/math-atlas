@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学知识地图 · Math Atlas</title>
+<meta name="description" content="从一张知识地图出发，看见整个数学世界。点击任意知识点，阅读原理、公式与例子。">
+<script>
+  (function () {
+    var sources = [
+      'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
+      'https://unpkg.com/katex@0.16.11/dist/katex.min.css',
+      'https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.11/katex.min.css'
+    ];
+    function tryLoad(i) {
+      if (i >= sources.length) return;
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = sources[i];
+      link.onerror = function () {
+        link.parentNode && link.parentNode.removeChild(link);
+        tryLoad(i + 1);
+      };
+      document.head.appendChild(link);
+    }
+    tryLoad(0);
+  })();
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="errorBanner" style="display:none;position:fixed;left:14px;bottom:14px;z-index:999;max-width:min(560px,90vw);padding:12px 16px;background:#2c0f1a;border:1px solid #8e3b4e;border-radius:10px;color:#f3c6cf;font:12px/1.6 ui-monospace,Menlo,monospace;white-space:pre-wrap;"></div>
+<script>
+  window.addEventListener('error', function (e) {
+    if (e.target && e.target !== window) return;
+    var box = document.getElementById('errorBanner');
+    if (!box) return;
+    box.style.display = 'block';
+    var detail = e.message
+      || (e.target && (e.target.src || e.target.href))
+      || (e.error && e.error.message)
+      || '未知错误';
+    box.textContent = '页面脚本错误：' + detail + (e.filename ? '\n' + e.filename + ':' + (e.lineno || 0) : '');
+  }, true);
+</script>
+<div class="starfield" aria-hidden="true">
+  <div class="stars stars-a"></div>
+  <div class="stars stars-b"></div>
+  <div class="stars stars-c"></div>
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#/" id="brand">
+    <span class="brand-mark">∑</span>
+    <span class="brand-text">数学知识地图</span>
+  </a>
+  <nav class="crumbs" id="crumbs" aria-label="导航"></nav>
+  <div class="topbar-right">
+    <button class="search-trigger" id="searchTrigger" aria-label="搜索知识点">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <span>搜索知识点</span>
+      <kbd>⌘K</kbd>
+    </button>
+    <button class="soft-btn" id="randomBtn" title="随机打开一个知识点">随机</button>
+    <span class="progress-badge" id="progressBadge">已读 0/319</span>
+    <button class="icon-btn" id="zoomOut" title="缩小" aria-label="缩小">−</button>
+    <button class="icon-btn" id="zoomReset" title="重置视图" aria-label="重置视图">◎</button>
+    <button class="icon-btn" id="zoomIn" title="放大" aria-label="放大">＋</button>
+  </div>
+</header>
+
+<main class="stage" id="stage">
+  <div class="map-wrap" id="mapWrap">
+    <canvas id="sphereCanvas" aria-label="三维知识球"></canvas>
+    <svg id="map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="知识地图"></svg>
+  </div>
+  <aside class="sidebar" id="sidebar" aria-label="学科目录"></aside>
+  <div class="sphere-controls" id="sphereControls">
+    <button class="ctrl-btn" id="spinToggle" title="暂停/继续自动旋转">暂停自转</button>
+    <button class="ctrl-btn" id="favFilter" title="只显示收藏的知识点">只看收藏</button>
+    <button class="ctrl-btn" id="sphereReset" title="重置球体视角">重置视角</button>
+  </div>
+  <div class="map-hint" id="mapHint">
+    <span>拖拽旋转 · 滚轮缩放 · 点击知识点查看详解</span>
+  </div>
+</main>
+
+<section class="panel" id="panel" aria-hidden="true" role="dialog" aria-label="知识点详解">
+  <div class="panel-scrim" id="panelScrim"></div>
+  <article class="panel-card" id="panelCard">
+    <div class="panel-inner" id="panelInner"></div>
+  </article>
+</section>
+
+<div class="search-modal" id="searchModal" aria-hidden="true" role="dialog" aria-label="搜索">
+  <div class="search-scrim" id="searchScrim"></div>
+  <div class="search-box">
+    <div class="search-field">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="搜索概念、定理、学科……" autocomplete="off" spellcheck="false">
+      <kbd>ESC</kbd>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <div class="search-empty" id="searchEmpty">
+      <p>试试「一致收敛」「群论」「黎曼」「熵」</p>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="noscript-note">需要启用 JavaScript 才能浏览知识地图。</p></noscript>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+  (function () {
+    if (window.katex) return;
+    var sources = [
+      'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js',
+      'https://unpkg.com/katex@0.16.11/dist/katex.min.js',
+      'https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.11/katex.min.js'
+    ];
+    function load(i) {
+      if (i >= sources.length) return;
+      var script = document.createElement('script');
+      script.src = sources[i];
+      script.async = true;
+      script.onerror = function () { load(i + 1); };
+      document.head.appendChild(script);
+    }
+    load(0);
+  })();
+</script>
+<script src="js/data/overview.js"></script>
+<script src="js/data/analysis.js"></script>
+<script src="js/data/analysis-b.js"></script>
+<script src="js/data/analysis-c.js"></script>
+<script src="js/data/foundations-a.js"></script>
+<script src="js/data/foundations-b.js"></script>
+<script src="js/data/algebra-a.js"></script>
+<script src="js/data/algebra-b.js"></script>
+<script src="js/data/numbertheory-a.js"></script>
+<script src="js/data/numbertheory-b.js"></script>
+<script src="js/data/geometry-a.js"></script>
+<script src="js/data/geometry-b.js"></script>
+<script src="js/data/applied-a.js"></script>
+<script src="js/data/applied-b.js"></script>
+<script src="js/data/discrete-a.js"></script>
+<script src="js/data/discrete-b.js"></script>
+<script src="js/data/probability-a.js"></script>
+<script src="js/data/probability-b.js"></script>
+<script src="js/data/extras-analysis-a.js"></script>
+<script src="js/data/extras-analysis-b.js"></script>
+<script src="js/data/extras-analysis-c.js"></script>
+<script src="js/data/extras-foundations.js"></script>
+<script src="js/data/extras-algebra.js"></script>
+<script src="js/data/extras-numbertheory.js"></script>
+<script src="js/data/extras-geometry.js"></script>
+<script src="js/data/extras-applied.js"></script>
+<script src="js/data/extras-discrete.js"></script>
+<script src="js/data/extras-probability.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
