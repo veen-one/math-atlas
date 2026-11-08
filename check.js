@@ -7,8 +7,15 @@ const sandbox = { window: { ATLAS: { subjects: {} } } };
 vm.createContext(sandbox);
 
 const dir = path.join(root, 'js/data');
-const files = fs.readdirSync(dir).filter(f => f.endsWith('.js')).sort();
+const files = [...fs.readFileSync(path.join(root, 'index.html'), 'utf8').matchAll(/<script src="js\/data\/([^"]+)"><\/script>/g)].map(m => m[1]);
 let errors = 0;
+if (!files.length || new Set(files).size !== files.length) {
+  throw new Error('Data scripts missing or loaded twice in index.html');
+}
+const onDisk = fs.readdirSync(dir).filter(f => f.endsWith('.js'));
+for (const f of onDisk) {
+  if (!files.includes(f)) { errors++; console.log('UNLOADED DATA', f); }
+}
 
 for (const f of files) {
   const code = fs.readFileSync(path.join(dir, f), 'utf8');
@@ -65,7 +72,7 @@ for (const sid in subjects) {
       for (const ref of t.related || []) {
         let target = ref;
         if (!ref.includes('/')) target = sid + '/' + ref;
-        if (!ids.has(target)) console.log('BAD RELATED', sid + '/' + t.id, '->', ref);
+        if (!ids.has(target)) { errors++; console.log('BAD RELATED', sid + '/' + t.id, '->', ref); }
       }
     }
   }
@@ -74,9 +81,47 @@ for (const sid in subjects) {
 if (sandbox.window.ATLAS.overview) {
   for (const b of sandbox.window.ATLAS.overview.branches) {
     for (const t of b.topics || []) {
-      if (!ids.has(b.id + '/' + t.id)) console.log('BAD OVERVIEW LEAF', b.id, '->', t.id);
+      if (!ids.has(b.id + '/' + t.id)) { errors++; console.log('BAD OVERVIEW LEAF', b.id, '->', t.id); }
     }
   }
+}
+
+
+const extras = sandbox.window.ATLAS.extras || {};
+const learning = sandbox.window.ATLAS.learning || {};
+for (const key of ids) {
+  const card = learning[key];
+  if (!card || ['boundary', 'question', 'answer'].some(f => typeof card[f] !== 'string' || !card[f].trim())) {
+    errors++; console.log('MISSING LEARNING CARD', key);
+  }
+  if (!extras[key] || !extras[key].insight || !extras[key].examples?.length) {
+    errors++; console.log('MISSING EXTRAS', key);
+  }
+}
+for (const collection of [extras, learning]) {
+  for (const key of Object.keys(collection)) {
+    if (!ids.has(key)) { errors++; console.log('ORPHAN SUPPLEMENT', key); }
+  }
+}
+function checkStrings(value, location) {
+  if (typeof value === 'string') {
+    if (/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(value)) {
+      errors++; console.log('INVALID CONTROL CHARACTER', location);
+    }
+  } else if (value && typeof value === 'object') {
+    for (const [key, child] of Object.entries(value)) checkStrings(child, location + '/' + key);
+  }
+}
+checkStrings(sandbox.window.ATLAS, 'ATLAS');
+if (ids.size !== 319 || Object.keys(learning).length !== 319) {
+  errors++; console.log('UNEXPECTED TOPIC COVERAGE', ids.size, Object.keys(learning).length);
+}
+// The standalone build must use the exact same script sequence as the website.
+const builder = fs.readFileSync(path.join(root, 'build_single.py'), 'utf8');
+const dataList = builder.match(/DATA_FILES = \[([\s\S]*?)\]/);
+const bundled = dataList ? [...dataList[1].matchAll(/'([^']+\.js)'/g)].map(m => m[1]) : [];
+if (JSON.stringify(bundled) !== JSON.stringify(files)) {
+  errors++; console.log('BUNDLE DATA ORDER MISMATCH');
 }
 
 console.log('\n' + stats.join('\n'));

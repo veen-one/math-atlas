@@ -55,3 +55,14 @@ docs/content-spec.md         数据格式与写作规范
 | 离散数学与计算 | 8 | 40 |
 
 共 8 学科、64 分支、319 个知识点。
+
+## 深化学习内容
+
+全部 319 个知识点在原有定义、直觉、公式和例子外，增加逐点编写的“适用条件与易错点”及“自测与推理”。解析默认折叠，便于先作答再核对；新增正文、补充例子和公式说明也参与搜索。
+
+- `js/data/learning.js`：网站实际加载的 319 张深化卡片。
+- `scripts/deepen-content.py`：逐点编写的原始内容及确定性生成脚本。修改后运行 `python3 scripts/deepen-content.py`。
+- `node check.js`：按页面顺序执行全部数据，检查知识点、补充卡片、失效关联、控制字符和打包顺序。
+- `python3 build_single.py --offline`：跳过外部样式下载，生成单文件页面；公式仍沿用 CDN 回退，完全断网时显示 LaTeX 源文。
+
+本轮具体修改与验证见 `docs/content-upgrade.md`。

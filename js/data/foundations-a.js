@@ -77,7 +77,7 @@ window.ATLAS.subjects.foundations = {
             }
           ],
           example: [
-            '在自然数论域中，$\\forall x \\exists y\\, (y > x)$ 为真；若把论域换成有限集合 $\\{1, \\dots, n\\}$，它仍为真（取 $y = x+1$，需要 $x < n$ 时成立），但 $\\exists x \\forall y\\, (y \\le x)$ 只在有限论域中才能成立，这说明许多性质依赖于论域的大小。'
+            '在自然数论域中，$\\forall x \\exists y\\, (y > x)$ 为真；若把论域换成有限集合 $\\{1, \\dots, n\\}$，它为假（取 $x=n$ 就找不到论域内更大的 $y$），但 $\\exists x \\forall y\\, (y \\le x)$ 在这个有限论域中成立，而在通常次序的自然数论域中不成立，这说明许多性质依赖于论域的大小。'
           ],
           related: ['propositional-logic', 'formal-language', 'satisfaction']
         },
@@ -282,11 +282,11 @@ window.ATLAS.subjects.foundations = {
           keywords: ['序数分析', '证明论序数', 'ε₀', 'Gentzen'],
           definition: [
             '**序数分析**是证明论的一个分支：给形式理论 $T$ 指派一个序数 $\\alpha$，称为**证明论序数**，用于度量 $T$ 能证明哪些良序性以及它的证明强度。',
-            'Gentzen（1936）证明了皮亚诺算术 PA 的证明论序数为 $\\varepsilon_0$，从而在原始递归算术的元理论中证明了 PA 的相容性。'
+            'Gentzen（1936）证明了皮亚诺算术 PA 的证明论序数为 $\\varepsilon_0$，其相容性证明需要在弱算术元理论上加入适当的、沿该序数记号系统的超限归纳原则。'
           ],
           intuition: [
             '一个理论越强，能证明的良序越长。证明论序数就是理论“能够容忍的最长递归下降”的长度。若一个理论证明某个序数良序，而另一个理论更强，它就能证明更长的序数良序。',
-            '哥德尔第二不完备性定理说明 PA 无法证明自身相容性；Gentzen 的证明之所以可能，是因为使用了 PA 本身无法形式化的超限归纳（到 $\\varepsilon_0$）——强度被“借”了出去。'
+            '哥德尔第二不完备性定理说明 PA 无法证明自身相容性；Gentzen 的证明之所以可能，是因为使用了不能仅由 PA 证明其充分强度的超限归纳原则（到 $\\varepsilon_0$）——强度被“借”了出去。'
           ],
           formulas: [
             {
@@ -472,7 +472,7 @@ window.ATLAS.subjects.foundations = {
           ],
           intuition: [
             '切规则对应数学中的“引理”：先证明引理 $A$，再用它证明主定理。切消定理说引理总是可以被“展开”直接嵌入主证明，虽然证明会变长。',
-            '子公式性质是自动证明与证明复杂性的基础：它保证了搜索空间有界，也给出了直觉主义逻辑的析取性质等元定理。'
+            '子公式性质是自动证明与证明复杂性的基础：它限制了证明中出现的公式形状，但一阶量词实例仍可能产生无限搜索，不能据此推出一阶逻辑可判定，也给出了直觉主义逻辑的析取性质等元定理。'
           ],
           formulas: [
             {
@@ -481,11 +481,11 @@ window.ATLAS.subjects.foundations = {
             },
             {
               tex: '\\text{若 } \\vdash A \\lor B \\text{ 可证，则 } \\vdash A \\text{ 或 } \\vdash B \\text{ 可证}',
-              caption: '子公式性质的一个推论：析取性质。'
+              caption: '直觉主义命题逻辑 LJ 的析取性质；经典 LK 不满足这一结论。'
             }
           ],
           example: [
-            'Gentzen 用切消定理证明 PA 的相容性：若 $\\vdash 0=1$，则存在无切证明；但对无切证明的结构分析表明这不可能。'
+            'Gentzen 对 PA 的相容性证明结合了证明约化与到 $\\varepsilon_0$ 的适当超限归纳，并非只靠纯逻辑的切消定理：若 $\\vdash 0=1$，可对假定证明作序数下降分析；额外的超限归纳排除这种无限下降，从而排除矛盾证明。'
           ],
           related: ['sequent-calculus', 'consistency', 'ordinal-analysis']
         },

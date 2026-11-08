@@ -403,7 +403,7 @@ window.ATLAS.subjects.applied = {
           example: [
             '模型 $y = (ab)x$ 中，$a$ 与 $b$ 不可单独辨识，只能辨识乘积 $ab$。'
           ],
-          related: ['identifiability', 'parameter-inversion', 'probability/statistical-inference']
+          related: ['identifiability', 'parameter-inversion', 'probability/point-estimation']
         },
         {
           id: 'parameter-inversion',

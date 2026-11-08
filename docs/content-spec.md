@@ -646,3 +646,13 @@ window.ATLAS.subjects.analysis.branches.push(
 5. 没有重复的 topic id。
 
 完成后报告：文件路径、分支数、知识点数、任何偏离规范之处。
+
+## 7. 深化卡片（learning）
+
+`js/data/learning.js` 在所有学科及 extras 后、app.js 前加载。键为完整的 `subject/topic`。所有 319 个知识点必须有且仅有一张卡片。
+
+- `boundary`：明确条件、概念边界或常见误用，避免泛泛提醒。
+- `question`：一个能独立理解的具体自测问题。
+- `answer`：给出结论及计算、反例、构造或推理依据；涉及定理时保留关键前提。
+
+源码保存在 `scripts/deepen-content.py`，由脚本转义为单引号 JavaScript 字符串。禁止使用默认模板给缺失知识点填充套话。检查器将缺失卡片、孤立卡片或关联目标不存在视为失败。

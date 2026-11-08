@@ -150,7 +150,7 @@ window.ATLAS.subjects.probability.branches.push(
         example: [
           'A/B 测试随机分配用户到新旧界面，比较转化率；随机化保证两组在未观测特征上可比。'
         ],
-        related: ['hypothesis-testing', 'causal-inference', 'confounding']
+        related: ['hypothesis-testing', 'interventions-effects', 'confounding']
       },
       {
         id: 'identification-conditions',

@@ -94,7 +94,7 @@ window.ATLAS.subjects.numbertheory.branches.push(
         example: [
           'Lindemann 的证明表明：若 $\\alpha \\ne 0$ 是代数数，则 $e^\\alpha$ 是超越数。取 $\\alpha = i\\pi$，因为 $e^{i\\pi} = -1$ 是代数数，所以 $i\\pi$ 不可能是代数数，故 $\\pi$ 超越。'
         ],
-        related: ['transcendental-numbers', 'algebraic-numbers', 'fourier-transform']
+        related: ['transcendental-numbers', 'algebraic-numbers', 'analysis/fourier-transform']
       },
       {
         id: 'heights',

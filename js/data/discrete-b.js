@@ -540,7 +540,7 @@ window.ATLAS.subjects.discrete.branches.push(
         example: [
           'QR 码使用 Reed–Solomon 纠错，即使部分污损仍可扫描；CD 与硬盘也使用 RS 码。'
         ],
-        related: ['minimum-distance', 'channel-capacity', 'numbertheory/finite-fields']
+        related: ['minimum-distance', 'channel-capacity', 'algebra/finite-fields']
       },
       {
         id: 'channel-capacity',
@@ -628,7 +628,7 @@ window.ATLAS.subjects.discrete.branches.push(
         example: [
           '重复码 $(n, 1, n)$ 的最小距离为 $n$，可纠正 $\\lfloor (n-1)/2 \\rfloor$ 位错误。'
         ],
-        related: ['error-correcting-codes', 'channel-capacity', 'numbertheory/finite-fields']
+        related: ['error-correcting-codes', 'channel-capacity', 'algebra/finite-fields']
       }
     ]
   }

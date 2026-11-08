@@ -1520,6 +1520,22 @@
       </section>`);
     }
 
+    const learning = window.ATLAS.learning && window.ATLAS.learning[key];
+    if (learning) {
+      sections.push(`<section class="topic-section learning-boundary">
+        <h3>适用条件与易错点</h3>
+        <p>${inlineMarkup(learning.boundary)}</p>
+      </section>`);
+      sections.push(`<section class="topic-section learning-check">
+        <h3>自测与推理</h3>
+        <p>${inlineMarkup(learning.question)}</p>
+        <details class="learning-answer">
+          <summary>查看解析</summary>
+          <div>${inlineMarkup(learning.answer)}</div>
+        </details>
+      </section>`);
+    }
+
     const related = asArray(topic.related).filter(Boolean);
     if (related.length) {
       const chips = related.map(ref => {
@@ -1711,7 +1727,14 @@
     const name = (item.topic.name || '').toLowerCase();
     const brief = (item.topic.brief || '').toLowerCase();
     const kw = (item.topic.keywords || []).join(' ').toLowerCase();
-    const def = asArray(item.topic.definition).join(' ').toLowerCase();
+    const extra = (window.ATLAS.extras || {})[topicKey(item.subject.id, item.topic.id)] || {};
+    const learning = (window.ATLAS.learning || {})[topicKey(item.subject.id, item.topic.id)] || {};
+    const def = [
+      ...asArray(item.topic.definition), ...asArray(item.topic.intuition),
+      ...asArray(item.topic.example), ...asArray(extra.examples), extra.insight || '',
+      ...asArray(item.topic.formulas).map(f => f.caption || ''),
+      learning.boundary || '', learning.question || '', learning.answer || ''
+    ].join(' ').toLowerCase();
     const branch = (item.branch.name || '').toLowerCase();
     const subject = (item.subject.name || '').toLowerCase();
     if (name === q) return 100;

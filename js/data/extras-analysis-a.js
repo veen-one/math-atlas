@@ -11,7 +11,7 @@ window.ATLAS.extras['analysis/continuity-uniform'] = {
 };
 
 window.ATLAS.extras['analysis/uniform-convergence'] = {
-  insight: '一致收敛就是上确界范数意义下的收敛：$\\|f_n-f\\|_\\infty\\to0$。逐点收敛只是每个坐标收敛，二者的差距反映了无穷维函数空间中“有界闭集未必紧”。Dini 定理给出一个补偿条件：连续函数列单调收敛到连续函数时，逐点收敛自动升级为一致收敛。',
+  insight: '一致收敛就是上确界范数意义下的收敛：$\\|f_n-f\\|_\\infty\\to0$。逐点收敛只是每个坐标收敛，二者的差距反映了无穷维函数空间中“有界闭集未必紧”。Dini 定理给出一个补偿条件：在紧致空间上，连续实值函数列逐点单调收敛到连续函数时，逐点收敛自动升级为一致收敛。',
   examples: [
     '$f_n(x)=\\frac{x}{1+nx^2}$ 在 $[0,1]$ 上一致收敛到 $0$：最大值在 $x=1/\\sqrt n$ 处，等于 $\\frac{1}{2\\sqrt n}\\to0$，故 $\\|f_n\\|_\\infty\\to0$。',
     '幂级数 $\\sum_{n=0}^\\infty x^n$ 在 $[-r,r]$（$0<r<1$）上一致收敛（Weierstrass $M$-判别法，取 $M_n=r^n$），但在 $(-1,1)$ 上不一致收敛：部分和 $S_n(x)=\\frac{1-x^{n+1}}{1-x}$ 在 $x\\to1$ 时误差无界。'

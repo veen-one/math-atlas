@@ -241,7 +241,7 @@ window.ATLAS.subjects.geometry = {
           example: [
             '$S^2$ 在北极点的切空间是水平平面 $z = 1$；切向量对应球面上的方向导数。'
           ],
-          related: ['smooth-manifolds', 'vector-spaces', 'riemannian-metric']
+          related: ['smooth-manifolds', 'algebra/vector-spaces', 'riemannian-metric']
         },
         {
           id: 'curves-surfaces',
@@ -435,7 +435,7 @@ window.ATLAS.subjects.geometry = {
           example: [
             '$[0,1]$ 紧致；$(0,1)$ 不紧致（开覆盖 $\\{(1/n, 1)\\}$ 无有限子覆盖）；$\\mathbb{R}$ 不紧致（覆盖 $\\{(-n, n)\\}$ 无有限子覆盖）。'
           ],
-          related: ['open-sets-continuity', 'connectedness', 'uniform-convergence']
+          related: ['open-sets-continuity', 'connectedness', 'analysis/uniform-convergence']
         },
         {
           id: 'quotient-spaces',
