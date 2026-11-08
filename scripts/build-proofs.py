@@ -48,6 +48,15 @@ r'反向若尾和条件成立，对充分大 $m>n$，有 $|S_m-S_n|=|\sum_{k=n+1
 P('absolute-convergence','analysis/series','绝对收敛蕴含收敛',r'若实数级数 $\sum |a_n|$ 收敛，则 $\sum a_n$ 收敛。','series-cauchy','用绝对值级数的尾和统一控制原级数的尾和。',
 r'任取 $\varepsilon>0$。对收敛级数 $\sum|a_n|$ 应用柯西判别法，得 $N$，使 $q\ge p\ge N$ 时 $\sum_{n=p}^q |a_n|<\varepsilon$。',
 r'有限和三角不等式给出 $|\sum_{n=p}^{q}a_n|\le\sum_{n=p}^{q}|a_n|<\varepsilon$。再次应用柯西判别法，原级数收敛。反向不成立，例如交错调和级数，后者需另行证明其收敛而绝对值级数发散。$\square$')
+P('absolute-series-rearrangement','analysis/series','绝对收敛级数重排不变',r'若实数级数 $\sum_{n\ge1}a_n$ 绝对收敛，且 $\pi:\mathbb N\to\mathbb N$ 为双射，则 $\sum_{k\ge1}a_{\pi(k)}$ 收敛并与原级数同和。','absolute-convergence','有限项完全相同；充分大的有限集合已捕获绝对值尾项的全部质量。',
+r'记 $S=\sum_na_n$。给定 $\varepsilon>0$，绝对收敛的柯西条件给 N，使任意有限指标集 F⊂{N+1,N+2,…} 都满足 $|\sum_{n\in F}a_n|≤\sum_{n∈F}|a_n|<\varepsilon$。这里非负级数尾和小于 ε，故其任意有限子和也小于 ε。',
+r'令重排部分和 $T_m=\sum_{k=1}^m a_{\pi(k)}$。因 π 双射，有限集 {π(1),…,π(m)} 随 m 增长最终包含 {1,…,N}；取此后的 m。其与初始段之差仅由指标大于 N 的项组成，因此 $|T_m-\sum_{n=1}^N a_n|<\varepsilon$。',
+r'同时原级数尾和满足 $|S-\sum_{n=1}^Na_n|<\varepsilon$。故所有充分大的 m 有 |T_m−S|<2ε。ε 任意，得 T_m→S。证明也表明无需假设项非负。$\square$')
+P('riemann-rearrangement','analysis/series','条件收敛级数的任意目标重排',r'若实级数 $\sum a_n$ 收敛但不绝对收敛，则对每个 L∈R 存在一个重排，其和为 L。','absolute-series-rearrangement series-cauchy','正项子级数与负项绝对值子级数都发散；交替取到越过目标的最少项，超越误差趋零。',
+r'写正项为 $p_i>0$，负项为 $-q_j<0$，忽略零项。因原级数收敛而非绝对收敛，正项和与 q_j 的和都发散：若正项和有限，则部分和收敛迫使负项绝对值和亦有限，反之亦然。并且 p_i→0、q_j→0，否则原级数项不趋零。',
+r'先依原顺序取最少的未用正项，使当前部分和首次大于 L；随后取最少的未用负项，使部分和首次小于 L。两个阶段都能完成，因为各自剩余的正项和及负项绝对值和仍发散。如此交替无穷次。',
+r'每次正项阶段结束时，超出 L 的量至多是最后加入的那个正项，故在该阶段结束时偏差至多相应 p_i；负项阶段结束时低于 L 的偏差至多最后一个 q_j。阶段结束指标趋无穷，且 p_i,q_j→0，因此阶段端点部分和趋于 L。',
+r'还须控制阶段内部部分和：正项阶段单调递增，值位于阶段起点与终点之间；负项阶段单调递减，也位于两个端点之间。两端都趋 L，故整条重排部分和趋 L。每个正项和负项均在有限阶段中最终取到；否则某一侧余项始终未取而另一侧每阶段只加入有限项，且该侧发散会使阶段无法在首次越过有限 L 时停止。更形式地，每阶段“最少项”有限，因为该侧项级数发散；任一固定位置的项在其符号侧至多经过有限次阶段即被取用。所得序列因此恰是全部非零原项的排列；零项按原序插回不改极限。$\square$')
 P('weierstrass-m','analysis/uniform-convergence analysis/function-sequences','Weierstrass M 判别法',r'设 $f_n:E\to\mathbb R$，且对所有 $x\in E$ 有 $|f_n(x)|\le M_n$，其中 $M_n\ge0$、$\sum M_n$ 收敛，则函数级数 $\sum f_n$ 一致收敛。','series-cauchy cauchy-completeness','数值尾和与位置无关，因此同时控制每个点及整个定义域的误差。',
 r'固定 $x$。任意尾和满足 $|\sum_{n=p}^qf_n(x)|\le\sum_{n=p}^q M_n$，右侧由数值级数的柯西判别法趋零，故左侧满足柯西条件。因此每个点的部分和在实数中收敛，定义其极限为 $F(x)$。',
 r'给定 $\varepsilon>0$，选 $N$ 使 $q\ge p\ge N$ 时 $\sum_{n=p}^qM_n<\varepsilon/2$。对 $m\ge n\ge N$，得到 $|S_m(x)-S_n(x)|\le\varepsilon/2$，且这个界对所有 $x$ 同时成立。',
@@ -337,6 +346,7 @@ for p in PROOFS:
     book.extend([f'<a id="{p["id"]}"></a>',f'## {p["title"]}','','**陈述。** '+p['statement'],'','**依赖。** '+ '；'.join('['+(BASES[d]['title'] if d in BASES else lookup[d]['title'])+'](#'+d+')' for d in p['dependencies']),'','**思路。** '+p['idea'],'','**证明。**',''])
     book.extend(str(i)+'. '+s+'\n' for i,s in enumerate(p['steps'],1))
 book+=['## 对照阅读资料','',
+'[MIT 18.102，Lecture 3–5](https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/pages/lecture-notes-and-readings/)：Baire 类别、一致有界、开映射、闭图像及 Hahn–Banach 定理的对照讲义。',
 '[J. S. Milne，Fields and Galois Theory](https://www.jmilne.org/math/CourseNotes/ft.html)：多项式、有限域、Artin 固定域与有限伽罗瓦对应的对照教材。',
 '[Sheldon Axler，Linear Algebra Done Right](https://linear.axler.net/LADR4e.pdf)：有限维谱定理与表示论前置线性代数。',
 '[Gerald Teschl，Ordinary Differential Equations and Dynamical Systems](https://radon.mat.univie.ac.at/~gerald/ftp/book-ode/)：常微分方程存在唯一性及其适用范围。',

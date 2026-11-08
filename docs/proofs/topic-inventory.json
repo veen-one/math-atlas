@@ -1,5 +1,5 @@
 {
-  "proofCount": 362,
+  "proofCount": 376,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -50,7 +50,12 @@
       "proofIds": [
         "series-cauchy",
         "absolute-convergence",
-        "termwise-differentiation"
+        "absolute-series-rearrangement",
+        "riemann-rearrangement",
+        "termwise-differentiation",
+        "harmonic-divergence",
+        "leibniz-alternating",
+        "riemann-rearrangement-infinite"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -281,6 +286,9 @@
         "compact-metric-subsequence",
         "sequential-metric-compact",
         "finite-norm-equivalence",
+        "hahn-banach-normed",
+        "norming-functional",
+        "bidual-isometry",
         "general-l2-complete"
       ],
       "coverage": "partial",
@@ -293,7 +301,12 @@
       "branch": "泛函分析",
       "proofIds": [
         "continuous-functions-complete",
-        "banach-contraction"
+        "banach-contraction",
+        "baire-category",
+        "uniform-boundedness",
+        "open-mapping-banach",
+        "closed-graph-banach",
+        "hahn-banach-real-dominated"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -341,7 +354,15 @@
         "riesz-representation",
         "linear-bounded-continuous",
         "matrix-exponential",
+        "uniform-boundedness",
+        "open-mapping-banach",
+        "closed-graph-banach",
         "neumann-series",
+        "hahn-banach-one-step",
+        "hahn-banach-real-dominated",
+        "hahn-banach-normed",
+        "norming-functional",
+        "bidual-isometry",
         "young-l1-l2",
         "lax-milgram"
       ],

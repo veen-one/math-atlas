@@ -142,6 +142,12 @@
 
 \end{foundation}
 
+\begin{foundation}[Zorn 极大原则（选择基础）]\label{base:axiom-zorn}
+
+采用通常 ZFC 集合论的选择原则形式：非空偏序集若每条全序链都有上界，则有极大元。这是本章明确采用的集合论基础，不声称由较弱的依赖选择证明。
+
+\end{foundation}
+
 \begin{foundation}[Schwartz 函数与 Fourier 约定]\label{base:def-schwartz}
 
 S(R) 指所有光滑函数 f，满足每个非负整数 m,k 都有 sup\_x |x\textasciicircum{}m f\textasciicircum{}(k)(x)| 有限。Fourier 约定为 fhat(ω)=∫\_R f(x)exp(-iωx)dx，逆变换带 1/(2π)。Lebesgue 实线测度按区间长度及 Borel 测度的完备化理解；此处给定该测度，不把其从外测度构造的存在定理当作已证明。
@@ -591,6 +597,56 @@ Spec R 的点为素理想 p；基本开集 D(f)=\{p:f∉p\} 构成拓扑基，�
 \item 任取 $\varepsilon>0$。对收敛级数 $\sum|a_n|$ 应用柯西判别法，得 $N$，使 $q\ge p\ge N$ 时 $\sum_{n=p}^q |a_n|<\varepsilon$。
 
 \item 有限和三角不等式给出 $|\sum_{n=p}^{q}a_n|\le\sum_{n=p}^{q}|a_n|<\varepsilon$。再次应用柯西判别法，原级数收敛。反向不成立，例如交错调和级数，后者需另行证明其收敛而绝对值级数发散。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[绝对收敛级数重排不变]\label{thm:absolute-series-rearrangement}
+
+若实数级数 $\sum_{n\ge1}a_n$ 绝对收敛，且 $\pi:\mathbb N\to\mathbb N$ 为双射，则 $\sum_{k\ge1}a_{\pi(k)}$ 收敛并与原级数同和。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}绝对收敛蕴含收敛（定理~\ref{thm:absolute-convergence}）
+
+\par\noindent\textbf{思路：}有限项完全相同；充分大的有限集合已捕获绝对值尾项的全部质量。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 记 $S=\sum_na_n$。给定 $\varepsilon>0$，绝对收敛的柯西条件给 N，使任意有限指标集 F⊂\{N+1,N+2,…\} 都满足 $|\sum_{n\in F}a_n|≤\sum_{n∈F}|a_n|<\varepsilon$。这里非负级数尾和小于 ε，故其任意有限子和也小于 ε。
+
+\item 令重排部分和 $T_m=\sum_{k=1}^m a_{\pi(k)}$。因 π 双射，有限集 \{π(1),…,π(m)\} 随 m 增长最终包含 \{1,…,N\}；取此后的 m。其与初始段之差仅由指标大于 N 的项组成，因此 $|T_m-\sum_{n=1}^N a_n|<\varepsilon$。
+
+\item 同时原级数尾和满足 $|S-\sum_{n=1}^Na_n|<\varepsilon$。故所有充分大的 m 有 |T\_m−S|<2ε。ε 任意，得 T\_m→S。证明也表明无需假设项非负。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[条件收敛级数的任意目标重排]\label{thm:riemann-rearrangement}
+
+若实级数 $\sum a_n$ 收敛但不绝对收敛，则对每个 L∈R 存在一个重排，其和为 L。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}绝对收敛级数重排不变（定理~\ref{thm:absolute-series-rearrangement}）；级数的柯西判别法（定理~\ref{thm:series-cauchy}）
+
+\par\noindent\textbf{思路：}正项子级数与负项绝对值子级数都发散；交替取到越过目标的最少项，超越误差趋零。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 写正项为 $p_i>0$，负项为 $-q_j<0$，忽略零项。因原级数收敛而非绝对收敛，正项和与 q\_j 的和都发散：若正项和有限，则部分和收敛迫使负项绝对值和亦有限，反之亦然。并且 p\_i→0、q\_j→0，否则原级数项不趋零。
+
+\item 先依原顺序取最少的未用正项，使当前部分和首次大于 L；随后取最少的未用负项，使部分和首次小于 L。两个阶段都能完成，因为各自剩余的正项和及负项绝对值和仍发散。如此交替无穷次。
+
+\item 每次正项阶段结束时，超出 L 的量至多是最后加入的那个正项，故在该阶段结束时偏差至多相应 p\_i；负项阶段结束时低于 L 的偏差至多最后一个 q\_j。阶段结束指标趋无穷，且 p\_i,q\_j→0，因此阶段端点部分和趋于 L。
+
+\item 还须控制阶段内部部分和：正项阶段单调递增，值位于阶段起点与终点之间；负项阶段单调递减，也位于两个端点之间。两端都趋 L，故整条重排部分和趋 L。每个正项和负项均在有限阶段中最终取到；否则某一侧余项始终未取而另一侧每阶段只加入有限项，且该侧发散会使阶段无法在首次越过有限 L 时停止。更形式地，每阶段“最少项”有限，因为该侧项级数发散；任一固定位置的项在其符号侧至多经过有限次阶段即被取用。所得序列因此恰是全部非零原项的排列；零项按原序插回不改极限。
 
 \end{enumerate}
 
@@ -2702,6 +2758,106 @@ F[x] 的每个理想都由一个多项式生成；两个不全为零的多项式
 
 \end{proof}
 
+\begin{theorem}[Baire 类别定理（完备度量空间）]\label{thm:baire-category}
+
+非空完备度量空间 X 中，可数个稠密开集的交在 X 中稠密。等价地，X 不能是可数个内部为空的闭集之并。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}完备、算子与微分方程的定义（约定~\ref{base:def-complete}）；度量、范数与收敛的定义（约定~\ref{base:axiom-metric}）；依赖选择的基础约定（约定~\ref{base:axiom-dependent-choice}）
+
+\par\noindent\textbf{思路：}在给定开集内递归套入半径趋零的闭球，用完备性取得共同点。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 设 U\_n 为稠密开集，V 为任意非空开集。U₁∩V 非空且开，可选 x₁ 及 r₁>0，使闭球 C₁=\{x:d(x,x₁)≤r₁\} 包含在 U₁∩V，且 r₁≤1/2。选取方式：先取包含于该开集的开球，再缩小半径一半。
+
+\item 递归地，B(x\_n,r\_n)∩U\_(n+1) 非空且开，选闭球 C\_(n+1) 包含其中，半径 0<r\_(n+1)≤2\textasciicircum{}(−n−1)。于是 C\_(n+1)⊆C\_n。对 m≥n，x\_m∈C\_n，故 d(x\_m,x\_n)≤r\_n→0，中心序列柯西。
+
+\item 完备性给 x\_n→x。各 C\_n 闭且包含全部后续中心，故 x∈C\_n 对全部 n 成立。因此 x∈V∩∩U\_n。任意非空开 V 都与交相遇，正是稠密性。若闭集 F\_n 内部为空，其补为稠密开集，此结论排除 ∪F\_n=X；上述闭球构造已直接证明稠密开集版本，取补集又给闭集覆盖版本。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Banach–Steinhaus 一致有界原理]\label{thm:uniform-boundedness}
+
+设 X 为 Banach 空间、Y 为赋范空间，\{T\_α\} 为任意族有界线性算子 X→Y。若每个 x∈X 满足 sup\_α‖T\_αx‖<∞，则 sup\_α‖T\_α‖<∞。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Baire 类别定理（完备度量空间）（定理~\ref{thm:baire-category}）；向量空间及凸性定义（约定~\ref{base:axiom-vector}）
+
+\par\noindent\textbf{思路：}闭集 E\_n 收集所有算子值均不超过 n 的点；其中一个有内点，用相减和缩放取得算子范数界。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 空算子族结论直接成立。令 E\_n=\{x:对所有 α，‖T\_αx‖≤n\}。每个 T\_α 连续且范数连续，E\_n 是闭集的任意交，故闭。逐点有界使 X=∪\_(n≥1)E\_n。
+
+\item 由 Baire，某 E\_N 含开球 B(x₀,r)，r>0。特别 x₀∈E\_N。对任意单位向量 u，x₀+(r/2)u∈E\_N，所以 ‖T\_α((r/2)u)‖≤‖T\_α(x₀+(r/2)u)‖+‖T\_αx₀‖≤2N。
+
+\item 线性与齐次性给 ‖T\_αu‖≤4N/r，界不依赖 α 或单位向量 u。由算子范数定义，所有 ‖T\_α‖≤4N/r。X=\{0\} 时所有算子范数为零，另行成立。注意 Y 完备性不是本定理的前提。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Banach 开映射定理]\label{thm:open-mapping-banach}
+
+Banach 空间 X,Y 之间的有界满射线性算子 T 是开映射；若同时单射，则逆算子有界。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Baire 类别定理（完备度量空间）（定理~\ref{thm:baire-category}）；完备、算子与微分方程的定义（约定~\ref{base:def-complete}）；向量空间及凸性定义（约定~\ref{base:axiom-vector}）
+
+\par\noindent\textbf{思路：}先由 Baire 得到单位球像的闭包含原点邻域，再用几何收敛误差逐步去掉闭包。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 记 B\_X 为 X 的开单位球。满射使 Y=∪\_(n≥1)T(nB\_X)，因此也被闭集 F\_n=closure(T(nB\_X)) 覆盖。若 Y=\{0\} 结论直接成立；否则 Baire 给某 F\_N 含球 B(y₀,r)。
+
+\item 对 ‖h‖<r，y₀+h 与 y₀ 都属于 F\_N。各可用 T(NB\_X) 内的序列逼近，其差属于 T(2NB\_X) 并趋 h。因此 B(0,r)⊆closure(T(2NB\_X))。缩放后取 δ=r/(2N)>0，得 B(0,δ)⊆closure(T(B\_X))。
+
+\item 给 ‖y‖<δ/2，递归选 x\_j，满足 ‖x\_j‖<2\textasciicircum{}(−j)，且残差 r\_j=y−TΣ\_(k≤j)x\_k 满足 ‖r\_j‖<δ·2\textasciicircum{}(−j−1)。第一步由 y∈B(0,δ/2)⊆closure(T((1/2)B\_X)) 选得；以后 r\_(j−1)∈B(0,δ·2\textasciicircum{}(−j))，同样使用缩放后的闭包包含式，并把逼近误差取得小于 δ·2\textasciicircum{}(−j−1)。
+
+\item Σ‖x\_j‖<1：每项严格小于 2\textasciicircum{}(−j)，故总和严格小于一。其部分和由几何尾和成为柯西列，X 完备给极限 x，且 ‖x‖<1。T 连续、残差趋零，故 Tx=y。于是 B(0,δ/2)⊆T(B\_X)。
+
+\item 若 U⊆X 开且 x∈U，取 ε>0 使 x+εB\_X⊆U；其像包含 Tx+B(0,εδ/2)，故 T(U) 是开集。若 T 双射，前述球包含式令每个 y≠0 有唯一原像，且对任意 t>2‖y‖/δ，有 ‖T⁻¹y‖<t。令 t↓2‖y‖/δ，得 ‖T⁻¹y‖≤2‖y‖/δ，逆算子有界。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Banach 闭图像定理]\label{thm:closed-graph-banach}
+
+Banach 空间 X,Y 间定义于全部 X 的线性映射 T 有界，当且仅当图像 G(T)=\{(x,Tx):x∈X\} 在 X×Y 中闭。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Banach 开映射定理（定理~\ref{thm:open-mapping-banach}）；完备、算子与微分方程的定义（约定~\ref{base:def-complete}）；向量空间及凸性定义（约定~\ref{base:axiom-vector}）
+
+\par\noindent\textbf{思路：}把闭图像当作 Banach 空间，第一坐标投影的逆由开映射定理有界。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 给 X×Y 配范数 ‖(x,y)‖=‖x‖+‖y‖。其中柯西列的两个坐标都柯西，分别在 X,Y 收敛，故乘积完备。闭子空间中的柯西列在乘积内收敛，闭性保证极限仍在该子空间，所以闭子空间也完备。
+
+\item 若 G(T) 闭，它是该乘积的闭线性子空间，因而 Banach。投影 P:G(T)→X，(x,Tx)↦x 是有界线性双射，且 ‖P‖≤1。开映射定理给 P⁻¹ 有界，存在 C 使 ‖(x,Tx)‖≤C‖x‖。因此 ‖Tx‖≤C‖x‖，T 有界。
+
+\item 反向若 T 有界，对图像中任意收敛序列 (x\_n,Tx\_n)→(x,y)，连续性给 Tx\_n→Tx。极限唯一性使 y=Tx，所以极限仍在图像。度量空间中序列闭等价于闭：若外点属于闭包，可选距离小于 1/n 的集合内点，构成到该外点的序列。故 G(T) 闭。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[复可导函数的连续性及代数法则]\label{thm:complex-basic-rules}
 
 复可导蕴含连续；和、积及分母非零时的商都复可导，且满足与实微分同形式的求导规则。
@@ -3937,6 +4093,122 @@ R\textasciicircum{}n 中集合紧致当且仅当闭且有界。
 \item 相减两份递推，误差 e 满足同一齐次格式；同 Dirichlet 边界使边界误差为零，周期边界使相邻下标循环。给定范围内三个系数均非负且和为一。
 
 \item 所以 |e\_j\textasciicircum{}(n+1)|≤r|e\_(j-1)\textasciicircum{}n|+(1-2r)|e\_j\textasciicircum{}n|+r|e\_(j+1)\textasciicircum{}n|≤max\_k|e\_k\textasciicircum{}n|。对 j 取最大再归纳，得到所有时刻的稳定界，常数 C=1。步长条件等价于 r=αΔt/(Δx)²≤1/2；此处不证明不满足条件时每个具体数据都必然发散。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[次线性支配的单步线性延拓]\label{thm:hahn-banach-one-step}
+
+实向量空间 X 上 p:X→R 满足 p(x+y)≤p(x)+p(y)、p(tx)=tp(x)（t≥0）。若子空间 M 上实线性 f≤p，且 v∉M，则 f 可延拓为 M+Rv 上的线性 F≤p。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}实数有序域与上确界公理（约定~\ref{base:axiom-real}）；向量空间及凸性定义（约定~\ref{base:axiom-vector}）
+
+\par\noindent\textbf{思路：}新方向上的值 c 只需落在所有下界与上界之间；次线性保证两类界相容。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 每个新向量唯一写成 m+tv；否则两种表示相减、v∉M 迫使 t 相同。因而规定 F(m+tv)=f(m)+tc 自动线性且延拓 f，只需选 c。
+
+\item 对任意 a,b∈M，有 f(a)+f(b)=f(a+b)≤p(a+b)≤p(a−v)+p(b+v)。故 f(a)−p(a−v)≤p(b+v)−f(b)。所有左式构成非空集合，且被任一固定右式上界控制。由上确界公理，存在有限 c 使所有左式≤c≤所有右式。
+
+\item 若 t>0，取 b=m/t，得到 c≤p(m/t+v)−f(m/t)，乘 t 即 F(m+tv)≤p(m+tv)。若 t<0，令 s=−t>0，取 a=m/s，得到 c≥f(m/s)−p(m/s−v)，乘 s 并移项给 f(m)−sc≤p(m−sv)。t=0 时是原假设。因此 F≤p。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[实 Hahn–Banach 支配延拓定理]\label{thm:hahn-banach-real-dominated}
+
+在实向量空间 X 上，任一次线性 p 支配的子空间线性泛函 f:M→R，都可延拓为 X 上线性泛函 F≤p。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}次线性支配的单步线性延拓（定理~\ref{thm:hahn-banach-one-step}）；Zorn 极大原则（选择基础）（约定~\ref{base:axiom-zorn}）
+
+\par\noindent\textbf{思路：}将全部支配延拓按包含排序；链的并仍是延拓，极大者必须定义在整个空间。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 考虑所有二元组 (N,g)，其中 M⊆N⊆X 是线性子空间，g:N→R 线性、g|M=f 且 g≤p。该集合非空，包含 (M,f)。以定义域包含且函数相容为偏序。
+
+\item 对任意非空全序链，定义域的并 N 是子空间：有限多个向量所在的定义域总有一个包含另外各个。各函数在交上相同，故并给单值函数 g:N→R；线性性及 g≤p 可在某个共同定义域中验证。因此它是链上界。空链也有上界 (M,f)。
+
+\item Zorn 原则给极大延拓 (N,g)。若 N≠X，选 v∈X\textbackslash{}N，由单步延拓得到 N+Rv 上支配 p 的严格延拓，矛盾。故 N=X，所求 F=g 存在。这里没有断言延拓唯一，也不要求 X 完备。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[实、复赋范空间的保范数 Hahn–Banach 定理]\label{thm:hahn-banach-normed}
+
+实或复赋范空间 X 的任意线性子空间 M 上，有界线性泛函 f 都有 X 上的有界线性延拓 F，且 ‖F‖=‖f‖。M 不必闭，X 不必完备。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}实 Hahn–Banach 支配延拓定理（定理~\ref{thm:hahn-banach-real-dominated}）；度量、范数与收敛的定义（约定~\ref{base:axiom-metric}）
+
+\par\noindent\textbf{思路：}实数情形以范数作次线性上界；复数情形先延拓实部，再由实部恢复复线性。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 实数情形令 C=‖f‖、p(x)=C‖x‖。p 次线性，且 f≤p。由支配延拓得 F≤p；对 −x 应用同一不等式得到 −F(x)≤C‖x‖，所以 |F(x)|≤C‖x‖。限制到 M 给 ‖F‖≥‖f‖，与上界合并为相等。
+
+\item 复数情形把 X 看作实向量空间，令 u=Re f。u 实线性且 |u(m)|≤C‖m‖。用实数版本延拓为实线性 U，满足 |U(x)|≤C‖x‖。定义 F(x)=U(x)−iU(ix)。实线性直接成立，且 F(ix)=U(ix)+iU(x)=iF(x)，因此对任意复数标量也线性。
+
+\item 对 m∈M，因 f(im)=if(m)，有 U(m)=Re f(m)、U(im)=−Im f(m)，故 F(m)=f(m)。若 F(x)≠0，取单位复数 λ 使 λF(x)=|F(x)|。由复线性及 Re F=U，|F(x)|=Re F(λx)=U(λx)≤C‖λx‖=C‖x‖。F(x)=0 时同样满足。限制与上界再次给保范数。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[连续泛函分离点与对偶范数公式]\label{thm:norming-functional}
+
+对实或复赋范空间 X 中任意非零 x，存在 F∈X*，‖F‖=1 且 F(x)=‖x‖。因此 ‖x‖=sup\_\{‖F‖≤1\}|F(x)|，且连续线性泛函分离不同点。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}实、复赋范空间的保范数 Hahn–Banach 定理（定理~\ref{thm:hahn-banach-normed}）
+
+\par\noindent\textbf{思路：}先在 x 张成的一维空间上定义保范数泛函，再延拓。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 在 M=span\{x\} 上定义 f(λx)=λ‖x‖。x≠0 使表示唯一，f 线性且 |f(λx)|=|λ|‖x‖=‖λx‖，所以 ‖f‖=1。保范数延拓给 ‖F‖=1、F(x)=‖x‖。
+
+\item 对任何 ‖G‖≤1，有 |G(x)|≤‖x‖；上述 F 取到这个上界，所以对偶范数公式成立。x=0 时两边皆零。若 x≠y，对 x−y 选此泛函，便有 F(x)−F(y)=‖x−y‖≠0，故可分离。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[自然嵌入双对偶是等距线性映射]\label{thm:bidual-isometry}
+
+定义 J:X→X** 为 (Jx)(F)=F(x)。则 J 线性且 ‖Jx‖=‖x‖，所以单射；此结论本身不保证满射。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}连续泛函分离点与对偶范数公式（定理~\ref{thm:norming-functional}）
+
+\par\noindent\textbf{思路：}对偶范数公式恰是求值泛函的算子范数。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 对固定 x，求值映射 Jx 在 X* 上线性，且 |(Jx)(F)|=|F(x)|≤‖F‖‖x‖，故 Jx 是有界线性泛函，属于 X**。逐个 F 代入可验证 J(ax+by)=aJx+bJy。
+
+\item 取单位球上的上确界，‖Jx‖=sup\_\{‖F‖≤1\}|F(x)|=‖x‖，最后等号为已证对偶范数公式。若 Jx=Jy，等距性给 ‖x−y‖=0，所以 x=y。满射性质称反身性，需要单独研究，不能从本证明推得。
 
 \end{enumerate}
 
@@ -8633,6 +8905,76 @@ m≥1 个可能符号的分布 p 具有 0≤H(p)≤ln m；上界仅当均匀分�
 \item 固定 t，二阶展开给 φ\_Y(t/√n)=1-t²/(2n)+o(1/n)。因此可写为 1+a\_n/n，a\_n→-t²/2。复二项式极限给 φ\_(V\_n)(t)→exp(-t²/2)。
 
 \item 独立方差计算使 E[V\_n²]=1。Gaussian 平滑引理的全部条件已满足，于是对每个 x 有 P(V\_n≤x)→Φ(x)。标准正态分布函数连续，所以这就是所述依分布收敛。证明不需要三阶矩；无限方差分布不在适用范围内。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[调和级数发散]\label{thm:harmonic-divergence}
+
+Σ\_(n≥1)1/n=+∞。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}自然数归纳与良序基础（约定~\ref{base:axiom-natural}）
+
+\par\noindent\textbf{思路：}把下标按二的幂分组，每组贡献至少二分之一。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 对 k≥0，区间 2\textasciicircum{}k<n≤2\textasciicircum{}(k+1) 含 2\textasciicircum{}k 个整数，每项 1/n≥1/2\textasciicircum{}(k+1)，故该组和≥1/2。
+
+\item 因此到下标 2\textasciicircum{}m 的部分和至少 1+m/2，随 m 无界。部分和递增，所以对任意实数 M 最终超过 M，故趋于正无穷。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Leibniz 交错级数判别与余项界]\label{thm:leibniz-alternating}
+
+若 b\_n≥0 单调递减且趋零，则 Σ\_(n≥1)(−1)\textasciicircum{}(n−1)b\_n 收敛，且第 N 项后余项绝对值≤b\_(N+1)，余项符号与下一项相同（或为零）。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}单调有界数列收敛定理（定理~\ref{thm:monotone-convergence}）
+
+\par\noindent\textbf{思路：}偶部分和递增、奇部分和递减；二者间距趋零。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 记部分和 S\_N。S\_(2m+2)−S\_(2m)=b\_(2m+1)−b\_(2m+2)≥0；S\_(2m+3)−S\_(2m+1)=−b\_(2m+2)+b\_(2m+3)≤0。又 S\_(2m)≤S\_(2m+1)，所有偶部分和≥0，所有奇部分和≤b₁。
+
+\item 两子列分别单调有界，故收敛；其差 b\_(2m+1)→0，使两个极限相同为 S。任意部分和属于奇、偶之一，故整列也趋 S。
+
+\item 固定 N，后续交错尾和按同样分组夹在 0 与第一尾项之间（N 为奇数时方向反转）。取极限得余项 S−S\_N 的符号与 (−1)\textasciicircum{}N 相同，且绝对值≤b\_(N+1)。对 b\_n=1/n 应用本定理，再用调和级数发散，即得条件收敛的具体例子；该例的非绝对收敛另由调和级数条目证明。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[条件收敛级数可重排趋于无穷或振荡]\label{thm:riemann-rearrangement-infinite}
+
+每个实条件收敛级数都有部分和趋于 +∞、趋于 −∞ 的重排，也有部分和无上界且无下界的重排。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}条件收敛级数的任意目标重排（定理~\ref{thm:riemann-rearrangement}）
+
+\par\noindent\textbf{思路：}用不断提高的越界目标构造阶段，确保每个原项最终被取用。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 沿用任意目标重排证明：按原序列举正项 p\_i 与负项 −q\_j，两侧总量都无限，且 p\_i,q\_j→0。构造第 m 阶段时，先加入至少一个未用正项，再继续加到部分和大于 m+q\_m，然后加入第 m 个负项 −q\_m。阶段末部分和因而大于 m。
+
+\item 每阶段只有有限项，因为余下正项和发散。所有负项逐个取到，正项每阶段至少取一个也全部最终取到。第 m 阶段内部在加入负项之前单调上升，且从上一阶段末的大于 m−1 开始；加入最后负项后仍大于 m。因此阶段内部的最小值也趋无穷，整个重排部分和趋于 +∞。对 −a\_n 应用同一构造后取负，得到趋于 −∞ 的重排。
+
+\item 振荡构造在第 m 阶段先按序取正项至部分和大于 m，再按序取负项至部分和小于 −m。每段有限并至少含一个对应符号项，两个下标都趋无穷，所以所有非零项最终取到。阶段端点给出任意大的正值及任意小的负值，故部分和无上、下界。零项按原序插入，不影响这些结论。
 
 \end{enumerate}
 

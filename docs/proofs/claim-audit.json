@@ -5,25 +5,43 @@
       "topic": "analysis/continuity-uniform",
       "field": "intuition",
       "text": "紧集上的连续函数自动一致连续（Heine–Cantor 定理），这是紧性最重要的应用之一。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heine-cantor"
+      ],
+      "note": "适用于紧致度量定义域到度量空间的连续映射；证明逐点选半径并取有限子覆盖。"
     },
     {
       "topic": "analysis/continuity-uniform",
       "field": "formulaCaptions",
       "text": "Heine–Cantor 定理：连续性加上紧性推出一致连续。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heine-cantor"
+      ],
+      "note": "适用于紧致度量定义域到度量空间的连续映射；证明逐点选半径并取有限子覆盖。"
     },
     {
       "topic": "analysis/uniform-convergence",
       "field": "extraInsight",
       "text": "Dini 定理给出一个补偿条件：在紧致空间上，连续实值函数列逐点单调收敛到连续函数时，逐点收敛自动升级为一致收敛。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dini"
+      ],
+      "note": "紧致空间、连续实函数、逐点单调且极限连续是完整条件；递减情形取负。"
     },
     {
       "topic": "analysis/series",
       "field": "intuition",
       "text": "绝对收敛的级数可以任意重排而不改变和；条件收敛则不行——黎曼重排定理指出，条件收敛级数可以通过重排得到任意实数，甚至发散。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "absolute-series-rearrangement",
+        "riemann-rearrangement",
+        "riemann-rearrangement-infinite"
+      ],
+      "note": "限于实条件收敛级数；任意实目标、正负无穷及振荡分别给出构造；绝对收敛部分另证。"
     },
     {
       "topic": "analysis/completeness-reals",
@@ -95,7 +113,11 @@
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "extraExamples",
       "text": "若 $f$ 有跳跃间断，例如 $f(x)=0$（$x<0$）与 $1$（$x\\ge0$），则 $\\int_{-1}^1 f=1$，但 $f$ 没有原函数（达布定理：导数具有介值性）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "darboux-derivative"
+      ],
+      "note": "跳跃函数不具备导数的介值性，因此不可能存在处处可导的原函数。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
@@ -275,25 +297,48 @@
       "topic": "analysis/banach-spaces",
       "field": "definition",
       "text": "核心定理：压缩映射原理（不动点）、一致有界原理（Banach–Steinhaus）、开映射定理与闭图像定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "banach-contraction",
+        "uniform-boundedness",
+        "open-mapping-banach",
+        "closed-graph-banach"
+      ],
+      "note": "完整条件见关联定理：一致有界要求定义域 Banach、算子逐点有界；开映射要求两空间 Banach 且算子有界满射；闭图像要求定义域为全部 Banach 空间；ODE 证明为标量局部 Lipschitz 版本。"
     },
     {
       "topic": "analysis/banach-spaces",
       "field": "intuition",
       "text": "压缩映射原理是微分方程解存在唯一性（Picard–Lindelöf）的基础；一致有界原理说明逐点有界的算子族一致有界。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "banach-contraction",
+        "picard-lindelof",
+        "uniform-boundedness"
+      ],
+      "note": "完整条件见关联定理：一致有界要求定义域 Banach、算子逐点有界；开映射要求两空间 Banach 且算子有界满射；闭图像要求定义域为全部 Banach 空间；ODE 证明为标量局部 Lipschitz 版本。"
     },
     {
       "topic": "analysis/banach-spaces",
       "field": "formulaCaptions",
       "text": "压缩映射原理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "banach-contraction"
+      ],
+      "note": "完整条件见关联定理：一致有界要求定义域 Banach、算子逐点有界；开映射要求两空间 Banach 且算子有界满射；闭图像要求定义域为全部 Banach 空间；ODE 证明为标量局部 Lipschitz 版本。"
     },
     {
       "topic": "analysis/banach-spaces",
       "field": "extraInsight",
       "text": "巴拿赫空间是完备赋范空间，完备性保证柯西列有极限，从而使压缩映射原理、一致有界原理、开映射定理等成立。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "banach-contraction",
+        "uniform-boundedness",
+        "open-mapping-banach"
+      ],
+      "note": "完整条件见关联定理：一致有界要求定义域 Banach、算子逐点有界；开映射要求两空间 Banach 且算子有界满射；闭图像要求定义域为全部 Banach 空间；ODE 证明为标量局部 Lipschitz 版本。"
     },
     {
       "topic": "analysis/banach-spaces",
@@ -346,8 +391,13 @@
     {
       "topic": "analysis/linear-operators",
       "field": "definition",
-      "text": "对偶空间 $X^*$ 是 $X$ 上连续线性泛函的空间；Hahn–Banach 定理保证非零泛函的存在。",
-      "status": "needs-statement-review"
+      "text": "对偶空间 $X^*$ 是 $X$ 上连续线性泛函的空间；对非零实或复赋范空间，Hahn–Banach 定理保证非零连续线性泛函的存在，且可保范数延拓子空间上的有界线性泛函。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hahn-banach-normed",
+        "norming-functional"
+      ],
+      "note": "已补非零空间条件；零空间没有非零泛函。实、复版本均提供保范数延拓证明，使用明确的 Zorn 选择基础，不要求完备。"
     },
     {
       "topic": "analysis/linear-operators",

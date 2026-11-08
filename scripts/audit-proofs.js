@@ -23,11 +23,21 @@ for(const [sid,subject] of Object.entries(atlas.subjects))for(const branch of su
     }
   }
 }
+const reviewFile=path.join(root,'docs/proofs/claim-reviews.json');
+const reviews=fs.existsSync(reviewFile)?JSON.parse(fs.readFileSync(reviewFile,'utf8')).reviews:[];
+const proofIds=new Set(book.proofs.map(p=>p.id));
+for(const review of reviews){
+  const matches=claims.filter(c=>c.topic===review.topic&&c.field===review.field&&c.text===review.text);
+  if(matches.length!==1)throw new Error('Stale or ambiguous claim review: '+review.text);
+  if(!review.proofIds.length||review.proofIds.some(id=>!proofIds.has(id)))throw new Error('Missing reviewed proof');
+  Object.assign(matches[0],review);
+}
+const pending=claims.filter(c=>c.status==='needs-statement-review').length;
 fs.writeFileSync(path.join(root,'docs/proofs/topic-inventory.json'),JSON.stringify({proofCount:book.proofs.length,topics},null,2)+'\n');
 fs.writeFileSync(path.join(root,'docs/proofs/claim-audit.json'),JSON.stringify({note:'关键词提取的候选句，未经数学断言去重；不等于全部定理的完整清单。需人工提取准确假设、结论并对应证明。',claims},null,2)+'\n');
 const covered=topics.filter(t=>t.proofIds.length).length;
-const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、引理、原理、猜想”的候选句，待人工逐条核定。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
-'1. 417 条候选句仍需逐条拆分、去重并核对公式中未命名的断言；当前清单是关键词抽取结果，不是穷尽性定理目录。',
+const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、引理、原理、猜想”的候选句，其中 ${claims.length-pending} 条已有人工核定记录，${pending} 条待审。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
+`1. ${claims.length-pending} 条候选句已核定并关联具体证明，${pending} 条仍待审查；另需核对公式中未命名的断言。人工审阅记录在 claim-reviews.json，以原句精确匹配，原句变化或证明丢失时生成失败。`,
 '2. 每个主题尚有未枚举或未证明命题，故 319 个主题全部标为“部分展开”；不得把一个相关定理等同于该主题全部完成。',
 '3. 仍未在本卷证明的主要深层定理：黎曼映射定理、无限维谱定理、Gromov 辛不挤压定理，以及完整椭圆曲线模性定理。模性条目只证明“假设模性对应后局部系数相等”这一推论。',
 '4. 已提供素数定理与有限方差独立同分布中心极限定理的证明链；后者的 Gaussian 平滑引理另假设均值零和方差一。',
@@ -36,7 +46,7 @@ const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.pro
 '7. 所有证明仍需独立数学复核；程序只检查依赖与构建，不验证数学推演。开放问题（如 P 与 NP、黎曼猜想）不可能被伪造为已证。','','## 逐点状态','','| 学科 | 知识点 | 本卷已展开命题数 | 全主题状态 |','|---|---|---:|---|'];
 for(const topic of topics)lines.push(`| ${topic.subject} | ${topic.name} | ${topic.proofIds.length} | ${topic.proofIds.length?'部分展开':'待扩写'} |`);
 fs.writeFileSync(path.join(root,'docs/proofs/coverage.md'),lines.join('\n')+'\n');
-console.log(`Audited ${topics.length} topics: ${book.proofs.length} proofs cover ${covered} topics; ${claims.length} candidate sentences await statement review`);
+console.log(`Audited ${topics.length} topics: ${book.proofs.length} proofs cover ${covered} topics; ${pending} candidate sentences await statement review; ${claims.length-pending} reviewed with proofs`);
 
 const readmePath=path.join(root,'README.md');
 const readme=fs.readFileSync(readmePath,'utf8');
