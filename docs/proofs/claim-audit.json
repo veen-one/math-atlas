@@ -59,7 +59,11 @@
       "topic": "analysis/completeness-reals",
       "field": "formulaCaptions",
       "text": "单调有界定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-convergence"
+      ],
+      "note": "实数上确界公理推出单调有界数列收敛；递减有下界版本取负。"
     },
     {
       "topic": "analysis/completeness-reals",
@@ -71,13 +75,21 @@
       "topic": "analysis/completeness-reals",
       "field": "extraExamples",
       "text": "用确界原理证明单调有界数列收敛：设 $a_n$ 单调递增且有上界，令 $s=\\sup\\{a_n\\}$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-convergence"
+      ],
+      "note": "明确以非空有上界数列值集合的上确界作候选极限。"
     },
     {
       "topic": "analysis/completeness-reals",
       "field": "extraExamples",
       "text": "闭区间套定理：若 $[a_n,b_n]$ 满足 $[a_{n+1},b_{n+1}]\\subseteq[a_n,b_n]$ 且长度趋于 $0$，则交集恰有一个点。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "nested-intervals"
+      ],
+      "note": "假定每个闭区间非空且相互嵌套，长度趋零用于唯一性。"
     },
     {
       "topic": "analysis/completeness-reals",
@@ -89,13 +101,23 @@
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "intuition",
       "text": "第一基本定理说：累积再求变化率，回到原函数；第二基本定理说：求面积可以转化为求原函数的端点值。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "ftc-second"
+      ],
+      "note": "按关联命题的条件解读：第一定理在连续点给导数，第二定理采用连续被积函数及原函数；不声称连续性对所有推广版本必要。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "formulaCaptions",
       "text": "第一基本定理：连续函数的变上限积分是其原函数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "ftc-second"
+      ],
+      "note": "按关联命题的条件解读：第一定理在连续点给导数，第二定理采用连续被积函数及原函数；不声称连续性对所有推广版本必要。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
@@ -135,19 +157,23 @@
       "topic": "analysis/cauchy-integral-theorem",
       "field": "formulaCaptions",
       "text": "柯西积分定理：单连通区域内全纯函数的闭路积分为零。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cauchy-homotopy",
+        "cauchy-simply-connected"
+      ],
+      "note": "闭路要求分段 C¹；连续同伦无需可微。单连通为充分域条件，非特定函数的必要条件；有洞域中核函数可能产生非零积分。"
     },
     {
       "topic": "analysis/cauchy-integral-theorem",
       "field": "extraInsight",
-      "text": "柯西定理的实质是“全纯函数的路径积分只依赖端点与绕数”。",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/cauchy-integral-theorem",
-      "field": "extraExamples",
-      "text": "柯西定理要求区域单连通。",
-      "status": "needs-statement-review"
+      "text": "柯西同伦定理说明：全纯函数沿保持端点同伦的两条路径积分相同；在单连通域中，路径积分仅依赖端点。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cauchy-homotopy",
+        "cauchy-simply-connected"
+      ],
+      "note": "闭路要求分段 C¹；连续同伦无需可微。单连通为充分域条件，非特定函数的必要条件；有洞域中核函数可能产生非零积分。"
     },
     {
       "topic": "analysis/residues",
@@ -183,13 +209,21 @@
       "topic": "analysis/conformal-maps",
       "field": "definition",
       "text": "黎曼映射定理：任何单连通非空真开集 $\\Omega \\subsetneq \\mathbb{C}$ 都可共形地映到单位圆盘。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riemann-mapping-existence"
+      ],
+      "note": "条件为非空单连通真域；整平面排除，因 Liouville 定理不可能双全纯到圆盘。证明展开平方根分支、Rouché、单叶极限、Montel、导数极值与满射性；归一化固定一点及正实导数后唯一。"
     },
     {
       "topic": "analysis/conformal-maps",
       "field": "extraInsight",
-      "text": "黎曼映射定理保证单连通区域都能共形地变成圆盘，但映射一般没有初等表达式。",
-      "status": "needs-statement-review"
+      "text": "黎曼映射定理保证非空单连通真域都能共形地变成圆盘，但映射一般没有初等表达式。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riemann-mapping-existence"
+      ],
+      "note": "条件为非空单连通真域；整平面排除，因 Liouville 定理不可能双全纯到圆盘。证明展开平方根分支、Rouché、单叶极限、Montel、导数极值与满射性；归一化固定一点及正实导数后唯一。"
     },
     {
       "topic": "analysis/limits",
@@ -201,7 +235,12 @@
       "topic": "analysis/derivatives",
       "field": "extraInsight",
       "text": "可导必连续，但连续不必可导；达布定理进一步指出导数虽然未必连续，却不能有跳跃间断，这是导数区别于一般函数的重要性质。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "derivative-continuity",
+        "darboux-derivative"
+      ],
+      "note": "可导蕴含连续及导数介值性已逐步证明；此句不声称每个具介值性的函数都是导数。"
     },
     {
       "topic": "analysis/integration-calculus",
@@ -225,7 +264,11 @@
       "topic": "analysis/analytic-continuation",
       "field": "definition",
       "text": "解析延拓若存在则唯一（同一性定理）：两个在 $D$ 上相等的解析函数，在其公共连通定义域上处处相等。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "holomorphic-identity"
+      ],
+      "note": "比较域必须连通，聚点必须在该域内部；在共同连通重叠域上唯一，不保证穿过奇点的全局单值延拓存在。"
     },
     {
       "topic": "analysis/analytic-continuation",
@@ -236,8 +279,12 @@
     {
       "topic": "analysis/analytic-continuation",
       "field": "extraInsight",
-      "text": "解析延拓的唯一性来自同一性定理：两个在区域上全纯的函数若在一个有聚点的集合上相等，则处处相等。",
-      "status": "needs-statement-review"
+      "text": "解析延拓的唯一性来自同一性定理：两个在区域上全纯的函数若在一个于该连通域内部有聚点的集合上相等，则处处相等。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "holomorphic-identity"
+      ],
+      "note": "比较域必须连通，聚点必须在该域内部；在共同连通重叠域上唯一，不保证穿过奇点的全局单值延拓存在。"
     },
     {
       "topic": "analysis/lebesgue-integral",
@@ -249,49 +296,97 @@
       "topic": "analysis/integration-limits",
       "field": "definition",
       "text": "**单调收敛定理**：若 $0 \\le f_n \\nearrow f$，则 $\\int f_n \\to \\int f$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "definition",
       "text": "**控制收敛定理**：若 $f_n \\to f$ 且 $|f_n| \\le g$（$g$ 可积），则 $\\int f_n \\to \\int f$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "definition",
       "text": "Fatou 引理给出下界。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "intuition",
       "text": "控制收敛定理是概率论中“期望与极限交换”的标准工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "formulaCaptions",
       "text": "单调收敛定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "formulaCaptions",
       "text": "控制收敛定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "formulaCaptions",
       "text": "Fatou 引理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/integration-limits",
       "field": "extraInsight",
       "text": "三大收敛定理（单调收敛、Fatou、控制收敛）给出积分与极限交换的充分条件。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "monotone-integral",
+        "dominated-convergence",
+        "fatou"
+      ],
+      "note": "使用可测函数与同一测度空间；单调收敛限非负函数，Fatou 限非负函数，控制收敛限由固定可积函数控制的几乎处处收敛序列。正文简式应连同这些条件阅读。"
     },
     {
       "topic": "analysis/banach-spaces",
@@ -374,7 +469,11 @@
       "topic": "analysis/spectral-theory",
       "field": "definition",
       "text": "紧自伴算子的谱定理：存在正交特征基，$T = \\sum \\lambda_i \\langle \\cdot, e_i\\rangle e_i$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "compact-self-adjoint-spectral"
+      ],
+      "note": "证明适用于任意实或复 Hilbert 空间上的有界紧自伴算子；非零特征列外须补核的正交基。展开在范数下成立，算子截断也按范数收敛；一般非紧算子的谱测度版本不由此推出。"
     },
     {
       "topic": "analysis/spectral-theory",

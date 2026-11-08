@@ -1,5 +1,5 @@
 {
-  "proofCount": 376,
+  "proofCount": 404,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -37,7 +37,10 @@
         "uniform-continuous-limit",
         "weierstrass-m",
         "continuous-functions-complete",
-        "termwise-differentiation"
+        "termwise-differentiation",
+        "holomorphic-compact-limit",
+        "montel-locally-bounded",
+        "hurwitz-univalent-limit"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -101,7 +104,13 @@
         "cauchy-square-formula",
         "holomorphic-taylor",
         "holomorphic-identity",
-        "liouville"
+        "liouville",
+        "maximum-modulus",
+        "schwarz-lemma",
+        "holomorphic-compact-limit",
+        "complex-exponential-entire",
+        "argument-principle-square",
+        "rouche-square"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -116,7 +125,10 @@
         "goursat-triangle",
         "goursat-one-point",
         "convex-primitive",
-        "cauchy-square-formula"
+        "cauchy-square-formula",
+        "continuous-path-primitive-integral",
+        "cauchy-homotopy",
+        "cauchy-simply-connected"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -127,7 +139,9 @@
       "subject": "分析",
       "branch": "复分析",
       "proofIds": [
-        "contour-estimate"
+        "contour-estimate",
+        "argument-principle-square",
+        "rouche-square"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -138,7 +152,18 @@
       "subject": "分析",
       "branch": "复分析",
       "proofIds": [
-        "cr-angle-preservation"
+        "maximum-modulus",
+        "schwarz-lemma",
+        "disk-automorphisms",
+        "schwarz-pick",
+        "normalized-riemann-map-unique",
+        "montel-locally-bounded",
+        "cr-angle-preservation",
+        "holomorphic-square-root",
+        "holomorphic-injective-inverse",
+        "hurwitz-univalent-limit",
+        "bounded-univalent-seed",
+        "riemann-mapping-existence"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -205,7 +230,8 @@
       "branch": "微积分",
       "proofIds": [
         "holomorphic-taylor",
-        "holomorphic-identity"
+        "holomorphic-identity",
+        "holomorphic-square-root"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -306,7 +332,8 @@
         "uniform-boundedness",
         "open-mapping-banach",
         "closed-graph-banach",
-        "hahn-banach-real-dominated"
+        "hahn-banach-real-dominated",
+        "bounded-operator-complete"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -322,6 +349,8 @@
         "gram-schmidt",
         "projection-closed-subspace",
         "riesz-representation",
+        "hilbert-orthonormal-basis",
+        "compact-self-adjoint-spectral",
         "plancherel-schwartz",
         "general-l2-complete",
         "schwartz-density",
@@ -340,7 +369,15 @@
       "branch": "泛函分析",
       "proofIds": [
         "hermitian-spectral",
-        "normal-spectral"
+        "normal-spectral",
+        "self-adjoint-rayleigh-norm",
+        "compact-self-adjoint-extremal",
+        "compact-eigenvalue-finiteness",
+        "compact-self-adjoint-spectral",
+        "banach-neumann-series",
+        "resolvent-open-bounded-spectrum",
+        "compact-self-adjoint-spectrum-set",
+        "multiplication-spectrum"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -357,6 +394,7 @@
         "uniform-boundedness",
         "open-mapping-banach",
         "closed-graph-banach",
+        "self-adjoint-rayleigh-norm",
         "neumann-series",
         "hahn-banach-one-step",
         "hahn-banach-real-dominated",
@@ -364,6 +402,9 @@
         "norming-functional",
         "bidual-isometry",
         "young-l1-l2",
+        "bounded-operator-complete",
+        "banach-neumann-series",
+        "multiplication-spectrum",
         "lax-milgram"
       ],
       "coverage": "partial",
@@ -1823,6 +1864,7 @@
       "subject": "数论",
       "branch": "模形式",
       "proofIds": [
+        "disk-automorphisms",
         "mobius-upper-half-plane",
         "hyperbolic-mobius-isometry"
       ],

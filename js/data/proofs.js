@@ -73,9 +73,17 @@ window.ATLAS.proofBook = {
       "title": "完备、算子与微分方程的定义",
       "statement": "完备度量空间指每个柯西列在空间内收敛。巴拿赫空间为完备赋范空间，有界算子指存在统一线性范数界。向量积分按各实坐标的黎曼积分定义，向量微分按坐标定义。"
     },
+    "def-compact-self-adjoint": {
+      "title": "紧自伴算子与内积约定",
+      "statement": "H 为实或复 Hilbert 空间，内积在第一变量线性。自伴算子 T 在本章指处处定义的有界线性算子，满足 〈Tx,y〉=〈x,Ty〉。紧指对任意有界序列 x_n，Tx_n 有范数收敛子列。算子范数为单位球上 ‖Tx‖ 的上确界；不包含无界算子的定义域问题。"
+    },
     "def-contour": {
       "title": "复可导与曲线积分的定义",
       "statement": "复导数按复增量差商极限定义。分段 C¹ 参数曲线 γ 上，∫f(z)dz 定义为 ∫f(γ(t))γ′(t)dt，实部与虚部分别积分。正向多边形边界按逆时针取向。此章可用 π=4∫₀¹(1+t²)⁻¹dt 表示所需常数，因此计算绕行积分不预设三角函数参数化。"
+    },
+    "def-simply-connected-domain": {
+      "title": "单连通域与保持端点的同伦",
+      "statement": "域指非空连通开集。此章单连通使用等价的基点环路定义：域路径连通，且每个基点闭环都有连续收缩 H:[0,1]²→Ω，使 H(0,t) 为该环路、H(1,t) 为基点常路径、H(s,0)=H(s,1) 为同一基点。一般端点同伦要求 H(s,0)、H(s,1) 各自不随 s 变化。以下证明不要求 H 可微。"
     },
     "def-finite-structures": {
       "title": "有限偏序、格、网络与算法约定",
@@ -2166,6 +2174,109 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "hilbert-orthonormal-basis",
+      "topics": [
+        "analysis/hilbert-spaces"
+      ],
+      "title": "任意 Hilbert 空间的标准正交基与 Parseval 展开",
+      "statement": "每个实或复 Hilbert 空间都有标准正交基 E。对每个 x，非零系数 〈x,e〉至多可数，x=Σ_(e∈E)〈x,e〉e 在范数下成立，且 ‖x‖²=Σ|〈x,e〉|²。",
+      "dependencies": [
+        "complex-cauchy-schwarz",
+        "cauchy-schwarz",
+        "def-complete",
+        "axiom-zorn"
+      ],
+      "idea": "有限正交投影给 Bessel 界，再对极大正交族的残差使用极大性。",
+      "steps": [
+        "对有限标准正交集 F，令 s_F=Σ_(e∈F)〈x,e〉e。直接展开得 x−s_F 与每个 e∈F 正交，且 ‖x‖²=‖x−s_F‖²+Σ_(e∈F)|〈x,e〉|²，特别有限系数平方和≤‖x‖²。",
+        "标准正交族按包含排序。任一链的并仍标准正交，因为任意两个向量同属链中的某个成员。空集是初始成员，Zorn 给极大标准正交族 E；H={0} 时可取空基。",
+        "对每个正整数 k，满足 |〈x,e〉|≥1/k 的 e 只有有限个，否则有限投影界被任意多个至少 1/k² 的项违反。因此非零系数集合是可数个有限集的并，至多可数。枚举为 e₁,e₂,…；系数平方级数非负有界而收敛。对应向量部分和 s_n 的尾差范数平方恰为系数平方尾和，故柯西并在 H 中收敛为 s。有限情形直接取有限和。",
+        "对每个 e∈E，内积连续性给 〈x−s,e〉=0。若残差 r=x−s 非零，则 r/‖r‖ 可添入 E，与极大性矛盾。因此 x=s。把有限投影恒等式取极限得 Parseval。任意有限截断的尾部也由相同平方和控制，故所得和不依赖枚举次序。$\\square$"
+      ]
+    },
+    {
+      "id": "self-adjoint-rayleigh-norm",
+      "topics": [
+        "analysis/spectral-theory",
+        "analysis/linear-operators"
+      ],
+      "title": "自伴算子的范数等于绝对 Rayleigh 商上确界",
+      "statement": "若 T 为 H 上有界自伴算子，则 〈Tx,x〉实值，且 ‖T‖=sup_(‖x‖=1)|〈Tx,x〉|（零空间中两边约定为零）。",
+      "dependencies": [
+        "def-compact-self-adjoint",
+        "complex-cauchy-schwarz",
+        "cauchy-schwarz"
+      ],
+      "idea": "用 x+y 与 x−y 的二次型差控制任意矩阵元，再对 Tx 的方向取上确界。",
+      "steps": [
+        "自伴性及内积共轭对称性给 〈Tx,x〉=overline(〈Tx,x〉)，所以实值。记 m 为所列上确界，Cauchy–Schwarz 给 m≤‖T‖。齐次性又给对任意 z，|〈Tz,z〉|≤m‖z‖²。",
+        "令 q(z)=〈Tz,z〉。展开并利用自伴性得 q(x+y)−q(x−y)=4Re〈Tx,y〉。若 x,y 都是单位向量，右侧实部绝对值≤m(‖x+y‖²+‖x−y‖²)/4=m；最后的平行四边形恒等式由内积展开直接得到。",
+        "复情形以适当单位复数倍的 y 代替 y，可使 〈Tx,y〉为非负实数，因此 |〈Tx,y〉|≤m；实情形改变 y 的符号即可。Tx≠0 时取 y=Tx/‖Tx‖，得 ‖Tx‖≤m 对单位 x 成立；Tx=0 时也成立。取上确界得到 ‖T‖≤m，与前一步合并为等式。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-self-adjoint-extremal",
+      "topics": [
+        "analysis/spectral-theory"
+      ],
+      "title": "非零紧自伴算子取得极端特征值",
+      "statement": "非零紧自伴算子 T 存在单位特征向量 e 与实特征值 λ，使 Te=λe 且 |λ|=‖T‖。",
+      "dependencies": [
+        "self-adjoint-rayleigh-norm",
+        "def-compact-self-adjoint",
+        "def-complete"
+      ],
+      "idea": "取逼近极端 Rayleigh 商的单位向量；残差趋零，紧性把近似特征向量变成真正特征向量。",
+      "steps": [
+        "设 m=‖T‖>0。范数公式给单位向量 x_n，使 |〈Tx_n,x_n〉|→m。取符号相同的子列，可令 〈Tx_n,x_n〉→λ，其中 λ=m 或 −m。若其中某一符号只出现有限次就取另一符号；两者都无限时任选一侧。",
+        "因 λ 实且 |λ|=m，展开残差平方得 ‖Tx_n−λx_n‖²=‖Tx_n‖²−2λ〈Tx_n,x_n〉+λ²≤m²−2λ〈Tx_n,x_n〉+m²→0。",
+        "紧性使某子列 Tx_n→y。于是 λx_n=Tx_n−(Tx_n−λx_n)→y，所以 x_n→e=y/λ，且 ‖e‖=1。连续性给 Te=λe，所求特征向量存在。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-eigenvalue-finiteness",
+      "topics": [
+        "analysis/spectral-theory"
+      ],
+      "title": "紧自伴算子的非零特征空间有限维及特征值聚集限制",
+      "statement": "紧自伴算子的特征值均实，异特征值的特征向量正交；每个非零特征值的特征空间有限维。对每个 ε>0，绝对值≥ε 的特征向量最多能组成有限标准正交族。",
+      "dependencies": [
+        "def-compact-self-adjoint",
+        "gram-schmidt",
+        "complex-cauchy-schwarz"
+      ],
+      "idea": "无穷正交族的像若保持正距离，就违反紧性。",
+      "steps": [
+        "若 Tx=λx、x≠0，则 λ=〈Tx,x〉/‖x‖² 为实数。若 Ty=μy，则 λ〈x,y〉=〈Tx,y〉=〈x,Ty〉=μ〈x,y〉，所以 λ≠μ 时正交。",
+        "若存在无限标准正交特征向量 e_n，且对应 |λ_n|≥ε，则对 n≠m，‖Te_n−Te_m‖²=|λ_n|²+|λ_m|²≥2ε²。这列像没有柯西子列，更没有收敛子列，与紧性矛盾。",
+        "若一个非零特征空间无限维，可递归选不在前面有限张成空间中的向量并作 Gram–Schmidt，得到其中无限标准正交列，取 ε=|λ| 即产生矛盾。若有无限多个绝对值≥ε 的不同特征值，则各取单位特征向量，由第一步正交，同样矛盾。因此这类特征值连重数计也仅有限个。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-self-adjoint-spectral",
+      "topics": [
+        "analysis/spectral-theory",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "任意 Hilbert 空间的紧自伴谱分解",
+      "statement": "紧自伴算子 T 的非零谱方向可列为有限或可数标准正交特征向量 e_n，Te_n=λ_ne_n、λ_n实且非零，无穷情形 λ_n→0。H 是 ker T 与这些向量闭张成空间的正交直和，且 Tx=Σ_n λ_n〈x,e_n〉e_n。级数的有限秩截断在算子范数下收敛。补上 ker T 的标准正交基便得到整个 H 的特征向量基。",
+      "dependencies": [
+        "compact-self-adjoint-extremal",
+        "compact-eigenvalue-finiteness",
+        "hilbert-orthonormal-basis",
+        "def-compact-self-adjoint"
+      ],
+      "idea": "每次在已有特征向量的正交补上选最大模特征值；紧性迫使剩余算子范数趋零。",
+      "steps": [
+        "若 T=0，ker T=H，结论直接成立。否则取极端特征向量 e₁。其正交补 H₁ 闭，因内积连续；它在 T 下不变，因为 x⊥e₁ 时 〈Tx,e₁〉=〈x,Te₁〉=0。闭子空间继承完备性。限制 T|H₁ 仍自伴且紧：有界序列像的收敛子列极限由 H₁ 闭性仍在其中。",
+        "递归：令 H_n={e₁,…,e_n}^⊥。若 T|H_n=0 就停止；否则在该空间取极端单位特征向量 e_(n+1)，其 |λ_(n+1)|=‖T|H_n‖。得到标准正交特征列，且特征值模非增。无穷情形由前引理，任何 ε>0 以上仅有限个，故 λ_n→0。",
+        "对任意 x，有限投影 S_nx=Σ_(j≤n)〈x,e_j〉e_j。Bessel 界使 S_nx 柯西并收敛到 s；r=x−s 与每个 e_j 正交。若过程有限停止，r 属于最后 H_n，故 Tr=0；若无穷，则 r∈H_n 对每个 n，因此 ‖Tr‖≤|λ_(n+1)|‖r‖→0，也有 Tr=0。",
+        "反向若 x∈ker T，则 λ_j〈x,e_j〉=〈x,Te_j〉=〈Tx,e_j〉=0，λ_j≠0 使 x 与全部 e_j 正交。因此 ker T 恰为这些向量闭张成空间的正交补，前一步给每个 x 的直和分解；交集为零由向量与自身正交即为零得到。",
+        "T 连续使 Tx=Ts=lim_nΣ_(j≤n)λ_j〈x,e_j〉e_j。更强地，对有限秩 T_nx=Σ_(j≤n)λ_j〈x,e_j〉e_j，有 (T−T_n)x=T(x−S_nx)，而 x−S_nx∈H_n、‖x−S_nx‖≤‖x‖，故 ‖T−T_n‖≤‖T|H_n‖=|λ_(n+1)|→0；有限停止时余项为零。",
+        "核为闭 Hilbert 子空间，按已证正交基存在定理取其标准正交基，其每个向量是零特征值向量。与 e_n 合并后，由直和分解在 H 中完备，构成全空间特征向量基。该核可以不可分；每个向量仍至多有可数个非零展开系数。$\\square$"
+      ]
+    },
+    {
       "id": "complex-basic-rules",
       "topics": [
         "analysis/holomorphic-functions"
@@ -2387,6 +2498,215 @@ window.ATLAS.proofBook = {
         "若空间维数 n>0，算子由 n² 个矩阵坐标决定，所以 I,A,…,A^(n²) 线性相关，存在非零多项式 p 使 p(A)=0。它不能是非零常数，否则为非零倍单位算子；因此次数正。",
         "代数基本定理使 p(z)=c∏_j(z-λ_j)，于是 0=p(A)=c∏_j(A-λ_jI)。若每个因子都可逆，乘积也可逆，不可能等于零算子；故至少一个因子不可逆。",
         "有限维秩—零化度使不可逆的方算子有非零核，得到 Av=λ_jv、v≠0。对不可约表示的自 intertwiner T，现在已知它有某特征值，应用已证 Schur 引理便得 T=λI，不再把特征值存在当作未证前提。$\\square$"
+      ]
+    },
+    {
+      "id": "maximum-modulus",
+      "topics": [
+        "analysis/holomorphic-functions",
+        "analysis/conformal-maps"
+      ],
+      "title": "最大模原理与边界最大值原理",
+      "statement": "连通开域 Ω 上全纯 f，若 |f| 在域内有局部最大值，则 f 恒定。若 Ω 有界，f 在闭包连续且在 Ω 全纯，则 max_(closure Ω)|f|=max_(boundary Ω)|f|。",
+      "dependencies": [
+        "holomorphic-taylor",
+        "holomorphic-identity",
+        "fundamental-algebra",
+        "finite-dimensional-compactness"
+      ],
+      "idea": "非恒定局部幂级数的最低非零项总有使模增长的方向。",
+      "steps": [
+        "设 a 是局部最大点。若 f(a)=0，附近 |f|≤0，故局部恒零，恒等定理使全域恒零。设 f(a)≠0。若 f 在 a 的幂级数除常数项外全为零，则局部常值，恒等定理同样给全域常值。",
+        "否则令 m≥1 为最低非零非常数项阶，f(a+h)=f(a)+c_mh^m+O(|h|^(m+1))，c_m≠0。余项估计可由局部绝对收敛幂级数取得：固定小半径 ρ，|h|≤ρ/2 时将 Σ_(k≥m+1)|c_k||h|^k 中 |h|^(m+1) 提出，剩余级数有有限常数界。",
+        "选择单位复数 u，使 c_mu^m=|c_m|f(a)/|f(a)|。该 m 次根由代数基本定理存在，因右端除 c_m 的模为一，根 u 的模也为一。取 h=tu，t>0，则 Re[(overline(f(a))/|f(a)|)f(a+tu)]=|f(a)|+|c_m|t^m+O(t^(m+1))>|f(a)|，只要 t 足够小。复数模至少为该实部，与局部最大矛盾。",
+        "边界版本中闭包闭有界而紧，连续 |f| 取得最大值。若在边界取得即完成；若在内部取得，前述结果使 f 常值，边界也取得相同值。有界非空域的边界非空：从域内一点沿射线到域外，取首次退出点即为边界点。因此最大值的两边均有定义。$\\square$"
+      ]
+    },
+    {
+      "id": "schwarz-lemma",
+      "topics": [
+        "analysis/conformal-maps",
+        "analysis/holomorphic-functions"
+      ],
+      "title": "Schwarz 引理及等号情形",
+      "statement": "若 f:D→D 全纯、D={|z|<1}、f(0)=0，则 |f(z)|≤|z| 且 |f′(0)|≤1。若某个非零 z 取等号，或 |f′(0)|=1，则 f(z)=cz，其中 |c|=1。",
+      "dependencies": [
+        "maximum-modulus",
+        "holomorphic-taylor",
+        "complex-basic-rules"
+      ],
+      "idea": "将原点零点除去，对 f(z)/z 用越来越接近单位圆的边界界。",
+      "steps": [
+        "定义 g(z)=f(z)/z（z≠0）、g(0)=f′(0)。局部幂级数 f(z)=a₁z+a₂z²+… 给 g 的全纯延拓，因此 g 在 D 全纯。对 0<r<1，在 |z|=r 上有 |g(z)|≤1/r。",
+        "边界最大值原理使闭圆盘 |z|≤r 上亦有 |g(z)|≤1/r。固定任意 z∈D，令 r↑1，得到 |g(z)|≤1。因此 |f(z)|≤|z|，在零点得到 |f′(0)|≤1。",
+        "若 |g| 在某内部点等于一，则它取得全域最大值，最大模原理使 g 常值 c 且 |c|=1。非零点 |f(z)|=|z| 或 |f′(0)|=1 恰分别给这种内部等号。因此 f=cz。反向每个这种旋转都达到所述等号。$\\square$"
+      ]
+    },
+    {
+      "id": "disk-automorphisms",
+      "topics": [
+        "analysis/conformal-maps",
+        "numbertheory/modular-transformations"
+      ],
+      "title": "单位圆盘的全体双全纯自同构",
+      "statement": "对 a∈D，φ_a(z)=(z−a)/(1−overline(a)z) 是 D 的双全纯自同构。每个双全纯 F:D→D 唯一可写为 F(z)=cφ_a(z)，其中 a=F⁻¹(0)、|c|=1。",
+      "dependencies": [
+        "schwarz-lemma",
+        "complex-basic-rules"
+      ],
+      "idea": "先用显式分式把零点移到原点，再对固定原点的映射和逆映射各用一次 Schwarz 引理。",
+      "steps": [
+        "分母在 D 非零，因为 |overline(a)z|<1。展开平方模可得 |1−overline(a)z|²−|z−a|²=(1−|a|²)(1−|z|²)>0，所以 |φ_a(z)|<1。解 w=φ_a(z) 得 z=(w+a)/(1+overline(a)w)=φ_(−a)(w)，相同估计使逆也从 D 映到 D，且均全纯。",
+        "若 G:D→D 为双全纯且 G(0)=0，其逆也固定零。Schwarz 给 |G(z)|≤|z| 及 |G⁻¹(w)|≤|w|，取 w=G(z)，两界合并得 |G(z)|=|z|。等号情形使 G(z)=cz、|c|=1。",
+        "对任意 F，取 a=F⁻¹(0)，G=F∘φ_a⁻¹ 固定原点，故 G(z)=cz，即 F=cφ_a。a 是 F 的唯一零点，因而唯一；固定 a 后，任一 z≠a 的函数值确定 c，故 c 也唯一。$\\square$"
+      ]
+    },
+    {
+      "id": "schwarz-pick",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "Schwarz–Pick 不等式与刚性",
+      "statement": "全纯 f:D→D 对 a,z∈D 满足 |(f(z)−f(a))/(1−overline(f(a))f(z))|≤|(z−a)/(1−overline(a)z)|，且 |f′(a)|≤(1−|f(a)|²)/(1−|a|²)。若第一式在 z≠a 处取等号，或第二式取等号，则 f 为圆盘自同构。",
+      "dependencies": [
+        "disk-automorphisms",
+        "schwarz-lemma"
+      ],
+      "idea": "把输入输出各自的目标点移到零，再用 Schwarz 引理。",
+      "steps": [
+        "令 g=φ_(f(a))∘f∘φ_a⁻¹，则 g:D→D 全纯且 g(0)=0。Schwarz 给 |g(w)|≤|w|，代入 w=φ_a(z) 正是所列两点不等式。",
+        "由分式求导，φ_a′(a)=1/(1−|a|²)，(φ_a⁻¹)′(0)=1−|a|²。因此 g′(0)=f′(a)(1−|a|²)/(1−|f(a)|²)。Schwarz 的导数界给所述估计。这里复链式法则由两个复线性逼近复合直接得到，与已证实链式法则的余项论证相同。",
+        "任一所述等号使 g 按 Schwarz 刚性为单位旋转，因而 f=φ_(f(a))⁻¹∘g∘φ_a 为双全纯自同构。反向圆盘自同构的分式计算给两点和导数处处等号。$\\square$"
+      ]
+    },
+    {
+      "id": "normalized-riemann-map-unique",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "归一化黎曼映射的唯一性",
+      "statement": "设 Ω 为域、a∈Ω。若 F,G:Ω→D 为双全纯映射，且 F(a)=G(a)=0、F′(a)>0、G′(a)>0（均为正实数），则 F=G。任一双全纯映射可经圆盘自同构归一化成这种形式。",
+      "dependencies": [
+        "disk-automorphisms",
+        "complex-basic-rules"
+      ],
+      "idea": "两个候选映射的过渡函数是固定零的圆盘自同构，因此只差一个旋转，正导数条件消去旋转。",
+      "steps": [
+        "H=G∘F⁻¹ 是固定零的圆盘自同构，故 H(w)=cw、|c|=1。因此 G=cF，求导于 a 得 G′(a)=cF′(a)。两个导数为正实数，故 c 是正实单位数，只能 c=1，得到相等。",
+        "若已有双全纯 F，先复合 φ_(F(a))，使 a 的像为零。该映射的导数不为零，因为与其全纯逆的复合为恒等，链式法则给两者导数乘积为一。再乘以该导数相位的倒数，可使导数成为正实数。",
+        "这证明已存在映射的归一化及唯一性；任意单连通真域上这种映射的存在仍须另用正规族与极值方法证明。$\\square$"
+      ]
+    },
+    {
+      "id": "continuous-path-primitive-integral",
+      "topics": [
+        "analysis/cauchy-integral-theorem"
+      ],
+      "title": "局部原函数定义的连续路径积分",
+      "statement": "若 f 在开集 Ω 全纯，则其积分可定义在 Ω 内任意连续路径上：把路径分成像包含在原函数圆盘内的有限段，累加各段局部原函数的端点差。结果不依赖分割和圆盘选择，对拼接可加、反向变号，并与分段 C¹ 曲线积分一致。",
+      "dependencies": [
+        "convex-primitive",
+        "heine-cantor",
+        "compact-interval",
+        "continuous-compact",
+        "contour-estimate"
+      ],
+      "idea": "用紧致性取得统一小圆盘尺度；两个局部原函数在圆盘交集上的差为常数。",
+      "steps": [
+        "对路径像 K，给每个 z∈K 选 r_z>0，使 B(z,2r_z)⊆Ω。开球 B(z,r_z) 覆盖紧集 K，故有有限子覆盖；设其半径最小值为 r>0。路径在 [0,1] 上一致连续，取有限分割，使每个小段的像到该段起点的距离小于 r。",
+        "该起点在某 B(z_i,r_i) 内，因此整段像在 B(z_i,2r_i) 内。圆盘凸，f 在其中有原函数 F_i，定义该段积分为 F_i(终点)−F_i(起点)，再累加。",
+        "若同一段的像同时在两个这样的圆盘内，其两个端点也在圆盘交内；交为凸开集。两原函数之差导数为零，沿交内两端点的线段使用端点公式，得差在两端值相同，所以算出的增量相同。对两个任意分割取共同细分，先用望远镜恒等式不改每个圆盘中的总增量，再逐段比较圆盘选择，得结果唯一。",
+        "拼接可加及反向变号直接来自端点差；取共同细分即可处理分割连接点。若路径分段 C¹，再把分割加入其光滑段端点，每段用曲线积分端点公式，便与原有积分逐段相等。此构造不把一般连续路径当作必可求长的曲线。$\\square$"
+      ]
+    },
+    {
+      "id": "cauchy-homotopy",
+      "topics": [
+        "analysis/cauchy-integral-theorem"
+      ],
+      "title": "Cauchy 积分的连续同伦不变性",
+      "statement": "Ω 上全纯 f，若连续路径 γ₀、γ₁ 在 Ω 内保持端点同伦，则按局部原函数定义的积分相同。特别地，当两路径分段 C¹ 时，通常曲线积分相同。",
+      "dependencies": [
+        "continuous-path-primitive-integral",
+        "def-simply-connected-domain",
+        "heine-cantor",
+        "finite-dimensional-compactness",
+        "continuous-compact",
+        "heine-borel-rn"
+      ],
+      "idea": "把同伦方形网格化，使每个小格的像都在一个原函数圆盘中；内部边两两抵消。",
+      "steps": [
+        "同伦像 K=H([0,1]²) 紧，因为方形紧、H 连续。与路径引理相同，有限选圆盘 B(z_i,r_i) 覆盖 K，其双倍半径圆盘都包含在 Ω。令 r=min_i r_i>0。同伦 H 在紧方形上一致连续，故足够细的矩形网格中，每个小格的像到某个顶点的像的距离都小于 r。",
+        "该顶点像属于某 B(z_i,r_i)，所以该小格的整个像在 B(z_i,2r_i) 中。f 在该圆盘有原函数，小格四条边的像都是连续路径。其积分由原函数端点差计算，四段望远镜相加为零。",
+        "对全部小格相加。相邻格沿公共边使用相反方向，而路径积分与所选圆盘无关，所以内部边精确抵消。剩下同伦方形外边界的积分为零。保持端点条件使左右侧路径恒定，积分为零，另外两边分别为 γ₀ 与反向 γ₁，因此 ∫γ₀f=∫γ₁f。对分段 C¹ 路径由前引理转回通常积分。$\\square$"
+      ]
+    },
+    {
+      "id": "cauchy-simply-connected",
+      "topics": [
+        "analysis/cauchy-integral-theorem"
+      ],
+      "title": "单连通域上的 Cauchy 积分定理与全局原函数",
+      "statement": "单连通域 Ω 上每个全纯函数 f 都有全局复原函数，且 Ω 内每条分段 C¹ 闭曲线 γ 满足 ∫γf(z)dz=0。任意两条端点相同的分段 C¹ 路径积分相等。",
+      "dependencies": [
+        "cauchy-homotopy",
+        "complex-basic-rules",
+        "contour-estimate",
+        "def-simply-connected-domain"
+      ],
+      "idea": "闭环收缩到常路径后积分为零，再用路径积分定义全局原函数。",
+      "steps": [
+        "由单连通定义，每条闭环可保持基点收缩到常路径。Cauchy 同伦不变性给闭环积分等于常路径积分，后者端点差为零。若两路径端点相同，将第一条与反向第二条拼成闭环，可加性给两积分相同。",
+        "固定 z₀。每个 z 可由域内有限折线连接到 z₀：可折线连到 z₀ 的点集在 Ω 中开，补集也开，因为任何点的小圆盘内的点可彼此用线段连接；连通性迫使可达集为全部 Ω。因此定义 F(z) 为沿任一此类折线路径的 f 积分，上一段保证定义无关。",
+        "固定 z，取小圆盘 B(z,r)⊆Ω。对 |h|<r，可把到 z 的固定路径接上线段 [z,z+h]，于是 F(z+h)−F(z)=h∫₀¹f(z+th)dt。连续性使右边除 h 后趋于 f(z)，因此 F′(z)=f(z)。z 任意，F 为全局原函数。",
+        "单连通是保证“所有全纯函数、所有闭环积分为零”的域条件。对某个特定函数，它不是必要条件：任何多项式在有洞域上仍有原函数；对任意域内可收缩闭环，前一同伦定理也已保证积分为零。$\\square$"
+      ]
+    },
+    {
+      "id": "holomorphic-compact-limit",
+      "topics": [
+        "analysis/function-sequences",
+        "analysis/holomorphic-functions"
+      ],
+      "title": "紧集上一致极限保持全纯及各阶导数收敛",
+      "statement": "Ω 内全纯函数列 f_n 若在每个紧子集上一致收敛至 f，则 f 全纯，且各阶导数 f_n^(k) 在每个紧子集上一致收敛至 f^(k)。",
+      "dependencies": [
+        "cauchy-square-formula",
+        "holomorphic-taylor",
+        "contour-estimate",
+        "uniform-continuous-limit"
+      ],
+      "idea": "固定一个稍大的方形围道，极限可移入积分；核的差商再给可微性与导数估计。",
+      "steps": [
+        "固定 a∈Ω，取以 a 为中心、闭区域包含在 Ω 中的轴平行方形 Q。f_n 在闭 Q 一致收敛，极限 f 连续。对内部 z，Cauchy 方形公式给 f_n(z)=(2πi)⁻¹∫∂Q f_n(w)/(w−z)dw。长度估计让 n→∞ 时积分误差趋零，得到 f 的同一公式。",
+        "在离边界正距离的内部小邻域中，核差商 [1/(w−z−h)−1/(w−z)]/h=1/[(w−z−h)(w−z)] 一致趋于 1/(w−z)²，因分母有统一正下界。因此积分差商可传入极限，给 f′ 的围道公式。反复对核求导，同样的分母界给全部 k 阶公式 f^(k)(z)=k!/(2πi)∫∂Q f(w)/(w−z)^(k+1)dw。",
+        "对位于 Q 内且到边界距离至少 d>0 的紧集，导数差上界为 k!·length(∂Q)/(2πd^(k+1))·max∂Q|f_n−f|，故一致趋零。任意紧 K⊂Ω，可对每点取大方形及内部小方形，有限个内部小方形覆盖 K，分别用该界再取有限最大，得到 K 上导数一致收敛。$\\square$"
+      ]
+    },
+    {
+      "id": "montel-locally-bounded",
+      "topics": [
+        "analysis/function-sequences",
+        "analysis/conformal-maps"
+      ],
+      "title": "Montel 定理（局部一致有界全纯族）",
+      "statement": "开集 Ω 上全纯函数列 f_n 若对每个紧集 K⊂Ω 存在 M_K<∞ 使所有 n 都满足 sup_K|f_n|≤M_K，则有子列在 Ω 的每个紧子集上一致收敛到全纯函数。",
+      "dependencies": [
+        "holomorphic-compact-limit",
+        "holomorphic-taylor",
+        "contour-estimate",
+        "bolzano-weierstrass",
+        "compact-interval",
+        "heine-borel-rn",
+        "axiom-dependent-choice"
+      ],
+      "idea": "局部 Cauchy 估计给等度连续；在可数稠密集上对角取子列，再用有限网格升级为紧集上一致收敛。",
+      "steps": [
+        "对任意紧 K⊂Ω，取 η>0，使 K 的闭 3η 邻域 L 有界且包含在 Ω 内；K 到闭补集有正距离保证可取，Ω=C 时任取小 η。L 紧，所有 |f_n|≤M_L。K 的闭 η 邻域中每点可放一个到边距离 η/2 的方形，其闭区域仍在 L。Cauchy 一阶系数估计给所有这些点 |f_n′|≤8M_L/(πη)。",
+        "因此若 x,y 距 K 足够近，且 |x−y|<η/2，连接线段全在上述邻域，原函数端点公式给 |f_n(x)−f_n(y)|≤C_K|x−y|，常数不依赖 n。这给 K 附近的统一等度连续性。",
+        "取 D=Ω∩(Q+iQ)，它可数且在 Ω 稠密。逐点局部有界使 f_n(d) 在复平面有收敛子列。依次对 D 的枚举抽取嵌套子列，第 j 个最终下标取第 j 层子列的足够后项，得到严格递增的对角子列，在 D 每点收敛。若 Ω 空结论直接成立。",
+        "固定紧 K 及 ε>0，用第一、二步选 δ>0，使距 K 的 δ 邻域中两个相距≤2δ 的点的函数值差小于 ε/3，统一适用于该子列。由 D 稠密及 K 紧，选有限个 D 中点 d₁,…,d_m，其 δ 球覆盖 K，且都在该邻域。D 点处收敛使充分后的两个子列项在每个 d_i 的值差小于 ε/3。对 x∈K 选邻近 d_i，三角不等式给这两个函数在 x 处值差小于 ε。",
+        "故子列在任意紧 K 上一致柯西。复数完备性给每点极限，同一估计令一个下标趋∞，得到紧集上一致收敛。单点紧集保证各 K 的极限彼此相容，定义全域函数 f。紧集上一致极限定理使 f 全纯。这个子列对所有紧集同时有效，因为对角化先在固定稠密集 D 上进行。$\\square$"
       ]
     },
     {
@@ -6161,6 +6481,99 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "bounded-operator-complete",
+      "topics": [
+        "analysis/linear-operators",
+        "analysis/banach-spaces"
+      ],
+      "title": "有界线性算子空间的完备性",
+      "statement": "若 X 为赋范空间、Y 为 Banach 空间，则 B(X,Y) 配算子范数为 Banach 空间；特别地 X* 总是 Banach 空间。",
+      "dependencies": [
+        "def-complete",
+        "axiom-metric"
+      ],
+      "idea": "算子范数柯西先给逐点极限，再用同一误差界恢复算子范数收敛。",
+      "steps": [
+        "若 T_n 在算子范数下柯西，则固定 x 时 ‖T_nx−T_mx‖≤‖T_n−T_m‖‖x‖，所以 T_nx 在 Y 中柯西并收敛。定义 Tx=lim_nT_nx；取向量加法及数乘的极限可验证 T 线性。",
+        "柯西列的范数有共同上界 C：尾部与某固定项差≤1，有限个前项另取最大值。因此 ‖Tx‖=lim_n‖T_nx‖≤C‖x‖，T 有界。",
+        "给 ε>0，充分大 n,m 有 ‖T_n−T_m‖≤ε。固定 n 和 x 令 m→∞，得 ‖(T_n−T)x‖≤ε‖x‖，再取单位球上确界，‖T_n−T‖≤ε。因此 B(X,Y) 完备。标量域 R、C 完备，取 Y 为标量域即得 X* 完备。$\\square$"
+      ]
+    },
+    {
+      "id": "banach-neumann-series",
+      "topics": [
+        "analysis/linear-operators",
+        "analysis/spectral-theory"
+      ],
+      "title": "Banach 空间上的 Neumann 级数",
+      "statement": "若 X 为 Banach 空间且 B∈B(X)、‖B‖<1，则 I−B 有有界双侧逆 Σ_(n≥0)B^n，且其范数≤1/(1−‖B‖)。",
+      "dependencies": [
+        "bounded-operator-complete"
+      ],
+      "idea": "算子空间完备使几何控制级数收敛，有限望远镜恒等式给双侧逆。",
+      "steps": [
+        "算子范数满足 ‖AB‖≤‖A‖‖B‖，因为对任意 x 有 ‖ABx‖≤‖A‖‖B‖‖x‖。故 ΣB^n 的尾部范数≤Σ‖B‖^n，几何级数收敛使算子部分和柯西。由 B(X) 完备得极限 S。",
+        "有限恒等式 (I−B)Σ_(k=0)^nB^k=Σ_(k=0)^nB^k(I−B)=I−B^(n+1)。因 ‖B^(n+1)‖≤‖B‖^(n+1)→0，乘法连续，取极限得 (I−B)S=S(I−B)=I。",
+        "部分和范数≤Σ_(k=0)^n‖B‖^k，取极限给 ‖S‖≤1/(1−‖B‖)。X={0} 时唯一算子同时为恒等与零，结论按该空间的运算直接成立。$\\square$"
+      ]
+    },
+    {
+      "id": "resolvent-open-bounded-spectrum",
+      "topics": [
+        "analysis/spectral-theory"
+      ],
+      "title": "有界算子的预解集开与谱有界闭",
+      "statement": "复 Banach 空间上有界算子 T 的预解集 ρ(T)={λ:T−λI 有有界双侧逆} 为开集；其补谱 σ(T) 闭且包含在 |λ|≤‖T‖ 内。",
+      "dependencies": [
+        "banach-neumann-series"
+      ],
+      "idea": "在已知可逆点附近分解成可逆算子乘以小扰动；远处直接提出标量 λ。",
+      "steps": [
+        "设 λ₀∈ρ(T)，R₀=(T−λ₀I)⁻¹。因 R₀ 与 T−λ₀I 互逆，T−λI=(T−λ₀I)[I−(λ−λ₀)R₀]。若 |λ−λ₀|‖R₀‖<1，Neumann 定理使后一因子可逆，因此 λ∈ρ(T)，预解集开，谱闭。",
+        "若 |λ|>‖T‖，则 T−λI=−λ(I−T/λ)，‖T/λ‖<1，故可逆，且 ‖(T−λI)⁻¹‖≤1/(|λ|−‖T‖)。所以谱位于所列闭圆盘。这里仅证明闭与有界，不以此冒充谱非空的证明。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-self-adjoint-spectrum-set",
+      "topics": [
+        "analysis/spectral-theory"
+      ],
+      "title": "紧自伴算子的完整谱集与预解范数",
+      "statement": "非零复 Hilbert 空间 H 上紧自伴算子 T，令 D 为其所有特征值（核非零时含 0）。则 σ(T)=closure(D)。对 λ∉σ(T)，有 ‖(T−λI)⁻¹‖=1/dist(λ,σ(T))。特别地非零谱值都是有限重数实特征值；H 无限维时 0 必在谱中，但未必为特征值。",
+      "dependencies": [
+        "compact-self-adjoint-spectral",
+        "compact-eigenvalue-finiteness",
+        "hilbert-orthonormal-basis"
+      ],
+      "idea": "在全空间正交特征基上逐坐标解方程；系数分母远离零等价于有界可逆。",
+      "steps": [
+        "谱分解给标准正交特征基 E，记每个基向量的特征值为 d_e∈R。任一特征值均为这些 d_e 之一：若 Tx=dx、x≠0，x 至少有一个非零基系数，对该系数比较给 d=d_e。因此 D={d_e:e∈E}。",
+        "若 λ 不在 closure(D)，则 δ=inf_e|d_e−λ|>0。对 y 定义 Ry=Σ_e〈y,e〉/(d_e−λ)·e。Parseval 给系数平方和≤δ⁻²‖y‖²，所以级数范数收敛且 R 有界。逐基系数比较，利用 T 连续，得 (T−λI)Ry=y、R(T−λI)y=y。因此 λ 在预解集。",
+        "若 λ∈closure(D)，可选单位特征向量 e_n 使 |d_(e_n)−λ|→0（若 λ 本身为特征值可反复选同一向量）。则 ‖(T−λI)e_n‖→0。若存在有界逆 R，会有 1=‖e_n‖≤‖R‖‖(T−λI)e_n‖→0，矛盾。所以 λ∈σ(T)。",
+        "上述坐标逆满足 ‖R‖≤1/δ。另一方面 ‖Re‖=1/|d_e−λ|，取上确界得 ‖R‖≥1/δ。D 与其闭包距 λ 的下确界相同，故得到预解范数公式。",
+        "非零特征值只可能在零处聚集，由前引理每个 ε 之外仅有限个连重数的谱方向，故非零谱点必在 D，且有限重数。如果 H 无限维、核非零则 0 已是特征值；如果核为零，特征基必无限，非零特征值趋零，因此 0∈closure(D)。例 H=ℓ²、Te_n=e_n/n：T 的有限秩截断误差≤1/(N+1)，所以紧（有界序列先对有限坐标抽取子列，再用统一尾界作对角柯西估计）；其核为零而 0∈σ(T)。$\\square$"
+      ]
+    },
+    {
+      "id": "multiplication-spectrum",
+      "topics": [
+        "analysis/spectral-theory",
+        "analysis/linear-operators"
+      ],
+      "title": "L² 乘法算子的谱等于本质值域",
+      "statement": "设 (Ω,μ) 为非零 σ 有限测度空间，f 为本质有界复可测函数，M_fg=fg 作用于复 L²(μ)。则 σ(M_f)={λ∈C:对每个 ε>0，μ{|f−λ|<ε}>0}，即 f 的本质值域。",
+      "dependencies": [
+        "general-l2-complete",
+        "integral-linearity"
+      ],
+      "idea": "远离本质值域时取逐点倒数；进入本质值域时在函数值贴近 λ 的有限测度集合上取归一化指标。",
+      "steps": [
+        "若 |f|≤C 几乎处处，则 ‖fg‖₂²≤C²‖g‖₂²，故 M_f 有界。改变 f 的零测集取值不影响算子或本质值域。若 λ 不在所列集合，存在 ε>0 使 |f−λ|≥ε 几乎处处；h=1/(f−λ) 几乎处处有界，在异常零集任取零，则 M_h 是 M_f−λI 的有界双侧逆。",
+        "若 λ 属于本质值域，令 A_n={|f−λ|<1/n}，每个均正测度。取递增有限测度集合 Ω_k 覆盖 Ω。若全部 μ(A_n∩Ω_k)=0，则可数并也为零，与 μ(A_n)>0 矛盾。因此可取 B_n=A_n∩Ω_(k_n) 满足 0<μ(B_n)<∞。",
+        "令 g_n=1_(B_n)/√μ(B_n)，则 ‖g_n‖₂=1，而 ‖(M_f−λI)g_n‖₂≤1/n。若有有界逆 R，便有 1≤‖R‖/n，矛盾。因此 λ 在谱中，两个包含合并给等式。σ 有限条件在此用于构造非零有限测度测试集；对任意测度空间不能无条件略去这个步骤。$\\square$"
+      ]
+    },
+    {
       "id": "weak-derivative-unique",
       "topics": [
         "analysis/weak-solutions",
@@ -6914,6 +7327,170 @@ window.ATLAS.proofBook = {
         "令 Y_i=(X_i-μ)/σ，故均值零、方差一。写 V_n=n⁻¹/²ΣY_i。独立乘积期望给 φ_(V_n)(t)=[φ_Y(t/√n)]^n。",
         "固定 t，二阶展开给 φ_Y(t/√n)=1-t²/(2n)+o(1/n)。因此可写为 1+a_n/n，a_n→-t²/2。复二项式极限给 φ_(V_n)(t)→exp(-t²/2)。",
         "独立方差计算使 E[V_n²]=1。Gaussian 平滑引理的全部条件已满足，于是对每个 x 有 P(V_n≤x)→Φ(x)。标准正态分布函数连续，所以这就是所述依分布收敛。证明不需要三阶矩；无限方差分布不在适用范围内。$\\square$"
+      ]
+    },
+    {
+      "id": "complex-exponential-entire",
+      "topics": [
+        "analysis/holomorphic-functions"
+      ],
+      "title": "复指数级数的全纯性、加法公式与非零性",
+      "statement": "E(z)=Σ_(n≥0)z^n/n! 为整函数，E′=E、E(0)=1，且 E(z+w)=E(z)E(w)、E(z)≠0。",
+      "dependencies": [
+        "weierstrass-m",
+        "holomorphic-compact-limit",
+        "complex-basic-rules",
+        "contour-estimate"
+      ],
+      "idea": "级数及导数级数局部一致收敛；乘积求导使 E(z)E(−z) 恒为一。",
+      "steps": [
+        "对 |z|≤R，级数受 ΣR^n/n! 控制，后者充分后相邻比 R/(n+1)≤1/2，故收敛。多项式部分和局部一致收敛，紧集极限定理给 E 全纯且可令导数取极限；形式导数级数仍为 E，故 E′=E。常数项给 E(0)=1。",
+        "求导 E(z)E(−z)，两项抵消，导数零。沿任意线段用端点公式，乘积恒为其在零点值一，所以 E 从不为零。固定 w，对 E(z+w)/E(z) 求导为零，故恒为在 z=0 的值 E(w)。移项得加法公式。$\\square$"
+      ]
+    },
+    {
+      "id": "holomorphic-square-root",
+      "topics": [
+        "analysis/conformal-maps",
+        "analysis/analytic-continuation"
+      ],
+      "title": "单连通域上非零全纯函数的全纯平方根",
+      "statement": "单连通域 Ω 上处处不为零的全纯函数 h 存在全纯 g，满足 g²=h 且 g 处处非零。",
+      "dependencies": [
+        "cauchy-simply-connected",
+        "holomorphic-taylor",
+        "complex-exponential-entire",
+        "fundamental-algebra"
+      ],
+      "idea": "对 h′/h 取全局原函数，以指数消去对数导数。",
+      "steps": [
+        "h′ 全纯，由局部幂级数可反复求导；h 无零点，所以 h′/h 全纯。单连通域的原函数定理给 P′=h′/h。",
+        "令 C(z)=h(z)E(−P(z))，链式法则与 E′=E 给 C′=h′E(−P)−hP′E(−P)=0。域内折线路径端点公式使 C 恒为某个 c≠0。",
+        "取 c 的非零平方根 b（由代数基本定理），令 g=bE(P/2)。指数加法公式给 g²=cE(P)=h，且指数非零使 g 处处非零。$\\square$"
+      ]
+    },
+    {
+      "id": "argument-principle-square",
+      "topics": [
+        "analysis/holomorphic-functions",
+        "analysis/residues"
+      ],
+      "title": "方形围道的辐角原理（全纯无极点版）",
+      "statement": "f 在闭轴平行方形 Q 的邻域全纯，边界无零点，则 (2πi)⁻¹∫∂Q f′/f 等于 Q 内部零点总重数。",
+      "dependencies": [
+        "holomorphic-taylor",
+        "holomorphic-identity",
+        "goursat-triangle",
+        "cauchy-square-formula"
+      ],
+      "idea": "挖去各零点的小方形，用 Goursat 抵消其余区域；每个 m 重零点贡献 m。",
+      "steps": [
+        "f 不恒零，因为边界无零。零点由局部幂级数的最低非零项而孤立。闭 Q 的零点只有有限个：若无限，紧致性给聚点；边界连续且非零排除聚点在边界，内部聚点则由恒等定理迫使 f 恒零，矛盾。",
+        "围每个内部零点 a_j 取互不交、闭包含在 Q 内的轴平行小方形 S_j，足够小以使 f(z)=(z−a_j)^(m_j)h_j(z)，h_j 全纯无零。Q 去掉这些小方形内部后，f′/f 在该紧区域附近全纯。用各方形边的全部横、纵坐标画有限网格，剩余矩形再二分成三角形，逐块 Goursat 后公共边抵消，得外边界积分为各内边界积分之和。",
+        "在 S_j 上 f′/f=m_j/(z−a_j)+h_j′/h_j。后一项全纯，方形边界积分零；前一项的积分由 Cauchy 核计算等于 2πi m_j。求和并除以 2πi 得总重数。$\\square$"
+      ]
+    },
+    {
+      "id": "rouche-square",
+      "topics": [
+        "analysis/holomorphic-functions",
+        "analysis/residues"
+      ],
+      "title": "Rouché 定理（方形围道版）",
+      "statement": "f,g 在闭方形 Q 邻域全纯，若 ∂Q 上 |g−f|<|f|，则 f 与 g 在 Q 内部的零点总重数相同。",
+      "dependencies": [
+        "argument-principle-square",
+        "contour-estimate",
+        "intermediate-value"
+      ],
+      "idea": "在 f 与 g 间作线性同伦，边界无零使零点计数成为连续整数值函数。",
+      "steps": [
+        "设 f_t=f+t(g−f)，0≤t≤1。边界有 |f_t|≥|f|−|g−f|>0。边界紧且上述差连续，存在共同正下界 δ，不依赖 t。",
+        "N(t)=(2πi)⁻¹∫∂Q f_t′/f_t 按辐角原理为非负整数。分子分母对 (t,z) 连续且分母≥δ，故被积函数随 t 一致连续，长度估计使 N 连续。连续整数值函数在区间上恒定：若两个值不同，实介值定理会给非整数中间值。因此 N(0)=N(1)，结论成立。$\\square$"
+      ]
+    },
+    {
+      "id": "holomorphic-injective-inverse",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "全纯开映射与单叶映射的全纯逆",
+      "statement": "域 Ω 上非恒定全纯 f 为开映射。若 f 单射，则 f′ 处处非零，且 f⁻¹:f(Ω)→Ω 全纯，导数为 1/f′(f⁻¹(w))。",
+      "dependencies": [
+        "maximum-modulus",
+        "holomorphic-taylor",
+        "holomorphic-identity",
+        "rouche-square"
+      ],
+      "idea": "用最小边界模与倒数最大模证明开性；若零点重数大于一，Rouché 产生多个不同原像。",
+      "steps": [
+        "固定 a，局部幂级数及恒等定理使 f−f(a) 在 a 附近只有该零点。取充分小闭圆盘 B⊂Ω，中心 a，边界 |f−f(a)| 的最小值 δ>0。若 |w−f(a)|<δ/2 且 w≠f(a)，却没有原像在 B 内，则 1/(f−w) 在闭盘附近全纯。边界模至多 2/δ，中心模却大于 2/δ，违反最大模原理。因此 B 的像包含 f(a) 的邻域。任意开子域中同样可选小盘，故 f 开。",
+        "若 f 单射却 f′(a)=0，令 f−f(a) 的零点重数为 m≥2。取充分小闭方形 Q，仅含该零点。Rouché 保证充分近 f(a) 的每个 w，其 f−w 在 Q 内有 m 个连重数的零点。f′ 不恒零，其在闭 Q 内只有有限个零点；取 w 避开这些点的有限个像。于是 f−w 的所有零点皆简单，总共有 m 个不同原像，与单射矛盾。故 f′(a)≠0。",
+        "开映射与单射使逆连续。固定 w=f(z)，令 k=f⁻¹(w+h)−z，h→0 时 k→0；当 h≠0，单射使 k≠0，且 h=f(z+k)−f(z)。因此逆差商 k/h 趋于 1/f′(z)，逆全纯且导数如述。$\\square$"
+      ]
+    },
+    {
+      "id": "hurwitz-univalent-limit",
+      "topics": [
+        "analysis/function-sequences",
+        "analysis/conformal-maps"
+      ],
+      "title": "Hurwitz 零点结论与单叶极限",
+      "statement": "域 Ω 上全纯 f_n 紧集上一致收敛至 f。若 f_n 都无零，则 f 恒零或处处无零；若 f_n 都单射，则 f 恒定或单射。",
+      "dependencies": [
+        "holomorphic-compact-limit",
+        "rouche-square",
+        "holomorphic-identity"
+      ],
+      "idea": "极限的孤立零点在小方形中有正重数，Rouché 迫使逼近函数也有零点。",
+      "steps": [
+        "若 f 不恒零却 f(a)=0，取小闭方形 Q⊂Ω，其内只有此零点且边界无零。边界 |f| 有正最小值；一致收敛使充分后 |f_n−f|<|f| 于边界。Rouché 给 f_n 在 Q 内有相同正零点数，违背无零假设。",
+        "若 f 不恒定且 f(a)=f(b)、a≠b，考虑 g_n(z)=f_n(z)−f_n(b)，其紧集极限为 g(z)=f(z)−f(b)，不恒零。取围绕 a 的小闭方形 Q，避开 b，且 g 在边界无零、内部零点重数正。单射使 g_n 在 Q 内无零，但 Rouché 又迫使它最终有零点，矛盾。因此 f 单射。$\\square$"
+      ]
+    },
+    {
+      "id": "bounded-univalent-seed",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "单连通真域存在到圆盘的单叶映射",
+      "statement": "非空单连通真域 Ω⊊C 及 a∈Ω，存在单射全纯 f:Ω→D，满足 f(a)=0 且 f′(a)>0。",
+      "dependencies": [
+        "holomorphic-square-root",
+        "holomorphic-injective-inverse",
+        "disk-automorphisms"
+      ],
+      "idea": "对域外点的平方根取一个分支；其像与负像不交，从而倒数映射有统一界。",
+      "steps": [
+        "取 b∈C\\Ω，对无零函数 z−b 取全纯平方根 g。若 g(z₁)=g(z₂)，平方后得 z₁−b=z₂−b，故 g 单射；同样 g(Ω) 与 −g(Ω) 不交，因为 g(z₁)=−g(z₂) 会迫使 z₁=z₂ 且 g=0，不可能。",
+        "g 开映射，故有 ε>0 使 B(g(a),ε)⊂g(Ω)。取负后 B(−g(a),ε)⊂−g(Ω)，与 g(Ω) 不交。因此 |g(z)+g(a)|≥ε，h(z)=ε/[2(g(z)+g(a))] 全纯单射，且 |h(z)|≤1/2<1。",
+        "复合圆盘自同构 φ_(h(a)) 使 a 映为零，仍单射全纯。单叶映射导数非零，再乘适当单位复数，使在 a 的导数成为正实数，所求种子映射存在。$\\square$"
+      ]
+    },
+    {
+      "id": "riemann-mapping-existence",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "黎曼映射定理（存在性、归一化与唯一性）",
+      "statement": "非空单连通真域 Ω⊊C 与 a∈Ω，存在唯一双全纯 F:Ω→D 满足 F(a)=0、F′(a)>0。",
+      "dependencies": [
+        "bounded-univalent-seed",
+        "montel-locally-bounded",
+        "hurwitz-univalent-limit",
+        "holomorphic-compact-limit",
+        "holomorphic-square-root",
+        "disk-automorphisms",
+        "holomorphic-injective-inverse",
+        "normalized-riemann-map-unique"
+      ],
+      "idea": "在归一化单叶圆盘映射中最大化导数；若像漏掉一个点，开平方的构造会严格增大导数。",
+      "steps": [
+        "令 A 为所有单射全纯 f:Ω→D 且 f(a)=0、f′(a)>0 的集合。种子引理使它非空。取围绕 a 且闭包含于 Ω 的固定方形 Q，Cauchy 一阶估计及 |f|≤1 给 f′(a) 的统一有限上界。令 M=sup_(f∈A)f′(a)，则 0<M<∞，可选 f_n 使 f_n′(a)→M。",
+        "由 |f_n|≤1 与 Montel，有子列紧集上一致收敛至 F，全纯极限定理给 F(a)=0、F′(a)=M>0。故 F 非恒定，Hurwitz 单叶极限结论使 F 单射。又 |F|≤1，若内部某点模等于一，最大模原理使 F 恒定，矛盾。因此 F:Ω→D 且 F∈A，导数极值真正取到。",
+        "反设 F(Ω) 漏掉 c∈D。因为 F(a)=0，c≠0。令 u=φ_c∘F，u:Ω→D 全纯单射且无零，取全纯平方根 v²=u。由 |u|<1 得 |v|<1；v 相等会使 u 相等，故 v 单射。令 b=v(a)，则 |b|²=|u(a)|=|c|，所以 0<|b|<1。",
+        "令 G=φ_b∘v，则 G(a)=0、G 单射且映入 D。利用 2v(a)v′(a)=u′(a)、|φ_c′(0)|=1−|c|² 与 φ_b′(b)=1/(1−|b|²)，计算 |G′(a)|=[(1−|c|²)/(2|b|(1−|b|²))]M=[(1+|b|²)/(2|b|)]M。因 (1−|b|)²>0，括号严格大于一。",
+        "将 G 乘单位复数使导数为正实，得到 A 中导数大于 M 的映射，矛盾。因此 F(Ω)=D。单叶映射逆定理使 F⁻¹ 全纯；归一化映射唯一性已另证，故存在唯一所列双全纯映射。$\\square$"
       ]
     },
     {

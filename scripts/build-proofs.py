@@ -346,6 +346,10 @@ for p in PROOFS:
     book.extend([f'<a id="{p["id"]}"></a>',f'## {p["title"]}','','**陈述。** '+p['statement'],'','**依赖。** '+ '；'.join('['+(BASES[d]['title'] if d in BASES else lookup[d]['title'])+'](#'+d+')' for d in p['dependencies']),'','**思路。** '+p['idea'],'','**证明。**',''])
     book.extend(str(i)+'. '+s+'\n' for i,s in enumerate(p['steps'],1))
 book+=['## 对照阅读资料','',
+'[Curtis McMullen，Harvard Math 213a，Complex Analysis Notes](https://abel.math.harvard.edu/~ctm/home/text/class/harvard/213a/06/html/home/course/course.pdf)：正规族、Rouché 与黎曼映射极值法的对照阅读。本卷将所需前置结论逐条展开。',
+'[Harvard，Christopher Eur，Complex Analysis Notes](https://people.math.harvard.edu/~ceur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf)：Goursat、局部原函数与端点同伦形式的 Cauchy 定理对照资料。',
+'[Stéphane Nonnenmacher，Introduction to Spectral Theory](https://www.imo.universite-paris-saclay.fr/~stephane.nonnenmacher/enseign/Spectral%20Theory%202022%20chap1-6.pdf)：有界算子的预解集及乘法算子的本质值域表述，可对照本卷的 σ 有限测度证明。',
+'[Richard Melrose，MIT 18.102，紧自伴谱定理](https://math.mit.edu/~rbm/18-102-S18/Chapter3.pdf)：极端特征值与特征向量完备性的对照讲义。本卷另外明确处理不可分核的正交基补全。',
 '[MIT 18.102，Lecture 3–5](https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/pages/lecture-notes-and-readings/)：Baire 类别、一致有界、开映射、闭图像及 Hahn–Banach 定理的对照讲义。',
 '[J. S. Milne，Fields and Galois Theory](https://www.jmilne.org/math/CourseNotes/ft.html)：多项式、有限域、Artin 固定域与有限伽罗瓦对应的对照教材。',
 '[Sheldon Axler，Linear Algebra Done Right](https://linear.axler.net/LADR4e.pdf)：有限维谱定理与表示论前置线性代数。',

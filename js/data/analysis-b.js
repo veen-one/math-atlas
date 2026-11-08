@@ -434,7 +434,7 @@ window.ATLAS.subjects.analysis.branches.push(
         brief: '推广矩阵特征值的概念',
         keywords: ['谱', '紧算子', '自伴算子', '谱定理'],
         definition: [
-          '线性算子 $T: X \\to X$ 的**谱** $\\sigma(T)$ 是使 $T - \\lambda I$ 不可逆的 $\\lambda$ 集合，推广了矩阵特征值。',
+          '复 Banach 空间上的有界线性算子 $T: X \\to X$ 的**谱** $\\sigma(T)$ 是使 $T - \\lambda I$ 不存在有界双侧逆的 $\\lambda$ 集合，推广了矩阵特征值。',
           '紧自伴算子的谱定理：存在正交特征基，$T = \\sum \\lambda_i \\langle \\cdot, e_i\\rangle e_i$。'
         ],
         intuition: [
@@ -452,7 +452,7 @@ window.ATLAS.subjects.analysis.branches.push(
           }
         ],
         example: [
-          '乘法算子 $M_f: g \\mapsto fg$ 在 $L^2$ 上的谱是 $f$ 的本质值域；这解释了连续谱的来源。'
+          '乘法算子 $M_f: g \\mapsto fg$ 在 $L^2$ 上的谱（对非零 σ 有限测度空间和本质有界复函数 $f$）是 $f$ 的本质值域；这解释了连续谱的来源。'
         ],
         related: ['linear-operators', 'hilbert-spaces', 'applied/quantum-theory']
       },

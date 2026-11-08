@@ -35,7 +35,7 @@ window.ATLAS.extras['analysis/multivariable-calculus'] = {
 };
 
 window.ATLAS.extras['analysis/analytic-continuation'] = {
-  insight: '解析延拓的唯一性来自同一性定理：两个在区域上全纯的函数若在一个有聚点的集合上相等，则处处相等。因此延拓不是“随意扩大定义域”，而是被原函数完全锁定。延拓遇到奇点时会形成多值函数与黎曼面。',
+  insight: '解析延拓的唯一性来自同一性定理：两个在区域上全纯的函数若在一个于该连通域内部有聚点的集合上相等，则处处相等。因此延拓不是“随意扩大定义域”，而是被原函数完全锁定。延拓遇到奇点时会形成多值函数与黎曼面。',
   examples: [
     '$\\Gamma$ 函数通过 $\\Gamma(z+1)=z\\Gamma(z)$ 从 $\\operatorname{Re}z>0$ 延拓到整个复平面，除 $z=0,-1,-2,\\dots$ 的极点外全纯。',
     '几何级数 $\\sum z^n$ 在 $|z|<1$ 收敛到 $\\frac{1}{1-z}$，后者在 $\\mathbb{C}\\setminus\\{1\\}$ 上全纯，给出原级数的解析延拓；$z=1$ 是极点。'
