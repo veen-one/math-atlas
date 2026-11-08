@@ -1,0 +1,2507 @@
+{
+  "note": "关键词提取的候选句，未经数学断言去重；不等于全部定理的完整清单。需人工提取准确假设、结论并对应证明。",
+  "claims": [
+    {
+      "topic": "analysis/continuity-uniform",
+      "field": "intuition",
+      "text": "紧集上的连续函数自动一致连续（Heine–Cantor 定理），这是紧性最重要的应用之一。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/continuity-uniform",
+      "field": "formulaCaptions",
+      "text": "Heine–Cantor 定理：连续性加上紧性推出一致连续。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/uniform-convergence",
+      "field": "extraInsight",
+      "text": "Dini 定理给出一个补偿条件：在紧致空间上，连续实值函数列逐点单调收敛到连续函数时，逐点收敛自动升级为一致收敛。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/series",
+      "field": "intuition",
+      "text": "绝对收敛的级数可以任意重排而不改变和；条件收敛则不行——黎曼重排定理指出，条件收敛级数可以通过重排得到任意实数，甚至发散。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "intuition",
+      "text": "完备性是分析的基石：中值定理、极值定理、黎曼可积性、微分方程解的存在性，都依赖某种形式的完备性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "formulaCaptions",
+      "text": "确界原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "formulaCaptions",
+      "text": "单调有界定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraInsight",
+      "text": "完备性有多种等价形式，其中“确界原理”最常用于存在性证明：只要证明一个集合非空且有上界，就自动得到上确界。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraExamples",
+      "text": "用确界原理证明单调有界数列收敛：设 $a_n$ 单调递增且有上界，令 $s=\\sup\\{a_n\\}$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraExamples",
+      "text": "闭区间套定理：若 $[a_n,b_n]$ 满足 $[a_{n+1},b_{n+1}]\\subseteq[a_n,b_n]$ 且长度趋于 $0$，则交集恰有一个点。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraExamples",
+      "text": "这是二分法求根与压缩映射原理的几何基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "intuition",
+      "text": "第一基本定理说：累积再求变化率，回到原函数；第二基本定理说：求面积可以转化为求原函数的端点值。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "formulaCaptions",
+      "text": "第一基本定理：连续函数的变上限积分是其原函数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraInsight",
+      "text": "微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraExamples",
+      "text": "由基本定理，$\\frac{d}{dx}\\ln x=1/x$，且 $\\ln1=0$，因此这与通常的对数定义一致。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraExamples",
+      "text": "若 $f$ 有跳跃间断，例如 $f(x)=0$（$x<0$）与 $1$（$x\\ge0$），则 $\\int_{-1}^1 f=1$，但 $f$ 没有原函数（达布定理：导数具有介值性）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraExamples",
+      "text": "这说明基本定理的连续性条件不可省略。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/cauchy-integral-theorem",
+      "field": "intuition",
+      "text": "这是复分析“刚性”的核心，也是留数定理与最大模原理的来源。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/cauchy-integral-theorem",
+      "field": "formulaCaptions",
+      "text": "柯西积分定理：单连通区域内全纯函数的闭路积分为零。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/cauchy-integral-theorem",
+      "field": "extraInsight",
+      "text": "柯西定理的实质是“全纯函数的路径积分只依赖端点与绕数”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/cauchy-integral-theorem",
+      "field": "extraExamples",
+      "text": "柯西定理要求区域单连通。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "definition",
+      "text": "留数定理：若 $f$ 在简单闭曲线 $\\gamma$ 内部除有限个孤立奇点外全纯，则 $\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f, a_k)$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "intuition",
+      "text": "留数定理把复杂的围道积分化为代数计算（求系数），是计算实积分的强大工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "formulaCaptions",
+      "text": "留数定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "extraInsight",
+      "text": "计算实积分时，常用大圆弧引理与约当引理控制辅助弧上的积分，使围道积分化为留数和；高阶极点可用求导公式计算留数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "extraExamples",
+      "text": "$z=0$ 处留数为 $1$，约当引理给出弧上积分趋于 $0$，故积分为 $\\pi/2$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/conformal-maps",
+      "field": "definition",
+      "text": "黎曼映射定理：任何单连通非空真开集 $\\Omega \\subsetneq \\mathbb{C}$ 都可共形地映到单位圆盘。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/conformal-maps",
+      "field": "extraInsight",
+      "text": "黎曼映射定理保证单连通区域都能共形地变成圆盘，但映射一般没有初等表达式。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/limits",
+      "field": "extraExamples",
+      "text": "用夹逼定理求极限：$0\\le|x^2\\sin(1/x)|\\le x^2$，故 $\\lim_{x\\to0}x^2\\sin(1/x)=0$，即使 $\\sin(1/x)$ 本身在 $0$ 附近无限振荡。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/derivatives",
+      "field": "extraInsight",
+      "text": "可导必连续，但连续不必可导；达布定理进一步指出导数虽然未必连续，却不能有跳跃间断，这是导数区别于一般函数的重要性质。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-calculus",
+      "field": "definition",
+      "text": "微积分基本定理把积分与导数联系起来：若 $F' = f$，则 $\\int_a^b f = F(b) - F(a)$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/multivariable-calculus",
+      "field": "intuition",
+      "text": "重积分与曲线曲面积分通过格林、高斯、斯托克斯定理相互转换，本质是“边界上的积分等于内部导数的积分”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/multivariable-calculus",
+      "field": "formulaCaptions",
+      "text": "高斯散度定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/analytic-continuation",
+      "field": "definition",
+      "text": "解析延拓若存在则唯一（同一性定理）：两个在 $D$ 上相等的解析函数，在其公共连通定义域上处处相等。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/analytic-continuation",
+      "field": "intuition",
+      "text": "$\\zeta$ 函数、$\\Gamma$ 函数都通过解析延拓定义到更大范围，黎曼猜想正是关于 $\\zeta$ 延拓后的零点分布。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/analytic-continuation",
+      "field": "extraInsight",
+      "text": "解析延拓的唯一性来自同一性定理：两个在区域上全纯的函数若在一个有聚点的集合上相等，则处处相等。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/lebesgue-integral",
+      "field": "extraInsight",
+      "text": "它的优势在于极限定理——单调收敛与控制收敛使“积分与极限交换”有简单而强大的判据，这是黎曼积分做不到的。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "definition",
+      "text": "**单调收敛定理**：若 $0 \\le f_n \\nearrow f$，则 $\\int f_n \\to \\int f$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "definition",
+      "text": "**控制收敛定理**：若 $f_n \\to f$ 且 $|f_n| \\le g$（$g$ 可积），则 $\\int f_n \\to \\int f$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "definition",
+      "text": "Fatou 引理给出下界。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "intuition",
+      "text": "控制收敛定理是概率论中“期望与极限交换”的标准工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "formulaCaptions",
+      "text": "单调收敛定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "formulaCaptions",
+      "text": "控制收敛定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "formulaCaptions",
+      "text": "Fatou 引理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/integration-limits",
+      "field": "extraInsight",
+      "text": "三大收敛定理（单调收敛、Fatou、控制收敛）给出积分与极限交换的充分条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "definition",
+      "text": "核心定理：压缩映射原理（不动点）、一致有界原理（Banach–Steinhaus）、开映射定理与闭图像定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "intuition",
+      "text": "压缩映射原理是微分方程解存在唯一性（Picard–Lindelöf）的基础；一致有界原理说明逐点有界的算子族一致有界。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "formulaCaptions",
+      "text": "压缩映射原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "extraInsight",
+      "text": "巴拿赫空间是完备赋范空间，完备性保证柯西列有极限，从而使压缩映射原理、一致有界原理、开映射定理等成立。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "extraInsight",
+      "text": "这些定理是微分方程、数值分析与算子理论的基石。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "extraExamples",
+      "text": "压缩映射原理证明 ODE 解存在唯一：把积分方程 $y(t)=y_0+\\int_0^t f(s,y(s))\\,ds$ 看作 $C[0,T]$ 上的压缩映射，得到 Picard–Lindelöf 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "definition",
+      "text": "核心性质：正交投影定理（闭子空间有最佳逼近）、Riesz 表示定理（连续线性泛函由内积表示）、正交基展开。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "formulaCaptions",
+      "text": "Riesz 表示定理：希尔伯特空间自对偶。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "extraInsight",
+      "text": "正交投影定理保证闭子空间有唯一最佳逼近，这是最小二乘法与量子测量的几何基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/spectral-theory",
+      "field": "definition",
+      "text": "紧自伴算子的谱定理：存在正交特征基，$T = \\sum \\lambda_i \\langle \\cdot, e_i\\rangle e_i$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/spectral-theory",
+      "field": "formulaCaptions",
+      "text": "谱定理（谱测度形式）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/spectral-theory",
+      "field": "extraInsight",
+      "text": "谱定理用投影值测度统一描述这两种情形。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/linear-operators",
+      "field": "definition",
+      "text": "对偶空间 $X^*$ 是 $X$ 上连续线性泛函的空间；Hahn–Banach 定理保证非零泛函的存在。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/linear-operators",
+      "field": "example",
+      "text": "傅里叶变换 $\\mathcal{F}: L^2(\\mathbb{R}) \\to L^2(\\mathbb{R})$ 是有界线性算子，且是酉算子（Plancherel 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/linear-operators",
+      "field": "extraExamples",
+      "text": "傅里叶变换是 $L^2$ 上的酉算子，因此保持内积与范数（Plancherel 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fourier-series",
+      "field": "extraInsight",
+      "text": "逐点收敛更微妙（Carleson 定理：$L^2$ 函数几乎处处收敛），而不连续点附近会出现 Gibbs 现象。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fourier-transform",
+      "field": "definition",
+      "text": "Plancherel 定理：$\\|\\hat f\\|_2 = \\|f\\|_2$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fourier-transform",
+      "field": "example",
+      "text": "矩形脉冲 $\\chi_{[-a,a]}$ 的傅里叶变换是 $\\frac{\\sin(2\\pi a \\xi)}{\\pi \\xi}$（sinc 函数），说明时域越窄，频域越宽（不确定性原理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/fourier-transform",
+      "field": "formulaCaptions",
+      "text": "Plancherel 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "definition",
+      "text": "卷积定理：$\\widehat{f * g} = \\hat f \\cdot \\hat g$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "intuition",
+      "text": "线性时不变系统的输出等于输入与冲激响应的卷积；卷积定理让滤波器设计在频域完成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "formulaCaptions",
+      "text": "卷积定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "definition",
+      "text": "不确定性原理：$\\Delta t \\cdot \\Delta \\omega \\ge \\frac12$，时域与频域分辨率不能同时任意高。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "intuition",
+      "text": "不确定性原理是傅里叶变换的数学性质：窄窗在时域定位好但频域分辨率差，反之亦然。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "formulaCaptions",
+      "text": "不确定性原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "extraInsight",
+      "text": "时频分析在“时间—频率”平面上表示信号；不确定性原理限制了两者的联合分辨率。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/odes",
+      "field": "definition",
+      "text": "Picard–Lindelöf 定理：若 $f(t, y)$ 连续且对 $y$ 满足 Lipschitz 条件，则初值问题 $y' = f(t, y)$，$y(t_0) = y_0$ 在局部有唯一解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/weak-solutions",
+      "field": "extraInsight",
+      "text": "Sobolev 空间是弱解的天然舞台；Lax–Milgram 定理给出椭圆型弱解存在唯一的抽象框架，也是有限元方法的理论基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/weak-solutions",
+      "field": "extraExamples",
+      "text": "有限元方法在 $H^1$ 空间中寻找弱解，用分片多项式逼近，误差由 Céa 引理控制。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/stability",
+      "field": "extraExamples",
+      "text": "线性系统 $\\dot x=Ax$ 渐近稳定当且仅当 $A$ 的所有特征值实部为负（Lyapunov 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/equilibria-periodic-orbits",
+      "field": "intuition",
+      "text": "周期轨道可能稳定（吸引）或不稳定；Poincaré–Bendixson 定理说明平面系统的极限行为受限于平衡点与周期轨。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/equilibria-periodic-orbits",
+      "field": "extraInsight",
+      "text": "Poincaré–Bendixson 定理说明平面自治系统的极限集只能是平衡点、周期轨或连接它们的轨道，这是平面动力系统的基本结构定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/ergodicity",
+      "field": "definition",
+      "text": "Birkhoff 遍历定理给出这一收敛的严格陈述。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "analysis/ergodicity",
+      "field": "formulaCaptions",
+      "text": "Birkhoff 遍历定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/formal-language",
+      "field": "intuition",
+      "text": "形式语言是证明论、模型论与计算机科学的共同基础：程序语言的语法、编译器的解析、定理证明器的输入格式，都是形式语言的具体实例。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "definition",
+      "text": "哥德尔完全性定理（1929）证明：标准的一阶逻辑证明系统既可靠又完备。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "intuition",
+      "text": "注意不要与**不完备性定理**混淆：完全性说的是逻辑系统本身（一阶逻辑）足够强，不完备性说的是包含算术的特定理论（如 PA、ZFC）无法判定所有命题。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "formulaCaptions",
+      "text": "哥德尔完全性定理：语义蕴含可由形式证明捕获。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "formulaCaptions",
+      "text": "完备性的等价表述（模型存在定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "extraInsight",
+      "text": "哥德尔完全性定理说明标准一阶证明系统足够强；它与不完备性定理并不矛盾，后者针对的是包含算术的特定理论。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "extraExamples",
+      "text": "一阶逻辑完备性等价于模型存在定理：相容的理论一定有模型。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cardinality",
+      "field": "definition",
+      "text": "康托定理：对任意集合 $A$，$|\\mathcal{P}(A)| > |A|$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cardinality",
+      "field": "formulaCaptions",
+      "text": "康托定理：幂集的基数严格大于原集合。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cardinality",
+      "field": "extraInsight",
+      "text": "康托定理说明幂集严格更大，从而产生无穷多个基数层级；连续统假设问的正是 $\\mathbb{R}$ 的基数是否是最小的不可数基数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/ordinal-analysis",
+      "field": "intuition",
+      "text": "哥德尔第二不完备性定理说明 PA 无法证明自身相容性；Gentzen 的证明之所以可能，是因为使用了不能仅由 PA 证明其充分强度的超限归纳原则（到 $\\varepsilon_0$）——强度被“借”了出去。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/ordinal-analysis",
+      "field": "example",
+      "text": "PA 可以证明每个 $\\omega$-指数塔（有限高）良序，但无法证明 $\\varepsilon_0$ 良序；Gentzen 用超限归纳到 $\\varepsilon_0$ 证出 PA 的相容性，这正是第二不完备性定理划定的边界。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/zfc-axioms",
+      "field": "definition",
+      "text": "选择公理（AC）断言：任意非空集合族都有选择函数，等价于任意集合都可良序化、任意向量空间都有基、Zorn 引理等陈述。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/zfc-axioms",
+      "field": "example",
+      "text": "在 ZF 中无法构造出“每个向量空间都有基”的证明；加上选择公理后，Zorn 引理可用，从而得到基的存在性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/zfc-axioms",
+      "field": "extraInsight",
+      "text": "选择公理是非构造性的，但它等价于良序定理与 Zorn 引理，在现代数学中被广泛使用。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/zfc-axioms",
+      "field": "extraExamples",
+      "text": "由 Zorn 引理可推出每个向量空间都有基，即使基无法显式构造。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/formal-proof",
+      "field": "definition",
+      "text": "最后一项称为定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/formal-proof",
+      "field": "extraInsight",
+      "text": "形式证明把推理变成可机械检验的符号序列，是希尔伯特纲领与自动定理证明的基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/formal-proof",
+      "field": "extraExamples",
+      "text": "在 Hilbert 系统中，$p\\to(q\\to p)$ 是公理，由肯定前件可推出具体定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "definition",
+      "text": "**切消定理**（Gentzen 的 Hauptsatz）：在相继式演算 LK 或 LJ 中，任何含切规则的证明都可以转换为不含切规则的证明。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "intuition",
+      "text": "切规则对应数学中的“引理”：先证明引理 $A$，再用它证明主定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "intuition",
+      "text": "切消定理说引理总是可以被“展开”直接嵌入主证明，虽然证明会变长。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "intuition",
+      "text": "子公式性质是自动证明与证明复杂性的基础：它限制了证明中出现的公式形状，但一阶量词实例仍可能产生无限搜索，不能据此推出一阶逻辑可判定，也给出了直觉主义逻辑的析取性质等元定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "example",
+      "text": "Gentzen 对 PA 的相容性证明结合了证明约化与到 $\\varepsilon_0$ 的适当超限归纳，并非只靠纯逻辑的切消定理：若 $\\vdash 0=1$，可对假定证明作序数下降分析；额外的超限归纳排除这种无限下降，从而排除矛盾证明。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "formulaCaptions",
+      "text": "切消定理的内容。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "extraInsight",
+      "text": "切消定理说明证明中的“引理”总可以被消除，得到的无切证明具有子公式性质。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "formulaCaptions",
+      "text": "图灵 1936 年的定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "extraInsight",
+      "text": "莱斯定理进一步指出：程序的任何非平凡语义性质都不可判定。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "extraExamples",
+      "text": "莱斯定理：判断一个程序是否计算恒等函数、是否对所有输入停机等性质都不可判定。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "intuition",
+      "text": "Post 定理：$L$ 可判定当且仅当 $L$ 与它的补集都可枚举。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "formulaCaptions",
+      "text": "Post 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "extraInsight",
+      "text": "可枚举集是“可以被算法列出”的集合；Post 定理把可判定性与补集的可枚举性联系起来：$L$ 可判定当且仅当 $L$ 与 $\\overline L$ 都可枚举。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/objects-morphisms",
+      "field": "intuition",
+      "text": "这种“关系优先”的视角让它能在不同数学领域之间迁移构造与定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/axiomatic-method",
+      "field": "intuition",
+      "text": "公理化把数学理论变成“若公理成立，则定理成立”的条件性知识。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/axiomatic-method",
+      "field": "extraInsight",
+      "text": "公理化把理论变成“若公理成立，则定理成立”的条件性知识。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/godel-first",
+      "field": "definition",
+      "text": "哥德尔第一不完备性定理（1931）：任何足以表达基本算术（如包含 PA 或 Q）的**有效公理化**且**相容**的理论 $T$，都存在一个句子 $G_T$，使得 $T \\nvdash G_T$ 且 $T \\nvdash \\neg G_T$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/godel-first",
+      "field": "formulaCaptions",
+      "text": "第一不完备性定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/godel-second",
+      "field": "definition",
+      "text": "哥德尔第二不完备性定理：若 $T$ 是包含 PA 的有效公理化理论，则 $T$ 不能在自身内部证明其相容性陈述 $\\mathrm{Con}(T)$，除非 $T$ 本身不相容。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/godel-second",
+      "field": "formulaCaptions",
+      "text": "第二不完备性定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/godel-second",
+      "field": "extraExamples",
+      "text": "Gentzen 用 $\\varepsilon_0$ 超限归纳证明 PA 相容，但这一归纳原理本身超出 PA。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "definition",
+      "text": "由完备性定理，$T$ 相容当且仅当 $T$ 有模型。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "intuition",
+      "text": "一个不相容的理论可以证明任何命题（爆炸原理 ex falso），因此毫无信息量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "formulaCaptions",
+      "text": "爆炸原理：不相容的理论证明一切。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "extraInsight",
+      "text": "相容性是理论有意义的最低要求；由爆炸原理，不相容的理论可以证明任何命题。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/dependent-types",
+      "field": "definition",
+      "text": "依赖类型系统可以表达“长度为 $n$ 的向量”“对每个群 $G$ 的定理”等精细结构。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/inductive-types",
+      "field": "definition",
+      "text": "与归纳类型配套的是**递归子**（recursor），它实现结构递归，并对应归纳证明原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/inductive-types",
+      "field": "extraInsight",
+      "text": "归纳类型由构造子生成，递归子实现结构递归并对应归纳证明原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/proof-assistants",
+      "field": "definition",
+      "text": "**证明助理**是基于类型论的交互式软件系统，用户在其中构造形式证明，系统逐步检查每一步的类型正确性，最终保证定理成立（相对于底层公理与实现的可信性）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/proof-assistants",
+      "field": "intuition",
+      "text": "大规模形式化项目（如四色定理、奇点消解、Liquid Tensor Experiment）展示了其能力；但形式化成本仍然很高，需要大量人力。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/proof-assistants",
+      "field": "extraExamples",
+      "text": "四色定理、奇点消解等大型定理都已在 Coq/Lean 中形式化。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/classification-of-models",
+      "field": "definition",
+      "text": "对给定理论 $T$，研究其模型类的结构：同构、初等嵌入、饱和性、稳定性等。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "definition",
+      "text": "紧致性定理：一阶理论 $T$ 有模型，当且仅当它的每个有限子集都有模型。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "definition",
+      "text": "它是哥德尔完全性定理的推论，也可以用超积或 Henkin 构造直接证明。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "formulaCaptions",
+      "text": "紧致性定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/groups-subgroups",
+      "field": "formulaCaptions",
+      "text": "Lagrange 定理：子群的阶整除群的阶（有限群）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/groups-subgroups",
+      "field": "extraInsight",
+      "text": "Lagrange 定理是最早的结构约束：子群的阶整除群的阶，这限制了许多群的可能结构。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/homomorphisms-quotients",
+      "field": "formulaCaptions",
+      "text": "第一同构定理：商掉核同构于像。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/homomorphisms-quotients",
+      "field": "extraInsight",
+      "text": "同态的核衡量信息损失，第一同构定理 $G/\\ker\\varphi\\cong\\operatorname{im}\\varphi$ 把“压缩”与“像”联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/group-actions",
+      "field": "intuition",
+      "text": "群作用统一了许多计数问题：用 Burnside 引理数“本质不同的染色方案”，用轨道分解理解对称性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/group-actions",
+      "field": "example",
+      "text": "用两种颜色给正方形的四个顶点染色，共 $2^4 = 16$ 种；若把旋转后相同的方案视为同一种，用 Burnside 引理（旋转群 $C_4$ 作用）得到不同方案数为 $6$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/group-actions",
+      "field": "formulaCaptions",
+      "text": "Burnside 引理：轨道数等于平均不动点数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/group-actions",
+      "field": "extraInsight",
+      "text": "群作用把抽象群实现为置换群；轨道分解与 Burnside 引理把对称性转化为计数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/group-actions",
+      "field": "extraExamples",
+      "text": "旋转群 $C_4$ 作用在正方形顶点的两种染色上，Burnside 引理给出 $6$ 种本质不同的方案。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/orbits-stabilizers",
+      "field": "definition",
+      "text": "轨道-稳定子定理：$|\\mathrm{Orb}(x)| = [G : \\mathrm{Stab}(x)]$（对有限群即 $|G|/|\\mathrm{Stab}(x)|$）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/orbits-stabilizers",
+      "field": "intuition",
+      "text": "类方程 $|G| = |Z(G)| + \\sum [G : C_G(x_i)]$ 是证明许多有限群定理的关键。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/orbits-stabilizers",
+      "field": "formulaCaptions",
+      "text": "轨道-稳定子定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/orbits-stabilizers",
+      "field": "extraInsight",
+      "text": "轨道-稳定子定理 $|\\mathrm{Orb}(x)|=[G:\\mathrm{Stab}(x)]$ 是计数与分类的基本公式；稳定子越大，轨道越小。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "definition",
+      "text": "Lagrange 定理说明子群的阶整除群的阶，但反之不成立（如 $A_4$ 无 6 阶子群）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "definition",
+      "text": "**Sylow 定理**给出部分逆命题：若 $p^k$ 整除 $|G|$，则 $G$ 有 $p^k$ 阶子群；特别地，Sylow $p$-子群存在且两两共轭。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "intuition",
+      "text": "单群是“不可再分”的构件，有限单群分类定理（20 世纪数学的巨著）列出了所有有限单群。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "formulaCaptions",
+      "text": "Sylow 定理：Sylow $p$-子群个数 $n_p$ 的约束。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "extraInsight",
+      "text": "有限群论的核心是分类；Sylow 定理给出素数幂子群的存在与共轭性，是证明群结构的有力工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/finite-groups",
+      "field": "extraExamples",
+      "text": "利用 Sylow 定理可证 $15$ 阶群必为循环群（$n_3=n_5=1$）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/ideals",
+      "field": "intuition",
+      "text": "理想替代了“元素”的角色：在代数数论中，代数整数环不一定有唯一分解，但**理想**有唯一分解，这修复了算术基本定理的失效。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/field-extensions",
+      "field": "intuition",
+      "text": "这一简单性质是伽罗瓦理论中“塔定理”的基础，也是证明古希腊三大作图不可能的关键。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/field-extensions",
+      "field": "formulaCaptions",
+      "text": "次数的乘性（塔定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/invariant-subspaces",
+      "field": "definition",
+      "text": "有限群在特征零域上的每个表示都完全可约（Maschke 定理），即分解为不可约表示的直和。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/invariant-subspaces",
+      "field": "intuition",
+      "text": "Maschke 定理说明有限群的表示总是可以拆到最细，这使得有限群表示论变成“特征标理论”——问题归结为研究不可约成分。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/invariant-subspaces",
+      "field": "extraInsight",
+      "text": "不变子空间是表示作用下的“封闭区域”；Maschke 定理保证有限群在特征零域上完全可约，因此表示论可以归结为不可约表示。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/irreducible-representations",
+      "field": "definition",
+      "text": "**Schur 引理**：若 $V, W$ 是不可约表示，且 $T: V \\to W$ 是 $G$-等变映射，则 $T = 0$ 或 $T$ 是同构；特别地，若 $V = W$，则 $T = \\lambda I$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/irreducible-representations",
+      "field": "intuition",
+      "text": "Schur 引理连接表示与代数：它说明不可约表示的等变自同态只有数乘，从而导出特征标的正交关系与 Burnside 定理（$p^a q^b$ 阶群可解）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/irreducible-representations",
+      "field": "formulaCaptions",
+      "text": "Schur 引理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/irreducible-representations",
+      "field": "extraInsight",
+      "text": "不可约表示是表示论的“原子”；Schur 引理限制等变映射，特征标正交关系给出分解与计数的工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/exponential-map",
+      "field": "intuition",
+      "text": "指数映射在单位元附近是局部微分同胚（由逆函数定理），因此李代数在局部完全决定了李群。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/characters",
+      "field": "intuition",
+      "text": "对紧李群，特征标是类函数，可以用 Fourier 分析（Peter–Weyl 定理）展开，从而把表示论与调和分析联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/noetherian",
+      "field": "definition",
+      "text": "Hilbert 基定理：若 $R$ 是诺特环，则多项式环 $R[x]$ 也是诺特环。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/noetherian",
+      "field": "intuition",
+      "text": "诺特环是现代代数几何的基础：Hilbert 基定理保证多项式环的理想有限生成，从而代数簇可以由有限多个方程定义。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/noetherian",
+      "field": "formulaCaptions",
+      "text": "Hilbert 基定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/noetherian",
+      "field": "extraInsight",
+      "text": "诺特条件保证理想链稳定，使有限生成成为可能；Hilbert 基定理保证多项式环诺特，从而代数簇可由有限方程定义。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/modules",
+      "field": "intuition",
+      "text": "有限生成模的结构定理（PID 上）给出 $M \\cong R^r \\oplus \\bigoplus R/(d_i)$，是线性代数中 Jordan 标准形的代数根源。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/modules",
+      "field": "extraInsight",
+      "text": "PID 上有限生成模有结构定理，是线性代数 Jordan 标准形的来源。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/prime-ideals",
+      "field": "intuition",
+      "text": "零点定理（Nullstellensatz）建立了代数与几何的字典：理想 ↔ 代数簇，素理想 ↔ 不可约簇。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/dimension-theory",
+      "field": "definition",
+      "text": "对域 $k$ 上有限生成整环，$\\dim R$ 等于其分式域在 $k$ 上的超越次数（Noether 正规化引理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/fundamental-theorem-galois",
+      "field": "definition",
+      "text": "**基本定理**断言：中间域 $F \\subseteq E \\subseteq K$ 与 $G$ 的子群 $H \\le G$ 之间存在一一对应：$E \\mapsto \\mathrm{Gal}(K/E)$，$H \\mapsto K^H$（$H$ 的不动域）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/fundamental-theorem-galois",
+      "field": "intuition",
+      "text": "伽罗瓦基本定理是“代数与群论的字典”：扩域的中间结构完全由伽罗瓦群的子群结构编码。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/quintic",
+      "field": "definition",
+      "text": "**Abel–Ruffini 定理**（1824）：一般五次及更高次方程不存在只涉及系数、加减乘除与开方的通用求根公式。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/quintic",
+      "field": "intuition",
+      "text": "这并不意味着所有五次方程都无解——每个多项式在复数域上都有根（代数基本定理），只是不能用根式表达。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/quintic",
+      "field": "extraExamples",
+      "text": "数值方法（如 Newton 法）仍可高精度求根；代数基本定理保证复数域上总有根。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/linear-maps",
+      "field": "definition",
+      "text": "选定基后，线性映射由矩阵唯一表示；**核** $\\ker T$ 与**像** $\\mathrm{im}\\,T$ 都是子空间，秩-零化度定理给出 $\\dim V = \\dim \\ker T + \\dim \\mathrm{im}\\,T$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/linear-maps",
+      "field": "formulaCaptions",
+      "text": "秩-零化度定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "algebra/linear-maps",
+      "field": "extraInsight",
+      "text": "线性映射由矩阵表示；秩-零化度定理 $\\dim V=\\dim\\ker T+\\dim\\operatorname{im}T$ 联系核与像的维数，是线性代数的基本守恒律。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/divisibility-primes",
+      "field": "definition",
+      "text": "**算术基本定理**：每个大于 1 的整数都能唯一分解为素数的乘积（不计次序）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/divisibility-primes",
+      "field": "intuition",
+      "text": "这种唯一分解是数论最根本的结构定理，也是许多算法（如 RSA）的基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/divisibility-primes",
+      "field": "formulaCaptions",
+      "text": "算术基本定理：唯一素数分解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/divisibility-primes",
+      "field": "extraInsight",
+      "text": "算术基本定理是数论的基石：每个整数都有唯一的素数分解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/congruences",
+      "field": "intuition",
+      "text": "中国剩余定理说明：关于互素模数的同余条件可以独立求解再合并；费马小定理说明模素数时幂运算具有周期性（$a^{p-1} \\equiv 1$）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/congruences",
+      "field": "formulaCaptions",
+      "text": "中国剩余定理：模互素的同余方程组在模 $m_1 m_2$ 下有唯一解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/congruences",
+      "field": "formulaCaptions",
+      "text": "费马小定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/congruences",
+      "field": "extraInsight",
+      "text": "同余把整数按余数分类，模运算保持加法与乘法；中国剩余定理把互素模的条件解耦，是算法与密码学的基本工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/congruences",
+      "field": "extraExamples",
+      "text": "费马小定理：$2^{10}\\equiv1\\pmod{11}$，因为 $2^{10}=1024=93\\cdot11+1$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/quadratic-residues",
+      "field": "intuition",
+      "text": "二次互反律是数论中的“黄金定理”：它把 $\\left(\\frac{p}{q}\\right)$ 与 $\\left(\\frac{q}{p}\\right)$ 联系起来，使判定二次剩余变成递归的算法。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/quadratic-residues",
+      "field": "extraInsight",
+      "text": "二次剩余判定由欧拉判别法给出；二次互反律把 $\\left(\\frac pq\\right)$ 与 $\\left(\\frac qp\\right)$ 联系起来，使判定变成递归算法，被称为数论的“黄金定理”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/pythagorean-triples",
+      "field": "formulaCaptions",
+      "text": "勾股定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "intuition",
+      "text": "素数分布并非完全随机：它有统计规律（素数定理），但也有局部波动（素数间隙、算术级数中的分布）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "formulaCaptions",
+      "text": "素数定理（PNT）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "formulaCaptions",
+      "text": "素数定理的极限形式。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "extraInsight",
+      "text": "$\\pi(x)$ 的宏观增长由素数定理描述，但局部波动很大。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "extraInsight",
+      "text": "切比雪夫界给出初等的上下界，为素数定理的证明铺路。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "definition",
+      "text": "**素数定理**：$\\pi(x) \\sim x/\\log x$（当 $x \\to \\infty$）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "definition",
+      "text": "该定理由 Hadamard 与 de la Vallée Poussin 于 1896 年独立证明，使用复分析工具（Riemann ζ 函数无零点区域）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "intuition",
+      "text": "素数定理给出素数分布的“宏观规律”：随机选一个大小为 $x$ 的数，它是素数的概率约为 $1/\\log x$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "intuition",
+      "text": "黎曼猜想的更强形式会给出更精确的误差项。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "formulaCaptions",
+      "text": "素数定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "extraInsight",
+      "text": "素数定理等价于 $\\psi(x)\\sim x$；证明的关键是证明 $\\zeta(s)$ 在 $\\operatorname{Re}s=1$ 上无零点。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "extraInsight",
+      "text": "黎曼猜想会给出更精确的误差项。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "extraExamples",
+      "text": "素数定理的等价形式：$\\lim_{x\\to\\infty}\\frac{\\pi(x)\\log x}{x}=1$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/exponential-sums",
+      "field": "intuition",
+      "text": "素数分布、Waring 问题、哥德巴赫猜想的证明都依赖这种振荡估计。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/zeta-l-functions",
+      "field": "intuition",
+      "text": "黎曼猜想断言 ζ 的非平凡零点都在临界线 $\\mathrm{Re}(s) = 1/2$ 上；它等价于素数定理的极强误差估计，是千禧年大奖难题之一。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/zeta-l-functions",
+      "field": "extraInsight",
+      "text": "ζ 函数的欧拉乘积把素数信息编码进复分析；解析延拓与函数方程使其成为数论的核心对象，黎曼猜想描述其零点分布。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/sieve-methods",
+      "field": "definition",
+      "text": "现代筛法（Selberg 筛、大筛）通过加权估计剩余集合的大小，是研究素数对、哥德巴赫猜想与孪生素数的重要工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/sieve-methods",
+      "field": "intuition",
+      "text": "陈景润的“1+2”定理、张益唐的孪生素数界都依赖精细的筛法改进。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/sieve-methods",
+      "field": "extraInsight",
+      "text": "筛法逐步排除不满足条件的整数；现代筛法通过加权估计剩余集合大小，用于孪生素数与哥德巴赫猜想。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/sieve-methods",
+      "field": "extraExamples",
+      "text": "Selberg 筛给出素数对的非平凡上界，是陈景润定理的工具之一。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/number-fields",
+      "field": "definition",
+      "text": "数域 $K$ 可以写成 $K = \\mathbb{Q}(\\alpha)$（本原元素定理）：每个数域都由单个元素生成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/number-fields",
+      "field": "extraInsight",
+      "text": "数域是 $\\mathbb{Q}$ 的有限扩张，本原元素定理保证它由单个元素生成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/ideal-factorization",
+      "field": "intuition",
+      "text": "理想分解是“戴德金整环版的算术基本定理”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/class-groups",
+      "field": "intuition",
+      "text": "这是代数数论的核心定理之一。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/points-over-finite-fields",
+      "field": "definition",
+      "text": "Weil 猜想（Deligne 证明）描述代数簇在有限域上的点数的精确公式，用 Frobenius 自同态的特征值与 ζ 函数表达。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/points-over-finite-fields",
+      "field": "intuition",
+      "text": "Weil 猜想是算术几何的里程碑：它把拓扑（Betti 数）与算术（点数）联系起来，Deligne 因此获得菲尔兹奖。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/points-over-finite-fields",
+      "field": "extraInsight",
+      "text": "有限域上的点数编码代数簇的算术信息；Weil 猜想用 Frobenius 自同态的特征值描述点数，是算术几何的里程碑。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/elliptic-curves",
+      "field": "intuition",
+      "text": "椭圆曲线是数论与现代密码学的核心：Mordell–Weil 定理说有理点群有限生成；Birch–Swinnerton-Dyer 猜想联系秩与 L 函数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/elliptic-curves",
+      "field": "formulaCaptions",
+      "text": "Mordell–Weil 定理：有理点群有限生成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/elliptic-curves",
+      "field": "extraInsight",
+      "text": "椭圆曲线带有群律，有理点群有限生成（Mordell–Weil 定理）；模性定理把椭圆曲线与模形式对应，是费马大定理证明的关键。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/elliptic-curves",
+      "field": "extraExamples",
+      "text": "BSD 猜想把椭圆曲线的秩与其 $L$ 函数在 $s=1$ 的零点阶数联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/algebraic-varieties-arithmetic",
+      "field": "intuition",
+      "text": "Fermat 大定理、Faltings 定理、Mordell 猜想都是这个方向的核心结果。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/algebraic-varieties-arithmetic",
+      "field": "example",
+      "text": "$x^2 + y^2 = 1$ 是有理点丰富的圆锥曲线，可通过有理参数化描述全部有理点；$x^n + y^n = 1$（$n \\ge 3$）只有平凡有理点（Fermat 大定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/algebraic-varieties-arithmetic",
+      "field": "extraInsight",
+      "text": "算术几何研究定义在数域上的代数簇及其有理点；Faltings 定理说明亏格 $\\ge2$ 的曲线只有有限多个有理点。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/algebraic-varieties-arithmetic",
+      "field": "extraExamples",
+      "text": "$x^n+y^n=1$（$n\\ge3$）只有平凡有理点，这正是费马大定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/transcendental-numbers",
+      "field": "intuition",
+      "text": "Lindemann–Weierstrass 定理给出一般判据：若 $\\alpha_1, \\dots, \\alpha_n$ 是 $\\mathbb{Q}$ 上线性无关的代数数，则 $e^{\\alpha_i}$ 在 $\\overline{\\mathbb{Q}}$ 上代数无关。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/transcendental-numbers",
+      "field": "example",
+      "text": "$2^{\\sqrt2}$ 是超越数（Gelfond–Schneider 定理）；$\\pi + e$ 与 $\\pi e$ 的超越性仍未完全解决。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/transcendental-numbers",
+      "field": "formulaCaptions",
+      "text": "Euler 恒等式；由 Lindemann 定理推出 $\\pi$ 超越。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/transcendental-numbers",
+      "field": "extraInsight",
+      "text": "超越数不能用有限次代数运算描述；Lindemann–Weierstrass 定理给出一般判据：线性无关代数数的指数在代数上无关。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/transcendental-numbers",
+      "field": "extraExamples",
+      "text": "$2^{\\sqrt2}$ 是超越数（Gelfond–Schneider 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/heights",
+      "field": "definition",
+      "text": "Northcott 定理：给定高度上界 $B$，只有有限多个次数不超过给定值的代数数高度不超过 $B$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/heights",
+      "field": "intuition",
+      "text": "高度在丢番图几何中是基本工具：Mordell–Weil 定理的证明用高度函数证明有理点群有限生成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/heights",
+      "field": "extraInsight",
+      "text": "高度衡量有理点的算术复杂度；Northcott 定理保证给定高度上界只有有限多个低复杂度代数数，是 Mordell–Weil 定理的工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/heights",
+      "field": "extraExamples",
+      "text": "Mordell–Weil 定理的证明用高度函数证明有理点群有限生成。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "definition",
+      "text": "Dirichlet 定理：对任意无理数 $\\alpha$，存在无穷多个 $p/q$ 使 $|\\alpha - p/q| < 1/q^2$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "definition",
+      "text": "Roth 定理（1955）证明：对代数数 $\\alpha$，$|\\alpha - p/q| < 1/q^{2+\\varepsilon}$ 只有有限多个解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "intuition",
+      "text": "Roth 定理说明代数数不能被有理数“逼近得太快”，这是超越数论的核心结果，Roth 因此获得菲尔兹奖。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "formulaCaptions",
+      "text": "Dirichlet 逼近定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "formulaCaptions",
+      "text": "Roth 定理：对代数数 $\\alpha$，此不等式只有有限多个解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "extraInsight",
+      "text": "Dirichlet 定理保证每个无理数都有无穷多个 $1/q^2$ 精度的有理逼近；Roth 定理说明代数数不能被逼近得更快（指数超过 2 时只有有限解）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "extraExamples",
+      "text": "Roth 定理：对代数数 $\\alpha$，$|\\alpha-p/q|<1/q^{2+\\varepsilon}$ 只有有限多个解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/liouville-numbers",
+      "field": "definition",
+      "text": "Liouville 定理：代数数不能被有理数逼近得如此快（存在与次数相关的下界），因此刘维尔数是超越数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/liouville-numbers",
+      "field": "extraInsight",
+      "text": "刘维尔定理给出了代数数的逼近下界。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/cusp-forms",
+      "field": "intuition",
+      "text": "椭圆曲线的模性定理把椭圆曲线的 L 函数与一个权重 2 的尖点形式对应起来，这是费马大定理证明的关键。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/cusp-forms",
+      "field": "extraInsight",
+      "text": "尖点形式在尖点处消失，具有良好的解析性质；权重 $2$ 的尖点形式对应椭圆曲线，是模性定理的核心。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/fourier-expansion",
+      "field": "intuition",
+      "text": "模形式的 L 函数由 $a_n$ 构造，其解析性质（解析延拓、函数方程）是模性定理与 Langlands 纲领的核心。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/modularity",
+      "field": "definition",
+      "text": "**模性定理**（Taniyama–Shimura–Weil 猜想，Wiles 等证明）：每条定义在 $\\mathbb{Q}$ 上的椭圆曲线都对应一个权重 2 的尖点形式，使二者的 L 函数相同。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/modularity",
+      "field": "intuition",
+      "text": "模性定理建立了“椭圆曲线”与“模形式”两套看似无关的对象之间的字典，使椭圆曲线的算术问题可以用模形式的解析工具研究。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/modularity",
+      "field": "intuition",
+      "text": "Wiles 证明模性定理的半稳定情形，并由此推出费马大定理：若 $x^n + y^n = z^n$ 有非平凡解，可构造一条不满足模性的椭圆曲线（Frey 曲线），矛盾。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/modularity",
+      "field": "extraInsight",
+      "text": "模性定理把 $\\mathbb{Q}$ 上的椭圆曲线与权重 $2$ 的尖点形式对应；Wiles 用它证明费马大定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/modularity",
+      "field": "extraExamples",
+      "text": "若费马方程有非平凡解，Frey 曲线将不满足模性，与模性定理矛盾。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/primality-testing",
+      "field": "definition",
+      "text": "Miller–Rabin 基于费马小定理的加强版本：若 $n$ 通过若干随机基的检验，则 $n$ 是素数的概率极高。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/primality-testing",
+      "field": "formulaCaptions",
+      "text": "费马小定理给出必要条件，但存在伪素数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-global-principle",
+      "field": "definition",
+      "text": "**局部-整体原则**（Hasse 原理）：一个方程在 $\\mathbb{Q}$ 上有解，当且仅当它在每个 $\\mathbb{Q}_p$（所有素数 $p$）与 $\\mathbb{R}$ 上都有解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-global-principle",
+      "field": "definition",
+      "text": "该原则对二次型成立（Hasse–Minkowski 定理），但对高次方程一般不成立：存在处处局部有解但整体无解的反例（Selmer 曲线 $3x^3 + 4y^3 + 5z^3 = 0$）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-global-principle",
+      "field": "formulaCaptions",
+      "text": "Hasse 原理（对二次型成立）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-global-principle",
+      "field": "extraInsight",
+      "text": "Hasse 原理断言局部处处有解可推出整体有解；它对二次型成立，对三次及以上方程失败，失败由 Tate–Shafarevich 群度量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-global-principle",
+      "field": "extraExamples",
+      "text": "Hasse–Minkowski 定理：二次型在 $\\mathbb{Q}$ 上有解当且仅当它在每个 $\\mathbb{Q}_p$ 与 $\\mathbb{R}$ 上有解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/rational-points",
+      "field": "definition",
+      "text": "有理曲线（亏格 0）的有理点可以用有理参数化完全描述；椭圆曲线（亏格 1）的有理点群有限生成（Mordell–Weil）；亏格 $\\ge 2$ 的曲线有理点有限（Faltings 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/rational-points",
+      "field": "intuition",
+      "text": "亏格决定了有理点的“丰富程度”：圆锥曲线有无穷多有理点，椭圆曲线可能有有限或无限多，亏格 ≥ 2 的曲线只有有限多（Faltings 1983，证明 Mordell 猜想）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/rational-points",
+      "field": "extraInsight",
+      "text": "代数曲线的亏格决定有理点的丰富程度：亏格 $0$ 可参数化，亏格 $1$ 是椭圆曲线，亏格 $\\ge2$ 只有有限多个有理点（Faltings 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/rational-points",
+      "field": "extraExamples",
+      "text": "Faltings 定理证明亏格 $\\ge2$ 的曲线有理点有限，解决了 Mordell 猜想。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/integer-equations",
+      "field": "definition",
+      "text": "答案是否定的（Matiyasevich 1970，基于 MRDP 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "numbertheory/local-solvability",
+      "field": "definition",
+      "text": "Hasse 原理断言局部可解推出整体可解；它对二次型成立，对一般方程失败。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "intuition",
+      "text": "欧氏空间是我们熟悉的平直空间：三角形内角和为 $\\pi$，过直线外一点恰有一条平行线，勾股定理成立。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "example",
+      "text": "$\\mathbb{R}^2$ 中两点 $(1, 2)$ 与 $(4, 6)$ 的距离为 $\\sqrt{9 + 16} = 5$；这正是勾股定理的应用。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "extraInsight",
+      "text": "欧氏空间的内积同时给出长度与角度，使几何可以完全代数化；等距变换群刻画了空间的对称性，而所有欧氏几何定理都可以写成内积的恒等式。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "extraExamples",
+      "text": "$\\mathbb{R}^2$ 中 $(1,2)$ 与 $(4,6)$ 的距离为 $\\sqrt{9+16}=5$，这正是勾股定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/hyperbolic-geometry",
+      "field": "formulaCaptions",
+      "text": "高斯–博内定理：面积等于角亏（曲率 $-1$ 时）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/projective-geometry",
+      "field": "intuition",
+      "text": "射影几何的对偶原理：在射影平面中，点与线互换后定理仍成立。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/projective-geometry",
+      "field": "extraInsight",
+      "text": "射影几何把无穷远点加入空间，使所有直线都相交；交比是射影变换下的不变量，对偶原理让点与线可以互换。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/curves-surfaces",
+      "field": "intuition",
+      "text": "高斯绝妙定理：高斯曲率只由第一基本形式决定，与曲面如何嵌入空间无关——这是内蕴几何的开端。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/curves-surfaces",
+      "field": "extraInsight",
+      "text": "曲线的曲率与挠率、曲面的第一/第二基本形式刻画局部形状；高斯绝妙定理说明高斯曲率只依赖第一基本形式，是内蕴的。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/curvature-geodesics",
+      "field": "definition",
+      "text": "**Gauss–Bonnet 定理**：闭曲面上的高斯曲率积分等于 $2\\pi \\chi(M)$（$\\chi$ 为 Euler 示性数）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/curvature-geodesics",
+      "field": "formulaCaptions",
+      "text": "Gauss–Bonnet 定理（带边界版本）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/connectedness",
+      "field": "intuition",
+      "text": "这就是介值定理的拓扑本质。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/connectedness",
+      "field": "formulaCaptions",
+      "text": "连通性在连续映射下保持（介值定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/connectedness",
+      "field": "extraInsight",
+      "text": "连通性刻画空间“不能被分成两块”；连续映射保持连通性，介值定理正是连通性的拓扑表述。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "definition",
+      "text": "Heine–Borel 定理：$\\mathbb{R}^n$ 的子集紧致当且仅当它有界且闭。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "intuition",
+      "text": "有界闭区间 $[a,b]$ 紧致，这是许多分析定理（极值定理、一致连续、Arzelà–Ascoli）的根源。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "formulaCaptions",
+      "text": "Heine–Borel 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "formulaCaptions",
+      "text": "极值定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "extraInsight",
+      "text": "紧致性把无限覆盖化为有限覆盖，是分析中“极值存在”“一致连续”的根源；Heine–Borel 定理给出 $\\mathbb{R}^n$ 中的判据。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/homology-groups-topology",
+      "field": "formulaCaptions",
+      "text": "一阶同调是基本群的 Abel 化（Hurewicz 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/homology-groups-topology",
+      "field": "extraInsight",
+      "text": "同调群用 Abel 群度量各维洞；它比基本群易算，Hurewicz 定理把一阶同调与基本群的 Abel 化联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/cohomology",
+      "field": "definition",
+      "text": "de Rham 上同调用微分形式定义：$H^n_{dR}(M) = \\ker d / \\mathrm{im}\\,d$，与奇异上同调同构（de Rham 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/cohomology",
+      "field": "formulaCaptions",
+      "text": "de Rham 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/algebraic-varieties-geometry",
+      "field": "formulaCaptions",
+      "text": "Hilbert 零点定理（代数闭域上）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/algebraic-varieties-geometry",
+      "field": "extraInsight",
+      "text": "代数簇是多项式方程的零点集，Zariski 拓扑使其具有刚性；零点定理建立代数与几何的字典。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/coordinate-rings",
+      "field": "intuition",
+      "text": "Hilbert 零点定理保证几何与代数不丢失信息：$V \\mapsto I(V)$ 与 $I \\mapsto V(I)$ 互为逆（在代数闭域、根式理想下）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/coordinate-rings",
+      "field": "extraInsight",
+      "text": "坐标环是代数簇的“函数代数”，几何对象与代数对象通过 $V\\mapsto k[V]$ 建立反变对应；零点定理保证不丢失信息。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/schemes",
+      "field": "intuition",
+      "text": "Grothendieck 用概形重写了代数几何，使 Weil 猜想得以用上同调方法解决。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/schemes",
+      "field": "intuition",
+      "text": "现代算术几何（包括 Wiles 证明费马大定理）都建立在概形语言之上。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/singularities",
+      "field": "extraInsight",
+      "text": "奇点是切空间维数跳变的位置；爆破把奇点“放大”以分离分支，奇点消解定理保证特征零域上可以化到光滑。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "definition",
+      "text": "3 维流形有 8 种几何结构（Thurston 几何化猜想），4 维流形则出现异常现象（无穷多光滑结构）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "definition",
+      "text": "Poincaré 猜想（Perelman 2003 证明）：单连通闭 3 流形同胚于 $S^3$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "intuition",
+      "text": "低维拓扑与高维有本质区别：3 维流形可以用几何化分解，4 维流形出现 exotic 光滑结构，而 5 维及以上则相对规则（h-配边定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "intuition",
+      "text": "Perelman 用 Ricci 流证明 Poincaré 猜想：让度量随时间演化，像热流一样把曲率“抹平”，最终得到标准几何。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "formulaCaptions",
+      "text": "Poincaré 猜想。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/low-dimensional-topology",
+      "field": "extraInsight",
+      "text": "3、4 维流形有独特现象；Poincaré 猜想说明单连通闭 3 流形同胚于 $S^3$，Perelman 用 Ricci 流证明。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/surgery-theory",
+      "field": "definition",
+      "text": "**柄体理论**用手术描述流形的骨架；**h-配边定理**（Smale）说明高维单连通配边可化为手术。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/surgery-theory",
+      "field": "intuition",
+      "text": "Smale 用手术理论证明高维 Poincaré 猜想（$n \\ge 5$），并获得菲尔兹奖。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/surgery-theory",
+      "field": "formulaCaptions",
+      "text": "h-配边定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/surgery-theory",
+      "field": "extraInsight",
+      "text": "手术通过切除与粘合改变流形；柄体理论描述流形骨架，h-配边定理在高维给出强有力结论。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/surgery-theory",
+      "field": "extraExamples",
+      "text": "Smale 用手术理论证明高维 Poincaré 猜想。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/packing-covering",
+      "field": "definition",
+      "text": "开普勒猜想（1611，Hales 2005 证明）：三维球体最密堆积密度为 $\\pi/(3\\sqrt2) \\approx 0.7405$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/packing-covering",
+      "field": "formulaCaptions",
+      "text": "三维最密堆积密度（开普勒猜想）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/packing-covering",
+      "field": "extraInsight",
+      "text": "堆积与覆盖研究如何最优地填充或覆盖空间；开普勒猜想给出三维球体最密堆积密度。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/convex-sets",
+      "field": "definition",
+      "text": "分离定理：两个不交的凸集可以被超平面分离。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/convex-sets",
+      "field": "intuition",
+      "text": "分离定理是凸分析的基石：它保证线性泛函可以区分凸集，从而导出对偶理论、Farkas 引理与支持向量机。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/convex-sets",
+      "field": "formulaCaptions",
+      "text": "超平面分离定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/convex-sets",
+      "field": "extraInsight",
+      "text": "凸集没有凹陷，分离定理是凸分析的基石；凸性使优化问题具有全局最优性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/polyhedra",
+      "field": "definition",
+      "text": "等价地，多面体是有界多胞形，是有限点集的凸包（Minkowski–Weyl 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/polyhedra",
+      "field": "extraInsight",
+      "text": "多面体有两种描述：半空间的交与顶点的凸包；Minkowski–Weyl 定理说明两种描述等价，这是线性规划对偶的基础。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/euler-characteristic",
+      "field": "intuition",
+      "text": "Gauss–Bonnet 定理把 $\\chi$ 与曲率积分联系起来；Poincaré–Hopf 定理把它与向量场零点联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "definition",
+      "text": "辛同胚保持相空间体积，但不一定保持距离；辛几何中的“刚性”体现在 Gromov 非挤压定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "intuition",
+      "text": "Hamilton 方程的解流是辛同胚（Liouville 定理），这解释了为什么相空间体积在时间演化下守恒。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "extraInsight",
+      "text": "辛同胚保持辛形式，因而保持相空间体积；Gromov 非挤压定理体现辛几何的刚性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "extraExamples",
+      "text": "哈密顿方程的解流是辛同胚（Liouville 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/moment-maps",
+      "field": "definition",
+      "text": "动量映射是 Noether 定理的几何版本：连续对称对应守恒量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/moment-maps",
+      "field": "extraInsight",
+      "text": "动量映射把连续对称编码为守恒量，是 Noether 定理的几何版本；辛约化用它的零点集构造新辛流形。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectic-topology",
+      "field": "definition",
+      "text": "Gromov（1985）非挤压定理：球 $B^{2n}(r)$ 不能辛嵌入到圆柱 $Z^{2n}(R) = B^2(R) \\times \\mathbb{R}^{2n-2}$ 中，除非 $r \\le R$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectic-topology",
+      "field": "intuition",
+      "text": "Gromov 的非挤压定理开启了辛拓扑；伪全纯曲线技术后来发展成 Gromov–Witten 理论，连接代数几何与镜像对称。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectic-topology",
+      "field": "example",
+      "text": "Gromov 定理说不能，只要球的半径大于圆柱半径。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectic-topology",
+      "field": "formulaCaptions",
+      "text": "Gromov 非挤压定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "geometry/symplectic-topology",
+      "field": "extraInsight",
+      "text": "辛拓扑研究辛同胚下的整体不变量；Gromov 非挤压定理是其起点，伪全纯曲线是核心工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/linear-programming",
+      "field": "formulaCaptions",
+      "text": "线性规划基本定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/robust-control",
+      "field": "definition",
+      "text": "$H_\\infty$ 控制最小化最坏情况下的扰动放大；小增益定理给出反馈回路稳定的充分条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/robust-control",
+      "field": "formulaCaptions",
+      "text": "小增益定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/robust-control",
+      "field": "extraExamples",
+      "text": "小增益定理：若回路增益乘积小于 $1$，则反馈稳定。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/optimal-control",
+      "field": "definition",
+      "text": "Pontryagin 极大值原理给出必要条件（哈密顿量最大化）； Hamilton–Jacobi–Bellman（HJB）方程给出充分条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/optimal-control",
+      "field": "example",
+      "text": "火箭软着陆：最小化燃料消耗，同时满足终端速度与位置约束；Pontryagin 原理给出推力开关的 bang-bang 形式。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/optimal-control",
+      "field": "extraInsight",
+      "text": "最优控制在动态约束下优化代价泛函；Pontryagin 极大值原理给出必要条件，HJB 方程给出充分条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/classical-mechanics",
+      "field": "definition",
+      "text": "Newton 形式用 $F = ma$；Lagrange 形式用最小作用量原理，运动满足 Euler–Lagrange 方程；Hamilton 形式用相空间与哈密顿方程。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/classical-mechanics",
+      "field": "intuition",
+      "text": "最小作用量原理说：物体走“作用量”取极值的路径。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/classical-mechanics",
+      "field": "extraInsight",
+      "text": "经典力学可用 Newton、Lagrange 或 Hamilton 表述；最小作用量原理最易推广到场论与量子力学。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/quantum-theory",
+      "field": "intuition",
+      "text": "非交换性（$[x, p] = i\\hbar$）导致不确定性原理：位置与动量不能同时精确确定。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/quantum-theory",
+      "field": "extraExamples",
+      "text": "不确定性原理 $\\Delta x\\,\\Delta p\\ge\\hbar/2$ 来自 $[\\hat x,\\hat p]=i\\hbar$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/symmetry-conservation",
+      "field": "definition",
+      "text": "**Noether 定理**：每一个连续对称对应一个守恒量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/symmetry-conservation",
+      "field": "intuition",
+      "text": "Noether 定理是数学物理中最深刻的联系之一：它把变分法的对称性与守恒律统一起来，也启发了粒子物理中的规范场论。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/symmetry-conservation",
+      "field": "formulaCaptions",
+      "text": "Noether 定理的结论。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/symmetry-conservation",
+      "field": "extraInsight",
+      "text": "Noether 定理把连续对称与守恒量一一对应；对称性越强，守恒量越多，这是理论物理的基本组织原则。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/no-arbitrage-pricing",
+      "field": "definition",
+      "text": "**无套利原理**：不存在无风险、无初始投入而获得正收益的策略。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "applied/no-arbitrage-pricing",
+      "field": "extraInsight",
+      "text": "无套利等价于存在风险中性测度；期权价格等于折现收益在该测度下的期望，这是衍生品定价的第一原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/permutations-combinations",
+      "field": "definition",
+      "text": "二项式定理：$(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^k y^{n-k}$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/permutations-combinations",
+      "field": "extraExamples",
+      "text": "二项式定理 $(1+x)^n=\\sum\\binom{n}{k}x^k$，令 $x=1$ 得 $\\sum\\binom{n}{k}=2^n$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/recurrences",
+      "field": "definition",
+      "text": "线性常系数递推可用特征方程求解；分治算法的复杂度满足 $T(n) = aT(n/b) + f(n)$，由主定理给出渐近阶。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/recurrences",
+      "field": "formulaCaptions",
+      "text": "分治递推（主定理适用）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/recurrences",
+      "field": "extraInsight",
+      "text": "递推关系用较小规模的问题描述当前问题；线性递推可用特征方程求解，分治递推用主定理给出渐近阶。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/recurrences",
+      "field": "extraExamples",
+      "text": "归并排序 $T(n)=2T(n/2)+O(n)$，由主定理得 $O(n\\log n)$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/probabilistic-method",
+      "field": "intuition",
+      "text": "Lovász 局部引理给出相关坏事件的概率界，是概率组合的核心工具；随机算法也常源于概率方法。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/probabilistic-method",
+      "field": "formulaCaptions",
+      "text": "Lovász 局部引理（示意）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/probabilistic-method",
+      "field": "extraInsight",
+      "text": "概率方法通过证明随机对象以正概率满足性质来证明存在性；期望论证与 Lovász 局部引理是核心工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/extremal-combinatorics",
+      "field": "definition",
+      "text": "例如：不含三角形的图最多有多少条边（Turán 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/extremal-combinatorics",
+      "field": "formulaCaptions",
+      "text": "Turán 定理：不含三角形的图的最大边数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/extremal-combinatorics",
+      "field": "extraInsight",
+      "text": "极值组合研究在约束下结构的最大或最小规模；Turán 定理与 Ramsey 理论揭示“无序中的有序”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/extremal-combinatorics",
+      "field": "extraExamples",
+      "text": "Turán 定理：不含三角形的 $n$ 个顶点图最多有 $\\lfloor n^2/4\\rfloor$ 条边。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/graphs-networks",
+      "field": "formulaCaptions",
+      "text": "握手引理：度数之和等于边数的两倍。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/graphs-networks",
+      "field": "extraExamples",
+      "text": "握手引理：$\\sum_v\\deg(v)=2|E|$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/paths-connectivity",
+      "field": "definition",
+      "text": "Menger 定理：两点间最大不相交路径数等于最小割的大小（点割或边割），是连通性与网络流的核心结果。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/paths-connectivity",
+      "field": "intuition",
+      "text": "Menger 定理把“连通性”与“冗余路径”联系起来：路径越多，网络越健壮；最小割给出瓶颈。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/paths-connectivity",
+      "field": "formulaCaptions",
+      "text": "Menger 定理：最大点不相交路径数 = 最小点割大小。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/paths-connectivity",
+      "field": "extraInsight",
+      "text": "路径与连通性描述网络可达性；Menger 定理把“路径数量”与“最小割”联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/paths-connectivity",
+      "field": "extraExamples",
+      "text": "Menger 定理：两点间最大不相交路径数等于最小割的大小。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "definition",
+      "text": "Hall 定理：二分图存在饱和一侧所有顶点的匹配，当且仅当对该侧任意子集 $S$，其邻域 $N(S)$ 满足 $|N(S)| \\ge |S|$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "intuition",
+      "text": "Hall 定理给出配对可行的充要条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "intuition",
+      "text": "四色定理说明平面图的色数不超过 4。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "example",
+      "text": "三个人三份工作，若每人都能胜任至少一份，且任意两人合起来能胜任的工作数不少于 2，则存在完美分配（Hall 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "formulaCaptions",
+      "text": "Hall 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "extraInsight",
+      "text": "匹配研究配对，着色研究冲突避免；Hall 定理给出二分图匹配的充要条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/matchings-coloring",
+      "field": "extraExamples",
+      "text": "四色定理：任何平面图都可用 4 种颜色着色。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/partial-orders",
+      "field": "definition",
+      "text": "Dilworth 定理：有限偏序集中，覆盖所有元素的最少链数等于最大反链大小。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/partial-orders",
+      "field": "intuition",
+      "text": "Dilworth 定理联系了二者，是组合优化的经典结果。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/partial-orders",
+      "field": "formulaCaptions",
+      "text": "Dilworth 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/partial-orders",
+      "field": "extraInsight",
+      "text": "偏序允许部分元素不可比较；Dilworth 定理把链覆盖数与最大反链大小联系起来。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/boolean-algebras",
+      "field": "definition",
+      "text": "Stone 表示定理：每个布尔代数同构于某个集合的幂集代数（带并、交、补）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/boolean-algebras",
+      "field": "extraInsight",
+      "text": "布尔代数是有补分配格；Stone 表示定理说明它同构于某个幂集代数。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/combinatorial-designs",
+      "field": "formulaCaptions",
+      "text": "Steiner 三元系的存在条件（Kirkman 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/np-completeness",
+      "field": "definition",
+      "text": "Cook–Levin 定理（1971）：SAT（布尔可满足性）是 NP 完全的。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/np-completeness",
+      "field": "formulaCaptions",
+      "text": "Cook–Levin 定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/np-completeness",
+      "field": "extraInsight",
+      "text": "NP 完全问题是 NP 中最难的问题；Cook–Levin 定理证明 SAT 是 NP 完全，其他问题通过归约获得 NP 完全性。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/approximation-algorithms",
+      "field": "intuition",
+      "text": "有些问题有 PTAS（如欧氏旅行商），有些连常数近似都困难（如最大团），近似难度由 PCP 定理刻画。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/divide-conquer",
+      "field": "definition",
+      "text": "分治算法复杂度满足递推 $T(n) = aT(n/b) + f(n)$，可用主定理求解。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/divide-conquer",
+      "field": "extraInsight",
+      "text": "分治把问题拆成独立子问题、递归求解后合并；主定理给出递推复杂度。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/network-flows",
+      "field": "definition",
+      "text": "**最大流最小割定理**：最大流值等于最小割容量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/network-flows",
+      "field": "intuition",
+      "text": "最大流最小割定理说明“最大输送量 = 瓶颈容量”。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/network-flows",
+      "field": "formulaCaptions",
+      "text": "最大流最小割定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/network-flows",
+      "field": "extraInsight",
+      "text": "网络流在容量约束下分配流量；最大流最小割定理说明最大输送量等于瓶颈容量。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/entropy",
+      "field": "intuition",
+      "text": "熵是压缩的极限：$n$ 个独立样本至少需要约 $nH(X)$ 比特编码；香农信源编码定理说明这一界限可达。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/channel-capacity",
+      "field": "definition",
+      "text": "香农信道编码定理：速率低于 $C$ 时存在编码使错误概率任意小。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/channel-capacity",
+      "field": "definition",
+      "text": "这是信息论的核心定理：噪声不限制可靠通信，只限制速率。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/channel-capacity",
+      "field": "intuition",
+      "text": "香农定理是非构造性的：它证明好码存在，但不给出具体构造。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/channel-capacity",
+      "field": "formulaCaptions",
+      "text": "香农信道编码定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "discrete/channel-capacity",
+      "field": "extraInsight",
+      "text": "信道容量是可靠传输的最大速率；香农定理说明噪声只限制速率，不阻止可靠通信。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/distributions",
+      "field": "definition",
+      "text": "正态分布 $N(\\mu, \\sigma^2)$ 的密度为 $\\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-(x-\\mu)^2/(2\\sigma^2)}$，是中心极限定理的极限分布。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/distributions",
+      "field": "extraInsight",
+      "text": "不同分布对应不同随机机制；正态分布是中心极限定理的极限，因此无处不在。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stopping-times",
+      "field": "intuition",
+      "text": "可选停时定理说明鞅在停时处仍保持期望不变（在适当条件下），这是金融定价与随机分析的基本工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stopping-times",
+      "field": "example",
+      "text": "随机游走的首次到达 $a$ 或 $-b$ 的时刻是停时；由可选停时定理可计算破产概率。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stopping-times",
+      "field": "formulaCaptions",
+      "text": "可选停时定理（鞅，适当条件下）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stopping-times",
+      "field": "extraInsight",
+      "text": "停时是“不偷看未来”的随机时刻；可选停时定理说明鞅在停时处期望不变（在适当条件下）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stopping-times",
+      "field": "extraExamples",
+      "text": "用可选停时定理计算赌徒破产概率。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "definition",
+      "text": "**中心极限定理**：若 $X_i$ 独立同分布，$\\mathbb{E}[X_i] = \\mu$，$\\mathrm{Var}(X_i) = \\sigma^2 \\in (0, \\infty)$，则标准化和 $\\frac{\\sqrt n(\\bar X_n - \\mu)}{\\sigma} \\xrightarrow{d} N(0, 1)$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "definition",
+      "text": "更一般地，Lindeberg–Feller 定理给出独立但不同分布情形的条件。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "intuition",
+      "text": "中心极限定理是“正态分布的普遍性”：大量独立小随机因素叠加后，分布趋于正态，无论原始分布是什么。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "formulaCaptions",
+      "text": "中心极限定理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "extraInsight",
+      "text": "中心极限定理说明大量独立小随机因素叠加后趋于正态，无论原始分布是什么。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/convergence-in-probability",
+      "field": "example",
+      "text": "大数定律中的 $\\bar X_n \\xrightarrow{P} \\mu$ 是依概率收敛；中心极限定理中的标准化和是依分布收敛。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/convergence-in-probability",
+      "field": "extraExamples",
+      "text": "中心极限定理中的标准化和是依分布收敛。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/almost-sure-convergence",
+      "field": "definition",
+      "text": "Borel–Cantelli 引理是证明几乎处处收敛的基本工具：若 $\\sum P(A_n) < \\infty$，则 $P(A_n\\ \\text{无穷多次}) = 0$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/almost-sure-convergence",
+      "field": "formulaCaptions",
+      "text": "Borel–Cantelli 引理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/almost-sure-convergence",
+      "field": "extraInsight",
+      "text": "几乎处处收敛是逐路径收敛，不收敛的样本路径构成零概率集；Borel–Cantelli 引理是主要工具。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/large-deviations",
+      "field": "definition",
+      "text": "Cramér 定理给出独立同分布情形下速率函数为 Legendre 变换 $I(a) = \\sup_t (ta - \\log \\mathbb{E}[e^{tX}])$。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/large-deviations",
+      "field": "formulaCaptions",
+      "text": "大偏差原理。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stationary-processes",
+      "field": "definition",
+      "text": "平稳过程的自协方差函数 $\\gamma(h) = \\mathrm{Cov}(X_{t+h}, X_t)$ 与谱密度通过 Fourier 变换对应（Wiener–Khinchin 定理）。",
+      "status": "needs-statement-review"
+    },
+    {
+      "topic": "probability/stationary-processes",
+      "field": "extraExamples",
+      "text": "Wiener–Khinchin 定理：自协方差的傅里叶变换是谱密度。",
+      "status": "needs-statement-review"
+    }
+  ]
+}

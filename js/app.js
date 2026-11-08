@@ -1461,6 +1461,34 @@
 
   /* ---------------- 详情面板 ---------------- */
 
+  function proofMarkup(proof) {
+    return `<article class="proof-article">
+      <h4>${esc(proof.title)}</h4>
+      <p><strong>命题。</strong>${inlineMarkup(proof.statement)}</p>
+      <p><strong>思路。</strong>${inlineMarkup(proof.idea)}</p>
+      <ol>${proof.steps.map(step => `<li>${inlineMarkup(step)}</li>`).join('')}</ol>
+    </article>`;
+  }
+
+  function proofPrerequisites(proof, book) {
+    const byId = new Map(book.proofs.map(p => [p.id, p]));
+    const seen = new Set();
+    const ordered = [];
+    function visit(id) {
+      if (seen.has(id)) return;
+      seen.add(id);
+      const item = byId.get(id);
+      if (item) item.dependencies.forEach(visit);
+      ordered.push(id);
+    }
+    proof.dependencies.forEach(visit);
+    return ordered.map(id => {
+      const base = book.bases[id];
+      if (base) return `<div class="proof-foundation"><h4>${esc(base.title)}</h4><p>${inlineMarkup(base.statement)}</p></div>`;
+      return proofMarkup(byId.get(id));
+    }).join('');
+  }
+
   function openPanelDOM(found) {
     const { subject, branch, topic } = found;
     state.openTopicId = topic.id;
@@ -1533,6 +1561,26 @@
           <summary>查看解析</summary>
           <div>${inlineMarkup(learning.answer)}</div>
         </details>
+      </section>`);
+    }
+
+    const book = window.ATLAS.proofBook;
+    const proofs = book ? book.proofs.filter(p => p.topics.includes(key)) : [];
+    if (proofs.length) {
+      sections.push(`<section class="topic-section topic-proofs">
+        <h3>定理与证明</h3>
+        <p class="proof-status">已展开以下 ${proofs.length} 个命题的所列版本；本主题的其他定理仍在扩写。</p>
+        ${proofs.map(proof => `<details class="learning-answer proof-details">
+          <summary>${esc(proof.title)}</summary>
+          ${proofMarkup(proof)}
+          <details class="proof-dependencies"><summary>展开全部前置引理与基础定义</summary>
+            ${proofPrerequisites(proof, book)}
+          </details>
+        </details>`).join('')}
+      </section>`);
+    } else {
+      sections.push(`<section class="topic-section"><h3>证明扩写进度</h3>
+        <p class="proof-status">本主题的教材级证明尚未完成；当前自测解析不作为完整定理证明。</p>
       </section>`);
     }
 
@@ -1733,7 +1781,8 @@
       ...asArray(item.topic.definition), ...asArray(item.topic.intuition),
       ...asArray(item.topic.example), ...asArray(extra.examples), extra.insight || '',
       ...asArray(item.topic.formulas).map(f => f.caption || ''),
-      learning.boundary || '', learning.question || '', learning.answer || ''
+      learning.boundary || '', learning.question || '', learning.answer || '',
+      ...(window.ATLAS.proofBook?.proofs || []).filter(p => p.topics.includes(topicKey(item.subject.id, item.topic.id))).flatMap(p => [p.title, p.statement, p.idea, ...p.steps])
     ].join(' ').toLowerCase();
     const branch = (item.branch.name || '').toLowerCase();
     const subject = (item.subject.name || '').toLowerCase();

@@ -22,6 +22,17 @@ const before = fs.readFileSync(generated, 'utf8');
 const build = spawnSync('python3', ['scripts/deepen-content.py'], { cwd: root, encoding: 'utf8' });
 assert.equal(build.status, 0, build.stderr);
 assert.equal(fs.readFileSync(generated, 'utf8'), before, 'Generator is not deterministic');
+// Generated proof chapters and the topic/claim audit must be reproducible together.
+const generatedProofFiles = ['js/data/proofs.js', 'docs/proofs/volume-1.md', 'docs/proofs/volume-1.tex', 'docs/proofs/topic-inventory.json', 'docs/proofs/claim-audit.json', 'docs/proofs/coverage.md'];
+const proofSnapshots = generatedProofFiles.map(file => fs.readFileSync(path.join(root, file), 'utf8'));
+for (const [command, args] of [['python3', ['scripts/build-proofs.py']], [process.execPath, ['scripts/audit-proofs.js']]]) {
+  const result = spawnSync(command, args, { cwd: root, encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+}
+for (let i=0; i<generatedProofFiles.length; i++) {
+  assert.equal(fs.readFileSync(path.join(root, generatedProofFiles[i]), 'utf8'), proofSnapshots[i], 'Stale generated chapter or audit: ' + generatedProofFiles[i]);
+}
+
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'math-atlas-check-'));
 try {
   fs.cpSync(path.join(root, 'js/data'), path.join(temp, 'js/data'), { recursive: true });
@@ -35,7 +46,20 @@ try {
   const broken = run(temp);
   assert.equal(broken.status, 1);
   assert.match(broken.stdout, /BAD RELATED/);
+
+  fs.writeFileSync(target, before);
+  const proofPath = path.join(temp, 'js/data/proofs.js');
+  const proofSource = fs.readFileSync(proofPath, 'utf8');
+  fs.writeFileSync(proofPath, proofSource + "\nwindow.ATLAS.proofBook.proofs[0].dependencies.push('unknown-lemma');\n");
+  const missingLemma = run(temp);
+  assert.equal(missingLemma.status, 1);
+  assert.match(missingLemma.stdout, /MISSING PROOF DEPENDENCY/);
+  fs.writeFileSync(proofPath, proofSource + "\nwindow.ATLAS.proofBook.proofs[0].dependencies.push(window.ATLAS.proofBook.proofs[0].id);\n");
+  const circular = run(temp);
+  assert.equal(circular.status, 1);
+  assert.match(circular.stdout, /CIRCULAR PROOF DEPENDENCY/);
+
 } finally {
   fs.rmSync(temp, { recursive: true, force: true });
 }
-console.log('PASS: 319-topic validation, standalone parity, deterministic generation, missing-card and broken-link regression checks');
+console.log('PASS: 319-topic validation, standalone parity, deterministic generation, missing-card, broken-link, missing-lemma and circular-dependency regression checks');

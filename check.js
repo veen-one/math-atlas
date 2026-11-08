@@ -113,6 +113,37 @@ function checkStrings(value, location) {
   }
 }
 checkStrings(sandbox.window.ATLAS, 'ATLAS');
+
+const book = sandbox.window.ATLAS.proofBook;
+if (!book || !book.bases || !Array.isArray(book.proofs) || !book.proofs.length) {
+  errors++; console.log('MISSING PROOF BOOK');
+} else {
+  const proofMap = new Map();
+  for (const proof of book.proofs) {
+    if (proofMap.has(proof.id) || book.bases[proof.id]) { errors++; console.log('DUP PROOF', proof.id); }
+    proofMap.set(proof.id, proof);
+    if (!proof.id || !proof.title || !proof.statement || !proof.idea || !Array.isArray(proof.dependencies) ||
+        !Array.isArray(proof.steps) || proof.steps.length < 2 || !Array.isArray(proof.topics) || !proof.topics.length ||
+        !proof.steps[proof.steps.length - 1]?.includes('\\square')) {
+      errors++; console.log('MALFORMED PROOF', proof.id);
+    }
+    for (const topic of proof.topics || []) {
+      if (!ids.has(topic)) { errors++; console.log('ORPHAN PROOF TOPIC', proof.id, topic); }
+    }
+  }
+  const active = new Set(), done = new Set();
+  function visitProof(id) {
+    if (book.bases[id] || done.has(id)) return;
+    if (!proofMap.has(id)) { errors++; console.log('MISSING PROOF DEPENDENCY', id); return; }
+    if (active.has(id)) { errors++; console.log('CIRCULAR PROOF DEPENDENCY', id); return; }
+    active.add(id);
+    for (const dep of proofMap.get(id).dependencies || []) visitProof(dep);
+    active.delete(id); done.add(id);
+  }
+  for (const id of proofMap.keys()) visitProof(id);
+  console.log('Proofs:', book.proofs.length, '| Explicit foundations:', Object.keys(book.bases).length);
+}
+
 if (ids.size !== 319 || Object.keys(learning).length !== 319) {
   errors++; console.log('UNEXPECTED TOPIC COVERAGE', ids.size, Object.keys(learning).length);
 }

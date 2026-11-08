@@ -527,3 +527,13 @@ html, body {
 .learning-answer summary:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 5px; }
 .learning-answer[open] summary { margin-bottom: 12px; }
 .learning-answer > div { font-size: 14px; overflow-wrap: anywhere; }
+
+.proof-details { margin-top: 14px; }
+.proof-article { margin: 18px 0; line-height: 1.9; }
+.proof-article h4, .proof-foundation h4 { color: var(--ink); margin: 18px 0 10px; font-size: 15px; }
+.proof-article ol { padding-left: 24px; }
+.proof-article li { margin-bottom: 16px; font-size: 14px; overflow-wrap: anywhere; }
+.proof-dependencies { border-top: 1px solid rgba(217,180,108,.2); padding-top: 14px; }
+.proof-foundation { border-left: 2px solid rgba(217,180,108,.3); padding-left: 12px; margin: 16px 0; }
+.proof-status { opacity: .8; font-size: 13px; }
+.proof-article .katex-display { overflow-x: auto; overflow-y: hidden; }

@@ -35,3 +35,14 @@
 - [Introduction to Proof Theory，宾夕法尼亚大学课程讲义](https://www.seas.upenn.edu/~jean/cis160/undergraduate.pdf)：区分切消与直觉主义析取性质。
 - [Solomon Feferman，Does Reductive Proof Theory Have a Viable Rationale?](https://virtualmath1.stanford.edu/~feferman/papers/reductive.pdf)：序数分析与算术相容性的元理论背景。
 - [J. S. Milne，Elliptic Curves](https://www.jmilne.org/math/Books/ectext6.pdf)：椭圆曲线与算术背景。
+
+
+## 自包含证明第一卷（后续扩写）
+
+当前新增 68 条命题证明，关联 58 个知识点。前置证明均指向本卷命题或 15 项列明的基础公理/定义；页面可展开完整依赖链。校验器检查未知依赖、循环依赖、孤立主题、生成一致性及单文件同步，负向回归用例确认漏引理和循环引用确实失败。浏览器实测微积分第二基本定理与前置引理可展开，数学公式正常展示。
+
+同时修正原文把黎曼可积函数的变上限积分说成“可能处处不可导”的错误，以及基本定理内点导数与端点单侧导数的范围。
+
+全量完整证明仍未完成：当前 319 个主题全部按“部分展开”或“待扩写”记录，没有把任一主题宣称为全部定理已完成。候选句审查及剩余状态见 `docs/proofs/coverage.md`。
+
+Markdown、LaTeX 和页面证明数据同源生成。当前环境没有 XeLaTeX，因此仅提供 LaTeX 源码，未声称已编译通过。结构检查不是形式化数学验证。

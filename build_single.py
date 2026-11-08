@@ -24,7 +24,7 @@ DATA_FILES = [
     'extras-applied.js',
     'extras-discrete.js',
     'extras-probability.js',
-    'learning.js',
+    'learning.js', 'proofs.js',
 ]
 
 

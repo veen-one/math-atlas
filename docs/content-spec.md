@@ -656,3 +656,10 @@ window.ATLAS.subjects.analysis.branches.push(
 - `answer`：给出结论及计算、反例、构造或推理依据；涉及定理时保留关键前提。
 
 源码保存在 `scripts/deepen-content.py`，由脚本转义为单引号 JavaScript 字符串。禁止使用默认模板给缺失知识点填充套话。检查器将缺失卡片、孤立卡片或关联目标不存在视为失败。
+
+
+## 8. 证明章节
+
+`window.ATLAS.proofBook` 包含 `bases` 和 `proofs`。每个证明须有唯一 `id`、实际知识点路径数组 `topics`、准确的 `statement`、`title`、`idea`、按顺序的 `steps` 和 `dependencies`。依赖必须指向本书另一个证明或明确列明的基础公理/定义，且图必须无环。
+
+所证版本的限制写在陈述内，不能以有限情形或特例标记一般定理已完成。每个知识点即使有一条证明，也默认只属部分展开；必须人工核定全部断言后才可声明整个主题证明完成。开放问题不得伪造证明。LaTeX 与 Markdown 及网页数据由同一源生成，修改 `scripts/build-proofs.py`，不得只改单个产物。
