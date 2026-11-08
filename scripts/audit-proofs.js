@@ -29,9 +29,13 @@ const covered=topics.filter(t=>t.proofIds.length).length;
 const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、引理、原理、猜想”的候选句，待人工逐条核定。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
 '1. 逐条拆分候选句及公式中的断言，统一定理名称、符号、假设和结论。',
 '2. 补齐全部未覆盖主题及已有主题中尚未证明的命题，建立不循环的前置依赖。',
-'3. 黎曼映射、谱定理、素数定理、伽罗瓦基本定理、中心极限定理、辛不挤压等大型定理须分别形成完整章节，不以特例替代一般命题。',
+'3. 黎曼映射、无限维谱定理、素数定理、中心极限定理、辛不挤压等尚未展开的大型定理须形成完整章节。有限伽罗瓦基本对应、有限维谱定理与代数基本定理已在本卷提供证明，但不因此将整个主题标为全部完成。',
 '4. P 与 NP、黎曼猜想等开放问题不得生成虚构证明；仅证明相关已知命题并标明未解部分。',
 '5. 对全部证明作独立数学复核；程序检查只验证结构和依赖，不证明推导正确。','','## 逐点状态','','| 学科 | 知识点 | 本卷已展开命题数 | 全主题状态 |','|---|---|---:|---|'];
 for(const topic of topics)lines.push(`| ${topic.subject} | ${topic.name} | ${topic.proofIds.length} | ${topic.proofIds.length?'部分展开':'待扩写'} |`);
 fs.writeFileSync(path.join(root,'docs/proofs/coverage.md'),lines.join('\n')+'\n');
 console.log(`Audited ${topics.length} topics: ${book.proofs.length} proofs cover ${covered} topics; ${claims.length} candidate sentences await statement review`);
+
+const readmePath=path.join(root,'README.md');
+const readme=fs.readFileSync(readmePath,'utf8');
+fs.writeFileSync(readmePath,readme.replace(/证明第一卷收录 \d+ 个定理或命题，关联 \d+ 个知识点。/,`证明第一卷收录 ${book.proofs.length} 个定理或命题，关联 ${covered} 个知识点。`));

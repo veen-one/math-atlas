@@ -237,7 +237,7 @@ window.ATLAS.extras['algebra/dimension-theory'] = {
 window.ATLAS.extras['algebra/fundamental-theorem-galois'] = {
   insight: '伽罗瓦对应把中间域与子群一一对应，把域论问题翻译成群论问题。正规扩张对应正规子群，这一对应是伽罗瓦理论的核心。',
   examples: [
-    '$\\mathbb{Q}(\\sqrt2,\\sqrt3)$ 的伽罗瓦群是 $(\\mathbb{Z}/2)^2$，四个子群对应四个中间域。',
+    '$\\mathbb{Q}(\\sqrt2,\\sqrt3)$ 的伽罗瓦群是 $(\\mathbb{Z}/2)^2$，五个子群对应五个中间域（包含基域与整个扩张域）。',
     '若 $E/F$ 正规，则 $\\operatorname{Gal}(K/E)$ 是 $G$ 的正规子群，且 $\\operatorname{Gal}(E/F)\\cong G/\\operatorname{Gal}(K/E)$。'
   ]
 };

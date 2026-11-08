@@ -360,7 +360,7 @@ window.ATLAS.subjects.algebra.branches.push(
           }
         ],
         example: [
-          '$K = \\mathbb{Q}(\\sqrt2, \\sqrt3)$ 是 $\\mathbb{Q}$ 的伽罗瓦扩张，$G \\cong (\\mathbb{Z}/2)^2$，有 4 个子群对应 4 个中间域：$\\mathbb{Q}$、$\\mathbb{Q}(\\sqrt2)$、$\\mathbb{Q}(\\sqrt3)$、$\\mathbb{Q}(\\sqrt6)$ 与 $K$。'
+          '$K = \\mathbb{Q}(\\sqrt2, \\sqrt3)$ 是 $\\mathbb{Q}$ 的伽罗瓦扩张，$G \\cong (\\mathbb{Z}/2)^2$，有 5 个子群对应 5 个中间域：$\\mathbb{Q}$、$\\mathbb{Q}(\\sqrt2)$、$\\mathbb{Q}(\\sqrt3)$、$\\mathbb{Q}(\\sqrt6)$ 与 $K$。'
         ],
         related: ['galois-group', 'splitting-fields', 'solvability-by-radicals']
       },

@@ -663,3 +663,6 @@ window.ATLAS.subjects.analysis.branches.push(
 `window.ATLAS.proofBook` 包含 `bases` 和 `proofs`。每个证明须有唯一 `id`、实际知识点路径数组 `topics`、准确的 `statement`、`title`、`idea`、按顺序的 `steps` 和 `dependencies`。依赖必须指向本书另一个证明或明确列明的基础公理/定义，且图必须无环。
 
 所证版本的限制写在陈述内，不能以有限情形或特例标记一般定理已完成。每个知识点即使有一条证明，也默认只属部分展开；必须人工核定全部断言后才可声明整个主题证明完成。开放问题不得伪造证明。LaTeX 与 Markdown 及网页数据由同一源生成，修改 `scripts/build-proofs.py`，不得只改单个产物。
+
+
+证明扩写允许在 `scripts/proof-chapters/*.py` 注册明确编写的条目与基础定义。不能自动为未覆盖主题生成空泛证明，不得把结论本身注册为基础公理。生成器会按确定顺序装载所有章节，再统一检查引用和环，导出同一份网页、Markdown 与 LaTeX 内容。LaTeX 导出保留 `$...$` 内原始数学代码，对数学片段外的字面反斜杠、下划线等作转义。

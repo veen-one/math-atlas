@@ -1,6 +1,7 @@
 """Author and export proof chapters; theorem dependencies must resolve locally."""
 from pathlib import Path
 import json
+import re
 ROOT=Path(__file__).resolve().parents[1]
 PROOFS=[]
 def P(id, topics, title, statement, deps, idea, *steps):
@@ -288,6 +289,11 @@ BASES={
 'axiom-vector':dict(title='向量空间及凸性定义',statement='使用标量域、向量空间的加法与数乘公理，以及有限线性组合、线性无关、生成、基、线性映射、凸集和凸函数的定义。'),
 'axiom-inner':dict(title='实内积公理',statement='使用内积的实双线性、对称和正定公理，范数定义为向量与自身内积的非负平方根。'),
 'axiom-independence':dict(title='随机变量独立性的定义',statement='随机变量的独立性按任意 Borel 原像事件的联合概率等于概率乘积定义；本卷证明需要的期望乘法，不把它当作独立性定义。')}
+# Load explicitly authored chapter sources in a stable order.
+import runpy
+for chapter in sorted((ROOT/'scripts/proof-chapters').glob('*.py')):
+    runpy.run_path(str(chapter))['register'](P, BASES)
+
 # Close easy-to-miss quantitative dependencies explicitly.
 for p in PROOFS:
     if p['id']=='supremum-integral':
@@ -305,7 +311,7 @@ for p in PROOFS:
         p['dependencies'].append('archimedean')
     if p['id']=='division-algorithm':
         p['steps'][0]=p['steps'][0].replace('选择足够负的 $q$ 即可', r'取 $q=-|a|$，因 $b\ge1$ 可直接验证余数非负')
-assert len(PROOFS)==68,len(PROOFS)
+assert len(PROOFS)>=68,len(PROOFS)
 ids={p['id'] for p in PROOFS}
 assert len(ids)==len(PROOFS)
 for p in PROOFS:
@@ -323,7 +329,7 @@ for id in ids:visit(id)
 data=dict(bases=BASES,proofs=PROOFS)
 (ROOT/'js/data/proofs.js').write_text('/* 逐条编写的证明及其闭合依赖。生成自 scripts/build-proofs.py。 */\nwindow.ATLAS.proofBook = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n')
 book=['# 数学知识地图：证明第一卷','',
-'本卷含 68 个明确陈述的定理或命题证明。以列明的基础公理和定义为起点，前置命题均在本卷展开；这不是全部 319 个知识点所含定理的完成声明。各证明的结论范围以陈述为准，有限方差、一维、实值等限制不可省略。','',
+f'本卷含 {len(PROOFS)} 个明确陈述的定理或命题证明。以列明的基础公理和定义为起点，前置命题均在本卷展开；这不是全部 319 个知识点所含定理的完成声明。各证明的结论范围以陈述为准，有限方差、一维、实值等限制不可省略。','',
 '## 阅读方式','','每节先读命题，再读思路，按依赖回看前置证明，最后核对逐步推导。证明为重新组织的中文讲解，不复制外部教材文字。结构检查只验证依赖闭合，不等于机器验证数学正确。','',
 '## 基础公理与定义','']
 for id,b in BASES.items():book.extend([f'<a id="{id}"></a>',f'### {b["title"]}',b['statement'],''])
@@ -331,19 +337,28 @@ for p in PROOFS:
     book.extend([f'<a id="{p["id"]}"></a>',f'## {p["title"]}','','**陈述。** '+p['statement'],'','**依赖。** '+ '；'.join('['+(BASES[d]['title'] if d in BASES else lookup[d]['title'])+'](#'+d+')' for d in p['dependencies']),'','**思路。** '+p['idea'],'','**证明。**',''])
     book.extend(str(i)+'. '+s+'\n' for i,s in enumerate(p['steps'],1))
 book+=['## 对照阅读资料','',
+'[J. S. Milne，Fields and Galois Theory](https://www.jmilne.org/math/CourseNotes/ft.html)：多项式、有限域、Artin 固定域与有限伽罗瓦对应的对照教材。',
+'[Sheldon Axler，Linear Algebra Done Right](https://linear.axler.net/LADR4e.pdf)：有限维谱定理与表示论前置线性代数。',
+'[Gerald Teschl，Ordinary Differential Equations and Dynamical Systems](https://radon.mat.univie.ac.at/~gerald/ftp/book-ode/)：常微分方程存在唯一性及其适用范围。',
 '[Jiří Lebl，Basic Analysis](https://www.jirka.org/ra/)：实分析章节的术语、条件与延伸阅读。',
 '[MIT 6.041SC，Weak Law of Large Numbers](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-iv/lecture-19/)：概率界和弱大数定律的课程背景。','']
 (ROOT/'docs/proofs/volume-1.md').write_text('\n'.join(book))
 print(f'Built {len(PROOFS)} proofs; {len(BASES)} explicit foundations; dependency graph acyclic')
 
+def as_tex(text):
+    # Keep authored inline LaTeX intact and escape literal prose, including new
+    # chapter identifiers such as x_i which are intentionally plain text.
+    escaped={'\\':r'\textbackslash{}','_':r'\_','%':r'\%','&':r'\&','#':r'\#','{':r'\{','}':r'\}','^':r'\textasciicircum{}','~':r'\textasciitilde{}'}
+    return ''.join(part if part.startswith('$') and part.endswith('$') else ''.join(escaped.get(ch,ch) for ch in part) for part in re.split(r'(\$[^$]*\$)',text))
+
 tex=[r'\documentclass[UTF8]{ctexbook}',r'\usepackage{amsmath,amssymb,amsthm,hyperref,enumitem}',r'\newtheorem{theorem}{定理}[chapter]',r'\theoremstyle{definition}\newtheorem{foundation}[theorem]{基础约定}',r'\title{数学知识地图：证明第一卷}',r'\author{Math Atlas}',r'\date{}',r'\begin{document}',r'\maketitle',r'\tableofcontents',r'\chapter{基础公理与定义}',
 '本卷只对所列命题给出证明，不代表仓库全部定理均已完成。基础公理和定义是明确的出发点，前置命题的证明在本卷内提供。']
 for id,b in BASES.items():
-    tex.extend([r'\begin{foundation}['+b['title']+r']\label{base:'+id+'}',b['statement'],r'\end{foundation}'])
+    tex.extend([r'\begin{foundation}['+as_tex(b['title'])+r']\label{base:'+id+'}',as_tex(b['statement']),r'\end{foundation}'])
 tex.append(r'\chapter{定理与逐步证明}')
 for p in PROOFS:
-    tex.extend([r'\begin{theorem}['+p['title']+r']\label{thm:'+p['id']+'}',p['statement'],r'\end{theorem}',r'\noindent\textbf{依赖：}'+ '；'.join((BASES[d]['title']+r'（约定~\ref{base:'+d+'}）') if d in BASES else (lookup[d]['title']+r'（定理~\ref{thm:'+d+'}）') for d in p['dependencies']),r'\par\noindent\textbf{思路：}'+p['idea'],r'\begin{proof}',r'\begin{enumerate}[leftmargin=*]'])
-    tex.extend(r'\item '+step.replace(r'$\square$','') for step in p['steps'])
+    tex.extend([r'\begin{theorem}['+as_tex(p['title'])+r']\label{thm:'+p['id']+'}',as_tex(p['statement']),r'\end{theorem}',r'\noindent\textbf{依赖：}'+ '；'.join((BASES[d]['title']+r'（约定~\ref{base:'+d+'}）') if d in BASES else (lookup[d]['title']+r'（定理~\ref{thm:'+d+'}）') for d in p['dependencies']),r'\par\noindent\textbf{思路：}'+as_tex(p['idea']),r'\begin{proof}',r'\begin{enumerate}[leftmargin=*]'])
+    tex.extend(r'\item '+as_tex(step.replace(r'$\square$','')) for step in p['steps'])
     tex.extend([r'\end{enumerate}',r'\end{proof}'])
 tex.append(r'\end{document}')
 (ROOT/'docs/proofs/volume-1.tex').write_text('\n\n'.join(tex)+'\n')
