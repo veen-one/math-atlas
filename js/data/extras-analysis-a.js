@@ -11,7 +11,7 @@ window.ATLAS.extras['analysis/continuity-uniform'] = {
 };
 
 window.ATLAS.extras['analysis/uniform-convergence'] = {
-  insight: '一致收敛就是上确界范数意义下的收敛：$\\|f_n-f\\|_\\infty\\to0$。逐点收敛只是每个坐标收敛，二者的差距反映了无穷维函数空间中“有界闭集未必紧”。Dini 定理给出一个补偿条件：连续函数列单调收敛到连续函数时，逐点收敛自动升级为一致收敛。',
+  insight: '一致收敛就是上确界范数意义下的收敛：$\\|f_n-f\\|_\\infty\\to0$。逐点收敛只是每个坐标收敛，二者的差距反映了无穷维函数空间中“有界闭集未必紧”。Dini 定理给出一个补偿条件：在紧致空间上，连续实值函数列逐点单调收敛到连续函数时，逐点收敛自动升级为一致收敛。',
   examples: [
     '$f_n(x)=\\frac{x}{1+nx^2}$ 在 $[0,1]$ 上一致收敛到 $0$：最大值在 $x=1/\\sqrt n$ 处，等于 $\\frac{1}{2\\sqrt n}\\to0$，故 $\\|f_n\\|_\\infty\\to0$。',
     '幂级数 $\\sum_{n=0}^\\infty x^n$ 在 $[-r,r]$（$0<r<1$）上一致收敛（Weierstrass $M$-判别法，取 $M_n=r^n$），但在 $(-1,1)$ 上不一致收敛：部分和 $S_n(x)=\\frac{1-x^{n+1}}{1-x}$ 在 $x\\to1$ 时误差无界。'
@@ -43,7 +43,7 @@ window.ATLAS.extras['analysis/completeness-reals'] = {
 };
 
 window.ATLAS.extras['analysis/fundamental-theorem-calculus'] = {
-  insight: '微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。若 $f$ 只是黎曼可积，$F(x)=\\int_a^x f$ 仍然连续，却可能处处不可导；勒贝格积分下的绝对连续函数版本给出了更精细的对应。',
+  insight: '微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。若 $f$ 只是黎曼可积，$F(x)=\\int_a^x f$ 仍然连续，并在 $f$ 的每个连续点满足 $F\\prime=f$，但不保证处处可导；勒贝格积分下的绝对连续函数版本给出了更精细的对应。',
   examples: [
     '用变上限积分定义对数：$\\ln x=\\int_1^x\\frac{dt}{t}$。由基本定理，$\\frac{d}{dx}\\ln x=1/x$，且 $\\ln1=0$，因此这与通常的对数定义一致。',
     '若 $f$ 有跳跃间断，例如 $f(x)=0$（$x<0$）与 $1$（$x\\ge0$），则 $\\int_{-1}^1 f=1$，但 $f$ 没有原函数（达布定理：导数具有介值性）。这说明基本定理的连续性条件不可省略。'

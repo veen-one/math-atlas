@@ -22,7 +22,7 @@ window.ATLAS.extras['foundations/formal-language'] = {
   insight: '形式语言把语法与语义分离：语法只规定符号如何组成合式公式，语义由结构赋予含义。这种分离使“可证明性”（语法）与“真”（语义）可以独立研究。',
   examples: [
     '一阶语言 $\\{+,\\cdot,0,1\\}$ 可以写出群、环、域的公理，同一个语言在不同结构中解释不同。',
-    '句子 $\\forall x\\exists y\\,(y\\cdot y=x)$ 在 $\\mathbb{R}$ 中为真，在 $\\mathbb{Q}$ 中为假，但它的语法完全相同。'
+    '句子 $\\forall x\\exists y\\,(y\\cdot y=x)$ 在 $\\mathbb{C}$ 中为真，在 $\\mathbb{R}$ 中为假（取 $x=-1$），但它的语法完全相同。'
   ]
 };
 

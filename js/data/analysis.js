@@ -185,7 +185,7 @@ window.ATLAS.subjects.analysis = {
           brief: '在适用条件下联系导数与积分',
           keywords: ['微积分基本定理', 'Newton-Leibniz', '变上限积分', '原函数'],
           definition: [
-            '设 $f$ 在 $[a, b]$ 上连续，定义变上限积分 $F(x) = \\int_a^x f(t)\\,dt$。则 $F$ 在 $[a, b]$ 上可微，且 $F\'(x) = f(x)$。',
+            '设 $f$ 在 $[a, b]$ 上连续，定义变上限积分 $F(x) = \\int_a^x f(t)\\,dt$。则 $F$ 在 $(a, b)$ 上可微（端点按相应单侧导数理解），且 $F\'(x) = f(x)$。',
             '若 $G$ 是 $f$ 在 $[a, b]$ 上的任一原函数（即 $G\' = f$），则 $\\int_a^b f(x)\\,dx = G(b) - G(a)$。'
           ],
           intuition: [

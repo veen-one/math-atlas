@@ -325,7 +325,7 @@ window.ATLAS.subjects.numbertheory = {
           example: [
             '$\\zeta(2) = \\pi^2/6$，$\\zeta(-1) = -1/12$（解析延拓），后者在物理正则化中出现的“$1+2+3+\\cdots = -1/12$”正是这个值。'
           ],
-          related: ['prime-number-theorem', 'modular-forms', 'arithmetic-functions']
+          related: ['prime-number-theorem', 'fourier-expansion', 'arithmetic-functions']
         },
         {
           id: 'sieve-methods',
@@ -391,7 +391,7 @@ window.ATLAS.subjects.numbertheory = {
           example: [
             '$K = \\mathbb{Q}(\\sqrt2, \\sqrt3) = \\mathbb{Q}(\\sqrt2 + \\sqrt3)$ 是次数为 4 的数域，极小多项式为 $x^4 - 10x^2 + 1$。'
           ],
-          related: ['algebraic-integers', 'ideal-factorization', 'galois-group']
+          related: ['algebraic-integers', 'ideal-factorization', 'algebra/galois-group']
         },
         {
           id: 'algebraic-integers',
@@ -613,7 +613,7 @@ window.ATLAS.subjects.numbertheory = {
           example: [
             '$x^2 + y^2 = 1$ 是有理点丰富的圆锥曲线，可通过有理参数化描述全部有理点；$x^n + y^n = 1$（$n \\ge 3$）只有平凡有理点（Fermat 大定理）。'
           ],
-          related: ['elliptic-curves', 'abelian-varieties', 'schemes']
+          related: ['elliptic-curves', 'abelian-varieties', 'geometry/schemes']
         },
         {
           id: 'abelian-varieties',

@@ -443,7 +443,7 @@ window.ATLAS.subjects.discrete = {
           example: [
             'Fano 平面（$q = 2$）：7 个点、7 条线，每条线 3 个点；它是阶为 2 的 Steiner 三元系。'
           ],
-          related: ['combinatorial-designs', 'geometry/projective-geometry', 'numbertheory/finite-fields']
+          related: ['combinatorial-designs', 'geometry/projective-geometry', 'algebra/finite-fields']
         },
         {
           id: 'combinatorial-designs',

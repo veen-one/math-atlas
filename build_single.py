@@ -24,6 +24,7 @@ DATA_FILES = [
     'extras-applied.js',
     'extras-discrete.js',
     'extras-probability.js',
+    'learning.js', 'proofs.js',
 ]
 
 
@@ -64,6 +65,8 @@ def main():
     katex_version = '0.16.11'
     katex_css_url = 'https://cdn.jsdelivr.net/npm/katex@' + katex_version + '/dist/katex.min.css'
     try:
+        if '--offline' in sys.argv:
+            raise RuntimeError('离线构建，跳过外部样式下载')
         katex_css = fetch(katex_css_url)
         katex_css = katex_css.replace(
             'url(fonts/',
