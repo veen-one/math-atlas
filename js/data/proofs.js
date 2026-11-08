@@ -77,6 +77,122 @@ window.ATLAS.proofBook = {
       "title": "复可导与曲线积分的定义",
       "statement": "复导数按复增量差商极限定义。分段 C¹ 参数曲线 γ 上，∫f(z)dz 定义为 ∫f(γ(t))γ′(t)dt，实部与虚部分别积分。正向多边形边界按逆时针取向。此章可用 π=4∫₀¹(1+t²)⁻¹dt 表示所需常数，因此计算绕行积分不预设三角函数参数化。"
     },
+    "def-finite-structures": {
+      "title": "有限偏序、格、网络与算法约定",
+      "statement": "偏序满足自反、反对称、传递；格中每对元素有交与并，布尔代数为有补有界分配格。流网络有限有向、容量非负实数，除源汇外流守恒。算法复杂度按二进制输入与标准有限状态程序定义；归约为可计算的多项式时间映射。密码协议使用有限群、随机密钥及明确列出的安全实验，不预设任何计算困难猜想已被证明。"
+    },
+    "def-schwartz": {
+      "title": "Schwartz 函数与 Fourier 约定",
+      "statement": "S(R) 指所有光滑函数 f，满足每个非负整数 m,k 都有 sup_x |x^m f^(k)(x)| 有限。Fourier 约定为 fhat(ω)=∫_R f(x)exp(-iωx)dx，逆变换带 1/(2π)。Lebesgue 实线测度按区间长度及 Borel 测度的完备化理解；此处给定该测度，不把其从外测度构造的存在定理当作已证明。"
+    },
+    "def-hilbert-fol": {
+      "title": "本章的一阶 Hilbert 演算",
+      "statement": "语言可数，含函数、谓词及等号，结构论域非空。用 ¬、→、∀ 为基本符号，其他联结词和 ∃ 按经典等价式定义。公理为所有命题重言式的代入实例、∀xφ→φ[t/x]（代入自由）、∀x(α→β)→(α→∀xβ)（x 不自由出现于 α），以及等号自反与在公式中替换等项的公理。规则为 modus ponens 与全称概括；概括变量不得自由出现于未解除前提。本章理论和被证明结论先取句子，以避开开放前提的一般化限制。⊥ 表示一个固定矛盾句。"
+    },
+    "def-jordan-separation": {
+      "title": "平面简单闭曲线分隔事实",
+      "statement": "本章在多面体欧拉公式的组合证明中使用 Jordan 曲线定理的球面形式：球面上的简单闭曲线补集有两个连通分支，曲线的两侧分别邻接不同分支。该拓扑定理在此作为明确基础；本卷不以组合论推导它。"
+    },
+    "def-finite-markov": {
+      "title": "有限马尔可夫链约定",
+      "statement": "状态空间 S 有限，转移矩阵 P 的元素非负且每行和为一；分布写作行向量，演化为 μ↦μP。不可约指任意状态可经有限步以正概率到达任意另一状态。"
+    },
+    "def-linear-control": {
+      "title": "有限维线性离散控制系统",
+      "statement": "系统 x_(k+1)=Ax_k+Bu_k，状态 x_k∈R^n、输入 u_k∈R^m；可控指任意初态能在有限步由某输入序列送达任意目标态。"
+    },
+    "def-module-localization": {
+      "title": "交换环上的模与局部化",
+      "statement": "R 为含幺交换环，M 为 R-模，S⊆R 含 1、乘法封闭且不含 0（若允许零环需单独处理）。局部化 S⁻¹R 与 S⁻¹M 的分数等价关系为 (m,s)~(n,t) 当且仅当存在 u∈S 使 u(tm−sn)=0。"
+    },
+    "def-identifiability": {
+      "title": "全局与局部可辨识性定义",
+      "statement": "参数映射 F:Θ→Y 全局可辨识指对任意 θ,θ′∈Θ，F(θ)=F(θ′) 蕴含 θ=θ′。在 θ 邻域 U 内局部可辨识指对所有 θ′∈U，F(θ′)=F(θ) 蕴含 θ′=θ。"
+    },
+    "def-beta-integral": {
+      "title": "Beta 积分的定义",
+      "statement": "对 x,y>0，B(x,y)=∫₀¹t^(x−1)(1−t)^(y−1)dt。该广义积分在端点收敛；可由分别在 0 和 1 的幂次比较验证。"
+    },
+    "def-topological-space": {
+      "title": "拓扑空间、连续映射与商拓扑定义",
+      "statement": "拓扑由开集族定义并对任意并、有限交封闭且含空集与全空间。映射连续指开集原像开。满射 q:X→Y 的商拓扑定义为 U⊆Y 开当且仅当 q⁻¹(U) 在 X 中开。"
+    },
+    "def-poisson-process": {
+      "title": "泊松过程定义",
+      "statement": "强度 λ 的齐次泊松过程满足 N(0)=0、计数独立平稳增量，且每段长度 t 的增量服从 Poisson(λt)，其中零次概率为 exp(−λt)，指数函数满足 exp(a+b)=exp(a)exp(b)。"
+    },
+    "def-differential-forms": {
+      "title": "微分形式、拉回与外微分定义",
+      "statement": "k-形式是切空间上的交替 k-线性形式场；拉回按 (φ*α)_x(v₁,…,v_k)=α_(φ(x))(dφ_xv₁,…,dφ_xv_k) 定义。外微分在坐标表达为 d(Σ_I f_I dx_I)=Σ_(j,I)(∂_j f_I)dx_j∧dx_I。代数展开给 φ*(α∧β)=φ*α∧φ*β 与 φ*(cα)=cφ*α。"
+    },
+    "def-riemannian-metric": {
+      "title": "黎曼度量与联络约定",
+      "statement": "黎曼度量 g 是切空间上的光滑正定对称双线性形式。联络的 Christoffel 系数 Γ^k_ij 描述协变导数；torsion-free 指 Γ^k_ij=Γ^k_ji，度量相容指坐标式 ∂_k g_ij=Γ^ℓ_ki g_ℓj+Γ^ℓ_kj g_iℓ。仿射参数测地线定义为 ∇_(γ̇)γ̇=0。"
+    },
+    "def-covering-map": {
+      "title": "覆盖映射定义",
+      "statement": "连续满射 p:E→B 是覆盖映射，若每个 b∈B 有开邻域 U，使 p⁻¹(U) 是两两不交开集之并，且 p 在每一片到 U 上为同胚。"
+    },
+    "def-rational-map": {
+      "title": "不可约代数簇间有理映射定义",
+      "statement": "有理映射 X⇢Y 是从 X 的某非空开子集到 Y 的正则映射，按在稠密开集上相等识别。双有理表示存在反向有理映射，使两复合在有定义的稠密开集上为恒等。"
+    },
+    "def-finite-sum": {
+      "title": "有限和微分约定",
+      "statement": "有限项可微函数之和逐项微分；这是导数定义与有限线性运算交换的直接推论，不涉及无穷级数换序。"
+    },
+    "def-loss-var": {
+      "title": "损失分位数 VaR 定义",
+      "statement": "损失随机变量 L 的 α 分位数 VaR_α(L)=inf{x∈R:P(L≤x)≥α}，0<α<1。"
+    },
+    "def-elliptic-curve": {
+      "title": "短 Weierstrass 曲线与弦切群法则约定",
+      "statement": "域 k 特征不为 2、3，非奇异曲线 E:y²=x³+Ax+B 的射影闭包附唯一无穷远点 O。弦切法则定义三交点 P,Q,R（重数计数）满足 P+Q+R=O，并把过点直线的第三交点关于 x 轴反射作为 P+Q；本章只用该定义验证逆元公式，不预设结合律。"
+    },
+    "def-modular-form": {
+      "title": "模形式与尖点消失定义",
+      "statement": "固定权与模群及其变换律的全纯函数称模形式；在尖点坐标 q=e^(2πiτ) 中要求全纯展开 f(q)=Σ_(n≥0)a_nq^n。尖点形式在每个尖点取值为零；无穷远处即 a₀=0。"
+    },
+    "def-scheme-structure": {
+      "title": "仿射概形结构层定义",
+      "statement": "Spec R 的点为素理想 p；基本开集 D(f)={p:f∉p} 构成拓扑基，并规定结构层在 D(f) 上的环为 R_f。点处茎定义为所有含该点开邻域截面环沿限制映射的直极限。"
+    },
+    "def-brownian": {
+      "title": "标准布朗运动定义",
+      "statement": "标准布朗运动 B₀=0，样本路径连续，且对 0≤s<t，增量 B_t−B_s 与过去独立并服从均值 0、方差 t−s 的正态分布。"
+    },
+    "def-ito-step-integral": {
+      "title": "简单适应过程的 Itô 积分定义",
+      "statement": "对分割 0=t₀<…<t_n，简单适应过程 H_t=Σ_i H_i 1_[t_i,t_(i+1))，其中 H_i 对时刻 t_i 的信息可测，定义 ∫H dB=Σ_i H_i(B_(t_(i+1))−B_(t_i))；再以 L² 闭包定义一般平方可积适应过程积分。"
+    },
+    "def-interval-length": {
+      "title": "区间长度有限可加性",
+      "statement": "实区间长度为端点差；有限个内部不交子区间的长度和不超过包含它们的总区间长度。"
+    },
+    "def-elliptic-modularity-euler-factor": {
+      "title": "椭圆曲线与归一化新形式的局部 L 因子",
+      "statement": "对素数 p 处良约化的椭圆曲线 E/Q，定义 a_p(E)=p+1−#E(F_p)，局部因子 L_p(E,s)=(1−a_p(E)p^(−s)+p^(1−2s))^(−1)。对归一化权 2 Hecke 特征新形式 f=Σa_nq^n，局部因子 L_p(f,s) 采用相同形式，其中系数是 Fourier 系数 a_p(f)。称 E 与 f 模性对应时要求其 L 函数（等价地在收敛区域的 Euler 因子）相同。"
+    },
+    "def-abelian-variety": {
+      "title": "阿贝尔簇定义",
+      "statement": "阿贝尔簇是代数闭域上的连通、光滑、射影代数群；群加法与取逆均为正则映射。"
+    },
+    "def-propositional-lk": {
+      "title": "经典命题 LK 演算",
+      "statement": "公式用原子、¬、∧、∨生成；相继式 Γ⇒Δ 的语义为“Γ 全真蕴含 Δ 至少一项为真”。初始式 A⇒A，允许左右弱化与交换；¬、∧、∨ 规则分别为通常的经典相继式规则，例如 ∧L 从 Γ,A,B⇒Δ 得 Γ,A∧B⇒Δ，∧R 从 Γ⇒Δ,A 与 Γ⇒Δ,B 得 Γ⇒Δ,A∧B，∨L 对 A、B 分两前提，∨R 把 A、B 同置右侧。LK 还可加入 cut 规则 Γ⇒Δ,A 与 Γ,A⇒Δ 得 Γ⇒Δ。"
+    },
+    "def-effective-arithmetic-coding": {
+      "title": "算术证明系统的有效编码假设",
+      "statement": "固定一套可有效判定的有限字符串公式/证明编码，编号记作 ⌜·⌝。替换函数 Sub(e,n) 在 e 是单自由变量公式编码时返回把变量替换为数字 n 后的句子编码。Proof_T(p,n) 表示 p 编码一份 T 中句子编号 n 的有限证明；Prov_T(n):=∃p Proof_T(p,n)。本条 Gödel 论证明确假设 T 能证明其所用每个具体闭项 Sub(k,k) 的正确数值计算，并能在标准自然数结构中正确解释 Proof_T；不在此假装已证明 Robinson Q 对所有原始递归关系的表示定理。"
+    },
+    "def-proof-code-arithmetic": {
+      "title": "证明谓词与算术化检查假设",
+      "statement": "固定有效形式演算，Prf_T(p,n) 表示 p 是 T 中编号 n 句子的有限证明，Prov_T(n):=∃p Prf_T(p,n)。本章对理论 T 明列假设：证明检查与代入数字可由原始递归关系表示；T 能证明具体正确的证明检查；T 能验证 MP 拼接证明及“由证明代码生成 Prov 句证明”的统一原始递归代码变换。以下 D1–D3 的证明均只在这些算术化假设下成立。"
+    },
+    "def-sobolev": {
+      "title": "弱导数、Sobolev 空间与变分形式的定义",
+      "statement": "开集 Ω 上，v_i 是 u 的第 i 个弱导数指对每个光滑紧支撑测试函数 φ 有 ∫u∂_iφ=-∫v_iφ。H¹(Ω) 为函数及全部一阶弱导数均平方可积的类，范数平方为这些 L² 范数平方之和。H¹_0 定义为光滑紧支撑函数在该范数中的闭包。零边值在本章按此定义，而不预设未证明的边界迹定理。"
+    },
     "def-conditional": {
       "title": "信息流、条件期望和停时的定义",
       "statement": "信息流是递增 σ 代数列。条件期望 Z=E[X|G] 指 G 可测且对每个 A∈G 有 ∫_A Z=∫_A X 的可积变量，按几乎处处相等识别。停时 T 满足 {T≤n}∈F_n。鞅 M_n 适应且可积，并满足 E[(M_n-M_(n-1))1_A]=0 对所有 A∈F_(n-1)。本卷在 L² 情形证明条件期望存在。"
@@ -2154,6 +2270,488 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "formal-generating-recurrence",
+      "topics": [
+        "discrete/generating-functions",
+        "discrete/recurrences"
+      ],
+      "title": "常系数递推的有理生成函数",
+      "statement": "若 n≥k 时 a_n=Σ_(j=1)^k c_j a_(n-j)，则形式普通生成函数 A(z)=Σ_(n≥0)a_nz^n 满足 (1-Σc_jz^j)A(z)=Σ_(n=0)^(k-1)[a_n-Σ_(j=1)^n c_j a_(n-j)]z^n。",
+      "dependencies": [
+        "def-ring-field"
+      ],
+      "idea": "逐个比较形式级数系数，所有计算只涉及有限个项。",
+      "steps": [
+        "乘积中 z^n 的系数为 a_n-Σ_(j=1)^(min(k,n))c_j a_(n-j)。n≥k 时由递推为零，n<k 时就是右端所列初始系数，因此两形式级数相等。",
+        "分母常数项为一，形式上可递归求逆：逆系数从常数项开始逐次由乘积为一唯一确定。所以 A 是所给多项式除以分母的形式有理函数。此证明不需要、也不声称某个复数 z 上的解析收敛。$\\square$"
+      ]
+    },
+    {
+      "id": "probabilistic-existence-maxcut",
+      "topics": [
+        "discrete/probabilistic-method",
+        "discrete/randomized-algorithms",
+        "discrete/combinatorial-optimization"
+      ],
+      "title": "随机切割的存在界与条件期望去随机化",
+      "statement": "有 m 条边的有限无向图存在至少 m/2 条跨边的切割，并可用逐点条件期望构造；这给最大割的 2 近似。",
+      "dependencies": [
+        "independent-bounded-products",
+        "integral-linearity"
+      ],
+      "idea": "随机将顶点放到两侧，每条边贡献期望 1/2；每次固定一个顶点时保留不低于当前期望的一侧。",
+      "steps": [
+        "各顶点独立等概率取两色。每条边两端颜色不同的概率为 1/2；跨边数 X 为这些指标之和，所以 E[X]=m/2。有限个切割的平均为 m/2，因此至少一个不低于该值。",
+        "部分颜色固定后，下一顶点的两个选择对应的条件期望平均等于当前期望，所以至少一个选择不降低它。依次固定全部顶点，最终期望就是实际跨边数，仍≥m/2。",
+        "条件期望可直接相加：全已固定边按是否跨边计 0 或 1，尚含未定顶点的边贡献 1/2。每步扫描全部边即可多项式完成。最优值≤m，所以所得值至少为最优值一半。$\\square$"
+      ]
+    },
+    {
+      "id": "mantel",
+      "topics": [
+        "discrete/extremal-combinatorics"
+      ],
+      "title": "Mantel 定理",
+      "statement": "n 个顶点的无三角形简单图至多有 floor(n²/4) 条边，平衡完全二部图达到该界。",
+      "dependencies": [
+        "handshake",
+        "cauchy-schwarz"
+      ],
+      "idea": "无三角形使一条边两端的邻点集不交，再对所有边求和。",
+      "steps": [
+        "若 uv 是边，则 N(u)、N(v) 不交，否则公共邻点形成三角形；因此 d(u)+d(v)≤n。对边求和，左侧每个顶点的度出现 d(v) 次，得 Σ_v d(v)²≤mn。",
+        "握手定理与 Cauchy—Schwarz 给 (2m)²=(Σd)²≤nΣd²≤n²m。m>0 时约去 m 得 m≤n²/4，整数性取下整；m=0 时直接成立。",
+        "将顶点分为 floor(n/2) 与 ceil(n/2) 两部，只连跨部全部边，无三角形，边数为两部大小乘积 floor(n²/4)，故界可达到。$\\square$"
+      ]
+    },
+    {
+      "id": "maxflow-mincut",
+      "topics": [
+        "discrete/network-flows",
+        "discrete/paths-connectivity"
+      ],
+      "title": "最大流—最小割定理与整数性",
+      "statement": "有限容量网络的最大流值等于最小源汇割容量；容量为非负整数时存在整数最大流，增广路算法有限终止。",
+      "dependencies": [
+        "heine-borel-rn",
+        "finite-dimensional-compactness",
+        "def-finite-structures"
+      ],
+      "idea": "最大流在紧可行集取到；最优时残量网络无增广路，可达点恰好给等值割。",
+      "steps": [
+        "可行流由 0≤f_e≤c_e 与线性守恒等式定义，是有限维闭有界非空集（含零流）。流值线性连续，故最大流 f 存在。对任意割 S 含源不含汇，守恒求和给流值为跨割净流，≤从 S 指向补集的容量和。",
+        "残量网络对每条原边放正向剩余 c_e-f_e 与反向 f_e 的弧。若有源至汇的正剩余简单路径，沿路增减最小剩余量 δ>0，保持各边范围与内部守恒，并增加流值 δ，违背最优。",
+        "令 S 为残量网络从源可达的点，汇不在 S。原边若从 S 到补集必饱和，否则可继续到达；若从补集到 S 则流为零，否则其反向残量弧允许到达外点。因此净流等于该割容量，上下界相等。",
+        "整数容量时从零开始增广，所有残量和增量保持整数，每次流值至少增加一，而值被源出边容量和控制，所以有限次终止。终止时同一可达割论证证明最优，且所有边流整数。$\\square$"
+      ]
+    },
+    {
+      "id": "hall-konig",
+      "topics": [
+        "discrete/matchings-coloring"
+      ],
+      "title": "Hall 匹配定理与 König 等式",
+      "statement": "二部图 (U,V) 存在覆盖 U 的匹配，当且仅当每个 A⊆U 有 |N(A)|≥|A|。此外最大匹配大小等于最小顶点覆盖大小。",
+      "dependencies": [
+        "maxflow-mincut"
+      ],
+      "idea": "把匹配写成整数单位流，最小割条件正好翻译为邻集条件。",
+      "steps": [
+        "建网络：源到每个 U 顶点容量一，每个 V 顶点到汇容量一，原二部边 U→V 容量 M=|U|+1。整数流在每个 U、V 上至多占一个单位，所以其正流边给匹配；反向匹配也给同值流。",
+        "若 Hall 条件成立，对任意割，若跨过一条容量 M 的边，容量已大于 |U|；否则令 A 为源侧 U 顶点，则 N(A) 都在源侧 V，割容量≥|U|-|A|+|N(A)|≥|U|。最大流最小割与源总容量 |U| 给全覆盖匹配。必要性由匹配把 A 单射送入 N(A) 直接得到。",
+        "对一般最大流的最小割，容量≤|U|，所以无大容量边跨割。集合 (U\\S)∪(V∩S) 覆盖每条原边，其大小正好等于割容量，也等于最大匹配大小。任意顶点覆盖至少覆盖匹配中每条互不共享端点的边，大小不小于匹配。因此两个最优值相等。$\\square$"
+      ]
+    },
+    {
+      "id": "vertex-menger",
+      "topics": [
+        "discrete/paths-connectivity"
+      ],
+      "title": "Menger 顶点不交路径定理",
+      "statement": "有限图中两个不相邻顶点 s,t，内部顶点不交的 s—t 路径最大数等于删除后能分开它们的最少其他顶点数；有向版本同样成立。",
+      "dependencies": [
+        "maxflow-mincut"
+      ],
+      "idea": "将每个内部顶点拆成一条单位容量边，把顶点容量转成边容量。",
+      "steps": [
+        "每个非 s,t 顶点 v 拆为 v_in→v_out、容量一；原边改为相应出端到入端、容量 M>|图顶点数|，无向边给两个方向。内部不交路径给等值整数流。",
+        "反向对整数流，沿正流弧从源追踪：守恒保证除汇外可以继续，出现圈就删去该圈流；有限图最终可提取源汇简单路径。每次减去其最小正整数流量，再重复，给流的路径分解。单位顶点边使不同路径内部不共享顶点。",
+        "因 s,t 不相邻，删除其余全部顶点可分开二者，所以存在容量小于 M 的割，最小割不包含大容量原边。所割单位边对应一个顶点分离集；反向任意分离集删去对应单位边后，残量可达侧给容量不大于该集合大小的割。",
+        "由最大流最小割，两种极值相等。非相邻条件避免直接 s—t 边导致“删除内部顶点不能切断”的特殊情形。$\\square$"
+      ]
+    },
+    {
+      "id": "dijkstra",
+      "topics": [
+        "discrete/shortest-paths",
+        "discrete/greedy-algorithms"
+      ],
+      "title": "Dijkstra 算法的正确性",
+      "statement": "有限图非负边权时，从源起始、每次确定未定点中暂定距离最小者并松弛其出边，得到全部最短距离。",
+      "dependencies": [
+        "def-finite-structures",
+        "axiom-natural"
+      ],
+      "idea": "归纳已确定点距离正确，真正更短路径的第一条出确定集的边会造成矛盾。",
+      "steps": [
+        "初始化源距离零、其余无穷。任何有限暂定值都是某条源起游走的长度，因此不小于真实最短距离。非负权允许删圈不增加长度，有限个简单路径保证每个可达点有最短路径。",
+        "设已有确定集 S 的值正确，取下一个最小暂定值点 v。若存在更短路径，取其上第一条由 S 到外部的边 x→y。处理 x 时已令 d(y)≤δ(x)+w_xy，不超过该路径到 y 的长度，也不超过其到 v 的总长度。",
+        "于是 d(y)<d(v)，违背 v 是未定点最小值。因此 v 的值正确。归纳到所有可达点；若未定最小值为无穷，则不再有可达未定点，否则某条从 S 出去的有限路径会留下有限暂定值。$\\square$"
+      ]
+    },
+    {
+      "id": "bellman-ford",
+      "topics": [
+        "discrete/shortest-paths",
+        "discrete/dynamic-programming"
+      ],
+      "title": "Bellman–Ford 递推与负环检测",
+      "statement": "令 D_k(v) 为至多 k 条边的源起最小游走长度，则 D_(k+1)(v)=min(D_k(v),min_(u→v)[D_k(u)+w_uv])。若无源可达负环，D_(n-1) 即最短距离；第 n 轮仍下降当且仅当存在源可达负环。",
+      "dependencies": [
+        "def-finite-structures",
+        "axiom-natural"
+      ],
+      "idea": "按最后一条边分类；超出简单路径长度的改善只能来自负圈。",
+      "steps": [
+        "零边初值为源零、其他无穷。任何至多 k+1 边的游走，要么已至多 k 边，要么末边是某 u→v，前缀至多 k 边，取最小即得递推；反向各候选也确实由合法游走实现。",
+        "无可达负环时，可删除任何重复顶点间的非负圈而不增长度，剩下简单路径至多 n-1 条边，故此轮已达最优。",
+        "若第 n 轮某值下降，对应改善游走含重复点；若所有圈都非负可删至 n-1 边而不增长度，违背严格改善，所以存在可达负环。反之若第 n 轮全不变，递推已到固定点，之后永不变；但可达负环可重复任意多次，使其某顶点距离无界下降，矛盾。因此必有一次第 n 轮下降。$\\square$"
+      ]
+    },
+    {
+      "id": "laplacian-components",
+      "topics": [
+        "discrete/spectral-graph-theory"
+      ],
+      "title": "图 Laplacian 的半正定性与连通分支",
+      "statement": "无向简单图 L=D-A 为半正定实对称矩阵，其零特征值重数等于连通分支数。",
+      "dependencies": [
+        "hermitian-spectral",
+        "rank-nullity"
+      ],
+      "idea": "二次型是边两端数值差的平方和，核恰好是各分支上的常函数。",
+      "steps": [
+        "直接展开 xᵀLx=Σ_(uv∈E)(x_u-x_v)²≥0，所以半正定。若 Lx=0，则二次型零，每条边的两个分量相等，沿路径传播使每个连通分支上常值。",
+        "反过来分支常值向量在每条邻接差上为零，故 Lx=0。各分支指标给核的一组基，维数等于分支数。实对称谱定理使 L 可正交对角化，所以零特征值的代数重数也等于该核维数。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-poset-linear-extension",
+      "topics": [
+        "discrete/partial-orders",
+        "discrete/correctness-proofs"
+      ],
+      "title": "有限偏序的线性扩张",
+      "statement": "每个有限偏序都能排列成与原偏序相容的全序，反复删除极小元的算法正确终止。",
+      "dependencies": [
+        "def-finite-structures",
+        "axiom-natural"
+      ],
+      "idea": "有限性保证极小元存在，删除后对剩余元素归纳。",
+      "steps": [
+        "非空有限偏序若无极小元，从任意元素出发总能找一个严格更小者。重复会在有限集合中遇到重复元素，传递性使出现自身严格小于自身，矛盾。因此有极小元。",
+        "把一个极小元放到首位，删去它后剩余仍是有限偏序，对元素数归纳给相容排列。若原有 x<y，y 不会在仍保留 x 时作为极小元先被删，所以排列尊重全部原关系。每步删一元素，有限终止。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-birkhoff",
+      "topics": [
+        "discrete/lattices"
+      ],
+      "title": "有限分配格的 Birkhoff 表示",
+      "statement": "有限分配格 L 同构于其非零并不可约元素偏序 J 的所有下闭集组成的格；映射为 x↦{j∈J:j≤x}。",
+      "dependencies": [
+        "def-finite-structures",
+        "axiom-natural"
+      ],
+      "idea": "先把每个元素分解为并不可约元素，再用分配律把不可约提升为并素性质。",
+      "steps": [
+        "对有限格中的高度归纳：零元为空并。若非零 x 不可约，则自身就是所需分解；若可约，x=a∨b 且 a,b 都严格较小，分别分解后合并。因此每个 x 等于其下所有并不可约元素之并。",
+        "若 j 并不可约且 j≤a∨b，分配律给 j=(j∧a)∨(j∧b)。不可约性迫使其中一个等于 j，故 j≤a 或 j≤b。于是所给映射把交送到集合交、并送到集合并，由第一步分解可知单射。",
+        "对任一下闭集 I⊆J，令 x=∨I。若 j≤x，有限次用并素性质得 j≤某个 i∈I，所以下闭性使 j∈I；另一包含直接成立。故 x 的像恰为 I，得到满射及格同构。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-boolean-atoms",
+      "topics": [
+        "discrete/boolean-algebras"
+      ],
+      "title": "有限布尔代数的原子表示",
+      "statement": "有限布尔代数 B 同构于其原子集合 A 的幂集，因而 |B|=2^|A|。原子指非零且其下没有更小非零元素。",
+      "dependencies": [
+        "finite-birkhoff",
+        "def-finite-structures"
+      ],
+      "idea": "每个非零剩余部分都含一个原子，有限性使原子并穷尽任一元素。",
+      "steps": [
+        "每个非零元素下的非零元素集有限，取极小者就是原子。不同原子的交若非零，则同时等于两个原子，迫使相同，所以不同原子互不相交。",
+        "令 y 为 x 以下所有原子的并。若 y≠x，则 x∧¬y 非零，里面含原子 a≤x，却与 y 不交，违背 y 已含全部这样的原子。因此 x 是这些原子之并。",
+        "映射 x↦{a≤x} 单射且保持交并。每个原子按分配律在 x 与 ¬x 中恰位于一边，所以保持补。任意原子子集的并恰好映回该子集，故满射到幂集。含零环式单元素布尔代数时 A 空，结论仍给一元素幂集。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-projective-plane",
+      "topics": [
+        "discrete/finite-geometries",
+        "geometry/projective-geometry"
+      ],
+      "title": "有限域射影平面的点线计数与公理",
+      "statement": "F_q³ 的一维子空间作点、二维子空间作线，得到每线 q+1 点、共有 q²+q+1 点及同样多线的射影平面。两点唯一共线，两线唯一交点。",
+      "dependencies": [
+        "finite-fields-classification",
+        "basis-extension",
+        "rank-nullity"
+      ],
+      "idea": "用非零向量按非零标量分组，线则由非零线性形式的核计数。",
+      "steps": [
+        "每一维子空间有 q-1 个非零向量，互不相交地划分 q³-1 个非零向量，所以点数为 (q³-1)/(q-1)=q²+q+1。二维子空间同理含 (q²-1)/(q-1)=q+1 点。",
+        "每条二维子空间是某非零线性形式的核：取其基扩成三维基，令前两基值零、后一基值一。两个非零形式有相同核当且仅当互为非零标量倍，故线数也为 q²+q+1。",
+        "两不同点由独立向量生成，张成唯一二维空间。两不同线的定义形式独立，联合映射到 F_q² 有秩二，否则有非零线性组合形式为零；秩—零化度使共同核一维，给唯一交点。因此满足所列射影平面公理。$\\square$"
+      ]
+    },
+    {
+      "id": "design-fisher",
+      "topics": [
+        "discrete/combinatorial-designs"
+      ],
+      "title": "平衡区组设计的参数恒等式与 Fisher 不等式",
+      "statement": "2-(v,k,λ) 设计中有 b 个区组、每点出现 r 次，则 vr=bk、r(k-1)=λ(v-1)。若 v>k>1、λ>0，则 b≥v。",
+      "dependencies": [
+        "rank-nullity",
+        "hermitian-spectral"
+      ],
+      "idea": "双重计数给参数关系，关联矩阵的 Gram 矩阵正定给秩下界。",
+      "steps": [
+        "统计点属于区组的关联对，按点为 vr、按块为 bk。固定一点 x，统计同一块中与 x 同现的另一个点，按含 x 的块为 r(k-1)，按另一个点为 λ(v-1)，得第二式。",
+        "令 N 为 v×b 的零一关联矩阵，则 NNᵀ 对角为 r、非对角为 λ，所以 NNᵀ=(r-λ)I+λJ。因 v>k，参数式使 r>λ。",
+        "对非零实向量 z，zᵀNNᵀz=(r-λ)‖z‖²+λ(Σz_i)²>0，故该 v 阶矩阵满秩，N 的秩至少 v；但矩阵只有 b 列，所以 b≥v。$\\square$"
+      ]
+    },
+    {
+      "id": "reductions-transitive",
+      "topics": [
+        "discrete/reductions",
+        "discrete/time-space"
+      ],
+      "title": "多项式映射归约的传递性",
+      "statement": "若 A≤_pB、B≤_pC，则 A≤_pC；若 A≤_pB 且 B∈P，则 A∈P。",
+      "dependencies": [
+        "axiom-computation"
+      ],
+      "idea": "转换的输出长度不超过运行时间，所以复合的时间界仍为多项式。",
+      "steps": [
+        "设 x↦f(x) 用时 p(|x|)，y↦g(y) 用时 q(|y|)。输出至多 p(|x|) 个符号，故复合转换总用时≤p(|x|)+q(p(|x|))，仍为多项式。正确性由 x∈A 当且仅当 f(x)∈B 当且仅当 g(f(x))∈C 串联得到。",
+        "若 B 有多项式判定器，以它替代第二个转换即可判定 A，时间仍为上述复合类型。归约方向因此表达“借助后者解决前者”，不能反过来据此推出 B 更容易。$\\square$"
+      ]
+    },
+    {
+      "id": "cook-levin",
+      "topics": [
+        "discrete/np-completeness",
+        "discrete/time-space"
+      ],
+      "title": "Cook–Levin 定理：SAT 是 NP 完全的",
+      "statement": "布尔公式可满足性 SAT 在 NP 中，且每个 NP 判定语言都可多项式时间映射归约到 SAT。",
+      "dependencies": [
+        "axiom-computation",
+        "reductions-transitive"
+      ],
+      "idea": "用有限局部约束描述一个确定性验证器在未知证据上的多项式长计算表。",
+      "steps": [
+        "SAT∈NP：给出所有变元赋值，可按公式语法树在多项式时间验真。取任意 NP 语言 L，其确定性验证器 V 在输入 x 与长度至多 p(|x|) 的证据 w 上用多项式时间。可在证据中加长度字段及零填充，使固定多项式长度证据表达所有较短证据；修改验证器先解码再运行。",
+        "选多项式 T 大于输入加证据长度及验证时间，把接受状态改为吸收状态。考虑时间 0,…,T、纸带位置 -T,…,T 的表；再加两条永远空白的外护栏。每格符号从固定有限集合 Σ 取值，Σ 包括普通带符号及带状态的唯一读头符号。为每个时间、位置、符号建布尔变元。",
+        "加入每格恰取一个符号的约束（至少一个及两两不兼容），每行恰有一个读头的约束。首行固定 x、初态、空白及证据区域；证据格只允许编码字母，保留其布尔取值未定。末行要求某格带接受状态。",
+        "对确定性机器，一个格下一时刻的符号由上一时刻该格及左右邻格三个符号唯一决定：读头至多移动一格，其他格保持或按邻读头写入。枚举不合法的三格旧符号加一格新符号组合，用一条四文字子句禁止每个组合。Σ 固定，故每个局部窗口仅常数条约束。护栏不会被真实 T 步计算越过。",
+        "若有接受证据，其真实计算表满足全部约束。反向满足赋值由每格唯一符号给出表；初行编码某证据，各行唯一读头与全部局部确定性规则迫使下一行恰是 V 的真实后继。归纳整个表为合法接受计算，故该证据被接受。",
+        "变量数 O(T²)，格约束和局部约束 O(T²)，即使用两两读头排斥，数量也至多 O(T³)。所有约束可多项式时间枚举并合取，得到 x∈L 当且仅当所得公式可满足。因此任意 NP 语言归约到 SAT，证明 NP 完全性。$\\square$"
+      ]
+    },
+    {
+      "id": "three-sat-clique",
+      "topics": [
+        "discrete/np-completeness",
+        "discrete/combinatorial-optimization"
+      ],
+      "title": "3-SAT 与 CLIQUE 的 NP 完全性",
+      "statement": "每个 CNF 可满足性实例可多项式等可满足转换为每条至多三文字的 CNF；该 3-SAT 多项式归约到 CLIQUE，故两判定问题均 NP 完全。",
+      "dependencies": [
+        "cook-levin",
+        "reductions-transitive"
+      ],
+      "idea": "长子句用链式辅助变元拆开，再将每个子句的一项选择变成一致文字团。",
+      "steps": [
+        "长度 k≥4 的子句 ℓ₁∨…∨ℓ_k 换成 (ℓ₁∨ℓ₂∨z₁)、(¬z₁∨ℓ₃∨z₂)、…、(¬z_(k-3)∨ℓ_(k-1)∨ℓ_k)。若原文字全假，链逐次迫使 z 为真，最后矛盾；若有真文字，可令 z_j 表示“至此前缀尚未出现真文字”，使全链成立。新长度与原子句长度线性相关。",
+        "对 m 个非空三文字以下子句，每个文字出现建一顶点；只在不同子句且不互为否定的两个出现之间连边。若公式可满足，每个子句选一个真文字，得到 m 团。",
+        "反之 m 团必须每个子句各取一个顶点，因为同句不连边；所选文字没有互相否定，可一致赋真再任意补全其他变元，使全部子句满足。空子句可直接输出固定不可满足实例。图规模多项式，给出归约。",
+        "3-SAT 的赋值证据与 CLIQUE 的顶点表证据均可多项式验证。由 SAT 的 NP 完全性及归约传递性，得到两者 NP 完全。这里不据此断言 P≠NP。$\\square$"
+      ]
+    },
+    {
+      "id": "master-polynomial",
+      "topics": [
+        "discrete/divide-conquer",
+        "discrete/recurrences"
+      ],
+      "title": "幂次代价的主定理",
+      "statement": "对 n=b^m、b≥2、a≥1、p≥0，递推 T(n)=aT(n/b)+n^p、T(1)>0，分别在 a<b^p、a=b^p、a>b^p 时为 Θ(n^p)、Θ(n^p log n)、Θ(n^(log_ba))。",
+      "dependencies": [
+        "formal-generating-recurrence",
+        "log-inequality"
+      ],
+      "idea": "逐层展开得到几何级数，三个量级来自公比小于、等于或大于一。",
+      "steps": [
+        "有限归纳展开 T(b^m)=a^mT(1)+b^(pm)Σ_(j=0)^(m-1)(a/b^p)^j。令 ρ=a/b^p。若 ρ<1，和被正常数上下控制，而 a^m≤b^(pm)，得到第一种量级。",
+        "若 ρ=1，和为 m，T=b^(pm)(T(1)+m)，m 与 log n 成正常数倍，得到第二种。若 ρ>1，几何和与 ρ^m 同阶，两个总项都与 a^m=n^(log_ba) 同阶，得到第三种。公式只声明这些整幂输入及所列递推，不涵盖任意不规则子问题规模。$\\square$"
+      ]
+    },
+    {
+      "id": "held-karp",
+      "topics": [
+        "discrete/dynamic-programming",
+        "discrete/combinatorial-optimization"
+      ],
+      "title": "Held–Karp 旅行商动态规划的正确性与复杂度",
+      "statement": "n≥2 个顶点的完全有向加权图，固定起点 0，按已访问子集和末点存最小路径代价，再加回程边，可在 O(n²2^n) 时间、O(n2^n) 空间求精确最短 Hamilton 回路。",
+      "dependencies": [
+        "def-finite-structures",
+        "axiom-natural"
+      ],
+      "idea": "任何最优路径的最后一步都来自一个小一顶点的子问题，反向每个子问题解都能拼回。",
+      "steps": [
+        "令 D(S,v) 为从 0 出发、恰访问 S 每点一次、在 v 结束的最小代价，S 含 0。初值 D({0},0)=0，其余非法状态为无穷。对 v≠0，D(S,v)=min_(u∈S\\{v})[D(S\\{v},u)+w_uv]。",
+        "任一路径删去最后 v，得到右侧某前驱路径，所以其代价不低于递推值；反向任意有限候选前驱路径可添加 v，恰好访问所需集合。按 |S| 归纳，所有状态正确。最终 min_(v≠0)[D(V,v)+w_v0] 恰枚举全部回路的末点。",
+        "状态至多 n2^n 个，每个检查至多 n 个前驱，给所列时间；存储每状态一个数及可选前驱给空间界。权可为任意有限实数，因为禁止重复顶点，不存在负环无限绕行问题。$\\square$"
+      ]
+    },
+    {
+      "id": "branch-bound",
+      "topics": [
+        "discrete/integer-programming",
+        "applied/scheduling"
+      ],
+      "title": "有界整数域分枝定界的精确性",
+      "statement": "有限整数盒中的优化，若每节点给其全部候选的有效下界，按不交分枝覆盖候选，仅在下界不低于已知可行值时剪枝，并最终枚举叶点，则算法有限结束并返回全局最优或判不可行。",
+      "dependencies": [
+        "axiom-finite"
+      ],
+      "idea": "未剪枝节点覆盖尚可能改进的所有解；剪枝时被丢弃解没有机会优于当前可行值。",
+      "steps": [
+        "令不变式为：每个未处理可行解，要么仍位于待搜索节点，要么其目标值不小于当前 incumbent。初始整个有限盒使它成立；不交分枝的并等于父节点候选，故保留不变式。",
+        "若节点下界 L≥incumbent，则节点内每个可行值≥L，所以剪枝也保留不变式。叶点若可行就更新为较小值，否则丢弃。以候选数量或未固定整数范围严格下降的分枝保证有限树。",
+        "全部节点处理后，不变式说明任意可行解目标值均不优于 incumbent，所以返回全局最优。若始终无可行叶而未因任何有限 incumbent 剪掉潜在可行点，则原问题不可行。该证明不把线性松弛解随意四舍五入。$\\square$"
+      ]
+    },
+    {
+      "id": "greedy-set-cover",
+      "topics": [
+        "discrete/approximation-algorithms",
+        "discrete/greedy-algorithms"
+      ],
+      "title": "加权集合覆盖的调和近似界",
+      "statement": "有限 n 元全集可被正成本集合覆盖时，每步选成本除以新增覆盖数最小的集合，所得总成本≤H_n·OPT≤(1+ln n)OPT。",
+      "dependencies": [
+        "log-inequality",
+        "axiom-finite"
+      ],
+      "idea": "把每次成本均摊到新元素，最优覆盖保证每个阶段都有低于 OPT/剩余数 的单价。",
+      "steps": [
+        "尚余 r 个元素时，取一个最优覆盖。其各集合未覆盖元素数之和至少 r，总成本为 OPT，因此至少一集合的成本/新增数≤OPT/r；贪心选择的单价不会更高。",
+        "若一步新覆盖 k 个，每个元素均摊该步相同单价，总额正为成本。按它们被覆盖的顺序，把剩余数量从 r 排到 r-k+1，各收费≤OPT/r≤OPT/(相应剩余量)。",
+        "全部元素覆盖后总收费≤OPTΣ_(j=1)^n1/j。函数 1/x 递减，Σ_(j=2)^n1/j≤∫₁ⁿdx/x=ln n，得后一个界。每步至少覆盖一新元素，所以过程有限终止。空全集成本零单独处理。$\\square$"
+      ]
+    },
+    {
+      "id": "euclid-loop",
+      "topics": [
+        "discrete/correctness-proofs",
+        "numbertheory/gcd"
+      ],
+      "title": "Euclid 算法的终止性与循环不变式",
+      "statement": "对非负整数 a,b 不全零，循环 (a,b)←(b,a mod b)，直到 b=0，返回 a，恰为原两数最大公因数。",
+      "dependencies": [
+        "division-algorithm",
+        "bezout",
+        "axiom-natural"
+      ],
+      "idea": "每轮保留公因数集合，而第二变量严格下降。",
+      "steps": [
+        "若 a=qb+r，整数 d 同时整除 a,b 当且仅当同时整除 b,r，因为 r=a-qb、a=qb+r。因此每轮公因数集合不变，这是循环不变式。",
+        "b>0 时余数满足 0≤r<b，故第二变量为严格下降的非负整数，良序原则保证有限终止。终止时两数为 (a,0)，a>0（原不全零且变换不把两数同时变零），其最大公因数为 a；由不变式即为原最大公因数。$\\square$"
+      ]
+    },
+    {
+      "id": "one-time-pad",
+      "topics": [
+        "discrete/symmetric-encryption"
+      ],
+      "title": "一次一密的完美保密与复用泄漏",
+      "statement": "均匀独立密钥 K∈{0,1}^n，密文 C=M xor K，对任意明文分布都与 M 独立；同一 K 加密两明文时泄漏它们的 xor。",
+      "dependencies": [
+        "axiom-finite"
+      ],
+      "idea": "固定明文与密文后，恰有一个密钥使它们对应。",
+      "steps": [
+        "对任意正概率明文 m 与任意 c，P(C=c|M=m)=P(K=c xor m)=2^(-n)，与 m 无关。所以联合概率 P(M=m,C=c)=P(M=m)2^(-n)，等于边缘乘积，得到完全独立。",
+        "正确性由 (M xor K) xor K=M。若复用密钥，C₁ xor C₂=(M₁ xor K) xor(M₂ xor K)=M₁ xor M₂，直接暴露两个消息的关系，故上面的单次证明不能套用于复用。$\\square$"
+      ]
+    },
+    {
+      "id": "rsa-correctness",
+      "topics": [
+        "discrete/public-key-cryptography",
+        "numbertheory/modular-exponentiation"
+      ],
+      "title": "RSA 的全消息正确性",
+      "statement": "设不同素数 p,q，N=pq，ed≡1 mod (p-1)(q-1)。则对每个整数 m，(m^e)^d≡m mod N，包括与 N 不互素的 m。",
+      "dependencies": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "idea": "分别在两个素数模数上讨论零与非零类，再由中国剩余合并。",
+      "steps": [
+        "模 p 时，若 p|m，则 m^(ed) 与 m 都为零；否则费马小定理给 m^(p-1)≡1，而 ed-1 是 p-1 的倍数，所以 m^(ed)≡m。",
+        "模 q 完全同样。p,q 互素，中国剩余唯一性使两个同余合并为模 N 的同余。此处证明加解密代数正确，不声称教科书 RSA 已满足现代加密或签名安全定义。$\\square$"
+      ]
+    },
+    {
+      "id": "hash-then-sign",
+      "topics": [
+        "discrete/digital-signatures",
+        "discrete/security-reductions"
+      ],
+      "title": "Hash-then-sign 的条件安全归约",
+      "statement": "对散列摘要签名的方案，任意新消息伪造成功事件，可分为底层签名方案的新摘要伪造，或散列函数的一对碰撞。因此其 EUF-CMA 优势不超过相应签名伪造优势与碰撞优势之和。",
+      "dependencies": [
+        "axiom-computation",
+        "axiom-finite"
+      ],
+      "idea": "以伪造摘要是否已被查询过分类，分别给出两个可执行归约。",
+      "steps": [
+        "签名归约将每个消息查询 m 转为摘要 H(m) 后提交底层签名 oracle，原样返回。若攻击者最终给出新消息 m* 的有效签名，且 H(m*) 不在此前查询摘要中，它直接是底层签名实验中新摘要的有效伪造。",
+        "碰撞归约自行生成签名密钥并模拟同一查询分布。若成功的新消息 m* 的摘要等于此前某消息 m_i 摘要，由新消息条件 m*≠m_i，输出 (m*,m_i) 就是一对碰撞。",
+        "两事件不交且穷尽有效新消息伪造，所以成功概率之和恰为原优势，分别被两个归约算法的成功率控制。运行时间为攻击者时间加上其有限次散列、签名和查表开销。若底层签名安全且散列抗碰撞，优势均可忽略，则组合也安全；这是条件结论，不把困难假设写成无条件定理。$\\square$"
+      ]
+    },
+    {
+      "id": "schnorr-hvzk",
+      "topics": [
+        "discrete/zero-knowledge"
+      ],
+      "title": "Schnorr 协议的完备性、特殊可靠性与诚实验证者零知识",
+      "statement": "素数阶 q 群由 g 生成，公开 h=g^w。协议 a=g^r，挑战 c∈F_q，回答 z=r+cw；验证 g^z=ah^c。它完美完备、具有两份同承诺不同挑战的见证提取，并可模拟诚实验证者转录。",
+      "dependencies": [
+        "finite-fields-classification",
+        "bezout"
+      ],
+      "idea": "验证式直接成立；相同承诺相除消掉随机量；模拟先选挑战与回答再反推承诺。",
+      "steps": [
+        "诚实回答满足 g^z=g^(r+cw)=g^r(g^w)^c=ah^c，因此始终接受。",
+        "若同一 a 有两份有效转录 (c,z)、(c′,z′)，且 c≠c′，相除得 g^(z-z′)=h^(c-c′)。因 q 素，c-c′ 在 F_q 可逆。令 w*=(z-z′)/(c-c′)，以逆指数作用于等式得到 g^(w*)=h，从而提取见证。",
+        "诚实转录中 r,c 独立均匀，映射 (r,c)↦(z=r+cw,c) 是 F_q² 的双射，所以 z,c 也独立均匀。模拟器直接选均匀 c,z，设 a=g^z h^(-c)，得到与真实转录完全同分布的结果，且不使用 w。",
+        "此结论明确是诚实验证者零知识与特殊可靠性；任意恶意验证者零知识、可组合性和具体协议改造须另证，不能从本模拟器直接推出。$\\square$"
+      ]
+    },
+    {
       "id": "closed-subset-compact",
       "topics": [
         "geometry/compactness",
@@ -2435,6 +3033,2770 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "affine-lebesgue-change",
+      "topics": [
+        "analysis/measures",
+        "analysis/convolution"
+      ],
+      "title": "Lebesgue 积分的平移与缩放",
+      "statement": "a≠0 时，对非负可测 h，有 ∫h(ax+b)dx=|a|⁻¹∫h(u)du；绝对可积时同样成立。",
+      "dependencies": [
+        "pi-lambda",
+        "simple-approximation",
+        "monotone-integral",
+        "integral-linearity",
+        "def-schwartz"
+      ],
+      "idea": "先对区间长度验证，再用测度唯一性的 π—λ 论证推广到可测集合。",
+      "steps": [
+        "对区间 E，原像 {x:ax+b∈E} 的长度恰是 |a|⁻¹ times E 的长度。固定有界目标区间 J，比较 E⊆J 的这两个有限测度：一个是原像的长度，另一个是 |a|⁻¹倍长度；它们在所有区间与 J 的交上相同。",
+        "这些区间交组成含 J 的 π 系统，生成 J 中 Borel σ 代数。两有限测度相等的集合构成 λ 系统，所以 π—λ 定理使它们在所有 Borel 子集相等。令 J 递增覆盖实线，再用下连续性得所有 Borel 集相等。",
+        "完备化中的集合与 Borel 集只差零集子集，仿射原像保持 Borel 零集为零，因此等式也推广到 Lebesgue 可测集。对指标函数、简单函数、单调逼近依次应用，得到积分式；有符号函数拆正负部，复函数拆实虚部。$\\square$"
+      ]
+    },
+    {
+      "id": "fourier-schwartz",
+      "topics": [
+        "analysis/fourier-transform"
+      ],
+      "title": "Fourier 变换保持 Schwartz 空间",
+      "statement": "若 f∈S(R)，则 fhat∈S(R)，并有 (fhat)^(k)=Fourier[(-ix)^k f]，Fourier[f′](ω)=iω fhat(ω)。",
+      "dependencies": [
+        "def-schwartz",
+        "dominated-convergence",
+        "ftc-second"
+      ],
+      "idea": "多项式加权函数仍可积，因而可对频率任意次求导；反复分部积分控制频率尾部。",
+      "steps": [
+        "Schwartz 条件使任意 x^k f^(j)(x) 绝对可积：在 |x|≥1 时再多用两次衰减阶得到 C/x² 界，有限区间由连续性有界。",
+        "对频率差商，用复指数的积分导数表达使其被 |x| 控制；反复控制收敛允许任意次求导，给 (fhat)^(k)(ω)=∫(-ix)^kf(x)exp(-iωx)dx。",
+        "对上述积分分部积分 m 次，Schwartz 衰减使每次无穷端边界项为零，得到 ω^m(fhat)^(k) 是某个常数倍的 Fourier[(x^kf)^(m)]，其绝对值≤该函数的 L¹ 范数，有限且不依赖 ω。故所有需要的 Schwartz 半范数有限，同时给出导数变换公式。$\\square$"
+      ]
+    },
+    {
+      "id": "fourier-inversion",
+      "topics": [
+        "analysis/fourier-transform",
+        "applied/imaging-reconstruction"
+      ],
+      "title": "Schwartz 函数的 Fourier 反演定理",
+      "statement": "若 f∈S(R)，则 f(x)=(2π)⁻¹∫_R fhat(t)exp(itx)dt，对所有 x 成立。",
+      "dependencies": [
+        "fourier-schwartz",
+        "gaussian-characteristic",
+        "tonelli-fubini",
+        "dominated-convergence",
+        "affine-lebesgue-change"
+      ],
+      "idea": "先给频率积分乘一个 Gaussian 截断，交换积分后得到空间近似恒等核。",
+      "steps": [
+        "fhat∈S，所以绝对可积。固定 ε>0，定义 I_ε(x)=(2π)⁻¹∫fhat(t)exp(itx)exp(-ε²t²/2)dt。代入 fhat 的定义，绝对双积分被 ‖f‖₁∫exp(-ε²t²/2)dt 控制，Fubini 可交换。",
+        "由 Gaussian Fourier 核公式，I_ε(x)=∫f(y)g_ε(x-y)dy=∫f(x-εz)g(z)dz；最后一步使用平移缩放换元。",
+        "f 连续有界，逐点 f(x-εz)→f(x)，由 ‖f‖∞g(z) 控制，故右侧趋于 f(x)。左侧被 |fhat| 控制，可令 ε↓0 得未截断逆积分。两边极限相等，证明反演。$\\square$"
+      ]
+    },
+    {
+      "id": "plancherel-schwartz",
+      "topics": [
+        "analysis/fourier-transform",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "Schwartz 空间的 Parseval—Plancherel 恒等式",
+      "statement": "f,g∈S(R) 时，∫fhat(t)overline(ghat(t))dt=2π∫f(x)overline(g(x))dx。特别 ‖fhat‖₂²=2π‖f‖₂²。",
+      "dependencies": [
+        "fourier-inversion",
+        "fourier-schwartz",
+        "tonelli-fubini"
+      ],
+      "idea": "把一个 Fourier 变换展开，交换积分后对另一函数使用反演。",
+      "steps": [
+        "由 f、ghat 均 L¹，∫∫|f(x)ghat(t)|dxdt=‖f‖₁‖ghat‖₁<∞，所以可以交换下面的复积分。",
+        "展开 fhat 后，左侧等于 ∫f(x)[∫exp(-itx)overline(ghat(t))dt]dx。内积分是 g 的反演公式取共轭后的 2πoverline(g(x))，故得到恒等式。取 g=f 即为范数等式。$\\square$"
+      ]
+    },
+    {
+      "id": "general-l2-complete",
+      "topics": [
+        "analysis/hilbert-spaces",
+        "analysis/normed-spaces"
+      ],
+      "title": "任意测度空间的 L² 完备性",
+      "statement": "任意测度 μ 上，按几乎处处相等识别的 L²(μ) 在内积 ∫f overline(g)dμ 下完备；适用于实、复函数。",
+      "dependencies": [
+        "l2-completeness",
+        "integral-linearity",
+        "monotone-integral",
+        "dominated-convergence"
+      ],
+      "idea": "逐项核对概率空间的证明，所有估计只依赖积分而不依赖总质量为一。",
+      "steps": [
+        "柯西—施瓦茨证明中的 2|fg|≤|f|²+|g|²、非负平方积分及最优系数计算在任意测度下均成立，复数系数使用共轭即可。积分为零的非负函数在阈值 1/k 的集合上测度为零，故内积按零等价类正定；三角不等式同样由展开平方得到。",
+        "对任意 L² 柯西列，照已展开的 L² 完备性证明抽取步长≤2^(-k) 的子列，令 S_N=|f_(n₁)|+Σ_(k≤N)|差值|。L² 三角不等式给统一范数界，单调收敛给 ∫S²<∞，所以 S 有限几乎处处。",
+        "子列逐点绝对收敛到 f，且平方差被 4S² 控制；控制收敛给 L² 收敛，原列柯西性再给整列收敛。每一步都已说明其积分依据，未使用 μ(Ω)=1，所以任意测度版本成立；复函数按实虚部处理。$\\square$"
+      ]
+    },
+    {
+      "id": "schwartz-density",
+      "topics": [
+        "analysis/fourier-transform",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "Schwartz 函数在 L²(R) 中稠密",
+      "statement": "S(R) 在 Lebesgue L²(R) 中稠密；有限个有界区间指标的线性组合也在该空间稠密。",
+      "dependencies": [
+        "general-l2-complete",
+        "projection-closed-subspace",
+        "gaussian-characteristic",
+        "tonelli-fubini",
+        "pi-lambda",
+        "def-schwartz"
+      ],
+      "idea": "先把区间指标平滑成 Schwartz 函数，再证明与所有区间指标正交的函数只能为零。",
+      "steps": [
+        "对有限区间 I，令 v_ε=1_I*g_ε。每次对 x 求导都可在有限 y 区间内进行，Gaussian 导数是多项式乘 Gaussian，故 v_ε 光滑且任意阶导数在远处快速衰减，属于 S。",
+        "0≤v_ε≤1，在 I 两端之外逐点趋于 1_I：内点时 Gaussian 核落出区间的尾概率趋零，外点同理。对 ε≤1，在足够远处 |x-y|≥|x|/2≥1，ε⁻¹exp(-|x-y|²/(2ε²)) 不超过常数 exp(-x²/8)。因此中央有界区间用常数、尾部用 Gaussian 即给统一平方可积控制，DCT 使 v_ε→1_I 于 L²。",
+        "若 h∈L² 与 S 全正交，由上一步及柯西—施瓦茨，它与每个区间指标也正交，即任意有限区间积分为零。固定有界区间 J，h 在其中 L¹。对 Borel E⊆J 令 ν(E)=∫_E h，实虚部分分别为有限符号测度。",
+        "ν 在区间交上全为零；ν(J)=0，且零值集合对补及不交可数并封闭（可数可加性由 |h| 控制的收敛给出）。π—λ 定理使 ν 对 J 的全部 Borel 子集为零，完备化把结论推广到 Lebesgue 子集。取实、虚部正负集，得 h=0 几乎处处于 J；可数 J 覆盖实线后仍成立。",
+        "令 M 为 S 的 L² 闭包。Hilbert 投影定理使任意函数分解为 M 元素与其正交补，而刚证正交补只有零，所以 M=L²。对区间指标张成空间也用相同正交论证，得到第二个稠密性结论。$\\square$"
+      ]
+    },
+    {
+      "id": "plancherel-l2",
+      "topics": [
+        "analysis/fourier-transform",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "L² Fourier 变换的 Plancherel 定理",
+      "statement": "在 S 上定义的 U f=(2π)⁻¹/²fhat，唯一延拓为 L²(R) 到自身的酉算子。",
+      "dependencies": [
+        "plancherel-schwartz",
+        "schwartz-density",
+        "general-l2-complete",
+        "fourier-inversion",
+        "fourier-schwartz"
+      ],
+      "idea": "密集子空间上的等距映射可由柯西列唯一延拓；反演使像也包含同一密集子空间。",
+      "steps": [
+        "给 f∈L²，选 f_n∈S 且 f_n→f。Schwartz Plancherel 使 ‖Uf_n-Uf_m‖₂=‖f_n-f_m‖₂，所以像列柯西，L² 完备给极限。两种逼近的差范数趋零，故定义与逼近无关，给唯一连续延拓 U。",
+        "取极限保留线性、内积和范数。等距映射的像闭：若 Uf_n 在像中收敛，f_n 也柯西，极限 f 存在且像为 Uf。",
+        "Schwartz Fourier 保持 S，反演说明每个 Schwartz 函数都来自某个 Schwartz 函数：具体逆为同样常数乘反射 Fourier。故像含稠密 S；既闭又稠密，只能为全部 L²。因此 U 满射且等距，即为酉算子。$\\square$"
+      ]
+    },
+    {
+      "id": "convolution-l1",
+      "topics": [
+        "analysis/convolution",
+        "applied/imaging-reconstruction"
+      ],
+      "title": "L¹ 卷积及卷积定理",
+      "statement": "f,g∈L¹(R) 时，(f*g)(x)=∫f(y)g(x-y)dy 几乎处处绝对存在，‖f*g‖₁≤‖f‖₁‖g‖₁，且 Fourier(f*g)=fhat·ghat。",
+      "dependencies": [
+        "tonelli-fubini",
+        "affine-lebesgue-change"
+      ],
+      "idea": "绝对值双积分恰好分成两个范数，因此交换次序合法。",
+      "steps": [
+        "非负 Tonelli 与平移换元给 ∫∫|f(y)g(x-y)|dydx=∫|f(y)|[∫|g(x-y)|dx]dy=‖f‖₁‖g‖₁。有限性保证几乎每个 x 的内积分有限，并给卷积的 L¹ 界。",
+        "在 Fourier 积分中展开卷积，绝对值仍被同一双积分控制，故 Fubini 合法。对固定 y 作 u=x-y，得到 exp(-itx)=exp(-ity)exp(-itu)，内积分为 exp(-ity)ghat(t)，外积分成为 fhat(t)ghat(t)。$\\square$"
+      ]
+    },
+    {
+      "id": "young-l1-l2",
+      "topics": [
+        "analysis/convolution",
+        "analysis/linear-operators"
+      ],
+      "title": "Young 的 L¹—L² 卷积界",
+      "statement": "若 f∈L¹(R)、g∈L²(R)，则 f*g∈L² 且 ‖f*g‖₂≤‖f‖₁‖g‖₂。",
+      "dependencies": [
+        "general-l2-complete",
+        "tonelli-fubini",
+        "affine-lebesgue-change"
+      ],
+      "idea": "对有限权重 |f(y)|dy 用柯西—施瓦茨，再积分消去平移。",
+      "steps": [
+        "‖f‖₁=0 时结论直接成立。否则对几乎每个 x，权重 Cauchy—Schwarz 给 |∫f(y)g(x-y)dy|²≤‖f‖₁∫|f(y)||g(x-y)|²dy。非负 Fubini 保证右侧几乎处处有限，因此左侧绝对积分也有定义。",
+        "再对 x 积分并用平移不变性，右侧总积分为 ‖f‖₁∫|f(y)|‖g‖₂²dy=‖f‖₁²‖g‖₂²。开平方得到范数界。$\\square$"
+      ]
+    },
+    {
+      "id": "haar-basis",
+      "topics": [
+        "analysis/wavelets",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "Haar 小波的 L² 正交完备性",
+      "statement": "ψ_jk=2^(j/2)(1_[k2^(-j),(k+1/2)2^(-j))-1_[(k+1/2)2^(-j),(k+1)2^(-j)))，j,k∈Z，是 L²(R) 的标准正交基。",
+      "dependencies": [
+        "schwartz-density",
+        "general-l2-complete"
+      ],
+      "idea": "不同尺度的小波由零均值正交；把任意 dyadic 区间指标分解成祖先上的小波和趋零残差。",
+      "steps": [
+        "每个小波支持长度 2^(-j)，两半符号相反，积分零，平方积分一。同尺度不同 k 支持不交；不同尺度时，细区间若与粗区间相交，就包含于粗小波的某一常值半区，内积为常数乘细小波积分零。故标准正交。",
+        "对 dyadic 区间 I，记 φ_I=1_I/√|I|。若 J 为其父区间，按 I 为左半或右半，有 φ_I=(φ_J±ψ_J)/√2。重复 M 层，得到 φ_I 为有限 Haar 线性组合加上 2^(-M/2)φ_(祖先)，后项 L² 范数趋零。",
+        "任意有界区间可用有限个同层 dyadic 区间的并逼近，端点处对称差长度至多 2·2^(-j)，所以指标的 L² 误差趋零。区间指标张成空间已证稠密，因此 Haar 张成空间稠密，完成正交基证明。$\\square$"
+      ]
+    },
+    {
+      "id": "stft-moyal",
+      "topics": [
+        "analysis/time-frequency",
+        "analysis/wavelets"
+      ],
+      "title": "短时 Fourier 变换的 Moyal 能量恒等式",
+      "statement": "对 f,g∈S(R)，定义 V_gf(t,ω)=∫f(x)overline(g(x-t))exp(-iωx)dx，则 (2π)⁻¹∫∫|V_gf(t,ω)|²dωdt=‖f‖₂²‖g‖₂²。",
+      "dependencies": [
+        "plancherel-schwartz",
+        "tonelli-fubini",
+        "affine-lebesgue-change"
+      ],
+      "idea": "每个时间窗内对局部信号用 Plancherel，再把全部平移窗的能量相加。",
+      "steps": [
+        "固定 t，h_t(x)=f(x)overline(g(x-t)) 仍为 Schwartz 函数。其 Fourier 变换正是 V_gf(t,ω)。Plancherel 给 (2π)⁻¹∫|V_gf(t,ω)|²dω=∫|f(x)|²|g(x-t)|²dx。",
+        "对 t 积分，所有项非负，Tonelli 可以交换。平移换元给内积分 ∫|g(x-t)|²dt=‖g‖₂²，与 x 无关，所以总值为两范数平方之积。若窗范数为一，STFT 保持该归一化的总能量。$\\square$"
+      ]
+    },
+    {
+      "id": "heisenberg-uncertainty",
+      "topics": [
+        "analysis/time-frequency",
+        "analysis/fourier-transform"
+      ],
+      "title": "Heisenberg 不确定性不等式",
+      "statement": "对非零 Schwartz 函数 f，‖xf‖₂‖ωfhat‖₂≥√(2π)‖f‖₂²/2。归一化并去掉位置与频率均值后，两个标准差乘积至少 1/2。",
+      "dependencies": [
+        "plancherel-schwartz",
+        "fourier-schwartz",
+        "general-l2-complete",
+        "affine-lebesgue-change"
+      ],
+      "idea": "分部积分将位置与导数的乘积固定为范数，再用 Cauchy—Schwarz。",
+      "steps": [
+        "快速衰减使无穷端 x|f(x)|² 为零。对其导数积分，得 ∫|f|²=-2Re∫x f′ overline(f)。所以 ‖f‖₂²≤2‖xf‖₂‖f′‖₂。",
+        "由 Fourier 导数公式及 Plancherel，‖f′‖₂=‖ωfhat‖₂/√(2π)，代入得到不等式。",
+        "平移 f 改变位置均值而不改变位置方差；乘 exp(iω₀x) 使 Fourier 变量平移，改变频率均值而不改变频率方差。这两公式由定义及仿射换元直接得到。对中心化后的函数用前式，并按空间密度 |f|²/‖f‖₂² 与频率密度 |fhat|²/(2π‖f‖₂²) 计算标准差，即得乘积至少 1/2。$\\square$"
+      ]
+    },
+    {
+      "id": "syntax-parse-substitute",
+      "topics": [
+        "foundations/formal-language",
+        "foundations/structure-interpretation",
+        "foundations/satisfaction"
+      ],
+      "title": "唯一解析与语义代入引理",
+      "statement": "完全括号化的一阶合式项与公式有唯一语法树，捕获规避的项代入可计算；结构 M 与赋值 s 下，φ[t/x] 的真值等于把 s(x) 改成项 t 的解释后 φ 的真值。",
+      "dependencies": [
+        "axiom-logic",
+        "axiom-natural"
+      ],
+      "idea": "先按语法树递归处理项，再对公式树归纳；量词步必须先避开变量捕获。",
+      "steps": [
+        "项由变量、常元及带固定元数的函数符号生成；公式由原子谓词/等号、带括号的联结词及带变量的量词生成。首符号、括号匹配和各符号元数确定根节点与各子串，递归使树唯一。有限字符串扫描及严格更短子串递归给解析算法。",
+        "代入遇变量 x 时换成 t，其他变量不变，函数及联结词对子树递归。遇 ∀y，若 y=x 停止进入该作用域；若 y≠x 却在 t 中自由，先把绑定 y 改为一个不在相关有限变量集中的新变量，再进入。每步处理有限树，改名也由枚举变量找到，故可计算且不捕获自由变量。",
+        "对项结构归纳，可验证代入后项的解释等于修改赋值后的原项解释；原子谓词和等号由此得到公式引理。否定与蕴含按真值表传递归纳结论。",
+        "量词步 y≠x 时，经改名可保证 y 不在 t 中自由，所以改变 s(y) 不影响 t 的解释，两个赋值更新可交换；对所有 y 的值应用归纳结论即得全称式。y=x 时作用域内不代入，与赋值被该量词覆盖一致。完成语义代入引理。$\\square$"
+      ]
+    },
+    {
+      "id": "fol-soundness",
+      "topics": [
+        "foundations/soundness-completeness",
+        "foundations/formal-proof",
+        "foundations/axiomatic-method"
+      ],
+      "title": "一阶 Hilbert 演算的可靠性",
+      "statement": "对本章演算，若句子理论 Γ⊢φ，则每个满足 Γ 的结构都满足 φ。",
+      "dependencies": [
+        "syntax-parse-substitute",
+        "def-hilbert-fol"
+      ],
+      "idea": "逐行证明每个有限推导步骤都保持在任意 Γ 模型中的真。",
+      "steps": [
+        "固定任意 Γ 的模型 M。命题重言式代入后在任何原子真值组合下都真。全称实例公理由语义代入引理成立；分配公理在 x 不自由出现于 α 时，可把不依赖 x 的前件固定后检查全称定义。",
+        "等号公理因解释中的相等关系为真正相等而成立，函数与谓词对相等元素解释相同。Γ 的每个前提按假设真。modus ponens 由蕴含真值表保持真。",
+        "全称概括要求被概括变量不自由出现于前提，所以前提在改变该变量赋值时仍真；若此前结论在这些赋值中皆真，就得到全称式。对有限证明长度归纳，最后 φ 在 M 中真。M 任意，可靠性成立。$\\square$"
+      ]
+    },
+    {
+      "id": "fol-deduction",
+      "topics": [
+        "foundations/natural-deduction",
+        "foundations/formal-proof"
+      ],
+      "title": "句子前提的演绎定理",
+      "statement": "对句子 α，有 Γ∪{α}⊢β 当且仅当 Γ⊢α→β。",
+      "dependencies": [
+        "def-hilbert-fol"
+      ],
+      "idea": "对使用 α 的证明归纳，把每一行改写成以 α 为前件的蕴含。",
+      "steps": [
+        "反向直接用 α 和 modus ponens。正向看每行 θ：若 θ 是 Γ 前提或公理，命题重言式 θ→(α→θ) 给 α→θ；若该行是 α，用重言式 α→α。",
+        "若 θ 由 ψ 与 ψ→θ 经 MP 得到，归纳已有 α→ψ、α→(ψ→θ)，使用命题重言式 (α→(ψ→θ))→((α→ψ)→(α→θ))，两次 MP 得到 α→θ。",
+        "若 θ=∀xψ 来自概括，先对 α→ψ 概括得 ∀x(α→ψ)，因 α 为句子，x 不自由出现于 α，可用全称分配公理得到 α→∀xψ。故最后一行也可转换，证明演绎定理。$\\square$"
+      ]
+    },
+    {
+      "id": "henkin-witness-consistency",
+      "topics": [
+        "foundations/consistency",
+        "foundations/classification-of-models"
+      ],
+      "title": "新常元见证保持相容性",
+      "statement": "若句子理论 Γ 相容、∃xφ(x) 为旧语言句子且 c 是新常元，则 Γ 加见证公理 ∃xφ(x)→φ(c) 仍相容。",
+      "dependencies": [
+        "fol-deduction",
+        "syntax-parse-substitute",
+        "def-hilbert-fol"
+      ],
+      "idea": "若见证公理造成矛盾，旧理论必须同时推出存在句及对所有元素的反例。",
+      "steps": [
+        "反设加入后可证矛盾。演绎定理及经典命题推理使 Γ⊢¬(∃xφ→φ(c))，所以 Γ⊢∃xφ 且 Γ⊢¬φ(c)。",
+        "后一个证明有限，c 不在 Γ 或 φ 中。先把证明中可能冲突的绑定变量改名，再将所有 c 换成一个新变量 y；按语法和规则逐行检查，公理实例仍是公理实例，MP 保持，概括限制因 Γ 为句子而不受影响。所以 Γ⊢¬φ(y)。",
+        "概括得到 Γ⊢∀y¬φ(y)，即 Γ⊢¬∃xφ，与第一步的存在句矛盾。因此加入见证公理保持相容。无新常元公理时，扩充一个空常元也不破坏相容性，同样的有限证明替换论证即可。$\\square$"
+      ]
+    },
+    {
+      "id": "henkin-extension",
+      "topics": [
+        "foundations/compactness",
+        "foundations/classification-of-models"
+      ],
+      "title": "可数相容理论的完备 Henkin 扩张",
+      "statement": "每个可数语言中的相容句子理论 Γ，可在可数扩充语言中扩为相容、演绎封闭、对每句子作决定并含全部存在见证的理论 T。",
+      "dependencies": [
+        "henkin-witness-consistency",
+        "fol-deduction",
+        "axiom-dependent-choice"
+      ],
+      "idea": "分层添加见证，再逐句选择一个不导致矛盾的真值；有限证明不能跨过相容链的极限。",
+      "steps": [
+        "先必要时加一个新常元以保证有闭项。对当前语言的全部存在句枚举，逐个加入新常元见证。每一步按前一引理相容，整条链的并也相容：若有矛盾证明，它只用有限多新公理，已出现在某有限阶段，矛盾。",
+        "添加后出现的新常元又产生新存在句，所以把这个过程对语言层级重复可数次。所得 L_ω 仍可数，每个公式只含有限符号，属于某层，故它的见证会在下一层加入。全体见证理论仍由有限证明论证保持相容。",
+        "枚举 L_ω 所有句子 θ_n。逐次若加入 θ_n 相容就加入，否则加入 ¬θ_n。后者必相容：若两种扩张都不相容，演绎定理给当前理论同时证明 θ_n 与 ¬θ_n，违背原相容。",
+        "取并，再取演绎闭包 T。并的相容性同样由有限证明保证，取闭包不新增可导矛盾。T 对每句子至少取一边，相容性使不能两边都取，且保留全部见证。$\\square$"
+      ]
+    },
+    {
+      "id": "henkin-model",
+      "topics": [
+        "foundations/classification-of-models",
+        "foundations/structure-interpretation",
+        "foundations/satisfaction"
+      ],
+      "title": "Henkin 项模型与真值引理",
+      "statement": "每个相容、完备且有存在见证的 T，具有一个由闭项等价类组成的可数模型 M，并对每个带闭项参数的公式有 M⊨φ 当且仅当 φ∈T。",
+      "dependencies": [
+        "henkin-extension",
+        "syntax-parse-substitute",
+        "def-hilbert-fol"
+      ],
+      "idea": "把可证明相等的项识别，原子真值直接由 T 定义，再用见证完成量词步。",
+      "steps": [
+        "闭项 t,s 按 T⊢t=s 等价。等号公理给自反、对称、传递及函数/谓词替换一致性，所以函数取项运算的等价类、谓词按原子句是否在 T 定义，全部良定义。常元保证论域非空；可数字母表上有限项可枚举，所以模型至多可数。",
+        "项解释按结构归纳恰为该项的等价类，因此等号与谓词原子式满足所述等价。T 完备相容及含全部命题重言式，使否定的成员关系对应“不在 T”，蕴含成员关系对应经典真值表；所以联结词归纳成立。",
+        "若 ∀xφ∈T，全称实例公理使对每个闭项 t 都有 φ(t)∈T，归纳假设给模型中全部元素满足 φ。反之若全称句不在 T，完备性给 ∃x¬φ∈T；见证常元 c 使 ¬φ(c)∈T，从而全称式在模型中假。",
+        "对自由变量赋任一等价类，可选闭项代表并代入；语义代入引理及等号替换使选择无关。由公式归纳得到完整真值引理，特别 T 的每个句子在 M 中真。$\\square$"
+      ]
+    },
+    {
+      "id": "fol-completeness-compactness",
+      "topics": [
+        "foundations/soundness-completeness",
+        "foundations/compactness"
+      ],
+      "title": "可数一阶逻辑的完备性与紧致性",
+      "statement": "可数语言中的句子理论满足 Γ⊨φ 当且仅当 Γ⊢φ。若 Γ 的每个有限子集有模型，则 Γ 本身有模型。",
+      "dependencies": [
+        "henkin-model",
+        "henkin-extension",
+        "fol-soundness",
+        "fol-deduction"
+      ],
+      "idea": "不可证明时加入结论否定，构造反模型；紧致性则由有限证明只用有限前提得到。",
+      "steps": [
+        "若 Γ⊬φ，演绎定理与经典双重否定说明 Γ∪{¬φ} 相容，否则 Γ 可推出 φ。Henkin 扩张及项模型给它的模型，满足 Γ 却不满足 φ，所以 Γ⊭φ。可靠性已给相反方向，于是语义蕴含与可证明性等价。",
+        "若 Γ 每个有限子集可满足而 Γ 不相容，某个有限证明推出矛盾，只用有限多 Γ 前提。可靠性使该有限前提不能有模型，与假设矛盾。因此 Γ 相容，再用模型存在构造得到 Γ 的模型。",
+        "本章明确采用可数签名版本；任意不可数语言的完整版本需要相应超限见证/极大化构造，不能把可数枚举步骤直接称为其证明。结论与算术理论不完备性不冲突，因为这里比较所有模型的逻辑蕴含。$\\square$"
+      ]
+    },
+    {
+      "id": "dlo-equivalence",
+      "topics": [
+        "foundations/elementary-equivalence",
+        "foundations/classification-of-models"
+      ],
+      "title": "稠密无端点线序的一阶等价性",
+      "statement": "仅含 < 与等号语言中，任意两个非空稠密无端点线序满足相同一阶句子；更强地，保持次序及相等模式的有限元组对所有公式有相同真值。",
+      "dependencies": [
+        "syntax-parse-substitute",
+        "axiom-logic"
+      ],
+      "idea": "有限元组的新元素只可能落在某个间隙或等于旧元素，两结构都能实现同样位置。",
+      "steps": [
+        "原子式只比较元组中的大小及相等，所以次序模式相同就同真。布尔联结词按真值表保留此性质。对公式复杂度作归纳，关键只剩存在量词。",
+        "若第一结构中有见证 a，a 要么等于已有元组元素，要么位于相邻已知元素之间或两端以外。第二结构可选对应相等元素；在真间隙用稠密性选点，在两端以外用无端点性选点。空元组时用论域非空。",
+        "于是扩充元组仍有相同模式，对量词内较简单公式用归纳假设，见证可转移；交换两结构给反向。全称量词由否定存在得到，所以所有公式均转移，空元组给相同句子理论。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-proof-checking",
+      "topics": [
+        "foundations/formal-proof",
+        "foundations/proof-assistants"
+      ],
+      "title": "有限证明检查的终止与条件可靠性",
+      "statement": "若形式系统每条推理规则的实例可判定且语义有效，则有限带规则标注的证明树可由总停机检查器验证，接受的结论确为相应前提的语义后果。",
+      "dependencies": [
+        "fol-soundness",
+        "axiom-natural"
+      ],
+      "idea": "算法只遍历给定有限树；可靠性沿同一树归纳，不需要搜索所有可能证明。",
+      "steps": [
+        "从叶到根遍历有限树，每节点检查规则名、前提数、变量条件及结论是否匹配该可判定规则；每次局部检查停机，节点总数有限，所以全检查停机。缺失子节点、循环指针等不构成有限树者先以有限图遍历拒绝。",
+        "若接受，叶节点是允许前提或公理。对树高度归纳，子结论在每个前提模型中真，规则语义有效性使父结论也真；故根结论成立。该定理把信任落在规则实现和前提上，不证明任意具体软件没有实现缺陷。$\\square$"
+      ]
+    },
+    {
+      "id": "oracle-transitivity",
+      "topics": [
+        "foundations/turing-reduction",
+        "foundations/turing-machine"
+      ],
+      "title": "图灵归约的传递性",
+      "statement": "若 A≤_T B 且 B≤_T C，则 A≤_T C；可判定 A 总有 A≤_T B。",
+      "dependencies": [
+        "axiom-computation"
+      ],
+      "idea": "用第二台带神谕机器逐次替换第一台的每个神谕调用。",
+      "steps": [
+        "给定输入，模拟判定 A 的 B 神谕机。每当它查询某个 y∈B，调用能借 C 神谕判定 B 的机器，等该子程序停机后将回答送回外层模拟。",
+        "外层原本对该输入有限步终止，因此只提出有限次查询；每个内层查询也按归约假设有限步终止。有限个有限计算组合仍有限，并给同样正确回答，所以得到 A 的 C 神谕判定器。",
+        "若 A 已可判定，直接运行其判定器并忽略神谕就是对任意 B 的归约。这一证明不提供任何多项式时间保证。$\\square$"
+      ]
+    },
+    {
+      "id": "enumeration-semidecision",
+      "topics": [
+        "foundations/enumerability",
+        "foundations/turing-machine"
+      ],
+      "title": "可枚举与半可判定的等价",
+      "statement": "允许重复及空输出的程序枚举的语言，恰好是由半判定器接受的语言。",
+      "dependencies": [
+        "axiom-computation"
+      ],
+      "idea": "枚举器可等待目标输出；半判定器可对所有输入交错模拟，避免死循环阻塞。",
+      "steps": [
+        "若有枚举器，对输入 w 不断模拟并比较每次输出，首次等于 w 就接受；成员最终出现而被接受，非成员永不接受，所以半判定成立。",
+        "若有半判定器 M，按可数字符串枚举 w₁,w₂,…。第 s 阶段把前 s 个模拟各推进一步，某模拟首次接受便输出其字符串。每个已接受输出都是成员；每个成员所需的有限步最终都得到执行，所以必输出。空语言由始终不输出的枚举器覆盖。$\\square$"
+      ]
+    },
+    {
+      "id": "stlc-substitution",
+      "topics": [
+        "foundations/simple-types",
+        "foundations/propositions-as-types"
+      ],
+      "title": "简单类型 λ 演算的代入与 β 保型",
+      "statement": "在变量、应用与抽象的标准类型规则下，Γ,x:A⊢t:B 且 Γ⊢s:A，推出 Γ⊢t[s/x]:B；因此 β 约简保持类型。",
+      "dependencies": [
+        "syntax-parse-substitute",
+        "axiom-natural"
+      ],
+      "idea": "对类型推导作归纳，抽象步先改名避免捕获；β 步随后直接调用代入。",
+      "steps": [
+        "先证明弱化：在环境增加未冲突声明后，原类型推导逐节点仍合法，按推导高度归纳即可。对代入推导归纳，若 t=x，直接用 s 的给定类型；其他变量沿用 Γ 声明。",
+        "应用 t=uv 时，由归纳假设 u[s/x] 保持箭头类型、v[s/x] 保持输入类型，再应用类型规则。抽象 λy:C.u 时先改名使 y≠x 且 y 不在 s 自由变量中；弱化使 s 在 Γ,y:C 下仍有类型 A，归纳得到代入后的体具有原类型，再重建抽象。",
+        "若 (λx:A.t)s:B 为良类型，规则反演给出体 t:B 与参数 s:A，代入引理使 β 结果 t[s/x]:B。发生在子项的约简则按应用或抽象的上下文规则重建推导，故全部一步 β 约简保型。反复有限步同理，但不由此单独推出所有约简终止。$\\square$"
+      ]
+    },
+    {
+      "id": "list-induction-length",
+      "topics": [
+        "foundations/inductive-types",
+        "foundations/dependent-types"
+      ],
+      "title": "列表拼接的长度定理与非空向量的头元素",
+      "statement": "归纳列表的拼接满足 len(xs++ys)=len(xs)+len(ys)。若 Vec(A,n) 的构造子仅 nil:Vec(A,0)、cons:A×Vec(A,n)→Vec(A,n+1)，则 head 可总定义于 Vec(A,n+1)。",
+      "dependencies": [
+        "axiom-natural"
+      ],
+      "idea": "列表性质按构造子归纳；长度索引排除空构造子。",
+      "steps": [
+        "拼接按 []++ys=ys、(a::xs)++ys=a::(xs++ys) 递归。空列表时长度式为 len ys=0+len ys；cons 情形，长度为 1+len(xs++ys)，用归纳假设得 1+len xs+len ys，正是右边。",
+        "非空索引 n+1 不可能等于零，因为自然数零与后继构造子不交。因此 Vec(A,n+1) 的值不可能由 nil 产生，只能为某 cons(a,v)。定义 head(cons(a,v))=a，所有允许构造情形均覆盖且返回 A，故为所列输入类型上的总函数。$\\square$"
+      ]
+    },
+    {
+      "id": "adjoint-unique",
+      "topics": [
+        "foundations/adjunction",
+        "foundations/limits-colimits"
+      ],
+      "title": "左伴随在自然同构意义下唯一",
+      "statement": "若 F,F′ 都满足对同一 G 的左伴随泛性质，则存在唯一与两组单位相容的自然同构 F⇒F′。",
+      "dependencies": [
+        "universal-unique",
+        "def-category"
+      ],
+      "idea": "每个自由对象的泛性质给正反态射，唯一性使其互逆并迫使自然性。",
+      "steps": [
+        "用单位 η_X:X→GFX、η′_X:X→GF′X 表达伴随：任意 X→GY 都唯一分解为 G(u)η_X。对 η′_X 应用 F 的泛性质给 u_X:FX→F′X，满足 G(u_X)η_X=η′_X；反向同理给 v_X。",
+        "两次代入后，G(v_Xu_X)η_X=η_X，恒等也满足；唯一性迫使 v_Xu_X=id，另方向同样，所以各分量同构。",
+        "对 f:X→Y，F′f·u_X 与 u_Y·Ff 在作用 G 后再接 η_X 都等于 η′_Y f。单位的自然性来自伴随 Hom 对应的自然性（或作为单位泛性质的相容条件），所以唯一性使两态射相等，得到自然同构。每分量的唯一性给整变换唯一。$\\square$"
+      ]
+    },
+    {
+      "id": "transfinite-induction",
+      "topics": [
+        "foundations/ordinals",
+        "foundations/ordinal-analysis"
+      ],
+      "title": "良序上的超限归纳原理",
+      "statement": "若 (W,<) 为良序，性质 P 满足每个 x 在全部严格前驱满足 P 时也满足 P，则 W 中所有元素满足 P。",
+      "dependencies": [
+        "axiom-set"
+      ],
+      "idea": "非空反例集必有最小反例，其前驱已经全部正确。",
+      "steps": [
+        "反设反例集 C={x∈W:¬P(x)} 非空。良序定义给其最小元素 c。任意 y<c 若不满足 P 就是更小反例，与 c 最小矛盾，所以全部前驱都满足。",
+        "由归纳假设条件，c 也满足 P，矛盾。因此反例集空。本定理把良序性当作明确前提；不能据此未经证明就断言任意序数记号系统在某个弱算术理论中可证良基。$\\square$"
+      ]
+    },
+    {
+      "id": "propositional-completeness",
+      "topics": [
+        "foundations/propositional-logic",
+        "foundations/soundness-completeness"
+      ],
+      "title": "命题逻辑的真值表完备性",
+      "statement": "在经典命题演算中，一个命题公式若在所有赋值下为真，则可由重言式公理及 modus ponens 证明。",
+      "dependencies": [
+        "axiom-logic",
+        "fol-deduction"
+      ],
+      "idea": "对变元逐个分支；演绎定理把两个分支合并。",
+      "steps": [
+        "固定公式出现的有限变元 p₁,…,pₙ。对任一完整文字合取 δ，即每个 p_i 取 p_i 或 ¬p_i，若 δ 的赋值使公式 φ 为真，则命题重言式 δ→φ 可直接作为公理，MP 得 δ→φ。",
+        "对任一尚未决定的变量 p，归纳假设已得 (Γ∪{p})⊢φ 与 (Γ∪{¬p})⊢φ，其中 Γ 是此前分支文字。由演绎定理得 Γ⊢p→φ 及 Γ⊢¬p→φ；命题重言式 ((p→φ)∧(¬p→φ))→φ，加经典演算可推出 Γ⊢φ。等价地，分情况论证：p∨¬p 为重言式，两支均推出 φ。",
+        "从 n 个文字叶逐层合并，得到空前提 ⊢φ。有限分支树深度 n，故证明有限。这里的“命题演算”必须包含经典排中律；直觉主义演算不证明所有经典重言式。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-markov-stationary",
+      "topics": [
+        "probability/markov-chains",
+        "probability/stationary-processes"
+      ],
+      "title": "有限马尔可夫链平稳分布存在",
+      "statement": "每个有限状态转移矩阵 P 都至少有一个平稳概率行向量 π，即 πP=π；若链不可约，则 π 的每个分量严格为正。",
+      "dependencies": [
+        "def-finite-markov",
+        "finite-dimensional-compactness"
+      ],
+      "idea": "从任意初始分布的 Cesàro 平均取收敛子列，望远镜差趋零。",
+      "steps": [
+        "取任意概率行向量 μ，令 ν_N=N⁻¹Σ_(k=0)^(N-1) μP^k。每项仍是概率向量，概率单纯形是 R^|S| 中闭有界集，故有收敛子列 ν_(N_j)→π，且 π 仍非负、分量和为一。",
+        "计算 ν_NP−ν_N=(μP^N−μ)/N。两个概率向量各坐标在 [0,1]，故右侧每坐标绝对值≤1/N，趋于零。矩阵乘法连续，沿收敛子列取极限得 πP=π。",
+        "若链不可约且 π_i>0 对某状态 i，则由 π=πP^k 得 π_j≥π_i(P^k)_(ij)>0，只要有从 i 到 j 的正概率路径。至少一个 π_i 正，因为总和为一；不可约性遂给所有状态严格正。证明不声称周期链的逐时分布必收敛。$\\square$"
+      ]
+    },
+    {
+      "id": "linear-controllability-kalman",
+      "topics": [
+        "applied/controllability-observability",
+        "applied/state-space"
+      ],
+      "title": "Kalman 可控秩判据",
+      "statement": "有限维离散线性系统可控，当且仅当矩阵 [B,AB,…,A^(n−1)B] 的秩为 n。",
+      "dependencies": [
+        "def-linear-control",
+        "rank-nullity"
+      ],
+      "idea": "可达状态是各时刻输入经 A 推进所得列空间；Cayley–Hamilton 使更高幂不再扩大空间。",
+      "steps": [
+        "从零状态出发，经过 N 步有 x_N=Σ_(j=0)^(N-1)A^(N-1-j)Bu_j。因此所有可达状态恰为列空间 span{im B,…,im A^(N-1)B}：任意输入给此空间内向量，反向任意列组合可把系数选作输入。",
+        "设 W=span{im B,…,im A^(n-1)B}。Cayley–Hamilton 写 A^n 为 I,A,…,A^(n-1) 的线性组合，故 A^nB 的列仍在 W；递推左乘 A 说明所有更高次 A^kB 列也在 W。于是任意步数可达集合都包含于 W。",
+        "若秩为 n，则 W=R^n，选至多 n 步输入即可实现任意目标（多余输入取零）。若秩小于 n，则 W 是真子空间，任意步的零态可达状态均在 W，不能到达 W 外目标，系统不可控。一般初态与目标之差还含 A^N x_0，但可控的定义要求任意有限时长可选；满秩矩阵给出 n 步可达性，反之零初态已足以否定。$\\square$"
+      ]
+    },
+    {
+      "id": "pythagorean-parametrization",
+      "topics": [
+        "numbertheory/pythagorean-triples"
+      ],
+      "title": "本原勾股数的参数化",
+      "statement": "正整数本原解 a²+b²=c²（gcd(a,b,c)=1）恰可写成 {a,b}={m²−n²,2mn}、c=m²+n²，其中 m>n>0、gcd(m,n)=1 且 m,n 奇偶性相反。",
+      "dependencies": [
+        "euclid-lemma",
+        "unique-factorization"
+      ],
+      "idea": "奇偶性与互素性迫使两个平方和因子互素，其乘积为平方便各自为平方。",
+      "steps": [
+        "a,b 不可能都奇：平方模 4 只能为 0 或 1，两个奇平方和为 2 而平方模 4 不为 2。也不可能都偶（本原），故一奇一偶。设奇数边为 a，偶数边为 b。由 c²−a²=b² 得 ((c+a)/2)((c−a)/2)=(b/2)²。两因子为正整数且互素：公共奇因子会同时整除 c,a，公共偶因子则与 c,a 同奇矛盾。",
+        "互素正整数乘积为平方，唯一素因子分解表明每个素数在两因子中的指数分别为偶数，故因子各为平方：令 (c+a)/2=m²、(c−a)/2=n²，m>n。于是 a=m²−n²、c=m²+n²、b=2mn。gcd(m,n)=1，否则其平方公因子整除 a,b,c；二者不能同奇，否则 a,b,c 全偶。因此异奇偶。",
+        "反向从满足条件的 m,n 构造三元组，直接展开 (m²−n²)²+(2mn)²=(m²+n²)²。异奇偶使奇数边为奇且偶数边为偶；若素数同时整除 a,b，则由 b=2mn 与 a=m²−n²、gcd(m,n)=1 可推出该素数须同时整除 m,n，矛盾（素数 2 由奇偶性排除）。故所得三元组本原。$\\square$"
+      ]
+    },
+    {
+      "id": "euler-polyhedron-formula",
+      "topics": [
+        "geometry/euler-characteristic",
+        "geometry/polyhedra",
+        "geometry/triangulations"
+      ],
+      "title": "凸多面体的欧拉公式",
+      "statement": "凸三维多面体的顶点数 V、边数 E、面数 F 满足 V−E+F=2。",
+      "dependencies": [
+        "tree-edges",
+        "def-jordan-separation"
+      ],
+      "idea": "球面嵌入图删去非树边不会改变 V−E+F；剩余树补面数为一。",
+      "steps": [
+        "取多面体边图的一棵生成树 T；图连通，因此树含全部 V 个顶点且 V−1 条边。把嵌入球面的树逐条删除叶边，连通性保持，且补空间仍连通：一条叶边不构成闭路，绕过其自由端可在补空间连通两侧。归纳可知球面树只有一个面。",
+        "从原嵌入图逐条加入不在 T 中的边。每条新边端点已由 T 连通，故该边与已有路径组成闭路；其嵌入在球面上的两侧属于两个不同面（简单闭曲线分隔球面）。加入该边恰把一个面分成两个，面数增加一。共加入 E−(V−1) 条边，所以 F=1+E−V+1=E−V+2。",
+        "多面体边图在球面上的嵌入具有这些顶点、边、面，故等式整理为 V−E+F=2。分隔步骤依赖已明列的 Jordan 曲线定理基础；证明不推广到任意非球面嵌入。$\\square$"
+      ]
+    },
+    {
+      "id": "confidence-chebyshev",
+      "topics": [
+        "probability/confidence-intervals"
+      ],
+      "title": "Chebyshev 置信区间覆盖率保证",
+      "statement": "若估计量 T 对参数 θ 满足 E[T]=θ 且 Var(T)≤v，则区间 [T−√(v/α),T+√(v/α)] 的覆盖概率至少 1−α。",
+      "dependencies": [
+        "chebyshev"
+      ],
+      "idea": "覆盖失败正是误差绝对值超过区间半径，直接应用 Chebyshev 不等式。",
+      "steps": [
+        "令 r=√(v/α)。事件 θ 不属于 [T−r,T+r] 等价于 |T−θ|>r（端点等号属于闭区间）。Chebyshev 不等式给 P(|T−θ|>r)≤Var(T)/r²≤v/(v/α)=α（v=0 时 T=θ 几乎处处，结论直接成立）。",
+        "取补事件便得 P(θ∈[T−r,T+r])≥1−α。该保证需要无偏及方差上界；若估计有偏，须把偏差界另计，且此区间通常保守，不等同于最短或精确覆盖区间。$\\square$"
+      ]
+    },
+    {
+      "id": "module-first-isomorphism",
+      "topics": [
+        "algebra/modules",
+        "algebra/homomorphisms-quotients"
+      ],
+      "title": "模的第一同构定理",
+      "statement": "若 f:M→N 是 R-模同态，则 M/ker f 与 im f 同构。",
+      "dependencies": [
+        "first-isomorphism",
+        "def-module-localization"
+      ],
+      "idea": "与群的第一同构证明相同：同态纤维恰为核的陪集。",
+      "steps": [
+        "核 K={m:f(m)=0} 对加法及 R 数乘封闭，故为子模。商模加法与标量乘法按代表定义；若换代表，差在 K 中，运算结果差仍在 K 中，所以良定义。",
+        "定义 F:M/K→im f，F(m+K)=f(m)。若 m+K=m′+K，则 m−m′∈K，故 f(m)=f(m′)，所以良定义。它保持加法和标量乘法，并按像的定义满射。",
+        "若 F(m+K)=0，则 f(m)=0，故 m∈K，商类为零；对两个商类同理差在核，故 F 单射。因此 F 为模同构。$\\square$"
+      ]
+    },
+    {
+      "id": "localization-module-universal",
+      "topics": [
+        "algebra/localization",
+        "algebra/modules"
+      ],
+      "title": "模局部化的泛性质",
+      "statement": "自然映射 ι:M→S⁻¹M 满足：若 R-模同态 f:M→N 将每个 s∈S 的作用变为双射（即 f(sm)=s f(m) 且 s:N→N 可逆），则存在唯一 S⁻¹R-模同态 f~:S⁻¹M→N 使 f~∘ι=f，且 f~(m/s)=s⁻¹f(m)。",
+      "dependencies": [
+        "def-module-localization",
+        "module-first-isomorphism"
+      ],
+      "idea": "分数的等价关系恰好表达交叉相乘相等；可逆作用使公式良定义且唯一。",
+      "steps": [
+        "先定义 f~(m/s)=s_N⁻¹ f(m)，其中 s_N 是 N 上的 s 作用。若 (m,s)~(m′,s′)，存在 u∈S 使 u(s′m−sm′)=0。施以 f 得 u_N(s′_N f(m)−s_N f(m′))=0；这些算子均可逆，故 s′_N⁻¹f(m)=s_N⁻¹f(m′)，即定义与分数代表无关。",
+        "对加法，(m/s)+(m′/s′)=(s′m+sm′)/(ss′)，其像为 (ss′)_N⁻¹(s′_N f(m)+s_N f(m′))，因 R 交换，正好等于两像之和。对 r/s∈S⁻¹R 的作用同样计算得 (r/s)f~(m/t)=f~(rm/(st))，故 f~ 为局部化模同态。",
+        "f~(m/1)=f(m)，所以它延拓 f。任何延拓 g 必须满足 g(m/s)=s_N⁻¹g(m/1)=s_N⁻¹f(m)，故唯一。证明没有声称任意模 N 上的 s 作用都可逆；这是泛性质的必要假设。$\\square$"
+      ]
+    },
+    {
+      "id": "e-irrational",
+      "topics": [
+        "numbertheory/pi-and-e"
+      ],
+      "title": "自然常数 e 的无理性",
+      "statement": "e=Σ_(k=0)^∞1/k! 是无理数。",
+      "dependencies": [
+        "axiom-natural",
+        "series-cauchy"
+      ],
+      "idea": "假设 e 为既约分数，乘以大阶乘后尾项为严格介于 0 与 1 的整数。",
+      "steps": [
+        "反设 e=p/q，其中 p,q 为正整数。取整数 n≥max(q,2)，则 n!e 为整数，因为 q 整除 n!；且 n!Σ_(k=0)^n1/k! 也是整数，因为每个 k! 整除 n!。两者相减得 R_n=n!Σ_(j=1)^∞1/(n+j)!，所以 R_n 必为整数。",
+        "但 R_n=Σ_(j=1)^∞1/[(n+1)(n+2)…(n+j)]。每项正，首项为 1/(n+1)。后续项相邻比至多 1/(n+2)，故 R_n≤(1/(n+1))Σ_(r=0)^∞(1/(n+2))^r=(n+2)/((n+1)^2)<1（n≥2）。",
+        "于是 0<R_n<1，与 R_n 是整数矛盾。故 e 无理。级数收敛可由相邻项比最终不超过 1/2 得几何比较；此结论不证明 e 的超越性。$\\square$"
+      ]
+    },
+    {
+      "id": "linear-observability-dual",
+      "topics": [
+        "applied/controllability-observability",
+        "applied/state-space"
+      ],
+      "title": "Kalman 可观秩判据",
+      "statement": "系统 y_k=Cx_k 的 n 维初态可由无输入的前 n 次输出唯一确定，当且仅当可观测矩阵 O=[C;CA;…;CA^(n−1)] 的秩为 n。",
+      "dependencies": [
+        "linear-controllability-kalman",
+        "rank-nullity"
+      ],
+      "idea": "两初态输出相同当且仅当其差落在观测矩阵的核。",
+      "steps": [
+        "零输入下 x_k=A^k x_0，故前 n 项输出依次为 Cx_0,CAx_0,…,CA^(n−1)x_0，合并为 O x_0。对任意两初态差 z，输出序列相同当且仅当 Oz=0。",
+        "若 rank O=n，则由秩—零化度 ker O={0}，输出相同迫使两初态相等；而映射 x↦Ox 单射，给出唯一恢复（对来自系统的精确数据）。",
+        "若 rank O<n，则存在非零 z∈ker O，初态 0 与 z 产生完全相同的前 n 项输出，无法唯一辨认。Cayley–Hamilton 还说明所有 k≥n 的 CA^k 是前 n 项矩阵的线性组合，故观察更久也不增加信息。$\\square$"
+      ]
+    },
+    {
+      "id": "gronwall-discrete",
+      "topics": [
+        "analysis/stability",
+        "analysis/odes"
+      ],
+      "title": "离散 Grönwall 不等式",
+      "statement": "若非负数列 u_n 满足 u_n≤a+bΣ_(k=0)^(n−1)u_k，其中 a,b≥0，则 u_n≤a(1+b)^n。",
+      "dependencies": [
+        "axiom-natural"
+      ],
+      "idea": "把累积上界作为辅助递推量并归纳。",
+      "steps": [
+        "令 v_0=a，v_n=a+bΣ_(k=0)^(n−1)u_k。由假设 u_n≤v_n；且 v_(n+1)=v_n+b u_n≤(1+b)v_n。",
+        "归纳得到 v_n≤a(1+b)^n，结合 u_n≤v_n 即得结论。若 a=0，递推从 u_0≤0 得全为零，也满足结论。常见带步长 h 的形式取 b=Lh，并用 (1+Lh)^n≤exp(Lnh) 得指数界；后一不等式来自 log(1+x)≤x。$\\square$"
+      ]
+    },
+    {
+      "id": "identifiability-injective-map",
+      "topics": [
+        "applied/identifiability",
+        "applied/parameter-inversion"
+      ],
+      "title": "单射前向映射的全局可辨识性",
+      "statement": "给定参数空间 Θ 与无噪声观测 F:Θ→Y，参数由观测全局唯一确定，当且仅当 F 在 Θ 上单射；局部唯一性等价于限制到某邻域后单射。",
+      "dependencies": [
+        "def-identifiability"
+      ],
+      "idea": "把定义逐字翻译为纤维 F⁻¹({y}) 的基数条件。",
+      "steps": [
+        "若参数 θ 可由观测唯一确定，则任意 θ′ 满足 F(θ′)=F(θ) 必有 θ′=θ，正是 F 单射。反之单射保证每个属于像的观测 y 只有一个原像，故存在唯一参数与之相容。",
+        "在 θ 的某邻域 U 内唯一可辨识，意为对 θ′∈U，F(θ′)=F(θ) 蕴含 θ′=θ，即 F|_U 的纤维单点。若要求 U 内所有参数彼此可辨，则恰为 F|_U 单射。",
+        "有噪声或有限样本时，单射只保证理想映射层面的唯一性，不自动给出稳定恢复；逆映射连续性、条件数和统计误差需另行假设分析。$\\square$"
+      ]
+    },
+    {
+      "id": "fejer-uniform-convergence",
+      "topics": [
+        "analysis/fourier-series",
+        "analysis/fourier-transform"
+      ],
+      "title": "Fejér 定理：连续周期函数的 Cesàro Fourier 和一致收敛",
+      "statement": "若 f 是连续 2π 周期函数，令 σ_N f 为前 N 个对称部分和的 Cesàro 平均，则 ‖σ_Nf−f‖_∞→0。",
+      "dependencies": [
+        "heine-cantor",
+        "riemann-linearity"
+      ],
+      "idea": "Fejér 核非负、总质量一，且质量集中于圆周原点的任意邻域。",
+      "steps": [
+        "定义 K_N(t)=N⁻¹|Σ_(k=0)^(N−1)e^(ikt)|²。展开平方并按差 k−j 计数，得 K_N(t)=Σ_(|j|<N)(1−|j|/N)e^(ijt)，故它是非负三角多项式。其圆周平均 (2π)⁻¹∫_(−π)^πK_N=1，因为指数函数除常数项外积分为零。",
+        "将 f 的 Fourier 系数定义为 f̂(j)=(2π)⁻¹∫ f(x)e^(−ijx)dx。有限和交换积分可直接验证 σ_N f(x)=(2π)⁻¹∫K_N(t)f(x−t)dt；每个频率 j 的权重正是 1−|j|/N（|j|<N），其余为零。",
+        "固定 0<δ<π。几何级数公式给 |Σ_(k=0)^(N−1)e^(ikt)|≤2/|1−e^(it)|=1/|sin(t/2)|。因此 |t|≥δ 时 K_N(t)≤1/(N sin²(δ/2))，其归一化积分趋零。",
+        "连续周期 f 在紧圆周上一致连续。给 ε>0，选 δ 使 |f(x−t)−f(x)|<ε 对所有 x 与 |t|<δ 成立。利用核非负且总质量一，误差绝对值≤ε 加上远区的 2‖f‖∞ 乘以远区核质量；后一项由上一步趋零。故一致误差趋零。",
+        "推论是三角多项式在连续周期函数空间中一致稠密，因为 σ_N f 本身是三角多项式。一般连续函数的原始 Fourier 部分和不因此必一致收敛；结论针对 Cesàro 平均。$\\square$"
+      ]
+    },
+    {
+      "id": "beta-gamma-recurrence",
+      "topics": [
+        "probability/conjugate-priors",
+        "probability/prior-distribution"
+      ],
+      "title": "Beta 函数递推与 Beta-Binomial 共轭更新",
+      "statement": "对正整数 α,β 与观测到的 k 次成功、n−k 次失败，先验 Beta(α,β) 的后验为 Beta(α+k,β+n−k)；预测下一次成功概率为 (α+k)/(α+β+n)。",
+      "dependencies": [
+        "def-beta-integral",
+        "integral-linearity",
+        "variable-integral"
+      ],
+      "idea": "似然乘幂函数改变 Beta 密度指数；Beta 积分递推给归一化常数比。",
+      "steps": [
+        "先证明 B(x+1,y)=x/(x+y)B(x,y)。分部积分给 B(x+1,y)=x/y·B(x,y+1)；又 t+(1−t)=1 给 B(x,y)=B(x+1,y)+B(x,y+1)。联立即得递推。边界项为零，因为 x,y>0。对称换元还得 B(x,y+1)=y/(x+y)B(x,y)。",
+        "令参数 θ∈(0,1)，先验密度为 θ^(α−1)(1−θ)^(β−1)/B(α,β)。给定条件独立 Bernoulli 数据，其似然与 θ^k(1−θ)^(n−k) 成正比；贝叶斯公式相乘后，θ 的后验密度正比于 θ^(α+k−1)(1−θ)^(β+n−k−1)。归一化积分恰为 B(α+k,β+n−k)，故后验即所述 Beta 分布。",
+        "后验预测成功率为后验均值 ∫θ·density。用递推比 B(α+k+1,β+n−k)/B(α+k,β+n−k)，得到 (α+k)/(α+β+n)。这要求条件独立同参数 Bernoulli 抽样模型；若数据依赖结构不同，更新式不成立。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-markov-stationary-unique",
+      "topics": [
+        "probability/markov-chains",
+        "probability/stationary-processes"
+      ],
+      "title": "有限不可约马尔可夫链的平稳分布唯一",
+      "statement": "有限不可约转移矩阵恰有一个平稳概率分布。",
+      "dependencies": [
+        "finite-markov-stationary"
+      ],
+      "idea": "对两平稳分布取最大逐点比值；不变性与不可约性排除有零坐标的非零非负不变向量。",
+      "steps": [
+        "存在性及任何平稳分布严格正已由前引理证明。设 π、ρ 是两个平稳概率向量，定义 c=min_i π_i/ρ_i。两向量分量皆正，故 c>0，且 η=π−cρ 非负并至少有一个零分量。又 ηP=η。",
+        "若 η 非零，选 η_i>0 的状态 i。由不可约性，对任意 j 存在 k 使 (P^k)_(ij)>0；由 ηP^k=η，得 η_j≥η_i(P^k)_(ij)>0。因此 η 所有分量都正，和其至少一个零分量矛盾。故 η=0，即 π=cρ。",
+        "两分布分量和均为一，故 c=1、π=ρ。周期性不影响平稳分布唯一性；但周期链的 μP^n 一般不逐点收敛到该分布。$\\square$"
+      ]
+    },
+    {
+      "id": "heat-maximum-principle",
+      "topics": [
+        "analysis/pdes",
+        "applied/pde-models"
+      ],
+      "title": "热方程最大值原理与解唯一性",
+      "statement": "令 Ω⊂Rⁿ 有界，u 连续于 Ω̄×[0,T] 且有内部所需导数。若 (∂_t−Δ)u≤0，则 sup_(Ω̄×[0,T])u≤sup_(Ω̄×{0}∪∂Ω×[0,T])u；因此同初值同边界的经典热方程解唯一。",
+      "dependencies": [
+        "ftc-second",
+        "finite-dimensional-compactness"
+      ],
+      "idea": "减去微小正斜率后，严格抛物不等式排除正时刻的内部最大点。",
+      "steps": [
+        "连续函数在紧柱体 Ω̄×[0,T] 取最大值。记边界与初始底面的最大值为 M。任取 ε>0，令 v(x,t)=u(x,t)−εt。则 (∂_t−Δ)v≤−ε。",
+        "若 v 在柱体上的最大值超过 M，则最大点不在空间边界或 t=0，故位于空间内部且 t>0。该点空间 Hessian 半负定，所以 Δv≤0；对时间，若 t<T，局部最大给 ∂_t v=0；若 t=T，左导数满足 ∂_t v≥0。两种情形均有 (∂_t−Δ)v≥0，与严格负不等式矛盾。",
+        "因此 v≤M，故 u≤M+εT。令 ε↓0 得最大值原理。若 u₁,u₂ 是同初值同边界的两解，差 w 满足热方程且边界初值为零；对 w 与 −w 分别用原理，得 w≤0 且 −w≤0，故 w=0。经典解的存在性未由最大值原理本身推出。$\\square$"
+      ]
+    },
+    {
+      "id": "quotient-universal-property",
+      "topics": [
+        "geometry/quotient-spaces"
+      ],
+      "title": "拓扑商空间的泛性质",
+      "statement": "对满射 q:X→Y，若 Y 赋予商拓扑（U⊆Y 开当且仅当 q⁻¹(U) 在 X 中开），则任意映射 g:Y→Z 连续，当且仅当 g∘q:X→Z 连续。",
+      "dependencies": [
+        "def-topological-space"
+      ],
+      "idea": "将连续性的开集原像条件经 q 的定义逐项改写。",
+      "steps": [
+        "若 g 连续且 q 连续，则复合 g∘q 连续。q 连续由商拓扑定义直接得到：对 Z 中开集 U，q⁻¹(U) 开。",
+        "反之假设 g∘q 连续。对 Z 中任意开集 V，有 q⁻¹(g⁻¹(V))=(g∘q)⁻¹(V) 在 X 中开。商拓扑定义于是给出 g⁻¹(V) 在 Y 中开，故 g 连续。",
+        "若另一个拓扑也使此等价对所有 Z,g 成立，取 Z 为该拓扑空间本身并分别使用恒等映射，可得两拓扑有相同开集。因此商拓扑是使 q 成为该泛性质的唯一拓扑。$\\square$"
+      ]
+    },
+    {
+      "id": "poisson-interarrival-memoryless",
+      "topics": [
+        "probability/poisson-process"
+      ],
+      "title": "泊松过程的等待时间与指数无记忆性",
+      "statement": "若 N(t) 是强度 λ>0 的泊松过程，首个到达时刻 T 满足 P(T>t)=e^(−λt)，故 T 为参数 λ 的指数分布，并满足 P(T>s+t|T>s)=P(T>t)。",
+      "dependencies": [
+        "def-poisson-process"
+      ],
+      "idea": "无到达等价于区间计数为零；独立平稳增量给条件尾概率相除。",
+      "steps": [
+        "按泊松过程定义，N(t)∼Poisson(λt)，且 T>t 当且仅当 N(t)=0。因此 P(T>t)=P(N(t)=0)=e^(−λt)(λt)^0/0!=e^(−λt)，其分布函数为 1−e^(−λt)，密度为 λe^(−λt)。",
+        "对 s,t≥0，事件 T>s 意味着前 s 时段无到达。T>s+t 再要求后续长度 t 区间也无到达。独立增量给 P(T>s+t|T>s)=P(N(s+t)−N(s)=0)=e^(−λt)。",
+        "故剩余等待时间分布不依赖已等待时长，这就是无记忆性。反向地，若非负等待时间尾函数连续且满足该无记忆等式，则 S(s+t)=S(s)S(t)；对 t 连续可解得 S(t)=e^(−λt)（非退化情形），但此处只证明泊松过程蕴含指数等待时间。$\\square$"
+      ]
+    },
+    {
+      "id": "monte-carlo-mean-variance",
+      "topics": [
+        "applied/monte-carlo",
+        "probability/expectation-variance"
+      ],
+      "title": "Monte Carlo 均值估计的无偏性与方差",
+      "statement": "若 X₁,…,X_n 独立同分布且 E[X₁]=μ、Var(X₁)=σ²<∞，则均值估计 μ̂=n⁻¹ΣX_i 无偏且 Var(μ̂)=σ²/n。",
+      "dependencies": [
+        "variance-mean",
+        "independent-bounded-products"
+      ],
+      "idea": "期望线性给无偏；独立使不同中心化项的交叉协方差为零。",
+      "steps": [
+        "E[μ̂]=n⁻¹ΣE[X_i]=n⁻¹nμ=μ，故无偏。令 Y_i=X_i−μ，则 E[Y_i]=0，Var(Y_i)=σ²。",
+        "展开 Var(μ̂)=E[(n⁻¹ΣY_i)²]=n⁻²(ΣE[Y_i²]+2Σ_(i<j)E[Y_iY_j])。独立性使 E[Y_iY_j]=E[Y_i]E[Y_j]=0；对角项各为 σ²，所以方差为 n⁻²·nσ²=σ²/n。",
+        "若进一步有独立重复批次，可用样本方差估计 σ² 并据此报告标准误约为 s/√n；有限样本的精确置信覆盖需额外分布假设，不能仅由均值方差公式推出。$\\square$"
+      ]
+    },
+    {
+      "id": "randomized-ate-unbiased",
+      "topics": [
+        "probability/interventions-effects",
+        "probability/experimental-design"
+      ],
+      "title": "随机分配下样本处理效应估计无偏",
+      "statement": "有限总体单位 i 的潜在结果为 Y_i(1),Y_i(0)，若恰有 m 个单位从 N 个中等概率无放回随机分配处理，则差均值估计 τ̂=Ȳ_T−Ȳ_C 对有限总体平均处理效应 τ=N⁻¹Σ_i[Y_i(1)−Y_i(0)] 无偏。",
+      "dependencies": [
+        "independent-products",
+        "variance-mean"
+      ],
+      "idea": "每个单位入选概率相同，分别对处理组与对照组样本均值取随机化期望。",
+      "steps": [
+        "令 Z_i 为处理指示量。完全随机分配使 P(Z_i=1)=m/N，故 E[Ȳ_T]=E[(1/m)ΣZ_iY_i(1)]=(1/m)Σ(m/N)Y_i(1)=N⁻¹ΣY_i(1)。",
+        "同理每单位进入对照组概率 (N−m)/N，于是 E[Ȳ_C]=N⁻¹ΣY_i(0)。相减并用期望线性得 E[τ̂]=N⁻¹Σ[Y_i(1)−Y_i(0)]=τ。",
+        "这里潜在结果视作固定，随机性只来自分配；无偏不意味着每次实验都精确，也不说明异质处理效应可由单个单位同时观测。若分配概率不等或有失访，应改用相应加权估计。$\\square$"
+      ]
+    },
+    {
+      "id": "sirs-threshold-equilibrium",
+      "topics": [
+        "applied/epidemic-models",
+        "applied/population-dynamics"
+      ],
+      "title": "SIR 模型的无病平衡与初始增长阈值",
+      "statement": "在封闭人口 SIR 方程 S′=−βSI/N、I′=βSI/N−γI、R′=γI 中，总人口守恒；在给定易感人数 S₀ 附近，感染者初始增长率符号由 R₀=βS₀/(γN)−1 决定。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "求和消去内部流量；将感染方程因式分解后直接读出线性增长率。",
+      "steps": [
+        "逐项相加得 (S+I+R)′=−βSI/N+βSI/N−γI+γI=0，所以若初始总和为 N，之后保持 N。若 S、I、R 非负，则该模型把感染者从 S 转入 I、再从 I 转入 R。",
+        "I′=I(βS/N−γ)。在任一时刻 I>0 时，I 的瞬时增长或下降由 βS/N−γ 的符号决定。若疾病引入时 S=S₀，则该系数等于 γ(βS₀/(γN)−1)=γ(R₀−1)。",
+        "故 R₀>1 时感染者初始斜率为正，R₀<1 时为负，R₀=1 时一阶增长率为零。这个局部判据不表示整个疫情终值或峰值；S 随时间下降，之后增长符号可改变。参数解释依赖此均匀混合确定性模型。$\\square$"
+      ]
+    },
+    {
+      "id": "prime-infinite-euclid",
+      "topics": [
+        "numbertheory/prime-counting",
+        "numbertheory/divisibility-primes"
+      ],
+      "title": "素数无穷多",
+      "statement": "素数有无穷多个。",
+      "dependencies": [
+        "unique-factorization",
+        "prime-divisor"
+      ],
+      "idea": "假设只有有限多个素数，构造一个不被其中任一个整除的整数。",
+      "steps": [
+        "反设全部素数为 p₁,…,p_r。令 M=p₁p₂…p_r+1。M>1，按素数除数引理有素数 q 整除 M。",
+        "q 若在列出的有限清单中，则 q 整除乘积 p₁…p_r，也整除 M，因而整除差 1，矛盾。故清单遗漏了素数 q，与其完备性矛盾。",
+        "所以素数无限。该证明不提供素数间隔或 π(x) 的精确渐近；这些需要额外解析数论工具。$\\square$"
+      ]
+    },
+    {
+      "id": "zeta-euler-product",
+      "topics": [
+        "numbertheory/zeta-l-functions",
+        "numbertheory/prime-counting"
+      ],
+      "title": "Re(s)>1 区域的 ζ 函数 Euler 乘积",
+      "statement": "对实数 s>1，ζ(s)=Σ_(n≥1)n^(−s)=∏_p(1−p^(−s))^(−1)，乘积按素数递增取极限。",
+      "dependencies": [
+        "unique-factorization",
+        "integral-linearity"
+      ],
+      "idea": "有限个几何级数相乘枚举所有仅含这些素因子的整数，绝对收敛控制极限遗漏项。",
+      "steps": [
+        "级数收敛：对递减正函数 x^(−s)，Σ n^(−s)≤1+∫₁^∞x^(−s)dx=1+1/(s−1)。取前有限个素数集合 P_y，有限乘积展开为所有素因子均在 P_y 中的正整数 n 的 n^(−s) 之和；各几何级数收敛且乘积有限，唯一分解保证每个此类 n 恰好出现一次。",
+        "当 y 增大，这些 n 的集合单调扩张，并最终包含任意固定正整数 n 的全部素因子，故有限乘积展开的和单调趋向完整 ζ 级数：给 ε>0，先选有限截断 N 使 n>N 的 ζ 尾和小于 ε；再取 y 大于 1,…,N 中所有素因子，有限乘积至少包含前 N 项且不超过全级数。夹逼得极限等于 ζ(s)。",
+        "所有项非负，乘积极限与上述级数极限一致。对复数 s 且 Re(s)>1，可用绝对值受控的同样论证得到绝对收敛版本；此处证明实数情形，不触及解析延拓或零点分布。$\\square$"
+      ]
+    },
+    {
+      "id": "rational-root-theorem",
+      "topics": [
+        "numbertheory/integer-equations",
+        "algebra/polynomial-rings"
+      ],
+      "title": "有理根定理",
+      "statement": "若整系数多项式 a_nx^n+…+a_0 有既约有理根 r/s（s>0），则 r|a₀ 且 s|a_n。",
+      "dependencies": [
+        "euclid-lemma"
+      ],
+      "idea": "清除分母后，首末项分别给出整除关系，互素性消去交叉因子。",
+      "steps": [
+        "代入 r/s 并乘 s^n，得 a_n r^n+a_(n−1)r^(n−1)s+…+a₀s^n=0。除首项外其余项都含因子 s，所以 s|a_n r^n。由于 gcd(r,s)=1，Euclid 引理反复应用得 s|a_n。",
+        "同一等式除末项外每项都含因子 r，因此 r|a₀s^n；gcd(r,s)=1 再给 r|a₀。若 a₀=0 或 r=0，结论直接按多项式含 x 因子处理；既约零根写作 0/1，分母结论仍成立。$\\square$"
+      ]
+    },
+    {
+      "id": "symplectic-volume-preservation",
+      "topics": [
+        "geometry/symplectomorphisms",
+        "geometry/symplectic-forms"
+      ],
+      "title": "辛变换保持相体积",
+      "statement": "若 2n 维微分同胚 φ 满足 φ*ω=ω，其中 ω 为非退化闭 2-形式，则 φ 保持由 ωⁿ/n! 定义的定向体积形式。",
+      "dependencies": [
+        "def-differential-forms"
+      ],
+      "idea": "拉回保持外积与常数倍，故逐次外积后仍保持最高次形式。",
+      "steps": [
+        "由 φ*ω=ω 及拉回与外积相容，φ*(ωⁿ/n!)=(φ*ω)ⁿ/n!=ωⁿ/n!。非退化性确保 ωⁿ处处非零，因而它确实给出一个体积形式。",
+        "对任意可测区域 U，变量换元公式给 ∫_(φ(U))ωⁿ/n!=∫_U φ*(ωⁿ/n!)=∫_Uωⁿ/n!；若区域边界足够规则使积分成立，此即体积保持。形式结论是局部的，不要求 φ 保持某个额外欧氏度量。$\\square$"
+      ]
+    },
+    {
+      "id": "inverse-function-one-dimension",
+      "topics": [
+        "geometry/smooth-manifolds",
+        "geometry/curves-surfaces"
+      ],
+      "title": "一维逆函数定理",
+      "statement": "若 f 在开区间邻域 C¹ 且 f′(x₀)≠0，则 x₀ 有邻域使 f 单调可逆，逆函数 C¹ 且 (f⁻¹)′(y)=1/f′(f⁻¹(y))。",
+      "dependencies": [
+        "intermediate-value",
+        "derivative-continuity"
+      ],
+      "idea": "导数连续保持固定符号，均值定理给严格单调；差商取极限给逆导数。",
+      "steps": [
+        "连续性给出 x₀ 的区间 U，使 f′ 在 U 始终为正或始终为负。对 x<y，均值定理给 f(y)−f(x)=f′(c)(y−x)，故 f 严格单调并连续，因而在 U 到区间 f(U) 上有连续逆 g。",
+        "固定 y=f(x) 且 h→0。由 g 连续，k=g(y+h)−x→0，且 h=f(x+k)−f(x)。均值定理给 h/k=f′(c_k)，其中 c_k 位于 x 与 x+k 之间。于是当 h≠0 时，(g(y+h)−g(y))/h=k/h=1/f′(c_k)→1/f′(x)。",
+        "故 g′(y)=1/f′(g(y))。右边连续，因为 f′、g 连续且分母不为零，所以 g 为 C¹。此处是实一维版本；多维逆函数定理还需线性映射与收缩映射论证。$\\square$"
+      ]
+    },
+    {
+      "id": "cr-angle-preservation",
+      "topics": [
+        "analysis/conformal-maps"
+      ],
+      "title": "复可微映射的局部保角性",
+      "statement": "若复可微函数 f 在 z₀ 处导数 f′(z₀)≠0，则其实线性微分是旋转与正比例缩放的复合，故保持该点处非零切向量间的有向夹角。",
+      "dependencies": [
+        "complex-basic-rules"
+      ],
+      "idea": "复数乘以非零数在平面上等于旋转乘缩放；导数给出一阶线性近似。",
+      "steps": [
+        "由复导数定义，对小复增量 h 有 f(z₀+h)=f(z₀)+a h+o(|h|)，其中 a=f′(z₀)≠0。因此实微分 Df_(z₀) 是映射 h↦ah。",
+        "写 a=|a|e^(iθ)。乘以 a 把任一向量长度乘 |a|、方向角加 θ；两个向量共同加同一角，夹角差不变，且 |a|>0 保持定向。",
+        "故微分保角。此点态结论不单独证明 f 在邻域全局单射或存在共形逆映射；全局黎曼映射定理是更强命题。$\\square$"
+      ]
+    },
+    {
+      "id": "ode-flow-semigroup",
+      "topics": [
+        "analysis/phase-space",
+        "analysis/odes"
+      ],
+      "title": "自治常微分方程流的半群性质",
+      "statement": "对局部唯一解的自治方程 x′=F(x)，只要各解在所需时间区间存在，解流满足 Φ_(t+s)(x)=Φ_t(Φ_s(x)) 且 Φ_0(x)=x。",
+      "dependencies": [
+        "picard-lindelof"
+      ],
+      "idea": "时间平移后的解与从中间状态重新起解具有相同初值，唯一性迫使相同。",
+      "steps": [
+        "常值时间曲线 x(t)=x 是以 x 为初值的零时刻状态，故按初值问题定义 Φ_0(x)=x。",
+        "固定 s，令 y(t)=x(t+s)。自治性给 y′(t)=F(y(t))，且 y(0)=x(s)=Φ_s(x)。因此 t↦x(t+s) 与从 Φ_s(x) 起始的解有相同方程和初值。",
+        "局部唯一性使两解在共同定义区间相等，于是 Φ_t(Φ_s(x))=x(t+s)=Φ_(t+s)(x)。时间区间可负时同理；这只是解存在区间上的局部流性质，不保证所有解全局存在。$\\square$"
+      ]
+    },
+    {
+      "id": "saddle-node-normal-form",
+      "topics": [
+        "analysis/bifurcation",
+        "analysis/equilibria-periodic-orbits"
+      ],
+      "title": "鞍结分岔的标准标量模型",
+      "statement": "方程 x′=μ+x² 的平衡点：μ<0 时恰有两个，μ=0 时有一个重根，μ>0 时没有；非零平衡点处线性化稳定性分别为 x=−√(−μ) 稳定、x=+√(−μ) 不稳定。",
+      "dependencies": [
+        "axiom-natural"
+      ],
+      "idea": "平衡方程等价于 x²=−μ；线性化由右端对 x 的导数决定。",
+      "steps": [
+        "平衡点满足 0=μ+x²。若 μ<0，实根恰为 ±√(−μ)；若 μ=0，唯一根 x=0 且代数重数二；若 μ>0，平方非负使无实根。",
+        "在平衡 x* 处令 y=x−x*。精确展开 y′=(μ+(x*+y)²)−(μ+x*²)=2x*y+y²，线性方程为 y′=2x*y。其解 y(t)=y(0)e^(2x*t)，当 x*<0 指数衰减，当 x*>0 指数增长。",
+        "所以两根相撞并消失的参数变化是该正规形的鞍结分岔。线性化结论仅用于非双曲根；μ=0 的稳定性需由 y′=y² 的非线性方程另判。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-two-state-ergodic",
+      "topics": [
+        "analysis/ergodicity",
+        "probability/markov-chains"
+      ],
+      "title": "两状态非周期链的分布收敛",
+      "statement": "若 P=[[1−a,a],[b,1−b]] 且 0<a,b<1，则唯一平稳分布 π=(b/(a+b),a/(a+b))，任意初始分布 μ 的 μP^n 指数收敛到 π。",
+      "dependencies": [
+        "finite-markov-stationary-unique"
+      ],
+      "idea": "两状态概率递推的偏差每步乘特征值 1−a−b，其绝对值小于一。",
+      "steps": [
+        "设 p_n 为第 n 步处于状态 1 的概率，则 p_(n+1)=a(1−p_n)+(1−b)p_n=a+(1−a−b)p_n。固定点满足 p*=a+(1−a−b)p*，解得 p*=a/(a+b)；另一状态概率为 b/(a+b)。",
+        "相减得 p_(n+1)−p*=(1−a−b)(p_n−p*)，故 p_n−p*=(1−a−b)^n(p_0−p*)。由于 0<a,b<1，−1<1−a−b<1，偏差绝对值趋零且有几何速率。",
+        "因此分布收敛到上述平稳向量；条件排除了周期二的边界情形 a=b=1。有限一般状态空间的收敛需要不可约、非周期假设及相应证明，不能仅引用此二状态计算。$\\square$"
+      ]
+    },
+    {
+      "id": "zfc-extensionality-pair-uniqueness",
+      "topics": [
+        "foundations/zfc-axioms"
+      ],
+      "title": "外延公理推出无序对唯一性",
+      "statement": "若集合 a,b 与 c,d 具有完全相同的元素，则 {a,b}={c,d}；集合只由其成员决定。",
+      "dependencies": [
+        "axiom-set"
+      ],
+      "idea": "对任意对象逐项比较成员关系，应用外延公理。",
+      "steps": [
+        "按配对公理，x∈{a,b} 当且仅当 x=a 或 x=b；同理 x∈{c,d} 当且仅当 x=c 或 x=d。假设两集合成员相同，则对任意 x，这两个析取条件等价。",
+        "于是 {a,b} 与 {c,d} 有相同成员。ZFC 外延公理断言任意两个有相同成员的集合相等，故两无序对相等。即使 a=b 或 c=d，析取式仍成立，论证不需元素互异。$\\square$"
+      ]
+    },
+    {
+      "id": "relative-consistency-model",
+      "topics": [
+        "foundations/relative-consistency",
+        "foundations/soundness-completeness"
+      ],
+      "title": "模型存在蕴含理论相容",
+      "statement": "若一阶句子理论 T 有模型，则 T 不会在经典可靠演算中证明矛盾；因此模型论意义下 Con(T)。",
+      "dependencies": [
+        "fol-soundness"
+      ],
+      "idea": "可靠性保证每个 T 模型满足所有可证结论，而矛盾句在任何结构都为假。",
+      "steps": [
+        "取 T 的一个模型 M。若假设 T⊢⊥，由一阶演算可靠性，每个满足 T 的结构都满足 ⊥，特别 M⊨⊥。",
+        "但 ⊥ 被定义为固定矛盾句，例如 θ∧¬θ；按经典满足关系不可能为真，矛盾。故 T 不证明 ⊥，即 T 相容。",
+        "这是语义相对相容性的一向蕴含；它没有在对象理论内部构造模型，也不自动给出 Gödel 第二不完备定理所需的算术化相容性证明。$\\square$"
+      ]
+    },
+    {
+      "id": "so3-lie-algebra",
+      "topics": [
+        "algebra/lie-groups",
+        "algebra/rotation-groups",
+        "algebra/lie-algebras"
+      ],
+      "title": "旋转群 SO(3) 的李代数",
+      "statement": "SO(3)={Q:QᵀQ=I, det Q=1} 在单位元处的切空间是 so(3)={A:Aᵀ=−A}；该空间维数为 3。",
+      "dependencies": [
+        "rank-nullity",
+        "matrix-exponential"
+      ],
+      "idea": "对正交约束在单位元微分得反对称条件，反向由矩阵指数构造曲线实现每个切向量。",
+      "steps": [
+        "令 Q(t) 为 SO(3) 中经过 I 的可微曲线，Q(0)=I、Q′(0)=A。对恒等式 Q(t)ᵀQ(t)=I 求导并取 t=0，得 Aᵀ+A=0；行列式条件在单位元附近取连续分支，不增加一阶切向约束。因此切向量必反对称。",
+        "反过来若 Aᵀ=−A，矩阵指数 E(t)=exp(tA) 满足 E′=AE。求导 E(t)ᵀE(t) 得 Eᵀ(Aᵀ+A)E=0，初值为 I，故 EᵀE=I。det E 连续且取值只能为 ±1，E(0) 行列式为 1，故始终为 1。且 E′(0)=A，于是 A 是 SO(3) 的切向量。",
+        "反对称 3×3 矩阵由三个上三角元素自由决定，对角为零、下三角由其相反数确定，故维数 3。对应 Lie 括号为矩阵交换子，闭合性由转置计算验证。$\\square$"
+      ]
+    },
+    {
+      "id": "quantum-hermitian-real-spectrum",
+      "topics": [
+        "applied/quantum-theory",
+        "algebra/spectral-decomposition"
+      ],
+      "title": "Hermitian 矩阵的特征值为实数",
+      "statement": "若 A=A* 且 Av=λv、v≠0，则 λ∈R。",
+      "dependencies": [
+        "complex-basic-rules"
+      ],
+      "idea": "内积自伴性使 ⟨Av,v⟩ 同时等于 λ 与其共轭乘以 ‖v‖²。",
+      "steps": [
+        "由 Av=λv，按内积对第一变量共轭线性或第二变量共轭线性的约定，⟨Av,v⟩ 等于 λ 或其共轭乘以 ‖v‖²；自伴性同时给 ⟨Av,v⟩=⟨v,Av⟩，后者是前者的复共轭。",
+        "因此 λ‖v‖²=\\bar λ‖v‖²。因 v≠0，‖v‖²>0，约去得 λ=\\bar λ，故 λ 为实数。该结论不要求先证明 Hermitian 矩阵可对角化。$\\square$"
+      ]
+    },
+    {
+      "id": "dirichlet-rational-approximation",
+      "topics": [
+        "numbertheory/heights",
+        "numbertheory/lattice-methods"
+      ],
+      "title": "Dirichlet 有理逼近定理",
+      "statement": "对任意实数 α 与正整数 Q，存在整数 p,q，1≤q≤Q 且 |qα−p|<1/Q。若 α 无理，则可取到无穷多个不同分数 p/q 使 |α−p/q|<1/q²。",
+      "dependencies": [
+        "binomial-count"
+      ],
+      "idea": "把 Q+1 个小数部分放进 Q 个等长区间，两个落同区间后相减。",
+      "steps": [
+        "取 x_j={jα}，j=0,…,Q，共 Q+1 个小数部分，均位于 [0,1)。将 [0,1) 分成 Q 个半开区间，每段长 1/Q。抽屉原理保证存在 i<j 落在同一段。",
+        "两者差的绝对值小于 1/Q，且 x_j−x_i=(j−i)α−(⌊jα⌋−⌊iα⌋)。令 q=j−i、p=⌊jα⌋−⌊iα⌋，得 1≤q≤Q 与所需严格不等式。",
+        "若 α 无理，则 p/q 不等于 α。对每个 Q 得到误差 |α−p/q|<1/(qQ)≤1/q²。若只出现有限多个有理数 p/q，它们到无理 α 的最小距离为正；但上界 1/Q 趋零，矛盾。因此有无穷多个不同逼近分数。$\\square$"
+      ]
+    },
+    {
+      "id": "quadratic-radical-formula",
+      "topics": [
+        "algebra/solvability-by-radicals",
+        "algebra/polynomial-rings"
+      ],
+      "title": "二次方程根式公式",
+      "statement": "在特征不为 2 的域中，ax²+bx+c=0（a≠0）的根在添加判别式平方根后为 x=(-b±√(b²−4ac))/(2a)；故二次方程可由根式求解。",
+      "dependencies": [
+        "def-ring-field"
+      ],
+      "idea": "配方把二次方程化为一个平方等式。",
+      "steps": [
+        "除以 a 得 x²+(b/a)x+c/a=0。两边加 (b/(2a))²，并整理： (x+b/(2a))²=(b²−4ac)/(4a²)。",
+        "取域的代数闭包中的平方根 δ 满足 δ²=b²−4ac。平方等式等价于 x+b/(2a)=±δ/(2a)，移项得公式中的两根。若判别式为零，两根相同；若判别式非平方，允许按根式扩域添加其平方根。",
+        "二次公式证明二次多项式可解，不证明一般高次方程可解；一般五次方程不存在统一根式公式是更强的伽罗瓦理论结论。$\\square$"
+      ]
+    },
+    {
+      "id": "hamiltonian-energy-conservation",
+      "topics": [
+        "geometry/hamiltonian-systems",
+        "applied/classical-mechanics"
+      ],
+      "title": "哈密顿流守恒能量",
+      "statement": "若 H(q,p) 为 C¹ 哈密顿量且轨道满足 q̇=∂H/∂p、ṗ=−∂H/∂q，则沿每条经典解 H(q(t),p(t)) 恒定。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "链式法则下两项逐项抵消。",
+      "steps": [
+        "沿可微解对复合函数求导，链式法则给 dH/dt=Σ_i[(∂H/∂q_i)q̇_i+(∂H/∂p_i)ṗ_i]。",
+        "代入哈密顿方程，求和变为 Σ_i[(∂H/∂q_i)(∂H/∂p_i)−(∂H/∂p_i)(∂H/∂q_i)]=0。故导数处处为零。",
+        "由中值定理或微积分基本定理，任意时间区间上的 H 值相同。能量守恒依赖自治 Hamiltonian；显含时间的 H 通常有 dH/dt=∂H/∂t。$\\square$"
+      ]
+    },
+    {
+      "id": "cyclic-coordinate-momentum",
+      "topics": [
+        "applied/classical-mechanics",
+        "geometry/lagrangian-submanifolds"
+      ],
+      "title": "循环坐标对应广义动量守恒",
+      "statement": "若拉格朗日量 L(q,q̇,t) 不依赖坐标 q_j，则满足 Euler–Lagrange 方程的轨道上广义动量 p_j=∂L/∂q̇_j 为常数。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "Euler–Lagrange 方程右端 ∂L/∂q_j 为零。",
+      "steps": [
+        "Euler–Lagrange 方程对第 j 坐标写作 d/dt(∂L/∂q̇_j)=∂L/∂q_j。循环坐标条件使右端恒为零。",
+        "因此 p_j 的时间导数为零；对任意两时刻积分得 p_j(t₂)−p_j(t₁)=0。若拉格朗日量显含 q_j，结论一般失效；对称性更一般的守恒量由 Noether 定理刻画。$\\square$"
+      ]
+    },
+    {
+      "id": "scalar-feedback-stabilization",
+      "topics": [
+        "applied/feedback-control",
+        "applied/state-space"
+      ],
+      "title": "可控标量系统的状态反馈稳定化",
+      "statement": "对连续时间系统 ẋ=ax+bu，若 b≠0，则存在状态反馈 u=−kx 使闭环指数渐近稳定。",
+      "dependencies": [
+        "linear-controllability-kalman"
+      ],
+      "idea": "选择增益使唯一闭环特征值为负数。",
+      "steps": [
+        "代入反馈得 ẋ=(a−bk)x。取 k=(a+1)/b（因 b≠0 合法），闭环方程变成 ẋ=−x。",
+        "分离变量或直接求解得 x(t)=x(0)e^(−t)，所以任意初值下 x(t)→0，且 |x(t)|≤|x(0)|e^(−t)。这证明一维连续时间情形；高维可控系统的极点配置需要完整线性代数证明。$\\square$"
+      ]
+    },
+    {
+      "id": "least-squares-normal-equations",
+      "topics": [
+        "applied/parameter-calibration",
+        "applied/convex-optimization"
+      ],
+      "title": "最小二乘解满足正规方程",
+      "statement": "对实矩阵 A 与向量 b，若 x* 最小化 ‖Ax−b‖₂²，则 Aᵀ(Ax*−b)=0；若 A 满列秩，唯一最小二乘解为 (AᵀA)⁻¹Aᵀb。",
+      "dependencies": [
+        "convex-local-global"
+      ],
+      "idea": "沿任意方向求二次目标的一阶导数为零，等价于残差正交于列空间。",
+      "steps": [
+        "令 r=Ax*−b。对任意方向 h，函数 g(t)=‖A(x*+th)−b‖² 在 t=0 取最小值。展开为 ‖r+tAh‖²=‖r‖²+2t hᵀAᵀr+t²‖Ah‖²，因此其 t=0 导数为 2hᵀAᵀr，必须对所有 h 为零。",
+        "故 Aᵀr=0，即正规方程 AᵀAx*=Aᵀb。若 A 列满秩，则对非零 h，hᵀAᵀAh=‖Ah‖²>0，AᵀA 正定可逆，解唯一并为所列式。",
+        "反过来满足正规方程的 x* 是全局最小点，因为对任意 h，目标差 ‖r+Ah‖²−‖r‖²=2hᵀAᵀr+‖Ah‖²=‖Ah‖²≥0。秩亏时最小点仍存在但参数解可能不唯一。$\\square$"
+      ]
+    },
+    {
+      "id": "omitted-variable-bias",
+      "topics": [
+        "probability/confounding",
+        "probability/identification-conditions"
+      ],
+      "title": "遗漏变量偏差的线性代数公式",
+      "statement": "若中心化变量满足 Y=βD+γU+ε 且 E[Dε]=0，单变量总体最小二乘回归 Y 对 D 的系数为 β+γ Cov(D,U)/Var(D)（Var(D)>0）。",
+      "dependencies": [
+        "least-squares-normal-equations",
+        "variance-mean"
+      ],
+      "idea": "把总体正规方程中的协方差按结构方程线性展开。",
+      "steps": [
+        "中心化后一元最小二乘目标为 E[(Y−bD)²]。对 b 求导并令零，得 b=E[DY]/E[D²]=Cov(D,Y)/Var(D)。",
+        "代入 Y=βD+γU+ε，Cov(D,Y)=βVar(D)+γCov(D,U)+Cov(D,ε)。由外生条件 Cov(D,ε)=0，除以 Var(D) 得 b=β+γCov(D,U)/Var(D)。",
+        "所以遗漏变量 U 与处理 D 不相关，或 U 不影响 Y（γ=0）时该项消失；否则一般有偏。这个代数式本身不建立因果解释，结构方程与外生条件必须由研究设计或额外假设支持。$\\square$"
+      ]
+    },
+    {
+      "id": "beta-binomial-predictive",
+      "topics": [
+        "probability/posterior-predictive",
+        "probability/conjugate-priors"
+      ],
+      "title": "Beta-Binomial 后验预测分布",
+      "statement": "若 θ∼Beta(α,β)，给定 θ 后未来 m 次 Bernoulli 独立，未来成功数 K 的预测概率为 P(K=k)=C(m,k)B(α+k,β+m−k)/B(α,β)。",
+      "dependencies": [
+        "beta-gamma-recurrence"
+      ],
+      "idea": "对条件二项概率关于 Beta 先验密度积分并合并幂次。",
+      "steps": [
+        "条件于 θ，K 的概率为 C(m,k)θ^k(1−θ)^(m−k)。先验密度为 θ^(α−1)(1−θ)^(β−1)/B(α,β)。",
+        "全概率公式对 θ 积分：P(K=k)=C(m,k)/B(α,β)∫₀¹θ^(α+k−1)(1−θ)^(β+m−k−1)dθ。按 Beta 函数定义，该积分为 B(α+k,β+m−k)，得到公式。",
+        "这些概率之和为一也可由二项式定理先对固定 θ 求和为 1，再对先验积分；故公式确为概率分布。预测成功次数通常相关，因为共享的随机 θ 被积分掉。$\\square$"
+      ]
+    },
+    {
+      "id": "neyman-pearson-lemma",
+      "topics": [
+        "probability/hypothesis-testing"
+      ],
+      "title": "Neyman–Pearson 引理的简单假设版本",
+      "statement": "对具有密度 p₀,p₁ 的两个简单假设，在给定显著性水平 α 下，似然比检验 φ*=1{p₁/p₀>c}（边界随机化以达到 α）使检验功效最大。",
+      "dependencies": [
+        "integral-linearity"
+      ],
+      "idea": "比较任意竞争检验与似然比检验的逐点加权差，符号处处非负。",
+      "steps": [
+        "设 φ 为任意 [0,1]-值检验且 E₀φ≤α；选择阈值 c≥0，使 φ* 在似然比大于 c 处取 1、小于 c 处取 0，并在等号处适当随机化，从而 E₀φ*=α（若可达到）。",
+        "逐点有 (φ*−φ)(p₁−c p₀)≥0：若 p₁>cp₀，则 φ*=1 且因 φ≤1 两因子非负；若 p₁<cp₀，则 φ*=0 且 φ≥0，两因子同为非正；等号处乘积为零。",
+        "积分得 E₁φ*−E₁φ≥c(E₀φ*−E₀φ)≥0，因为 c≥0 且 E₀φ* =α≥E₀φ。故 φ* 功效最大。若密度比阈值无法精确达到 α，可在边界集合随机化；支配结论仍成立。$\\square$"
+      ]
+    },
+    {
+      "id": "rational-unit-circle-points",
+      "topics": [
+        "numbertheory/rational-points",
+        "numbertheory/integer-equations"
+      ],
+      "title": "单位圆有理点的斜率参数化",
+      "statement": "单位圆 x²+y²=1 上除 (-1,0) 外的有理点恰为 x=(1−t²)/(1+t²)、y=2t/(1+t²)，其中 t∈Q；(-1,0) 是遗漏点。",
+      "dependencies": [
+        "euclid-lemma"
+      ],
+      "idea": "过圆上固定点作有理斜率直线，与圆的第二交点由二次方程求出。",
+      "steps": [
+        "取斜率参数直线 y=t(x+1)，它经过 (-1,0)。代入圆方程：x²+t²(x+1)²=1。一个根为 x=−1，因对应已知交点；展开并因式分解另一个根，得 x=(1−t²)/(1+t²)，再代回直线得 y=2t/(1+t²)。",
+        "若 t∈Q，分母非零，所得 x,y 为有理数；直接计算 (1−t²)²+(2t)²=(1+t²)²，故点在单位圆上。",
+        "反之设有理点 (x,y)≠(−1,0)。因 x≠−1（圆方程若 x=−1 则 y=0），令 t=y/(x+1)∈Q。由 y²=(1−x)(1+x) 可得 t²=(1−x)/(1+x)，解得 x=(1−t²)/(1+t²)，y=t(x+1)=2t/(1+t²)。所以参数化穷尽所有有理点。$\\square$"
+      ]
+    },
+    {
+      "id": "rational-algebraic-integer",
+      "topics": [
+        "numbertheory/algebraic-integers",
+        "numbertheory/number-fields"
+      ],
+      "title": "有理代数整数必为整数",
+      "statement": "若有理数 r 是某个首一整系数多项式的根，则 r∈Z。",
+      "dependencies": [
+        "rational-root-theorem"
+      ],
+      "idea": "有理根定理给既约分数的分母整除首项系数 1。",
+      "steps": [
+        "设 r=a/b 为既约分数、b>0，并满足 x^n+c_(n−1)x^(n−1)+…+c₀=0，其中 c_i∈Z。此多项式首项系数为 1。",
+        "有理根定理（前引理）给 b|1，所以 b=1。于是 r=a 为整数。整数反过来是首一一次多项式 x−a 的根，故有理代数整数恰为整数。$\\square$"
+      ]
+    },
+    {
+      "id": "wilson-primality-test",
+      "topics": [
+        "numbertheory/primality-testing",
+        "numbertheory/divisibility-primes"
+      ],
+      "title": "Wilson 定理及其素性判据",
+      "statement": "n>1 为素数当且仅当 (n−1)!≡−1 (mod n)。",
+      "dependencies": [
+        "prime-divisor",
+        "unique-factorization"
+      ],
+      "idea": "素数模下非零剩余成对与其逆元相消；合数情形阶乘被 n 整除（n=4 单独核算）。",
+      "steps": [
+        "若 n=p 为素数，非零模 p 剩余构成乘法群。将每个元素与其逆元配对，乘积为 1；自逆元素满足 x²≡1，因此 p|(x−1)(x+1)。因 p 素，x≡±1。于是除 1 与 −1 外所有元素成对相消，(p−1)!≡−1 mod p。p=2 也直接成立。",
+        "若 n 合成且 n≠4，写 n=ab，1<a≤b<n。若 a<b，则 a,b 是 1,…,n−1 中不同因子，故 n| (n−1)!。若 a=b，则 n=a²；除 a=2（n=4）外，a 与 2a 是两个不超过 n−1 的因子，故 n| (n−1)!。n=4 时 3!=6≡2 而 −1≡3 mod4。",
+        "因此每个合数的阶乘余数为 0（n=4 为 2），均不等于 −1；结合素数方向即得判据。Wilson 判据虽是充要条件，但直接算阶乘对二进制大整数并非已知的高效素性测试。$\\square$"
+      ]
+    },
+    {
+      "id": "padic-ultrametric",
+      "topics": [
+        "numbertheory/local-fields"
+      ],
+      "title": "p 进绝对值的超度量不等式",
+      "statement": "定义非零整数 n 的 p 进赋值 v_p(n) 为 p 的指数并令 |n|_p=p^(−v_p(n))，延拓到有理数，则 |x+y|_p≤max(|x|_p,|y|_p)。",
+      "dependencies": [
+        "prime-divisor",
+        "unique-factorization"
+      ],
+      "idea": "整除的赋值满足 v_p(x+y)≥min(v_p(x),v_p(y))。",
+      "steps": [
+        "先取非零有理数 x,y，令 k=min(v_p(x),v_p(y))。写 x=p^k a、y=p^k b，其中 a,b 的 p 进赋值非负（有理分母已约去 p 因子）。",
+        "x+y=p^k(a+b)，而 a+b 的 p 进赋值非负，故 v_p(x+y)≥k。映射 r↦p^(−v_p(r)) 对非零有理数乘法相容，因此 |x+y|_p≤p^(−k)=max(|x|_p,|y|_p)。若 x+y=0，左边为零，不等式直接成立。",
+        "取完备化可将不等式连续延伸到 Q_p。它比普通三角不等式强；本证明只建立绝对值性质，不构造 Q_p 的完备化。$\\square$"
+      ]
+    },
+    {
+      "id": "mobius-upper-half-plane",
+      "topics": [
+        "numbertheory/modular-transformations"
+      ],
+      "title": "模变换保持上半平面",
+      "statement": "若 a,b,c,d∈R 且 ad−bc=1，则 τ↦(aτ+b)/(cτ+d) 将上半平面 Imτ>0 映入自身。",
+      "dependencies": [
+        "complex-basic-rules"
+      ],
+      "idea": "直接乘以分母的共轭并取虚部。",
+      "steps": [
+        "当 Imτ>0 时，cτ+d≠0：若 c≠0，其虚部 c Imτ 非零；若 c=0，则行列式条件迫使 d≠0。故变换有定义。",
+        "乘分母共轭并展开，Im((aτ+b)/(cτ+d))=(ad−bc)Imτ/|cτ+d|²。行列式为 1，分母模平方严格正，所以虚部仍为正。",
+        "因此特别地整数矩阵 SL₂(Z) 的标准模变换保持上半平面。该计算只证保持性，模形式的变换律和基本域还需另外证明。$\\square$"
+      ]
+    },
+    {
+      "id": "contractible-fundamental-group",
+      "topics": [
+        "geometry/fundamental-group"
+      ],
+      "title": "可缩空间的基本群平凡",
+      "statement": "若拓扑空间 X 可缩，则对任意基点 x₀，其基本群 π₁(X,x₀) 为平凡群。",
+      "dependencies": [
+        "continuous-compact"
+      ],
+      "idea": "可缩给出恒等映射到常值映射的同伦，故任意环路可在自由同伦下收缩为常值环路。",
+      "steps": [
+        "可缩意味着存在同伦 H:X×[0,1]→X，使 H(x,0)=x、H(x,1)=x* 为固定点。给定基于 x₀ 的环路 γ，映射 G(s,t)=H(γ(s),t) 连续；G(s,0)=γ(s)，G(s,1)=x*，且 s=0,1 两条边均为路径 α(t)=H(x₀,t)。",
+        "虽然中间环路的基点沿 α 移动，但可将方形 [0,1]² 的边界按次序读取：下边是 γ，上边为常值，左右边是 α 与其反向。该边界在 X 中由 G 延拓到整张方形，所以边界环路可缩。等价地，γ 在基点 x₀ 处与 α·常值·α⁻¹ 基同伦，后者可缩为常值。",
+        "因此每个基于 x₀ 的环路类都是单位元，π₁(X,x₀) 平凡。这里可缩同伦允许基点移动；方形边界论证解释了为何仍推出基点基本群结论。$\\square$"
+      ]
+    },
+    {
+      "id": "cohomology-d-square-zero",
+      "topics": [
+        "geometry/cohomology",
+        "geometry/homology-groups-topology"
+      ],
+      "title": "外微分满足 d²=0",
+      "statement": "对光滑微分形式，外微分算子满足 d(dω)=0；因此精确形式皆闭形式。",
+      "dependencies": [
+        "def-differential-forms"
+      ],
+      "idea": "坐标表达中混合二阶偏导相等，而交替基形式交换时变号。",
+      "steps": [
+        "在局部坐标写 k-形式 ω=Σ_I f_I dx_(i₁)∧…∧dx_(i_k)。外微分按 dω=Σ_j,I (∂_j f_I) dx_j∧dx_I 定义。",
+        "再作用一次，任意系数二阶项为 (∂_ℓ∂_j f_I) dx_ℓ∧dx_j∧dx_I。交换 j 与 ℓ 的对应项时，C² 光滑性给 ∂_ℓ∂_j f_I=∂_j∂_ℓ f_I，而外积反交换给 dx_ℓ∧dx_j=−dx_j∧dx_ℓ；两项相消。j=ℓ 项因 dx_j∧dx_j=0 自身为零。",
+        "所有项均成对消去，故 d²ω=0。若 dω=0，称 ω 闭；若 ω=dη，则 dω=d²η=0，所以精确形式总是闭形式，但反向需拓扑条件。$\\square$"
+      ]
+    },
+    {
+      "id": "chain-components-h0",
+      "topics": [
+        "geometry/homology-groups-topology"
+      ],
+      "title": "单纯同调的零维群记录路径分支",
+      "statement": "对有限三角剖分 K，H₀(K;Z) 是由顶点生成、并施加“同一边两端相等”关系的自由阿贝尔群，故每个路径连通分支贡献一个 Z。",
+      "dependencies": [
+        "homology-defined",
+        "chain-map-homology"
+      ],
+      "idea": "边界把一条边的两端点之差作为关系；沿边路径传递生成同一分支等价。",
+      "steps": [
+        "0 链群 C₀ 是全部顶点所生成的自由阿贝尔群。边 e=[v₀,v₁] 的边界为 ∂₁e=v₁−v₀；由于没有更低维边界，H₀=C₀/im∂₁。",
+        "取商后每条边两端顶点相等，沿任意边路径反复使用关系，故同一 1-骨架连通分支的所有顶点类相同。反之边界的每个生成元只涉及同一分支内的两个端点，因此不同分支的顶点类不会被关系识别。",
+        "每个分支选一个代表顶点，代表类彼此独立并生成整个商群，所以 H₀≅Z^c，其中 c 为 1-骨架分支数。有限三角复形的几何实现分支恰由其 1-骨架分支给出，因为高维单形通过其边连接顶点。$\\square$"
+      ]
+    },
+    {
+      "id": "integer-ideal-factorization",
+      "topics": [
+        "numbertheory/ideal-factorization",
+        "algebra/ideals"
+      ],
+      "title": "整数环中的非零理想唯一分解",
+      "statement": "每个非零理想 I⊲Z 唯一写成有限个不同素理想 (p) 的正整数幂之积；若 I=nZ 且 n=∏p^{e_p}，则 I=∏(p)^{e_p}。",
+      "dependencies": [
+        "unique-factorization",
+        "prime-divisor"
+      ],
+      "idea": "先用最小正元素说明整数理想主生成，再用整数素因子分解逐项计算理想乘积。",
+      "steps": [
+        "取非零理想 I。它含非零整数，若含负数也含其相反数，故存在最小正整数 n∈I。对任意 a∈I，带余除法写 a=qn+r、0≤r<n；因 a、qn∈I，r∈I，最小性迫使 r=0。因此 I⊆nZ；而 n∈I 及理想封闭给 nZ⊆I，故 I=nZ。",
+        "唯一分解给 n=∏p^{e_p}。主理想乘积 (a)(b)=(ab)：每个有限和项都是 ab 的倍数，而 ab 本身是乘积生成元。归纳得 nZ=∏(pZ)^{e_p}。",
+        "若另有素理想幂分解，Z 的非零素理想由其正生成元为素数可知恰为 pZ；理想相等等价于正生成元相等，整数唯一分解迫使每个素数指数相同。因此该分解唯一。此论证针对 PID Z，不证明一般数环的理想分解定理。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-class-group-trivial",
+      "topics": [
+        "numbertheory/class-groups",
+        "algebra/ideals"
+      ],
+      "title": "主理想整环的理想类群平凡",
+      "statement": "若整环 R 的每个非零理想均主生成，则其理想类群 Cl(R) 为平凡群。",
+      "dependencies": [
+        "ideal-quotient"
+      ],
+      "idea": "每个分数理想类都有主生成元，因而代表理想与单位理想相差一个主分数理想。",
+      "steps": [
+        "理想类群由非零分数理想对主分数理想取商构成。任取非零分数理想 J，按定义存在非零 d∈R 使 dJ⊆R；dJ 是 R 的非零整理想，故由假设 dJ=aR。",
+        "于是 J=(a/d)R 是主分数理想，其在类群中的类就是单位类。任意类皆单位类，因此类群只有一个元素。对 R=Z 即给出其类数为一；数环的理想类群有限性并不由此平凡特例推出。$\\square$"
+      ]
+    },
+    {
+      "id": "sieve-inclusion-exclusion",
+      "topics": [
+        "numbertheory/sieve-methods"
+      ],
+      "title": "有限筛的容斥计数公式",
+      "statement": "对有限集合 A 与子集 B₁,…,B_m，未落入任何 B_i 的元素数为 Σ_(J⊆{1,…,m})(−1)^|J| |A∩⋂_(j∈J)B_j|，空交约定为 A。",
+      "dependencies": [
+        "finite-boolean-atoms",
+        "binomial-count"
+      ],
+      "idea": "对每个元素独立计算它在交替和中的总系数。",
+      "steps": [
+        "固定 x∈A，令 r 为包含 x 的集合 B_i 个数。x 在右侧总系数为 Σ_(J⊆[m], J⊆I_x)(−1)^|J|=Σ_(j=0)^r C(r,j)(−1)^j=(1−1)^r。",
+        "若 r=0，该系数为 1，恰应计入未被任何 B_i 覆盖的左侧；若 r>0，系数为 0，恰应排除。对全部 x∈A 求和即可得到等式。",
+        "这是筛法常用的精确有限容斥恒等式；实际筛上界会截断此交替和，所得误差还需另行控制。$\\square$"
+      ]
+    },
+    {
+      "id": "prime-exponential-sum-geometric",
+      "topics": [
+        "numbertheory/exponential-sums"
+      ],
+      "title": "线性相位指数和的几何级数界",
+      "statement": "若 θ∉Z，则对任意整数 M≤N，有 |Σ_(n=M)^N exp(2πi nθ)|≤1/|sin(πθ)|。",
+      "dependencies": [
+        "complex-basic-rules"
+      ],
+      "idea": "闭式几何级数的分母模长为 2|sin(πθ)|，分子模长至多 2。",
+      "steps": [
+        "令 z=exp(2πiθ)。θ 非整数保证 z≠1。几何级数求和得 Σ_(n=M)^N z^n=z^M(1−z^(N−M+1))/(1−z)。",
+        "有 |z^M|=1、|1−z^k|≤2，而 |1−z|=|1−exp(2πiθ)|=2|sin(πθ)|。取模即得上界。$\\square$"
+      ]
+    },
+    {
+      "id": "levi-civita-existence",
+      "topics": [
+        "geometry/riemannian-metric",
+        "geometry/curvature-geodesics"
+      ],
+      "title": "黎曼度量存在唯一 Levi-Civita 联络",
+      "statement": "每个光滑黎曼度量局部存在唯一 torsion-free 且与度量相容的联络，其 Christoffel 符号为 Γ^k_ij=½g^(kℓ)(∂_i g_jℓ+∂_j g_iℓ−∂_ℓ g_ij)。",
+      "dependencies": [
+        "def-riemannian-metric"
+      ],
+      "idea": "将度量相容方程对三个指标循环排列，利用联络对称性解出系数。",
+      "steps": [
+        "在坐标图中 g_ij 是正定矩阵场，故逆矩阵 g^(ij) 光滑存在。定义 Γ^k_ij 为所列公式；下标 i,j 对称，因此联络无挠。",
+        "将公式乘 g_(mk) 并对 k 求和，得 g_(mℓ)Γ^ℓ_ki=½(∂_k g_im+∂_i g_km−∂_m g_ki)。再交换 i,j 写出 g_(mℓ)Γ^ℓ_kj=½(∂_k g_jm+∂_j g_km−∂_m g_kj)。在所需坐标相容恒等式中取 m=j 与 m=i 相加，混合项抵消，得 ∂_k g_ij=Γ^ℓ_ki g_ℓj+Γ^ℓ_kj g_iℓ。",
+        "反之，若另一个联络系数满足这两个条件，记 Γ_(kij)=g_(jℓ)Γ^ℓ_ki。度量相容给 ∂_k g_ij=Γ_(kij)+Γ_(kji)，无挠给 Γ_(kij)=Γ_(ikj)。对 (k,i,j) 循环写三条相容式，两条相加减第三条，唯一解为 Γ_(kij)=½(∂_k g_ij+∂_i g_kj−∂_j g_ki)。乘逆度量升指标正是给定公式，故唯一。局部坐标公式在坐标变换下定义同一协变导数，因其可由上述内在两条件唯一刻画，故局部构造粘合。$\\square$"
+      ]
+    },
+    {
+      "id": "gaussian-curvature-geodesic-speed",
+      "topics": [
+        "geometry/curvature-geodesics",
+        "geometry/riemannian-metric"
+      ],
+      "title": "黎曼测地线保持速度",
+      "statement": "若 γ 是黎曼流形上的仿射参数测地线，则 ‖γ̇(t)‖_g 为常数。",
+      "dependencies": [
+        "levi-civita-existence"
+      ],
+      "idea": "Levi-Civita 联络与度量相容，测地线满足 ∇_(γ̇)γ̇=0。",
+      "steps": [
+        "沿曲线对速度平方求导。度量相容性给 d/dt g(γ̇,γ̇)=2g(∇_(γ̇)γ̇,γ̇)。",
+        "测地线方程令加速度 ∇_(γ̇)γ̇=0，故上述导数为零，速度平方恒定。因范数非负，速度范数也恒定。",
+        "结论依赖仿射参数；任意非线性重参数化通常不保持常速。测地线存在唯一性及联络的构造是其前置理论。$\\square$"
+      ]
+    },
+    {
+      "id": "riemannian-distance-symmetry",
+      "topics": [
+        "geometry/riemannian-metric"
+      ],
+      "title": "黎曼距离的对称性",
+      "statement": "若连通黎曼流形两点间距离定义为连接它们的分段光滑曲线长度下确界，则 d(p,q)=d(q,p)。",
+      "dependencies": [
+        "def-riemannian-metric"
+      ],
+      "idea": "反向参数化保持曲线长度，因而两方向可行曲线长度集合相同。",
+      "steps": [
+        "若 γ:[0,1]→M 从 p 到 q，定义反向曲线 γ̄(t)=γ(1−t)，它从 q 到 p，速度为 −γ̇(1−t)。",
+        "黎曼范数满足 ‖−v‖=‖v‖，变量换元给 L(γ̄)=∫₀¹‖γ̇(1−t)‖dt=L(γ)。所以 p 到 q 每条曲线都对应一条等长反向曲线，反向操作也是自身的逆，两个长度集合相同；取下确界得距离对称。$\\square$"
+      ]
+    },
+    {
+      "id": "covering-path-lift-uniqueness",
+      "topics": [
+        "geometry/fibrations",
+        "geometry/fundamental-group"
+      ],
+      "title": "覆盖空间路径提升的唯一性",
+      "statement": "若 p:E→B 是覆盖映射，给定路径 γ:[0,1]→B 及 e₀∈p⁻¹(γ(0))，至多有一条连续提升 γ̃ 满足 γ̃(0)=e₀ 且 p∘γ̃=γ。",
+      "dependencies": [
+        "def-covering-map"
+      ],
+      "idea": "若两提升不同，首次分离时落在同一均匀覆盖邻域的不同片中，与片上 p 单射矛盾。",
+      "steps": [
+        "设 γ̃₁、γ̃₂ 是两条具有相同初值的提升。令 A={t:对所有 s∈[0,t]，γ̃₁(s)=γ̃₂(s)}。由初值连续性及覆盖邻域中 p 在每张片上同胚，A 含某个初始小区间。",
+        "令 τ 为 A 的上确界。连续性给 γ̃₁(τ)=γ̃₂(τ)。取 γ(τ) 的均匀覆盖邻域 U；因 γ 连续，τ 附近的路径值留在 U。τ 处两提升同在某一片 V（相同点唯一所在片），缩小邻域后连续性使二者仍在 V。",
+        "p|_V 单射且两提升投影都等于 γ，所以 τ 邻域内二者相同；若 τ<1，这将 A 向右延伸，矛盾。故 τ=1，全部时刻相同。此证明给唯一性；存在性需用紧区间有限分割逐片构造。$\\square$"
+      ]
+    },
+    {
+      "id": "singular-cusp-jacobian",
+      "topics": [
+        "geometry/singularities",
+        "geometry/algebraic-varieties-geometry"
+      ],
+      "title": "平面尖点 y²=x³ 在原点奇异",
+      "statement": "代数曲线 C={(x,y):y²=x³} 在原点的梯度判据给奇异点，而在其余点梯度非零。",
+      "dependencies": [
+        "chain-rule"
+      ],
+      "idea": "定义多项式 F=y²−x³，其梯度在曲线上直接计算。",
+      "steps": [
+        "令 F(x,y)=y²−x³。隐函数定理的光滑判据要求至少一个偏导非零；∇F=(−3x²,2y)。",
+        "若曲线上 (x,y)≠(0,0)，则不可能同时 x=0 与 y=0，故梯度至少一个分量非零，曲线在该点是光滑一维子流形。原点处梯度为零，判据失效。",
+        "进一步，实曲线可参数化为 (x,y)=(t²,t³)，在 t=0 的速度为 (0,0)，呈尖点而非正则浸入曲线；复代数曲线的奇异性同由梯度判据检测。梯度为零一般表示候选奇点，需结合局部维数确认。$\\square$"
+      ]
+    },
+    {
+      "id": "birational-open-isomorphism",
+      "topics": [
+        "geometry/birational-geometry",
+        "geometry/algebraic-varieties-geometry"
+      ],
+      "title": "双有理映射在稠密开集上互逆",
+      "statement": "若不可约代数簇 X,Y 之间有有理映射 f,g，且 g∘f 与 f∘g 在定义处分别等于恒等映射，则存在稠密开集 U⊆X、V⊆Y，使 f:U→V 与 g:V→U 互为正则同构。",
+      "dependencies": [
+        "def-rational-map"
+      ],
+      "idea": "有理映射在定义域开集上正则；有限个稠密开条件取交仍稠密。",
+      "steps": [
+        "取 f、g 各自最大定义开集 D_f⊆X、D_g⊆Y。按有理映射定义，它们在这些开集上由多项式商局部表示，因而是正则映射。",
+        "考虑 U=D_f∩f⁻¹(D_g)∩Dom(g∘f=id)；由复合定义域及给定恒等关系，U 是非空开集。不可约性使任一非空开集稠密。令 V=g⁻¹(U)∩D_g，并可再缩小 U、V 使两复合关系同时处处成立。",
+        "在 U、V 上，f 与 g 正则且 g∘f=id_U、f∘g=id_V，因此它们互为代数簇同构。双有理不意味着原簇全局同构，差异可集中在被删去的闭子集。$\\square$"
+      ]
+    },
+    {
+      "id": "tor-cyclic-groups",
+      "topics": [
+        "algebra/ext-tor",
+        "algebra/modules"
+      ],
+      "title": "循环群张量导出的 Tor 计算",
+      "statement": "对正整数 n,m，有 Tor₁^Z(Z/nZ,Z/mZ)≅Z/gcd(n,m)。",
+      "dependencies": [
+        "def-chain",
+        "rank-nullity"
+      ],
+      "idea": "用自由分解计算 Tor 后，问题化为模 m 中被 n 消去的元素子群。",
+      "steps": [
+        "有自由 Z-模分解 0→Z --×n→ Z→Z/nZ→0：乘 n 单射，其余处正合。按 Tor 的自由分解定义，与 Z/mZ 张量后得到复形 0→Z/mZ --×n→ Z/mZ→0，其第一同调即乘 n 映射的核。",
+        "令 g=gcd(n,m)，写 n=gn′、m=gm′ 且 gcd(n′,m′)=1。剩余类 x mod m 落入核当且仅当 m|nx，即 gm′|gn′x，等价于 m′|x。模 gm′ 中满足此条件的类恰为 0,m′,2m′,…,(g−1)m′，构成循环群阶 g。",
+        "因此核同构于 Z/gZ，得到公式。不同教材用同调定义 Ext/Tor；此处只计算由该自由分解定义的 Tor₁。$\\square$"
+      ]
+    },
+    {
+      "id": "dimension-theorem-vector",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/basis-dimension"
+      ],
+      "title": "线性映射的秩—零度维数公式",
+      "statement": "有限维向量空间 V 上线性映射 T:V→W 满足 dim V=dim ker T+dim im T。",
+      "dependencies": [
+        "rank-nullity",
+        "basis-extension"
+      ],
+      "idea": "先取核的基，再把它扩成 V 的基；扩充向量的像构成像空间的基。",
+      "steps": [
+        "取 ker T 的基 u₁,…,u_k，并按基扩充定理补为 V 的基 u₁,…,u_k,v₁,…,v_r。",
+        "T(v_j) 张成 im T：任意 x∈V 展开为核基与 v_j 的线性组合，作用 T 后核项消失。",
+        "若 Σ a_jT(v_j)=0，则 Σa_jv_j∈ker T，故可由 u_i 线性组合表示；V 的这组基线性无关迫使所有 a_j=0。因此这些像是像空间的一组基，dim im T=r。总基长 k+r，故 dim V=k+r=dim ker T+dim im T。$\\square$"
+      ]
+    },
+    {
+      "id": "quintic-binomial-radicals",
+      "topics": [
+        "algebra/quintic",
+        "algebra/solvability-by-radicals"
+      ],
+      "title": "二项式方程可用根式求解",
+      "statement": "对任意正整数 n，方程 x^n=a 在含 a 的代数闭包中可通过一次 n 次根式扩张求解；特别地，纯五次方程可根式求解。",
+      "dependencies": [
+        "def-ring-field"
+      ],
+      "idea": "按根式扩张的定义直接添加 a 的 n 次根。",
+      "steps": [
+        "若 a=0，唯一根 x=0 已在底域中。若 a≠0，在代数闭包中取 α 满足 α^n=a；定义 K′=K(α)，它是由 n 次根式生成的扩域。",
+        "α 满足原方程，且同一代数闭包中的全部根为 αζ，其中 ζ 遍历 n 次单位根；因为 (αζ)^n=a。若要求把所有根都放入一个根式扩域，再相继添加单位根即可。",
+        "因此二项式方程的根可由根式表示。此结论不意味着一般五次多项式可根式求解；一般五次不可解需证明其一般伽罗瓦群非可解。$\\square$"
+      ]
+    },
+    {
+      "id": "sieve-trial-factorization-complexity",
+      "topics": [
+        "numbertheory/integer-factorization",
+        "numbertheory/primality-testing"
+      ],
+      "title": "试除法的正确性与二进制复杂度",
+      "statement": "对整数 N>1，若 N 合数则有素因子 p≤√N；逐一试除至 √N 可判定素性，但该算法对输入位数的最坏时间不是多项式界。",
+      "dependencies": [
+        "prime-divisor"
+      ],
+      "idea": "合数分解 N=ab 可排序为 1<a≤b，从而 a≤√N；每次除法用有限整数运算。",
+      "steps": [
+        "若 N 合数，写 N=ab 且 1<a≤b，则 a²≤ab=N，故 a≤√N。a 有素因子 p≤a，因此 N 有素因子不超过 √N。",
+        "逐个检验不超过 √N 的候选整数（只检验素数更省）若无整除者，则 N 不可能合数；若发现非平凡因子，则直接判合数。因而算法正确。",
+        "二进制输入长度约为 L=⌈log₂N⌉，循环候选数约 √N≈2^(L/2)，所以该朴素枚举给出指数于位长的上界，而不是关于 L 的多项式上界。复杂度结论说明“有限可判定”与“高效可判定”不同；并未证明任何因数分解下界。$\\square$"
+      ]
+    },
+    {
+      "id": "local-obstruction-square-three",
+      "topics": [
+        "numbertheory/local-solvability",
+        "numbertheory/integer-equations"
+      ],
+      "title": "方程 x²=3 的 3 进局部障碍",
+      "statement": "方程 x²=3 在 Q₃ 中无解，因而在 Q 中无解，尽管它在 R 中有解。",
+      "dependencies": [
+        "padic-ultrametric"
+      ],
+      "idea": "有理数的平方在 p 进赋值下赋值为偶数，而 v₃(3)=1。",
+      "steps": [
+        "若 x∈Q₃ 满足 x²=3，则 x≠0 且乘法赋值满足 v₃(x²)=2v₃(x)。对 Q₃，非零元素赋值取整数值，故左侧为偶数。",
+        "右侧 v₃(3)=1 为奇数，矛盾。因此 Q₃ 中无解；任何有理解也自然给出 Q₃ 解，所以 Q 中无解。实数 √3 则确实存在，说明实可解不保证有理可解。$\\square$"
+      ]
+    },
+    {
+      "id": "covering-sphere-great-circles",
+      "topics": [
+        "geometry/spherical-geometry",
+        "geometry/axioms-parallel"
+      ],
+      "title": "球面上任意两条大圆相交",
+      "statement": "球面上任意两条不同大圆相交于一对对径点，因此球面几何不满足欧氏平行公设。",
+      "dependencies": [
+        "rank-nullity"
+      ],
+      "idea": "大圆是过球心平面的交线；两个不同平面过原点的交集为一条直线。",
+      "steps": [
+        "球心取原点，大圆分别为球面 S² 与过原点的二维平面 P、Q 的交。不同二维子空间在 R³ 中交于一条一维子空间 L（秩—零度公式给维数至少一，若不同则恰一）。",
+        "L 与单位球面相交于两个相反的单位向量，所以两大圆有一对对径交点。若 P=Q，则大圆重合，仍非平行线。",
+        "因此球面不存在两条互不相交的大圆测地线，和欧氏平面中给定直线外可作唯一平行线的公设不同。这里的“线”指大圆弧的延拓，不是任意小弧段。$\\square$"
+      ]
+    },
+    {
+      "id": "hyperbolic-mobius-isometry",
+      "topics": [
+        "geometry/hyperbolic-geometry",
+        "numbertheory/modular-transformations"
+      ],
+      "title": "上半平面双曲度量的 Möbius 不变性",
+      "statement": "对实系数矩阵 ad−bc=1 的 Möbius 变换 γ(z)=(az+b)/(cz+d)，上半平面度量 ds²=(dx²+dy²)/y² 保持不变。",
+      "dependencies": [
+        "mobius-upper-half-plane",
+        "complex-basic-rules"
+      ],
+      "idea": "计算 Im γ(z)=y/|cz+d|² 与 |γ′(z)|=1/|cz+d|² 后两因子抵消。",
+      "steps": [
+        "复导数 γ′(z)=(ad−bc)/(cz+d)²=1/(cz+d)²，故欧氏长度微分满足 |dγ(z)|=|dz|/|cz+d|²。前引理给 Imγ(z)=y/|cz+d|²。",
+        "因此 |dγ(z)|²/(Imγ(z))²=[|dz|²/|cz+d|⁴]/[y²/|cz+d|⁴]=|dz|²/y²，正是原双曲度量。",
+        "沿任意可微曲线积分即知长度不变。该公式显示 PSL₂(R) 作用为双曲等距变换；它不单独证明所有双曲等距变换均来自此群。$\\square$"
+      ]
+    },
+    {
+      "id": "illposed-differentiation",
+      "topics": [
+        "applied/ill-posedness",
+        "analysis/odes"
+      ],
+      "title": "数值微分反问题的不稳定性",
+      "statement": "在区间 [0,2π] 上，以一致范数把可微函数映到其导数，则求导逆映射不连续：存在 f_n→0 一致而 ‖f_n′‖∞=1。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "高频正弦函数振幅缩小为 1/n，其导数振幅仍为一。",
+      "steps": [
+        "令 f_n(x)=sin(nx)/n。则 ‖f_n‖∞=1/n→0，而 f_n′(x)=cos(nx)，其一致范数恒为 1。",
+        "若从函数数据以一致范数连续恢复导数，连续性在零点要求 f_n→0 蕴含导数趋于零；上述序列违背该要求。因此微分问题不满足 Hadamard 稳定性。",
+        "这说明小幅值噪声可以含高频成分并被求导放大；正则化的目标之一是抑制此类不稳定。例子针对一致范数下的求导，不表示所有数据范数或有限维参数反演都不适定。$\\square$"
+      ]
+    },
+    {
+      "id": "scalar-robust-stability",
+      "topics": [
+        "applied/robust-control",
+        "applied/feedback-control"
+      ],
+      "title": "有界乘性扰动下的标量鲁棒稳定性",
+      "statement": "若 a>δ≥0 且可测扰动 d(t) 满足 |d(t)|≤δ，则 x′=−a x+d(t)x 的所有解满足 |x(t)|≤|x(0)|e^(−(a−δ)t)。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "解的绝对值几乎处处满足微分不等式 d|x|/dt≤−(a−δ)|x|。",
+      "steps": [
+        "系数 c(t)=−a+d(t) 可测且有界，标量线性方程解为 x(t)=x(0)exp(∫₀^t c(s)ds)。该公式可由乘积分因子直接求得，适用于绝对连续解。",
+        "因 c(s)≤−a+δ，积分不超过 −(a−δ)t。取指数并取绝对值得所需估计。由于 a−δ>0，解一致指数趋零，对所有允许扰动均成立。",
+        "若 δ≥a，扰动 d(t)=a 可使 x′=0，故此类统一指数衰减界不可能成立。结论是标量乘性不确定性情形，不替代高维小增益或结构化鲁棒稳定性定理。$\\square$"
+      ]
+    },
+    {
+      "id": "euler-lagrange-variation",
+      "topics": [
+        "applied/optimal-control",
+        "applied/classical-mechanics"
+      ],
+      "title": "固定端点变分推出 Euler–Lagrange 方程",
+      "statement": "若光滑曲线 q:[a,b]→R^n 是作用量 J[q]=∫_a^b L(q,q̇,t)dt 对所有固定端点光滑变分的一阶驻点，则 d/dt(∂L/∂q̇_i)=∂L/∂q_i。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "对 q+εη 求导并分部积分，把任意紧支撑变分函数的系数置零。",
+      "steps": [
+        "取任意光滑 η 且 η(a)=η(b)=0，令 q_ε=q+εη。对 ε 在零处求导，链式法则得 δJ=∫_a^b[Σ_i L_(q_i)η_i+L_(q̇_i)η̇_i]dt。",
+        "分部积分第二项，端点项 L_(q̇_i)η_i|_a^b=0，故 δJ=∫_a^bΣ_i[L_(q_i)−d/dt L_(q̇_i)]η_i dt。驻点使此式对所有 η 为零。",
+        "若某连续系数 g_i(t)=L_(q_i)−d/dt L_(q̇_i) 在一点非零，连续性使其在附近同号，取支撑于该邻域且同号的光滑 η_i 将使积分非零，矛盾。故每个 g_i 恒零，即 Euler–Lagrange 方程。驻点条件不保证该曲线是极小值。$\\square$"
+      ]
+    },
+    {
+      "id": "partition-energy-derivative",
+      "topics": [
+        "applied/statistical-mechanics"
+      ],
+      "title": "配分函数导数给出平均能量",
+      "statement": "有限状态系统能级 E_i、β>0 的配分函数 Z(β)=Σ_i exp(−βE_i)，概率 p_i=exp(−βE_i)/Z，则平均能量 U=Σ_i p_iE_i=−d(log Z)/dβ。",
+      "dependencies": [
+        "def-finite-sum"
+      ],
+      "idea": "逐项求导有限和，再除以 Z。",
+      "steps": [
+        "有限和可逐项微分：Z′(β)=−Σ_i E_i exp(−βE_i)。因 Z>0，链式法则给 (log Z)′=Z′/Z。",
+        "于是 −(log Z)′=Σ_i E_i exp(−βE_i)/Z=Σ_i p_iE_i=U。能级重复只需按状态计重。",
+        "有限系统中所有量均为有限和而无收敛交换问题；无限状态系统还需证明配分函数有限及求导可交换。$\\square$"
+      ]
+    },
+    {
+      "id": "binomial-risk-neutral-pricing",
+      "topics": [
+        "applied/no-arbitrage-pricing",
+        "applied/hedging-replication",
+        "applied/stochastic-price-models"
+      ],
+      "title": "二叉树单期模型的无套利价格与复制",
+      "statement": "无风险资产现值 1、到期值 R，股票现价 S₀、到期取 uS₀ 或 dS₀（0<d<R<u）。任意两状态到期索赔 (H_u,H_d) 可唯一复制，价格为 [qH_u+(1−q)H_d]/R，其中 q=(R−d)/(u−d)。",
+      "dependencies": [
+        "rank-nullity"
+      ],
+      "idea": "两状态复制方程可逆；无套利迫使风险中性权重落在 (0,1)。",
+      "steps": [
+        "令持有 Δ 股股票及 B 单位无风险资产，复制方程为 ΔuS₀+BR=H_u、ΔdS₀+BR=H_d。相减解得 Δ=(H_u−H_d)/(S₀(u−d))，再代回得 B=(uH_d−dH_u)/(R(u−d))。系数矩阵行列式 S₀R(d−u) 非零，故复制唯一。",
+        "现值 V₀=ΔS₀+B。代入上式并整理为 V₀=R⁻¹[(R−d)/(u−d)H_u+(u−R)/(u−d)H_d]=R⁻¹[qH_u+(1−q)H_d]。条件 d<R<u 使 0<q<1。",
+        "若市场给该索赔不同价格，买入便宜复制组合并卖出昂贵索赔（或反向）会在初始产生正收入、到期现金流相抵，形成套利。因此无套利价格必须等于复制成本。股票本身对应 H_u=uS₀,H_d=dS₀，公式回到 S₀。$\\square$"
+      ]
+    },
+    {
+      "id": "var-monotonicity-translation",
+      "topics": [
+        "applied/risk-measures"
+      ],
+      "title": "VaR 的单调性与平移等变性",
+      "statement": "若 L≤L′ 几乎处处，则 VaR_α(L)≤VaR_α(L′)；对常数 c，VaR_α(L+c)=VaR_α(L)+c。",
+      "dependencies": [
+        "def-loss-var"
+      ],
+      "idea": "逐点序给分布函数序，平移只平移分位数集合。",
+      "steps": [
+        "L≤L′ 几乎处处意味着对每个 x，事件 {L′≤x} 包含于 {L≤x}，所以 F_L(x)≥F_(L′)(x)。达到概率至少 α 的 x 集合因此满足 L 的阈值不高于 L′ 的阈值；取下确界得到单调性。",
+        "对平移，P(L+c≤x)=P(L≤x−c)。因此满足前者概率至少 α 的 x，恰是满足后者概率至少 α 的 y=x−c 加 c。两阈值集合整体平移 c，取下确界得平移等变式。",
+        "VaR 在某些风险分布下不具次可加性，因此不能仅凭这两条性质称其为满足所有公理的相干风险度量。$\\square$"
+      ]
+    },
+    {
+      "id": "markowitz-min-variance",
+      "topics": [
+        "applied/optimal-portfolio",
+        "applied/convex-optimization"
+      ],
+      "title": "正定协方差下最小方差全投资组合",
+      "statement": "若协方差矩阵 Σ 对称正定，所有权重 w 满足 1ᵀw=1，则唯一最小化 wᵀΣw 的组合为 w*=Σ⁻¹1/(1ᵀΣ⁻¹1)。",
+      "dependencies": [
+        "strict-convex-unique"
+      ],
+      "idea": "拉格朗日乘子给线性方程；正定性保证严格凸与唯一极小。",
+      "steps": [
+        "Σ 可逆。拉格朗日函数 ℒ(w,λ)=wᵀΣw−λ(1ᵀw−1) 的驻点条件为 2Σw=λ1，故 w=(λ/2)Σ⁻¹1。",
+        "代入约束得 λ/2=1/(1ᵀΣ⁻¹1)，分母为正，因为 Σ⁻¹ 正定且 1≠0。得到所列 w*。",
+        "对任意可行 w=w*+h，1ᵀh=0。目标差为 2hᵀΣw*+hᵀΣh。驻点式给 Σw* 为 1 的倍数，故交叉项为零；若 h≠0，正定性使 hᵀΣh>0。于是 w* 为唯一全局最小点。$\\square$"
+      ]
+    },
+    {
+      "id": "incidence-mass-conservation",
+      "topics": [
+        "applied/biological-networks"
+      ],
+      "title": "反应网络关联矩阵的总量守恒",
+      "statement": "若网络反应化学计量矩阵 S 的每列元素和为零，浓度满足 x′=Sv，则总量 1ᵀx 沿轨道恒定。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "左乘全一向量后反应通量项消失。",
+      "steps": [
+        "由假设 1ᵀS=0。对可微解直接求导，d(1ᵀx)/dt=1ᵀx′=1ᵀSv=0。",
+        "故在任意时间区间积分得 1ᵀx(t)=1ᵀx(0)。若网络只守恒加权总量 ℓᵀx，则相同证明只需 ℓᵀS=0。",
+        "列和条件表达每个反应的分子总数守恒；更一般化学反应中元素质量守恒由相应化学计量权重给出。动力学通量 v 的具体非线性形式不影响该代数守恒结论。$\\square$"
+      ]
+    },
+    {
+      "id": "logistic-map-tent-conjugacy",
+      "topics": [
+        "analysis/chaos"
+      ],
+      "title": "参数 4 的 Logistic 映射与帐篷映射共轭",
+      "statement": "f(x)=4x(1−x) 在 [0,1] 上与帐篷映射 T(t)=2t（t≤1/2）、2−2t（t≥1/2）拓扑共轭，因此迭代轨道可通过单调坐标变换互相对应。",
+      "dependencies": [
+        "intermediate-value"
+      ],
+      "idea": "用单调双射 h(t)=sin²(πt/2) 直接验证 f∘h=h∘T。",
+      "steps": [
+        "h:[0,1]→[0,1] 连续，端点值 0、1，且在 (0,1) 导数 (π/2)sin(πt)>0，故严格递增并由介值定理满射，是同胚。",
+        "若 0≤t≤1/2，则 h(Tt)=sin²(πt)，而 f(h(t))=4sin²(πt/2)(1−sin²(πt/2))=4sin²(πt/2)cos²(πt/2)=sin²(πt)。",
+        "若 1/2≤t≤1，令 s=1−t≤1/2，则 Tt=2s；同时 h(t)=sin²(π(1−s)/2)=cos²(πs/2)，故 f(h(t))=4cos²(πs/2)sin²(πs/2)=sin²(πs)=h(2s)=h(Tt)。两段均有 f∘h=h∘T。",
+        "于是 h 将 T 的每条轨道逐步送到 f 的轨道。此共轭是混沌研究的具体模型结果；若采用特定混沌定义，还需另证帐篷映射满足该定义。$\\square$"
+      ]
+    },
+    {
+      "id": "semantic-independence-models",
+      "topics": [
+        "foundations/independence",
+        "foundations/classification-of-models"
+      ],
+      "title": "语义独立性的模型判据",
+      "statement": "句子 σ 对理论 T 语义独立，当且仅当 T∪{σ} 与 T∪{¬σ} 都有模型；若 T 有模型却 T⊭σ 且 T⊭¬σ，则 σ 独立于 T。",
+      "dependencies": [
+        "fol-completeness-compactness"
+      ],
+      "idea": "模型满足 σ 或其否定；反模型分别见证两侧扩张可满足。",
+      "steps": [
+        "若 M⊨T 且 M⊨σ，则 M 是 T∪{σ} 的模型；若另有 N⊨T 且 N⊨¬σ，则 N 是 T∪{¬σ} 的模型。因此两个扩张皆有模型当且仅当两种真值各有 T 模型。",
+        "若 T⊭σ，按语义蕴含定义有模型 M 满足 T 而不满足 σ，即 M⊨T∪{¬σ}；若 T⊭¬σ，则有模型 N⊨T∪{σ}。反方向同理。",
+        "若采用语法独立性 T⊬σ 且 T⊬¬σ，则需逻辑完备性把不可证转成反模型；本仓完备性章节已在可数语言和所声明演算假设下证明。相容性不等于证明两个扩张均相容，必须分别检查。$\\square$"
+      ]
+    },
+    {
+      "id": "sequent-calculus-soundness",
+      "topics": [
+        "foundations/sequent-calculus",
+        "foundations/formal-proof"
+      ],
+      "title": "经典相继式演算的语义可靠性",
+      "statement": "经典 LK 的初始相继式与推理规则均语义有效，因此从 Γ⇒Δ 可推导的相继式在每个结构赋值下均满足：若 Γ 全真，则 Δ 至少一个公式为真。",
+      "dependencies": [
+        "def-hilbert-fol"
+      ],
+      "idea": "逐规则验证“前提全真蕴含结论全真”，再沿有限证明树归纳。",
+      "steps": [
+        "初始式 A⇒A 在 A 真时右侧 A 真；含矛盾式或公理的初始式同样有效。交换、弱化不破坏全真蕴含右侧真值的性质。",
+        "逻辑联结词规则逐一按经典真值表检查。例如 ∧ 左规则把真值 A∧B 展开为 A、B 同真；∧ 右规则要求两个前提分别推出 A、B，故共同推出 A∧B。∨ 与 → 的左右规则同理按真值定义；¬ 规则把一侧真值转到另一侧假值。",
+        "量词左规则使用任意项实例必由全称句推出；量词右规则的特征变量条件保证在当前结构中可任取其值。结构规则对多重集的排列或重复无影响。对证明高度归纳，每个结点保持语义有效，根相继式遂有效。该证明只证明可靠性，不证明 cut 消去。$\\square$"
+      ]
+    },
+    {
+      "id": "elliptic-curve-inverse",
+      "topics": [
+        "numbertheory/elliptic-curves"
+      ],
+      "title": "椭圆曲线弦切加法中的逆元",
+      "statement": "在短 Weierstrass 曲线 y²=x³+Ax+B（特征不为 2）上，弦切群法则以无穷远点 O 为单位时，点 P=(x,y) 的逆为 −P=(x,−y)。",
+      "dependencies": [
+        "def-elliptic-curve"
+      ],
+      "idea": "过 P 与其镜像点的竖直线第三交点是 O，故三点和为单位点。",
+      "steps": [
+        "曲线方程只含 y²，所以 (x,−y) 也在曲线上。连接 P 与 (x,−y) 的直线为竖直线 X=x；射影闭包在无穷远线上的唯一交点是指定的无穷远点 O。",
+        "弦切法则定义三交点 P,Q,R 的和为 R 关于 x 轴的镜像；对上述竖直弦，第三交点按定义为 O，因此 P+(x,−y)=O，证明该点是逆元。若 y=0，P=−P，竖直切线与曲线交于 P 的重数二及 O，也符合公式。",
+        "此论证验证逆元公式，但群法则的结合律及椭圆曲线成为代数群还需另证；不能仅由弦切构造直接假设结合律。$\\square$"
+      ]
+    },
+    {
+      "id": "cusp-form-constant-term",
+      "topics": [
+        "numbertheory/cusp-forms",
+        "numbertheory/fourier-expansion"
+      ],
+      "title": "尖点形式在无穷远处常数项为零",
+      "statement": "若模形式 f(τ) 在无穷远尖点消失，则其 q=e^(2πiτ) Fourier 展开 f(τ)=Σ_(n≥0)a_nq^n 的常数项 a₀=0。",
+      "dependencies": [
+        "def-modular-form"
+      ],
+      "idea": "q→0 时级数极限等于常数项，而尖点条件要求函数趋零。",
+      "steps": [
+        "按定义，尖点处 f 在 q=0 邻域全纯并满足 f(0)=0。Taylor 定理给 f(q)=Σ_(n≥0)a_nq^n，常数系数为 a₀=f(0)。",
+        "尖点消失即 f(0)=0，故 a₀=0。反过来若该 Taylor 展开的常数项为零，则 f(q)→0，满足无穷远尖点的消失条件。",
+        "对其他尖点还须在相应变换坐标中施加同样条件；此处只处理无穷远点。$\\square$"
+      ]
+    },
+    {
+      "id": "fourier-coefficient-uniqueness",
+      "topics": [
+        "numbertheory/fourier-expansion",
+        "analysis/fourier-series"
+      ],
+      "title": "连续周期函数由全部 Fourier 系数唯一决定",
+      "statement": "若两个连续 2π 周期函数具有相同全部 Fourier 系数，则它们处处相等。",
+      "dependencies": [
+        "fejer-uniform-convergence"
+      ],
+      "idea": "其每阶 Fejér 平均相同，而 Fejér 定理给这些平均一致收敛到原函数。",
+      "steps": [
+        "令 h=f−g。系数线性使 h 的所有 Fourier 系数为零。其 N 阶 Fejér 平均是有限个 Fourier 系数的线性组合，故对每个 N、每个 x 都为零。",
+        "Fejér 定理给 σ_Nh 一致收敛到 h；但 σ_Nh 恒为零，所以其一致极限 h 也恒为零。于是 f=g。",
+        "连续性是这里使用 Fejér 一致收敛的假设；对一般 L² 函数，唯一性需改用相应的 L² 完备性理论。$\\square$"
+      ]
+    },
+    {
+      "id": "coordinate-ring-point-evaluation",
+      "topics": [
+        "geometry/coordinate-rings",
+        "geometry/algebraic-varieties-geometry"
+      ],
+      "title": "仿射点给出坐标环的求值同态",
+      "statement": "对域 k 上仿射代数集 X⊆kⁿ，每个点 a∈X 定义环同态 ev_a:k[x₁,…,xₙ]/I(X)→k，且核为包含 I(X) 的点理想 (x₁−a₁,…,xₙ−aₙ)/I(X)。",
+      "dependencies": [
+        "ideal-quotient"
+      ],
+      "idea": "多项式代入保持加乘；X 上消失多项式在该点取值为零。",
+      "steps": [
+        "定义多项式求值 ev_a(f)=f(a)。逐项展开可知 ev_a(f+g)=ev_a(f)+ev_a(g)、ev_a(fg)=ev_a(f)ev_a(g)、ev_a(1)=1，所以是 k-代数同态。",
+        "a∈X 意味着 I(X) 中每个多项式在 a 处为零，因此 I(X)⊆ker(ev_a)，求值映射可唯一下降到商环 k[x]/I(X)。",
+        "商环元素 f+I(X) 落入核当且仅当 f(a)=0；等价于 f 属于点理想 (x_i−a_i)（逐变量用多项式除法或平移变量展开可证）。因此下降映射的核正是所述商理想。若 k 为代数闭域，点理想还是极大理想，因为求值满射到域 k。$\\square$"
+      ]
+    },
+    {
+      "id": "scheme-local-ring-definition",
+      "topics": [
+        "geometry/schemes",
+        "geometry/coordinate-rings"
+      ],
+      "title": "仿射概形的点处局部环",
+      "statement": "在 Spec R 的素理想 p 处，结构层的茎 O_(Spec R,p) 同构于局部化 R_p=(R\\p)⁻¹R，且其唯一极大理想为 pR_p。",
+      "dependencies": [
+        "localization-module-universal",
+        "def-scheme-structure"
+      ],
+      "idea": "结构层在基本开集 D(f) 上取 R_f；茎是所有含点基本邻域的分式环直极限。",
+      "steps": [
+        "p∈D(f) 当且仅当 f∉p。p 点处茎按定义是所有 f∉p 的 R_f 在限制映射下的直极限。每个 R_f 到 R_p 的映射把 r/f^n 送到同一分数，因此诱导同态 colim_(f∉p)R_f→R_p。",
+        "该映射满射：R_p 中任一分数 r/s 的分母 s∉p，已在 R_s 中出现。若两个分数在直极限中映到同一 R_p 元素，则某个共同分母乘积 t∉p 后其交叉差为零，故它们在某个更小基本邻域环 R_t 中已相等，映射单射。于是茎同构 R_p。",
+        "R_p 的非单位恰为分子属于 p 的分数：若 r∉p，则 r 可作分母，r/s 的逆为 s/r；若 r∈p，任何乘积仍落入扩张理想 pR_p，不能等于 1。故 pR_p 是唯一极大理想，R_p 为局部环。$\\square$"
+      ]
+    },
+    {
+      "id": "noether-symmetry-conservation",
+      "topics": [
+        "applied/symmetry-conservation",
+        "applied/classical-mechanics"
+      ],
+      "title": "连续平移对称性与 Noether 守恒量",
+      "statement": "若拉格朗日量 L(q,q̇,t) 不依赖坐标 q_j，则沿 Euler–Lagrange 解，动量 p_j=∂L/∂q̇_j 守恒。",
+      "dependencies": [
+        "euler-lagrange-variation"
+      ],
+      "idea": "把循环坐标条件代入 Euler–Lagrange 方程。",
+      "steps": [
+        "固定端点变分已推出 Euler–Lagrange 方程 d/dt(∂L/∂q̇_j)=∂L/∂q_j。坐标平移对称性即 L 对 q_j 不变，所以偏导 ∂L/∂q_j=0。",
+        "于是 d p_j/dt=0，积分得 p_j 在整条轨道上恒定。这是平移对称性对应守恒动量的 Noether 特例；任意连续群作用需要用变分生成元作同样推导。$\\square$"
+      ]
+    },
+    {
+      "id": "moment-map-component-conservation",
+      "topics": [
+        "geometry/moment-maps",
+        "geometry/hamiltonian-systems"
+      ],
+      "title": "动量映射分量沿不变 Hamiltonian 守恒",
+      "statement": "若群作用的动量映射 μ 满足 d⟨μ,ξ⟩=ι_(ξ_M)ω，且 Hamiltonian H 对该群作用不变，则沿 H 的流，⟨μ,ξ⟩ 恒定。",
+      "dependencies": [
+        "symplectic-volume-preservation"
+      ],
+      "idea": "沿 Hamiltonian 向量场求导后，动量映射定义将导数化为群生成向量作用于 H。",
+      "steps": [
+        "令 J_ξ=⟨μ,ξ⟩，由动量映射定义 dJ_ξ=ι_(ξ_M)ω。Hamiltonian 向量场 X_H 按约定满足 ι_(X_H)ω=dH（若采用相反号约定，以下只整体换号）。",
+        "沿轨道 dJ_ξ/dt=dJ_ξ(X_H)=ω(ξ_M,X_H)=−ω(X_H,ξ_M)=−dH(ξ_M)。群不变性 H(g·x)=H(x) 对参数求导给 dH(ξ_M)=0。",
+        "故 dJ_ξ/dt=0，动量映射每个李代数方向分量守恒。假设包括作用具有动量映射及 H 群不变；不是任意 Hamiltonian 的结论。$\\square$"
+      ]
+    },
+    {
+      "id": "symplectic-nonsqueezing-volume-invariant",
+      "topics": [
+        "geometry/symplectic-topology",
+        "geometry/symplectomorphisms"
+      ],
+      "title": "辛微分同胚保持辛体积",
+      "statement": "若 φ 是 2n 维辛流形间的辛微分同胚，则它保持辛体积形式 ωⁿ/n! 及相应区域体积。",
+      "dependencies": [
+        "symplectic-volume-preservation"
+      ],
+      "idea": "拉回保持 ω，故保持其最高次外积；区域体积再由换元公式给出。",
+      "steps": [
+        "辛映射定义为 φ*ω_target=ω_source。外积相容性给 φ*(ω_targetⁿ/n!)=ω_sourceⁿ/n!。",
+        "对可测区域 U 使用微分形式换元公式，∫_(φ(U))ω_targetⁿ/n!=∫_Uφ*(ω_targetⁿ/n!)=∫_Uω_sourceⁿ/n!，故体积相等。",
+        "体积保持是 Gromov 非挤压定理的重要必要约束，但并不足以推出辛嵌入存在；非挤压还给出体积无法检测的辛容量障碍。$\\square$"
+      ]
+    },
+    {
+      "id": "brownian-covariance-min",
+      "topics": [
+        "probability/brownian-motion"
+      ],
+      "title": "布朗运动协方差为 min(s,t)",
+      "statement": "标准布朗运动满足 E[B_s]=0 且 Cov(B_s,B_t)=min(s,t)。",
+      "dependencies": [
+        "def-brownian"
+      ],
+      "idea": "设 s≤t，将 B_t 写为 B_s 加与过去独立、均值为零的增量。",
+      "steps": [
+        "由定义 B_s 是零均值增量之和，故 E[B_s]=0。若 s≤t，写 B_t=B_s+(B_t−B_s)，其中后项均值为零并与 B_s 独立。",
+        "E[B_sB_t]=E[B_s²]+E[B_s(B_t−B_s)]=s+E[B_s]E[B_t−B_s]=s。均值皆零，所以协方差等于该乘积期望。若 t≤s 交换两变量得协方差 t；合并为 min(s,t)。$\\square$"
+      ]
+    },
+    {
+      "id": "ito-isometry-step-process",
+      "topics": [
+        "probability/ito-integral",
+        "probability/brownian-motion"
+      ],
+      "title": "简单过程 Itô 等距式",
+      "statement": "对平方可积简单适应过程 H，E[(∫₀ᵀH_t dB_t)²]=E[∫₀ᵀH_t²dt]。",
+      "dependencies": [
+        "def-ito-step-integral",
+        "def-brownian"
+      ],
+      "idea": "展开平方；不同时间增量条件均值为零且方差为区间长度。",
+      "steps": [
+        "按定义积分为 Σ_i H_iΔB_i。平方展开，其对角项期望 E[H_i²(ΔB_i)²]=E[H_i²]Δt_i，因为 H_i 在区间开始时已知，后续 Brownian 增量独立且方差 Δt_i。",
+        "若 i<j，交叉项 H_iΔB_i H_jΔB_j 中，H_iΔB_iH_j 对时刻 t_j 可测，而 ΔB_j 与过去独立、均值零，故该交叉项期望为零。所有不同区间交叉项因此消失。",
+        "于是平方期望等于 Σ_iE[H_i²]Δt_i=E[Σ_iH_i²Δt_i]=E[∫₀ᵀH_t²dt]。一般 Itô 积分按此等距延拓定义，所以该等式也成为其完备化性质。$\\square$"
+      ]
+    },
+    {
+      "id": "ito-square-brownian",
+      "topics": [
+        "probability/ito-formula",
+        "probability/ito-integral"
+      ],
+      "title": "布朗平方过程的 Itô 公式",
+      "statement": "标准布朗运动满足 B_t²=2∫₀ᵗB_s dB_s+t。",
+      "dependencies": [
+        "ito-isometry-step-process",
+        "def-brownian"
+      ],
+      "idea": "对分割应用平方增量恒等式，线性项趋向 Itô 积分，平方增量和趋向 t。",
+      "steps": [
+        "取分割 0=t₀<…<t_n=t。逐段恒等式 B_(t_(i+1))²−B_(t_i)²=2B_(t_i)ΔB_i+(ΔB_i)² 求和，得 B_t²=2ΣB_(t_i)ΔB_i+Σ(ΔB_i)²。",
+        "当网格趋零，左端固定。按 Itô 积分定义与等距式，左侧和式收敛到 ∫₀ᵗB_s dB_s（B 的适应阶梯近似在 L²([0,t]×Ω) 收敛，因为 E[(B_s−B_(left(s)))²]≤网格）。",
+        "平方增量独立且 E[(ΔB_i)²]=Δt_i、Var((ΔB_i)²)=2(Δt_i)²。故 Σ(ΔB_i)² 的均值为 t、方差为 2Σ(Δt_i)²≤2t·网格，趋零，因而 L² 收敛到 t。取极限得到恒等式。$\\square$"
+      ]
+    },
+    {
+      "id": "hierarchical-law-total-variance",
+      "topics": [
+        "probability/hierarchical-models"
+      ],
+      "title": "层级模型的全方差分解",
+      "statement": "若 Y 与潜变量 Z 有有限二阶矩，则 Var(Y)=E[Var(Y|Z)]+Var(E[Y|Z])。",
+      "dependencies": [
+        "conditional-l2",
+        "variance-mean"
+      ],
+      "idea": "把 Y−E[Y] 分解为条件残差与条件均值偏差，交叉项条件期望为零。",
+      "steps": [
+        "写 μ(Z)=E[Y|Z]、μ=E[Y]，则 Y−μ=(Y−μ(Z))+(μ(Z)−μ)。平方取期望，得两平方项加两倍交叉项。",
+        "交叉项期望为 E[(μ(Z)−μ)E[Y−μ(Z)|Z]]=0，因为条件残差的条件均值为零。第一平方项期望正是 E[Var(Y|Z)]，第二项为 Var(μ(Z))。",
+        "故得到全方差公式。它区分给定层级内的随机波动与层级间均值变化；有限二阶矩确保每项存在。$\\square$"
+      ]
+    },
+    {
+      "id": "causal-graph-chain-factorization",
+      "topics": [
+        "probability/causal-graphs"
+      ],
+      "title": "有向无环图的链式分解",
+      "statement": "任意有限随机变量 X₁,…,X_n 的联合分布可按任意顺序分解为 p(x₁,…,x_n)=∏_i p(x_i|x₁,…,x_(i−1))；若进一步满足每个节点给定父节点后与非后代条件独立，则分解为 ∏_i p(x_i|x_pa(i))。",
+      "dependencies": [
+        "conditional-tower"
+      ],
+      "idea": "第一式是概率链式法则；第二式逐项应用局部 Markov 条件独立。",
+      "steps": [
+        "对正概率联合事件，反复使用条件概率定义 p(x₁,…,x_n)=p(x₁)p(x₂|x₁)…p(x_n|x₁,…,x_(n−1))。零概率配置两侧均按相应联合测度的几乎处处意义理解。",
+        "给定变量顺序为图的拓扑序，节点 X_i 的所有先行节点中，非父节点均为其非后代；局部 Markov 性使 p(x_i|先行所有变量)=p(x_i|父节点)。将每项替换即得图因子分解。",
+        "链式分解对任何联合分布都成立；图因子分解还依赖分布满足局部 Markov 条件，单有一张 DAG 图并不自动证明这些条件。$\\square$"
+      ]
+    },
+    {
+      "id": "potential-outcome-consistency",
+      "topics": [
+        "probability/potential-outcomes",
+        "probability/interventions-effects"
+      ],
+      "title": "潜在结果的一致性关系",
+      "statement": "在无干扰与一致性假设下，实际处理指示 A∈{0,1} 时观测结果满足 Y=AY(1)+(1−A)Y(0)。",
+      "dependencies": [
+        "randomized-ate-unbiased"
+      ],
+      "idea": "逐个按 A=1 与 A=0 两种情况代入一致性定义。",
+      "steps": [
+        "无干扰假设每个单位的潜在结果不随其他单位处理变化；一致性定义实际接受处理 a 时观测到 Y=Y(a)。",
+        "若 A=1，一致性给 Y=Y(1)，右侧 AY(1)+(1−A)Y(0)=Y(1)。若 A=0，一致性给 Y=Y(0)，右侧等于 Y(0)。两种可能穷尽二元处理，故恒等式成立。",
+        "此恒等式不识别未观测反事实，也不提供因果效应无偏估计；可识别性仍需随机化或条件可交换性、正值性等额外假设。$\\square$"
+      ]
+    },
+    {
+      "id": "smooth-atlas-transition-cocycle",
+      "topics": [
+        "geometry/differential-structures",
+        "geometry/smooth-manifolds"
+      ],
+      "title": "光滑图册过渡映射满足 cocycle 条件",
+      "statement": "光滑图册中重叠坐标变换 φ_ij=φ_j∘φ_i⁻¹ 为微分同胚，并在三重交叠上满足 φ_jk∘φ_ij=φ_ik。",
+      "dependencies": [
+        "chain-rule"
+      ],
+      "idea": "坐标映射是双射的局部复合，逆映射互相抵消。",
+      "steps": [
+        "每张图 φ_i:U_i→R^n 是到开集的同胚。若 U_i∩U_j 非空，定义过渡映射 φ_ij=φ_j∘φ_i⁻¹；图册光滑相容性要求它及逆 φ_ji 均光滑，故为微分同胚。",
+        "在三重交叠点上代入定义，φ_jk∘φ_ij=(φ_k∘φ_j⁻¹)∘(φ_j∘φ_i⁻¹)=φ_k∘φ_i⁻¹=φ_ik。中间 φ_j⁻¹∘φ_j 在定义域上是恒等映射。",
+        "因此过渡函数满足 cocycle 一致性，保证局部坐标更换的复合没有歧义。此条件是图册定义的直接后果；不同光滑结构是否等价是另一个分类问题。$\\square$"
+      ]
+    },
+    {
+      "id": "surgery-handle-euler-change",
+      "topics": [
+        "geometry/surgery-theory",
+        "geometry/low-dimensional-topology"
+      ],
+      "title": "附加 k-维把手对 Euler 示性数的改变量",
+      "statement": "对有限 CW 复形 X 附加一个 k-维胞腔得到 Y，若边界附着映射落在 X 中，则 χ(Y)=χ(X)+(−1)^k。",
+      "dependencies": [
+        "homology-defined"
+      ],
+      "idea": "胞腔链群只在第 k 维增加一个秩一自由生成元，交替秩和增加 (−1)^k。",
+      "steps": [
+        "有限 CW 复形的 Euler 示性数按胞腔数定义 χ(X)=Σ_j(−1)^j c_j。附加一个 k-胞腔不改变其他维胞腔，只令 c_k 增加一。",
+        "因此 χ(Y)−χ(X)=Σ_j(−1)^j(c_j(Y)−c_j(X))=(−1)^k。",
+        "若采用同调定义 χ=Σ(−1)^j rank H_j，还需用有限链复形的秩—零度望远镜恒等式证明它等于胞腔交替和；该恒等式可逐维由 rank C_j=rank ker∂_j+rank im∂_j 推出。把手分解中的几何附着不改变此计数。$\\square$"
+      ]
+    },
+    {
+      "id": "packing-interval-bound",
+      "topics": [
+        "geometry/packing-covering"
+      ],
+      "title": "区间内不交等长球的简单堆积界",
+      "statement": "长度为 L 的区间内若放置 N 个两两内部不交、半径 r 的闭区间并要求均包含在总区间中，则 N≤L/(2r)。",
+      "dependencies": [
+        "def-interval-length"
+      ],
+      "idea": "不交区间长度相加不超过容纳区间长度。",
+      "steps": [
+        "每个半径 r 的闭区间长度为 2r。两两内部不交时，有限可加性给其并集长度为 2rN。",
+        "其并包含于长度 L 的总区间，故 2rN≤L，除以正数 2r 得 N≤L/(2r)。",
+        "此为一维等长区间的体积上界；高维球体堆积密度受边界与几何结构影响，不能从该式直接推广。$\\square$"
+      ]
+    },
+    {
+      "id": "bsc-one-use-capacity",
+      "topics": [
+        "discrete/channel-capacity"
+      ],
+      "title": "二元对称信道的单次互信息容量",
+      "statement": "二元对称信道交叉概率 0≤p≤1/2 的单次互信息最大值为 1−H₂(p) 比特，在输入均匀时达到。",
+      "dependencies": [
+        "entropy-bound"
+      ],
+      "idea": "输出熵至多一比特，条件输出熵恒为 H₂(p)。",
+      "steps": [
+        "令输入 X∈{0,1}，输出 Y=X⊕Z，其中 Z 独立且 P(Z=1)=p。给定 X，Y 的不确定性就是 Z 的熵，故 H(Y|X)=H₂(p)。",
+        "互信息 I(X;Y)=H(Y)−H(Y|X)=H(Y)−H₂(p)。二元变量熵 H(Y)≤1；可由熵函数在 1/2 处取最大值验证。输入均匀时 Y 也均匀，达到 H(Y)=1。",
+        "因此 max I=1−H₂(p)。这证明单次互信息最大化；若“容量”指任意长码的可靠传输率，还需要 Shannon 编码定理的 achievability 与 converse 证明，本条不替代整套编码定理。$\\square$"
+      ]
+    },
+    {
+      "id": "diffusion-brownian-generator",
+      "topics": [
+        "probability/diffusion-processes",
+        "probability/brownian-motion"
+      ],
+      "title": "布朗扩散的无穷小生成元",
+      "statement": "对 f∈C² 且 f″有界连续，标准布朗运动满足 lim_(t↓0)[E_x f(x+B_t)−f(x)]/t=½f″(x)。",
+      "dependencies": [
+        "def-brownian",
+        "taylor-lagrange",
+        "dominated-convergence"
+      ],
+      "idea": "Taylor 展开，利用增量均值零、方差 t，并控制二阶余项。",
+      "steps": [
+        "令 Z_t=B_t，Z_t 分布为 √t Z，其中 Z 为标准正态，满足 E Z=0、E Z²=1。二阶 Taylor 公式写 f(x+h)=f(x)+f′(x)h+½f″(x)h²+h²r_x(h)，其中 r_x(h)→0 当 h→0。",
+        "期望并除 t，前两项给 ½f″(x)；余项为 E[Z² r_x(√t Z)]。对固定 Z 它趋零，且因 f″有界，Taylor 积分余项给 |r_x(h)|≤C‖f″‖∞，故被可积变量 C Z² 控制。支配收敛使余项趋零。",
+        "所以生成元为 (1/2)d²/dx²。该极限是布朗扩散的局部生成元计算；一般扩散的系数由其漂移和局部方差决定。$\\square$"
+      ]
+    },
+    {
+      "id": "sde-linear-mean-variance",
+      "topics": [
+        "probability/sdes",
+        "probability/expectation-variance"
+      ],
+      "title": "加性 Brownian 线性 SDE 的均值与方差",
+      "statement": "若 X_t=x₀+μt+σB_t，则 X 的微分形式为 dX=μdt+σdB，且 E[X_t]=x₀+μt、Var(X_t)=σ²t。",
+      "dependencies": [
+        "def-brownian"
+      ],
+      "idea": "直接代入布朗运动零均值与方差 t 的定义。",
+      "steps": [
+        "定义 X_t=x₀+μt+σB_t。布朗增量定义给 E[B_t]=0、Var(B_t)=t，故线性期望为 E[X_t]=x₀+μt。",
+        "确定性项不改变方差，常数倍使方差乘 σ²，因此 Var(X_t)=σ²Var(B_t)=σ²t。对任意 s<t，增量 X_t−X_s=μ(t−s)+σ(B_t−B_s)，其随机部分独立于过去且为正态，所以此过程满足所写加性常系数 SDE 的积分形式。",
+        "这只是漂移与扩散系数为常数的显式模型，不证明一般 Lipschitz 系数随机微分方程的存在唯一性。$\\square$"
+      ]
+    },
+    {
+      "id": "hecke-q-expansion-formula",
+      "topics": [
+        "numbertheory/hecke-operators",
+        "numbertheory/fourier-expansion"
+      ],
+      "title": "Hecke 算子作用的 Fourier 系数公式",
+      "statement": "按标准归一化 T_m f(z)=m^(k−1)Σ_(ad=m)d^(−k)Σ_(b mod d)f((az+b)/d)，若 f=Σ_n a_nq^n，则 T_m f 的 q^N 系数为 Σ_(r|gcd(m,N))r^(k−1)a_(mN/r²)。",
+      "dependencies": [
+        "complex-basic-rules",
+        "def-modular-form"
+      ],
+      "idea": "代入 q 展开，对 b 求有限单位根和，筛出 d|n 的频率。",
+      "steps": [
+        "将 f((az+b)/d)=Σ_n a_n exp(2πin(az+b)/d) 代入有限和。对 b=0,…,d−1 求和，Σ_b exp(2πinb/d)=d 若 d|n，否则为零；这是有限几何级数求和。",
+        "令 n=dr。剩下的 q 指数为 exp(2πi ar z)，即 q^(ar)，系数为 m^(k−1)d^(1−k)a_(dr)。由于 ad=m，固定 q^N 意味着 ar=N，故 a|N 且 a|m；令 r=a，d=m/a，系数权重 m^(k−1)(m/a)^(1−k)=a^(k−1)，而原系数下标 dr=(m/a)(N/a)=mN/a²。",
+        "对所有 r=a|gcd(m,N) 求和即得公式。该计算给 Hecke 作用的 Fourier 系数表达；算子保持给定模形式空间仍需检查变换律与尖点条件。$\\square$"
+      ]
+    },
+    {
+      "id": "euler-reciprocal-primes-diverges",
+      "topics": [
+        "numbertheory/prime-number-theorem",
+        "numbertheory/prime-counting"
+      ],
+      "title": "素数倒数和发散",
+      "statement": "Σ_p 1/p 发散。",
+      "dependencies": [
+        "unique-factorization"
+      ],
+      "idea": "有限 Euler 乘积支配调和级数部分和；若素数倒数和收敛则乘积有界，矛盾。",
+      "steps": [
+        "调和级数部分和 H_N=Σ_(n≤N)1/n 发散：每个块 n=2^(j−1)+1,…,2^j 有 2^(j−1) 项，每项至少 1/2^j，故块和至少 1/2；无限多个块使总和无界。",
+        "令 P(x)=∏_(p≤x)(1−1/p)⁻¹。有限个几何级数相乘并用唯一分解，P(x) 展开为所有素因子不超过 x 的正整数倒数之和；因此它至少包含 1,…,⌊x⌋ 各项，P(x)≥H_⌊x⌋。所以 P(x)→∞。",
+        "对 0<t≤1/2，−log(1−t)=Σ_(j≥1)t^j/j≤t+Σ_(j≥2)t^j≤t+2t²。故 log P(x)≤Σ_(p≤x)(1/p+2/p²)。若 Σ_p1/p 收敛，右侧有统一上界，因为 Σ_p1/p²≤Σ_(n≥2)1/n²<∞，于是 P(x) 有界。",
+        "这与 P(x)≥H_⌊x⌋→∞ 矛盾。因此 Σ_p1/p 发散。该定理说明素数稀疏但倒数总和仍发散；它不推出 π(x)∼x/log x，故不等于素数定理。$\\square$"
+      ]
+    },
+    {
+      "id": "zeta-euler-product-complex",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "复变量区域 Re(s)>1 的 ζ Euler 乘积",
+      "statement": "对复数 s 且 Re(s)>1，ζ(s)=Σ_(n≥1)n^(−s)=∏_p(1−p^(−s))^(−1)，两侧均绝对收敛。",
+      "dependencies": [
+        "unique-factorization",
+        "series-cauchy"
+      ],
+      "idea": "有限素数乘积展开枚举仅含这些素因子的整数；绝对收敛使截断极限可交换。",
+      "steps": [
+        "令 σ=Re(s)>1，则 Σ_n|n^(−s)|=Σ_nn^(−σ)<∞，由积分比较收敛。对有限素数集 p≤y，各几何级数绝对收敛，乘积展开为所有素因子不超过 y 的 n^(−s) 之和，唯一分解保证每个这样的 n 恰出现一次。",
+        "给定 ε>0，取 N 使 Σ_(n>N)n^(−σ)<ε，再令 y≥N。有限乘积包含 n≤N 的每一项，其与 ζ 级数的差绝对值不超过 ε。故有限乘积按 y→∞ 收敛到 ζ(s)，且乘积各因子及展开绝对收敛。",
+        "有限乘积均非零，且其对数级数绝对收敛（Σ_p|p^(−s)|<∞），故极限乘积非零；亦可由对数展开与绝对一致收敛验证。此非零性将用于右半平面零点讨论。$\\square$"
+      ]
+    },
+    {
+      "id": "zeta-continuation-right-half",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "ζ(s)−1/(s−1) 在 Re(s)>0 全纯",
+      "statement": "ζ(s)−1/(s−1) 从 Re(s)>1 全纯延拓为 Re(s)>0 上的全纯函数；因此 ζ 在该半平面仅有 s=1 的简单极点。",
+      "dependencies": [
+        "integral-linearity",
+        "dominated-convergence"
+      ],
+      "idea": "把级数与积分逐单位区间相减，差项一致受 n^(−Re(s)−1) 控制。",
+      "steps": [
+        "当 Re(s)>1，积分比较给 ∫₁∞x^(−s)dx=1/(s−1)，故 ζ(s)−1/(s−1)=Σ_(n≥1)∫_n^(n+1)(n^(−s)−x^(−s))dx。",
+        "由 x^(−s) 的导数 −s x^(−s−1)，括号差等于 s∫_n^x u^(−s−1)du。若 s 在任一紧集 K⊂{Re(s)>0}，设 Re(s)≥δ>0、|s|≤M，则第 n 项绝对值≤M n^(−δ−1)。该数项级数收敛。",
+        "所以差项级数在每个这样的紧集上一致收敛，项项全纯，极限全纯。它与原 ζ−1/(s−1) 在 Re(s)>1 相同，给出全半平面延拓；在 s=1 的主部恰为 1/(s−1)，故是简单极点。$\\square$"
+      ]
+    },
+    {
+      "id": "chebyshev-theta-upper",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "切比雪夫函数 θ(x)=O(x)",
+      "statement": "令 θ(x)=Σ_(p≤x)log p，则存在常数 C 使所有 x≥2 满足 0≤θ(x)≤Cx。",
+      "dependencies": [
+        "binomial-count",
+        "unique-factorization"
+      ],
+      "idea": "区间 (n,2n] 内的素数整除中心二项式系数；对 dyadic 区间累加。",
+      "steps": [
+        "对整数 n≥1，区间 n<p≤2n 的每个素数 p 在 (2n)!/(n!)² 中恰出现至少一次：在 (n+1)…2n 的分子出现一次，而 n! 不含 p。不同 p 互素，故其乘积整除 C(2n,n)≤4^n。取对数得 θ(2n)−θ(n)≤2n log2。",
+        "给实数 x 取 n=⌊x/2⌋。区间 (x/2,x] 与 (n,2n] 仅在长度有界的端点邻域不同，其中至多常数个整数；相应 θ 误差 O(log x)。因此对充分大 x，θ(x)−θ(x/2)≤Cx，常数可固定。",
+        "沿 x,x/2,x/4,…求和，增量总和≤C x(1+1/2+1/4+… )≤2Cx。最终落到有界区间时 θ 有界；调整 C 覆盖小 x，即得 θ(x)=O(x)。$\\square$"
+      ]
+    },
+    {
+      "id": "zeta-nonzero-one-line",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "ζ(s) 在 Re(s)=1 上无零点",
+      "statement": "ζ(s) 在直线 Re(s)=1 的每一点（s=1 处为极点而非零点）均不为零。",
+      "dependencies": [
+        "zeta-euler-product-complex",
+        "zeta-continuation-right-half",
+        "chebyshev-theta-upper"
+      ],
+      "idea": "对素数对数导数构造非负三角多项式；假设零点会使其加权极限为负。",
+      "steps": [
+        "对 Re(s)>1 定义 Φ(s)=Σ_p(log p)p^(−s)。Euler 乘积局部一致收敛并逐项求导，得 −ζ′/ζ=Σ_p(log p)/(p^s−1)=Φ(s)+Q(s)，其中 Q(s)=Σ_p(log p)/[p^s(p^s−1)]。Q 在 Re(s)>1/2 局部一致绝对收敛，故解析。",
+        "由前引理 ζ(s)=1/(s−1)+h(s)，h 在 Re(s)>0 全纯；所以 −ζ′/ζ−1/(s−1) 在 s=1 附近全纯。结合 Q，Φ(s)−1/(s−1) 在 Re(s)>1/2 除 ζ 零点外解析，并在 s=1 解析。若 s₀=1+iα（α≠0）是阶数 m≥1 的零点，则 εΦ(1+ε+iα)→−m；若 1+2iα 是零点，记阶数 n≥1，否则 n=0，同理极限为 −n。另有 εΦ(1+ε)→1。",
+        "对 ε>0，令 θ_p=α log p。恒等式 (e^(iθ_p/2)+e^(−iθ_p/2))⁴=Σ_(r=−2)^2 c_r e^(irθ_p)，其中 (c_−2,c_−1,c₀,c₁,c₂)=(1,4,6,4,1)，左边为非负实数。因此 Σ_(r=−2)^2 c_r Φ(1+ε+irα)=Σ_p(log p)p^(−1−ε)(e^(iθ_p/2)+e^(−iθ_p/2))⁴≥0。",
+        "乘 ε 并令 ε↓0，左侧极限为 6−8m−2n，故非负。但若 m≥1，则 6−8m−2n≤−2，矛盾。于是 ζ 在 1+iα 无零点；Re(s)>1 由 Euler 乘积非零，s=1 为已证简单极点，结论成立。$\\square$"
+      ]
+    },
+    {
+      "id": "newman-tauberian",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "Newman Tauberian 定理（有界函数版）",
+      "statement": "若有界局部可积 f:[0,∞)→C 的 Laplace 变换 g(z)=∫₀∞f(t)e^(−zt)dt 在 Re(z)>0 收敛，并解析延拓到包含闭半平面 Re(z)≥0 的开集，则 ∫₀∞f(t)dt 收敛且等于 g(0)。",
+      "dependencies": [
+        "cauchy-square-formula"
+      ],
+      "idea": "截断变换 g_T 与 g 作差，沿右半圆及左侧解析延拓边界估计，并用 Cauchy 定理。",
+      "steps": [
+        "令 |f(t)|≤B，g_T(z)=∫₀^T f(t)e^(−zt)dt。对固定大 R，解析延拓的开邻域与紧集 {|z|≤R,Re z≥0} 有正距离；取足够小 δ>0，使 g 在 D={|z|≤R,Re z≥−δ} 邻域解析。C=∂D 正向。由 Cauchy 公式，(g(0)−g_T(0))=(2πi)⁻¹∫_C(g−g_T)e^(zT)(1+z²/R²)dz/z。",
+        "把 C 上 Re z>0 的圆弧记 C_+。此处 g−g_T=∫_T∞f(t)e^(−zt)dt，令 u=Re z，则 |g−g_T|≤Be^(−uT)/u。圆弧上 |z|=R 且 |1+z²/R²|=2u/R；与 e^(zT)/z 相乘后被积函数模≤2B/R²。弧长≤2πR，故这部分积分绝对值≤常数·B/R。",
+        "在 C 的 Re z<0 部分，对 g_T 项可将积分路径移至左半圆 |z|=R、Re z<0；g_T 整且变形区域不含 z=0。此圆上令 u=−Re z>0，有 |g_T(z)|≤B∫₀^T e^(ut)dt≤Be^(uT)/u，而 |1+z²/R²|=2u/R，故同样得到积分绝对值≤常数·B/R。",
+        "剩余的 g 项在 Re z<0 的路径上固定有界；乘 e^(zT) 后逐点趋零，端点仅有限个且可用有界收敛控制，故该项随 T→∞ 趋零。于是 limsup_(T→∞)|g(0)−g_T(0)|≤C B/R，其中 C 为绝对常数。令 R→∞，右侧为零，所以 g_T(0)=∫₀^T f 收敛到 g(0)。$\\square$"
+      ]
+    },
+    {
+      "id": "theta-asymptotic-prime-theorem",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "切比雪夫函数 θ(x)∼x",
+      "statement": "θ(x)=Σ_(p≤x)log p 满足 θ(x)∼x。",
+      "dependencies": [
+        "chebyshev-theta-upper",
+        "zeta-nonzero-one-line",
+        "newman-tauberian"
+      ],
+      "idea": "用 Φ(s) 表示 θ 的 Mellin–Laplace 变换；Tauberian 定理给偏差比值的可积性，再用 θ 单调排除固定比例偏差。",
+      "steps": [
+        "由 Stieltjes 分部积分，对 Re(s)>1 有 Φ(s)=∫₁∞x^(−s)dθ(x)=s∫₁∞θ(x)x^(−s−1)dx=s∫₀∞e^(−st)θ(e^t)dt。边界项消失，因为 θ(x)=O(x) 且 Re(s)>1。",
+        "定义 f(t)=e^(−t)θ(e^t)−1。Chebyshev 上界使 f 有界，且局部可积。其 Laplace 变换对 Re(z)>0 为 g(z)=Φ(z+1)/(z+1)−1/z。令 H(s)=Φ(s)−1/(s−1)，前引理给 H 在 Re(s)≥1 邻域解析，于是 g(z)=H(z+1)/(z+1)−1/(z+1)，在 Re(z)≥0 解析。Newman 定理遂给 ∫₀∞f(t)dt 收敛，即 ∫₁∞(θ(x)−x)x^(−2)dx 收敛。",
+        "若某固定 λ>1 时有任意大 x 满足 θ(x)≥λx，则由 θ 单调，对 x≤t≤λx 有 θ(t)−t≥λx−t。因此偏差积分在该区间至少为 ∫_x^(λx)(λx−t)t^(−2)dt=∫₁^λ(λ−u)u^(−2)du>0，与收敛积分的尾段必须趋零矛盾。",
+        "若固定 0<λ<1 时有任意大 x 满足 θ(x)≤λx，则在 λx≤t≤x 有 θ(t)−t≤λx−t，偏差积分至多为 ∫_λ^1(λ−u)u^(−2)du<0，同样矛盾。故对任意 λ>1，最终 θ(x)<λx；对任意 λ<1，最终 θ(x)>λx。即 θ(x)/x→1。$\\square$"
+      ]
+    },
+    {
+      "id": "prime-number-theorem-proof",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "素数定理",
+      "statement": "令 π(x)=#{p≤x}，则 π(x)∼x/log x。",
+      "dependencies": [
+        "theta-asymptotic-prime-theorem"
+      ],
+      "idea": "θ(x)∼x 给下界；排除小素数后，以任意固定 ε>0 控制其余素数的对数权重。",
+      "steps": [
+        "θ(x)≤π(x)log x，因为每个 p≤x 的权重 log p≤log x。因此 π(x)≥θ(x)/log x，给出 liminf π(x)log x/x≥1。",
+        "固定 0<ε<1。将 p<x^(1−ε) 的素数至多 x^(1−ε) 个单独计入；其余 p∈[x^(1−ε),x] 满足 log p≥(1−ε)log x。因此 θ(x)≥(1−ε)log x[π(x)−x^(1−ε)]。",
+        "整理得 limsup π(x)log x/x≤1/(1−ε)，因为 x^(1−ε)log x/x→0。令 ε↓0 得 limsup≤1。结合下界，π(x)log x/x→1，即素数定理。",
+        "本证明链完整展开了 Euler 乘积、ζ 的半平面延拓、θ 的 Chebyshev 上界、Re(s)=1 零点排除及 Newman Tauberian 引理；分析链参考 D. Zagier, “Newman’s Short Proof of the Prime Number Theorem,” Amer. Math. Monthly 104 (1997), 705–708。$\\square$"
+      ]
+    },
+    {
+      "id": "pnt-prime-index-equivalence",
+      "topics": [
+        "numbertheory/prime-number-theorem"
+      ],
+      "title": "素数定理的计数函数与第 n 个素数表述等价",
+      "statement": "π(x)∼x/log x 当且仅当第 n 个素数 p_n∼n log n。",
+      "dependencies": [
+        "prime-infinite-euclid"
+      ],
+      "idea": "把严格递增序列 p_n 与其计数函数 π(x) 互相夹逼，并控制对数因子。",
+      "steps": [
+        "若 π(x)∼x/log x，令 x=p_n，则 n=π(p_n)∼p_n/log p_n，故 p_n/n∼log p_n。取对数得 log p_n−log n=log log p_n+o(1)，而 log log p_n/log p_n→0，所以 log n/log p_n→1。代回便得 p_n∼n log n。",
+        "反之假设 p_n∼n log n。给大 x 取 n=π(x)，则 p_n≤x<p_(n+1)。当 x→∞ 时 n→∞；相邻指标公式给 p_(n+1)∼(n+1)log(n+1)∼n log n∼p_n。因此夹逼得 x∼n log n。又 p_n≤x<p_(n+1) 与相邻素数渐近同样给 log x∼log n，故 n∼x/log x，即 π(x)∼x/log x。",
+        "所以两种极限表述互相推出。该等价性本身不提供其中任一渐近式的证明。$\\square$"
+      ]
+    },
+    {
+      "id": "modularity-local-coefficients",
+      "topics": [
+        "numbertheory/modularity",
+        "numbertheory/elliptic-curves"
+      ],
+      "title": "模性对应迫使良素数系数与点数相等",
+      "statement": "若 E/Q 与归一化权 2 新形式 f 模性对应，则每个良素数 p 都有 a_p(f)=a_p(E)=p+1−#E(F_p)。",
+      "dependencies": [
+        "def-elliptic-modularity-euler-factor"
+      ],
+      "idea": "相同局部 L 因子的分母多项式系数唯一。",
+      "steps": [
+        "模性对应按定义给出良素数处相同局部因子。记 X=p^(−s)，则两边分母分别为 1−a_p(E)X+pX² 与 1−a_p(f)X+pX²。",
+        "若两个倒数有理函数在收敛开集相等，乘以共同非零分母即得多项式恒等。比较 X 的一次系数，−a_p(E)=−a_p(f)，故两系数相等。",
+        "再代入 a_p(E) 的定义即得点数公式。这是模性对应的局部算术后果；它不证明给定 E 一定存在这样的 f。$\\square$"
+      ]
+    },
+    {
+      "id": "rational-point-algebraic-variety",
+      "topics": [
+        "numbertheory/algebraic-varieties-arithmetic",
+        "numbertheory/rational-points"
+      ],
+      "title": "单位圆作为有理代数簇的有理点参数化",
+      "statement": "仿射曲线 X²+Y²=1 在 Q 上有无穷多个有理点，且除点 (−1,0) 外均可由有理参数 t 按 x=(1−t²)/(1+t²)、y=2t/(1+t²) 表示。",
+      "dependencies": [
+        "rational-unit-circle-points"
+      ],
+      "idea": "将单位圆视为 Q 上的代数簇，引用已逐步证明的斜率参数化。",
+      "steps": [
+        "多项式方程 X²+Y²−1=0 的系数在 Q 中，故其零点集合定义一个 Q 上仿射代数簇。前引理已证明其所有有理点由斜率 t∈Q 参数化，唯一漏点为 (−1,0)。",
+        "Q 有无穷多个元素，且不同 t 给不同点（t=y/(1+x) 可从点唯一恢复），所以该簇有无穷多个有理点。",
+        "这只是有理参数曲线的简单算术几何例子，不推广为所有高亏格曲线有无穷多个有理点；后者一般为假，且受 Faltings 定理约束。$\\square$"
+      ]
+    },
+    {
+      "id": "abelian-multiplication-morphism",
+      "topics": [
+        "numbertheory/abelian-varieties",
+        "geometry/algebraic-varieties-geometry"
+      ],
+      "title": "阿贝尔簇的整数倍映射是群态射",
+      "statement": "对阿贝尔簇 A 及整数 n，映射 [n]:A→A、x↦nx 是正则群态射。",
+      "dependencies": [
+        "def-abelian-variety"
+      ],
+      "idea": "整数倍映射是加法态射有限次复合；负整数再复合取逆映射。",
+      "steps": [
+        "对 n≥1，定义 [1]=id_A，[n+1]=m∘([n],id_A)，其中 m:A×A→A 是正则群加法。因此由正则映射复合封闭，归纳得每个 [n] 正则。",
+        "群的结合律与交换律给 [n](x+y)=n(x+y)=nx+ny=[n]x+[n]y，所以它是群同态。n=0 是常值单位元映射，仍为正则群态射。",
+        "对 n<0，定义 [n]=[-n]∘inv，其中 inv:A→A 为正则取逆映射；故仍正则且满足同态式。此论证不说明 [n] 有限、满射或核阶为 n^(2g)，这些需要额外几何定理。$\\square$"
+      ]
+    },
+    {
+      "id": "unknot-complement-fundamental-group",
+      "topics": [
+        "geometry/knot-theory",
+        "geometry/fundamental-group"
+      ],
+      "title": "标准无结圆环补空间的基本群为 Z",
+      "statement": "标准无结 U={(z₁,z₂)∈S³⊂C²:z₂=0} 的补空间 S³\\U 同胚于开圆盘 D² 与圆周 S¹ 的乘积，故 π₁(S³\\U)≅Z。",
+      "dependencies": [
+        "contractible-fundamental-group",
+        "circle-fundamental-group"
+      ],
+      "idea": "直接由坐标给出乘积同胚，再将圆盘因子收缩到中心。",
+      "steps": [
+        "S³\\U 中 z₂≠0。定义映射到 D²×S¹： (z₁,z₂)↦(z₁,z₂/|z₂|)。因 |z₁|²+|z₂|²=1 且 z₂≠0，必有 |z₁|<1，映射确实落在开圆盘与圆周乘积。",
+        "反向映射 (w,ζ)↦(w,√(1−|w|²)ζ)。两映射连续且互为逆，故为同胚。D²×S¹ 形变收缩到 {0}×S¹，通过 (w,ζ,s)↦((1−s)w,ζ)。",
+        "圆盘可缩，故乘积基本群同构于 S¹ 的基本群；标准绕数分类给 π₁(S¹)≅Z。无结补空间因此基本群为整数群。一般结的补空间群是重要结不变量，通常不等于 Z。$\\square$"
+      ]
+    },
+    {
+      "id": "circle-fundamental-group",
+      "topics": [
+        "geometry/fundamental-group",
+        "geometry/low-dimensional-topology"
+      ],
+      "title": "圆周基本群同构于整数群",
+      "statement": "以 1 为基点，π₁(S¹,1)≅Z；同构由环路提升到覆盖 p:R→S¹、p(t)=exp(2πit) 的终点整数给出。",
+      "dependencies": [
+        "covering-path-lift-uniqueness",
+        "intermediate-value"
+      ],
+      "idea": "逐段提升路径；同伦提升保持离散整数终点；终点相同的提升可线性同伦。",
+      "steps": [
+        "给连续路径 γ:[0,1]→S¹ 及起点提升 u₀。圆周上每点有开弧 U，使 p 的原像分成互不交的开区间且每段 p 同胚到 U。由 γ 的一致连续性，取足够细有限分割，使每段像落入某个这样的弧；从前一段端点提升开始，用该片的逆映射逐段定义唯一连续提升。唯一性也可由已证覆盖路径提升唯一性得出。",
+        "若 γ 是基于 1 的环路且起始提升为 0，则终点 n 满足 p(n)=1，故 n∈Z。若两基同伦环路通过 H(s,t) 相连，紧方形可细分成小矩形，使每个小矩形像落在均匀覆盖弧；逐格用同一片逆映射提升，得到连续的同伦提升。其终点随同伦参数连续且始终落在离散集合 Z，故终点整数不变。",
+        "每个 n∈Z 由环路 γ_n(s)=exp(2πins) 达到，故绕数映射满射。若两环路提升终点相同 n，则其提升 α,β 都从 0 到 n；线性插值 (1−t)α(s)+tβ(s) 固定端点，投影后给两环路的基同伦，故绕数相同者代表同一类。",
+        "绕数保持环路拼接下相加（提升终点相加），于是 π₁(S¹,1) 与加法群 Z 同构。该证明同时给出无结补空间引理所需的圆周基本群计算。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-oriented-one-manifold-circle",
+      "topics": [
+        "geometry/manifold-classification",
+        "geometry/differential-structures"
+      ],
+      "title": "紧致连通定向一维流形无边界时同胚于圆周",
+      "statement": "若 M 是紧致、连通、光滑、定向且无边界的一维流形，并给定光滑黎曼度量，则 M 微分同胚于 S¹。",
+      "dependencies": [
+        "picard-lindelof",
+        "inverse-function-one-dimension",
+        "finite-dimensional-compactness"
+      ],
+      "idea": "定向与度量给出处处非零单位向量场；其完整流的轨道开且唯一，稳定子是非零离散子群 TZ。",
+      "steps": [
+        "每个切空间是一维定向内积空间，恰有一个正向单位向量。局部定向坐标中该向量场为 g_(11)^(-1/2)∂/∂x，光滑；换到另一正向坐标后仍是同一唯一正向单位向量，故这些局部表达拼成全局光滑非零向量场 V。",
+        "解自治方程 γ′=V(γ)。局部存在唯一性由坐标中的 Picard–Lindelöf 定理给出。因 M 紧致，可取有限个坐标邻域覆盖，并在较小邻域上统一控制 V 的坐标系数与 Lipschitz 常数，得到正的统一局部延拓时间；因此解在任意有限时间均可延拓，流 Φ_t 对所有 t∈R 定义。",
+        "固定 p∈M，轨道映射 φ(t)=Φ_t(p) 满足 φ′(t)=V(φ(t))≠0。由一维逆函数定理，它在每个时刻附近是微分同胚到开弧，故每条轨道是开集。流轨道将 M 分割成互不交的开集；连通性迫使只有一个轨道，所以 φ:R→M 满射。",
+        "稳定子 H={t∈R:Φ_t(p)=p} 是闭加法子群。由轨道局部单射，0 在 H 中孤立，故 H 离散。若 H={0}，φ 既满又单，且为局部微分同胚，因而是开连续双射，其逆连续，给出 R 与紧致 M 的同胚，矛盾。故 H 非零。",
+        "令 T 为 H 中最小正元素：离散性给 H 与 0 的正距离；闭性使正元素下确界仍在 H。对任意 h∈H 作整数除法 h=nT+r、0≤r<T；r∈H，最小性迫使 r=0。因此 H=T Z。流映射诱导双射局部微分同胚 R/(TZ)→M；商圆周紧致、M Hausdorff，双射连续映射为同胚，局部光滑逆使之为微分同胚。R/(TZ) 显然微分同胚于 S¹。$\\square$"
+      ]
+    },
+    {
+      "id": "propositional-cut-elimination",
+      "topics": [
+        "foundations/cut-elimination",
+        "foundations/sequent-calculus"
+      ],
+      "title": "命题 LK 的 cut 消去",
+      "statement": "经典命题 LK 中，若有限相继式 Γ⇒Δ 可由含 cut 的证明推出，则它也有不含 cut 的证明。此处结论限于命题逻辑；不含量词。",
+      "dependencies": [
+        "def-propositional-lk",
+        "sequent-calculus-soundness"
+      ],
+      "idea": "可靠性给语义有效；按公式复杂度作可逆真值分解，构造 cut-free 证明。",
+      "steps": [
+        "先证 cut-free 完备性。对有效相继式 Γ⇒Δ 的所有公式复杂度总和作归纳。若某原子 A 同时出现在 Γ 与 Δ，则 A⇒A 是初始式，逐次左右弱化其余公式即得 cut-free 证明。",
+        "若左侧含 ¬A，语义有效性等价于 Γ⇒Δ,A 有效；其公式复杂度严格下降，归纳得该前提的 cut-free 证明，再用 ¬L 得原式。若右侧含 ¬A，同理化为 Γ,A⇒Δ 并用 ¬R。左侧含 A∧B 时化为 Γ,A,B⇒Δ 并用 ∧L；右侧含 A∨B 时化为 Γ⇒Δ,A,B 并用 ∨R。每种转化均由相应真值条件直接验证，且前提复杂度下降。",
+        "左侧含 A∨B 时，有效性分别保证 Γ,A⇒Δ 与 Γ,B⇒Δ 有效；对两者用归纳假设，再以 ∨L 合并。右侧含 A∧B 时同理分别得到 Γ⇒Δ,A 与 Γ⇒Δ,B，再用 ∧R。有限公式总复杂度使此分解过程终止；若无复合公式，公式全为原子，有效性必迫使某原子同时出现于左右两侧，已属初始情形。故每个语义有效命题相继式均有 cut-free 推导。",
+        "现设原相继式在含 cut 的 LK 中可证。由此前的 LK 可靠性，它语义有效；由刚证的命题 cut-free 完备性，它有不含 cut 的推导。这证明 cut 消去。该论证只覆盖有限命题联结词；一阶量词规则还涉及特征变量、替换与量词切消，不能把本证明直接当作一阶 Gentzen 切消定理。$\\square$"
+      ]
+    },
+    {
+      "id": "arithmetical-diagonal-lemma",
+      "topics": [
+        "foundations/godel-first"
+      ],
+      "title": "算术对角引理（闭项编码假设版）",
+      "statement": "对任意单自由变量算术公式 ψ(x)，若 T 能验证具体替换计算，则存在句子 G 及其编号 g，使 T⊢G↔ψ(\\bar g)。",
+      "dependencies": [
+        "def-effective-arithmetic-coding",
+        "syntax-parse-substitute"
+      ],
+      "idea": "把公式的 Gödel 编码代入自身替换函数，构造其不动点句。",
+      "steps": [
+        "定义 θ(y)=ψ(Sub(y,y))，令 k=⌜θ⌝，并令 G=θ(\\bar k)。按替换编码定义，G 的编号 g 正是 Sub(k,k)。",
+        "将闭项 Sub(\\bar k,\\bar k) 在算术中按定义计算为数字 \\bar g。T 能验证该具体有限计算，所以 T 证明 Sub(\\bar k,\\bar k)=\\bar g。",
+        "在 θ 的定义中代入 k 得 G=ψ(Sub(\\bar k,\\bar k))。由上一等式及等号替换，T 证明 G↔ψ(\\bar g)。这是对每个固定 ψ 的构造；对具体弱算术系统，替换编码与闭项计算的可证性必须另行建立。$\\square$"
+      ]
+    },
+    {
+      "id": "godel-first-sound-theory",
+      "topics": [
+        "foundations/godel-first"
+      ],
+      "title": "可靠有效算术理论的不完备性（显式编码假设版）",
+      "statement": "若 T 是可靠、有效可公理化的算术理论，并满足本章闭项编码计算假设，则存在算术句 G，使 T 既不证明 G，也不证明 ¬G。",
+      "dependencies": [
+        "arithmetical-diagonal-lemma",
+        "def-effective-arithmetic-coding"
+      ],
+      "idea": "对句子自身的编号取对角代入，使 G 断言“G 在 T 中不可证”；可靠性排除两边任何一种证明。",
+      "steps": [
+        "令 φ(x) 为公式 ¬Prov_T(x)，令 θ(y)=φ(Sub(y,y))。取 k=⌜θ⌝，并令 G 为 θ 的自由变量 y 代入数字 k 所得的闭句。按编码定义，g=⌜G⌝=Sub(k,k)。闭项计算假设使 T 能证明 Sub(\\bar k,\\bar k)=\\bar g，故 T 可验证 G 与 ¬Prov_T(\\bar g) 等价。这就是此处所需的对角句构造。",
+        "若 T⊢G，则存在一个实际有限证明编码 p，使标准自然数中 Proof_T(p,g) 成立，因而 Prov_T(g) 为真。上一段的对角关系说明 G 在标准模型中为假。可是 T 可靠意味着 T 的每个定理在标准算术模型中为真，特别 G 为真，矛盾。因此 T⊬G。",
+        "若 T⊢¬G，可靠性给标准模型中 ¬G 为真。由 G 与 ¬Prov_T(g) 的标准语义等价，Prov_T(g) 为真，于是存在实际有限 T 证明 G。可靠性又使该定理 G 在标准模型为真，与 ¬G 为真矛盾。因此 T⊬¬G。",
+        "故 G 不可判定，T 不完备。此证明以语义可靠性为前提，强于经典第一不完备定理常用的单纯相容性；若要从一致性推出 Rosser 句，须补充并证明对证明编码、可证性谓词和 Rosser 比较的算术化引理。$\\square$"
+      ]
+    },
+    {
+      "id": "provability-d1",
+      "topics": [
+        "foundations/godel-second",
+        "foundations/formal-proof"
+      ],
+      "title": "可证性条件 D1",
+      "statement": "若 T⊢φ，则 T⊢Prov_T(⌜φ⌝)。",
+      "dependencies": [
+        "def-proof-code-arithmetic"
+      ],
+      "idea": "把一份具体有限证明的代码代入证明谓词，再引入存在量词。",
+      "steps": [
+        "取 T 的实际有限证明序列 π，其编码为自然数 p。证明检查定义逐行验证每一公理实例与推理步，故 Prf_T(p,⌜φ⌝) 在标准算术中为真。",
+        "按本章算术化假设，T 可证明这个具体闭句 Prf_T(\\bar p,\\overline{⌜φ⌝})。存在引入规则遂给 T⊢∃p Prf_T(p,⌜φ⌝)，即 T⊢Prov_T(⌜φ⌝)。$\\square$"
+      ]
+    },
+    {
+      "id": "provability-d2",
+      "topics": [
+        "foundations/godel-second",
+        "foundations/formal-proof"
+      ],
+      "title": "可证性条件 D2",
+      "statement": "T⊢Prov_T(⌜φ→ψ⌝)→(Prov_T(⌜φ⌝)→Prov_T(⌜ψ⌝))。",
+      "dependencies": [
+        "def-proof-code-arithmetic"
+      ],
+      "idea": "有效拼接两个有限证明并对其代码作存在量词推理。",
+      "steps": [
+        "固定证明代码 p,q，若 p 证明 φ→ψ、q 证明 φ，则把 π_p、π_q 接续，并在末尾用一次 MP 加入 ψ，得到 ψ 的证明代码 h(p,q)。函数 h 对有限字符串编码是原始递归的。",
+        "证明检查的逐行定义给 T 证明 Prf_T(p,⌜φ→ψ⌝)∧Prf_T(q,⌜φ⌝)→Prf_T(h(p,q),⌜ψ⌝)。对 p,q 存在量化并引入 h(p,q) 作为新见证，即得所述 D2。",
+        "这是对象理论内的统一代码变换；仅说外部 MP 保持定理还不足以代替这一步算术化。$\\square$"
+      ]
+    },
+    {
+      "id": "provability-d3",
+      "topics": [
+        "foundations/godel-second",
+        "foundations/formal-proof"
+      ],
+      "title": "可证性条件 D3",
+      "statement": "T⊢Prov_T(⌜φ⌝)→Prov_T(⌜Prov_T(⌜φ⌝)⌝)。",
+      "dependencies": [
+        "def-proof-code-arithmetic"
+      ],
+      "idea": "从证明代码有效构造一份 T 内部证明，证明该代码确实给出原句的证明。",
+      "steps": [
+        "设 p 是 φ 的 T 证明代码。证明谓词由逐行的有限检查定义；本章算术化假设保证 T 可验证具体检查并能统一生成检查证明。因此可原始递归地从 p 构造一份 T 证明序列，证明 Prf_T(\\bar p,⌜φ⌝)，再用存在引入证明 Prov_T(⌜φ⌝)。令该新证明代码为 d(p)。",
+        "T 能验证变换 d 的正确性：Prf_T(p,⌜φ⌝)→Prf_T(d(p),⌜Prov_T(⌜φ⌝)⌝)。对 p 存在量化并以 d(p) 为见证，得 Prov_T(⌜φ⌝)→Prov_T(⌜Prov_T(⌜φ⌝)⌝)，即 D3。",
+        "这里明确使用理论能形式化证明检查过程的假设；D3 不是纯粹的元语言逻辑恒等式。$\\square$"
+      ]
+    },
+    {
+      "id": "loeb-theorem",
+      "topics": [
+        "foundations/godel-second",
+        "foundations/formal-proof"
+      ],
+      "title": "Löb 定理（在可证性条件下）",
+      "statement": "若 T 满足对角句构造及 D1–D3，且 T⊢Prov(⌜φ⌝)→φ，则 T⊢φ。",
+      "dependencies": [
+        "provability-d1",
+        "provability-d2",
+        "provability-d3",
+        "arithmetical-diagonal-lemma"
+      ],
+      "idea": "取 G↔(Prov(G)→φ)，利用 D1–D3 在理论内部把 Prov(G) 推到 Prov(φ)，再得到 G 本身可证。",
+      "steps": [
+        "对公式 ψ(x)=Prov(x)→φ 应用对角构造，得句子 G 使 T⊢G↔(Prov(⌜G⌝)→φ)。记 P_G 为 Prov(⌜G⌝)。固定点给 T⊢G→(P_G→φ) 与 T⊢(P_G→φ)→G。",
+        "由 D1，T⊢Prov(⌜G→(P_G→φ)⌝)。D2 将其与证明规则合成为 T⊢P_G→Prov(⌜P_G→φ⌝)。再次用 D2 对内部蕴含应用，得 T⊢Prov(⌜P_G→φ⌝)→(Prov(⌜P_G⌝)→Prov(⌜φ⌝))。",
+        "D3 给 T⊢P_G→Prov(⌜P_G⌝)。串联上述蕴含，T⊢P_G→Prov(⌜φ⌝)。题设 T⊢Prov(⌜φ⌝)→φ，故 T⊢P_G→φ。固定点的反向蕴含随即给 T⊢G。",
+        "再由 D1 得 T⊢P_G；结合 T⊢P_G→φ，MP 得 T⊢φ。全程只用经典逻辑、固定点与明列的 D1–D3。$\\square$"
+      ]
+    },
+    {
+      "id": "godel-second-incompleteness",
+      "topics": [
+        "foundations/godel-second"
+      ],
+      "title": "Gödel 第二不完备定理（条件化证明）",
+      "statement": "若 T 一致、有效可公理化、含足够算术以构造对角句，且其标准可证性谓词满足 D1–D3，则 T 不证明自身一致性句 Con(T)=¬Prov_T(⌜⊥⌝)。",
+      "dependencies": [
+        "loeb-theorem"
+      ],
+      "idea": "若 T 能证明 Con(T)，经典逻辑给 Prov(⊥)→⊥；Löb 定理将推出 T⊢⊥，违背一致性。",
+      "steps": [
+        "反设 T⊢Con(T)，即 T⊢¬Prov(⌜⊥⌝)。经典命题重言式 ¬P↔(P→⊥) 给 T⊢Prov(⌜⊥⌝)→⊥。",
+        "把 Löb 定理用于 φ=⊥，其前提正是上一步的内部蕴含，故 T⊢⊥。这与 T 一致（不证明矛盾句）的假设冲突。",
+        "所以 T⊬Con(T)。结论依赖 D1–D3 与对角构造；对具体 Robinson Q 或 Peano 算术的标准编码，要把这些算术化条件逐项证明后才得到通常表述。$\\square$"
+      ]
+    },
+    {
       "id": "chinese-remainder",
       "topics": [
         "numbertheory/congruences",
@@ -2586,6 +5948,172 @@ window.ATLAS.proofBook = {
         "阶乘指数递增，数值级数受几何级数控制而收敛。取前 n 项 L_n=p_n/q_n，q_n=10^(n!)。尾项严格正；对 n≥2，后续指数至少按整数逐步增加，故 0<L-L_n≤(10/9)10^(-(n+1)!)<2/q_n^(n+1)。",
         "若 L 为代数数、次数 d，则逼近下界给 L-L_n≥c/q_n^d，因为尾项正保证两数不同。两界合并得到 c<2/q_n^(n+1-d)。",
         "当 n>d，q_n≥10，使右侧≤2·10^(-(n+1-d))→0，矛盾于固定 c>0。因此 L 不满足任何非零整系数多项式，即为超越数。$\\square$"
+      ]
+    },
+    {
+      "id": "weak-derivative-unique",
+      "topics": [
+        "analysis/weak-solutions",
+        "geometry/tangent-spaces"
+      ],
+      "title": "弱导数的唯一性",
+      "statement": "局部可积函数的弱导数如果存在，则按几乎处处相等意义唯一；本证明给平方可积弱导数的情形。",
+      "dependencies": [
+        "schwartz-density",
+        "def-sobolev"
+      ],
+      "idea": "两个候选导数的差对全部光滑紧支撑测试函数积分为零，再用局部平滑逼近识别差为零。",
+      "steps": [
+        "若 v,w 都为同一弱导数，则 h=v-w 满足 ∫hφ=0 对全部光滑紧支撑 φ。固定闭盒 J，外包一个仍在 Ω 的开盒，只需对盒内任意更小区间或矩形的指标作光滑逼近。",
+        "可把已展开的 Gaussian 平滑指标构造乘一个光滑紧支撑截断，令其在 J 为一；这样的截断可由 exp(-1/t) 在 t>0、零延拓在 t≤0 的函数组成并归一化，所有阶导数在零点趋零由指数支配任意幂验证。各坐标相乘给高维截断。平滑指标在 L² 上趋原指标，Cauchy—Schwarz 使 ∫h1_E=0。",
+        "矩形生成盒内 Borel σ 代数，π—λ 论证与完备化使 h 在所有可测集积分零，取正负集得到 h=0 几乎处处于该盒。可用可数个内部有理盒覆盖 Ω，故全域唯一。$\\square$"
+      ]
+    },
+    {
+      "id": "sobolev-complete",
+      "topics": [
+        "analysis/weak-solutions",
+        "analysis/hilbert-spaces"
+      ],
+      "title": "H¹ 与 H¹_0 的完备性",
+      "statement": "H¹(Ω) 在自然内积下是 Hilbert 空间，H¹_0(Ω) 是其闭 Hilbert 子空间。",
+      "dependencies": [
+        "general-l2-complete",
+        "weak-derivative-unique",
+        "def-sobolev"
+      ],
+      "idea": "将柯西列的函数与各弱导数分别取 L² 极限，再把测试函数等式传给极限。",
+      "steps": [
+        "若 u_n 在 H¹ 中柯西，L² 完备性给 u_n→u、∂_i u_n→v_i 于各自 L²。对每个紧支撑光滑 φ，φ 与 ∂_iφ 平方可积，Cauchy—Schwarz 使测试等式两边都可取极限。",
+        "因此 ∫u∂_iφ=-∫v_iφ，v_i 正是 u 的弱导数，故 u∈H¹，且各分量收敛给 H¹ 范数收敛。弱导数唯一性保证内积定义与代表选择无关，正定性由函数 L² 范数项保证。",
+        "H¹_0 按定义是子空间的闭包，线性性由加法与数乘的范数连续性保留；闭子空间的柯西列极限仍在其中，所以也完备。$\\square$"
+      ]
+    },
+    {
+      "id": "poincare-box",
+      "topics": [
+        "analysis/weak-solutions",
+        "applied/finite-elements"
+      ],
+      "title": "有界域 H¹_0 的 Poincaré 不等式",
+      "statement": "若 Ω⊆[-R,R]^d 有界且 R>0，则对 u∈H¹_0(Ω)，‖u‖₂≤2R‖∇u‖₂。",
+      "dependencies": [
+        "sobolev-complete",
+        "tonelli-fubini",
+        "general-l2-complete",
+        "ftc-second"
+      ],
+      "idea": "先对光滑紧支撑函数沿一个坐标积分，再用闭包把估计延拓。",
+      "steps": [
+        "先令 u 光滑紧支撑于 Ω，在外部零延拓。固定其余坐标 x′，基本定理给 u(x₁,x′)=∫_-R^(x₁)∂₁u(s,x′)ds。Cauchy—Schwarz 给 |u(x₁,x′)|²≤2R∫_-R^R|∂₁u(s,x′)|²ds。",
+        "再对 x₁ 积分产生另一个 2R 因子，对 x′ 用非负 Fubini，得 ‖u‖₂²≤4R²‖∂₁u‖₂²≤4R²‖∇u‖₂²。",
+        "一般 H¹_0 元素由光滑紧支撑列在 H¹ 中逼近，函数与梯度的 L² 范数均收敛，不等式随极限保留。于是梯度范数与 H¹ 范数在 H¹_0 等价，因此使用梯度内积时仍完备。$\\square$"
+      ]
+    },
+    {
+      "id": "lax-milgram",
+      "topics": [
+        "analysis/weak-solutions",
+        "analysis/linear-operators",
+        "applied/finite-elements"
+      ],
+      "title": "Lax–Milgram 定理（实 Hilbert 空间）",
+      "statement": "实 Hilbert 空间 V 上双线性 a 满足 |a(u,v)|≤M‖u‖‖v‖ 与 a(v,v)≥α‖v‖²、α>0。则任意有界线性 ℓ 唯一对应 u∈V，使 a(u,v)=ℓ(v) 对全部 v，且 ‖u‖≤‖ℓ‖/α。",
+      "dependencies": [
+        "riesz-representation",
+        "projection-closed-subspace",
+        "general-l2-complete"
+      ],
+      "idea": "将双线性形式表示为一个有界算子，强制性使其像闭，而正交补只可能为零。",
+      "steps": [
+        "对固定 u，v↦a(u,v) 为有界泛函，Riesz 定理给唯一 Tu，使 a(u,v)=〈Tu,v〉。唯一性使 T 线性，且 ‖Tu‖≤M‖u‖。强制性与 Cauchy—Schwarz 给 α‖u‖²≤〈Tu,u〉≤‖Tu‖‖u‖，故 ‖Tu‖≥α‖u‖。",
+        "因此 T 单射。若 Tu_n 收敛，其柯西性与下界使 u_n 柯西，V 完备给 u_n→u，T 连续使像极限为 Tu，所以像闭。",
+        "若 w 与像正交，则对全部 u 有 a(u,w)=0，特别取 u=w 得 α‖w‖²≤0，所以 w=0。闭子空间投影定理说明一个闭子空间正交补为零时必为全空间，故 T 满射。",
+        "用 Riesz 将 ℓ 表示为 y，唯一解 Tu=y 即满足所有变分等式。又 α‖u‖²≤a(u,u)=ℓ(u)≤‖ℓ‖‖u‖，约去非零范数（零解直接成立）给估计。这里不要求 a 对称。$\\square$"
+      ]
+    },
+    {
+      "id": "poisson-weak-existence",
+      "topics": [
+        "analysis/pdes",
+        "analysis/weak-solutions",
+        "applied/pde-models"
+      ],
+      "title": "有界域 Poisson 零边值弱解",
+      "statement": "若 Ω 有界开，f∈L²(Ω)，则唯一存在 u∈H¹_0(Ω)，使 ∫∇u·∇v=∫fv 对全部 v∈H¹_0。",
+      "dependencies": [
+        "poincare-box",
+        "lax-milgram"
+      ],
+      "idea": "在梯度内积空间中使用 Lax–Milgram，并用 Poincaré 控制右端。",
+      "steps": [
+        "在 V=H¹_0 上用 ‖∇v‖₂ 为范数，前一定理保证其为完备内积空间。形式 a(u,v)=∫∇u·∇v 由 Cauchy—Schwarz 有界，且 a(v,v)=‖v‖²，所以 M=α=1。",
+        "右端 ℓ(v)=∫fv 满足 |ℓ(v)|≤‖f‖₂‖v‖₂≤2R‖f‖₂‖∇v‖₂，因此有界。Lax–Milgram 给唯一 u，并给 ‖∇u‖₂≤2R‖f‖₂。",
+        "对光滑紧支撑 v，弱导数定义把该等式翻译成分布意义的 -Δu=f；H¹_0 编码零边值。没有在证明中额外假定弱解自动有经典二阶导数。$\\square$"
+      ]
+    },
+    {
+      "id": "cea-lemma",
+      "topics": [
+        "applied/finite-elements",
+        "applied/mesh-discretization"
+      ],
+      "title": "Céa 引理与 Galerkin 最佳逼近界",
+      "statement": "在 Lax–Milgram 的假设下，任意有限维子空间 V_h 的 Galerkin 解 u_h 满足 ‖u-u_h‖≤(M/α)inf_(v_h∈V_h)‖u-v_h‖。",
+      "dependencies": [
+        "lax-milgram",
+        "finite-norm-equivalence"
+      ],
+      "idea": "原解与离散解相减得到 Galerkin 正交性，再将误差中的离散部分消去。",
+      "steps": [
+        "有限维子空间在 Hilbert 范数下完备，由相同有界与强制条件，Lax–Milgram 在 V_h 上给唯一 u_h。对全部 w_h∈V_h，原方程与离散方程相减得 a(u-u_h,w_h)=0。",
+        "令 e=u-u_h，任取 v_h。强制性给 α‖e‖²≤a(e,e)=a(e,u-v_h)+a(e,v_h-u_h)=a(e,u-v_h)，后项因正交性为零。",
+        "有界性给右侧≤M‖e‖‖u-v_h‖。若 e≠0 约去，否则结论直接成立，再对 v_h 取下确界即得估计。该证明说明离散空间逼近质量如何传给数值误差，不预设网格加密必然产生稠密空间。$\\square$"
+      ]
+    },
+    {
+      "id": "heat-kernel-solution",
+      "topics": [
+        "analysis/pdes",
+        "analysis/convolution",
+        "applied/reaction-diffusion"
+      ],
+      "title": "实线热方程的 Gaussian 核解与唯一性",
+      "statement": "给有界连续 f，u(t,x)=∫f(x-y)(4πt)⁻¹/²exp(-y²/(4t))dy 在 t>0 为经典热方程解 u_t=u_xx，t↓0 逐点趋 f。在有限时间窗上有界的经典解类中它唯一。",
+      "dependencies": [
+        "gaussian-integral",
+        "tonelli-fubini",
+        "dominated-convergence",
+        "affine-lebesgue-change"
+      ],
+      "idea": "直接微分 Gaussian 核，初值由近似恒等；唯一性在大盒子中使用带二次屏障的最大值论证。",
+      "steps": [
+        "核 K_t 非负且积分一，故 |u|≤‖f‖∞。改写 u=∫f(y)K_t(x-y)dy。任意 t≥δ>0 的紧时间区间内，核的一阶时间及二阶空间导数都由可积的多项式乘 Gaussian 控制，所以可在积分号下求导。直接计算得 ∂_tK_t=∂_xxK_t，故 u 满足方程。",
+        "换元得 u(t,x)=∫f(x-√(2t)z)g(z)dz。f 连续有界，DCT 给初值 f(x)；同一论证在 x 的紧区间一致成立，因为 f 在相应紧区间一致连续，Gaussian 尾部可统一控制。",
+        "设两有界解之差 w 初值零，固定有限时间 T，令 v=w-ε(x²+2t)-ηt，ε,η>0。取 R 足够大，使空间边界 ±R 上 v<0；初始边也非正。若 v 在盒内取得正最大值，时间向前或最终时刻的左导数非负，空间二阶导数非正，故 v_t-v_xx≥0。",
+        "但方程给 v_t-v_xx=-η<0，矛盾。故固定 (t,x) 有 w(t,x)≤ε(x²+2t)+ηt。先 η↓0 再 ε↓0 得 w≤0，对 -w 同样得 w≥0，故唯一。这里假设解连续延到初始边且整个有限时间窗有统一界。$\\square$"
+      ]
+    },
+    {
+      "id": "dalembert",
+      "topics": [
+        "analysis/pdes",
+        "analysis/initial-boundary",
+        "applied/pde-models"
+      ],
+      "title": "一维波动方程的 d’Alembert 公式",
+      "statement": "对 c>0、f∈C²(R)、g∈C¹(R)，初值 u(0,x)=f(x)、u_t(0,x)=g(x) 的全实线波动方程 u_tt=c²u_xx 有唯一 C² 解，给出为 [f(x-ct)+f(x+ct)]/2+(2c)⁻¹∫_(x-ct)^(x+ct)g(s)ds。",
+      "dependencies": [
+        "variable-integral",
+        "ftc-first",
+        "ftc-second",
+        "chain-rule"
+      ],
+      "idea": "特征坐标将方程化成一个混合二阶导数为零的方程。",
+      "steps": [
+        "按链式与变限积分公式直接求导，所列函数为 C²，满足 u_tt=c²u_xx；t=0 时两平移项合为 f，积分为零，一阶时间导数中两 f′ 抵消，变限项恰为 g。",
+        "证明唯一性：令 ξ=x+ct、η=x-ct。逆坐标是 x=(ξ+η)/2、t=(ξ-η)/(2c)。链式法则把方程化为 U_ξη=0。对任意矩形两次基本定理给 U(ξ,η)-U(ξ,0)-U(0,η)+U(0,0)=0，所以 U=F(ξ)+G(η)。",
+        "两解之差初始位移与速度均零，故 F(x)+G(x)=0 且 cF′(x)-cG′(x)=0。第一式求导并合并第二式，得 F′=G′=0；两常数互为相反，所以差为零。全部坐标在 R² 定义，得到全实线唯一性。$\\square$"
       ]
     },
     {
@@ -2949,6 +6477,233 @@ window.ATLAS.proofBook = {
       "steps": [
         "对 p_i>0，因为 p_i≤1，积分定义的 ln 在正数上递增，故 -p_i ln p_i≥0，约定 0ln0=0，得到熵非负。",
         "令 u_i=1/m。Gibbs 不等式给 0≤D(p‖u)=Σ_i p_i ln p_i+ln m=ln m-H(p)。等号条件是 p=u。换底是除以正常数 ln2，因此同样成立。$\\square$"
+      ]
+    },
+    {
+      "id": "pi-lambda",
+      "topics": [
+        "analysis/sigma-algebras",
+        "probability/probability-space"
+      ],
+      "title": "π—λ 定理",
+      "statement": "设 P 含全集且对有限交封闭，D 为包含 P 的 λ 系统（含全集、对补和不交可数并封闭），则 σ(P)⊆D。",
+      "dependencies": [
+        "axiom-measure"
+      ],
+      "idea": "在最小 λ 系统中先固定交的一边，再交换两边，最终得到有限交封闭。",
+      "steps": [
+        "令 L 为所有包含 P 的 λ 系统之交。交仍为 λ 系统，所以 L⊆D。任何 λ 系统对嵌套集合差封闭：若 A⊆B 都在其中，则 A 与 B 的补不交，其并的补为 B\\A。",
+        "固定 A∈P，令 L_A={B:A∩B∈L}。因 A∈L，嵌套差性质使 L_A 对补封闭，不交并也保持交的分配，所以它是 λ 系统。P 的交封闭使 P⊆L_A，最小性给 L⊆L_A。",
+        "再固定任意 B∈L，同样的类 {A:A∩B∈L} 是 λ 系统；上一段保证它含 P，故包含 L。因此 L 对有限交封闭。",
+        "有限交与补给有限并；对任意可数并，依次去掉此前有限并将其不交化，再用 λ 闭性。所以 L 是 σ 代数，包含 σ(P)。结合 L⊆D 即得结论。$\\square$"
+      ]
+    },
+    {
+      "id": "lotus",
+      "topics": [
+        "probability/distributions",
+        "probability/random-variables"
+      ],
+      "title": "分布推前与期望换元",
+      "statement": "随机变量 X 的分布 μ_X(A)=P(X∈A)。对非负可测 h，E[h(X)]=∫h dμ_X；对绝对可积实或复 h 同样成立。",
+      "dependencies": [
+        "simple-approximation",
+        "monotone-integral",
+        "integral-linearity"
+      ],
+      "idea": "指标函数正是推前测度定义；简单逼近把等式推广到一般可测函数。",
+      "steps": [
+        "若 h=1_A，等式为 P(X∈A)=μ_X(A)，按定义成立。对非负简单函数，有限线性性给出相同结论。",
+        "取 h_n 单调简单逼近 h，则 h_n(X)↑h(X)，两侧分别用单调收敛定理即得非负结论。对可积实函数拆正负部；复函数再拆实虚部，全部积分有限，线性性给所述等式。$\\square$"
+      ]
+    },
+    {
+      "id": "tonelli-fubini",
+      "topics": [
+        "analysis/lebesgue-integral",
+        "analysis/integration-limits",
+        "probability/distributions"
+      ],
+      "title": "Tonelli 与 Fubini 定理（给定 σ 有限乘积测度）",
+      "statement": "设 μ,ν 为 σ 有限测度，给定乘积 σ 代数上的测度 μ×ν，在可测矩形上取 μ(A)ν(B)。非负可测 f 的两个迭代积分相等且等于乘积积分；若 ∫|f|<∞，对实或复 f 也成立。这里不把乘积测度的存在性纳入该陈述。",
+      "dependencies": [
+        "pi-lambda",
+        "simple-approximation",
+        "monotone-integral",
+        "integral-linearity"
+      ],
+      "idea": "先对矩形指标验证，再用 λ 系统推广到所有可测集，最后用简单函数和单调逼近。",
+      "steps": [
+        "先设两个测度均有限。固定乘积可测集 E，其截面 E_x={y:(x,y)∈E} 可测：具有该截面性质的集合对补、可数并封闭，且含矩形，所以包含乘积 σ 代数。",
+        "令 D 为满足 x↦ν(E_x) 可测且其 μ 积分等于 (μ×ν)(E) 的集合。矩形满足该式。全集满足，取补时截面测度变为 ν(Y)-ν(E_x)，有限性与积分线性性保证等式保持；不交可数并时截面测度逐项相加，单调收敛保证等式保持。",
+        "故 D 为 λ 系统，矩形含全集并对交封闭，π—λ 定理使 D 包含全部乘积可测集。交换两变量也成立。因此对指标和非负简单函数已有迭代积分相等。",
+        "用非负简单函数 f_n↑f，在截面与整体上分别应用单调收敛，就得非负可测版本，同时得到迭代积分函数的可测性。",
+        "对 σ 有限情形，取递增有限测度覆盖 X_n、Y_n，对 f·1_(X_n×Y_n) 应用有限情形再用单调收敛，得到一般非负结论。绝对可积时对 |f| 先应用该结论，确保几乎处处截面可积，再分别拆正负部或实虚部；异常零集不影响最终积分。$\\square$"
+      ]
+    },
+    {
+      "id": "independent-bounded-products",
+      "topics": [
+        "probability/conditional-probability",
+        "probability/central-limit-theorem"
+      ],
+      "title": "相互独立变量的有界函数乘积期望",
+      "statement": "相互独立 X₁,…,X_n 及有界可测复函数 h_j 满足 E[∏h_j(X_j)]=∏E[h_j(X_j)]。",
+      "dependencies": [
+        "simple-approximation",
+        "monotone-integral",
+        "integral-linearity"
+      ],
+      "idea": "从独立事件的定义开始，把每个因子逐次推广到一般可测函数。",
+      "steps": [
+        "对 h_j 为指标函数，正是相互独立的定义；对非负简单函数，将有限乘积展开为指标乘积，有限线性性给结论。",
+        "对非负有界可测函数，各取单调简单逼近，有限个因子的乘积也单调趋向目标乘积，反复单调收敛得到等式。一般有界实函数拆正负部，复函数拆实虚部，有限次展开和线性性给出结论。$\\square$"
+      ]
+    },
+    {
+      "id": "one-dimensional-substitution",
+      "topics": [
+        "analysis/integration-calculus"
+      ],
+      "title": "连续积分的一维换元公式",
+      "statement": "若 φ 连续、g 为 C¹，且其值域位于 φ 的定义区间，则 ∫_a^b φ(g(t))g′(t)dt=∫_(g(a))^(g(b))φ(u)du。非负函数在单调换元下可通过有限区间极限处理无穷端点。",
+      "dependencies": [
+        "ftc-first",
+        "ftc-second",
+        "chain-rule",
+        "monotone-integral"
+      ],
+      "idea": "把被积函数写成某个变上限积分与 g 的复合导数。",
+      "steps": [
+        "固定起点 c，定义 F(u)=∫_c^u φ(s)ds。基本定理给 F′=φ，链式法则给 (F∘g)′=φ(g)g′。对该连续导数应用第二基本定理，得到左右端差，即所需公式。",
+        "对严格递增换元及非负连续函数，取逼近无穷端点的递增有限区间，有限公式逐段成立，单调收敛保证两边极限相等。递减换元反向后同理。这一扩展只在所列非负或已证绝对可积条件下使用。$\\square$"
+      ]
+    },
+    {
+      "id": "gaussian-integral",
+      "topics": [
+        "probability/distributions",
+        "analysis/fourier-transform"
+      ],
+      "title": "Gaussian 积分的值",
+      "statement": "∫_R exp(-x²/2)dx=√(2π)，其中 π=4∫₀¹(1+t²)⁻¹dt。",
+      "dependencies": [
+        "tonelli-fubini",
+        "one-dimensional-substitution",
+        "matrix-exponential"
+      ],
+      "idea": "用一次一维换元将象限双积分变成可直接计算的有理函数积分。",
+      "steps": [
+        "实指数由已证指数级数给出，正性可由 exp(x)=exp(x/2)² 与非零逆推出。对 |x|≥1，有 exp(-x²/2)≤exp(-|x|/2)，后者用原函数直接积分有限，所以积分 G 为正且有限。",
+        "由非负 Tonelli，G²/4=∫₀∞∫₀∞exp(-(x²+y²)/2)dydx。固定 x>0，作一维换元 y=tx，dy=xdt；x=0 是测度零，不影响积分。再交换非负积分，得到 ∫₀∞[∫₀∞x exp(-(1+t²)x²/2)dx]dt。",
+        "内积分用指数原函数或换元 u=(1+t²)x²/2 得 1/(1+t²)。故 G²/4=∫₀∞(1+t²)⁻¹dt。后一积分在 [1,∞) 作 t=1/s，等于 [0,1] 上同一积分，因此总值为 π/2。",
+        "于是 G²=2π，G>0 给 G=√(2π)。本计算使用的乘积测度为通常 Lebesgue 平面测度，矩形取面积乘积，满足前一定理假设；不依赖未展开的二维极坐标换元。$\\square$"
+      ]
+    },
+    {
+      "id": "gaussian-characteristic",
+      "topics": [
+        "probability/distributions",
+        "probability/central-limit-theorem",
+        "analysis/fourier-transform"
+      ],
+      "title": "标准正态的矩与特征函数",
+      "statement": "密度 g(x)=(2π)⁻¹/²exp(-x²/2) 定义概率分布，其均值为零、方差为一，特征函数为 φ(t)=exp(-t²/2)。",
+      "dependencies": [
+        "gaussian-integral",
+        "dominated-convergence",
+        "matrix-exponential",
+        "ftc-second",
+        "integral-linearity"
+      ],
+      "idea": "在积分号下求导，利用 g′=-xg 的分部积分得到一个一阶方程。",
+      "steps": [
+        "Gaussian 积分给归一化。指数衰减支配任意固定次数多项式：由正指数级数 exp(u)≥u^k/k!，可选足够大 k 控制尾部，因此所需矩及边界 x^j g(x) 的极限都存在且尾部趋零。对称性给均值零。",
+        "乘积求导与基本定理给有限区间分部积分，再让两端趋无穷，因边界 xg(x)→0，有 ∫x²g(x)dx=-∫xg′(x)dx=∫g(x)dx=1。",
+        "复指数满足 |exp(itx)|=1，因为其共轭为 exp(-itx) 且两者乘积一。差商绝对值受 |x| 控制，可由 exp(i(t+h)x)-exp(itx)=∫_t^(t+h)ix exp(isx)ds 验证；E|X| 有限，控制收敛允许对 φ 积分求导。",
+        "于是 φ′(t)=i∫x exp(itx)g(x)dx。分部积分及 g′=-xg 给 ∫x exp(itx)g=itφ(t)，所以 φ′=-tφ，φ(0)=1。乘 exp(t²/2) 后导数零，由中值定理逐实虚部得常数一，故 φ=exp(-t²/2)。$\\square$"
+      ]
+    },
+    {
+      "id": "characteristic-expansion",
+      "topics": [
+        "probability/central-limit-theorem",
+        "probability/expectation-variance"
+      ],
+      "title": "有限二阶矩的特征函数局部展开",
+      "statement": "若实随机变量 Y 满足 E[Y]=0、E[Y²]=1，则 φ_Y(u)=1-u²/2+o(u²)，u→0。",
+      "dependencies": [
+        "gaussian-characteristic",
+        "dominated-convergence",
+        "integral-linearity"
+      ],
+      "idea": "先对实指数作二阶展开，再用 Y² 作可积控制；不假设三阶矩。",
+      "steps": [
+        "两次积分指数导数给 exp(iz)=1+iz-z²∫₀¹(1-s)exp(isz)ds。因此 exp(iz)=1+iz-z²/2+z²r(z)，其中 r(z)=∫₀¹(1-s)[1-exp(isz)]ds，且 |r(z)|≤1、r(z)→0。",
+        "代入 z=uY，取期望并用均值与方差条件，得 φ_Y(u)=1-u²/2+u²E[Y²r(uY)]。因 |Y²r(uY)|≤Y² 可积、且逐点趋零，控制收敛使最后期望趋零，得到展开。$\\square$"
+      ]
+    },
+    {
+      "id": "binomial-exponential-limit",
+      "topics": [
+        "analysis/limits",
+        "probability/central-limit-theorem"
+      ],
+      "title": "复数二项式极限",
+      "statement": "若复数 a_n→a，则 (1+a_n/n)^n→exp(a)。",
+      "dependencies": [
+        "matrix-exponential"
+      ],
+      "idea": "二项式展开的每个固定次数系数趋于指数系数，统一尾部由指数级数控制。",
+      "steps": [
+        "取 B 使所有 |a_n|≤B。展开 (1+a_n/n)^n=Σ_(k=0)^n [n(n-1)…(n-k+1)/n^k]a_n^k/k!。固定 k，方括号趋于一，整个第 k 项趋于 a^k/k!。",
+        "每项绝对值≤B^k/k!，这个数值级数已证收敛。给定 ε，先选 K 使指数控制级数在 K 后的尾和小于 ε；有限的前 K 项逐项收敛，再合并两边尾部误差，得到极限为 Σa^k/k!=exp(a)。$\\square$"
+      ]
+    },
+    {
+      "id": "gaussian-smoothing",
+      "topics": [
+        "probability/central-limit-theorem",
+        "analysis/fourier-transform"
+      ],
+      "title": "Gaussian 平滑把特征函数极限转为分布极限",
+      "statement": "设 E[V_n]=0、E[V_n²]=1，且 φ_(V_n)(t)→exp(-t²/2) 对每个实 t 成立。则对每个 x，P(V_n≤x)→Φ(x)，Φ 为标准正态分布函数。",
+      "dependencies": [
+        "gaussian-characteristic",
+        "tonelli-fubini",
+        "dominated-convergence",
+        "chebyshev",
+        "independent-bounded-products"
+      ],
+      "idea": "先固定平滑尺度，用可积 Gaussian 核交换 Fourier 积分，再消去平滑噪声。",
+      "steps": [
+        "取独立标准正态 Z，或等价地在分布与正态的乘积概率空间中工作。对 ε>0，V_n+εZ 的密度为 p_n,ε(y)=E[g_ε(y-V_n)]，其中 g_ε(u)=ε⁻¹g(u/ε)。该密度表达由非负 Fubini 对事件积分直接验证。",
+        "由标准正态特征函数及一维换元，g_ε(u)=(2π)⁻¹∫_R exp(-itu)exp(-ε²t²/2)dt。将此式代入密度，绝对值由可积 exp(-ε²t²/2) 控制，Fubini 给 p_n,ε(y)=(2π)⁻¹∫exp(-ity)φ_(V_n)(t)exp(-ε²t²/2)dt。",
+        "|φ|≤1，控制收敛说明这些密度一致趋于 g_s，s=√(1+ε²)：两密度的全域上确界误差被 (2π)⁻¹∫|φ_(V_n)-exp(-t²/2)|exp(-ε²t²/2)dt 控制并趋零。极限核由同一 Gaussian 积分式识别。",
+        "为从密度到分布函数，先在有限区间 [-R,x] 积分用一致收敛。另一方面独立性与 EZ=0 给 E[(V_n+εZ)²]=1+ε²，因此 Markov 对平方的尾界统一控制 R 外概率≤(1+ε²)/R²。先 n→∞ 再 R→∞，得平滑分布函数趋于 N(0,1+ε²) 的分布函数。",
+        "任取 δ>0，有 P(V_n+εZ≤x-δ)-P(|εZ|>δ)≤P(V_n≤x)≤P(V_n+εZ≤x+δ)+P(|εZ|>δ)。这些包含关系逐样本检查即可。",
+        "令 δ=√ε。平方尾界使噪声概率≤ε。先取 n 的上下极限，再让 ε↓0，Gaussian 分布函数的连续性及一维换元使左右界都趋 Φ(x)。所以原分布函数也趋 Φ(x)。本结论利用了统一二阶矩界，不声称已经证明最一般的 Lévy 连续性定理。$\\square$"
+      ]
+    },
+    {
+      "id": "iid-central-limit",
+      "topics": [
+        "probability/central-limit-theorem"
+      ],
+      "title": "独立同分布有限方差中心极限定理",
+      "statement": "若 X_i 独立同分布，均值 μ、方差 0<σ²<∞，则 (Σ_(i=1)^nX_i-nμ)/(σ√n) 依分布收敛于 N(0,1)。",
+      "dependencies": [
+        "characteristic-expansion",
+        "binomial-exponential-limit",
+        "gaussian-smoothing",
+        "independent-bounded-products",
+        "variance-mean"
+      ],
+      "idea": "局部二阶展开给标准化和的特征函数极限，平滑引理将其变成分布收敛。",
+      "steps": [
+        "令 Y_i=(X_i-μ)/σ，故均值零、方差一。写 V_n=n⁻¹/²ΣY_i。独立乘积期望给 φ_(V_n)(t)=[φ_Y(t/√n)]^n。",
+        "固定 t，二阶展开给 φ_Y(t/√n)=1-t²/(2n)+o(1/n)。因此可写为 1+a_n/n，a_n→-t²/2。复二项式极限给 φ_(V_n)(t)→exp(-t²/2)。",
+        "独立方差计算使 E[V_n²]=1。Gaussian 平滑引理的全部条件已满足，于是对每个 x 有 P(V_n≤x)→Φ(x)。标准正态分布函数连续，所以这就是所述依分布收敛。证明不需要三阶矩；无限方差分布不在适用范围内。$\\square$"
       ]
     },
     {

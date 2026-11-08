@@ -1,5 +1,5 @@
 {
-  "proofCount": 167,
+  "proofCount": 362,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -132,8 +132,10 @@
       "name": "共形映射",
       "subject": "分析",
       "branch": "复分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cr-angle-preservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -142,7 +144,8 @@
       "subject": "分析",
       "branch": "微积分",
       "proofIds": [
-        "limit-unique"
+        "limit-unique",
+        "binomial-exponential-limit"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -173,7 +176,8 @@
         "continuous-riemann",
         "riemann-linearity",
         "riemann-additivity",
-        "convex-primitive"
+        "convex-primitive",
+        "one-dimensional-substitution"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -206,8 +210,10 @@
       "name": "σ 代数",
       "subject": "分析",
       "branch": "测度与积分",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "pi-lambda"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -217,6 +223,7 @@
       "branch": "测度与积分",
       "proofIds": [
         "measure-continuity",
+        "affine-lebesgue-change",
         "measure-continuity-above",
         "countable-union-bound"
       ],
@@ -243,7 +250,8 @@
         "simple-approximation",
         "monotone-integral",
         "integral-linearity",
-        "dominated-convergence"
+        "dominated-convergence",
+        "tonelli-fubini"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -257,7 +265,8 @@
         "uniform-integration",
         "monotone-integral",
         "fatou",
-        "dominated-convergence"
+        "dominated-convergence",
+        "tonelli-fubini"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -271,7 +280,8 @@
         "linear-bounded-continuous",
         "compact-metric-subsequence",
         "sequential-metric-compact",
-        "finite-norm-equivalence"
+        "finite-norm-equivalence",
+        "general-l2-complete"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -299,6 +309,12 @@
         "gram-schmidt",
         "projection-closed-subspace",
         "riesz-representation",
+        "plancherel-schwartz",
+        "general-l2-complete",
+        "schwartz-density",
+        "plancherel-l2",
+        "haar-basis",
+        "sobolev-complete",
         "l2-completeness"
       ],
       "coverage": "partial",
@@ -325,7 +341,9 @@
         "riesz-representation",
         "linear-bounded-continuous",
         "matrix-exponential",
-        "neumann-series"
+        "neumann-series",
+        "young-l1-l2",
+        "lax-milgram"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -335,8 +353,11 @@
       "name": "傅里叶级数",
       "subject": "分析",
       "branch": "调和分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fejer-uniform-convergence",
+        "fourier-coefficient-uniqueness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -344,8 +365,19 @@
       "name": "傅里叶变换",
       "subject": "分析",
       "branch": "调和分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fourier-schwartz",
+        "fourier-inversion",
+        "plancherel-schwartz",
+        "schwartz-density",
+        "plancherel-l2",
+        "heisenberg-uncertainty",
+        "fejer-uniform-convergence",
+        "gaussian-integral",
+        "gaussian-characteristic",
+        "gaussian-smoothing"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -353,8 +385,13 @@
       "name": "卷积",
       "subject": "分析",
       "branch": "调和分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "affine-lebesgue-change",
+        "convolution-l1",
+        "young-l1-l2",
+        "heat-kernel-solution"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -362,8 +399,11 @@
       "name": "小波",
       "subject": "分析",
       "branch": "调和分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "haar-basis",
+        "stft-moyal"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -371,8 +411,11 @@
       "name": "时频分析",
       "subject": "分析",
       "branch": "调和分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "stft-moyal",
+        "heisenberg-uncertainty"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -382,7 +425,10 @@
       "branch": "微分方程",
       "proofIds": [
         "banach-contraction",
-        "picard-lindelof"
+        "picard-lindelof",
+        "gronwall-discrete",
+        "ode-flow-semigroup",
+        "illposed-differentiation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -392,8 +438,13 @@
       "name": "偏微分方程",
       "subject": "分析",
       "branch": "微分方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "heat-maximum-principle",
+        "poisson-weak-existence",
+        "heat-kernel-solution",
+        "dalembert"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -402,7 +453,8 @@
       "subject": "分析",
       "branch": "微分方程",
       "proofIds": [
-        "picard-lindelof"
+        "picard-lindelof",
+        "dalembert"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -412,8 +464,14 @@
       "name": "弱解",
       "subject": "分析",
       "branch": "微分方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "weak-derivative-unique",
+        "sobolev-complete",
+        "poincare-box",
+        "lax-milgram",
+        "poisson-weak-existence"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -421,8 +479,10 @@
       "name": "稳定性",
       "subject": "分析",
       "branch": "微分方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "gronwall-discrete"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -430,8 +490,10 @@
       "name": "相空间",
       "subject": "分析",
       "branch": "动力系统",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "ode-flow-semigroup"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -439,8 +501,10 @@
       "name": "平衡点与周期轨道",
       "subject": "分析",
       "branch": "动力系统",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "saddle-node-normal-form"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -448,8 +512,10 @@
       "name": "分岔",
       "subject": "分析",
       "branch": "动力系统",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "saddle-node-normal-form"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -457,8 +523,10 @@
       "name": "混沌",
       "subject": "分析",
       "branch": "动力系统",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "logistic-map-tent-conjugacy"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -466,8 +534,10 @@
       "name": "遍历性",
       "subject": "分析",
       "branch": "动力系统",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-two-state-ergodic"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -475,8 +545,10 @@
       "name": "命题逻辑",
       "subject": "逻辑与数学基础",
       "branch": "数理逻辑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "propositional-completeness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -495,8 +567,10 @@
       "name": "形式语言",
       "subject": "逻辑与数学基础",
       "branch": "数理逻辑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "syntax-parse-substitute"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -504,8 +578,13 @@
       "name": "可靠性与完备性",
       "subject": "逻辑与数学基础",
       "branch": "数理逻辑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fol-soundness",
+        "fol-completeness-compactness",
+        "propositional-completeness",
+        "relative-consistency-model"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -513,8 +592,10 @@
       "name": "初等等价",
       "subject": "逻辑与数学基础",
       "branch": "数理逻辑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "dlo-equivalence"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -544,8 +625,10 @@
       "name": "序数",
       "subject": "逻辑与数学基础",
       "branch": "集合论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "transfinite-induction"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -553,8 +636,10 @@
       "name": "序数分析",
       "subject": "逻辑与数学基础",
       "branch": "集合论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "transfinite-induction"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -562,8 +647,10 @@
       "name": "ZFC 公理",
       "subject": "逻辑与数学基础",
       "branch": "集合论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "zfc-extensionality-pair-uniqueness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -571,8 +658,10 @@
       "name": "独立性",
       "subject": "逻辑与数学基础",
       "branch": "集合论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "semantic-independence-models"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -580,8 +669,17 @@
       "name": "形式证明",
       "subject": "逻辑与数学基础",
       "branch": "证明论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fol-soundness",
+        "fol-deduction",
+        "finite-proof-checking",
+        "sequent-calculus-soundness",
+        "provability-d1",
+        "provability-d2",
+        "provability-d3",
+        "loeb-theorem"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -589,8 +687,10 @@
       "name": "自然演绎",
       "subject": "逻辑与数学基础",
       "branch": "证明论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fol-deduction"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -598,8 +698,11 @@
       "name": "相继式演算",
       "subject": "逻辑与数学基础",
       "branch": "证明论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sequent-calculus-soundness",
+        "propositional-cut-elimination"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -607,8 +710,10 @@
       "name": "切消定理",
       "subject": "逻辑与数学基础",
       "branch": "证明论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "propositional-cut-elimination"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -616,8 +721,10 @@
       "name": "图灵归约",
       "subject": "逻辑与数学基础",
       "branch": "证明论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "oracle-transitivity"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -625,8 +732,11 @@
       "name": "图灵机",
       "subject": "逻辑与数学基础",
       "branch": "可计算性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "oracle-transitivity",
+        "enumeration-semidecision"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -658,7 +768,8 @@
       "subject": "逻辑与数学基础",
       "branch": "可计算性",
       "proofIds": [
-        "semi-decision-complement"
+        "semi-decision-complement",
+        "enumeration-semidecision"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -702,8 +813,10 @@
       "name": "伴随",
       "subject": "逻辑与数学基础",
       "branch": "范畴论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "adjoint-unique"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -712,6 +825,7 @@
       "subject": "逻辑与数学基础",
       "branch": "范畴论",
       "proofIds": [
+        "adjoint-unique",
         "universal-unique"
       ],
       "coverage": "partial",
@@ -722,8 +836,10 @@
       "name": "公理化方法",
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fol-soundness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -731,8 +847,11 @@
       "name": "第一不完备性",
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "arithmetical-diagonal-lemma",
+        "godel-first-sound-theory"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -740,8 +859,14 @@
       "name": "第二不完备性",
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "provability-d1",
+        "provability-d2",
+        "provability-d3",
+        "loeb-theorem",
+        "godel-second-incompleteness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -749,8 +874,10 @@
       "name": "相容性",
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "henkin-witness-consistency"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -758,8 +885,10 @@
       "name": "相对相容性",
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "relative-consistency-model"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -767,8 +896,10 @@
       "name": "命题即类型",
       "subject": "逻辑与数学基础",
       "branch": "类型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "stlc-substitution"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -776,8 +907,10 @@
       "name": "简单类型",
       "subject": "逻辑与数学基础",
       "branch": "类型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "stlc-substitution"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -785,8 +918,10 @@
       "name": "依赖类型",
       "subject": "逻辑与数学基础",
       "branch": "类型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "list-induction-length"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -794,8 +929,10 @@
       "name": "归纳类型",
       "subject": "逻辑与数学基础",
       "branch": "类型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "list-induction-length"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -803,8 +940,10 @@
       "name": "证明助理",
       "subject": "逻辑与数学基础",
       "branch": "类型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-proof-checking"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -812,8 +951,11 @@
       "name": "结构与解释",
       "subject": "逻辑与数学基础",
       "branch": "模型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "syntax-parse-substitute",
+        "henkin-model"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -821,8 +963,11 @@
       "name": "满足关系",
       "subject": "逻辑与数学基础",
       "branch": "模型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "syntax-parse-substitute",
+        "henkin-model"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -830,8 +975,14 @@
       "name": "模型的分类",
       "subject": "逻辑与数学基础",
       "branch": "模型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "henkin-witness-consistency",
+        "henkin-extension",
+        "henkin-model",
+        "dlo-equivalence",
+        "semantic-independence-models"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -839,8 +990,11 @@
       "name": "紧致性定理",
       "subject": "逻辑与数学基础",
       "branch": "模型论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "henkin-extension",
+        "fol-completeness-compactness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -862,7 +1016,8 @@
       "branch": "群论",
       "proofIds": [
         "first-isomorphism",
-        "galois-normal-quotient"
+        "galois-normal-quotient",
+        "module-first-isomorphism"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -921,6 +1076,8 @@
         "ideal-quotient",
         "maximal-prime-quotient",
         "polynomial-bezout",
+        "integer-ideal-factorization",
+        "pid-class-group-trivial",
         "noetherian-equivalence"
       ],
       "coverage": "partial",
@@ -937,6 +1094,8 @@
         "polynomial-bezout",
         "irreducible-extension",
         "fundamental-algebra",
+        "rational-root-theorem",
+        "quadratic-radical-formula",
         "hilbert-basis"
       ],
       "coverage": "partial",
@@ -1013,8 +1172,10 @@
       "name": "李群",
       "subject": "代数",
       "branch": "李群与李代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "so3-lie-algebra"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1023,6 +1184,7 @@
       "subject": "代数",
       "branch": "李群与李代数",
       "proofIds": [
+        "so3-lie-algebra",
         "commutator-jacobi"
       ],
       "coverage": "partial",
@@ -1067,8 +1229,10 @@
       "name": "旋转群",
       "subject": "代数",
       "branch": "李群与李代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "so3-lie-algebra"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1125,8 +1289,10 @@
       "name": "Ext 与 Tor",
       "subject": "代数",
       "branch": "同调代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "tor-cyclic-groups"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1146,8 +1312,10 @@
       "name": "局部化",
       "subject": "代数",
       "branch": "交换代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "localization-module-universal"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1155,8 +1323,12 @@
       "name": "模",
       "subject": "代数",
       "branch": "交换代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "module-first-isomorphism",
+        "localization-module-universal",
+        "tor-cyclic-groups"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1175,8 +1347,10 @@
       "name": "维数理论",
       "subject": "代数",
       "branch": "交换代数",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "dimension-theorem-vector"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1227,8 +1401,11 @@
       "name": "根式可解性",
       "subject": "代数",
       "branch": "伽罗瓦理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "quadratic-radical-formula",
+        "quintic-binomial-radicals"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1236,8 +1413,10 @@
       "name": "一般五次方程",
       "subject": "代数",
       "branch": "伽罗瓦理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "quintic-binomial-radicals"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1262,7 +1441,8 @@
       "proofIds": [
         "basis-extension",
         "rank-nullity",
-        "gram-schmidt"
+        "gram-schmidt",
+        "dimension-theorem-vector"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1298,7 +1478,8 @@
       "proofIds": [
         "finite-dimensional-compactness",
         "hermitian-spectral",
-        "normal-spectral"
+        "normal-spectral",
+        "quantum-hermitian-real-spectrum"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1311,7 +1492,9 @@
       "proofIds": [
         "prime-divisor",
         "euclid-lemma",
-        "unique-factorization"
+        "unique-factorization",
+        "prime-infinite-euclid",
+        "wilson-primality-test"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1323,7 +1506,8 @@
       "branch": "初等数论",
       "proofIds": [
         "division-algorithm",
-        "bezout"
+        "bezout",
+        "euclid-loop"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1371,8 +1555,10 @@
       "name": "勾股数",
       "subject": "数论",
       "branch": "初等数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "pythagorean-parametrization"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1380,8 +1566,12 @@
       "name": "素数计数",
       "subject": "数论",
       "branch": "解析数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "prime-infinite-euclid",
+        "zeta-euler-product",
+        "euler-reciprocal-primes-diverges"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1389,8 +1579,18 @@
       "name": "素数定理",
       "subject": "数论",
       "branch": "解析数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "euler-reciprocal-primes-diverges",
+        "zeta-euler-product-complex",
+        "zeta-continuation-right-half",
+        "chebyshev-theta-upper",
+        "zeta-nonzero-one-line",
+        "newman-tauberian",
+        "theta-asymptotic-prime-theorem",
+        "prime-number-theorem-proof",
+        "pnt-prime-index-equivalence"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1398,8 +1598,10 @@
       "name": "指数和",
       "subject": "数论",
       "branch": "解析数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "prime-exponential-sum-geometric"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1407,8 +1609,10 @@
       "name": "ζ 与 L 函数",
       "subject": "数论",
       "branch": "解析数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "zeta-euler-product"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1416,8 +1620,10 @@
       "name": "筛法",
       "subject": "数论",
       "branch": "解析数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sieve-inclusion-exclusion"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1425,8 +1631,10 @@
       "name": "代数数与数域",
       "subject": "数论",
       "branch": "代数数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rational-algebraic-integer"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1434,8 +1642,10 @@
       "name": "代数整数",
       "subject": "数论",
       "branch": "代数数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rational-algebraic-integer"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1443,8 +1653,10 @@
       "name": "理想分解",
       "subject": "数论",
       "branch": "代数数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "integer-ideal-factorization"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1452,8 +1664,10 @@
       "name": "局部域",
       "subject": "数论",
       "branch": "代数数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "padic-ultrametric"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1461,8 +1675,10 @@
       "name": "类群",
       "subject": "数论",
       "branch": "代数数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "pid-class-group-trivial"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1483,8 +1699,11 @@
       "name": "椭圆曲线",
       "subject": "数论",
       "branch": "算术几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "elliptic-curve-inverse",
+        "modularity-local-coefficients"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1492,8 +1711,10 @@
       "name": "代数簇",
       "subject": "数论",
       "branch": "算术几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rational-point-algebraic-variety"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1501,8 +1722,10 @@
       "name": "阿贝尔簇",
       "subject": "数论",
       "branch": "算术几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "abelian-multiplication-morphism"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1534,8 +1757,10 @@
       "name": "π 与 e",
       "subject": "数论",
       "branch": "超越数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "e-irrational"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1543,8 +1768,10 @@
       "name": "高度",
       "subject": "数论",
       "branch": "超越数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "dirichlet-rational-approximation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1574,8 +1801,11 @@
       "name": "模变换",
       "subject": "数论",
       "branch": "模形式",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "mobius-upper-half-plane",
+        "hyperbolic-mobius-isometry"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1583,8 +1813,10 @@
       "name": "尖点形式",
       "subject": "数论",
       "branch": "模形式",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cusp-form-constant-term"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1592,8 +1824,10 @@
       "name": "Hecke 算子",
       "subject": "数论",
       "branch": "模形式",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hecke-q-expansion-formula"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1601,8 +1835,12 @@
       "name": "傅里叶展开",
       "subject": "数论",
       "branch": "模形式",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cusp-form-constant-term",
+        "fourier-coefficient-uniqueness",
+        "hecke-q-expansion-formula"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1610,8 +1848,10 @@
       "name": "模性联系",
       "subject": "数论",
       "branch": "模形式",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "modularity-local-coefficients"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1632,6 +1872,7 @@
       "branch": "计算数论",
       "proofIds": [
         "fermat-little",
+        "rsa-correctness",
         "totient-product"
       ],
       "coverage": "partial",
@@ -1642,8 +1883,11 @@
       "name": "素性检验",
       "subject": "数论",
       "branch": "计算数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "wilson-primality-test",
+        "sieve-trial-factorization-complexity"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1651,8 +1895,10 @@
       "name": "整数分解",
       "subject": "数论",
       "branch": "计算数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sieve-trial-factorization-complexity"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1660,8 +1906,10 @@
       "name": "格方法",
       "subject": "数论",
       "branch": "计算数论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "dirichlet-rational-approximation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1680,8 +1928,11 @@
       "name": "有理点",
       "subject": "数论",
       "branch": "丢番图方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rational-unit-circle-points",
+        "rational-point-algebraic-variety"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1689,8 +1940,12 @@
       "name": "整系数方程",
       "subject": "数论",
       "branch": "丢番图方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rational-root-theorem",
+        "rational-unit-circle-points",
+        "local-obstruction-square-three"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1698,8 +1953,10 @@
       "name": "局部可解性",
       "subject": "数论",
       "branch": "丢番图方程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "local-obstruction-square-three"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1718,8 +1975,10 @@
       "name": "公理与平行",
       "subject": "几何与拓扑",
       "branch": "欧氏与非欧几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "covering-sphere-great-circles"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1727,8 +1986,10 @@
       "name": "双曲几何",
       "subject": "几何与拓扑",
       "branch": "欧氏与非欧几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hyperbolic-mobius-isometry"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1736,8 +1997,10 @@
       "name": "球面几何",
       "subject": "几何与拓扑",
       "branch": "欧氏与非欧几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "covering-sphere-great-circles"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1745,8 +2008,10 @@
       "name": "射影几何",
       "subject": "几何与拓扑",
       "branch": "欧氏与非欧几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-projective-plane"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1754,8 +2019,11 @@
       "name": "光滑流形",
       "subject": "几何与拓扑",
       "branch": "微分几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "inverse-function-one-dimension",
+        "smooth-atlas-transition-cocycle"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1763,8 +2031,10 @@
       "name": "切空间",
       "subject": "几何与拓扑",
       "branch": "微分几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "weak-derivative-unique"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1772,8 +2042,10 @@
       "name": "曲线与曲面",
       "subject": "几何与拓扑",
       "branch": "微分几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "inverse-function-one-dimension"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1781,8 +2053,11 @@
       "name": "曲率与测地线",
       "subject": "几何与拓扑",
       "branch": "微分几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "levi-civita-existence",
+        "gaussian-curvature-geodesic-speed"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1790,8 +2065,12 @@
       "name": "黎曼度量",
       "subject": "几何与拓扑",
       "branch": "微分几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "levi-civita-existence",
+        "gaussian-curvature-geodesic-speed",
+        "riemannian-distance-symmetry"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1841,8 +2120,10 @@
       "name": "商空间",
       "subject": "几何与拓扑",
       "branch": "一般拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "quotient-universal-property"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1862,8 +2143,13 @@
       "name": "基本群",
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "contractible-fundamental-group",
+        "covering-path-lift-uniqueness",
+        "unknot-complement-fundamental-group",
+        "circle-fundamental-group"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1882,8 +2168,11 @@
       "name": "同调群",
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cohomology-d-square-zero",
+        "chain-components-h0"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1891,8 +2180,10 @@
       "name": "上同调",
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cohomology-d-square-zero"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1900,8 +2191,10 @@
       "name": "纤维化",
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "covering-path-lift-uniqueness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1909,8 +2202,13 @@
       "name": "代数簇",
       "subject": "几何与拓扑",
       "branch": "代数几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "singular-cusp-jacobian",
+        "birational-open-isomorphism",
+        "coordinate-ring-point-evaluation",
+        "abelian-multiplication-morphism"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1918,8 +2216,11 @@
       "name": "坐标环",
       "subject": "几何与拓扑",
       "branch": "代数几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "coordinate-ring-point-evaluation",
+        "scheme-local-ring-definition"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1927,8 +2228,10 @@
       "name": "概形",
       "subject": "几何与拓扑",
       "branch": "代数几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "scheme-local-ring-definition"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1936,8 +2239,10 @@
       "name": "奇点",
       "subject": "几何与拓扑",
       "branch": "代数几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "singular-cusp-jacobian"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1945,8 +2250,10 @@
       "name": "双有理几何",
       "subject": "几何与拓扑",
       "branch": "代数几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "birational-open-isomorphism"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1954,8 +2261,11 @@
       "name": "低维拓扑",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "surgery-handle-euler-change",
+        "circle-fundamental-group"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1963,8 +2273,10 @@
       "name": "纽结理论",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "unknot-complement-fundamental-group"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1972,8 +2284,10 @@
       "name": "流形分类",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "compact-oriented-one-manifold-circle"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1981,8 +2295,10 @@
       "name": "手术理论",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "surgery-handle-euler-change"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1990,8 +2306,11 @@
       "name": "微分结构",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "smooth-atlas-transition-cocycle",
+        "compact-oriented-one-manifold-circle"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -1999,8 +2318,10 @@
       "name": "堆积与覆盖",
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "packing-interval-bound"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2020,8 +2341,10 @@
       "name": "多面体",
       "subject": "几何与拓扑",
       "branch": "凸与离散几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "euler-polyhedron-formula"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2029,8 +2352,10 @@
       "name": "剖分与三角化",
       "subject": "几何与拓扑",
       "branch": "凸与离散几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "euler-polyhedron-formula"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2038,8 +2363,10 @@
       "name": "欧拉示性数",
       "subject": "几何与拓扑",
       "branch": "凸与离散几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "euler-polyhedron-formula"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2047,8 +2374,10 @@
       "name": "辛形式",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "symplectic-volume-preservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2056,8 +2385,11 @@
       "name": "辛变换",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "symplectic-volume-preservation",
+        "symplectic-nonsqueezing-volume-invariant"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2065,8 +2397,11 @@
       "name": "哈密顿系统",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hamiltonian-energy-conservation",
+        "moment-map-component-conservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2074,8 +2409,10 @@
       "name": "拉格朗日子流形",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cyclic-coordinate-momentum"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2083,8 +2420,10 @@
       "name": "动量映射",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "moment-map-component-conservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2092,8 +2431,10 @@
       "name": "辛拓扑",
       "subject": "几何与拓扑",
       "branch": "辛几何",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "symplectic-nonsqueezing-volume-invariant"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2163,7 +2504,9 @@
         "convex-intersection",
         "convex-local-global",
         "strict-convex-unique",
-        "convex-projection"
+        "convex-projection",
+        "least-squares-normal-equations",
+        "markowitz-min-variance"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2208,8 +2551,10 @@
       "name": "调度与决策",
       "subject": "应用与计算数学",
       "branch": "优化与运筹",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "branch-bound"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2217,8 +2562,10 @@
       "name": "不适定性",
       "subject": "应用与计算数学",
       "branch": "逆问题",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "illposed-differentiation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2226,8 +2573,10 @@
       "name": "可辨识性",
       "subject": "应用与计算数学",
       "branch": "逆问题",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "identifiability-injective-map"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2235,8 +2584,10 @@
       "name": "参数反演",
       "subject": "应用与计算数学",
       "branch": "逆问题",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "identifiability-injective-map"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2244,8 +2595,11 @@
       "name": "成像与重建",
       "subject": "应用与计算数学",
       "branch": "逆问题",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "fourier-inversion",
+        "convolution-l1"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2264,8 +2618,12 @@
       "name": "状态空间",
       "subject": "应用与计算数学",
       "branch": "控制理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "linear-controllability-kalman",
+        "linear-observability-dual",
+        "scalar-feedback-stabilization"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2273,8 +2631,11 @@
       "name": "可控与可观",
       "subject": "应用与计算数学",
       "branch": "控制理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "linear-controllability-kalman",
+        "linear-observability-dual"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2282,8 +2643,11 @@
       "name": "反馈控制",
       "subject": "应用与计算数学",
       "branch": "控制理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "scalar-feedback-stabilization",
+        "scalar-robust-stability"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2291,8 +2655,10 @@
       "name": "鲁棒控制",
       "subject": "应用与计算数学",
       "branch": "控制理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "scalar-robust-stability"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2300,8 +2666,10 @@
       "name": "最优控制",
       "subject": "应用与计算数学",
       "branch": "控制理论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "euler-lagrange-variation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2309,8 +2677,13 @@
       "name": "经典力学",
       "subject": "应用与计算数学",
       "branch": "数学物理",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hamiltonian-energy-conservation",
+        "cyclic-coordinate-momentum",
+        "euler-lagrange-variation",
+        "noether-symmetry-conservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2318,8 +2691,10 @@
       "name": "量子理论",
       "subject": "应用与计算数学",
       "branch": "数学物理",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "quantum-hermitian-real-spectrum"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2327,8 +2702,10 @@
       "name": "统计力学",
       "subject": "应用与计算数学",
       "branch": "数学物理",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "partition-energy-derivative"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2336,8 +2713,10 @@
       "name": "对称与守恒",
       "subject": "应用与计算数学",
       "branch": "数学物理",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "noether-symmetry-conservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2345,8 +2724,10 @@
       "name": "网格与离散化",
       "subject": "应用与计算数学",
       "branch": "科学计算",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cea-lemma"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2355,7 +2736,10 @@
       "subject": "应用与计算数学",
       "branch": "科学计算",
       "proofIds": [
-        "heat-explicit-stability"
+        "heat-explicit-stability",
+        "heat-maximum-principle",
+        "poisson-weak-existence",
+        "dalembert"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2377,8 +2761,12 @@
       "name": "有限元",
       "subject": "应用与计算数学",
       "branch": "科学计算",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "poincare-box",
+        "lax-milgram",
+        "cea-lemma"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2397,8 +2785,10 @@
       "name": "随机价格模型",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "binomial-risk-neutral-pricing"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2406,8 +2796,10 @@
       "name": "无套利定价",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "binomial-risk-neutral-pricing"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2415,8 +2807,10 @@
       "name": "对冲与复制",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "binomial-risk-neutral-pricing"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2424,8 +2818,10 @@
       "name": "蒙特卡洛",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "monte-carlo-mean-variance"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2433,8 +2829,10 @@
       "name": "风险度量",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "var-monotonicity-translation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2442,8 +2840,10 @@
       "name": "最优配置",
       "subject": "应用与计算数学",
       "branch": "金融数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "markowitz-min-variance"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2451,8 +2851,10 @@
       "name": "种群动力学",
       "subject": "应用与计算数学",
       "branch": "生物数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sirs-threshold-equilibrium"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2460,8 +2862,10 @@
       "name": "传染病模型",
       "subject": "应用与计算数学",
       "branch": "生物数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sirs-threshold-equilibrium"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2469,8 +2873,10 @@
       "name": "反应扩散",
       "subject": "应用与计算数学",
       "branch": "生物数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "heat-kernel-solution"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2478,8 +2884,10 @@
       "name": "生物网络",
       "subject": "应用与计算数学",
       "branch": "生物数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "incidence-mass-conservation"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2487,8 +2895,10 @@
       "name": "参数校准",
       "subject": "应用与计算数学",
       "branch": "生物数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "least-squares-normal-equations"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2507,8 +2917,10 @@
       "name": "生成函数",
       "subject": "离散数学与计算",
       "branch": "组合数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "formal-generating-recurrence"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2516,8 +2928,11 @@
       "name": "递推关系",
       "subject": "离散数学与计算",
       "branch": "组合数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "formal-generating-recurrence",
+        "master-polynomial"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2525,8 +2940,10 @@
       "name": "概率方法",
       "subject": "离散数学与计算",
       "branch": "组合数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "probabilistic-existence-maxcut"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2534,8 +2951,10 @@
       "name": "极值组合",
       "subject": "离散数学与计算",
       "branch": "组合数学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "mantel"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2566,8 +2985,11 @@
       "name": "路径与连通",
       "subject": "离散数学与计算",
       "branch": "图论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "maxflow-mincut",
+        "vertex-menger"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2575,8 +2997,10 @@
       "name": "匹配与着色",
       "subject": "离散数学与计算",
       "branch": "图论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2584,8 +3008,10 @@
       "name": "谱图论",
       "subject": "离散数学与计算",
       "branch": "图论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "laplacian-components"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2593,8 +3019,10 @@
       "name": "偏序集",
       "subject": "离散数学与计算",
       "branch": "离散结构",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-poset-linear-extension"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2602,8 +3030,10 @@
       "name": "格",
       "subject": "离散数学与计算",
       "branch": "离散结构",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-birkhoff"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2611,8 +3041,10 @@
       "name": "布尔代数",
       "subject": "离散数学与计算",
       "branch": "离散结构",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-boolean-atoms"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2620,8 +3052,10 @@
       "name": "有限几何",
       "subject": "离散数学与计算",
       "branch": "离散结构",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-projective-plane"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2629,8 +3063,10 @@
       "name": "组合设计",
       "subject": "离散数学与计算",
       "branch": "离散结构",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "design-fisher"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2638,8 +3074,11 @@
       "name": "时间与空间",
       "subject": "离散数学与计算",
       "branch": "计算复杂性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "reductions-transitive",
+        "cook-levin"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2658,8 +3097,11 @@
       "name": "NP 完全性",
       "subject": "离散数学与计算",
       "branch": "计算复杂性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "cook-levin",
+        "three-sat-clique"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2667,8 +3109,10 @@
       "name": "近似算法",
       "subject": "离散数学与计算",
       "branch": "计算复杂性",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "greedy-set-cover"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2677,7 +3121,9 @@
       "subject": "离散数学与计算",
       "branch": "算法设计",
       "proofIds": [
-        "greedy-mst"
+        "greedy-mst",
+        "dijkstra",
+        "greedy-set-cover"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2687,8 +3133,10 @@
       "name": "分治",
       "subject": "离散数学与计算",
       "branch": "算法设计",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "master-polynomial"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2696,8 +3144,11 @@
       "name": "动态规划",
       "subject": "离散数学与计算",
       "branch": "算法设计",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "bellman-ford",
+        "held-karp"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2705,8 +3156,10 @@
       "name": "随机算法",
       "subject": "离散数学与计算",
       "branch": "算法设计",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "probabilistic-existence-maxcut"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2714,8 +3167,11 @@
       "name": "正确性证明",
       "subject": "离散数学与计算",
       "branch": "算法设计",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-poset-linear-extension",
+        "euclid-loop"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2723,8 +3179,10 @@
       "name": "整数规划",
       "subject": "离散数学与计算",
       "branch": "离散优化",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "branch-bound"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2732,8 +3190,10 @@
       "name": "网络流",
       "subject": "离散数学与计算",
       "branch": "离散优化",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "maxflow-mincut"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2741,8 +3201,11 @@
       "name": "最短路径",
       "subject": "离散数学与计算",
       "branch": "离散优化",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "dijkstra",
+        "bellman-ford"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2750,8 +3213,10 @@
       "name": "归约",
       "subject": "离散数学与计算",
       "branch": "离散优化",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "reductions-transitive"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2771,8 +3236,12 @@
       "name": "组合优化",
       "subject": "离散数学与计算",
       "branch": "离散优化",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "probabilistic-existence-maxcut",
+        "three-sat-clique",
+        "held-karp"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2780,8 +3249,10 @@
       "name": "对称加密",
       "subject": "离散数学与计算",
       "branch": "密码学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "one-time-pad"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2789,8 +3260,10 @@
       "name": "公钥密码",
       "subject": "离散数学与计算",
       "branch": "密码学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "rsa-correctness"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2798,8 +3271,10 @@
       "name": "数字签名",
       "subject": "离散数学与计算",
       "branch": "密码学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hash-then-sign"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2807,8 +3282,10 @@
       "name": "零知识证明",
       "subject": "离散数学与计算",
       "branch": "密码学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "schnorr-hvzk"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2816,8 +3293,10 @@
       "name": "安全归约",
       "subject": "离散数学与计算",
       "branch": "密码学",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hash-then-sign"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2849,8 +3328,10 @@
       "name": "信道容量",
       "subject": "离散数学与计算",
       "branch": "编码与信息论",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "bsc-one-use-capacity"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2881,7 +3362,8 @@
       "subject": "概率与统计",
       "branch": "概率基础",
       "proofIds": [
-        "countable-union-bound"
+        "countable-union-bound",
+        "pi-lambda"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2892,7 +3374,8 @@
       "subject": "概率与统计",
       "branch": "概率基础",
       "proofIds": [
-        "l2-completeness"
+        "l2-completeness",
+        "lotus"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2902,8 +3385,13 @@
       "name": "分布",
       "subject": "概率与统计",
       "branch": "概率基础",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "lotus",
+        "tonelli-fubini",
+        "gaussian-integral",
+        "gaussian-characteristic"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -2915,9 +3403,12 @@
         "markov",
         "chebyshev",
         "independent-products",
+        "monte-carlo-mean-variance",
+        "sde-linear-mean-variance",
         "l2-cauchy-schwarz",
         "variance-mean",
-        "sample-variance-unbiased"
+        "sample-variance-unbiased",
+        "characteristic-expansion"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2931,7 +3422,8 @@
         "independent-products",
         "bayes",
         "conditional-l2",
-        "conditional-tower"
+        "conditional-tower",
+        "independent-bounded-products"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2963,8 +3455,15 @@
       "name": "中心极限定理",
       "subject": "概率与统计",
       "branch": "极限定理",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "independent-bounded-products",
+        "gaussian-characteristic",
+        "characteristic-expansion",
+        "binomial-exponential-limit",
+        "gaussian-smoothing",
+        "iid-central-limit"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3012,8 +3511,12 @@
       "name": "马尔可夫链",
       "subject": "概率与统计",
       "branch": "随机过程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-markov-stationary",
+        "finite-markov-stationary-unique",
+        "finite-two-state-ergodic"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3021,8 +3524,12 @@
       "name": "布朗运动",
       "subject": "概率与统计",
       "branch": "随机过程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "brownian-covariance-min",
+        "ito-isometry-step-process",
+        "diffusion-brownian-generator"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3030,8 +3537,10 @@
       "name": "泊松过程",
       "subject": "概率与统计",
       "branch": "随机过程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "poisson-interarrival-memoryless"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3039,8 +3548,11 @@
       "name": "平稳过程",
       "subject": "概率与统计",
       "branch": "随机过程",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "finite-markov-stationary",
+        "finite-markov-stationary-unique"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3061,8 +3573,11 @@
       "name": "伊藤积分",
       "subject": "概率与统计",
       "branch": "随机分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "ito-isometry-step-process",
+        "ito-square-brownian"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3070,8 +3585,10 @@
       "name": "伊藤公式",
       "subject": "概率与统计",
       "branch": "随机分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "ito-square-brownian"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3079,8 +3596,10 @@
       "name": "随机微分方程",
       "subject": "概率与统计",
       "branch": "随机分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "sde-linear-mean-variance"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3088,8 +3607,10 @@
       "name": "扩散过程",
       "subject": "概率与统计",
       "branch": "随机分析",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "diffusion-brownian-generator"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3109,8 +3630,10 @@
       "name": "置信区间",
       "subject": "概率与统计",
       "branch": "统计推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "confidence-chebyshev"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3118,8 +3641,10 @@
       "name": "假设检验",
       "subject": "概率与统计",
       "branch": "统计推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "neyman-pearson-lemma"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3138,8 +3663,10 @@
       "name": "实验设计",
       "subject": "概率与统计",
       "branch": "统计推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "randomized-ate-unbiased"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3147,8 +3674,10 @@
       "name": "识别条件",
       "subject": "概率与统计",
       "branch": "统计推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "omitted-variable-bias"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3156,8 +3685,10 @@
       "name": "先验分布",
       "subject": "概率与统计",
       "branch": "贝叶斯方法",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "beta-gamma-recurrence"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3176,8 +3707,11 @@
       "name": "共轭先验",
       "subject": "概率与统计",
       "branch": "贝叶斯方法",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "beta-gamma-recurrence",
+        "beta-binomial-predictive"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3185,8 +3719,10 @@
       "name": "后验预测",
       "subject": "概率与统计",
       "branch": "贝叶斯方法",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "beta-binomial-predictive"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3194,8 +3730,10 @@
       "name": "层级模型",
       "subject": "概率与统计",
       "branch": "贝叶斯方法",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "hierarchical-law-total-variance"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3264,8 +3802,11 @@
       "name": "干预与因果效应",
       "subject": "概率与统计",
       "branch": "因果推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "randomized-ate-unbiased",
+        "potential-outcome-consistency"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3273,8 +3814,10 @@
       "name": "混杂",
       "subject": "概率与统计",
       "branch": "因果推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "omitted-variable-bias"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3282,8 +3825,10 @@
       "name": "潜在结果",
       "subject": "概率与统计",
       "branch": "因果推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "potential-outcome-consistency"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     },
     {
@@ -3291,8 +3836,10 @@
       "name": "因果图",
       "subject": "概率与统计",
       "branch": "因果推断",
-      "proofIds": [],
-      "coverage": "not-started",
+      "proofIds": [
+        "causal-graph-chain-factorization"
+      ],
+      "coverage": "partial",
       "theoremReview": "pending"
     }
   ]

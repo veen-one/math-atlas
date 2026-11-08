@@ -27,11 +27,13 @@ fs.writeFileSync(path.join(root,'docs/proofs/topic-inventory.json'),JSON.stringi
 fs.writeFileSync(path.join(root,'docs/proofs/claim-audit.json'),JSON.stringify({note:'关键词提取的候选句，未经数学断言去重；不等于全部定理的完整清单。需人工提取准确假设、结论并对应证明。',claims},null,2)+'\n');
 const covered=topics.filter(t=>t.proofIds.length).length;
 const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、引理、原理、猜想”的候选句，待人工逐条核定。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
-'1. 逐条拆分候选句及公式中的断言，统一定理名称、符号、假设和结论。',
-'2. 补齐全部未覆盖主题及已有主题中尚未证明的命题，建立不循环的前置依赖。',
-'3. 黎曼映射、无限维谱定理、素数定理、中心极限定理、辛不挤压等尚未展开的大型定理须形成完整章节。有限伽罗瓦基本对应、有限维谱定理与代数基本定理已在本卷提供证明，但不因此将整个主题标为全部完成。',
-'4. P 与 NP、黎曼猜想等开放问题不得生成虚构证明；仅证明相关已知命题并标明未解部分。',
-'5. 对全部证明作独立数学复核；程序检查只验证结构和依赖，不证明推导正确。','','## 逐点状态','','| 学科 | 知识点 | 本卷已展开命题数 | 全主题状态 |','|---|---|---:|---|'];
+'1. 417 条候选句仍需逐条拆分、去重并核对公式中未命名的断言；当前清单是关键词抽取结果，不是穷尽性定理目录。',
+'2. 每个主题尚有未枚举或未证明命题，故 319 个主题全部标为“部分展开”；不得把一个相关定理等同于该主题全部完成。',
+'3. 仍未在本卷证明的主要深层定理：黎曼映射定理、无限维谱定理、Gromov 辛不挤压定理，以及完整椭圆曲线模性定理。模性条目只证明“假设模性对应后局部系数相等”这一推论。',
+'4. 已提供素数定理与有限方差独立同分布中心极限定理的证明链；后者的 Gaussian 平滑引理另假设均值零和方差一。',
+'5. 第一不完备性条目使用标准模型可靠性及显式编码假设；第二不完备性条目条件于 D1–D3。尚未把这些编码条件对具体 PA/Q 全部形式化展开。',
+'6. 命题切消证明仅限命题 LK；它不证明一阶逻辑的切消定理。欧拉多面体公式证明明确采用 Jordan 曲线定理作为拓扑基础。',
+'7. 所有证明仍需独立数学复核；程序只检查依赖与构建，不验证数学推演。开放问题（如 P 与 NP、黎曼猜想）不可能被伪造为已证。','','## 逐点状态','','| 学科 | 知识点 | 本卷已展开命题数 | 全主题状态 |','|---|---|---:|---|'];
 for(const topic of topics)lines.push(`| ${topic.subject} | ${topic.name} | ${topic.proofIds.length} | ${topic.proofIds.length?'部分展开':'待扩写'} |`);
 fs.writeFileSync(path.join(root,'docs/proofs/coverage.md'),lines.join('\n')+'\n');
 console.log(`Audited ${topics.length} topics: ${book.proofs.length} proofs cover ${covered} topics; ${claims.length} candidate sentences await statement review`);
