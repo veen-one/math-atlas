@@ -178,7 +178,7 @@
     {
       "topic": "analysis/residues",
       "field": "definition",
-      "text": "留数定理：若 $f$ 在简单闭曲线 $\\gamma$ 内部除有限个孤立奇点外全纯，则 $\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f, a_k)$。",
+      "text": "留数定理：若 $f$ 在正向分段光滑简单闭曲线 $\\gamma$ 及其内部的某开邻域除有限个内部孤立奇点外全纯，则 $\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f, a_k)$。",
       "status": "needs-statement-review"
     },
     {
@@ -952,91 +952,157 @@
       "topic": "algebra/groups-subgroups",
       "field": "formulaCaptions",
       "text": "Lagrange 定理：子群的阶整除群的阶（有限群）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lagrange"
+      ],
+      "note": "只采用有限群的阶整除结论。"
     },
     {
       "topic": "algebra/groups-subgroups",
       "field": "extraInsight",
       "text": "Lagrange 定理是最早的结构约束：子群的阶整除群的阶，这限制了许多群的可能结构。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lagrange"
+      ],
+      "note": "只采用有限群的阶整除结论。"
     },
     {
       "topic": "algebra/homomorphisms-quotients",
       "field": "formulaCaptions",
       "text": "第一同构定理：商掉核同构于像。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "first-isomorphism"
+      ],
+      "note": "核为正规子群；商群到像的映射已逐步验证良定义和双射。"
     },
     {
       "topic": "algebra/homomorphisms-quotients",
       "field": "extraInsight",
       "text": "同态的核衡量信息损失，第一同构定理 $G/\\ker\\varphi\\cong\\operatorname{im}\\varphi$ 把“压缩”与“像”联系起来。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "first-isomorphism"
+      ],
+      "note": "核为正规子群；商群到像的映射已逐步验证良定义和双射。"
     },
     {
       "topic": "algebra/group-actions",
       "field": "intuition",
       "text": "群作用统一了许多计数问题：用 Burnside 引理数“本质不同的染色方案”，用轨道分解理解对称性。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "burnside-orbit-count"
+      ],
+      "note": "要求群与被作用集合有限；正方形例的四次不动点计数为16、2、4、2。"
     },
     {
       "topic": "algebra/group-actions",
       "field": "example",
       "text": "用两种颜色给正方形的四个顶点染色，共 $2^4 = 16$ 种；若把旋转后相同的方案视为同一种，用 Burnside 引理（旋转群 $C_4$ 作用）得到不同方案数为 $6$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "burnside-orbit-count"
+      ],
+      "note": "要求群与被作用集合有限；正方形例的四次不动点计数为16、2、4、2。"
     },
     {
       "topic": "algebra/group-actions",
       "field": "formulaCaptions",
       "text": "Burnside 引理：轨道数等于平均不动点数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "burnside-orbit-count"
+      ],
+      "note": "要求群与被作用集合有限；正方形例的四次不动点计数为16、2、4、2。"
     },
     {
       "topic": "algebra/group-actions",
       "field": "extraInsight",
       "text": "群作用把抽象群实现为置换群；轨道分解与 Burnside 引理把对称性转化为计数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "burnside-orbit-count"
+      ],
+      "note": "要求群与被作用集合有限；正方形例的四次不动点计数为16、2、4、2。"
     },
     {
       "topic": "algebra/group-actions",
       "field": "extraExamples",
       "text": "旋转群 $C_4$ 作用在正方形顶点的两种染色上，Burnside 引理给出 $6$ 种本质不同的方案。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "burnside-orbit-count"
+      ],
+      "note": "要求群与被作用集合有限；正方形例的四次不动点计数为16、2、4、2。"
     },
     {
       "topic": "algebra/orbits-stabilizers",
       "field": "definition",
       "text": "轨道-稳定子定理：$|\\mathrm{Orb}(x)| = [G : \\mathrm{Stab}(x)]$（对有限群即 $|G|/|\\mathrm{Stab}(x)|$）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "orbit-coset-class-equation"
+      ],
+      "note": "任意群的陪集集合与轨道直接双射；商群结构并非必要，有限情形再取基数。类方程只对有限群按普通整数求和。"
     },
     {
       "topic": "algebra/orbits-stabilizers",
       "field": "intuition",
       "text": "类方程 $|G| = |Z(G)| + \\sum [G : C_G(x_i)]$ 是证明许多有限群定理的关键。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "orbit-coset-class-equation"
+      ],
+      "note": "任意群的陪集集合与轨道直接双射；商群结构并非必要，有限情形再取基数。类方程只对有限群按普通整数求和。"
     },
     {
       "topic": "algebra/orbits-stabilizers",
       "field": "formulaCaptions",
       "text": "轨道-稳定子定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "orbit-coset-class-equation"
+      ],
+      "note": "任意群的陪集集合与轨道直接双射；商群结构并非必要，有限情形再取基数。类方程只对有限群按普通整数求和。"
     },
     {
       "topic": "algebra/orbits-stabilizers",
       "field": "extraInsight",
       "text": "轨道-稳定子定理 $|\\mathrm{Orb}(x)|=[G:\\mathrm{Stab}(x)]$ 是计数与分类的基本公式；稳定子越大，轨道越小。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "orbit-coset-class-equation"
+      ],
+      "note": "任意群的陪集集合与轨道直接双射；商群结构并非必要，有限情形再取基数。类方程只对有限群按普通整数求和。"
     },
     {
       "topic": "algebra/finite-groups",
       "field": "definition",
       "text": "Lagrange 定理说明子群的阶整除群的阶，但反之不成立（如 $A_4$ 无 6 阶子群）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
+      ],
+      "note": "有限群假设；任意被群阶整除的素数幂阶子群由 Sylow 存在性加 p 群子群链给出；共轭与个数约束另证。A₄ 与15阶例均展开。"
     },
     {
       "topic": "algebra/finite-groups",
       "field": "definition",
       "text": "**Sylow 定理**给出部分逆命题：若 $p^k$ 整除 $|G|$，则 $G$ 有 $p^k$ 阶子群；特别地，Sylow $p$-子群存在且两两共轭。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
+      ],
+      "note": "有限群假设；任意被群阶整除的素数幂阶子群由 Sylow 存在性加 p 群子群链给出；共轭与个数约束另证。A₄ 与15阶例均展开。"
     },
     {
       "topic": "algebra/finite-groups",
@@ -1048,19 +1114,40 @@
       "topic": "algebra/finite-groups",
       "field": "formulaCaptions",
       "text": "Sylow 定理：Sylow $p$-子群个数 $n_p$ 的约束。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
+      ],
+      "note": "有限群假设；任意被群阶整除的素数幂阶子群由 Sylow 存在性加 p 群子群链给出；共轭与个数约束另证。A₄ 与15阶例均展开。"
     },
     {
       "topic": "algebra/finite-groups",
       "field": "extraInsight",
       "text": "有限群论的核心是分类；Sylow 定理给出素数幂子群的存在与共轭性，是证明群结构的有力工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
+      ],
+      "note": "有限群假设；任意被群阶整除的素数幂阶子群由 Sylow 存在性加 p 群子群链给出；共轭与个数约束另证。A₄ 与15阶例均展开。"
     },
     {
       "topic": "algebra/finite-groups",
       "field": "extraExamples",
       "text": "利用 Sylow 定理可证 $15$ 阶群必为循环群（$n_3=n_5=1$）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
+      ],
+      "note": "有限群假设；任意被群阶整除的素数幂阶子群由 Sylow 存在性加 p 群子群链给出；共轭与个数约束另证。A₄ 与15阶例均展开。"
     },
     {
       "topic": "algebra/ideals",
@@ -1083,38 +1170,62 @@
     {
       "topic": "algebra/invariant-subspaces",
       "field": "definition",
-      "text": "有限群在特征零域上的每个表示都完全可约（Maschke 定理），即分解为不可约表示的直和。",
-      "status": "needs-statement-review"
+      "text": "有限群在特征零域上的每个有限维表示都完全可约（Maschke 定理），即分解为不可约表示的直和。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maschke"
+      ],
+      "note": "本卷证明有限维版本；域特征不整除有限群阶，特征零是充分条件。"
     },
     {
       "topic": "algebra/invariant-subspaces",
       "field": "intuition",
-      "text": "Maschke 定理说明有限群的表示总是可以拆到最细，这使得有限群表示论变成“特征标理论”——问题归结为研究不可约成分。",
-      "status": "needs-statement-review"
+      "text": "Maschke 定理说明，特征不整除群阶时，有限群的有限维表示完全可约，这使得有限群表示论变成“特征标理论”——问题归结为研究不可约成分。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maschke"
+      ],
+      "note": "本卷证明有限维版本；域特征不整除有限群阶，特征零是充分条件。"
     },
     {
       "topic": "algebra/invariant-subspaces",
       "field": "extraInsight",
       "text": "不变子空间是表示作用下的“封闭区域”；Maschke 定理保证有限群在特征零域上完全可约，因此表示论可以归结为不可约表示。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maschke"
+      ],
+      "note": "本卷证明有限维版本；域特征不整除有限群阶，特征零是充分条件。"
     },
     {
       "topic": "algebra/irreducible-representations",
       "field": "definition",
-      "text": "**Schur 引理**：若 $V, W$ 是不可约表示，且 $T: V \\to W$ 是 $G$-等变映射，则 $T = 0$ 或 $T$ 是同构；特别地，若 $V = W$，则 $T = \\lambda I$。",
-      "status": "needs-statement-review"
+      "text": "**Schur 引理**：若 $V, W$ 是不可约表示，且 $T: V \\to W$ 是 $G$-等变映射，则 $T = 0$ 或 $T$ 是同构；特别地，在有限维复表示中，若 $V = W$，则 $T = \\lambda I$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "schur-lemma",
+        "complex-eigenvalue",
+        "real-schur-counterexample"
+      ],
+      "note": "非零等变映射同构结论适用一般域；标量结论在此限定有限维复表示，实域反例另证。"
     },
     {
       "topic": "algebra/irreducible-representations",
       "field": "intuition",
-      "text": "Schur 引理连接表示与代数：它说明不可约表示的等变自同态只有数乘，从而导出特征标的正交关系与 Burnside 定理（$p^a q^b$ 阶群可解）。",
+      "text": "Schur 引理连接表示与代数：在有限维复表示中，不可约表示的等变自同态只有数乘，从而导出特征标的正交关系与 Burnside 定理（$p^a q^b$ 阶群可解）。",
       "status": "needs-statement-review"
     },
     {
       "topic": "algebra/irreducible-representations",
       "field": "formulaCaptions",
       "text": "Schur 引理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "schur-lemma",
+        "complex-eigenvalue",
+        "real-schur-counterexample"
+      ],
+      "note": "非零等变映射同构结论适用一般域；标量结论在此限定有限维复表示，实域反例另证。"
     },
     {
       "topic": "algebra/irreducible-representations",
@@ -1138,25 +1249,45 @@
       "topic": "algebra/noetherian",
       "field": "definition",
       "text": "Hilbert 基定理：若 $R$ 是诺特环，则多项式环 $R[x]$ 也是诺特环。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hilbert-basis",
+        "noetherian-equivalence"
+      ],
+      "note": "含幺交换环版本；有限个变元重复应用基定理。"
     },
     {
       "topic": "algebra/noetherian",
       "field": "intuition",
       "text": "诺特环是现代代数几何的基础：Hilbert 基定理保证多项式环的理想有限生成，从而代数簇可以由有限多个方程定义。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hilbert-basis",
+        "noetherian-equivalence"
+      ],
+      "note": "含幺交换环版本；有限个变元重复应用基定理。"
     },
     {
       "topic": "algebra/noetherian",
       "field": "formulaCaptions",
       "text": "Hilbert 基定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hilbert-basis",
+        "noetherian-equivalence"
+      ],
+      "note": "含幺交换环版本；有限个变元重复应用基定理。"
     },
     {
       "topic": "algebra/noetherian",
       "field": "extraInsight",
       "text": "诺特条件保证理想链稳定，使有限生成成为可能；Hilbert 基定理保证多项式环诺特，从而代数簇可由有限方程定义。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hilbert-basis",
+        "noetherian-equivalence"
+      ],
+      "note": "含幺交换环版本；有限个变元重复应用基定理。"
     },
     {
       "topic": "algebra/modules",
@@ -1216,85 +1347,148 @@
       "topic": "algebra/linear-maps",
       "field": "definition",
       "text": "选定基后，线性映射由矩阵唯一表示；**核** $\\ker T$ 与**像** $\\mathrm{im}\\,T$ 都是子空间，秩-零化度定理给出 $\\dim V = \\dim \\ker T + \\dim \\mathrm{im}\\,T$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "rank-nullity"
+      ],
+      "note": "限定定义域有限维；将核的基扩充后其余基向量的像构成像空间基。"
     },
     {
       "topic": "algebra/linear-maps",
       "field": "formulaCaptions",
       "text": "秩-零化度定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "rank-nullity"
+      ],
+      "note": "限定定义域有限维；将核的基扩充后其余基向量的像构成像空间基。"
     },
     {
       "topic": "algebra/linear-maps",
       "field": "extraInsight",
       "text": "线性映射由矩阵表示；秩-零化度定理 $\\dim V=\\dim\\ker T+\\dim\\operatorname{im}T$ 联系核与像的维数，是线性代数的基本守恒律。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "rank-nullity"
+      ],
+      "note": "限定定义域有限维；将核的基扩充后其余基向量的像构成像空间基。"
     },
     {
       "topic": "numbertheory/divisibility-primes",
       "field": "definition",
       "text": "**算术基本定理**：每个大于 1 的整数都能唯一分解为素数的乘积（不计次序）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "unique-factorization"
+      ],
+      "note": "对大于1的整数给出存在及唯一性；整数1为空积，负整数另计单位符号。"
     },
     {
       "topic": "numbertheory/divisibility-primes",
       "field": "intuition",
       "text": "这种唯一分解是数论最根本的结构定理，也是许多算法（如 RSA）的基础。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "unique-factorization"
+      ],
+      "note": "对大于1的整数给出存在及唯一性；整数1为空积，负整数另计单位符号。"
     },
     {
       "topic": "numbertheory/divisibility-primes",
       "field": "formulaCaptions",
       "text": "算术基本定理：唯一素数分解。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "unique-factorization"
+      ],
+      "note": "对大于1的整数给出存在及唯一性；整数1为空积，负整数另计单位符号。"
     },
     {
       "topic": "numbertheory/divisibility-primes",
       "field": "extraInsight",
       "text": "算术基本定理是数论的基石：每个整数都有唯一的素数分解。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "unique-factorization"
+      ],
+      "note": "对大于1的整数给出存在及唯一性；整数1为空积，负整数另计单位符号。"
     },
     {
       "topic": "numbertheory/congruences",
       "field": "intuition",
       "text": "中国剩余定理说明：关于互素模数的同余条件可以独立求解再合并；费马小定理说明模素数时幂运算具有周期性（$a^{p-1} \\equiv 1$）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "note": "中国剩余定理要求模数两两互素；费马非零类形式要求素数p不整除底数a。"
     },
     {
       "topic": "numbertheory/congruences",
       "field": "formulaCaptions",
       "text": "中国剩余定理：模互素的同余方程组在模 $m_1 m_2$ 下有唯一解。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "note": "中国剩余定理要求模数两两互素；费马非零类形式要求素数p不整除底数a。"
     },
     {
       "topic": "numbertheory/congruences",
       "field": "formulaCaptions",
       "text": "费马小定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "note": "中国剩余定理要求模数两两互素；费马非零类形式要求素数p不整除底数a。"
     },
     {
       "topic": "numbertheory/congruences",
       "field": "extraInsight",
       "text": "同余把整数按余数分类，模运算保持加法与乘法；中国剩余定理把互素模的条件解耦，是算法与密码学的基本工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "note": "中国剩余定理要求模数两两互素；费马非零类形式要求素数p不整除底数a。"
     },
     {
       "topic": "numbertheory/congruences",
       "field": "extraExamples",
       "text": "费马小定理：$2^{10}\\equiv1\\pmod{11}$，因为 $2^{10}=1024=93\\cdot11+1$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chinese-remainder",
+        "fermat-little"
+      ],
+      "note": "中国剩余定理要求模数两两互素；费马非零类形式要求素数p不整除底数a。"
     },
     {
       "topic": "numbertheory/quadratic-residues",
       "field": "intuition",
       "text": "二次互反律是数论中的“黄金定理”：它把 $\\left(\\frac{p}{q}\\right)$ 与 $\\left(\\frac{q}{p}\\right)$ 联系起来，使判定二次剩余变成递归的算法。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "quadratic-reciprocity",
+        "euler-quadratic-criterion"
+      ],
+      "note": "互反律适用于不同奇素数，欧拉判别针对奇素模；补充律在同章证明。"
     },
     {
       "topic": "numbertheory/quadratic-residues",
       "field": "extraInsight",
       "text": "二次剩余判定由欧拉判别法给出；二次互反律把 $\\left(\\frac pq\\right)$ 与 $\\left(\\frac qp\\right)$ 联系起来，使判定变成递归算法，被称为数论的“黄金定理”。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "quadratic-reciprocity",
+        "euler-quadratic-criterion"
+      ],
+      "note": "互反律适用于不同奇素数，欧拉判别针对奇素模；补充律在同章证明。"
     },
     {
       "topic": "numbertheory/pythagorean-triples",
@@ -1383,7 +1577,7 @@
     {
       "topic": "numbertheory/exponential-sums",
       "field": "intuition",
-      "text": "素数分布、Waring 问题、哥德巴赫猜想的证明都依赖这种振荡估计。",
+      "text": "这种振荡估计用于素数分布、Waring 问题和哥德巴赫问题的研究；这里不声称已证明哥德巴赫猜想。",
       "status": "needs-statement-review"
     },
     {
@@ -1407,7 +1601,7 @@
     {
       "topic": "numbertheory/sieve-methods",
       "field": "intuition",
-      "text": "陈景润的“1+2”定理、张益唐的孪生素数界都依赖精细的筛法改进。",
+      "text": "陈景润的“1+2”定理、张益唐的有界素数间隙结果都依赖精细的筛法改进。",
       "status": "needs-statement-review"
     },
     {
@@ -1426,13 +1620,23 @@
       "topic": "numbertheory/number-fields",
       "field": "definition",
       "text": "数域 $K$ 可以写成 $K = \\mathbb{Q}(\\alpha)$（本原元素定理）：每个数域都由单个元素生成。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "characteristic-zero-separable",
+        "primitive-element-theorem"
+      ],
+      "note": "数域是Q的有限扩张，特征零保证可分，因此本原元素定理适用。这是域的单生成结论，不声称整数环有幂整基。"
     },
     {
       "topic": "numbertheory/number-fields",
       "field": "extraInsight",
       "text": "数域是 $\\mathbb{Q}$ 的有限扩张，本原元素定理保证它由单个元素生成。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "characteristic-zero-separable",
+        "primitive-element-theorem"
+      ],
+      "note": "数域是Q的有限扩张，特征零保证可分，因此本原元素定理适用。这是域的单生成结论，不声称整数环有幂整基。"
     },
     {
       "topic": "numbertheory/ideal-factorization",
@@ -1612,13 +1816,23 @@
       "topic": "numbertheory/liouville-numbers",
       "field": "definition",
       "text": "Liouville 定理：代数数不能被有理数逼近得如此快（存在与次数相关的下界），因此刘维尔数是超越数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "liouville-lower-bound",
+        "liouville-constant"
+      ],
+      "note": "代数数逼近界的指数与次数有关，常数依赖该代数数；刘维尔数的任意高阶逼近与之矛盾。"
     },
     {
       "topic": "numbertheory/liouville-numbers",
       "field": "extraInsight",
       "text": "刘维尔定理给出了代数数的逼近下界。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "liouville-lower-bound",
+        "liouville-constant"
+      ],
+      "note": "代数数逼近界的指数与次数有关，常数依赖该代数数；刘维尔数的任意高阶逼近与之矛盾。"
     },
     {
       "topic": "numbertheory/cusp-forms",
@@ -1683,7 +1897,7 @@
     {
       "topic": "numbertheory/local-global-principle",
       "field": "definition",
-      "text": "**局部-整体原则**（Hasse 原理）：一个方程在 $\\mathbb{Q}$ 上有解，当且仅当它在每个 $\\mathbb{Q}_p$（所有素数 $p$）与 $\\mathbb{R}$ 上都有解。",
+      "text": "**局部-整体原则**（Hasse 原理）：对某类方程，局部-整体原则所要求的等价是：方程在 $\\mathbb{Q}$ 上有解，当且仅当它在每个 $\\mathbb{Q}_p$（所有素数 $p$）与 $\\mathbb{R}$ 上都有解。",
       "status": "needs-statement-review"
     },
     {
@@ -1713,19 +1927,19 @@
     {
       "topic": "numbertheory/rational-points",
       "field": "definition",
-      "text": "有理曲线（亏格 0）的有理点可以用有理参数化完全描述；椭圆曲线（亏格 1）的有理点群有限生成（Mordell–Weil）；亏格 $\\ge 2$ 的曲线有理点有限（Faltings 定理）。",
+      "text": "数域上的光滑射影亏格 0 曲线须先有一个有理点，才可用有理参数化描述有理点；椭圆曲线（亏格 1）的有理点群有限生成（Mordell–Weil）；亏格 $\\ge 2$ 的曲线有理点有限（Faltings 定理）。",
       "status": "needs-statement-review"
     },
     {
       "topic": "numbertheory/rational-points",
       "field": "intuition",
-      "text": "亏格决定了有理点的“丰富程度”：圆锥曲线有无穷多有理点，椭圆曲线可能有有限或无限多，亏格 ≥ 2 的曲线只有有限多（Faltings 1983，证明 Mordell 猜想）。",
+      "text": "亏格决定了有理点的“丰富程度”：光滑圆锥曲线若有一个有理点，就可有理参数化并有无穷多有理点，椭圆曲线可能有有限或无限多，亏格 ≥ 2 的曲线只有有限多（Faltings 1983，证明 Mordell 猜想）。",
       "status": "needs-statement-review"
     },
     {
       "topic": "numbertheory/rational-points",
       "field": "extraInsight",
-      "text": "代数曲线的亏格决定有理点的丰富程度：亏格 $0$ 可参数化，亏格 $1$ 是椭圆曲线，亏格 $\\ge2$ 只有有限多个有理点（Faltings 定理）。",
+      "text": "代数曲线的亏格决定有理点的丰富程度：光滑射影亏格 $0$ 曲线在有有理点时可有理参数化，亏格 $1$ 曲线在指定有理点后成为椭圆曲线，亏格 $\\ge2$ 只有有限多个有理点（Faltings 定理）。",
       "status": "needs-statement-review"
     },
     {
@@ -2542,37 +2756,71 @@
       "topic": "probability/stopping-times",
       "field": "intuition",
       "text": "可选停时定理说明鞅在停时处仍保持期望不变（在适当条件下），这是金融定价与随机分析的基本工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
+      ],
+      "note": "适当条件具体化为有界停时，或几乎必然有限且停止变量有统一可积控制；公平赌徒破产的退出概率和平均退出时间已证明。不能把一般无界停时自动代入等式。"
     },
     {
       "topic": "probability/stopping-times",
       "field": "example",
       "text": "随机游走的首次到达 $a$ 或 $-b$ 的时刻是停时；由可选停时定理可计算破产概率。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
+      ],
+      "note": "适当条件具体化为有界停时，或几乎必然有限且停止变量有统一可积控制；公平赌徒破产的退出概率和平均退出时间已证明。不能把一般无界停时自动代入等式。"
     },
     {
       "topic": "probability/stopping-times",
       "field": "formulaCaptions",
       "text": "可选停时定理（鞅，适当条件下）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
+      ],
+      "note": "适当条件具体化为有界停时，或几乎必然有限且停止变量有统一可积控制；公平赌徒破产的退出概率和平均退出时间已证明。不能把一般无界停时自动代入等式。"
     },
     {
       "topic": "probability/stopping-times",
       "field": "extraInsight",
       "text": "停时是“不偷看未来”的随机时刻；可选停时定理说明鞅在停时处期望不变（在适当条件下）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
+      ],
+      "note": "适当条件具体化为有界停时，或几乎必然有限且停止变量有统一可积控制；公平赌徒破产的退出概率和平均退出时间已证明。不能把一般无界停时自动代入等式。"
     },
     {
       "topic": "probability/stopping-times",
       "field": "extraExamples",
       "text": "用可选停时定理计算赌徒破产概率。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
+      ],
+      "note": "适当条件具体化为有界停时，或几乎必然有限且停止变量有统一可积控制；公平赌徒破产的退出概率和平均退出时间已证明。不能把一般无界停时自动代入等式。"
     },
     {
       "topic": "probability/central-limit-theorem",
       "field": "definition",
       "text": "**中心极限定理**：若 $X_i$ 独立同分布，$\\mathbb{E}[X_i] = \\mu$，$\\mathrm{Var}(X_i) = \\sigma^2 \\in (0, \\infty)$，则标准化和 $\\frac{\\sqrt n(\\bar X_n - \\mu)}{\\sigma} \\xrightarrow{d} N(0, 1)$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "严格采用独立同分布且均值有限、方差有限非零的标准化和结论；直觉说明已补有限方差条件。"
     },
     {
       "topic": "probability/central-limit-theorem",
@@ -2583,20 +2831,32 @@
     {
       "topic": "probability/central-limit-theorem",
       "field": "intuition",
-      "text": "中心极限定理是“正态分布的普遍性”：大量独立小随机因素叠加后，分布趋于正态，无论原始分布是什么。",
-      "status": "needs-statement-review"
+      "text": "中心极限定理是“正态分布的普遍性”：独立同分布且方差有限非零时，标准化和趋于正态；无需原始分布本身为正态，缺少这些条件时需另行检查。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "严格采用独立同分布且均值有限、方差有限非零的标准化和结论；直觉说明已补有限方差条件。"
     },
     {
       "topic": "probability/central-limit-theorem",
       "field": "formulaCaptions",
       "text": "中心极限定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "严格采用独立同分布且均值有限、方差有限非零的标准化和结论；直觉说明已补有限方差条件。"
     },
     {
       "topic": "probability/central-limit-theorem",
       "field": "extraInsight",
-      "text": "中心极限定理说明大量独立小随机因素叠加后趋于正态，无论原始分布是什么。",
-      "status": "needs-statement-review"
+      "text": "中心极限定理说明独立同分布且方差有限非零时，标准化和趋于正态；无限方差分布不在此结论范围内。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "严格采用独立同分布且均值有限、方差有限非零的标准化和结论；直觉说明已补有限方差条件。"
     },
     {
       "topic": "probability/convergence-in-probability",
@@ -2614,19 +2874,31 @@
       "topic": "probability/almost-sure-convergence",
       "field": "definition",
       "text": "Borel–Cantelli 引理是证明几乎处处收敛的基本工具：若 $\\sum P(A_n) < \\infty$，则 $P(A_n\\ \\text{无穷多次}) = 0$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "borel-cantelli-first"
+      ],
+      "note": "只使用第一 Borel–Cantelli 引理：事件概率和有限，不要求独立。"
     },
     {
       "topic": "probability/almost-sure-convergence",
       "field": "formulaCaptions",
       "text": "Borel–Cantelli 引理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "borel-cantelli-first"
+      ],
+      "note": "只使用第一 Borel–Cantelli 引理：事件概率和有限，不要求独立。"
     },
     {
       "topic": "probability/almost-sure-convergence",
       "field": "extraInsight",
       "text": "几乎处处收敛是逐路径收敛，不收敛的样本路径构成零概率集；Borel–Cantelli 引理是主要工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "borel-cantelli-first"
+      ],
+      "note": "只使用第一 Borel–Cantelli 引理：事件概率和有限，不要求独立。"
     },
     {
       "topic": "probability/large-deviations",

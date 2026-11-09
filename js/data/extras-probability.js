@@ -59,7 +59,7 @@ window.ATLAS.extras['probability/law-large-numbers'] = {
 };
 
 window.ATLAS.extras['probability/central-limit-theorem'] = {
-  insight: '中心极限定理说明大量独立小随机因素叠加后趋于正态，无论原始分布是什么。',
+  insight: '中心极限定理说明独立同分布且方差有限非零时，标准化和趋于正态；无限方差分布不在此结论范围内。',
   examples: [
     '掷 $100$ 次骰子，点数和近似正态，均值 $350$，标准差约 $17.08$。',
     '测量误差、身高分布都近似正态。'

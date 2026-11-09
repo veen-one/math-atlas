@@ -1,5 +1,5 @@
 {
-  "proofCount": 404,
+  "proofCount": 425,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -108,6 +108,7 @@
         "maximum-modulus",
         "schwarz-lemma",
         "holomorphic-compact-limit",
+        "removable-singularity",
         "complex-exponential-entire",
         "argument-principle-square",
         "rouche-square"
@@ -128,7 +129,8 @@
         "cauchy-square-formula",
         "continuous-path-primitive-integral",
         "cauchy-homotopy",
-        "cauchy-simply-connected"
+        "cauchy-simply-connected",
+        "weighted-residue-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -140,6 +142,10 @@
       "branch": "复分析",
       "proofIds": [
         "contour-estimate",
+        "local-laurent-expansion",
+        "isolated-singularity-classification",
+        "weighted-residue-theorem",
+        "casorati-weierstrass",
         "argument-principle-square",
         "rouche-square"
       ],
@@ -231,6 +237,10 @@
       "proofIds": [
         "holomorphic-taylor",
         "holomorphic-identity",
+        "removable-singularity",
+        "local-laurent-expansion",
+        "isolated-singularity-classification",
+        "casorati-weierstrass",
         "holomorphic-square-root"
       ],
       "coverage": "partial",
@@ -1090,7 +1100,10 @@
       "subject": "代数",
       "branch": "群论",
       "proofIds": [
-        "orbit-stabilizer"
+        "orbit-stabilizer",
+        "burnside-orbit-count",
+        "orbit-coset-class-equation",
+        "p-group-fixed-points"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1101,7 +1114,8 @@
       "subject": "代数",
       "branch": "群论",
       "proofIds": [
-        "orbit-stabilizer"
+        "orbit-stabilizer",
+        "orbit-coset-class-equation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1113,7 +1127,13 @@
       "branch": "群论",
       "proofIds": [
         "lagrange",
-        "biquadratic-five-fields"
+        "biquadratic-five-fields",
+        "cauchy-finite-group",
+        "p-group-fixed-points",
+        "sylow-existence",
+        "sylow-conjugacy-count",
+        "order-fifteen-cyclic",
+        "alternating-four-no-six"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1187,7 +1207,9 @@
         "minimal-polynomial",
         "tower-law",
         "splitting-field-exists",
-        "galois-embedding-count"
+        "galois-embedding-count",
+        "characteristic-zero-separable",
+        "primitive-element-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1198,6 +1220,7 @@
       "subject": "代数",
       "branch": "表示论",
       "proofIds": [
+        "finite-representation-unitary",
         "representation-kernel",
         "character-class-function"
       ],
@@ -1210,6 +1233,7 @@
       "subject": "代数",
       "branch": "表示论",
       "proofIds": [
+        "character-multiplicity",
         "representation-kernel",
         "maschke"
       ],
@@ -1223,6 +1247,8 @@
       "branch": "表示论",
       "proofIds": [
         "complex-eigenvalue",
+        "finite-character-orthogonality",
+        "real-schur-counterexample",
         "maschke",
         "schur-lemma"
       ],
@@ -1280,6 +1306,9 @@
       "subject": "代数",
       "branch": "李群与李代数",
       "proofIds": [
+        "finite-representation-unitary",
+        "finite-character-orthogonality",
+        "character-multiplicity",
         "schur-lemma",
         "character-class-function"
       ],
@@ -1694,7 +1723,9 @@
       "subject": "数论",
       "branch": "代数数论",
       "proofIds": [
-        "rational-algebraic-integer"
+        "rational-algebraic-integer",
+        "characteristic-zero-separable",
+        "primitive-element-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3497,7 +3528,9 @@
       "subject": "概率与统计",
       "branch": "概率基础",
       "proofIds": [
-        "bounded-optional-stopping"
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3626,7 +3659,9 @@
       "proofIds": [
         "conditional-l2",
         "conditional-tower",
-        "bounded-optional-stopping"
+        "bounded-optional-stopping",
+        "dominated-optional-stopping",
+        "fair-gambler-ruin"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

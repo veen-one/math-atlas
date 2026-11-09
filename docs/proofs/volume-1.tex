@@ -4140,6 +4140,128 @@ n≥2 个顶点的完全有向加权图，固定起点 0，按已访问子集和
 
 \end{proof}
 
+\begin{theorem}[Burnside 轨道计数引理]\label{thm:burnside-orbit-count}
+
+有限群 G 作用在有限集 X 上时，轨道数为 |G|⁻¹Σ\_(g∈G)|Fix(g)|。正方形顶点的两色染色按旋转等价恰有六类。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}轨道—稳定子定理（定理~\ref{thm:orbit-stabilizer}）；有限计数与图的定义（约定~\ref{base:axiom-finite}）
+
+\par\noindent\textbf{思路：}从群元素与被其固定的点两种方向数同一对集合。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 S=\{(g,x)∈G×X:gx=x\}。先固定 g，得 |S|=Σ\_g|Fix(g)|；先固定 x，得 |S|=Σ\_x|G\_x|。
+
+\item 每个轨道 O 的稳定子阶为 |G|/|O|，所以该轨道对后一和的贡献为 |O|·|G|/|O|=|G|。对全部轨道相加，得到 |S|=轨道数·|G|，除以 |G| 即得公式。
+
+\item 正方形四顶点两色染色共有16种，恒等旋转固定16种；90度和270度旋转各只有单色的2种；180度旋转要求对顶点同色，固定4种。轨道数=(16+2+4+2)/4=6。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限群复表示可选不变正定内积]\label{thm:finite-representation-unitary}
+
+有限群的有限维复表示 V 上存在 G 不变的正定 Hermitian 内积，故可选基使全部表示矩阵酉；其特征标满足 χ(g⁻¹)=overline(χ(g))。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Gram–Schmidt 正交化（定理~\ref{thm:gram-schmidt}）；特征标在共轭类上为常值且可加（定理~\ref{thm:character-class-function}）
+
+\par\noindent\textbf{思路：}把任意坐标内积对群平均。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 固定一组基，用坐标内积 〈·,·〉₀ 定义 〈v,w〉=|G|⁻¹Σ\_g〈ρ(g)v,ρ(g)w〉₀。有限和保留第一变量线性与共轭对称性；v≠0 时每个 ρ(g)v 都非零，故平方长度平均严格正。
+
+\item 对 h∈G，右乘 h 只是重排 g，故 〈ρ(h)v,ρ(h)w〉=〈v,w〉。Gram–Schmidt 给此内积下标准正交基，矩阵满足 ρ(h)*ρ(h)=I，即为酉矩阵。
+
+\item 因此 ρ(g⁻¹)=ρ(g)⁻¹=ρ(g)*，其迹是 ρ(g) 迹的共轭，得到特征标公式。迹不依赖换基，结论对原表示也成立。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限群复不可约特征标的正交性]\label{thm:finite-character-orthogonality}
+
+有限群 G 的有限维复表示 V,W 满足 |G|⁻¹Σ\_g overline(χ\_V(g))χ\_W(g)=dim\_C Hom\_G(V,W)。若 V,W 不可约，右侧在同构时为1、不同构时为0。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有限群复表示可选不变正定内积（定理~\ref{thm:finite-representation-unitary}）；复有限维算子有特征值（定理~\ref{thm:complex-eigenvalue}）；Schur 引理的同构形式（定理~\ref{thm:schur-lemma}）；秩—零化度定理（定理~\ref{thm:rank-nullity}）
+
+\par\noindent\textbf{思路：}在全部线性映射空间上平均共轭作用，所得投影的迹既是像维数，也是特征标乘积平均。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 在 L=Hom\_C(V,W) 上定义 A\_g(S)=ρ\_W(g)Sρ\_V(g)⁻¹，P=|G|⁻¹Σ\_gA\_g。群乘法给 A\_hP=P，因此 P 的像属于全部不变向量；不变向量恰是 Hom\_G(V,W)，且在其上 P 为恒等。因此 P²=P、im P=Hom\_G(V,W)。
+
+\item 任一幂等线性映射的空间为 im P⊕ker P：S=PS+(S−PS)，交为零。在适应此分解的基下矩阵为 diag(I,0)，所以 tr P=dim im P。
+
+\item 对矩阵映射 S↦BSC，取矩阵单位 E\_ij 为基，其在 E\_ij 坐标上的系数为 B\_ii C\_jj，故该线性映射的迹为 Σ\_ijB\_ii C\_jj=tr B·tr C。于是 tr A\_g=χ\_W(g)χ\_V(g⁻¹)=χ\_W(g)overline(χ\_V(g))。平均并用前步即得等式。
+
+\item 若 V,W 不可约且不同构，Schur 引理给 Hom\_G(V,W)=0。若同构，固定一个同构 U，则每个等变 S 的 U⁻¹S 是 V 的等变自同态；复有限维 Schur 标量结论使它为 λI，故 S=λU，Hom 空间维数一。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[特征标唯一确定复有限群表示及分解重数]\label{thm:character-multiplicity}
+
+有限群的有限维复表示 V 中，不可约表示 W 的重数为 〈χ\_W,χ\_V〉=|G|⁻¹Σ\_g overline(χ\_W(g))χ\_V(g)。因此两个此类表示同构，当且仅当特征标相同。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Maschke 定理（定理~\ref{thm:maschke}）；有限群复不可约特征标的正交性（定理~\ref{thm:finite-character-orthogonality}）；特征标在共轭类上为常值且可加（定理~\ref{thm:character-class-function}）
+
+\par\noindent\textbf{思路：}用完全可约分解展开特征标，正交性提取每个不可约成分的整数系数。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item Maschke 定理给 V 为有限多个不可约表示的直和。将同构成分合并为 V≅⊕\_j W\_j\textasciicircum{}(⊕m\_j)，其中 W\_j 两两不同构、m\_j 为非负整数。直和特征标可加，故 χ\_V=Σ\_jm\_jχ\_(W\_j)。
+
+\item 与任意不可约 χ\_W 作特征标内积，正交性使同构成分贡献 m\_j，其他项贡献零；若 W 未出现则重数零。这既给重数公式，也说明它与所选完全可约分解无关。
+
+\item 若两表示特征标相同，取两者分解中全部不可约同构类的有限并，公式使每个类的重数相同，逐块同构给整体同构。反向同构表示逐群元矩阵相似，迹相同，所以特征标相同。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[实不可约表示的等变自同态未必为实标量]\label{thm:real-schur-counterexample}
+
+C₃ 在 R² 上的120度旋转表示不可约，却存在非标量实等变自同态；所以 Schur 标量结论不能无条件从复数域搬到实数域。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}向量空间及凸性定义（约定~\ref{base:axiom-vector}）
+
+\par\noindent\textbf{思路：}显式旋转矩阵的特征多项式无实根，排除不变实直线；90度旋转与它交换。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 R=[[-1/2,−√3/2],[√3/2,−1/2]]。直接矩阵相乘给 R³=I，故它定义 C₃ 的实二维表示。其特征多项式 t²+t+1=(t+1/2)²+3/4 对实 t 严格正。
+
+\item 若存在一维实不变子空间，取非零 v，必有 Rv=tv、t∈R，违背该矩阵无实特征值。二维空间的非平凡真子空间只能一维，所以此表示不可约。
+
+\item 令 J=[[0,−1],[1,0]]。直接相乘可见 JR=RJ，因此 J 为等变自同态；J 的非对角元素非零，不能是实标量矩阵。它可逆，仍符合 Schur 引理的“非零等变映射为同构”结论。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[紧致空间的闭子集紧致]\label{thm:closed-subset-compact}
 
 若 K 紧致、F 在 K 中闭，则 F 紧致。
@@ -4883,6 +5005,128 @@ f,g∈L¹(R) 时，(f*g)(x)=∫f(y)g(x-y)dy 几乎处处绝对存在，‖f*g‖
 \item 由 Fourier 导数公式及 Plancherel，‖f′‖₂=‖ωfhat‖₂/√(2π)，代入得到不等式。
 
 \item 平移 f 改变位置均值而不改变位置方差；乘 exp(iω₀x) 使 Fourier 变量平移，改变频率均值而不改变频率方差。这两公式由定义及仿射换元直接得到。对中心化后的函数用前式，并按空间密度 |f|²/‖f‖₂² 与频率密度 |fhat|²/(2π‖f‖₂²) 计算标准差，即得乘积至少 1/2。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Riemann 可去奇点定理]\label{thm:removable-singularity}
+
+若 f 在 0<|z−a|<R 全纯且在 a 附近有界，则 f 可唯一全纯延拓到 a。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}全纯函数的局部幂级数与任意阶可导性（定理~\ref{thm:holomorphic-taylor}）；复可导函数的连续性及代数法则（定理~\ref{thm:complex-basic-rules}）
+
+\par\noindent\textbf{思路：}乘以二次因子后填零，差商在中心趋零，再用 Taylor 展开除回因子。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 h(z)=(z−a)²f(z)（z≠a）、h(a)=0。若 |f|≤M，则 |h(z)|≤M|z−a|²，故 h 在 a 连续；差商 h(z)/(z−a) 的模≤M|z−a|→0，所以 h′(a)=0。别处 h 全纯，因此 h 在整盘全纯。
+
+\item Taylor 展开 h(z)=Σ\_(n≥2)b\_n(z−a)\textasciicircum{}n，常数和一次项为零。于是 Σ\_(n≥2)b\_n(z−a)\textasciicircum{}(n−2) 在较小圆盘全纯，并在穿孔盘与 f 相等；填入 b₂ 就得到延拓。它与原 f 在其余区域拼接为全盘全纯函数。唯一性由中心连续性，或恒等定理得到。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[孤立奇点的 Laurent 展开、唯一性与主部]\label{thm:local-laurent-expansion}
+
+f 在穿孔盘 0<|z−a|<R 全纯。则存在 r>0 及唯一系数 c\_n（n∈Z），使 f(z)=Σ\_(n≥0)c\_n(z−a)\textasciicircum{}n+Σ\_(m≥1)c\_(−m)(z−a)\textasciicircum{}(−m) 在 0<|z−a|<r 成立，两部分在该穿孔盘各紧集上一致绝对收敛。负幂主部 P\_a 在整个 C\textbackslash{}\{a\} 上全纯。留数定义为 c\_(−1)，等于 (2πi)⁻¹∫∂S f，其中 S 为充分小的正向中心方形。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Goursat 三角形定理（定理~\ref{thm:goursat-triangle}）；柯西积分公式（方形围道版）（定理~\ref{thm:cauchy-square-formula}）；紧集上一致极限保持全纯及各阶导数收敛（定理~\ref{thm:holomorphic-compact-limit}）；曲线积分的长度估计与端点公式（定理~\ref{thm:contour-estimate}）；一致收敛与黎曼积分交换（定理~\ref{thm:uniform-integration}）
+
+\par\noindent\textbf{思路：}在外方形与内方形间应用 Cauchy 核公式，分别展开两个几何级数。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 取中心为 a、到边距离 r 的闭方形 Q⊂\{|z−a|<R\}。对 0<|z−a|<r，另取同心内方形 S，到边距离 s，满足 √2s<|z−a|，故 z 在 S 外。再围 z 挖一个与 S 不交的小方形。在 Q 去掉这两个内方形的区域，对 f(w)/(w−z) 使用有限矩形网格、三角剖分与 Goursat，内部边抵消。围 z 的小方形积分由局部 Cauchy 公式为 2πif(z)，所以 2πif(z)=∫∂Q f(w)/(w−z)dw−∫∂S f(w)/(w−z)dw。
+
+\item 外边界 |w−a|≥r>|z−a|，展开 1/(w−z)=Σ\_(n≥0)(z−a)\textasciicircum{}n/(w−a)\textasciicircum{}(n+1)。内边界 |w−a|≤√2s<|z−a|，展开 1/(w−z)=−Σ\_(m≥1)(w−a)\textasciicircum{}(m−1)/(z−a)\textasciicircum{}m。几何比严格小于一，边界上一致绝对收敛，允许积分与级数交换。于是 c\_n=(2πi)⁻¹∫∂Q f(w)/(w−a)\textasciicircum{}(n+1)dw、c\_(−m)=(2πi)⁻¹∫∂S f(w)(w−a)\textasciicircum{}(m−1)dw。
+
+\item 负系数不依赖内方形大小：任意两个同心方形之间，被积函数在闭方环附近全纯，有限三角剖分与内部边抵消使两边界积分相等。外系数也不依赖所选外方形，在两个外方形间作同样论证。因此这些是固定系数。
+
+\item 外系数估计 |c\_n|≤length(∂Q)max∂Q|f|/(2πr\textasciicircum{}(n+1))，给正幂部分在 |z−a|<r 局部一致绝对收敛。对任何目标 |z−a|≥ρ>0，可把内方形取得 √2s<ρ，其负系数界为 |c\_(−m)|≤length(∂S)max∂S|f|·(√2s)\textasciicircum{}(m−1)/(2π)。负幂部分因此在 |z−a|≥ρ 一致绝对收敛。ρ 任意，主部在 C\textbackslash{}\{a\} 局部一致收敛，由全纯极限定理全纯。
+
+\item 对任意另一局部 Laurent 展开，选充分小的中心方形，乘 (z−a)\textasciicircum{}(−k−1) 后逐项积分。除了指数 −1 的项，所有整数幂均有单值原函数，积分零；指数 −1 项积分为 2πi。局部一致收敛允许逐项积分，故积分提取唯一的 c\_k。k=−1 时即留数积分公式。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[孤立奇点分类及极点留数公式]\label{thm:isolated-singularity-classification}
+
+孤立奇点处主部为空当且仅当奇点可去；主部恰有有限个负幂且最低幂为 −m 当且仅当该点为 m 阶极点。此时 Res(f,a)=h\textasciicircum{}(m−1)(a)/(m−1)!，其中 h(z)=(z−a)\textasciicircum{}m f(z) 全纯延拓且 h(a)≠0。其余不可去且非极点者称本性奇点。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}孤立奇点的 Laurent 展开、唯一性与主部（定理~\ref{thm:local-laurent-expansion}）；全纯函数的局部幂级数与任意阶可导性（定理~\ref{thm:holomorphic-taylor}）；Riemann 可去奇点定理（定理~\ref{thm:removable-singularity}）
+
+\par\noindent\textbf{思路：}唯一 Laurent 系数把解析延拓与有限阶发散分别变成负幂系数条件。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 若主部为空，正幂级数直接给全纯延拓。若已有全纯延拓，其 Taylor 展开也是局部 Laurent 展开，由唯一性负系数都为零。
+
+\item 若最低幂为 −m 且 c\_(−m)≠0，h=(z−a)\textasciicircum{}mf 延拓为全纯函数且 h(a)=c\_(−m)≠0，所以 f=h/(z−a)\textasciicircum{}m。这正是 m 阶极点定义，且 |f(z)|→∞。反向若有这种表示，将 h 的 Taylor 级数除以 (z−a)\textasciicircum{}m，唯一性给有限主部及最低阶。
+
+\item f 的 −1 次系数恰为 h 的 m−1 次 Taylor 系数，等于 h\textasciicircum{}(m−1)(a)/(m−1)!，得公式。特别若 f=g/q、q(a)=0、q′(a)≠0 且 g(a)≠0，则 m=1，Res(f,a)=g(a)/q′(a)，因为 q(z)/(z−a) 在 a 的值为 q′(a)。若 g(a)=0，商可能可去，留数仍为零。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限孤立奇点的加权留数定理]\label{thm:weighted-residue-theorem}
+
+设 Ω 单连通，f 在 Ω\textbackslash{}\{a₁,…,a\_N\} 全纯，γ 为避开这些点的分段 C¹ 闭曲线。定义 Ind(γ,a)=(2πi)⁻¹∫γ dz/(z−a)。则 ∫γ f(z)dz=2πiΣ\_j Ind(γ,a\_j)Res(f,a\_j)，允许各孤立奇点为本性奇点。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}孤立奇点的 Laurent 展开、唯一性与主部（定理~\ref{thm:local-laurent-expansion}）；单连通域上的 Cauchy 积分定理与全局原函数（定理~\ref{thm:cauchy-simply-connected}）；曲线积分的长度估计与端点公式（定理~\ref{thm:contour-estimate}）
+
+\par\noindent\textbf{思路：}减去每个奇点的完整主部，余函数在全域全纯；主部逐项积分只剩一次负幂。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 对每个 a\_j 取其局部主部 P\_j，前引理保证它在 C\textbackslash{}\{a\_j\} 全纯。在 a\_j 的小穿孔邻域，f−P\_j 是全纯正幂级数，而其他 P\_k 都在 a\_j 附近全纯。因此 F=f−Σ\_jP\_j 可逐点填补全部 a\_j，成为 Ω 上全纯函数。
+
+\item 由单连通 Cauchy 定理，∫γF=0。γ 的像紧且避开每个 a\_j，主部级数在该像上一致绝对收敛，长度估计允许逐项积分。每个 m≥2 的 (z−a\_j)\textasciicircum{}(−m) 在 C\textbackslash{}\{a\_j\} 有单值原函数 (z−a\_j)\textasciicircum{}(1−m)/(1−m)，所以闭路积分为零。
+
+\item 仅 m=1 项留下 c\_(−1)∫γ dz/(z−a\_j)=2πiInd(γ,a\_j)Res(f,a\_j)。对 j 的有限和相加即得结论。本证明直接使用所定义的绕行积分权重；正向简单闭曲线内部权重为一、外部为零的拓扑结论仍需单独证明，不能默认为本解析推导的一部分。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Casorati–Weierstrass 定理]\label{thm:casorati-weierstrass}
+
+若 a 为 f 的孤立本性奇点，则每个充分小穿孔邻域的像在 C 中稠密。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Riemann 可去奇点定理（定理~\ref{thm:removable-singularity}）；孤立奇点分类及极点留数公式（定理~\ref{thm:isolated-singularity-classification}）；全纯函数的局部幂级数与任意阶可导性（定理~\ref{thm:holomorphic-taylor}）
+
+\par\noindent\textbf{思路：}若像漏掉一个圆盘，则取其中心的倒数成为有界函数；可去延拓迫使原奇点可去或为极点。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 若某穿孔邻域的像不稠密，则有 w∈C、ε>0，使该邻域所有 z 满足 |f(z)−w|≥ε。于是 g=1/(f−w) 在该穿孔邻域全纯且有界，由可去奇点定理延拓为全纯 G。
+
+\item 若 G(a)≠0，连续性使它在 a 附近非零，f=w+1/G 全纯延拓，奇点可去，矛盾。若 G(a)=0，G 不能恒零，因为穿孔邻域内 g 非零；Taylor 展开使 G 在 a 有有限正阶零点，故 1/G 在 a 有有限阶极点，f=w+1/G 也为极点，仍矛盾。
+
+\item 两种情形都排除，因此像在 C 稠密。此结论不等于 Picard 定理：这里没有证明像覆盖所有复数或最多遗漏一个值。
 
 \end{enumerate}
 
@@ -8704,6 +8948,56 @@ H¹(Ω) 在自然内积下是 Hilbert 空间，H¹\_0(Ω) 是其闭 Hilbert 子�
 
 \end{proof}
 
+\begin{theorem}[特征零域的代数扩张可分]\label{thm:characteristic-zero-separable}
+
+特征零域 F 上每个不可约多项式都没有重根。因此 F 上每个代数元素都可分。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}域上一元多项式理想为主理想（定理~\ref{thm:polynomial-bezout}）；最小多项式及单扩张次数（定理~\ref{thm:minimal-polynomial}）；分裂域的存在与有限性（定理~\ref{thm:splitting-field-exists}）
+
+\par\noindent\textbf{思路：}不可约多项式与其次数更低的非零导数互素，Bezout 恒等式排除共同根。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 设首一不可约 f 的次数 d≥1。其形式导数首项系数为 d，特征零使其非零，故 deg f′=d−1。不可约性与次数比较使 gcd(f,f′)=1。多项式 Bezout 给 A f+B f′=1。
+
+\item 若分裂域中 a 是重根，写 f=(x−a)\textasciicircum{}m h、m≥2，直接求导使 f′(a)=0，同时 f(a)=0，代入 Bezout 恒等式得0=1，矛盾。故所有根互异。对任意代数元素的最小多项式应用此结论，即得可分性。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限可分扩张的本原元素定理]\label{thm:primitive-element-theorem}
+
+每个有限可分域扩张 K/F 都有 θ∈K 使 K=F(θ)。特别地每个数域 K 都是某个代数数 θ 的单扩张 Q(θ)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}最小多项式及单扩张次数（定理~\ref{thm:minimal-polynomial}）；域上一元多项式理想为主理想（定理~\ref{thm:polynomial-bezout}）；分裂域的存在与有限性（定理~\ref{thm:splitting-field-exists}）；域乘法群的有限子群循环（定理~\ref{thm:finite-subgroup-cyclic}）；特征零域的代数扩张可分（定理~\ref{thm:characteristic-zero-separable}）；有限生成空间的基扩充与基长一致（定理~\ref{thm:basis-extension}）
+
+\par\noindent\textbf{思路：}无限基域时选线性组合以避免有限个根碰撞，用最大公因式恢复两个原生成元；有限域则用乘法群生成元。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 先设 F 无限，K=F(α,β)，且 α、β 都在 F 上可分。取它们最小多项式 f,g 的共同分裂扩张（先分裂 f，再分裂 g），枚举根 α=α₁,…,α\_r 与 β=β₁,…,β\_s，均互异。
+
+\item 选非零 c∈F，使对所有 i 及 j≠1 有 α\_i+cβ\_j≠α+cβ。被排除的 c 每对至多一个，共有限个，而 F 无限，故可选。令 θ=α+cβ、E=F(θ)。E[x] 中 g(x) 与 f(θ−cx) 有共同根 β。若 β\_j 为另一共同根，则 θ−cβ\_j=α\_i 对某 i，即 α\_i+cβ\_j=θ，与选择矛盾。故它们在共同分裂扩张中仅有共同根 β。
+
+\item g 无重根，因此这两个多项式在分裂扩张中的首一最大公因式为 x−β。另一方面，在 E[x] 用 Euclid 算法所得首一最大公因式 d，在任何扩域后仍为最大公因式：d 整除二者的等式保持，且原域中的 Bezout 恒等式 d=A g+B f(θ−cx) 使扩域中的任意公因式都整除 d。于是 d=x−β∈E[x]，由常数系数得 β∈E，进而 α=θ−cβ∈E。所以 K=E。
+
+\item 一般有限 K/F 可由有限个元素生成：取有限向量空间基，其生成的子域包含整组基，因而包含 K 中所有基的线性组合。可分扩张的每个元素都可分，故逐次对“已合并的单个生成元”和下一个生成元应用二元素结论，有限归纳得到一个 θ。
+
+\item 若 F 有限，K 是有限维 F 向量空间，故 K 也是有限域。其非零元素构成域乘法群的有限子群，已证它循环。取生成元 θ，则 K 的所有非零元素为 θ 的整数幂，都在 F(θ)，零也在其中，故 K=F(θ)。最后数域有限扩张 Q，特征零可分性已证明，套用即得数域结论。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[有限测度下的上连续性]\label{thm:measure-continuity-above}
 
 若可测集 E\_n 递减，且 μ(E₁)<∞，则 μ(∩E\_n)=lim μ(E\_n)。
@@ -9682,6 +9976,58 @@ f,g 在闭方形 Q 邻域全纯，若 ∂Q 上 |g−f|<|f|，则 f 与 g 在 Q �
 
 \end{proof}
 
+\begin{theorem}[有可积控制的无界停时可选停止]\label{thm:dominated-optional-stopping}
+
+离散可积鞅 M\_n 与几乎必然有限停时 T，若存在可积 Z≥0 使所有 n 均有 |M\_(T∧n)|≤Z，则 M\_T 可积且 E[M\_T]=E[M₀]。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有界停时的可选停止等式（定理~\ref{thm:bounded-optional-stopping}）；控制收敛定理（实值版）（定理~\ref{thm:dominated-convergence}）
+
+\par\noindent\textbf{思路：}先在截断停时处使用有限和证明，再以可积控制正当化极限。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item T\_n=T∧n 是有界停时：对 k<n，\{T\_n≤k\}=\{T≤k\}，对 k≥n 该事件为全集。因此 E[M\_(T\_n)]=E[M₀]。
+
+\item T 几乎必然有限，所以每条正常路径上当 n≥T 时 M\_(T\_n)=M\_T，故逐点最终相等。统一控制 |M\_(T\_n)|≤Z 也给 |M\_T|≤Z 几乎处处。控制收敛定理使 E[M\_(T\_n)]→E[M\_T]，得到等式。该控制条件是充分条件，不声称对任意几乎必然有限停时都能省去它。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[公平随机游走的破产概率与平均退出时间]\label{thm:fair-gambler-ruin}
+
+设 S₀=0，S\_n=Σ\_(k=1)\textasciicircum{}nξ\_k，其中 ξ\_k 独立、取±1各概率1/2。正整数 a,b 给停时 T=inf\{n:S\_n=a 或 S\_n=−b\}。则 T 几乎必然有限，P(S\_T=a)=b/(a+b)，且 E[T]=ab。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有界停时的可选停止等式（定理~\ref{thm:bounded-optional-stopping}）；有可积控制的无界停时可选停止（定理~\ref{thm:dominated-optional-stopping}）；单调收敛定理（定理~\ref{thm:monotone-integral}）；控制收敛定理（实值版）（定理~\ref{thm:dominated-convergence}）；相互独立变量的有界函数乘积期望（定理~\ref{thm:independent-bounded-products}）；π—λ 定理（定理~\ref{thm:pi-lambda}）
+
+\par\noindent\textbf{思路：}先给退出时间的几何尾界，再对 S\_n 与 S\_n²−n 使用截断可选停止。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 取自然信息流 F\_n=σ(ξ₁,…,ξ\_n)。\{T≤n\} 只依赖前 n 次步长，所以为停时。令 L=a+b。从任一未退出位置出发，接下来 L 次步长全为+1 必在此块内达到 a，其概率为2\textasciicircum{}(−L)，且该事件与过去独立。独立变量生成的过去与未来 σ 代数独立，可先对有限坐标矩形事件验证乘积公式，再用 π—λ 定理推广到 σ 代数。
+
+\item 因此 P(T>(k+1)L)≤(1−2\textasciicircum{}(−L))P(T>kL)，归纳得 P(T>kL)≤(1−2\textasciicircum{}(−L))\textasciicircum{}k→0。事件 \{T>kL\} 递减，概率上连续性（或对补集用下连续性）给 P(T=∞)=0。
+
+\item S\_n 可积且适应，ξ\_n 对过去独立、均值零，所以对 A∈F\_(n−1)，E[(S\_n−S\_(n−1))1\_A]=E[ξ\_n]P(A)=0，故为鞅。停止前游走始终在整数区间 (−b,a)，停止后位于端点，因步长为1不可能跳过端点。因此 |S\_(T∧n)|≤max(a,b)，满足常数可积控制。可选停止得 E[S\_T]=0。
+
+\item 令 q=P(S\_T=a)，则 aq−b(1−q)=0，所以 q=b/(a+b)，下端退出概率 a/(a+b)。
+
+\item 再令 N\_n=S\_n²−n。其增量为 2S\_(n−1)ξ\_n+(ξ\_n²−1)=2S\_(n−1)ξ\_n，对过去积分为零，所以也是可积鞅。对有界停时 T∧n 应用可选停止，得 E[S\_(T∧n)²]=E[T∧n]。
+
+\item 左侧由常数 max(a,b)² 控制且几乎处处趋 S\_T²，控制收敛使其趋 E[S\_T²]；右侧 T∧n↑T，单调收敛给 E[T]，允许先为无穷。由退出概率计算 E[S\_T²]=a²b/(a+b)+b²a/(a+b)=ab，故 E[T]=ab<∞。这一步同时证明了有限期望，不在使用可选停止前预先假定它。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[结合代数的交换子构成李代数]\label{thm:commutator-jacobi}
 
 任意域上的结合代数，以 [A,B]=AB-BA 为括号，满足双线性、[A,A]=0 及 Jacobi 恒等式。
@@ -9732,7 +10078,7 @@ f,g 在闭方形 Q 邻域全纯，若 ∂Q 上 |g−f|<|f|，则 f 与 g 在 Q �
 
 \begin{theorem}[Maschke 定理]\label{thm:maschke}
 
-有限群 G 在有限维域 F 上的表示，若特征 F 不整除 |G|，则每个不变子空间有不变直和补，表示可分解为不可约表示的有限直和。
+有限群 G 在有限维 F-向量空间上的表示，若特征 F 不整除 |G|，则每个不变子空间有不变直和补，表示可分解为不可约表示的有限直和。
 
 \end{theorem}
 
@@ -10013,6 +10359,172 @@ K=Q(√2,√3) 对 Q 次数为四，其伽罗瓦群为 Klein 四元群，恰有�
 \item 该域是 (x²-2)(x²-3) 的分裂域，根全不同，故有限正规可分。两个平方根可分别独立换符号；这些替换保持上述基的乘法关系，给四个不同自同构，群为 (Z/2Z)²。
 
 \item 按 Lagrange，四元群子群阶只能为 1、2、4。阶一和阶四各一个；三个非单位元各生成一个不同阶二子群，所以共五个子群。用基的系数逐项检查，三个阶二子群固定域分别为 Q(√2)、Q(√3)、Q(√6)，另两端对应 K 与 Q。基本对应保证除此之外没有中间域。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[任意群的轨道陪集对应及有限群类方程]\label{thm:orbit-coset-class-equation}
+
+任意群 G 作用于 X 时，G/G\_x 的左陪集集合与轨道 Gx 通过 gG\_x↦gx 双射。有限群的共轭作用给类方程 |G|=|Z(G)|+Σ\_i[G:C\_G(x\_i)]，其中每个非中心共轭类各取一个代表 x\_i。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}子群判别法（定理~\ref{thm:subgroup-test}）；群与群作用的公理（约定~\ref{base:axiom-group}）
+
+\par\noindent\textbf{思路：}先直接验证陪集到轨道的双射，再对共轭作用分割整个群。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 稳定子 G\_x 是子群：单位元固定 x，两个固定 x 的元素 g,h 满足 gh⁻¹x=x。若 gG\_x=hG\_x，则 h⁻¹g∈G\_x，所以 gx=hx；反向若 gx=hx，同样得到 h⁻¹g∈G\_x，从而两陪集相同。这证明映射良定义且单射，满射由轨道定义得到，完全不需 G 有限。
+
+\item 对共轭作用 g·x=gxg⁻¹，稳定子恰为中心化子 C\_G(x)。轨道为共轭类，其基数等于该中心化子的指数。单元素共轭类恰为中心元素。有限 G 被全部共轭类分割，把单元素类合并为 |Z(G)|，其余各类按轨道公式计数即得类方程。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Cauchy 有限群定理]\label{thm:cauchy-finite-group}
+
+若素数 p 整除有限群 G 的阶，则 G 有阶为 p 的元素。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}轨道—稳定子定理（定理~\ref{thm:orbit-stabilizer}）；Lagrange 定理（定理~\ref{thm:lagrange}）
+
+\par\noindent\textbf{思路：}循环移动乘积为一的 p 元组，除固定点外每个轨道都有 p 个元素。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 X=\{(g₁,…,g\_p):g₁…g\_p=1\}。前 p−1 项可任取，末项唯一，故 |X|=|G|\textasciicircum{}(p−1)，被 p 整除。循环移动元组仍在 X 中，因为 g₂…g\_pg₁=g₁⁻¹(g₁…g\_p)g₁=1。
+
+\item 阶 p 循环群的作用轨道大小由轨道—稳定子只能为1或p，故固定元组数与 |X| 模 p 同余，为0。固定元组恰为 (g,…,g)，其中 g\textasciicircum{}p=1。单位元给一个固定点，固定点总数是 p 的正倍数，所以至少还有一个非单位解 g。其阶整除 p，且非1，故为p。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[p 群作用的固定点同余与非平凡中心]\label{thm:p-group-fixed-points}
+
+有限 p 群 P 作用在有限集 X 上时，|X|≡|X\textasciicircum{}P| (mod p)。非平凡有限 p 群的中心非平凡；阶 p\textasciicircum{}a 的群对每个 0≤k≤a 均有阶 p\textasciicircum{}k 的子群。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}轨道—稳定子定理（定理~\ref{thm:orbit-stabilizer}）；Cauchy 有限群定理（定理~\ref{thm:cauchy-finite-group}）；群的第一同构定理（定理~\ref{thm:first-isomorphism}）
+
+\par\noindent\textbf{思路：}非单点轨道大小都被 p 整除；对共轭作用应用后，递归取中心的阶 p 子群作商。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 每个轨道大小为 P 中稳定子的指数，故是 p 的幂。非单点轨道大小均被 p 整除，单点轨道恰为被 P 全体固定的点，得到同余。
+
+\item 对 P 在自身上的共轭作用，固定点恰为中心 Z(P)。|P|≡0 (mod p)，所以 |Z(P)| 也被 p 整除；它至少含单位元，故至少含 p 个元素。Cauchy 给中心中阶 p 的子群 C，中心子群正规。
+
+\item 按 a 归纳证明各阶子群存在。k=0 取单位子群。对 k≥1，商 P/C 阶 p\textasciicircum{}(a−1)，归纳假设给其中阶 p\textasciicircum{}(k−1) 的子群 H。其商映射原像 K 为子群；它由 |H| 个大小 p 的 C 陪集组成，故 |K|=p\textasciicircum{}k。起点 a=0 只有平凡群，归纳完成。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Sylow 第一存在定理]\label{thm:sylow-existence}
+
+若 |G|=p\textasciicircum{}a m、p 为素数且 p∤m，则有限群 G 有阶 p\textasciicircum{}a 的子群；从而每个 0≤k≤a 都有阶 p\textasciicircum{}k 的子群。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}轨道—稳定子定理（定理~\ref{thm:orbit-stabilizer}）；p 群作用的固定点同余与非平凡中心（定理~\ref{thm:p-group-fixed-points}）；组合数公式（定理~\ref{thm:binomial-count}）；Euclid 引理（定理~\ref{thm:euclid-lemma}）
+
+\par\noindent\textbf{思路：}让 G 左乘作用在大小为 p\textasciicircum{}a 的子集上；其中一个轨道大小不被 p 整除，其稳定子恰有阶 p\textasciicircum{}a。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 X 为 G 的所有 p\textasciicircum{}a 元子集，|X|=binom(p\textasciicircum{}a m,p\textasciicircum{}a)。证明该数模 p 等于 m：在 F\_p[x] 中，binom(p,j) 对 0<j<p 都被 p 整除（p! 含一个因子 p，j!、(p−j)! 不含），所以 (1+x)\textasciicircum{}p=1+x\textasciicircum{}p。重复 a 次得 (1+x)\textasciicircum{}(p\textasciicircum{}a m)=(1+x\textasciicircum{}(p\textasciicircum{}a))\textasciicircum{}m，比较 x\textasciicircum{}(p\textasciicircum{}a) 系数得到所求同余，故 |X| 不被 p 整除。
+
+\item G 左乘作用于 X。如果所有轨道大小都被 p 整除，则总数也被 p 整除，矛盾。故某 S∈X 的稳定子 H 满足其轨道大小 [G:H] 不被 p 整除，因此 |H| 含有 p\textasciicircum{}a 因子。
+
+\item 另一方面，H 在 S 上的左乘作用自由：h s=s 迫使 h=1。因此每个 H 轨道大小为 |H|，这些轨道分割 S，所以 |H| 整除 |S|=p\textasciicircum{}a。与前步合并只能 |H|=p\textasciicircum{}a。最后在此 p 群 H 内使用已证各阶子群存在性，得到 p\textasciicircum{}k 版本。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Sylow 共轭定理与个数约束]\label{thm:sylow-conjugacy-count}
+
+若 |G|=p\textasciicircum{}a m、p∤m，所有阶 p\textasciicircum{}a 子群称 Sylow p 子群。每个 p 子群包含于某个 Sylow p 子群；全部 Sylow p 子群两两共轭，其个数 n\_p 整除 m 且 n\_p≡1 (mod p)。n\_p=1 当且仅当该 Sylow 子群正规。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Sylow 第一存在定理（定理~\ref{thm:sylow-existence}）；p 群作用的固定点同余与非平凡中心（定理~\ref{thm:p-group-fixed-points}）；轨道—稳定子定理（定理~\ref{thm:orbit-stabilizer}）；Lagrange 定理（定理~\ref{thm:lagrange}）
+
+\par\noindent\textbf{思路：}先让 p 子群作用于 Sylow 陪集，再让固定 Sylow 子群共轭作用于全部 Sylow 子群。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 固定 Sylow 子群 P，令任意 p 子群 Q 左乘作用在 G/P 上。该集合大小 m 不被 p 整除，固定点同余保证至少一个固定陪集 gP。Q 固定 gP 意味着 g⁻¹Qg⊆P，故 Q⊆gPg⁻¹。如果 Q 本身为 Sylow，两边阶相等，包含变成相等，从而共轭性成立。
+
+\item G 共轭作用在 Sylow 集合上可迁，其稳定子为 N\_G(P)=\{g:gPg⁻¹=P\}。它是子群并包含 P，直接由共轭复合、取逆验证。因此 n\_p=[G:N\_G(P)]；又 [G:P]=[G:N\_G(P)][N\_G(P):P]=m，故 n\_p 整除 m。
+
+\item 让 P 共轭作用于全部 Sylow 子群。若 Q 被 P 固定，则 P 正规化 Q，因此 PQ 是子群：利用 pQp⁻¹=Q 可将乘积和逆重新写为 PQ 的形式。乘积集合的大小为 |P||Q|/|P∩Q|，因为映射 P×Q→PQ 的每个纤维由公共交元素一一参数化。因此 |PQ| 是 p 幂，且被 |G| 整除，至多 p\textasciicircum{}a。它包含已有阶 p\textasciicircum{}a 的 P 与 Q，只能 P=Q。
+
+\item 所以该作用唯一固定点是 P 本身，固定点同余给 n\_p≡1 (mod p)。最后，唯一 Sylow 必被每个共轭保持，故正规；反向正规 Sylow 的所有共轭都等于自身，而全部 Sylow 已证共轭，所以只有一个。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[十五阶群必为循环群]\label{thm:order-fifteen-cyclic}
+
+每个阶15的群都同构于 C₁₅。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Sylow 共轭定理与个数约束（定理~\ref{thm:sylow-conjugacy-count}）；Lagrange 定理（定理~\ref{thm:lagrange}）
+
+\par\noindent\textbf{思路：}两个 Sylow 个数约束都迫使唯一；互素阶正规子群彼此交换，生成元乘积的阶为15。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item n₅ 整除3且同余1模5，只能1；n₃ 整除5且同余1模3，也只能1。因此阶5与阶3子群 P,Q 都正规。素数阶群中任意非单位元按 Lagrange 具有全阶，故可取生成元 x,y，分别阶5、3。
+
+\item 对 p∈P、q∈Q，交换子 pqp⁻¹q⁻¹ 同时属于 P 与 Q（分别利用两子群正规）。交子群的阶整除5和3，故交为\{1\}，交换子只能为1，P,Q 逐元素交换。
+
+\item 若 (xy)\textasciicircum{}n=1，则 x\textasciicircum{}n=y\textasciicircum{}(−n) 属于 P∩Q，只能为1，因此5和3都整除n，15整除n。反向 (xy)\textasciicircum{}15=1，故 xy 阶15，生成整个 G。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[A₄ 没有六阶子群]\label{thm:alternating-four-no-six}
+
+交错群 A₄ 的阶为12，但它没有阶6的子群，说明 Lagrange 阶整除条件不是一般充分条件。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Lagrange 定理（定理~\ref{thm:lagrange}）；群的第一同构定理（定理~\ref{thm:first-isomorphism}）
+
+\par\noindent\textbf{思路：}指数二子群必正规，商群阶二却不能容纳三循环的非平凡像，而 A₄ 由三循环生成。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 四个字母的偶置换为：单位元、8个三循环（四种选三字母，每种两方向）、3个双对换。因此 |A₄|=12。它由三循环生成：三循环自身已在生成集中，且例如 (12)(34)=(132)(134)（从右向左作用），其他双对换由重新命名字母得到。
+
+\item 若 H 阶6，则指数二。对 g∉H，左右陪集 gH、Hg 都是 H 的补集，因而相等；g∈H 时亦相等。所以 H 正规，商群 A₄/H 阶二。
+
+\item 商映射下每个三循环 c 的像满足 image(c)\textasciicircum{}3=1，且阶整除商群阶二，因此该像阶整除 gcd(2,3)=1，必为单位。全部生成元都映为单位，故整个 A₄ 映为单位，与商群阶二矛盾。因此不存在 H。
 
 \end{enumerate}
 

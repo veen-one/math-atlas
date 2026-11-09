@@ -46,6 +46,20 @@ const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.pro
 '7. 所有证明仍需独立数学复核；程序只检查依赖与构建，不验证数学推演。开放问题（如 P 与 NP、黎曼猜想）不可能被伪造为已证。','','## 逐点状态','','| 学科 | 知识点 | 本卷已展开命题数 | 全主题状态 |','|---|---|---:|---|'];
 for(const topic of topics)lines.push(`| ${topic.subject} | ${topic.name} | ${topic.proofIds.length} | ${topic.proofIds.length?'部分展开':'待扩写'} |`);
 fs.writeFileSync(path.join(root,'docs/proofs/coverage.md'),lines.join('\n')+'\n');
+const progress=['# 教材与证明进度','',
+`已写证明：**${book.proofs.length} 条**；明确基础：**${Object.keys(book.bases).length} 项**。`,
+`知识点：**${topics.length} 个**，均已有相关证明；**0 个通过全部定理验收，${topics.length} 个尚未通过全部定理验收**。`,
+`候选断言：**${claims.length} 条**；已逐句核定 **${claims.length-pending} 条**，待审 **${pending} 条**。`,'',
+'待审断言不等于缺失证明：有些已有证明但尚未逐句核对。全部定理清单仍未穷尽，因此缺失证明的精确总数目前未知。候选句的核定也不代表其所属主题已完成全部定理。','',
+'| 学科 | 知识点 | 已核定断言 | 待审断言 |','|---|---:|---:|---:|'];
+for(const [sid,subject] of Object.entries(atlas.subjects)){
+  const group=claims.filter(c=>c.topic.startsWith(sid+'/'));
+  const count=topics.filter(t=>t.key.startsWith(sid+'/')).length;
+  const todo=group.filter(c=>c.status==='needs-statement-review').length;
+  progress.push(`| ${subject.name} | ${count} | ${group.length-todo} | ${todo} |`);
+}
+progress.push('','主要未证的大型结果和证明范围限制见 [逐点覆盖与剩余工作](coverage.md)。程序检查不等于独立数学复核。');
+fs.writeFileSync(path.join(root,'docs/proofs/progress.md'),progress.join('\n')+'\n');
 console.log(`Audited ${topics.length} topics: ${book.proofs.length} proofs cover ${covered} topics; ${pending} candidate sentences await statement review; ${claims.length-pending} reviewed with proofs`);
 
 const readmePath=path.join(root,'README.md');

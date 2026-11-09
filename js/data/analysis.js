@@ -292,7 +292,7 @@ window.ATLAS.subjects.analysis = {
           keywords: ['留数', '洛朗级数', '孤立奇点', '留数定理', '围道积分'],
           definition: [
             '设 $a$ 是 $f$ 的孤立奇点，$f$ 在 $0 < |z - a| < R$ 内全纯。其洛朗展开 $f(z) = \\sum_{n=-\\infty}^{\\infty} c_n (z - a)^n$ 中系数 $c_{-1}$ 称为 $f$ 在 $a$ 处的**留数**，记 $\\operatorname{Res}(f, a)$。',
-            '留数定理：若 $f$ 在简单闭曲线 $\\gamma$ 内部除有限个孤立奇点外全纯，则 $\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f, a_k)$。'
+            '留数定理：若 $f$ 在正向分段光滑简单闭曲线 $\\gamma$ 及其内部的某开邻域除有限个内部孤立奇点外全纯，则 $\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f, a_k)$。'
           ],
           intuition: [
             '洛朗级数把函数在奇点附近分解为“主部 + 解析部分”。沿闭路积分一圈时所有项都消失，只有 $1/(z-a)$ 项留下 $2\\pi i$ 的贡献，因此留数捕捉了奇点的“净效应”。',

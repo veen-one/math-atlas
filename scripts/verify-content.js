@@ -23,7 +23,7 @@ const build = spawnSync('python3', ['scripts/deepen-content.py'], { cwd: root, e
 assert.equal(build.status, 0, build.stderr);
 assert.equal(fs.readFileSync(generated, 'utf8'), before, 'Generator is not deterministic');
 // Generated proof chapters and the topic/claim audit must be reproducible together.
-const generatedProofFiles = ['js/data/proofs.js', 'docs/proofs/volume-1.md', 'docs/proofs/volume-1.tex', 'docs/proofs/topic-inventory.json', 'docs/proofs/claim-audit.json', 'docs/proofs/coverage.md'];
+const generatedProofFiles = ['js/data/proofs.js', 'docs/proofs/volume-1.md', 'docs/proofs/volume-1.tex', 'docs/proofs/topic-inventory.json', 'docs/proofs/claim-audit.json', 'docs/proofs/coverage.md', 'docs/proofs/progress.md'];
 const proofSnapshots = generatedProofFiles.map(file => fs.readFileSync(path.join(root, file), 'utf8'));
 for (const [command, args] of [['python3', ['-W', 'error', 'scripts/build-proofs.py']], [process.execPath, ['scripts/audit-proofs.js']]]) {
   const result = spawnSync(command, args, { cwd: root, encoding: 'utf8' });

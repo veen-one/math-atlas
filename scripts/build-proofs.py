@@ -346,6 +346,9 @@ for p in PROOFS:
     book.extend([f'<a id="{p["id"]}"></a>',f'## {p["title"]}','','**陈述。** '+p['statement'],'','**依赖。** '+ '；'.join('['+(BASES[d]['title'] if d in BASES else lookup[d]['title'])+'](#'+d+')' for d in p['dependencies']),'','**思路。** '+p['idea'],'','**证明。**',''])
     book.extend(str(i)+'. '+s+'\n' for i,s in enumerate(p['steps'],1))
 book+=['## 对照阅读资料','',
+'[J. S. Milne，Group Theory](https://www.jmilne.org/math/CourseNotes/GT.pdf)：Cauchy、p 群作用、Sylow 定理与有限群例子的对照教材。',
+'[MIT 18.712，Introduction to Representation Theory](https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/pages/lecture-notes/)：有限群平均、Maschke、Schur 与特征标正交性的对照资料。',
+'[Stephen New，Waterloo PMATH 352，Complex Analysis](https://www.math.uwaterloo.ca/~snew/PMATH352/pm352notes.pdf)：Laurent 系数、孤立奇点与留数的对照教材。本卷以方形围道给出局部展开及加权留数推导。',
 '[Curtis McMullen，Harvard Math 213a，Complex Analysis Notes](https://abel.math.harvard.edu/~ctm/home/text/class/harvard/213a/06/html/home/course/course.pdf)：正规族、Rouché 与黎曼映射极值法的对照阅读。本卷将所需前置结论逐条展开。',
 '[Harvard，Christopher Eur，Complex Analysis Notes](https://people.math.harvard.edu/~ceur/notes_pdf/Eur_ComplexAnalysis_Notes.pdf)：Goursat、局部原函数与端点同伦形式的 Cauchy 定理对照资料。',
 '[Stéphane Nonnenmacher，Introduction to Spectral Theory](https://www.imo.universite-paris-saclay.fr/~stephane.nonnenmacher/enseign/Spectral%20Theory%202022%20chap1-6.pdf)：有界算子的预解集及乘法算子的本质值域表述，可对照本卷的 σ 有限测度证明。',

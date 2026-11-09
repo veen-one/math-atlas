@@ -10,7 +10,7 @@ def register(P, BASES):
       r'ρ 是群同态，群第一同构定理中对核的证明给出正规性，并有 G/kerρ 同构于表示像。',
       r'W 不变意味着 ρ(g)W⊆W，对 g⁻¹ 应用同一条件再作用 ρ(g)，得到相反包含，因此等于。限制算子在 W 上可逆，逆为 ρ(g⁻¹) 的限制，并保持群乘法。',
       r'定义商作用 g·(v+W)=ρ(g)v+W。若 v-v′∈W，不变性保证两像之差在 W，故良定义。乘法及恒等作用由原表示继承，逆由 g⁻¹ 给出，所以也是表示。$\square$')
-    P('maschke','algebra/irreducible-representations algebra/invariant-subspaces','Maschke 定理',r'有限群 G 在有限维域 F 上的表示，若特征 F 不整除 |G|，则每个不变子空间有不变直和补，表示可分解为不可约表示的有限直和。','basis-extension representation-kernel','把任意投影对群平均，得到与群作用可交换的投影。',
+    P('maschke','algebra/irreducible-representations algebra/invariant-subspaces','Maschke 定理',r'有限群 G 在有限维 F-向量空间上的表示，若特征 F 不整除 |G|，则每个不变子空间有不变直和补，表示可分解为不可约表示的有限直和。','basis-extension representation-kernel','把任意投影对群平均，得到与群作用可交换的投影。',
       r'取不变子空间 W，把其基扩成 V 的基，可构造线性投影 P:V→W 且 P 在 W 上为恒等。因 |G| 在 F 可逆，定义 Q=|G|⁻¹Σ_(g∈G)ρ(g)Pρ(g)⁻¹。',
       r'每项的像都在 W；对 w∈W，ρ(g)⁻¹w 仍在 W，所以每项在 w 上的值均为 w，从而 Qw=w。因此 Q²=Q，且 im Q=W。',
       r'对 h∈G，ρ(h)Qρ(h)⁻¹ 只是用 hg 重新排列总和，所以等于 Q。故 ker Q 不变。每个 v=(v-Qv)+Qv，前者在核、后者在 W，交集只有零，所以 V=kerQ⊕W。',

@@ -299,7 +299,7 @@ window.ATLAS.extras['numbertheory/local-global-principle'] = {
 };
 
 window.ATLAS.extras['numbertheory/rational-points'] = {
-  insight: '代数曲线的亏格决定有理点的丰富程度：亏格 $0$ 可参数化，亏格 $1$ 是椭圆曲线，亏格 $\\ge2$ 只有有限多个有理点（Faltings 定理）。',
+  insight: '代数曲线的亏格决定有理点的丰富程度：光滑射影亏格 $0$ 曲线在有有理点时可有理参数化，亏格 $1$ 曲线在指定有理点后成为椭圆曲线，亏格 $\\ge2$ 只有有限多个有理点（Faltings 定理）。',
   examples: [
     '单位圆 $x^2+y^2=1$ 的所有有理点可用 $t\\in\\mathbb{Q}$ 参数化。',
     'Faltings 定理证明亏格 $\\ge2$ 的曲线有理点有限，解决了 Mordell 猜想。'

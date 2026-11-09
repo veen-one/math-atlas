@@ -486,7 +486,7 @@ window.ATLAS.subjects.numbertheory.branches.push(
         brief: '局部有解能否保证整体有解',
         keywords: ['局部-整体', 'Hasse 原理', '局部域', '反例'],
         definition: [
-          '**局部-整体原则**（Hasse 原理）：一个方程在 $\\mathbb{Q}$ 上有解，当且仅当它在每个 $\\mathbb{Q}_p$（所有素数 $p$）与 $\\mathbb{R}$ 上都有解。',
+          '**局部-整体原则**（Hasse 原理）：对某类方程，局部-整体原则所要求的等价是：方程在 $\\mathbb{Q}$ 上有解，当且仅当它在每个 $\\mathbb{Q}_p$（所有素数 $p$）与 $\\mathbb{R}$ 上都有解。',
           '该原则对二次型成立（Hasse–Minkowski 定理），但对高次方程一般不成立：存在处处局部有解但整体无解的反例（Selmer 曲线 $3x^3 + 4y^3 + 5z^3 = 0$）。'
         ],
         intuition: [
@@ -525,10 +525,10 @@ window.ATLAS.subjects.numbertheory.branches.push(
         keywords: ['有理点', '有理曲线', '有理参数化', 'Mordell'],
         definition: [
           '代数簇 $V$ 的**有理点**是坐标都在 $\\mathbb{Q}$ 中的点，记 $V(\\mathbb{Q})$。丢番图几何研究有理点的存在性与分布。',
-          '有理曲线（亏格 0）的有理点可以用有理参数化完全描述；椭圆曲线（亏格 1）的有理点群有限生成（Mordell–Weil）；亏格 $\\ge 2$ 的曲线有理点有限（Faltings 定理）。'
+          '数域上的光滑射影亏格 0 曲线须先有一个有理点，才可用有理参数化描述有理点；椭圆曲线（亏格 1）的有理点群有限生成（Mordell–Weil）；亏格 $\\ge 2$ 的曲线有理点有限（Faltings 定理）。'
         ],
         intuition: [
-          '亏格决定了有理点的“丰富程度”：圆锥曲线有无穷多有理点，椭圆曲线可能有有限或无限多，亏格 ≥ 2 的曲线只有有限多（Faltings 1983，证明 Mordell 猜想）。',
+          '亏格决定了有理点的“丰富程度”：光滑圆锥曲线若有一个有理点，就可有理参数化并有无穷多有理点，椭圆曲线可能有有限或无限多，亏格 ≥ 2 的曲线只有有限多（Faltings 1983，证明 Mordell 猜想）。',
           '求有理点的方法包括：有理参数化、下降法、局部-整体原则、高度理论。'
         ],
         formulas: [
