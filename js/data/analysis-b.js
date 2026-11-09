@@ -447,8 +447,8 @@ window.ATLAS.subjects.analysis.branches.push(
             caption: '谱的定义。'
           },
           {
-            tex: 'T = \\int_{\\sigma(T)} \\lambda\\,dE(\\lambda)',
-            caption: '谱定理（谱测度形式）。'
+            tex: 'T x = \\sum_n \\lambda_n \\langle x,e_n\\rangle e_n',
+            caption: '紧自伴算子的谱分解；一般自伴算子的谱测度定理未在本卷证明。'
           }
         ],
         example: [
