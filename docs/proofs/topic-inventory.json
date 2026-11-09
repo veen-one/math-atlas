@@ -1,5 +1,5 @@
 {
-  "proofCount": 564,
+  "proofCount": 565,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -41,6 +41,7 @@
         "holomorphic-compact-limit",
         "montel-locally-bounded",
         "pointwise-limit-measurable",
+        "egorov",
         "hurwitz-univalent-limit"
       ],
       "coverage": "partial",
@@ -295,7 +296,8 @@
       "proofIds": [
         "simple-approximation",
         "rational-density",
-        "pointwise-limit-measurable"
+        "pointwise-limit-measurable",
+        "egorov"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -325,6 +327,7 @@
         "monotone-integral",
         "fatou",
         "dominated-convergence",
+        "egorov",
         "tonelli-fubini"
       ],
       "coverage": "partial",
