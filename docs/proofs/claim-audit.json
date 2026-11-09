@@ -3165,14 +3165,15 @@
     {
       "topic": "discrete/channel-capacity",
       "field": "definition",
-      "text": "香农信道编码定理：速率低于 $C$ 时存在编码使错误概率任意小。",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "discrete/channel-capacity",
-      "field": "definition",
-      "text": "这是信息论的核心定理：噪声不限制可靠通信，只限制速率。",
-      "status": "needs-statement-review"
+      "text": "有限字母表离散无记忆信道的香农编码定理：任意正速率 R<C 可由块长趋长的编码实现，最大错误概率趋零；反之，误差趋零的码率不超过 C。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-information-identities",
+        "fano-finite-message",
+        "dm-channel-random-coding",
+        "dm-channel-capacity-weak-converse"
+      ],
+      "note": "有限字母表离散无记忆信道；随机编码与删码给最大误差可达性，Fano给可靠码率的弱逆上界。C=0时不存在正可靠码率，不声称强逆或有限块零错误。"
     },
     {
       "topic": "discrete/channel-capacity",
@@ -3183,14 +3184,28 @@
     {
       "topic": "discrete/channel-capacity",
       "field": "formulaCaptions",
-      "text": "香农信道编码定理。",
-      "status": "needs-statement-review"
+      "text": "有限离散无记忆信道编码定理：R<C 时存在误差趋零的码。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-information-identities",
+        "fano-finite-message",
+        "dm-channel-random-coding",
+        "dm-channel-capacity-weak-converse"
+      ],
+      "note": "有限字母表离散无记忆信道；随机编码与删码给最大误差可达性，Fano给可靠码率的弱逆上界。C=0时不存在正可靠码率，不声称强逆或有限块零错误。"
     },
     {
       "topic": "discrete/channel-capacity",
       "field": "extraInsight",
-      "text": "信道容量是可靠传输的最大速率；香农定理说明噪声只限制速率，不阻止可靠通信。",
-      "status": "needs-statement-review"
+      "text": "有限字母表离散无记忆信道的容量是可靠传输的渐近码率上界；香农定理保证任意正速率 R<C 可实现误差趋零。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-information-identities",
+        "fano-finite-message",
+        "dm-channel-random-coding",
+        "dm-channel-capacity-weak-converse"
+      ],
+      "note": "有限字母表离散无记忆信道；随机编码与删码给最大误差可达性，Fano给可靠码率的弱逆上界。C=0时不存在正可靠码率，不声称强逆或有限块零错误。"
     },
     {
       "topic": "probability/distributions",

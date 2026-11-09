@@ -1,5 +1,5 @@
 {
-  "proofCount": 547,
+  "proofCount": 551,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3602,6 +3602,7 @@
       "subject": "离散数学与计算",
       "branch": "编码与信息论",
       "proofIds": [
+        "finite-information-identities",
         "log-inequality",
         "gibbs-inequality",
         "entropy-bound",
@@ -3629,6 +3630,10 @@
       "subject": "离散数学与计算",
       "branch": "编码与信息论",
       "proofIds": [
+        "finite-information-identities",
+        "fano-finite-message",
+        "dm-channel-random-coding",
+        "dm-channel-capacity-weak-converse",
         "bsc-one-use-capacity"
       ],
       "coverage": "partial",
@@ -3640,6 +3645,7 @@
       "subject": "离散数学与计算",
       "branch": "编码与信息论",
       "proofIds": [
+        "fano-finite-message",
         "entropy-bound",
         "binary-kraft-prefix",
         "shannon-prefix-length-bound",

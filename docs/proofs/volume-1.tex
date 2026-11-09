@@ -3050,6 +3050,106 @@ Banach 空间 X,Y 间定义于全部 X 的线性映射 T 有界，当且仅当�
 
 \end{proof}
 
+\begin{theorem}[有限变量的条件熵、互信息及信息不增]\label{thm:finite-information-identities}
+
+所有对数以2为底。有限变量满足H(X,Y)=H(Y)+H(X|Y)，I(X;Y)=H(X)−H(X|Y)=D₂(P\_XY‖P\_XP\_Y)≥0，故条件化不增加熵。若X→Y→Z为Markov链，则I(X;Z)≤I(X;Y)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有限分布的 Gibbs 不等式（定理~\ref{thm:gibbs-inequality}）；有限分布的熵界（定理~\ref{thm:entropy-bound}）
+
+\par\noindent\textbf{思路：}展开联合概率的对数分解得到链式法则，条件互信息是逐条件分布的非负散度。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 只对正概率项求和，p(x,y)=p(y)p(x|y)使−log p(x,y)=−log p(y)−log p(x|y)，求期望得熵链式法则。展开联合分布对乘积分布的散度，得I=H(X)+H(Y)−H(X,Y)，代入链式法则即为H(X)−H(X|Y)。Gibbs不等式保证非负，因此H(X|Y)≤H(X)。
+
+\item 条件互信息I(X;Z|Y)定义为对每个正概率y的条件分布互信息的概率加权和，故非负。链式法则展开给 I(X;Y,Z)=I(X;Y)+I(X;Z|Y)=I(X;Z)+I(X;Y|Z)。Markov条件使给定Y后X,Z独立，故第一式末项为零；第二式末项非负，推出数据处理不等式。
+
+\item 重复使用H(Y\_i|Y₁,…,Y\_(i−1))≤H(Y\_i)，得H(Y₁,…,Y\_n)≤Σ\_iH(Y\_i)。这些恒等式针对有限集合无需任何极限或测度正则性假设。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限消息的 Fano 不等式]\label{thm:fano-finite-message}
+
+消息M有K≥2个可能值，观测Y后用确定性解码器估计Mhat，错误概率P\_e=P(Mhat≠M)。则H(M|Y)≤H₂(P\_e)+P\_e log₂(K−1)≤1+P\_e log₂K。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有限变量的条件熵、互信息及信息不增（定理~\ref{thm:finite-information-identities}）；有限分布的熵界（定理~\ref{thm:entropy-bound}）
+
+\par\noindent\textbf{思路：}额外告知是否解码错误，正确时消息确定，错误时至多剩K−1种。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令E=1\_(Mhat≠M)。给定M,Y可确定E，故H(E|M,Y)=0。条件链式法则给 H(M|Y)=H(M,E|Y)=H(E|Y)+H(M|E,Y)。
+
+\item 条件化不增加熵给H(E|Y)≤H(E)=H₂(P\_e)。E=0时M=Mhat(Y)，条件熵零；E=1时给定Y，M至多有K−1种可能，熵界给该条件熵至多log₂(K−1)。按E的概率加权便得第一不等式，再用二元熵≤1和K−1≤K得到第二式。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[离散无记忆信道的随机编码可达性]\label{thm:dm-channel-random-coding}
+
+有限输入输出字母表信道W(y|x)，固定输入分布p，互信息I\_p(X;Y)。对0<R<I\_p，存在长度n的确定性码，其码率趋R，平均错误概率趋零；删去至多一半消息后，最大错误概率亦趋零且渐近码率不变。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有限变量的条件熵、互信息及信息不增（定理~\ref{thm:finite-information-identities}）；Chebyshev 不等式（定理~\ref{thm:chebyshev}）；样本均值方差及无偏性（定理~\ref{thm:variance-mean}）；相互独立变量的有界函数乘积期望（定理~\ref{thm:independent-bounded-products}）；Markov 不等式（定理~\ref{thm:markov}）
+
+\par\noindent\textbf{思路：}独立随机抽码字，按信息密度阈值解码；真码字由大数效应通过阈值，其他码字的误报用似然比均值控制。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令q(y)=Σ\_xp(x)W(y|x)。当p(x)W(y|x)>0时q(y)>0，定义i(x;y)=log₂(W(y|x)/q(y))。有限字母表上，正联合概率支持中的i只有有限多个有限值，故均值I\_p及方差有限。长度n的乘积信道与输入分布使信息密度为Σ\_j i(X\_j;Y\_j)，各项独立同分布，Chebyshev保证n⁻¹i(X\textasciicircum{}n;Y\textasciicircum{}n)依概率趋I\_p。
+
+\item 取δ>0使R+2δ<I\_p，K\_n=floor(2\textasciicircum{}(nR))。独立抽取K\_n个码字，每个按p\textasciicircum{}n分布。给输出y\textasciicircum{}n，只在恰好一个码字满足 i(x\textasciicircum{}n;y\textasciicircum{}n)>n(R+δ)时译为该消息，否则宣告错误。若q\textasciicircum{}n(y\textasciicircum{}n)=0，该输出在此随机实验中概率为零，可任意定义译码。W\textasciicircum{}n为零的候选信息密度定义为−∞。
+
+\item 真消息均匀，真码字与输出的联合分布为(pW)\textasciicircum{}n。因此真码字未过阈值的概率趋零。任一非真码字独立于输出，给定q\textasciicircum{}n(y\textasciicircum{}n)>0，似然比L=W\textasciicircum{}n(y\textasciicircum{}n|X\textasciicircum{}n)/q\textasciicircum{}n(y\textasciicircum{}n)的p\textasciicircum{}n均值为1。Markov界给该错误码字过阈值的概率≤2\textasciicircum{}(−n(R+δ))；对至多K\_n−1个竞争码字求并界，误报概率≤2\textasciicircum{}(−nδ)。
+
+\item 所以随机码本的平均错误概率期望≤真码字失败概率+2\textasciicircum{}(−nδ)→0。有限码本集合中至少一个确定性码本的错误概率不超过该平均值，选它得到平均误差可达性。log₂K\_n/n→R。码字即使抽样时可能重复，也不影响该存在论证，因为重复造成的错误已计入上界。
+
+\item 若选定码平均误差为ε\_n，至多一半消息的条件错误概率大于2ε\_n；保留其余至少K\_n/2个消息。保持原译码，对已删除输出改判任一保留消息，不会使保留消息的正确概率降低。于是最大错误≤2ε\_n，码率损失至多1/n（取整仅给趋零项），完成最大误差形式。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限离散无记忆信道容量定理及弱逆定理]\label{thm:dm-channel-capacity-weak-converse}
+
+定义C=max\_p I\_p(X;Y)。有限DMC的任意0<R<C可由确定性块码以最大错误概率趋零实现；任何均匀K\_n消息码若平均错误概率趋零，则limsup log₂K\_n/n≤C。更具体，(1−P\_e)log₂K\_n≤nC+1。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}离散无记忆信道的随机编码可达性（定理~\ref{thm:dm-channel-random-coding}）；有限消息的 Fano 不等式（定理~\ref{thm:fano-finite-message}）；有限变量的条件熵、互信息及信息不增（定理~\ref{thm:finite-information-identities}）；有限维 Heine–Borel 定理（定理~\ref{thm:heine-borel-rn}）
+
+\par\noindent\textbf{思路：}随机编码给容量以下可达；链式熵界限制n次信道携带的信息，再由Fano将可靠消息数转成互信息下界。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 输入概率单纯形紧。互信息可写为H(q)−Σ\_xp(x)H(W(·|x))，其中q=pW；函数−u log₂u在u=0连续填0，所以互信息对p连续，最大值C可取得。对任意0<R<C，选I\_p>R，随机编码定理给最大错误概率趋零的码。
+
+\item 逆向令M均匀分布于K\_n个消息，编码器确定地给X\textasciicircum{}n，输出为Y\textasciicircum{}n。信道无记忆使 H(Y\textasciicircum{}n|M)=Σ\_jH(Y\_j|X\_j)：给定消息后输入串确定，输出各坐标按各自信道行独立。另一方面H(Y\textasciicircum{}n)≤Σ\_jH(Y\_j)，故 I(M;Y\textasciicircum{}n)≤Σ\_j[H(Y\_j)−H(Y\_j|X\_j)]=Σ\_jI(X\_j;Y\_j)≤nC。输入坐标之间不要求独立。
+
+\item Fano给 H(M|Y\textasciicircum{}n)≤1+P\_e log₂K\_n，因此log₂K\_n=I(M;Y\textasciicircum{}n)+H(M|Y\textasciicircum{}n)≤nC+1+P\_e log₂K\_n。移项得所列有限块长界，K\_n=1时同样直接成立。若P\_e→0，除以n(1−P\_e)取上极限，得到容量上界。
+
+\item 此为弱逆定理：排除超过C且误差趋零的码，不以它声称超过容量时错误必趋1的强逆结论。定理也不把“存在好码”误解为随机抽到的每个码本都好，或有限块长下误差恰为零。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[任意 Hilbert 空间的标准正交基与 Parseval 展开]\label{thm:hilbert-orthonormal-basis}
 
 每个实或复 Hilbert 空间都有标准正交基 E。对每个 x，非零系数 〈x,e〉至多可数，x=Σ\_(e∈E)〈x,e〉e 在范数下成立，且 ‖x‖²=Σ|〈x,e〉|²。

@@ -299,7 +299,7 @@ window.ATLAS.extras['discrete/error-correcting-codes'] = {
 };
 
 window.ATLAS.extras['discrete/channel-capacity'] = {
-  insight: '信道容量是可靠传输的最大速率；香农定理说明噪声只限制速率，不阻止可靠通信。',
+  insight: '有限字母表离散无记忆信道的容量是可靠传输的渐近码率上界；香农定理保证任意正速率 R<C 可实现误差趋零。容量为零时没有正的可靠码率。',
   examples: [
     'AWGN 信道容量 $C=\\frac12\\log_2(1+\\mathrm{SNR})$。',
     'LDPC 与 Polar 码逼近香农容量。'
