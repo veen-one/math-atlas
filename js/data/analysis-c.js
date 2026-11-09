@@ -46,8 +46,9 @@ window.ATLAS.subjects.analysis.branches.push(
         brief: '分析连续频率中的函数信息',
         keywords: ['傅里叶变换', '逆变换', 'Plancherel', '频谱'],
         definition: [
-          '函数 $f$ 的**傅里叶变换**为 $\\hat f(\\xi) = \\int_{\\mathbb{R}^n} f(x) e^{-2\\pi i \\xi \\cdot x}\\,dx$。',
-          '逆变换：$f(x) = \\int_{\\mathbb{R}^n} \\hat f(\\xi) e^{2\\pi i \\xi \\cdot x}\\,d\\xi$。Plancherel 定理：$\\|\\hat f\\|_2 = \\|f\\|_2$。'
+          '对 $f\\in L^1(\\mathbb R)$，按本页约定定义**傅里叶变换** $\\hat f(\\xi)=\\int_{\\mathbb R}f(x)e^{-2\\pi i\\xi x}\\,dx。',
+          '若 $f\\in\\mathcal S(\\mathbb R)$，逆变换为 $f(x)=\\int_{\\mathbb R}\\hat f(\\xi)e^{2\\pi i\\xi x}\\,d\\xi$。',
+          'Plancherel 定理：该变换从 Schwartz 函数唯一连续延拓到 $L^2(\\mathbb R)$，并满足 $\\|\\hat f\\|_2=\\|f\\|_2$。'
         ],
         intuition: [
           '傅里叶变换把函数从“时间/空间”域搬到“频率”域：每个频率的振幅与相位由 $\\hat f(\\xi)$ 给出。',
@@ -60,15 +61,15 @@ window.ATLAS.subjects.analysis.branches.push(
           },
           {
             tex: '\\widehat{f\'}(\\xi) = 2\\pi i \\xi\\, \\hat f(\\xi)',
-            caption: '微分在频域变成乘法。'
+            caption: '若 $f\\in\\mathcal S(\\mathbb R)$，则导数变换乘以 $2\\pi i\\xi$。'
           },
           {
             tex: '\\|\\hat f\\|_2 = \\|f\\|_2',
-            caption: 'Plancherel 定理。'
+            caption: 'Plancherel 定理（$e^{-2\\pi i\\xi x}$ 约定，$L^2(\\mathbb R)$）。'
           }
         ],
         example: [
-          '矩形脉冲 $\\chi_{[-a,a]}$ 的傅里叶变换是 $\\frac{\\sin(2\\pi a \\xi)}{\\pi \\xi}$（sinc 函数），说明时域越窄，频域越宽（不确定性原理）。'
+          '对 $a>0$，矩形脉冲 $1_{[-a,a]}$ 的变换为 $\\sin(2\\pi a\\xi)/(\\pi\\xi)$，在 $\\xi=0$ 取连续延拓值 $2a$；首个零点在 $\\pm1/(2a)$，所以 $a$ 越小主瓣越宽。'
         ],
         related: ['fourier-series', 'convolution', 'time-frequency']
       },
@@ -78,8 +79,8 @@ window.ATLAS.subjects.analysis.branches.push(
         brief: '描述平移叠加与系统响应',
         keywords: ['卷积', '卷积定理', '滤波', '系统响应'],
         definition: [
-          '函数 $f$ 与 $g$ 的**卷积**为 $(f * g)(x) = \\int f(y)g(x - y)\\,dy$。它是“先翻转再平移后求和”。',
-          '卷积定理：$\\widehat{f * g} = \\hat f \\cdot \\hat g$。因此卷积在频域变成乘法，反之亦然。'
+          '$f,g\\in L^1(\\mathbb R)$ 时，卷积 $f*g(x)=\\int_{\\mathbb R}f(y)g(x-y)\\,dy$ 对几乎处处 $x$ 绝对存在；定义等价类时忽略零测集上的取值。它是“先翻转再平移后求和”。',
+          '在 $\\hat f(\\xi)=\\int f(x)e^{-2\\pi i\\xi x}dx$ 约定下，$f,g\\in L^1$ 满足卷积定理 $\\widehat{f*g}(\\xi)=\\hat f(\\xi)\\hat g(\\xi)$。'
         ],
         intuition: [
           '卷积是“加权平均”：$g$ 是权重核，输出是 $f$ 在不同平移处的加权和。图像模糊就是与高斯核卷积。',
@@ -92,15 +93,15 @@ window.ATLAS.subjects.analysis.branches.push(
           },
           {
             tex: '\\widehat{f * g} = \\hat f \\cdot \\hat g',
-            caption: '卷积定理。'
+            caption: '卷积定理（$f,g\\in L^1(\\mathbb R)$，按 $e^{-2\\pi i\\xi x}$ 约定）。'
           },
           {
             tex: 'f * g = g * f',
-            caption: '卷积交换律。'
+            caption: '若 $f,g\\in L^1(\\mathbb R)$，则 $f*g=g*f$ 几乎处处。'
           }
         ],
         example: [
-          '高斯函数与自身卷积仍是高斯函数（方差相加）；这解释了高斯模糊的稳定性。'
+          'Gaussian 卷积定理：中心高斯密度 $\\phi_\\sigma$ 与 $\\phi_\\tau$ 卷积为 $\\phi_{\\sqrt{\\sigma^2+\\tau^2}}$，可由配方直接验证。'
         ],
         related: ['fourier-transform', 'fourier-series', 'linear-operators']
       },

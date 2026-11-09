@@ -2435,6 +2435,66 @@
         "euler-trail-criterion"
       ],
       "note": "精确假设为有限无向多重图、含边、非孤立顶点连通；证明必要性与 Hierholzer 式闭游走拼接构造，两个奇点时加辅助边再切开。"
+    },
+    {
+      "topic": "analysis/fourier-transform",
+      "field": "definition",
+      "text": "Plancherel 定理：该变换从 Schwartz 函数唯一连续延拓到 $L^2(\\mathbb R)$，并满足 $\\|\\hat f\\|_2=\\|f\\|_2$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "plancherel-l2-cycles"
+      ],
+      "note": "按 e^(−2πiξx) 约定的一维实线版本；由角频率 Plancherel 经缩放推出 L² 唯一延拓。"
+    },
+    {
+      "topic": "analysis/fourier-transform",
+      "field": "formulaCaptions",
+      "text": "Plancherel 定理（$e^{-2\\pi i\\xi x}$ 约定，$L^2(\\mathbb R)$）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "plancherel-l2-cycles"
+      ],
+      "note": "公式明确约定 $e^{-2πiξx}$ 且定义域为 $L²(R)$；证明含缩放与满射性。"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "definition",
+      "text": "在 $\\hat f(\\xi)=\\int f(x)e^{-2\\pi i\\xi x}dx$ 约定下，$f,g\\in L^1$ 满足卷积定理 $\\widehat{f*g}(\\xi)=\\hat f(\\xi)\\hat g(\\xi)$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "convolution-l1-cycles"
+      ],
+      "note": "假设 f,g∈L¹(R)，按 e^(−2πiξx) 频率约定；由角频率版定理代入 t=2πξ。"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "formulaCaptions",
+      "text": "卷积定理（$f,g\\in L^1(\\mathbb R)$，按 $e^{-2\\pi i\\xi x}$ 约定）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "convolution-l1-cycles"
+      ],
+      "note": "等式对每个频率成立；函数空间和 Fourier 约定与陈述相同。"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "example",
+      "text": "Gaussian 卷积定理：中心高斯密度 $\\phi_\\sigma$ 与 $\\phi_\\tau$ 卷积为 $\\phi_{\\sqrt{\\sigma^2+\\tau^2}}$，可由配方直接验证。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "gaussian-convolution-variance"
+      ],
+      "note": "对 σ,τ>0 的归一化中心 Gaussian，完成平方并调用已证 Gaussian 积分。"
+    },
+    {
+      "topic": "analysis/convolution",
+      "field": "intuition",
+      "text": "线性时不变系统的输出等于输入与冲激响应的卷积；卷积定理让滤波器设计在频域完成。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "convolution-l1-cycles"
+      ],
+      "note": "把 LTI 的输入输出卷积关系明确作为系统模型假设；本卷证明该卷积的 Fourier 变换为乘积。"
     }
   ]
 }

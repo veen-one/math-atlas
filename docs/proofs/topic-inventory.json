@@ -1,5 +1,5 @@
 {
-  "proofCount": 573,
+  "proofCount": 580,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -484,6 +484,10 @@
         "schwartz-density",
         "plancherel-l2",
         "heisenberg-uncertainty",
+        "plancherel-l2-cycles",
+        "fourier-rectangle-pulse",
+        "fourier-inversion-cycles",
+        "fourier-derivative-cycles",
         "fejer-uniform-convergence",
         "gaussian-integral",
         "gaussian-characteristic",
@@ -501,6 +505,9 @@
         "affine-lebesgue-change",
         "convolution-l1",
         "young-l1-l2",
+        "convolution-l1-cycles",
+        "convolution-commutative",
+        "gaussian-convolution-variance",
         "heat-kernel-solution"
       ],
       "coverage": "partial",
@@ -3739,6 +3746,7 @@
       "branch": "概率基础",
       "proofIds": [
         "bernoulli-cramer-rate",
+        "gaussian-convolution-variance",
         "compact-interval-quantile",
         "compact-interval-measure-subsequence",
         "lotus",

@@ -4819,6 +4819,126 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "plancherel-l2-cycles",
+      "topics": [
+        "analysis/fourier-transform"
+      ],
+      "title": "2π 频率约定下的 Plancherel 定理",
+      "statement": "按 Schwartz 函数上的积分定义 $\\hat f_{2π}(ξ)=∫_R f(x)e^(−2πixξ)dx$，其唯一连续延拓到 $L²(R)$ 满足 $\\|\\hat f_{2π}\\|₂=\\|f\\|₂$，且为酉算子。",
+      "dependencies": [
+        "plancherel-l2",
+        "affine-lebesgue-change"
+      ],
+      "idea": "把 2π 约定写成角频率变换的缩放，再直接作变量代换。",
+      "steps": [
+        "记角频率变换为 $\\hat f_ω(t)=∫f(x)e^(−itx)dx$，先取 $f∈S(R)$。两种约定逐点满足 $\\hat f_{2π}(ξ)=\\hat f_ω(2πξ)$。由已证角频率 Plancherel 定理，$U_ωf=(2π)^(−1/2)\\hat f_ω$ 是 $L²$ 酉算子。",
+        "因此 $\\hat f_{2π}(ξ)=\\sqrt{2π}(U_ωf)(2πξ)$。使用已证仿射换元 $t=2πξ$，得到 $∫|\\hat f_{2π}(ξ)|²dξ=∫2π|(U_ωf)(2πξ)|²dξ=∫|(U_ωf)(t)|²dt=\\|f\\|₂²$。",
+        "尺度算子 $Vg(ξ)=\\sqrt{2π}g(2πξ)$ 本身满射：其逆为 $V^(−1)h(t)=(2π)^(−1/2)h(t/(2π))$，仿射换元显示两者均保持范数。故 2π 频率变换在 Schwartz 子空间上等距且稠密像为稠密；它按柯西列唯一延拓到全 $L²$，像闭且稠密，因而满射。对一般 $L²$ 函数，符号 $\\hat f_{2π}$ 指这个延拓，而非逐点绝对积分。$\\\\square$"
+      ]
+    },
+    {
+      "id": "fourier-rectangle-pulse",
+      "topics": [
+        "analysis/fourier-transform"
+      ],
+      "title": "矩形脉冲的 2π 约定傅里叶变换",
+      "statement": "对 $a>0$，令 $r_a=1_{[-a,a]}$。在约定 $\\hat r_a(ξ)=∫r_a(x)e^(−2πixξ)dx$ 下，$\\hat r_a(ξ)=\\sin(2πaξ)/(πξ)$（$ξ\\ne0$），并在 $ξ=0$ 连续延拓为 $2a$。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "非零频率直接求指数函数的原函数；零频率按积分定义计算，并比较极限。",
+      "steps": [
+        "$r_a$ 支持于有限区间且有界，所以属于 $L¹(R)$，其 Fourier 积分绝对收敛。若 $ξ\\ne0$，被积函数关于 $x$ 的原函数为 $e^(−2πiξx)/(−2πiξ)$；分别对实部、虚部用微积分基本定理代入 $x=a$ 与 $x=−a$。",
+        "两端相减得 $[e^(−2πiξa)−e^(2πiξa)]/(−2πiξ)=\\sin(2πaξ)/(πξ)$。若 $ξ=0$，积分直接为区间长度 $2a$。",
+        "当 $ξ\\to0$，令 $u=2πaξ$，则 $\\sin(2πaξ)/(πξ)=2a\\,[\\sin u/u]\\to2a$，其中 $\\sin u/u\\to1$ 是由 $\\sin\\prime(0)=1$ 的导数定义。故零点处该公式有唯一连续延拓值 $2a$。其首个非零零点满足 $2πaξ=±π$，即 $ξ=±1/(2a)$。$\\\\square$"
+      ]
+    },
+    {
+      "id": "convolution-l1-cycles",
+      "topics": [
+        "analysis/convolution"
+      ],
+      "title": "2π 频率约定下的 L¹ 卷积定理",
+      "statement": "设 $f,g∈L¹(R)$，按 $\\hat f_{2π}(ξ)=∫f(x)e^(−2πixξ)dx$ 定义 Fourier 变换。卷积几乎处处绝对存在于 $L¹$，且对每个 $ξ$ 有 $\\widehat{f*g}_{2π}(ξ)=\\hat f_{2π}(ξ)\\hat g_{2π}(ξ)$。",
+      "dependencies": [
+        "convolution-l1"
+      ],
+      "idea": "将已证角频率卷积公式在频率 $t=2πξ$ 处应用。",
+      "steps": [
+        "已证的 L¹ 卷积定理对角频率约定给出，对每个 $t∈R$，$\\widehat{f*g}_ω(t)=\\hat f_ω(t)\\hat g_ω(t)$；其合法性来自卷积绝对值双积分等于 $\\|f\\|₁\\|g\\|₁$，故 Fubini 可用。",
+        "2π 约定只是频率变量替换：$\\hat f_{2π}(ξ)=\\hat f_ω(2πξ)$，同样对 $g$ 与 $f*g$ 成立。把前式取 $t=2πξ$，即得所需乘积等式。由于 $f,g,f*g$ 均在 $L¹$，各 Fourier 积分对每个频率都绝对收敛，故等式逐点成立。$\\\\square$"
+      ]
+    },
+    {
+      "id": "convolution-commutative",
+      "topics": [
+        "analysis/convolution"
+      ],
+      "title": "L¹ 卷积的交换律",
+      "statement": "若 $f,g∈L¹(R)$，则按 $f*g(x)=∫f(y)g(x−y)dy$ 定义的卷积几乎处处绝对存在，并且 $f*g=g*f$ 几乎处处。",
+      "dependencies": [
+        "convolution-l1",
+        "affine-lebesgue-change"
+      ],
+      "idea": "在卷积积分中作反射平移换元 $u=x−y$，再交换两个复数因子的次序。",
+      "steps": [
+        "由 Tonelli，$∫∫|f(y)g(x−y)|dydx=\\|f\\|₁\\|g\\|₁<∞$，故对几乎每个 $x$ 两个方向的积分都绝对存在。",
+        "固定这样的 $x$，令 $u=x−y$；仿射测度换元含反射，Jacobian 绝对值为 1，于是 $(g*f)(x)=∫g(y)f(x−y)dy=∫g(x−u)f(u)du=∫f(u)g(x−u)du=(f*g)(x)$。故两者几乎处处相等。$\\\\square$"
+      ]
+    },
+    {
+      "id": "gaussian-convolution-variance",
+      "topics": [
+        "analysis/convolution",
+        "probability/distributions"
+      ],
+      "title": "中心 Gaussian 密度卷积与方差相加",
+      "statement": "对 $σ,τ>0$，定义 $φ_σ(x)=(\\sqrt{2π}σ)^(−1)e^(−x²/(2σ²))$。则 $(φ_σ*φ_τ)(x)=φ_{\\sqrt{σ²+τ²}}(x)$ 对所有 $x∈R$ 成立。",
+      "dependencies": [
+        "gaussian-integral",
+        "affine-lebesgue-change"
+      ],
+      "idea": "在卷积积分中把两个二次项配成一个关于积分变量的平方和一个关于 x 的剩余项，再用 Gaussian 积分归一化。",
+      "steps": [
+        "代入定义，$(φ_σ*φ_τ)(x)=(2πστ)^(−1)∫exp(−y²/(2σ²)−(x−y)²/(2τ²))dy$。直接展开平方并整理可得 $y²/σ²+(x−y)²/τ²=(σ²+τ²)/(σ²τ²)(y−σ²x/(σ²+τ²))²+x²/(σ²+τ²)$。",
+        "令 $s²=σ²τ²/(σ²+τ²)$，仿射换元及已证 Gaussian 积分给 $∫exp(−(y−σ²x/(σ²+τ²))²/(2s²))dy=\\sqrt{2π}s$。代回前式，常数因子化简为 $[\\sqrt{2π}\\sqrt{σ²+τ²}]^(−1)$，指数项为 $exp(−x²/[2(σ²+τ²)])$。",
+        "这正是 $φ_{\\sqrt{σ²+τ²}}(x)$ 的定义，等式逐点成立。特别 $σ=τ$ 时方差加倍、标准差乘 $\\sqrt2$；这解释高斯平滑的尺度合成。$\\\\square$"
+      ]
+    },
+    {
+      "id": "fourier-inversion-cycles",
+      "topics": [
+        "analysis/fourier-transform"
+      ],
+      "title": "2π 频率约定下的 Fourier 反演",
+      "statement": "对 $f∈S(R)$，定义 $\\hat f_{2π}(ξ)=∫f(x)e^(−2πixξ)dx$，则 $f(x)=∫\\hat f_{2π}(ξ)e^(2πixξ)dξ$ 对每个 x 成立。",
+      "dependencies": [
+        "fourier-inversion",
+        "affine-lebesgue-change"
+      ],
+      "idea": "将已证角频率反演公式作换元 $t=2πξ$。",
+      "steps": [
+        "角频率反演定理给 $f(x)=(2π)^(−1)∫\\hat f_ω(t)e^(itx)dt$。 Schwartz 假设保证变换快速衰减，所以积分绝对收敛，可以直接作仿射换元 $t=2πξ$。",
+        "换元后 $dt=2πdξ$，前面的常数抵消，且按定义 $\\hat f_ω(2πξ)=\\hat f_{2π}(ξ)$。故得到 $f(x)=∫\\hat f_{2π}(ξ)e^(2πiξx)dξ$。$\\\\square$"
+      ]
+    },
+    {
+      "id": "fourier-derivative-cycles",
+      "topics": [
+        "analysis/fourier-transform"
+      ],
+      "title": "2π 频率约定下的导数变换公式",
+      "statement": "若 $f∈S(R)$，则 $\\widehat{f\\prime}_{2π}(ξ)=2πiξ\\hat f_{2π}(ξ)$。",
+      "dependencies": [
+        "fourier-schwartz"
+      ],
+      "idea": "将已证角频率导数公式在角频率 $t=2πξ$ 处代入。",
+      "steps": [
+        "在角频率约定下，已证 Schwartz 函数满足 $\\widehat{f\\prime}_ω(t)=it\\hat f_ω(t)$。按 2π 约定，$\\widehat{f\\prime}_{2π}(ξ)=\\widehat{f\\prime}_ω(2πξ)$，且 $\\hat f_{2π}(ξ)=\\hat f_ω(2πξ)$。",
+        "把 $t=2πξ$ 代入角频率公式，得 $\\widehat{f\\prime}_{2π}(ξ)=i(2πξ)\\hat f_ω(2πξ)=2πiξ\\hat f_{2π}(ξ)$。所有变换由 Schwartz 函数定义，积分均绝对收敛，故等式对每个 ξ 成立。$\\\\square$"
+      ]
+    },
+    {
       "id": "absolute-height-rational",
       "topics": [
         "numbertheory/heights"
