@@ -2608,6 +2608,36 @@
         "extreme-value-compact"
       ],
       "note": "本卷给出一般非空紧致拓扑空间到 R 的完整证明：连续像紧致，紧致实集有界且闭，上下确界由闭性落在像集中。"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "definition",
+      "text": "Heisenberg 不确定性原理（角频率约定）：取非零 Schwartz 函数 $f\\in\\mathcal S(\\mathbb R)$，定义 $\\hat f(\\omega)=\\int_{\\mathbb R}f(t)e^{-i\\omega t}dt$、$\\bar t=\\|f\\|_2^{-2}\\int t|f(t)|^2dt$、$\\bar\\omega=(2\\pi\\|f\\|_2^2)^{-1}\\int\\omega|\\hat f(\\omega)|^2d\\omega$；$\\Delta t^2=\\|f\\|_2^{-2}\\int(t-\\bar t)^2|f(t)|^2dt$，$\\Delta\\omega^2=(2\\pi\\|f\\|_2^2)^{-1}\\int(\\omega-\\bar\\omega)^2|\\hat f(\\omega)|^2d\\omega$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heisenberg-uncertainty"
+      ],
+      "note": "与证明所用 Fourier 核 e^(−iωt)、Parseval 因子 2π 及 Schwartz 假设一致；方差分别按时间密度 |f|²/‖f‖² 和角频率密度 |fhat|²/(2π‖f‖²) 定义。"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "intuition",
+      "text": "在角频率傅里叶约定下，Heisenberg 不确定性原理说明同一非零 Schwartz 信号的均方根时间宽度与频率宽度乘积至少为 $1/2$；时间窗越窄，频谱就越宽。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heisenberg-uncertainty"
+      ],
+      "note": "严格不等式结论和 Schwartz/角频率约定由 Heisenberg 证明给出；“时间窗越窄，频谱越宽”是该乘积下界的定性概述。"
+    },
+    {
+      "topic": "analysis/time-frequency",
+      "field": "formulaCaptions",
+      "text": "Heisenberg 不确定性原理（非零 Schwartz 信号，角频率约定）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heisenberg-uncertainty"
+      ],
+      "note": "公式中的 Δt、Δω 和角频率 Fourier 约定在本主题定义中给出，精确的 Schwartz 版本有对应推导。"
     }
   ]
 }

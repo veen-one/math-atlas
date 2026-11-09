@@ -140,11 +140,11 @@ window.ATLAS.subjects.analysis.branches.push(
         keywords: ['时频分析', '短时傅里叶', '不确定性原理', 'Gabor'],
         definition: [
           '**时频分析**用二维表示同时刻画信号的频率随时间的变化：短时傅里叶变换（STFT）、Gabor 变换、小波变换、Wigner–Ville 分布。',
-          '不确定性原理：$\\Delta t \\cdot \\Delta \\omega \\ge \\frac12$，时域与频域分辨率不能同时任意高。'
+          'Heisenberg 不确定性原理（角频率约定）：取非零 Schwartz 函数 $f\\in\\mathcal S(\\mathbb R)$，定义 $\\hat f(\\omega)=\\int_{\\mathbb R}f(t)e^{-i\\omega t}dt$、$\\bar t=\\|f\\|_2^{-2}\\int t|f(t)|^2dt$、$\\bar\\omega=(2\\pi\\|f\\|_2^2)^{-1}\\int\\omega|\\hat f(\\omega)|^2d\\omega$；$\\Delta t^2=\\|f\\|_2^{-2}\\int(t-\\bar t)^2|f(t)|^2dt$，$\\Delta\\omega^2=(2\\pi\\|f\\|_2^2)^{-1}\\int(\\omega-\\bar\\omega)^2|\\hat f(\\omega)|^2d\\omega$。则 $\\Delta t\\,\\Delta\\omega\\ge 1/2$。',
         ],
         intuition: [
           '音乐频谱图就是时频表示：横轴时间、纵轴频率、颜色强度表示能量，能看出旋律与和声的变化。',
-          '不确定性原理是傅里叶变换的数学性质：窄窗在时域定位好但频域分辨率差，反之亦然。'
+          '在角频率傅里叶约定下，Heisenberg 不确定性原理说明同一非零 Schwartz 信号的均方根时间宽度与频率宽度乘积至少为 $1/2$；时间窗越窄，频谱就越宽。'
         ],
         formulas: [
           {
@@ -152,8 +152,8 @@ window.ATLAS.subjects.analysis.branches.push(
             caption: '短时傅里叶变换。'
           },
           {
-            tex: '\\Delta t \\cdot \\Delta \\omega \\ge \\frac12',
-            caption: '不确定性原理。'
+            tex: '\\Delta t(f)\\,\\Delta \\omega(f) \\ge \\frac12',
+            caption: 'Heisenberg 不确定性原理（非零 Schwartz 信号，角频率约定）。'
           }
         ],
         example: [
