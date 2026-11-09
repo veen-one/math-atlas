@@ -118,7 +118,7 @@ window.ATLAS.extras['probability/stationary-processes'] = {
   insight: '平稳过程的统计规律不随时间平移改变；宽平稳只需均值恒定、自协方差只依赖时间差。',
   examples: [
     '白噪声是宽平稳过程，谱密度为常数。',
-    'Wiener–Khinchin 定理：自协方差的傅里叶变换是谱密度。'
+    '离散 Wiener–Khinchin 定理：二阶宽平稳过程的自协方差绝对可和时，其 Fourier 级数给出连续非负谱密度；常值随机过程的谱为原点点质量，说明一般情形不能假定有密度。'
   ]
 };
 

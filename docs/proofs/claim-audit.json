@@ -3371,14 +3371,26 @@
     {
       "topic": "probability/stationary-processes",
       "field": "definition",
-      "text": "平稳过程的自协方差函数 $\\gamma(h) = \\mathrm{Cov}(X_{t+h}, X_t)$ 与谱密度通过 Fourier 变换对应（Wiener–Khinchin 定理）。",
-      "status": "needs-statement-review"
+      "text": "离散时间二阶宽平稳过程在自协方差绝对可和时，其自协方差函数 $\\gamma(h) = \\mathrm{Cov}(X_{t+h}, X_t)$ 与连续非负谱密度通过 Fourier 级数及反演对应（Wiener–Khinchin 定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "stationary-covariance-positive",
+        "wiener-khinchin-summable",
+        "stationary-spectrum-atom-counterexample"
+      ],
+      "note": "明确限定离散时间、二阶宽平稳且协方差绝对可和的密度定理；证明非负、连续、Fourier反演及连续密度唯一性，并给常值随机过程无密度反例。一般谱测度存在定理仍需单独展开。"
     },
     {
       "topic": "probability/stationary-processes",
       "field": "extraExamples",
-      "text": "Wiener–Khinchin 定理：自协方差的傅里叶变换是谱密度。",
-      "status": "needs-statement-review"
+      "text": "离散 Wiener–Khinchin 定理：二阶宽平稳过程的自协方差绝对可和时，其 Fourier 级数给出连续非负谱密度；常值随机过程的谱为原点点质量，说明一般情形不能假定有密度。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "stationary-covariance-positive",
+        "wiener-khinchin-summable",
+        "stationary-spectrum-atom-counterexample"
+      ],
+      "note": "明确限定离散时间、二阶宽平稳且协方差绝对可和的密度定理；证明非负、连续、Fourier反演及连续密度唯一性，并给常值随机过程无密度反例。一般谱测度存在定理仍需单独展开。"
     }
   ]
 }

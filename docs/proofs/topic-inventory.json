@@ -1,5 +1,5 @@
 {
-  "proofCount": 500,
+  "proofCount": 503,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -434,7 +434,8 @@
       "branch": "调和分析",
       "proofIds": [
         "fejer-uniform-convergence",
-        "fourier-coefficient-uniqueness"
+        "fourier-coefficient-uniqueness",
+        "wiener-khinchin-summable"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3796,7 +3797,10 @@
       "branch": "随机过程",
       "proofIds": [
         "finite-markov-stationary",
-        "finite-markov-stationary-unique"
+        "finite-markov-stationary-unique",
+        "stationary-covariance-positive",
+        "wiener-khinchin-summable",
+        "stationary-spectrum-atom-counterexample"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

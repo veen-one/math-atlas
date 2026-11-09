@@ -464,7 +464,7 @@ window.ATLAS.subjects.probability = {
           keywords: ['平稳过程', '宽平稳', '谱密度', '自相关'],
           definition: [
             '随机过程 $X_t$ 称为**严平稳**，如果任意有限维分布的联合分布在时间平移下不变。**宽平稳**只要求均值恒定、自协方差只依赖时间差。',
-            '平稳过程的自协方差函数 $\\gamma(h) = \\mathrm{Cov}(X_{t+h}, X_t)$ 与谱密度通过 Fourier 变换对应（Wiener–Khinchin 定理）。'
+            '离散时间二阶宽平稳过程在自协方差绝对可和时，其自协方差函数 $\\gamma(h) = \\mathrm{Cov}(X_{t+h}, X_t)$ 与连续非负谱密度通过 Fourier 级数及反演对应（Wiener–Khinchin 定理）。一般平稳过程未必有谱密度，须允许含原子的谱测度。'
           ],
           intuition: [
             '平稳过程是“统计规律不随时间变化”的过程：今天与明天的统计行为相同。声音信号、平稳时间序列都是例子。',
@@ -477,7 +477,7 @@ window.ATLAS.subjects.probability = {
             },
             {
               tex: 'S(\\omega) = \\sum_{h=-\\infty}^{\\infty} \\gamma(h) e^{-i\\omega h}',
-              caption: '谱密度（Wiener–Khinchin）。'
+              caption: '绝对可和协方差的谱密度（离散 Wiener–Khinchin）。'
             }
           ],
           example: [
