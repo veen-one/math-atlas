@@ -1,5 +1,5 @@
 {
-  "proofCount": 493,
+  "proofCount": 497,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -372,7 +372,9 @@
         "plancherel-l2",
         "haar-basis",
         "sobolev-complete",
-        "l2-completeness"
+        "l2-completeness",
+        "complex-inner-cauchy-schwarz",
+        "robertson-schrodinger-domain"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -490,7 +492,8 @@
       "branch": "调和分析",
       "proofIds": [
         "stft-moyal",
-        "heisenberg-uncertainty"
+        "heisenberg-uncertainty",
+        "position-momentum-schwartz"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2903,7 +2906,11 @@
       "subject": "应用与计算数学",
       "branch": "数学物理",
       "proofIds": [
-        "quantum-hermitian-real-spectrum"
+        "quantum-hermitian-real-spectrum",
+        "complex-inner-cauchy-schwarz",
+        "robertson-schrodinger-domain",
+        "position-momentum-schwartz",
+        "finite-dimensional-no-canonical-commutator"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

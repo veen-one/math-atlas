@@ -2595,13 +2595,25 @@
       "topic": "applied/quantum-theory",
       "field": "intuition",
       "text": "非交换性（$[x, p] = i\\hbar$）导致不确定性原理：位置与动量不能同时精确确定。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "robertson-schrodinger-domain",
+        "position-momentum-schwartz",
+        "finite-dimensional-no-canonical-commutator"
+      ],
+      "note": "位置与动量结论明确在归一化Schwartz态上证明，标准差有限；给出对易子定义域条件和Gaussian全部等号态。不能将形式对易关系用于未验证定义域的任意态。"
     },
     {
       "topic": "applied/quantum-theory",
       "field": "extraExamples",
       "text": "不确定性原理 $\\Delta x\\,\\Delta p\\ge\\hbar/2$ 来自 $[\\hat x,\\hat p]=i\\hbar$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "robertson-schrodinger-domain",
+        "position-momentum-schwartz",
+        "finite-dimensional-no-canonical-commutator"
+      ],
+      "note": "位置与动量结论明确在归一化Schwartz态上证明，标准差有限；给出对易子定义域条件和Gaussian全部等号态。不能将形式对易关系用于未验证定义域的任意态。"
     },
     {
       "topic": "applied/symmetry-conservation",
