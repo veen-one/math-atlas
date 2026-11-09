@@ -954,6 +954,328 @@
         "primitive-element-theorem"
       ],
       "note": "数域是Q的有限扩张，特征零保证可分，因此本原元素定理适用。这是域的单生成结论，不声称整数环有幂整基。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "definition",
+      "text": "**弱大数定律**：若 $X_i$ 独立同分布且 $\\mathbb{E}|X_1| < \\infty$，则样本均值 $\\bar X_n \\to \\mu$ 依概率收敛。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "definition",
+      "text": "**强大数定律**：在同样条件下，$\\bar X_n \\to \\mu$ 几乎必然收敛（Kolmogorov）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "intuition",
+      "text": "大数定律是“频率稳定”的数学表达：抛硬币次数越多，正面频率越接近 1/2。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "intuition",
+      "text": "它是统计学的基础：用样本均值估计总体均值之所以可靠，正是因为大数定律。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "example",
+      "text": "抛公平硬币 10000 次，正面频率以极高概率落在 $0.5 \\pm 0.01$ 内（由大数定律与方差估计）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "formulaCaptions",
+      "text": "弱大数定律。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "formulaCaptions",
+      "text": "强大数定律。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "extraInsight",
+      "text": "大数定律说明样本均值趋于期望；弱大数定律是依概率收敛，强大数定律是几乎必然收敛。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/law-large-numbers",
+      "field": "extraExamples",
+      "text": "样本均值估计总体均值之所以可靠，正是大数定律。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "as-to-probability"
+      ],
+      "note": "独立同分布实变量且一阶绝对矩有限；强律已证明，弱律由几乎必然收敛蕴含依概率收敛得到。公平硬币有限样本误差还可另用已证 Chebyshev 方差界。"
+    },
+    {
+      "topic": "probability/central-limit-theorem",
+      "field": "definition",
+      "text": "更一般地，Lindeberg–Feller 定理给出独立但不同分布情形的条件。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lindeberg-sufficient-clt"
+      ],
+      "note": "本卷给出行内独立三角阵的 Lindeberg 充分方向；方差和必须正，并以该方差和标准化。未声称已证明整个 Lindeberg–Feller 逆向等价定理。"
+    },
+    {
+      "topic": "foundations/predicates-quantifiers",
+      "field": "formulaCaptions",
+      "text": "量词否定律：全称命题的否定是存在反例。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "quantifier-negation"
+      ],
+      "note": "经典语义版本，不搬到直觉主义演算中。"
+    },
+    {
+      "topic": "foundations/cardinality",
+      "field": "definition",
+      "text": "康托定理：对任意集合 $A$，$|\\mathcal{P}(A)| > |A|$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cantor"
+      ],
+      "note": "对角集合排除满射，单元素集合给反向单射。"
+    },
+    {
+      "topic": "foundations/cardinality",
+      "field": "formulaCaptions",
+      "text": "康托定理：幂集的基数严格大于原集合。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cantor"
+      ],
+      "note": "对角集合排除满射，单元素集合给反向单射。"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "formulaCaptions",
+      "text": "图灵 1936 年的定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "halting-diagonal",
+        "rice-function-properties"
+      ],
+      "note": "停机归约针对程序编号；Rice 结论限部分可计算函数的非平凡、外延不变语义性质，身份函数与全域停机性质均满足。"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "extraInsight",
+      "text": "莱斯定理进一步指出：程序的任何非平凡语义性质都不可判定。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "halting-diagonal",
+        "rice-function-properties"
+      ],
+      "note": "停机归约针对程序编号；Rice 结论限部分可计算函数的非平凡、外延不变语义性质，身份函数与全域停机性质均满足。"
+    },
+    {
+      "topic": "foundations/halting-problem",
+      "field": "extraExamples",
+      "text": "莱斯定理：判断一个程序是否计算恒等函数、是否对所有输入停机等性质都不可判定。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "halting-diagonal",
+        "rice-function-properties"
+      ],
+      "note": "停机归约针对程序编号；Rice 结论限部分可计算函数的非平凡、外延不变语义性质，身份函数与全域停机性质均满足。"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "intuition",
+      "text": "Post 定理：$L$ 可判定当且仅当 $L$ 与它的补集都可枚举。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "semi-decision-complement",
+        "enumeration-semidecision"
+      ],
+      "note": "允许空语言、重复输出；可枚举与半判定等价，再交错模拟两侧半判定器。"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "formulaCaptions",
+      "text": "Post 定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "semi-decision-complement",
+        "enumeration-semidecision"
+      ],
+      "note": "允许空语言、重复输出；可枚举与半判定等价，再交错模拟两侧半判定器。"
+    },
+    {
+      "topic": "foundations/enumerability",
+      "field": "extraInsight",
+      "text": "可枚举集是“可以被算法列出”的集合；Post 定理把可判定性与补集的可枚举性联系起来：$L$ 可判定当且仅当 $L$ 与 $\\overline L$ 都可枚举。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "semi-decision-complement",
+        "enumeration-semidecision"
+      ],
+      "note": "允许空语言、重复输出；可枚举与半判定等价，再交错模拟两侧半判定器。"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "definition",
+      "text": "紧致性定理：一阶理论 $T$ 有模型，当且仅当它的每个有限子集都有模型。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "compactness-arbitrary-language",
+        "fol-completeness-compactness"
+      ],
+      "note": "超积证明适用于任意集合大小一阶语言；本卷 Henkin 完备性证明另限可数语言。超滤扩张与坐标见证使用明列的ZFC选择基础。"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "definition",
+      "text": "它是哥德尔完全性定理的推论，也可以用超积或 Henkin 构造直接证明。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "compactness-arbitrary-language",
+        "fol-completeness-compactness"
+      ],
+      "note": "超积证明适用于任意集合大小一阶语言；本卷 Henkin 完备性证明另限可数语言。超滤扩张与坐标见证使用明列的ZFC选择基础。"
+    },
+    {
+      "topic": "foundations/compactness",
+      "field": "formulaCaptions",
+      "text": "紧致性定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "compactness-arbitrary-language",
+        "fol-completeness-compactness"
+      ],
+      "note": "超积证明适用于任意集合大小一阶语言；本卷 Henkin 完备性证明另限可数语言。超滤扩张与坐标见证使用明列的ZFC选择基础。"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "definition",
+      "text": "哥德尔完全性定理（1929）证明：标准的一阶逻辑证明系统既可靠又完备。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general"
+      ],
+      "note": "标准经典一阶句子理论，非空结构语义；一般语言版本由紧致性及有限签名归约证明，不涉及算术理论的句子完备性。"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "formulaCaptions",
+      "text": "哥德尔完全性定理：语义蕴含可由形式证明捕获。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general"
+      ],
+      "note": "标准经典一阶句子理论，非空结构语义；一般语言版本由紧致性及有限签名归约证明，不涉及算术理论的句子完备性。"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "formulaCaptions",
+      "text": "完备性的等价表述（模型存在定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general"
+      ],
+      "note": "标准经典一阶句子理论，非空结构语义；一般语言版本由紧致性及有限签名归约证明，不涉及算术理论的句子完备性。"
+    },
+    {
+      "topic": "foundations/soundness-completeness",
+      "field": "extraExamples",
+      "text": "一阶逻辑完备性等价于模型存在定理：相容的理论一定有模型。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general"
+      ],
+      "note": "标准经典一阶句子理论，非空结构语义；一般语言版本由紧致性及有限签名归约证明，不涉及算术理论的句子完备性。"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "definition",
+      "text": "由完备性定理，$T$ 相容当且仅当 $T$ 有模型。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general",
+        "classical-explosion"
+      ],
+      "note": "相容与可满足等价限标准经典一阶演算；爆炸原理是该演算的命题公理后果。"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "intuition",
+      "text": "一个不相容的理论可以证明任何命题（爆炸原理 ex falso），因此毫无信息量。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general",
+        "classical-explosion"
+      ],
+      "note": "相容与可满足等价限标准经典一阶演算；爆炸原理是该演算的命题公理后果。"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "formulaCaptions",
+      "text": "爆炸原理：不相容的理论证明一切。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general",
+        "classical-explosion"
+      ],
+      "note": "相容与可满足等价限标准经典一阶演算；爆炸原理是该演算的命题公理后果。"
+    },
+    {
+      "topic": "foundations/consistency",
+      "field": "extraInsight",
+      "text": "相容性是理论有意义的最低要求；由爆炸原理，不相容的理论可以证明任何命题。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fol-completeness-general",
+        "classical-explosion"
+      ],
+      "note": "相容与可满足等价限标准经典一阶演算；爆炸原理是该演算的命题公理后果。"
     }
   ]
 }

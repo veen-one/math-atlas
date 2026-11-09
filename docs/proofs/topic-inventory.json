@@ -1,5 +1,5 @@
 {
-  "proofCount": 425,
+  "proofCount": 441,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -58,7 +58,8 @@
         "termwise-differentiation",
         "harmonic-divergence",
         "leibniz-alternating",
-        "riemann-rearrangement-infinite"
+        "riemann-rearrangement-infinite",
+        "kronecker-lemma-integers"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -181,6 +182,7 @@
       "branch": "微积分",
       "proofIds": [
         "limit-unique",
+        "small-complex-product",
         "binomial-exponential-limit"
       ],
       "coverage": "partial",
@@ -651,6 +653,7 @@
       "subject": "逻辑与数学基础",
       "branch": "数理逻辑",
       "proofIds": [
+        "fol-completeness-general",
         "fol-soundness",
         "fol-completeness-compactness",
         "propositional-completeness",
@@ -720,7 +723,8 @@
       "subject": "逻辑与数学基础",
       "branch": "集合论",
       "proofIds": [
-        "zfc-extensionality-pair-uniqueness"
+        "zfc-extensionality-pair-uniqueness",
+        "ultrafilter-extension"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -742,6 +746,7 @@
       "subject": "逻辑与数学基础",
       "branch": "证明论",
       "proofIds": [
+        "classical-explosion",
         "fol-soundness",
         "fol-deduction",
         "finite-proof-checking",
@@ -818,7 +823,8 @@
       "branch": "可计算性",
       "proofIds": [
         "halting-diagonal",
-        "semi-decision-complement"
+        "semi-decision-complement",
+        "rice-function-properties"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -829,7 +835,8 @@
       "subject": "逻辑与数学基础",
       "branch": "可计算性",
       "proofIds": [
-        "halting-diagonal"
+        "halting-diagonal",
+        "rice-function-properties"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -947,6 +954,8 @@
       "subject": "逻辑与数学基础",
       "branch": "公理与不完备性",
       "proofIds": [
+        "fol-completeness-general",
+        "classical-explosion",
         "henkin-witness-consistency"
       ],
       "coverage": "partial",
@@ -1025,7 +1034,8 @@
       "branch": "模型论",
       "proofIds": [
         "syntax-parse-substitute",
-        "henkin-model"
+        "henkin-model",
+        "los-ultraproduct"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1037,7 +1047,8 @@
       "branch": "模型论",
       "proofIds": [
         "syntax-parse-substitute",
-        "henkin-model"
+        "henkin-model",
+        "los-ultraproduct"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1052,7 +1063,8 @@
         "henkin-extension",
         "henkin-model",
         "dlo-equivalence",
-        "semantic-independence-models"
+        "semantic-independence-models",
+        "compactness-arbitrary-language"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1064,7 +1076,10 @@
       "branch": "模型论",
       "proofIds": [
         "henkin-extension",
-        "fol-completeness-compactness"
+        "fol-completeness-compactness",
+        "ultrafilter-extension",
+        "los-ultraproduct",
+        "compactness-arbitrary-language"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1660,7 +1675,10 @@
       "proofIds": [
         "prime-infinite-euclid",
         "zeta-euler-product",
-        "euler-reciprocal-primes-diverges"
+        "euler-reciprocal-primes-diverges",
+        "psi-theta-error",
+        "chebyshev-two-sided-primes",
+        "pnt-psi-equivalence"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1679,7 +1697,9 @@
         "newman-tauberian",
         "theta-asymptotic-prime-theorem",
         "prime-number-theorem-proof",
-        "pnt-prime-index-equivalence"
+        "pnt-prime-index-equivalence",
+        "psi-theta-error",
+        "pnt-psi-equivalence"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3541,7 +3561,11 @@
       "subject": "概率与统计",
       "branch": "极限定理",
       "proofIds": [
-        "weak-law"
+        "weak-law",
+        "kolmogorov-maximal",
+        "independent-series-convergence",
+        "kronecker-lemma-integers",
+        "iid-integrable-strong-law"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3552,6 +3576,9 @@
       "subject": "概率与统计",
       "branch": "极限定理",
       "proofIds": [
+        "lindeberg-negligible-variance",
+        "small-complex-product",
+        "lindeberg-sufficient-clt",
         "independent-bounded-products",
         "gaussian-characteristic",
         "characteristic-expansion",
@@ -3585,7 +3612,10 @@
         "measure-continuity-above",
         "borel-cantelli-first",
         "as-to-probability",
-        "probability-subsequence"
+        "probability-subsequence",
+        "kolmogorov-maximal",
+        "independent-series-convergence",
+        "iid-integrable-strong-law"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

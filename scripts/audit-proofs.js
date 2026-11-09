@@ -19,7 +19,7 @@ for(const [sid,subject] of Object.entries(atlas.subjects))for(const branch of su
   const fields={definition:topic.definition,intuition:topic.intuition,example:topic.example,formulaCaptions:topic.formulas.map(f=>f.caption),extraInsight:[extra.insight],extraExamples:extra.examples};
   for(const [field,values] of Object.entries(fields))for(const paragraph of values||[]){
     for(const text of (paragraph||'').split(/(?<=[。！？])/u)) {
-      if(/定理|引理|原理|猜想/.test(text)) claims.push({topic:key,field,text,status:'needs-statement-review'});
+      if(/定理|定律|引理|原理|猜想/.test(text)) claims.push({topic:key,field,text,status:'needs-statement-review'});
     }
   }
 }
@@ -36,7 +36,7 @@ const pending=claims.filter(c=>c.status==='needs-statement-review').length;
 fs.writeFileSync(path.join(root,'docs/proofs/topic-inventory.json'),JSON.stringify({proofCount:book.proofs.length,topics},null,2)+'\n');
 fs.writeFileSync(path.join(root,'docs/proofs/claim-audit.json'),JSON.stringify({note:'关键词提取的候选句，未经数学断言去重；不等于全部定理的完整清单。需人工提取准确假设、结论并对应证明。',claims},null,2)+'\n');
 const covered=topics.filter(t=>t.proofIds.length).length;
-const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、引理、原理、猜想”的候选句，其中 ${claims.length-pending} 条已有逐句核定记录，${pending} 条待审。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
+const lines=['# 全仓证明覆盖与剩余工作','',`当前收录 **${book.proofs.length} 个命题证明**，关联 **${covered}/319 个知识点**；按全部定理完成的知识点记为 **0/319**。已有命题不等于该知识点全部定理完成。`,'',`从正文和补充例子提取了 ${claims.length} 条含“定理、定律、引理、原理、猜想”的候选句，其中 ${claims.length-pending} 条已有逐句核定记录，${pending} 条待审。这不是已经去重、穷尽全部数学断言的目录；公式中的未命名断言仍需另行审查。`,'','## 仍需完成','',
 `1. ${claims.length-pending} 条候选句已核定并关联具体证明，${pending} 条仍待审查；另需核对公式中未命名的断言。逐句审阅记录在 claim-reviews.json，以原句精确匹配，原句变化或证明丢失时生成失败。`,
 '2. 每个主题尚有未枚举或未证明命题，故 319 个主题全部标为“部分展开”；不得把一个相关定理等同于该主题全部完成。',
 '3. 仍未在本卷证明的主要深层定理：一般自伴算子的谱测度定理、Gromov 辛不挤压定理，以及完整椭圆曲线模性定理。模性条目只证明“假设模性对应后局部系数相等”这一推论。',
