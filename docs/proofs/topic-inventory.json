@@ -1,5 +1,5 @@
 {
-  "proofCount": 518,
+  "proofCount": 521,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1693,7 +1693,8 @@
       "subject": "数论",
       "branch": "初等数论",
       "proofIds": [
-        "totient-product"
+        "totient-product",
+        "mobius-sieve-identity"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1788,7 +1789,10 @@
       "subject": "数论",
       "branch": "解析数论",
       "proofIds": [
-        "sieve-inclusion-exclusion"
+        "sieve-inclusion-exclusion",
+        "mobius-sieve-identity",
+        "selberg-square-majorant",
+        "selberg-optimal-finite-weights"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
