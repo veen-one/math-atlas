@@ -131,7 +131,7 @@ window.ATLAS.subjects.numbertheory.branches.push(
         keywords: ['丢番图逼近', 'Dirichlet 定理', '连分数', 'Roth 定理'],
         definition: [
           '**丢番图逼近**研究：对实数 $\\alpha$，用有理数 $p/q$ 逼近的误差 $|\\alpha - p/q|$ 能有多小。',
-          'Dirichlet 定理：对任意无理数 $\\alpha$，存在无穷多个 $p/q$ 使 $|\\alpha - p/q| < 1/q^2$。Roth 定理（1955）证明：对代数数 $\\alpha$，$|\\alpha - p/q| < 1/q^{2+\\varepsilon}$ 只有有限多个解。'
+          'Dirichlet 定理：对任意无理数 $\\alpha$，存在无穷多个互异既约分数 $p/q$（$p\\in\\mathbb Z$、$q\\in\\mathbb N$）使 $|\\alpha - p/q| < 1/q^2$。Roth 定理（1955）证明：对代数数 $\\alpha$，$|\\alpha - p/q| < 1/q^{2+\\varepsilon}$ 只有有限多个解。'
         ],
         intuition: [
           '连分数给出最佳有理逼近：$\\pi$ 的连分数展开给出 $\\frac{22}{7}, \\frac{355}{113}$ 等经典近似。',
@@ -139,8 +139,8 @@ window.ATLAS.subjects.numbertheory.branches.push(
         ],
         formulas: [
           {
-            tex: '\\left| \\alpha - \\frac{p}{q} \\right| < \\frac{1}{q^2}',
-            caption: 'Dirichlet 逼近定理。'
+            tex: '\\alpha\\notin\\mathbb Q,\\quad p\\in\\mathbb Z,\\ q\\in\\mathbb N,\\quad \\left| \\alpha - \\frac{p}{q} \\right| < \\frac{1}{q^2}',
+            caption: 'Dirichlet 逼近定理（见定义中的无穷性与既约条件）。'
           },
           {
             tex: '\\left| \\alpha - \\frac{p}{q} \\right| < \\frac{1}{q^{2+\\varepsilon}}',

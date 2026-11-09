@@ -146,10 +146,11 @@ def register(P, BASES):
     P('quantum-hermitian-real-spectrum','applied/quantum-theory algebra/spectral-decomposition','Hermitian 矩阵的特征值为实数',r'若 A=A* 且 Av=λv、v≠0，则 λ∈R。','complex-basic-rules','内积自伴性使 ⟨Av,v⟩ 同时等于 λ 与其共轭乘以 ‖v‖²。',
       r'由 Av=λv，按内积对第一变量共轭线性或第二变量共轭线性的约定，⟨Av,v⟩ 等于 λ 或其共轭乘以 ‖v‖²；自伴性同时给 ⟨Av,v⟩=⟨v,Av⟩，后者是前者的复共轭。',
       r'因此 λ‖v‖²=\bar λ‖v‖²。因 v≠0，‖v‖²>0，约去得 λ=\bar λ，故 λ 为实数。该结论不要求先证明 Hermitian 矩阵可对角化。$\square$')
-    P('dirichlet-rational-approximation','numbertheory/heights numbertheory/lattice-methods','Dirichlet 有理逼近定理',r'对任意实数 α 与正整数 Q，存在整数 p,q，1≤q≤Q 且 |qα−p|<1/Q。若 α 无理，则可取到无穷多个不同分数 p/q 使 |α−p/q|<1/q²。','binomial-count','把 Q+1 个小数部分放进 Q 个等长区间，两个落同区间后相减。',
+    P('dirichlet-rational-approximation','numbertheory/heights numbertheory/lattice-methods numbertheory/diophantine-approximation','Dirichlet 有理逼近定理',r'对任意实数 α 与正整数 Q，存在整数 p,q，1≤q≤Q 且 |qα−p|<1/Q。若 α 无理，则可取到无穷多个不同分数 p/q 使 |α−p/q|<1/q²。','binomial-count archimedean','先证明实数小数部分存在，再将 Q+1 个小数部分放进 Q 个等长区间，两个落同区间后相减。',
+      r'对每个实数 x=jα，Archimedes 性质给出整数 M>|x|+1。有限集合 {m∈Z:−M≤m≤x} 非空，取其最大元 n；若 x≥n+1，则 n+1 仍在集合中，矛盾。因此 n≤x<n+1，定义 ⌊x⌋=n、{x}=x−n∈[0,1)。这也逐项证明本论证所用整数部分存在。',
       r'取 x_j={jα}，j=0,…,Q，共 Q+1 个小数部分，均位于 [0,1)。将 [0,1) 分成 Q 个半开区间，每段长 1/Q。抽屉原理保证存在 i<j 落在同一段。',
       r'两者差的绝对值小于 1/Q，且 x_j−x_i=(j−i)α−(⌊jα⌋−⌊iα⌋)。令 q=j−i、p=⌊jα⌋−⌊iα⌋，得 1≤q≤Q 与所需严格不等式。',
-      r'若 α 无理，则 p/q 不等于 α。对每个 Q 得到误差 |α−p/q|<1/(qQ)≤1/q²。若只出现有限多个有理数 p/q，它们到无理 α 的最小距离为正；但上界 1/Q 趋零，矛盾。因此有无穷多个不同逼近分数。$\square$')
+      r'若 α 无理，则 p/q 不等于 α。对每个 Q 得到误差 |α−p/q|<1/(qQ)≤1/q²。若只出现有限多个有理数 p/q，它们到无理 α 的最小距离为正；但 |α−p/q|<1/(qQ)≤1/Q，令 Q 趋于无穷即矛盾。因此有无穷多个不同有理数值。将各分数约为既约形式 p′/q′，误差不变且 q′≤q，故 |α−p′/q′|<1/q²≤1/(q′)²；不同有理数值仍给出无穷多个不同既约分数。$\square$')
     P('quadratic-radical-formula','algebra/solvability-by-radicals algebra/polynomial-rings','二次方程根式公式',r'在特征不为 2 的域中，ax²+bx+c=0（a≠0）的根在添加判别式平方根后为 x=(-b±√(b²−4ac))/(2a)；故二次方程可由根式求解。','def-ring-field','配方把二次方程化为一个平方等式。',
       r'除以 a 得 x²+(b/a)x+c/a=0。两边加 (b/(2a))²，并整理： (x+b/(2a))²=(b²−4ac)/(4a²)。',
       r'取域的代数闭包中的平方根 δ 满足 δ²=b²−4ac。平方等式等价于 x+b/(2a)=±δ/(2a)，移项得公式中的两根。若判别式为零，两根相同；若判别式非平方，允许按根式扩域添加其平方根。',

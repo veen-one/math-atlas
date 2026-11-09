@@ -1985,6 +1985,7 @@
       "branch": "超越数论",
       "proofIds": [
         "liouville-algebraic-approximation",
+        "dirichlet-rational-approximation",
         "liouville-lower-bound"
       ],
       "coverage": "partial",

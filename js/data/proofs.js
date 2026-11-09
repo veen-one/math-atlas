@@ -6533,18 +6533,21 @@ window.ATLAS.proofBook = {
       "id": "dirichlet-rational-approximation",
       "topics": [
         "numbertheory/heights",
-        "numbertheory/lattice-methods"
+        "numbertheory/lattice-methods",
+        "numbertheory/diophantine-approximation"
       ],
       "title": "Dirichlet 有理逼近定理",
       "statement": "对任意实数 α 与正整数 Q，存在整数 p,q，1≤q≤Q 且 |qα−p|<1/Q。若 α 无理，则可取到无穷多个不同分数 p/q 使 |α−p/q|<1/q²。",
       "dependencies": [
-        "binomial-count"
+        "binomial-count",
+        "archimedean"
       ],
-      "idea": "把 Q+1 个小数部分放进 Q 个等长区间，两个落同区间后相减。",
+      "idea": "先证明实数小数部分存在，再将 Q+1 个小数部分放进 Q 个等长区间，两个落同区间后相减。",
       "steps": [
+        "对每个实数 x=jα，Archimedes 性质给出整数 M>|x|+1。有限集合 {m∈Z:−M≤m≤x} 非空，取其最大元 n；若 x≥n+1，则 n+1 仍在集合中，矛盾。因此 n≤x<n+1，定义 ⌊x⌋=n、{x}=x−n∈[0,1)。这也逐项证明本论证所用整数部分存在。",
         "取 x_j={jα}，j=0,…,Q，共 Q+1 个小数部分，均位于 [0,1)。将 [0,1) 分成 Q 个半开区间，每段长 1/Q。抽屉原理保证存在 i<j 落在同一段。",
         "两者差的绝对值小于 1/Q，且 x_j−x_i=(j−i)α−(⌊jα⌋−⌊iα⌋)。令 q=j−i、p=⌊jα⌋−⌊iα⌋，得 1≤q≤Q 与所需严格不等式。",
-        "若 α 无理，则 p/q 不等于 α。对每个 Q 得到误差 |α−p/q|<1/(qQ)≤1/q²。若只出现有限多个有理数 p/q，它们到无理 α 的最小距离为正；但上界 1/Q 趋零，矛盾。因此有无穷多个不同逼近分数。$\\square$"
+        "若 α 无理，则 p/q 不等于 α。对每个 Q 得到误差 |α−p/q|<1/(qQ)≤1/q²。若只出现有限多个有理数 p/q，它们到无理 α 的最小距离为正；但 |α−p/q|<1/(qQ)≤1/Q，令 Q 趋于无穷即矛盾。因此有无穷多个不同有理数值。将各分数约为既约形式 p′/q′，误差不变且 q′≤q，故 |α−p′/q′|<1/q²≤1/(q′)²；不同有理数值仍给出无穷多个不同既约分数。$\\square$"
       ]
     },
     {

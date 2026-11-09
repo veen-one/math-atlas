@@ -2224,6 +2224,26 @@
         "pythagorean-theorem"
       ],
       "note": "教材给出四个全等直角三角形的面积拼合法；基础只用矩形/直角三角形面积、全等不变性和有限可加性。整数勾股数参数化是另一个独立命题。"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "definition",
+      "text": "Dirichlet 定理：对任意无理数 $\\alpha$，存在无穷多个互异既约分数 $p/q$（$p\\in\\mathbb Z$、$q\\in\\mathbb N$）使 $|\\alpha - p/q| < 1/q^2$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dirichlet-rational-approximation"
+      ],
+      "note": "证明先给每个 Q 一个 |qα−p|<1/Q、1≤q≤Q 的逼近，再由误差趋零推出有无穷多个不同有理数值，并约分；约分后分母变小，严格的 1/q² 上界仍成立。"
+    },
+    {
+      "topic": "numbertheory/diophantine-approximation",
+      "field": "formulaCaptions",
+      "text": "Dirichlet 逼近定理（见定义中的无穷性与既约条件）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dirichlet-rational-approximation"
+      ],
+      "note": "公式适用条件与定理陈述相同；任意无理 α、互异既约 p/q、q>0。"
     }
   ]
 }
