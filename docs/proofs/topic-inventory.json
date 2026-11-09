@@ -1,5 +1,5 @@
 {
-  "proofCount": 582,
+  "proofCount": 583,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -79,6 +79,7 @@
         "bolzano-weierstrass",
         "cauchy-completeness",
         "archimedean",
+        "bisection-root-convergence",
         "rational-density"
       ],
       "coverage": "partial",
@@ -191,6 +192,7 @@
       "branch": "微积分",
       "proofIds": [
         "limit-unique",
+        "bisection-root-convergence",
         "small-complex-product",
         "binomial-exponential-limit",
         "squeeze-theorem-real",
@@ -2758,6 +2760,7 @@
       "subject": "应用与计算数学",
       "branch": "数值分析",
       "proofIds": [
+        "bisection-root-convergence",
         "trapezoid-error"
       ],
       "coverage": "partial",

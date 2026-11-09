@@ -2789,6 +2789,17 @@
         "axiom-real"
       ],
       "note": "“非空且有上界的实数集存在上确界”正是本卷明确列出的 axiom-real 完备性公理，属于基础而非推导。"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraExamples",
+      "text": "这是二分法求根与压缩映射原理的几何基础。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bisection-root-convergence",
+        "banach-contraction"
+      ],
+      "note": "二分法证明给出连续函数异号区间上的根存在及每步误差界；Banach 压缩映射定理证明完备度量空间上的迭代收敛与唯一不动点。"
     }
   ]
 }
