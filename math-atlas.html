@@ -19431,7 +19431,8 @@ window.ATLAS.proofBook = {
       "statement": "在R^(2n)中，C² Hamilton量H的C¹局部流φ_t若对初值可微且导数满足变分方程，则det Dφ_t=1。更一般，C¹向量场F的这种局部流满足 det Dφ_t(x)=exp(∫₀^t divF(φ_s(x))ds)。",
       "dependencies": [
         "linear-ode-existence",
-        "ftc-second"
+        "ftc-second",
+        "flow-initial-c1-variation"
       ],
       "idea": "变分方程与行列式多线性给Jacobi导数公式，Hamilton向量场的散度由混合偏导抵消。",
       "steps": [
@@ -23136,6 +23137,69 @@ window.ATLAS.proofBook = {
         "阶乘指数递增，数值级数受几何级数控制而收敛。取前 n 项 L_n=p_n/q_n，q_n=10^(n!)。尾项严格正；对 n≥2，后续指数至少按整数逐步增加，故 0<L-L_n≤(10/9)10^(-(n+1)!)<2/q_n^(n+1)。",
         "若 L 为代数数、次数 d，则逼近下界给 L-L_n≥c/q_n^d，因为尾项正保证两数不同。两界合并得到 c<2/q_n^(n+1-d)。",
         "当 n>d，q_n≥10，使右侧≤2·10^(-(n+1-d))→0，矛盾于固定 c>0。因此 L 不满足任何非零整系数多项式，即为超越数。$\\square$"
+      ]
+    },
+    {
+      "id": "gronwall-continuous",
+      "topics": [
+        "analysis/odes",
+        "analysis/stability"
+      ],
+      "title": "连续 Grönwall 不等式",
+      "statement": "连续非负u:[0,T]→R若满足u(t)≤a+b∫₀^t u(s)ds，a,b≥0，则u(t)≤ae^(bt)。",
+      "dependencies": [
+        "ftc-second"
+      ],
+      "idea": "用积分右端构造可微上界，乘指数积分因子。",
+      "steps": [
+        "令v(t)=a+b∫₀^t u(s)ds，则u≤v、v(0)=a且v′=bu≤bv。因此(e^(−bt)v)′≤0。",
+        "在0到t积分得e^(−bt)v(t)≤v(0)=a，故v(t)≤ae^(bt)，再用u≤v即得。a=0时同样给u恒零，不需要除以a。$\\square$"
+      ]
+    },
+    {
+      "id": "vector-local-picard",
+      "topics": [
+        "analysis/odes",
+        "analysis/initial-boundary"
+      ],
+      "title": "有限维一致局部 Picard 存在唯一性",
+      "statement": "设F:Ω⊆R^m→R^m为C¹，x₀∈Ω。存在h>0及x₀邻域V，使每个z∈V的初值问题x′=F(x)、x(0)=z在[−h,h]有唯一局部解φ(t,z)。并可取统一L使‖φ(t,z)−φ(t,w)‖≤e^(L|t|)‖z−w‖。",
+      "dependencies": [
+        "banach-contraction",
+        "continuous-functions-complete",
+        "vector-segment-derivative-bound",
+        "gronwall-continuous",
+        "ftc-first"
+      ],
+      "idea": "在同一个闭球及同一个短时间段上压缩，给相邻初值统一存在时间。",
+      "steps": [
+        "取闭球B(x₀,r)包含于Ω，F及DF在球上有界，记M=sup‖F‖、L=sup‖DF‖。线段导数估计给F在球内Lipschitz常数L。取h>0使hM<r/2、hL<1（M或L为零时相应约束自动成立），初值z取开球V=B(x₀,r/2)。",
+        "在连续函数空间中取闭子集E={y:[−h,h]→B(x₀,r)}，它完备：逐坐标一致柯西列有连续极限且闭球保持极限。定义T_z y(t)=z+∫₀^t F(y(s))ds。范数估计保证值在球内，且‖T_zy−T_zw‖∞≤hL‖y−w‖∞。压缩定理给唯一固定点，积分基本定理给C¹解。",
+        "任意留在球内的两解之差满足 ‖x(t)−y(t)‖≤‖z−w‖+L∫₀^t‖x(s)−y(s)‖ds，正时间用Grönwall，负时间反向参数后同理。由此得所列初值估计和唯一性。任意其他局部解最初由连续性留在球内，重叠区间可逐点应用相同局部唯一性拼接，因此是通常意义的局部唯一解。$\\square$"
+      ]
+    },
+    {
+      "id": "flow-initial-c1-variation",
+      "topics": [
+        "analysis/odes",
+        "geometry/hamiltonian-systems",
+        "geometry/symplectomorphisms"
+      ],
+      "title": "局部流对初值的 C¹ 依赖及变分方程",
+      "statement": "对开集上的C¹向量场F，上述统一局部解φ(t,z)对(t,z)为C¹，并且J(t,z)=D_zφ(t,z)满足 J′=DF(φ(t,z))J、J(0,z)=I。局部流满足φ(t,φ(s,z))=φ(t+s,z)，只要相应解段均在共同定义域；每个固定t的映射局部可逆，逆为反向时间流。",
+      "dependencies": [
+        "vector-local-picard",
+        "linear-ode-existence",
+        "gronwall-continuous",
+        "heine-cantor"
+      ],
+      "idea": "用导数的一致连续性控制非线性余项，再与线性变分方程相减。",
+      "steps": [
+        "固定统一存在矩形中的(t,z)。沿轨迹A(s,z)=DF(φ(s,z))连续，线性方程给唯一J，且积分方程和Grönwall给‖J(t,z)‖≤e^(L|t|)。给小向量v，令δ(s)=φ(s,z+v)−φ(s,z)，前面估计给sup_s‖δ(s)‖≤e^(Lh)‖v‖。选紧球使相邻轨迹和它们的连线都在原定义域内。",
+        "DF在该紧球上一致连续。写ω(ρ)=sup{‖DF(x)−DF(y)‖:‖x−y‖≤ρ且x,y在球内}，则ω(ρ)→0。线段积分给 F(x+δ)−F(x)−DF(x)δ 的范数≤ω(‖δ‖)‖δ‖。令e(s)=δ(s)−J(s,z)v，积分方程相减得 e(t)=∫₀^t[A(s,z)e(s)+R(s)]ds，且sup‖R‖≤ω(e^(Lh)‖v‖)e^(Lh)‖v‖。",
+        "Grönwall于是给sup‖e‖≤h e^(2Lh)ω(e^(Lh)‖v‖)‖v‖=o(‖v‖)，负时间同样。因此J确实是初值方向的Fréchet导数，且余项在所取紧邻域一致。",
+        "证明J随初值连续：φ的初值Lipschitz估计使A(·,z′)一致趋A(·,z)。两J积分方程相减，利用统一指数界和Grönwall得sup‖J(·,z′)−J(·,z)‖≤h e^(2Lh)sup‖A(·,z′)−A(·,z)‖→0。时间连续性来自线性方程，合起来得J联合连续。又∂_tφ=F(φ)连续，所以φ为C¹。",
+        "自治性使轨迹u↦φ(u+s,z)与u↦φ(u,φ(s,z))满足同一方程和相同u=0初值，唯一性给群律。在足够小的相邻定义域内取s=−t，得反向时间映射为逆。其C¹性已证，故得到局部C¹微分同胚。这同时验证上一章Jacobian体积公式所列的初值可微和变分方程假设。$\\square$"
       ]
     },
     {

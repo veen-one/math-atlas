@@ -1,5 +1,5 @@
 {
-  "proofCount": 527,
+  "proofCount": 530,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -513,7 +513,10 @@
         "linear-ode-existence",
         "gronwall-discrete",
         "ode-flow-semigroup",
-        "illposed-differentiation"
+        "illposed-differentiation",
+        "gronwall-continuous",
+        "vector-local-picard",
+        "flow-initial-c1-variation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -539,6 +542,7 @@
       "branch": "微分方程",
       "proofIds": [
         "picard-lindelof",
+        "vector-local-picard",
         "dalembert"
       ],
       "coverage": "partial",
@@ -569,7 +573,8 @@
         "continuous-lyapunov-equation",
         "schur-discrete-stability",
         "discrete-lyapunov-equation",
-        "gronwall-discrete"
+        "gronwall-discrete",
+        "gronwall-continuous"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2602,7 +2607,8 @@
         "hamiltonian-flow-symplectic",
         "liouville-jacobian-flow",
         "symplectic-volume-preservation",
-        "symplectic-nonsqueezing-volume-invariant"
+        "symplectic-nonsqueezing-volume-invariant",
+        "flow-initial-c1-variation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2616,7 +2622,8 @@
         "hamiltonian-flow-symplectic",
         "liouville-jacobian-flow",
         "hamiltonian-energy-conservation",
-        "moment-map-component-conservation"
+        "moment-map-component-conservation",
+        "flow-initial-c1-variation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

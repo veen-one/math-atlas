@@ -9,7 +9,7 @@ def register(P, BASES):
       r'Cartan二形式恒等式给L_(X_H)ω=d(ι_(X_H)ω)+ι_(X_H)dω=d(dH)+0=0。标量函数的d²H=0可直接由坐标混合偏导相等看出。于是d/dt(φ_t*ω)=φ_t*0=0。每个坐标系数沿时间恒定，在t=0有φ₀=id，所以φ_t*ω=ω。',
       r'局部流的逆为φ_(−t)，故在相应定义域间是局部微分同胚。拉回与外积可交换，所以φ_t*(ω^n/n!)=(φ_t*ω)^n/n!=ω^n/n!。这证明辛体积形式守恒；对可积分区域，相应体积守恒还需通常的积分换元公式。',
       r'在标准坐标ω=Σdq_j∧dp_j下，ι_Xω=Σ(q̇_j dp_j−ṗ_j dq_j)=dH，恰给q̇_j=∂H/∂p_j、ṗ_j=−∂H/∂q_j，与经典Hamilton方程约定一致。$\square$')
-    P('liouville-jacobian-flow','geometry/symplectomorphisms geometry/hamiltonian-systems applied/classical-mechanics','标准相空间 Hamilton 流的 Jacobian 体积证明',r'在R^(2n)中，C² Hamilton量H的C¹局部流φ_t若对初值可微且导数满足变分方程，则det Dφ_t=1。更一般，C¹向量场F的这种局部流满足 det Dφ_t(x)=exp(∫₀^t divF(φ_s(x))ds)。','linear-ode-existence ftc-second','变分方程与行列式多线性给Jacobi导数公式，Hamilton向量场的散度由混合偏导抵消。',
+    P('liouville-jacobian-flow','geometry/symplectomorphisms geometry/hamiltonian-systems applied/classical-mechanics','标准相空间 Hamilton 流的 Jacobian 体积证明',r'在R^(2n)中，C² Hamilton量H的C¹局部流φ_t若对初值可微且导数满足变分方程，则det Dφ_t=1。更一般，C¹向量场F的这种局部流满足 det Dφ_t(x)=exp(∫₀^t divF(φ_s(x))ds)。','linear-ode-existence ftc-second flow-initial-c1-variation','变分方程与行列式多线性给Jacobi导数公式，Hamilton向量场的散度由混合偏导抵消。',
       r'令J(t)=Dφ_t(x)，变分方程为J′=DF(φ_t(x))J，J(0)=I。局部流逆的链式法则给J可逆。行列式导数可从对列多线性展开得到：det(I+hB)=1+h trB+O(h²)，因为仅替换一列的一阶项恰为相应对角元之和，其余至少含两个h。',
       r'用J(t+h)=J(t)+hJ′(t)+o(h)，提取J(t)得 (detJ)′=detJ·tr(J⁻¹J′)。代入变分方程，再用有限矩阵tr(AB)=tr(BA)（坐标交换两次求和即可），得到(detJ)′=tr(DF(φ_t(x)))detJ。乘以exp(−∫₀^t divF(φ_s(x))ds)后导数为零，初值1给所列公式。',
       r'对F=(H_p,−H_q)，有divF=Σ_j(∂_(q_j)∂_(p_j)H−∂_(p_j)∂_(q_j)H)=0，因为H为C²。故detJ恒为1。这个坐标证明同时展示体积守恒的原因；一般散度零仅保证体积，不反过来保证保持完整辛二形式。$\square$')
