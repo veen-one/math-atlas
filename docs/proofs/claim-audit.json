@@ -241,7 +241,11 @@
       "topic": "analysis/limits",
       "field": "extraExamples",
       "text": "用夹逼定理求极限：$0\\le|x^2\\sin(1/x)|\\le x^2$，故 $\\lim_{x\\to0}x^2\\sin(1/x)=0$，即使 $\\sin(1/x)$ 本身在 $0$ 附近无限振荡。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "squeeze-theorem-real"
+      ],
+      "note": "对 x≠0 有 |sin(1/x)|≤1，故两侧均趋于 0；应用实函数夹逼定理。函数 sin(1/x) 本身在穿孔邻域无极限，但这不影响夹逼。"
     },
     {
       "topic": "analysis/derivatives",
