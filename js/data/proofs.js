@@ -213,6 +213,10 @@ window.ATLAS.proofBook = {
       "title": "弱导数、Sobolev 空间与变分形式的定义",
       "statement": "开集 Ω 上，v_i 是 u 的第 i 个弱导数指对每个光滑紧支撑测试函数 φ 有 ∫u∂_iφ=-∫v_iφ。H¹(Ω) 为函数及全部一阶弱导数均平方可积的类，范数平方为这些 L² 范数平方之和。H¹_0 定义为光滑紧支撑函数在该范数中的闭包。零边值在本章按此定义，而不预设未证明的边界迹定理。"
     },
+    "def-pid": {
+      "title": "主理想整环与矩阵等价",
+      "statement": "PID 指每个理想都由单个元素生成的含幺交换整环，允许它本身为域。矩阵等价指左右分别乘可逆矩阵，改变映射源与目标的基。元素 a,b 的最大公因子 g 指 (a,b)=(g)，于是 g=ua+vb，且 a/g、b/g 属于环；最大公因子与分解因子均只在相差单位元意义下唯一。"
+    },
     "def-conditional": {
       "title": "信息流、条件期望和停时的定义",
       "statement": "信息流是递增 σ 代数列。条件期望 Z=E[X|G] 指 G 可测且对每个 A∈G 有 ∫_A Z=∫_A X 的可积变量，按几乎处处相等识别。停时 T 满足 {T≤n}∈F_n。鞅 M_n 适应且可积，并满足 E[(M_n-M_(n-1))1_A]=0 对所有 A∈F_(n-1)。本卷在 L² 情形证明条件期望存在。"
@@ -2848,6 +2852,43 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "small-gain-banach",
+      "topics": [
+        "applied/robust-control",
+        "applied/feedback-control"
+      ],
+      "title": "Banach 信号空间的小增益定理",
+      "statement": "Banach 空间 X,Y 间映射 G₁:X→Y、G₂:Y→X 满足 G_i(0)=0 及全局 Lipschitz 常数 γ_i。若 γ₁γ₂<1，则对任意输入 r∈X、s∈Y，反馈方程 u=r−G₂(v)、v=s+G₁(u) 有唯一解，且 ‖u‖≤(‖r‖+γ₂‖s‖)/(1−γ₁γ₂)、‖v‖≤(‖s‖+γ₁‖r‖)/(1−γ₁γ₂)。",
+      "dependencies": [
+        "banach-contraction"
+      ],
+      "idea": "把两反馈方程合成一个压缩映射，再对两个信号的范数联立估计。",
+      "steps": [
+        "定义 T(u)=r−G₂(s+G₁(u))，则 ‖T(u)−T(w)‖≤γ₂γ₁‖u−w‖。X 完备，Banach 压缩定理给唯一固定点u；令v=s+G₁(u)，即得到解，任一反馈解都给同一固定点，所以解唯一。",
+        "由G_i(0)=0，有 ‖u‖≤‖r‖+γ₂‖v‖、‖v‖≤‖s‖+γ₁‖u‖。相互代入并除以正数1−γ₁γ₂，即得两界。对两组输入的解之差重复同样估计，还得相同形式的 Lipschitz 输入—信号界。",
+        "若X,Y采用信号的上确界范数，这给反馈内部信号对有界输入的有界响应。这里的结论是给定信号算子的适定性与有限增益；不自动证明某个状态空间实现的不可观隐藏模态稳定，也不把仅单点增益界替代所列全局 Lipschitz 条件。$\\square$"
+      ]
+    },
+    {
+      "id": "noether-point-symmetry",
+      "topics": [
+        "applied/symmetry-conservation",
+        "applied/classical-mechanics",
+        "geometry/moment-maps"
+      ],
+      "title": "点变换及边界项形式的 Noether 守恒律",
+      "statement": "设 L(t,q,v) 足够光滑，p=∂_vL、H=p·v−L，q(t) 为 C² Euler–Lagrange 解。若光滑函数 τ(t,q)、ξ(t,q)、B(t,q) 满足恒等式 L_tτ+L_q·ξ+p·(D_tξ−vD_tτ)+L D_tτ=D_tB，其中 D_t=∂_t+v·∂_q，则 Q=p·ξ−Hτ−B 沿解恒定。",
+      "dependencies": [
+        "euler-lagrange-variation"
+      ],
+      "idea": "把无穷小作用量不变条件逐项代入守恒量导数，利用 Euler–Lagrange 方程抵消。",
+      "steps": [
+        "沿解有 ṗ=L_q。计算 Ḣ=ṗ·v+p·v̇−L_t−L_q·v−p·v̇=−L_t，因此自主 L_t=0 时 H 守恒。此计算不要求 Legendre 变换可逆。",
+        "对 p·ξ−Hτ 求导，得到 L_q·ξ+p·D_tξ+L_tτ−H D_tτ。代入 H=p·v−L，正好等于 L_tτ+L_q·ξ+p·(D_tξ−vD_tτ)+L D_tτ。题设恒等式使它等于D_tB，因此Q̇=0。",
+        "时间平移取τ=1、ξ=0、B=0，在L_t=0时Q=−H；第j坐标平移取τ=0、ξ=e_j、B=0，在L不依赖q_j时Q=p_j。一般式给这些守恒量共同来源。所列恒等式是允许作用量差一个全导数的无穷小对称条件；它不是对任意连续变换都自动成立的断言。$\\square$"
+      ]
+    },
+    {
       "id": "compact-closed-strong-separation",
       "topics": [
         "geometry/convex-sets",
@@ -4322,6 +4363,49 @@ window.ATLAS.proofBook = {
         "由于 G 的第一坐标就是 x，逆必形如 G⁻¹(u,v)=(u,ψ(u,v))。取 a 的足够小邻域 A，使 (x,0)∈V，并令 φ(x)=ψ(x,0)，得到 C¹ 函数，φ(a)=b 且 F(x,φ(x))=0。",
         "取含 (a,b) 的小乘积邻域 A₀×B₀⊂U，再缩小 A₀，使 φ(A₀)⊂B₀ 且 (x,0)∈V。若 (x,y) 在该乘积邻域且 F(x,y)=0，则 G(x,y)=(x,0)=G(x,φ(x))，局部单射性迫使 y=φ(x)，反向已知，故存在与唯一性均成立。",
         "D_yF 在此邻域内仍可逆，可由逆矩阵的小扰动公式保证，必要时再缩小邻域。对恒等式 F(x,φ(x))=0 求导，链式线性逼近给 D_xF+D_yF·Dφ=0，左乘 (D_yF)⁻¹ 得所列公式。$\\square$"
+      ]
+    },
+    {
+      "id": "complex-jordan-form",
+      "topics": [
+        "algebra/modules",
+        "algebra/eigenvalues",
+        "algebra/linear-maps"
+      ],
+      "title": "复有限维算子的 Jordan 标准形",
+      "statement": "每个有限维复向量空间上的线性算子 T 都有由 Jordan 块 J_e(λ) 构成的分块对角矩阵。各特征值及对应块大小多重集唯一，不计块排列。",
+      "dependencies": [
+        "pid-module-decomposition",
+        "pid-invariant-factors-unique",
+        "pid-factorization-crt",
+        "fundamental-algebra"
+      ],
+      "idea": "令多项式变量作用为 T，将有限维空间看成 C[t] 的扭模；每个 (t−λ) 幂次循环模给一条 Jordan 链。",
+      "steps": [
+        "C[t] 是 PID：非零理想中取最低次数首一多项式，除法余数若非零会违反最低次数，所以它生成理想。给 V 定义 C[t] 作用 p(t)v=p(T)v。任意一组有限 C 基也生成该模。若 dim_CV=n>0，算子空间维数n²，所以 I,T,…,T^(n²) 线性相关，存在非零p使p(T)=0。因此整个模为扭模。零维情形为空分块，直接成立。",
+        "PID结构定理及代数基本定理把模分解成有限个 C[t]/((t−λ)^e) 的直和：先分解为非零不变因子循环商，再将每个多项式分成线性因子幂，对互素因子使用中国剩余分解。不存在自由 C[t] 因子，因为整个V被非零p湮灭，而自由因子不能如此。",
+        "在一个块 C[t]/((t−λ)^e) 中，以 (t−λ)^(e−1),…,(t−λ),1 为有序 C 基。多项式除法证明这些e个类张成且无关。乘以t等于乘λ再乘恒等加上乘(t−λ)，故第一个基向量映为λ倍自身，其余第j个映为λ倍自身加第j−1个。矩阵正是对角λ、上副对角1的Jordan块。拼接各块基即得存在性。",
+        "改变V的C基所给的算子相似，等价于上述 C[t]-模同构，因为交换T正好等价于交换所有多项式作用。PID扭模的素幂分量重数唯一，且 C[t] 不可约首一因子恰为t−λ，所以各λ及指数e多重集唯一，给Jordan块唯一性。$\\square$"
+      ]
+    },
+    {
+      "id": "finitely-generated-abelian-classification",
+      "topics": [
+        "algebra/modules",
+        "algebra/finite-groups",
+        "algebra/homology-groups"
+      ],
+      "title": "有限生成阿贝尔群分类",
+      "statement": "每个有限生成阿贝尔群 G 唯一同构于 Z^s⊕Z/d₁Z⊕…⊕Z/d_rZ，其中2≤d₁|…|d_r。若G有限，则s=0且|G|=∏d_i。",
+      "dependencies": [
+        "pid-module-decomposition",
+        "pid-invariant-factors-unique"
+      ],
+      "idea": "整数乘法由重复群加法定义，把阿贝尔群视为Z模。",
+      "steps": [
+        "给阿贝尔群G定义整数数乘：非负整数为重复加法，负整数先取逆。交换律与结合律验证Z模公理；反向Z模的加法群阿贝尔。群同态恰是Z模同态，因为它保持重复加法与逆。因此两类对象的有限生成与同构一致。",
+        "Z是PID：非零理想取最小正整数d，对任意元素除以d，余数仍在理想中且小于d，只能零，故理想为dZ。PID有限生成模结构及唯一性给G的直和分解。将不变因子乘单位±1改成正数，删除单位1因子，便有2≤d₁|…|d_r，且各数及自由秩唯一。",
+        "若s>0，直和含无限循环子群，群无限；若s=0，各循环因子有限，其直积基数为∏d_i。因此有限群情形恰是s=0，阶数公式成立，空积对应平凡群。$\\square$"
       ]
     },
     {
@@ -7535,6 +7619,122 @@ window.ATLAS.proofBook = {
         "按链式与变限积分公式直接求导，所列函数为 C²，满足 u_tt=c²u_xx；t=0 时两平移项合为 f，积分为零，一阶时间导数中两 f′ 抵消，变限项恰为 g。",
         "证明唯一性：令 ξ=x+ct、η=x-ct。逆坐标是 x=(ξ+η)/2、t=(ξ-η)/(2c)。链式法则把方程化为 U_ξη=0。对任意矩形两次基本定理给 U(ξ,η)-U(ξ,0)-U(0,η)+U(0,0)=0，所以 U=F(ξ)+G(η)。",
         "两解之差初始位移与速度均零，故 F(x)+G(x)=0 且 cF′(x)-cG′(x)=0。第一式求导并合并第二式，得 F′=G′=0；两常数互为相反，所以差为零。全部坐标在 R² 定义，得到全实线唯一性。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-submodule-free",
+      "topics": [
+        "algebra/modules",
+        "algebra/basis-dimension"
+      ],
+      "title": "有限秩自由模的子模在 PID 上自由",
+      "statement": "PID R 上 R^n 的每个子模 N 都为有限生成自由模，秩至多 n。",
+      "dependencies": [
+        "def-pid",
+        "axiom-natural"
+      ],
+      "idea": "投影到首坐标得到主理想，选一个提升后把剩余部分归到低一维。",
+      "steps": [
+        "对 n 归纳，n=0 时 N=0。设 π 为首坐标投影，π(N) 为理想，写成 (a)。若 a=0，N 是末 n−1 坐标自由模的子模，直接用归纳假设。",
+        "若 a≠0，选 v∈N 使 π(v)=a。任意 w∈N 的首坐标为 ra，故 w−rv∈K=N∩kerπ。于是 N=Rv+K。若 rv∈K，首坐标 ra=0，整环且a≠0使r=0，故该和为直和，Rv≅R。",
+        "K 是 R^(n−1) 的子模，归纳给自由基长度至多n−1。添入v得到 N 的有限自由基，长度至多n。$\\square$"
+      ]
+    },
+    {
+      "id": "smith-normal-form-pid",
+      "topics": [
+        "algebra/modules",
+        "algebra/linear-maps"
+      ],
+      "title": "PID 上的 Smith 标准形",
+      "statement": "PID 上任意有限矩阵 A 通过可逆行列变换化为 diag(d₁,…,d_r,0,…)，其中各 d_i≠0 且 d₁|d₂|…|d_r。",
+      "dependencies": [
+        "def-pid",
+        "noetherian-equivalence"
+      ],
+      "idea": "不断用 Bezout 变换缩小不整除的主元；主元理想严格上升不能无穷持续。",
+      "steps": [
+        "若矩阵为零即完成。否则交换行列把非零 a 放在左上角。若同列某项 b 不被a整除，取g=gcd(a,b)、ua+vb=g，作用在这两行的2×2矩阵 [[u,v],[−b/g,a/g]] 行列式为1，把该列两项变成g与0。g不与a相伴，否则a会整除b；因此主元理想(a)严格包含于(g)。同一操作可用于同行两列。",
+        "若第一列或第一行的某项被主元整除，用减去倍数清为零。这些是可逆变换。只要主元不变，有限个位置即可清完行列；若出现不整除项，就用前步使主元理想严格上升。PID 的每个理想有限生成，故诺特升链条件排除无限次严格上升。",
+        "清完第一行列后矩阵为 diag(a,B)。若B有项b不被a整除，将含b的行加到第一行，使第一行出现该b，同时首列主元仍为a；再用列Bezout操作严格增大主元理想，重做清除。升链条件也排除此步骤无限重复。最终得到 diag(a,B)，且a整除B全部元素。",
+        "对B按行列大小递归作同样约化。B 的行列变换只作环线性组合，所有项仍为a的倍数，因此其首个非零主元也被a整除。归纳给 d₁|d₂|…，而整个过程是有限个可逆行列变换的复合。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-module-decomposition",
+      "topics": [
+        "algebra/modules",
+        "algebra/basis-dimension"
+      ],
+      "title": "PID 上有限生成模的循环直和分解（存在性）",
+      "statement": "PID R 上每个有限生成模 M 都可写为 R^s⊕R/(d₁)⊕…⊕R/(d_r)，其中 d_i 为非零非单位，且 d₁|…|d_r。这里证明存在性，分解因子的唯一性须另证。",
+      "dependencies": [
+        "pid-submodule-free",
+        "smith-normal-form-pid",
+        "module-first-isomorphism"
+      ],
+      "idea": "取有限自由模到 M 的满射，将核写成有限自由模，再对关系矩阵作 Smith 约化。",
+      "steps": [
+        "取生成元 m₁,…,m_n，定义满射 R^n→M，将标准基映为m_i。核N是R^n子模，已证它有限自由，故可选有限基，作为列写成关系矩阵 A:R^l→R^n。第一同构定理给 M≅R^n/im A。",
+        "Smith 变换的右乘仅改变N的基，不改关系像；左乘给R^n自同构，同时把像送到对角关系子模，因此不改商的同构类。对角形式的每个非零d_i约束一个坐标为模(d_i)，无关系坐标给自由因子R。",
+        "单位主元对应R/(1)=0，可删去；非零非单位主元按整除顺序保留，得到所列直和。零模和无扭模情形分别允许全部因子为空或仅自由部分。此步骤不声称已经证明唯一性或所有 Jordan 标准形细节。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-factorization-crt",
+      "topics": [
+        "algebra/modules",
+        "algebra/ideals"
+      ],
+      "title": "PID 的唯一因子分解及互素商环分解",
+      "statement": "PID 中每个非零非单位元素唯一分解为不可约元乘积（不计顺序与单位）。若 a,b 互素，则 R/(ab)≅R/(a)⊕R/(b)。",
+      "dependencies": [
+        "def-pid",
+        "noetherian-equivalence",
+        "maximal-prime-quotient",
+        "module-first-isomorphism"
+      ],
+      "idea": "不可约元生成极大理想；升链条件保证分解终止，Bezout 恒等式给互素商的双射。",
+      "steps": [
+        "若非零非单位a不能分成有限个不可约元，它必为两个非单位的乘积，且至少一个因子仍不能分解。递归选择该因子产生严格升链(a)⊊(a₁)⊊(a₂)⊊…，违反PID的诺特升链条件。因此不可约分解存在。",
+        "若p不可约，任一包含(p)的理想为(d)，所以d整除p，只能d为单位或与p相伴，故(p)极大，因而素。两种不可约分解中，第一个不可约元由素性必须整除另一边某因子，与该因子相伴；约去后归纳，得到唯一性。",
+        "对(a,b)=R，映射R→R/(a)⊕R/(b)的核为(a)∩(b)=(ab)：若r=au=bv，且sa+tb=1，则r=rs a+rt b=ab(vs+ut)。满射可用sa+tb=1构造：tb在模a下为1、模b下为0，sa相反，所以给定两类有原像。第一同构定理给所列同构。有限多个两两互素因子的版本逐次应用。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-primary-multiplicities",
+      "topics": [
+        "algebra/modules"
+      ],
+      "title": "扭模素幂分量的内在重数",
+      "statement": "PID R 上有限生成扭模 T 的素幂循环分量重数由模本身唯一决定。对每个不可约元p和j≥1，dim_(R/(p))(p^(j−1)T/p^jT) 等于所有p幂分量中指数至少j者的个数。",
+      "dependencies": [
+        "pid-module-decomposition",
+        "pid-factorization-crt"
+      ],
+      "idea": "先由互素商分解拆成素幂分量，再计算每个分量在p幂过滤中的一维贡献。",
+      "steps": [
+        "存在性分解把 T 写为有限个R/(d_i)，因为扭模不可能含非零自由因子。每个d_i作不可约分解，再用互素商同构，得到有限个R/(p^e)的直和。",
+        "固定p。对q不与p相伴的q幂分量，Bezout使p的乘法可逆，故p^(j−1)分量与p^j分量相同，对商无贡献。对R/(p^e)，若j>e，两者皆零；若j≤e，该商由p^(j−1)的类生成，映射R→该商的核恰为(p)，所以是R/(p)上的一维空间。",
+        "有限直和与取这些子模、商相容，因此维数是所有e≥j分量数。该商由p消灭，自然为域R/(p)上的向量空间。其定义只用T及p的作用，在模同构下保持；所以c_j=上述维数是内在不变量。指数恰为j的分量数为c_j−c_(j+1)，从而所有素幂分量重数唯一。$\\square$"
+      ]
+    },
+    {
+      "id": "pid-invariant-factors-unique",
+      "topics": [
+        "algebra/modules"
+      ],
+      "title": "PID 上有限生成模的不变因子唯一性",
+      "statement": "PID 上 M≅R^s⊕⊕_(i=1)^r R/(d_i)，其中非零非单位d₁|…|d_r，则s、r以及各d_i的相伴类都由M唯一决定。",
+      "dependencies": [
+        "pid-primary-multiplicities",
+        "localization-module-universal"
+      ],
+      "idea": "自由秩由分式域局部化恢复；扭部的各素幂指数按整除顺序从右向左补齐。",
+      "steps": [
+        "扭子模T={m:存在非零a使am=0}由M内在确定；在存在性分解中它正是全部有限循环商的和，因为自由部分无非零扭元素。商M/T≅R^s。以所有非零标量局部化得到分式域F上的F^s，其向量空间维数在同构下唯一，所以s唯一。",
+        "前一命题恢复T的每个p幂分量指数多重集。若T=0，r=0。否则在整除序列中d₁非单位，选其不可约因子p，则p整除每个d_i；故p幂分量数恰为r。其他素元的分量数至多r，所以r等于各素元分量数的最大值，是内在不变量。",
+        "对每个p，将已恢复的正指数升序排列，并在左端补零至长度r。由于d_i|d_(i+1)，这恰是各d_i中p的指数序列。有限个p的这些指数唯一确定d_i的不可约因子分解，PID唯一分解使d_i在相差单位元意义下唯一。域情形没有非单位不可约元，所有有限生成模均自由，已由第一步处理。$\\square$"
       ]
     },
     {

@@ -14,11 +14,11 @@ window.ATLAS.subjects.applied.branches.push(
         brief: '用微分方程与变分描述运动',
         keywords: ['经典力学', 'Newton', 'Lagrange', 'Hamilton'],
         definition: [
-          '**经典力学**描述宏观物体的运动。Newton 形式用 $F = ma$；Lagrange 形式用最小作用量原理，运动满足 Euler–Lagrange 方程；Hamilton 形式用相空间与哈密顿方程。',
+          '**经典力学**描述宏观物体的运动。Newton 形式用 $F = ma$；Lagrange 形式用驻作用量原理，运动满足 Euler–Lagrange 方程；Hamilton 形式用相空间与哈密顿方程。',
           '三种形式在数学上等价但视角不同：Lagrange 强调构型空间与变分，Hamilton 强调相空间与辛结构。'
         ],
         intuition: [
-          '最小作用量原理说：物体走“作用量”取极值的路径。这比“力改变加速度”更深刻，且容易推广到场论。',
+          '驻作用量原理说：物体走“作用量”取驻值的路径。这比“力改变加速度”更深刻，且容易推广到场论。',
           '拉格朗日力学用广义坐标处理约束系统；哈密顿力学把二阶方程化为一阶方程组，直接接入辛几何与量子化。'
         ],
         formulas: [

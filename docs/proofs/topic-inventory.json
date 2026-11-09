@@ -1,5 +1,5 @@
 {
-  "proofCount": 473,
+  "proofCount": 483,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1146,6 +1146,7 @@
       "branch": "群论",
       "proofIds": [
         "lagrange",
+        "finitely-generated-abelian-classification",
         "biquadratic-five-fields",
         "cauchy-finite-group",
         "p-group-fixed-points",
@@ -1179,6 +1180,7 @@
         "polynomial-bezout",
         "integer-ideal-factorization",
         "pid-class-group-trivial",
+        "pid-factorization-crt",
         "noetherian-equivalence"
       ],
       "coverage": "partial",
@@ -1380,6 +1382,7 @@
       "subject": "代数",
       "branch": "同调代数",
       "proofIds": [
+        "finitely-generated-abelian-classification",
         "homology-defined",
         "chain-map-homology",
         "chain-homotopy",
@@ -1439,11 +1442,19 @@
       "subject": "代数",
       "branch": "交换代数",
       "proofIds": [
+        "complex-jordan-form",
+        "finitely-generated-abelian-classification",
         "module-first-isomorphism",
         "localization-module-universal",
         "tor-cyclic-groups",
         "finite-module-integrality",
-        "finite-integral-algebra"
+        "finite-integral-algebra",
+        "pid-submodule-free",
+        "smith-normal-form-pid",
+        "pid-module-decomposition",
+        "pid-factorization-crt",
+        "pid-primary-multiplicities",
+        "pid-invariant-factors-unique"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1573,7 +1584,9 @@
         "basis-extension",
         "rank-nullity",
         "gram-schmidt",
-        "dimension-theorem-vector"
+        "dimension-theorem-vector",
+        "pid-submodule-free",
+        "pid-module-decomposition"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1584,7 +1597,9 @@
       "subject": "代数",
       "branch": "线性代数",
       "proofIds": [
-        "rank-nullity"
+        "rank-nullity",
+        "complex-jordan-form",
+        "smith-normal-form-pid"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1596,7 +1611,8 @@
       "branch": "线性代数",
       "proofIds": [
         "hermitian-spectral",
-        "complex-eigenvalue"
+        "complex-eigenvalue",
+        "complex-jordan-form"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2583,6 +2599,7 @@
       "subject": "几何与拓扑",
       "branch": "辛几何",
       "proofIds": [
+        "noether-point-symmetry",
         "moment-map-component-conservation"
       ],
       "coverage": "partial",
@@ -2813,6 +2830,7 @@
       "subject": "应用与计算数学",
       "branch": "控制理论",
       "proofIds": [
+        "small-gain-banach",
         "scalar-feedback-stabilization",
         "scalar-robust-stability"
       ],
@@ -2825,6 +2843,7 @@
       "subject": "应用与计算数学",
       "branch": "控制理论",
       "proofIds": [
+        "small-gain-banach",
         "scalar-robust-stability"
       ],
       "coverage": "partial",
@@ -2847,6 +2866,7 @@
       "subject": "应用与计算数学",
       "branch": "数学物理",
       "proofIds": [
+        "noether-point-symmetry",
         "hamiltonian-energy-conservation",
         "cyclic-coordinate-momentum",
         "euler-lagrange-variation",
@@ -2883,6 +2903,7 @@
       "subject": "应用与计算数学",
       "branch": "数学物理",
       "proofIds": [
+        "noether-point-symmetry",
         "noether-symmetry-conservation"
       ],
       "coverage": "partial",

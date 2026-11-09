@@ -163,7 +163,7 @@ window.ATLAS.extras['applied/optimal-control'] = {
 };
 
 window.ATLAS.extras['applied/classical-mechanics'] = {
-  insight: '经典力学可用 Newton、Lagrange 或 Hamilton 表述；最小作用量原理最易推广到场论与量子力学。',
+  insight: '经典力学可用 Newton、Lagrange 或 Hamilton 表述；驻作用量原理最易推广到场论与量子力学。',
   examples: [
     '单摆 $L=\\frac12ml^2\\dot\\theta^2+mgl\\cos\\theta$ 的 Euler–Lagrange 方程给出 $\\ddot\\theta+(g/l)\\sin\\theta=0$。',
     '中心力场具有旋转对称，角动量守恒，行星轨道在平面内。'
@@ -187,7 +187,7 @@ window.ATLAS.extras['applied/statistical-mechanics'] = {
 };
 
 window.ATLAS.extras['applied/symmetry-conservation'] = {
-  insight: 'Noether 定理把连续对称与守恒量一一对应；对称性越强，守恒量越多，这是理论物理的基本组织原则。',
+  insight: 'Noether 定理从满足作用量变分不变条件的连续对称导出守恒量；需核对边界项及相互独立性，这是理论物理的基本组织原则。',
   examples: [
     '时间平移对称对应能量守恒，空间平移对称对应动量守恒。',
     '旋转对称对应角动量守恒，中心力场因此有平面轨道。'

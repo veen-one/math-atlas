@@ -1392,13 +1392,25 @@
       "topic": "algebra/modules",
       "field": "intuition",
       "text": "有限生成模的结构定理（PID 上）给出 $M \\cong R^r \\oplus \\bigoplus R/(d_i)$，是线性代数中 Jordan 标准形的代数根源。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pid-module-decomposition",
+        "pid-invariant-factors-unique",
+        "complex-jordan-form"
+      ],
+      "note": "PID上有限生成模的存在、唯一性与复Jordan标准形均已展开；Jordan结论在此限复有限维算子，不把非代数闭域上的有理标准形混为同一表述。"
     },
     {
       "topic": "algebra/modules",
       "field": "extraInsight",
       "text": "PID 上有限生成模有结构定理，是线性代数 Jordan 标准形的来源。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pid-module-decomposition",
+        "pid-invariant-factors-unique",
+        "complex-jordan-form"
+      ],
+      "note": "PID上有限生成模的存在、唯一性与复Jordan标准形均已展开；Jordan结论在此限复有限维算子，不把非代数闭域上的有理标准形混为同一表述。"
     },
     {
       "topic": "algebra/prime-ideals",
@@ -2506,19 +2518,31 @@
       "topic": "applied/robust-control",
       "field": "definition",
       "text": "$H_\\infty$ 控制最小化最坏情况下的扰动放大；小增益定理给出反馈回路稳定的充分条件。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "small-gain-banach"
+      ],
+      "note": "本卷证明Banach信号空间上的全局Lipschitz小增益充分条件；若仅给频域增益、状态实现或非线性单点增益，还须检查相应适定性及稳定性假设。"
     },
     {
       "topic": "applied/robust-control",
       "field": "formulaCaptions",
       "text": "小增益定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "small-gain-banach"
+      ],
+      "note": "本卷证明Banach信号空间上的全局Lipschitz小增益充分条件；若仅给频域增益、状态实现或非线性单点增益，还须检查相应适定性及稳定性假设。"
     },
     {
       "topic": "applied/robust-control",
       "field": "extraExamples",
       "text": "小增益定理：若回路增益乘积小于 $1$，则反馈稳定。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "small-gain-banach"
+      ],
+      "note": "本卷证明Banach信号空间上的全局Lipschitz小增益充分条件；若仅给频域增益、状态实现或非线性单点增益，还须检查相应适定性及稳定性假设。"
     },
     {
       "topic": "applied/optimal-control",
@@ -2541,13 +2565,13 @@
     {
       "topic": "applied/classical-mechanics",
       "field": "definition",
-      "text": "Newton 形式用 $F = ma$；Lagrange 形式用最小作用量原理，运动满足 Euler–Lagrange 方程；Hamilton 形式用相空间与哈密顿方程。",
+      "text": "Newton 形式用 $F = ma$；Lagrange 形式用驻作用量原理，运动满足 Euler–Lagrange 方程；Hamilton 形式用相空间与哈密顿方程。",
       "status": "needs-statement-review"
     },
     {
       "topic": "applied/classical-mechanics",
       "field": "intuition",
-      "text": "最小作用量原理说：物体走“作用量”取极值的路径。",
+      "text": "驻作用量原理说：物体走“作用量”取驻值的路径。",
       "status": "needs-statement-review"
     },
     {
@@ -2559,7 +2583,7 @@
     {
       "topic": "applied/classical-mechanics",
       "field": "extraInsight",
-      "text": "经典力学可用 Newton、Lagrange 或 Hamilton 表述；最小作用量原理最易推广到场论与量子力学。",
+      "text": "经典力学可用 Newton、Lagrange 或 Hamilton 表述；驻作用量原理最易推广到场论与量子力学。",
       "status": "needs-statement-review"
     },
     {
@@ -2578,7 +2602,11 @@
       "topic": "applied/symmetry-conservation",
       "field": "definition",
       "text": "**Noether 定理**：每一个连续对称对应一个守恒量。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "noether-point-symmetry"
+      ],
+      "note": "有限维光滑拉格朗日系统，点变换满足所列无穷小作用量恒等式，允许全导数边界项；不声称任意连续变换或场论规范对称均已证明。"
     },
     {
       "topic": "applied/symmetry-conservation",
@@ -2596,13 +2624,21 @@
       "topic": "applied/symmetry-conservation",
       "field": "formulaCaptions",
       "text": "Noether 定理的结论。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "noether-point-symmetry"
+      ],
+      "note": "有限维光滑拉格朗日系统，点变换满足所列无穷小作用量恒等式，允许全导数边界项；不声称任意连续变换或场论规范对称均已证明。"
     },
     {
       "topic": "applied/symmetry-conservation",
       "field": "extraInsight",
-      "text": "Noether 定理把连续对称与守恒量一一对应；对称性越强，守恒量越多，这是理论物理的基本组织原则。",
-      "status": "needs-statement-review"
+      "text": "Noether 定理从满足作用量变分不变条件的连续对称导出守恒量；需核对边界项及相互独立性，这是理论物理的基本组织原则。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "noether-point-symmetry"
+      ],
+      "note": "有限维光滑拉格朗日系统，点变换满足所列无穷小作用量恒等式，允许全导数边界项；不声称任意连续变换或场论规范对称均已证明。"
     },
     {
       "topic": "applied/no-arbitrage-pricing",
