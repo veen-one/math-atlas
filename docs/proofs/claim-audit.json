@@ -1404,13 +1404,24 @@
       "topic": "algebra/prime-ideals",
       "field": "intuition",
       "text": "零点定理（Nullstellensatz）建立了代数与几何的字典：理想 ↔ 代数簇，素理想 ↔ 不可约簇。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weak-nullstellensatz",
+        "strong-nullstellensatz",
+        "irreducible-prime-correspondence"
+      ],
+      "note": "限代数闭域上的有限变量多项式环；代数集对应根式理想，非空不可约代数集对应素理想，极大理想对应k点，各对应均已证明。"
     },
     {
       "topic": "algebra/dimension-theory",
       "field": "definition",
       "text": "对域 $k$ 上有限生成整环，$\\dim R$ 等于其分式域在 $k$ 上的超越次数（Noether 正规化引理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "noether-normalization",
+        "affine-domain-dimension-formula"
+      ],
+      "note": "有限生成整环版本，任意基域；完整链包括正规化、整扩张素理想性质、多项式环维数及超越基交换。"
     },
     {
       "topic": "algebra/fundamental-theorem-galois",
@@ -2201,25 +2212,45 @@
       "topic": "geometry/algebraic-varieties-geometry",
       "field": "formulaCaptions",
       "text": "Hilbert 零点定理（代数闭域上）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
+      ],
+      "note": "限代数闭域上的有限变量多项式环；代数集对应根式理想，极大理想对应k点，不能把所有理想都直接与零点集互逆。极大理想存在使用Zorn。"
     },
     {
       "topic": "geometry/algebraic-varieties-geometry",
       "field": "extraInsight",
       "text": "代数簇是多项式方程的零点集，Zariski 拓扑使其具有刚性；零点定理建立代数与几何的字典。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
+      ],
+      "note": "限代数闭域上的有限变量多项式环；代数集对应根式理想，极大理想对应k点，不能把所有理想都直接与零点集互逆。极大理想存在使用Zorn。"
     },
     {
       "topic": "geometry/coordinate-rings",
       "field": "intuition",
       "text": "Hilbert 零点定理保证几何与代数不丢失信息：$V \\mapsto I(V)$ 与 $I \\mapsto V(I)$ 互为逆（在代数闭域、根式理想下）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
+      ],
+      "note": "限代数闭域上的有限变量多项式环；代数集对应根式理想，极大理想对应k点，不能把所有理想都直接与零点集互逆。极大理想存在使用Zorn。"
     },
     {
       "topic": "geometry/coordinate-rings",
       "field": "extraInsight",
       "text": "坐标环是代数簇的“函数代数”，几何对象与代数对象通过 $V\\mapsto k[V]$ 建立反变对应；零点定理保证不丢失信息。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "strong-nullstellensatz",
+        "affine-polynomial-map-duality"
+      ],
+      "note": "仿射代数集与有限生成约化坐标环的映射对应在此按多项式映射定义；已证明拉回同态的反向复合及同构对应，不扩张到所有概形。"
     },
     {
       "topic": "geometry/schemes",

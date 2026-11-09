@@ -1,5 +1,5 @@
 {
-  "proofCount": 458,
+  "proofCount": 473,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -873,6 +873,7 @@
       "subject": "逻辑与数学基础",
       "branch": "范畴论",
       "proofIds": [
+        "affine-polynomial-map-duality",
         "chain-map-homology",
         "natural-composition"
       ],
@@ -1189,6 +1190,7 @@
       "subject": "代数",
       "branch": "环与域",
       "proofIds": [
+        "polynomial-ring-dimension",
         "polynomial-division",
         "root-bound",
         "polynomial-bezout",
@@ -1196,6 +1198,7 @@
         "fundamental-algebra",
         "rational-root-theorem",
         "quadratic-radical-formula",
+        "noether-normalization",
         "hilbert-basis"
       ],
       "coverage": "partial",
@@ -1221,11 +1224,14 @@
       "subject": "代数",
       "branch": "环与域",
       "proofIds": [
+        "finite-transcendence-exchange",
         "irreducible-extension",
         "minimal-polynomial",
         "tower-law",
         "splitting-field-exists",
         "galois-embedding-count",
+        "integral-domain-field-test",
+        "zariski-lemma",
         "characteristic-zero-separable",
         "primitive-element-theorem"
       ],
@@ -1435,7 +1441,9 @@
       "proofIds": [
         "module-first-isomorphism",
         "localization-module-universal",
-        "tor-cyclic-groups"
+        "tor-cyclic-groups",
+        "finite-module-integrality",
+        "finite-integral-algebra"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1446,7 +1454,12 @@
       "subject": "代数",
       "branch": "交换代数",
       "proofIds": [
-        "maximal-prime-quotient"
+        "irreducible-prime-correspondence",
+        "maximal-prime-quotient",
+        "integral-lying-over",
+        "integral-going-up-incomparability",
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1457,7 +1470,16 @@
       "subject": "代数",
       "branch": "交换代数",
       "proofIds": [
-        "dimension-theorem-vector"
+        "finite-transcendence-exchange",
+        "polynomial-ring-dimension",
+        "affine-domain-dimension-formula",
+        "integral-domain-field-test",
+        "integral-lying-over",
+        "integral-going-up-incomparability",
+        "integral-extension-dimension",
+        "dimension-theorem-vector",
+        "finite-module-integrality",
+        "noether-normalization"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -1759,7 +1781,8 @@
       "subject": "数论",
       "branch": "代数数论",
       "proofIds": [
-        "rational-algebraic-integer"
+        "rational-algebraic-integer",
+        "finite-integral-algebra"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2322,10 +2345,14 @@
       "subject": "几何与拓扑",
       "branch": "代数几何",
       "proofIds": [
+        "irreducible-prime-correspondence",
+        "affine-polynomial-map-duality",
         "singular-cusp-jacobian",
         "birational-open-isomorphism",
         "coordinate-ring-point-evaluation",
-        "abelian-multiplication-morphism"
+        "abelian-multiplication-morphism",
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2336,8 +2363,15 @@
       "subject": "几何与拓扑",
       "branch": "代数几何",
       "proofIds": [
+        "irreducible-prime-correspondence",
+        "affine-polynomial-map-duality",
+        "affine-domain-dimension-formula",
         "coordinate-ring-point-evaluation",
-        "scheme-local-ring-definition"
+        "scheme-local-ring-definition",
+        "noether-normalization",
+        "zariski-lemma",
+        "weak-nullstellensatz",
+        "strong-nullstellensatz"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

@@ -61,6 +61,10 @@ window.ATLAS.proofBook = {
       "title": "随机变量独立性的定义",
       "statement": "随机变量的独立性按任意 Borel 原像事件的联合概率等于概率乘积定义；本卷证明需要的期望乘法，不把它当作独立性定义。"
     },
+    "def-affine-algebraic-set": {
+      "title": "仿射代数集、不可约与多项式映射",
+      "statement": "固定代数闭域 k。仿射代数集 X⊆k^n 的闭子集为 X∩V(J)，坐标环 k[X]=k[x₁,…,x_n]/I(X)。非空 X 称不可约，若不能写成两个真闭子集的并。X→Y⊆k^m 的多项式映射指其 m 个坐标函数均为 X 上多项式限制。本章只使用这种映射，不预设一般概形或局部正则函数的全局表示定理。"
+    },
     "def-ring-field": {
       "title": "环、域与多项式的定义",
       "statement": "使用含单位交换环、理想、商环、整环、域、域扩张、形式多项式、次数、形式导数及代数元素最小多项式的定义。最小多项式的存在与不可约性在正文证明，不作为额外定理假设。"
@@ -200,6 +204,10 @@ window.ATLAS.proofBook = {
     "def-proof-code-arithmetic": {
       "title": "证明谓词与算术化检查假设",
       "statement": "固定有效形式演算，Prf_T(p,n) 表示 p 是 T 中编号 n 句子的有限证明，Prov_T(n):=∃p Prf_T(p,n)。本章对理论 T 明列假设：证明检查与代入数字可由原始递归关系表示；T 能证明具体正确的证明检查；T 能验证 MP 拼接证明及“由证明代码生成 Prov 句证明”的统一原始递归代码变换。以下 D1–D3 的证明均只在这些算术化假设下成立。"
+    },
+    "def-integral-extension": {
+      "title": "整元素与代数闭域定义",
+      "statement": "含幺交换环扩张 R⊆S 中，s 对 R 整指 s 满足系数在 R 中的首一多项式。代数闭域 k 指每个正次数 k 系数多项式在 k 中有根。理想根式 √I={f:存在正整数m使f^m∈I}；V(I) 为全部 I 中多项式的共同 k 点零集，I(X) 为在点集 X 上全部消失的多项式理想。"
     },
     "def-sobolev": {
       "title": "弱导数、Sobolev 空间与变分形式的定义",
@@ -1486,6 +1494,106 @@ window.ATLAS.proofBook = {
         "给定 $\\varepsilon>0$，取原区间上上下和差小于 $\\varepsilon$ 的分割，加入 $c$ 得到细分，间隙不增。该分割左右两段的上下和差都非负，且相加为总间隙，因此每段间隙都小于 $\\varepsilon$。任意误差都能实现，所以两个限制可积。",
         "对于含 $c$ 的分割 $P$，上下和分别恰等于两段的对应和，因此 $L(f,P)\\le\\int_a^c f+\\int_c^b f\\le U(f,P)$。整段积分也在同一上下和之间。",
         "取间隙小于任意 $\\varepsilon$ 的这类分割，两个候选数的距离小于 $\\varepsilon$，所以相等。若只假设两段各可积，也可分别取小间隙分割再合并，以同样论证得到整段可积及相等式。$\\square$"
+      ]
+    },
+    {
+      "id": "irreducible-prime-correspondence",
+      "topics": [
+        "geometry/algebraic-varieties-geometry",
+        "algebra/prime-ideals",
+        "geometry/coordinate-rings"
+      ],
+      "title": "不可约仿射代数集与素理想的对应",
+      "statement": "非空仿射代数集 X 不可约，当且仅当 I(X) 为素理想，当且仅当 k[X] 为整环。因此素理想 p 对应不可约代数集 V(p)。",
+      "dependencies": [
+        "strong-nullstellensatz",
+        "maximal-prime-quotient",
+        "def-affine-algebraic-set"
+      ],
+      "idea": "乘积在所有点为零意味着整个代数集被两个零点闭集覆盖；不可约性迫使其中一个因子处处为零。",
+      "steps": [
+        "若 X 不可约，且 fg∈I(X)，则每个 a∈X 有 f(a)g(a)=0，域无零因子使 X=(X∩V(f))∪(X∩V(g))。两者闭，不可约性使至少一个等于 X，所以 f∈I(X) 或 g∈I(X)。X 非空又保证1∉I(X)，故为真素理想。",
+        "反向若 I(X) 素，而 X=X₁∪X₂、两者都是真闭子集，写 X_i=X∩V(J_i)。因 X_i 真，可取 X 中不在 X_i 的点，从 J_i 中选一个在该点非零的多项式 f_i。于是 f_i 在 X_i 消失，却不属于 I(X)。但 f₁f₂ 在 X₁∪X₂=X 消失，属于 I(X)，与素性矛盾。",
+        "商环为整环与理想素性的等价已证明。任一素理想 p 真，由弱零点定理 V(p) 非空；素理想为根式理想（f^m∈p 反复用素性得 f∈p），故强零点定理给 I(V(p))=p。套用前两步得到不可约性，完成对应。$\\square$"
+      ]
+    },
+    {
+      "id": "affine-polynomial-map-duality",
+      "topics": [
+        "geometry/coordinate-rings",
+        "geometry/algebraic-varieties-geometry",
+        "foundations/functors"
+      ],
+      "title": "仿射代数集的多项式映射与坐标环同态",
+      "statement": "仿射代数集 X⊆k^n、Y⊆k^m 的多项式映射 F:X→Y 与保单位 k-代数同态 F*:k[Y]→k[X] 一一对应，F*([h])=[h∘F]。复合顺序反转；多项式同构对应坐标环同构。",
+      "dependencies": [
+        "strong-nullstellensatz",
+        "def-affine-algebraic-set"
+      ],
+      "idea": "映射的坐标函数决定拉回同态；反向把坐标变量的像选成多项式代表。",
+      "steps": [
+        "若 F 的坐标由 f₁,…,f_m 给出，定义 h 的拉回为 h(f₁,…,f_m) 在 k[X] 中的类。换 f_i 的代表不会改变 X 上的函数值，差属于 I(X)；若 h∈I(Y)，因 F(X)⊆Y，其复合在 X 上消失，故类为零。因此映射能下降到 k[Y]，并逐项保持加法、乘法、标量及单位元。",
+        "反向给 θ:k[Y]→k[X]，对 Y 的坐标变量 y_i 的类取像 θ([y_i])，各选多项式代表 f_i。令 F(x)=(f₁(x),…,f_m(x))。对任意 h∈I(Y)，有 θ([h])=0，所以 h(f₁,…,f_m)∈I(X)，在 X 上消失。因此 F(x)∈V(I(Y))=Y。代表变化仍给相同点值，故 F 定义良好。",
+        "坐标变量的像唯一确定 k-代数同态，坐标函数的点值也唯一确定 F，故两个构造互逆。若 G:Y→Z，逐函数代入给 (G∘F)*=F*∘G*，恒等映射对应恒等同态。因此双向多项式逆映射给双向环逆同态；反向环同构也由此构造出双向多项式逆，得到同构对应。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-transcendence-exchange",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/field-extensions"
+      ],
+      "title": "有限超越基的交换与基数唯一性",
+      "statement": "若域 E 代数于 F(t₁,…,t_r)，且 t_i 对 F 代数无关，则 E 中任意 F-代数无关集至多有 r 个元素；每个超越基均恰有 r 个元素。",
+      "dependencies": [
+        "minimal-polynomial"
+      ],
+      "idea": "从多项式关系中交换两个元素，逐次用新的独立元素替换有限生成集合。",
+      "steps": [
+        "先证交换事实：若 x 对 K 超越，却对 K(y) 代数，则清分母给非零关系 P(x,y)=0，P∈K[X,Y]。把它视为 Y 的多项式，其系数在 K[x]；x 超越保证非零多项式系数代入后仍非零，而且它不能是非零常数项独自成立，否则 x 对 K 代数。因此 y 对 K(x) 代数。",
+        "设 u₁,…,u_s 代数无关。从 E 代数于 F(t₁,…,t_r) 出发，逐次加入 u_j。假设已替换前 j−1 个，E 代数于 F(u₁,…,u_(j−1),剩余t)。u_j 对前面 u 的域超越，却对加入全部剩余 t 后的域代数。选一个使其代数的最小 t 子集，并挑其中一个 t。令 K 为前面 u 加上该子集其余 t 的域，交换事实使所挑 t 对 K(u_j) 代数。",
+        "因此可删去该 t、加入 u_j，同时仍使 E 代数于新生成域；这里使用代数扩张的传递性：有限个代数关系只需有限个代数系数，它们生成有限扩张，再用塔式次数得传递。每次至少删一个 t，最多 r 次。若 s>r，第 r+1 个 u 将对前面 u 的域代数，违反无关性。所以 s≤r。任意无限无关集若存在也有 r+1 元子集，同样被排除。",
+        "若另一组超越基大小为 s，则由刚证 s≤r，它也有限；反向以这组基为生成域重复论证，得 r≤s。因此基数唯一，记为 trdeg_F E=r。$\\square$"
+      ]
+    },
+    {
+      "id": "polynomial-ring-dimension",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/polynomial-rings"
+      ],
+      "title": "多项式环的 Krull 维数",
+      "statement": "对任意域 k，dim k[x₁,…,x_r]=r。",
+      "dependencies": [
+        "noether-normalization",
+        "integral-extension-dimension"
+      ],
+      "idea": "非零素理想含一个非零多项式，首一化后其商整于至多 r−1 个变量的环，从而对变量数归纳。",
+      "steps": [
+        "r=0 时环为域，唯一素理想为零，维数0。设对 r−1 已知。固定 r 变量环 A 的任意非零素理想 p，选非零 f∈p。f 不可能是非零常数。使用正规化证明中的加权三角变量替换，将 f 化为最后一个变量 y_r 的首一多项式（非零标量可除去）；变换 x_i=y_i+y_r^(B^i)、x_r=y_r 可逆，逆为 y_i=x_i−x_r^(B^i)。",
+        "于是整域 A/p 由最后变量的商类有限生成于子环 R=image(k[y₁,…,y_(r−1)])，且该变量满足首一关系，所以为整扩张。整扩张保持维数给 dim(A/p)=dim R。R 是 r−1 变量多项式环的商；商环的任何素理想链沿满射取原像，给原环同长度严格素链。因此 dim R≤r−1。",
+        "对 A 的任意有限严格素链，可在最前补上零理想；A 是整环，零理想素。若链长度至少1，写成0⊊p₁⊊…⊊p_l，商 A/p₁ 中得到长度 l−1 的链，因此 l−1≤r−1，l≤r。未从零开始的链长度只会更小，故 dim A≤r。",
+        "反向 (0)⊊(x₁)⊊(x₁,x₂)⊊…⊊(x₁,…,x_r) 是长度 r 的严格素链，因为各商为余下变量的多项式整环。因此 dim A≥r，合并得等式。$\\square$"
+      ]
+    },
+    {
+      "id": "affine-domain-dimension-formula",
+      "topics": [
+        "algebra/dimension-theory",
+        "geometry/coordinate-rings"
+      ],
+      "title": "有限生成整环的维数等于超越次数",
+      "statement": "任意域 k 上非零有限生成整环 A 满足 dim A=trdeg_k Frac(A)。",
+      "dependencies": [
+        "noether-normalization",
+        "polynomial-ring-dimension",
+        "integral-extension-dimension",
+        "finite-transcendence-exchange"
+      ],
+      "idea": "正规化将环维数化到多项式子环；有限代数分式域扩张给同一组超越基。",
+      "steps": [
+        "Noether 正规化给代数无关 t₁,…,t_r∈A，使 A 有限于 C=k[t₁,…,t_r]，从而整于 C。整域整扩张保持维数及多项式环计算给 dim A=dim C=r。",
+        "正规化证明也已给 Frac(A) 是 k(t₁,…,t_r) 的有限代数扩张。因此 t₁,…,t_r 是该分式域的超越基；有限超越基交换定理保证超越次数定义无歧义，等于 r。合并两式即得公式。$\\square$"
       ]
     },
     {
@@ -4080,6 +4188,81 @@ window.ATLAS.proofBook = {
         "快速衰减使无穷端 x|f(x)|² 为零。对其导数积分，得 ∫|f|²=-2Re∫x f′ overline(f)。所以 ‖f‖₂²≤2‖xf‖₂‖f′‖₂。",
         "由 Fourier 导数公式及 Plancherel，‖f′‖₂=‖ωfhat‖₂/√(2π)，代入得到不等式。",
         "平移 f 改变位置均值而不改变位置方差；乘 exp(iω₀x) 使 Fourier 变量平移，改变频率均值而不改变频率方差。这两公式由定义及仿射换元直接得到。对中心化后的函数用前式，并按空间密度 |f|²/‖f‖₂² 与频率密度 |fhat|²/(2π‖f‖₂²) 计算标准差，即得乘积至少 1/2。$\\square$"
+      ]
+    },
+    {
+      "id": "integral-domain-field-test",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/field-extensions"
+      ],
+      "title": "整域整扩张中的域判据",
+      "statement": "若整域 R⊆S 且 S 对 R 整，则 R 是域当且仅当 S 是域。整性在取商和同时局部化后保持。",
+      "dependencies": [
+        "def-integral-extension"
+      ],
+      "idea": "一边用代数元素的首一关系求逆，另一边对已有逆的整关系消去分母。",
+      "steps": [
+        "若 R 是域、s∈S 非零，取 s 的最低次数首一整关系。常数项不能为零，否则在整域中约去 s 得到更低次首一关系。因此常数项 a₀∈R 非零可逆，将关系除以 s 并解出 s⁻¹，得到 S 中的逆。",
+        "若 S 是域、r∈R 非零，则 r⁻¹∈S 整，对其首一关系乘 r 的适当幂，得到 r⁻¹∈R（与有限模整性证明的同一步计算），故 R 是域。",
+        "对商环，将整关系逐系数取商仍首一。对乘法集 U⊆R，若 s 满足次数m首一关系，s/u 满足把各系数除以 u 的适当幂后的首一关系，系数在 U⁻¹R 中，所以 U⁻¹S 对 U⁻¹R 整。$\\square$"
+      ]
+    },
+    {
+      "id": "integral-lying-over",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/prime-ideals"
+      ],
+      "title": "整域整扩张的素理想上覆定理",
+      "statement": "整域整扩张 R⊆S 中，每个素理想 p⊆R 都是 S 中某个素理想 q 的收缩：q∩R=p。",
+      "dependencies": [
+        "integral-domain-field-test",
+        "axiom-zorn",
+        "localization-module-universal"
+      ],
+      "idea": "在 p 处局部化，取扩张环的极大理想；其收缩由整域域判据成为基环的唯一极大理想。",
+      "steps": [
+        "令 U=R\\p。局部化 R_p⊆U⁻¹S 是非零整域扩张，且整性保持。R_p 中分子不在 p 的分数为单位；分子在 p 的分数构成真理想 pR_p，所以它是唯一极大理想。真性由交叉乘法及 p 的素性验证，1不可能属于该理想。",
+        "由 Zorn 在非零含幺环 U⁻¹S 中取极大理想 m。其收缩 n=m∩R_p 为素理想，商 R_p/n 单射进入域 (U⁻¹S)/m，且为整扩张。域判据使 R_p/n 为域，所以 n 极大，只能是 pR_p。",
+        "把 m 沿 S→U⁻¹S 收缩为 q，素性由同态下素理想收缩直接得到。对 r∈R，r∈q 当且仅当 r/1∈pR_p，当且仅当 r∈p；后一等价由分数关系及 p 素性得到。因此 q∩R=p。$\\square$"
+      ]
+    },
+    {
+      "id": "integral-going-up-incomparability",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/prime-ideals"
+      ],
+      "title": "整域整扩张的上升与不可比性",
+      "statement": "整域整扩张 R⊆S 中：(1) 若 p⊆p′ 为 R 的素理想、q∩R=p，则存在 q′⊇q 使 q′∩R=p′；(2) 若 q⊆q′ 且收缩相同，则 q=q′。",
+      "dependencies": [
+        "integral-lying-over",
+        "integral-domain-field-test"
+      ],
+      "idea": "上升在商环中应用上覆；不可比性在共同收缩处局部化，使商成为域。",
+      "steps": [
+        "因 q∩R=p，R/p 单射进入整域 S/q，且取商保持整性。对 p′/p 应用上覆，得到 S/q 中的素理想，其在 S 的原像 q′ 包含 q 且收缩为 p′。这证明上升。",
+        "证明不可比性：设 q⊆q′、收缩均为 p，令 U=R\\p。两理想都避开 U，局部化后仍为素理想 Q⊆Q′。局部化素性的直接检验是：分数乘积在扩张理想中，清分母后由原素性判断某因子在原理想；其收缩仍为原素理想，因为 U 与该素理想不交。",
+        "整域 (U⁻¹S)/Q 整于 R_p/pR_p，后者为域，所以前者按域判据也是域。于是 Q 极大，包含它的真素理想 Q′ 只能等于 Q。沿 S 收缩即得 q′=q。$\\square$"
+      ]
+    },
+    {
+      "id": "integral-extension-dimension",
+      "topics": [
+        "algebra/dimension-theory"
+      ],
+      "title": "整域整扩张保持 Krull 维数",
+      "statement": "若整域 R⊆S 为整扩张，则 dim R=dim S，允许维数无穷。Krull 维数定义为有限严格素理想链长度的上确界。",
+      "dependencies": [
+        "integral-going-up-incomparability",
+        "integral-lying-over"
+      ],
+      "idea": "收缩链由不可比性保持严格，反向用上覆起步再逐层上升。",
+      "steps": [
+        "任取 S 的严格素链 q₀⊊…⊊q_l。收缩给 R 的包含链；若相邻收缩相同，不可比性迫使 q_i=q_(i+1)，矛盾。因此收缩仍严格，l≤dim R，故 dim S≤dim R。",
+        "任取 R 的严格素链 p₀⊊…⊊p_l。上覆先取 q₀ 收缩为 p₀，再逐次上升得 q_i⊆q_(i+1)、收缩分别为 p_i,p_(i+1)。收缩不同使这些包含严格，因此 S 有同长度素链。对全部有限链取上确界，得 dim R≤dim S。",
+        "两不等式合并即得相等。该结论本身尚不计算多项式环的维数；需要另证 dim k[t₁,…,t_r]=r 才能结合 Noether 正规化完成有限生成整环的维数公式。$\\square$"
       ]
     },
     {
@@ -6815,6 +6998,130 @@ window.ATLAS.proofBook = {
         "反设 T⊢Con(T)，即 T⊢¬Prov(⌜⊥⌝)。经典命题重言式 ¬P↔(P→⊥) 给 T⊢Prov(⌜⊥⌝)→⊥。",
         "把 Löb 定理用于 φ=⊥，其前提正是上一步的内部蕴含，故 T⊢⊥。这与 T 一致（不证明矛盾句）的假设冲突。",
         "所以 T⊬Con(T)。结论依赖 D1–D3 与对角构造；对具体 Robinson Q 或 Peano 算术的标准编码，要把这些算术化条件逐项证明后才得到通常表述。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-module-integrality",
+      "topics": [
+        "algebra/modules",
+        "algebra/dimension-theory"
+      ],
+      "title": "有限模代数的整性及有限性的传递",
+      "statement": "若含幺交换代数 S 是有限生成 R-模，则 S 的每个元素对 R 整。若 S 有限于 R、R 有限于 A，则 S 有限于 A。",
+      "dependencies": [
+        "finite-integral-algebra"
+      ],
+      "idea": "乘法在有限生成模上的矩阵关系给首一方程；两层生成元的乘积生成复合扩张。",
+      "steps": [
+        "设 u₁,…,u_m 生成 S。固定 s∈S，写 su_j=Σ_i a_ji u_i。矩阵关系 (sI−A)u=0，乘伴随矩阵得 det(sI−A)u_j=0 对每个 j。因1∈S由这些 u_j 的 R 线性组合表示，得到 det(sI−A)=0。该表达式为 s 的首一多项式，证明整性；生成元无需线性无关。",
+        "若 r₁,…,r_l 是 R 的 A-模生成元，每个 S 元素先写成 Σ_j c_ju_j、c_j∈R，再把各 c_j 展开为 r_i 的 A 线性组合。故有限个 r_i u_j 生成 S，得到有限性传递。$\\square$"
+      ]
+    },
+    {
+      "id": "noether-normalization",
+      "topics": [
+        "algebra/dimension-theory",
+        "algebra/polynomial-rings",
+        "geometry/coordinate-rings"
+      ],
+      "title": "Noether 正规化引理（任意基域）",
+      "statement": "若非零 k-代数 A 为有限生成整环，则存在代数无关 t₁,…,t_r∈A，使 A 是 k[t₁,…,t_r] 上的有限生成模。因此该子环确为多项式环，Frac(A) 是 k(t₁,…,t_r) 的有限代数扩张。不要求基域无限。",
+      "dependencies": [
+        "finite-module-integrality",
+        "finite-integral-algebra",
+        "minimal-polynomial"
+      ],
+      "idea": "用不同大幂次替换变量，让关系式在最后一个变量的最高项只来自一个单项式，再对生成元个数归纳。",
+      "steps": [
+        "写 A=k[a₁,…,a_n]，按 n 归纳。n=0 时 A=k，取 r=0。若 a₁,…,a_n 代数无关，则 A 本身为它们的多项式环，作为自身模由1生成，完成。否则存在非零多项式 f(x₁,…,x_n) 使 f(a)=0。",
+        "取整数 B 大于 f 中全部单项式的每个变量指数。赋权 w_n=1、w_i=B^i（1≤i<n）。由于各指数小于 B，单项式的加权次数 α_n+Σ_(i<n)α_i B^i 由 B 进制表示唯一决定指数向量，所以不同单项式权重不同。",
+        "令 x_i=y_i+y_n^(B^i)（i<n）、x_n=y_n。每个原单项式展开后的 y_n 最高次项恰为其加权次数，系数为原标量系数；展开中凡选择某个 y_i 因子，y_n 次数就严格降低。因此整个替换多项式的最高 y_n 次项只来自唯一最大权重单项式，其系数为非零 k 标量。除以该标量后，得到关于 y_n 的首一多项式，系数在 k[y₁,…,y_(n−1)]。",
+        "在 A 内置 b_i=a_i−a_n^(B^i)，R=k[b₁,…,b_(n−1)]。替换关系使 a_n 对 R 整，且 A=R[a_n]，因为 a_i=b_i+a_n^(B^i)。首一关系把 a_n 高次幂消去，所以 A 有限于 R。R 是整环且至多 n−1 个代数生成元，归纳假设给其中代数无关 t₁,…,t_r，使 R 有限于 C=k[t₁,…,t_r]。有限性传递得 A 有限于 C。",
+        "有限模整性使每个 a_i 对 C 整，因而对分式域 F=k(t₁,…,t_r) 代数。嵌入 Frac(A) 中，F(a₁,…,a_n) 是有限个代数元素生成的域，故为有限代数扩张。它包含 A 及其全部非零元素的逆，所以等于 Frac(A)。证明完成；尚不能单凭该引理直接略去 Krull 维数所需的素理想链论证。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-integral-algebra",
+      "topics": [
+        "algebra/modules",
+        "numbertheory/algebraic-integers"
+      ],
+      "title": "有限个整元素生成的代数有限及整性传递到其元素",
+      "statement": "若 s₁,…,s_m 对 R 整，则 S=R[s₁,…,s_m] 是有限生成 R-模，且每个 s∈S 对 R 整。若这样的 S 是域，则 R 也是域。",
+      "dependencies": [
+        "def-integral-extension",
+        "axiom-vector"
+      ],
+      "idea": "各首一关系压低单项式次数，乘法在有限生成模上的矩阵关系再给首一湮灭多项式。",
+      "steps": [
+        "设 s_i 满足次数 d_i 的首一关系。反复用该关系消去高次幂，所有单项式都化为 R 线性组合，指数各小于 d_i。因此有限个这些单项式生成 S，且包含1，记为 u₁,…,u_N。",
+        "固定 s∈S，将每个 su_j 写成生成元的线性组合，得到矩阵关系 (sI−A)u=0，其中 A 的元素在 R 中。伴随矩阵恒等式给 det(sI−A)u_j=0 对每个 j。因为1也由 u_j 生成，故 det(sI−A)=0。行列式按置换展开及伴随恒等式可在任意交换环逐项验证；该行列式作为 s 的多项式首一，证明 s 整。",
+        "若 S 是域，对任意非零 r∈R，r⁻¹∈S 整，满足 (r⁻¹)^d+a_(d−1)(r⁻¹)^(d−1)+…+a₀=0。乘 r^(d−1)，得到 r⁻¹=−a_(d−1)−a_(d−2)r−…−a₀r^(d−1)∈R。因此 R 中每个非零元素可逆，是域。$\\square$"
+      ]
+    },
+    {
+      "id": "zariski-lemma",
+      "topics": [
+        "algebra/field-extensions",
+        "geometry/coordinate-rings"
+      ],
+      "title": "Zariski 引理",
+      "statement": "若域 L 同时是 k 上有限生成的交换代数，则 L/k 为有限代数扩张。",
+      "dependencies": [
+        "finite-integral-algebra",
+        "minimal-polynomial",
+        "polynomial-bezout",
+        "def-integral-extension"
+      ],
+      "idea": "若生成元中有超越部分，清除其余代数关系的分母后，会迫使一个明显不是域的局部化成为域。",
+      "steps": [
+        "从有限代数生成元中选最大代数无关子集 t₁,…,t_r，其余记 α₁,…,α_m。每个 α_i 对 F=k(t₁,…,t_r) 代数：否则添入它仍代数无关，与最大性矛盾。令 A=k[t₁,…,t_r]，它是多项式环，F 为其分式域。",
+        "把各 α_i 的首一代数关系的有限个系数分母相乘为非零 f∈A，令 R=A[1/f]。这些 α_i 都对 R 整。因 L 原本等于 k[t₁,…,t_r,α₁,…,α_m] 且是域，包含1/f，所以 L=R[α₁,…,α_m]。前引理迫使 R 是域。",
+        "若 r≥1，R 实际不是域。k[t₁] 中首一不可约多项式有无穷多个：若只有有限个 q_i，非恒定多项式 1+t₁∏q_i 的任一不可约因子都不在其中，因为它模每个 q_i 都等于1；不可约因子的存在由次数归纳。取 f 视作其余变元的多项式的一个非零 k[t₁] 系数，选不可约 q∈k[t₁] 不整除该系数。则 q 不整除 f。",
+        "商 A/(q) 是域 k[t₁]/(q) 上的多项式环，故为整环，所以 q 为素元。若 q 在 R 可逆，则 1/q=g/f^N，某 g∈A，交叉相乘 f^N=qg，与 q 不整除 f 矛盾。因此 R 非域，排除 r≥1。",
+        "故 r=0，全部有限生成元对 k 代数，有限次单扩张的次数乘法给 [L:k]<∞，即有限代数扩张。$\\square$"
+      ]
+    },
+    {
+      "id": "weak-nullstellensatz",
+      "topics": [
+        "geometry/algebraic-varieties-geometry",
+        "geometry/coordinate-rings",
+        "algebra/prime-ideals"
+      ],
+      "title": "弱 Hilbert 零点定理",
+      "statement": "代数闭域 k 上 k[x₁,…,x_n] 的每个极大理想都为 (x₁−a₁,…,x_n−a_n)，某 a∈k^n。因此每个真理想有共同 k 点零点。",
+      "dependencies": [
+        "zariski-lemma",
+        "maximal-prime-quotient",
+        "axiom-zorn"
+      ],
+      "idea": "对极大理想取商，Zariski 引理使其为代数扩张，代数闭性迫使商域就是 k。",
+      "steps": [
+        "设极大理想 m 的商域 L=k[x]/m。常数域 k 单射进入 L（非零常数不可落入真理想），而 L 由各变量的商类有限代数生成。Zariski 引理给有限代数扩张 L/k。代数闭性使每个代数元素的不可约最小多项式次数一，所以 L=k。令 x_i 的像为 a_i∈k。",
+        "每个 x_i−a_i 落入 m，反向对任意多项式 h，逐变量相减或平移变量展开可得 h(x)−h(a)∈(x_i−a_i)。因此求值同态的核恰为这个点理想；m 中元素的求值为零，故 m 就是点理想。",
+        "任意真理想 I 包含于极大理想：所有含 I 的真理想按包含排序，链的并仍真，因为若包含1则某个成员已含1；Zorn 给极大元。于是 I 中多项式都在对应点 a 消失，得到共同零点。$\\square$"
+      ]
+    },
+    {
+      "id": "strong-nullstellensatz",
+      "topics": [
+        "geometry/algebraic-varieties-geometry",
+        "geometry/coordinate-rings",
+        "algebra/prime-ideals"
+      ],
+      "title": "强 Hilbert 零点定理",
+      "statement": "代数闭域 k 上任意理想 I⊆k[x₁,…,x_n] 满足 I(V(I))=√I。因此代数集与根式理想通过 V、I 互为逆序对应。",
+      "dependencies": [
+        "weak-nullstellensatz",
+        "def-integral-extension"
+      ],
+      "idea": "加入新变量和关系1−tf；若 f 在零点集消失，则新理想无零点，只能是整个环。",
+      "steps": [
+        "若 f^m∈I，则对每个 a∈V(I)，f(a)^m=0，域无非零幂零元给 f(a)=0，所以 √I⊆I(V(I))。",
+        "反向取在 V(I) 消失的 f。若 f 是零多项式，已在 √I。否则在 k[x,t] 中取 J=(I,1−tf)。若 J 真，弱零点定理给 (a,b) 使所有 I 中多项式在 a 为零，且1−bf(a)=0；但 f 在 V(I) 消失给 f(a)=0，矛盾。因此1∈J。",
+        "理想生成的定义给有限恒等式1=Σ_jA_j(x,t)h_j(x)+B(x,t)(1−tf(x))，h_j∈I。在分式域中代入 t=1/f，后一项消失。乘以足够高 f^N 清掉各 A_j(x,1/f) 的分母，得到 f^N=Σ_jC_j(x)h_j(x)∈I。若只需N=0则1∈I，此时也有f∈I；故总能选正整数幂，得到 f∈√I。",
+        "两包含给等式。对代数集 X=V(J)，有 V(I(X))=X：一侧因 I(X) 全在 X 消失，另一侧由 J⊆I(X) 得到。对根式理想 I，已证 I(V(I))=I。两运算随包含反向，故给所述对应。$\\square$"
       ]
     },
     {
