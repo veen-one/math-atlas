@@ -12482,6 +12482,78 @@ f,g 在闭方形 Q 邻域全纯，若 ∂Q 上 |g−f|<|f|，则 f 与 g 在 Q �
 
 \end{proof}
 
+\begin{theorem}[二进制前缀码的 Kraft 不等式与逆构造]\label{thm:binary-kraft-prefix}
+
+有限个非负整数码长l₁,…,l\_m可由二进制前缀码实现，当且仅当Σ\_i2\textasciicircum{}(−l\_i)≤1。允许唯一符号取空码字；若多于一个符号，前缀性质排除空码字。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}组合数公式（定理~\ref{thm:binomial-count}）
+
+\par\noindent\textbf{思路：}必要性在共同深度数互不相交的树后代；充分性按长度递增分配二进区间。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 前缀码指任何一个码字都不是另一个的前缀。令L=max l\_i，每个长度l\_i码字在深度L的完全二叉树有2\textasciicircum{}(L−l\_i)个后代；前缀性质使这些后代集合不交，总数不超过2\textasciicircum{}L。除以2\textasciicircum{}L得Kraft不等式。空码字对应根，其后代已占满全树，所以只能用于单符号。
+
+\item 反向将长度升序排列。令s\_i=Σ\_(j<i)2\textasciicircum{}(−l\_j)，由l\_j≤l\_i可知s\_i是2\textasciicircum{}(−l\_i)的整数倍。Kraft条件给s\_i+2\textasciicircum{}(−l\_i)≤1，因此区间[s\_i,s\_i+2\textasciicircum{}(−l\_i))是[0,1)中的二进区间，对应一个长度l\_i二进制字。
+
+\item 这些区间首尾相接、互不相交。若某码字为另一码字前缀，对应二进区间将包含另一区间，与不交矛盾。故所构造的字形成前缀码，且长度正好为所给整数。码长0时只有区间[0,1)，同样适用。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[无损前缀码的熵下界与 Shannon 上界]\label{thm:shannon-prefix-length-bound}
+
+有限源分布p的正概率符号，用二进制前缀码编码时平均长度L满足L≥H₂(p)=−Σp\_i log₂p\_i。并存在前缀码满足H₂(p)≤L<H₂(p)+1。对单符号源可取长度0。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}二进制前缀码的 Kraft 不等式与逆构造（定理~\ref{thm:binary-kraft-prefix}）；有限分布的 Gibbs 不等式（定理~\ref{thm:gibbs-inequality}）
+
+\par\noindent\textbf{思路：}Kraft质量归一化成概率后，平均码长与熵的差分解为非负散度及Kraft余量。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 设码长l\_i，K=Σ2\textasciicircum{}(−l\_i)∈(0,1]，定义q\_i=2\textasciicircum{}(−l\_i)/K。直接代入得 D₂(p‖q)=Σp\_i log₂(p\_i/q\_i)=−H₂(p)+L+log₂K，故 L−H₂(p)=D₂(p‖q)−log₂K≥0。Gibbs不等式用自然对数证明后除以ln2即可，且K≤1保证另一项非负。
+
+\item 上界取l\_i=ceil(−log₂p\_i)。因为2\textasciicircum{}(−l\_i)≤p\_i，总和不超过1，Kraft逆构造给前缀码。又 −log₂p\_i≤l\_i<−log₂p\_i+1，乘p\_i求和得H₂≤L<H₂+1。单符号p=1时l=0，得到空码字。
+
+\item 前缀码可无歧义串接解码：从首位开始读到一个码字就输出符号，前缀性质排除一个合法码字同时是另一个尚未读完的码字。递归处理余下比特即可恢复整个符号串。此下界针对所列前缀码类；不把未经证明的所有唯一可译码的Kraft–McMillan推广混入陈述。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限独立同分布信源的无损块编码定理]\label{thm:iid-source-prefix-theorem}
+
+有限字母表上独立同分布信源熵为H₂(X)。将n个符号作为一块，用二进制前缀码无损编码，其最小平均块码长L\_n满足 nH₂(X)≤L\_n<nH₂(X)+1，因而L\_n/n→H₂(X)。每个满足任意给定ε>0的足够长块码都可达到每符号平均长度小于H₂+ε。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}无损前缀码的熵下界与 Shannon 上界（定理~\ref{thm:shannon-prefix-length-bound}）；相互独立变量的有界函数乘积期望（定理~\ref{thm:independent-bounded-products}）
+
+\par\noindent\textbf{思路：}独立性使块熵可加，对整个有限块字母表应用单次前缀码界即可。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 只保留正概率字母。块x₁,…,x\_n概率为∏p(x\_j)，故−log₂该概率=Σ\_j−log₂p(x\_j)。对有限块字母表求期望并交换有限和，每一项期望都是H₂(X)，所以块熵恰为nH₂(X)。
+
+\item 任意块前缀码由熵下界得平均长度至少nH₂。对块分布用Shannon长度构造，得到一个平均长度严格小于nH₂+1的前缀码。最优平均长度的最小值确实存在：固定一个候选上界C，若某码平均长度≤C，则对每个正概率块w有l(w)≤C/P(w)，每个长度只有有限整数选择，块数也有限；因此这种候选长度表有限，最小值可在其中取到。
+
+\item 于是L\_n介于两界之间，除以n得0≤L\_n/n−H₂<1/n。选择n>1/ε即得可达性。这里是零错误、可变长、按平均长度衡量的独立同分布有限信源定理；它不声称每个源串都能被压缩，也不把平均码长与固定长允许误差的编码率混为同一指标。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[宽平稳协方差的正定性与有限样本周期图]\label{thm:stationary-covariance-positive}
 
 设实离散时间过程(X\_t)\_(t∈Z)二阶宽平稳，Y\_t=X\_t−EX\_t，γ(h)=E[Y\_(t+h)Y\_t]。则γ为实偶函数，|γ(h)|≤γ(0)，且任意复数c\_0,…,c\_(N−1)有Σ\_(j,k)overline(c\_j)c\_k γ(j−k)≥0。非负函数 f\_N(λ)=(2πN)⁻¹E|Σ\_(t=0)\textasciicircum{}(N−1)Y\_t e\textasciicircum{}(−itλ)|² 等于 (2π)⁻¹Σ\_(|h|<N)(1−|h|/N)γ(h)e\textasciicircum{}(−ihλ)。

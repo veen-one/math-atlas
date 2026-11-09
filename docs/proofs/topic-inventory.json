@@ -1,5 +1,5 @@
 {
-  "proofCount": 544,
+  "proofCount": 547,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3604,7 +3604,10 @@
       "proofIds": [
         "log-inequality",
         "gibbs-inequality",
-        "entropy-bound"
+        "entropy-bound",
+        "binary-kraft-prefix",
+        "shannon-prefix-length-bound",
+        "iid-source-prefix-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3637,7 +3640,10 @@
       "subject": "离散数学与计算",
       "branch": "编码与信息论",
       "proofIds": [
-        "entropy-bound"
+        "entropy-bound",
+        "binary-kraft-prefix",
+        "shannon-prefix-length-bound",
+        "iid-source-prefix-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

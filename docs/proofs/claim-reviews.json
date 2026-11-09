@@ -2087,6 +2087,18 @@
         "master-logarithmic-borderline"
       ],
       "note": "Menger点割版要求端点不相邻，边割版无此限制；主定理显式列出三种增长条件及第三种正则条件，并在精确规模b^m上证明。"
+    },
+    {
+      "topic": "discrete/entropy",
+      "field": "intuition",
+      "text": "对有限字母表独立同分布信源，n 个样本的无损二进制前缀块编码平均长度至少为 nH₂(X)，且可小于 nH₂(X)+1；香农信源编码定理因此给出每符号平均码长趋于熵的可达极限。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "binary-kraft-prefix",
+        "shannon-prefix-length-bound",
+        "iid-source-prefix-theorem"
+      ],
+      "note": "有限字母表独立同分布信源、二进制无损前缀块码，以平均长度衡量：nH₂≤L_n<nH₂+1。明确非每个字符串的逐串下界，也非信道可靠通信定理。"
     }
   ]
 }
