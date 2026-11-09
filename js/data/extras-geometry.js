@@ -3,7 +3,7 @@ window.ATLAS = window.ATLAS || {};
 window.ATLAS.extras = window.ATLAS.extras || {};
 
 window.ATLAS.extras['geometry/euclidean-space'] = {
-  insight: '欧氏空间的内积同时给出长度与角度，使几何可以完全代数化；等距变换群刻画了空间的对称性，而所有欧氏几何定理都可以写成内积的恒等式。',
+  insight: '欧氏空间的内积给出向量长度、夹角与正交关系，为许多几何论证提供统一的代数语言；等距变换群则刻画空间的对称性。',
   examples: [
     '$\\mathbb{R}^2$ 中 $(1,2)$ 与 $(4,6)$ 的距离为 $\\sqrt{9+16}=5$，这正是勾股定理。',
     '平行四边形恒等式 $\\|x+y\\|^2+\\|x-y\\|^2=2\\|x\\|^2+2\\|y\\|^2$ 刻画了内积与范数的关系。'

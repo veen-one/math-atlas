@@ -2578,6 +2578,26 @@
         "prime-number-theorem-proof"
       ],
       "note": "本卷分别证明 c x/log x≤π(x)≤C x/log x 的 Chebyshev 界，以及由 θ(x)∼x 推出精确渐近的素数定理；Chebyshev 界本身弱于素数定理，并在解析证明链中提供 θ 的上界。"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "example",
+      "text": "$\\mathbb{R}^2$ 中两点 $(1, 2)$ 与 $(4, 6)$ 的距离为 $\\sqrt{9 + 16} = 5$；这正是勾股定理的应用。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pythagorean-theorem"
+      ],
+      "note": "坐标差向量为 (3,4)，欧氏距离平方为 3²+4²；面积拼合法已独立证明直角三角形斜边平方等于两直角边平方之和。"
+    },
+    {
+      "topic": "geometry/euclidean-space",
+      "field": "extraExamples",
+      "text": "$\\mathbb{R}^2$ 中 $(1,2)$ 与 $(4,6)$ 的距离为 $\\sqrt{9+16}=5$，这正是勾股定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pythagorean-theorem"
+      ],
+      "note": "坐标差向量为 (3,4)，距离平方为 3²+4²；由面积拼合法证明的勾股定理得到距离 5。"
     }
   ]
 }
