@@ -2255,6 +2255,26 @@
         "carmichael-561"
       ],
       "note": "必要条件仅对 p 素且 a 不被 p 整除成立；561=3·11·17 是合数，却对每个与 561 互素的底数都满足 a^560≡1 (mod 561)，由费马小定理及中国剩余定理证明。"
+    },
+    {
+      "topic": "analysis/integration-calculus",
+      "field": "definition",
+      "text": "微积分第二基本定理：若 $f$ 在 $[a,b]$ 连续，$F$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $F' = f$，则 $\\int_a^b f(x)\\,dx = F(b) - F(a)$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-second"
+      ],
+      "note": "假设与本卷命题逐项一致；由第一基本定理构造变上限积分，再用导数为零的函数在区间上为常数。"
+    },
+    {
+      "topic": "analysis/odes",
+      "field": "definition",
+      "text": "Picard–Lindelöf 定理（标量局部版）：若 $f$ 在 $(t_0,y_0)$ 的一个闭矩形邻域连续，且存在 $L\\ge0$ 使矩形内 $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$，则初值问题 $y'=f(t,y)$、$y(t_0)=y_0$ 有定义在 $t_0$ 附近的唯一 $C^1$ 解；唯一性指解留在该矩形时成立。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "picard-lindelof"
+      ],
+      "note": "对应已收录的标量 Picard–Lindelöf 证明：闭矩形上的连续性与统一 y-Lipschitz 常数保证短时间积分算子自映且压缩；结论只要求局部解，并将唯一性范围明确限在该矩形内。"
     }
   ]
 }

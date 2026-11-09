@@ -177,7 +177,7 @@ window.ATLAS.subjects.analysis.branches.push(
         keywords: ['ODE', '存在唯一性', '线性方程', '积分因子'],
         definition: [
           '**常微分方程**含未知函数及其导数：$F(x, y, y\', \\dots, y^{(n)}) = 0$。阶数为最高导数的阶。',
-          'Picard–Lindelöf 定理：若 $f(t, y)$ 连续且对 $y$ 满足 Lipschitz 条件，则初值问题 $y\' = f(t, y)$，$y(t_0) = y_0$ 在局部有唯一解。'
+          'Picard–Lindelöf 定理（标量局部版）：若 $f$ 在 $(t_0,y_0)$ 的一个闭矩形邻域连续，且存在 $L\\ge0$ 使矩形内 $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$，则初值问题 $y\'=f(t,y)$、$y(t_0)=y_0$ 有定义在 $t_0$ 附近的唯一 $C^1$ 解；唯一性指解留在该矩形时成立。'
         ],
         intuition: [
           'ODE 描述“变化率决定未来”：$y\' = ky$ 表示增长率与当前量成正比，解为指数增长。',
