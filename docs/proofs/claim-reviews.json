@@ -2526,6 +2526,58 @@
         "prime-number-theorem-proof"
       ],
       "note": "此处短标题所指完整结论为 π(x)∼x/log x（x→∞）；教材命题明确给出计数函数定义并由 θ(x)∼x 的证明链推出，不把切比雪夫界误当成素数定理。"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "definition",
+      "text": "**素数定理**：$\\pi(x) \\sim x/\\log x$（当 $x \\to \\infty$）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "证明的命题直接取 π(x)=#{p≤x}，并推出 π(x)log(x)/x→1；条件与页面定义一致。"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "intuition",
+      "text": "素数定理给出素数分布的“宏观规律”：随机选一个大小为 $x$ 的数，它是素数的概率约为 $1/\\log x$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "精确解释为从整数 {1,…,⌊x⌋} 均匀抽样时概率 π(⌊x⌋)/⌊x⌋∼1/log x；原句是渐近近似，不是独立随机模型假设。"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "extraInsight",
+      "text": "素数定理等价于 $\\psi(x)\\sim x$；证明的关键是证明 $\\zeta(s)$ 在 $\\operatorname{Re}s=1$ 上无零点。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pnt-psi-equivalence",
+        "theta-asymptotic-prime-theorem"
+      ],
+      "note": "本卷展开 ψ、θ、π 三种渐近形式的等价；使用 Newman Tauberian 链，而其前置部分证明 ζ(s) 在 Re(s)=1 上无零点。将“关键”理解为本卷所采用证明路线的依赖，不宣称这是所有证明路线唯一关键。"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "extraExamples",
+      "text": "素数定理的等价形式：$\\lim_{x\\to\\infty}\\frac{\\pi(x)\\log x}{x}=1$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "按渐近等价定义，π(x)∼x/log x 等价于该比值趋于 1；本卷最后一步明确得到此极限。"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "extraInsight",
+      "text": "切比雪夫界给出初等的上下界，为素数定理的证明铺路。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "chebyshev-two-sided-primes",
+        "prime-number-theorem-proof"
+      ],
+      "note": "本卷分别证明 c x/log x≤π(x)≤C x/log x 的 Chebyshev 界，以及由 θ(x)∼x 推出精确渐近的素数定理；Chebyshev 界本身弱于素数定理，并在解析证明链中提供 θ 的上界。"
     }
   ]
 }
