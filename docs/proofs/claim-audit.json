@@ -3353,13 +3353,13 @@
     {
       "topic": "probability/large-deviations",
       "field": "definition",
-      "text": "Cramér 定理给出独立同分布情形下速率函数为 Legendre 变换 $I(a) = \\sup_t (ta - \\log \\mathbb{E}[e^{tX}])$。",
+      "text": "Cramér 定理在独立同分布且矩母函数在零的某邻域有限时，给出样本均值的大偏差原理，其速率函数为 Legendre 变换 $I(a) = \\sup_t (ta - \\log \\mathbb{E}[e^{tX}])$。",
       "status": "needs-statement-review"
     },
     {
       "topic": "probability/large-deviations",
       "field": "intuition",
-      "text": "大数定律说样本均值趋于期望，大偏差理论进一步问“偏离期望那么多的概率有多小”——答案是指数小。",
+      "text": "大数定律说样本均值趋于期望，大偏差理论进一步问“偏离期望那么多的概率有多小”——在有界变量等满足相应指数矩条件的模型中，固定偏离可有正的指数衰减速率；仅可积的重尾变量未必如此。",
       "status": "needs-statement-review"
     },
     {

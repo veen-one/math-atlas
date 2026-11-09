@@ -1,5 +1,5 @@
 {
-  "proofCount": 506,
+  "proofCount": 509,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3624,6 +3624,7 @@
       "subject": "概率与统计",
       "branch": "概率基础",
       "proofIds": [
+        "bernoulli-cramer-rate",
         "compact-interval-quantile",
         "compact-interval-measure-subsequence",
         "lotus",
@@ -3753,6 +3754,9 @@
       "branch": "极限定理",
       "proofIds": [
         "markov",
+        "bounded-exponential-tilt",
+        "cramer-bounded-full",
+        "bernoulli-cramer-rate",
         "borel-cantelli-first"
       ],
       "coverage": "partial",
