@@ -199,7 +199,7 @@ window.ATLAS.subjects.discrete = {
             },
             {
               tex: '\\sum_{v \\in V} \\deg(v) = 2|E|',
-              caption: '握手引理：度数之和等于边数的两倍。'
+              caption: '有限无向多重图握手引理；自环按两个端部计度。'
             }
           ],
           example: [

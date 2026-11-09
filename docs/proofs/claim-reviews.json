@@ -1310,12 +1310,12 @@
     {
       "topic": "discrete/graphs-networks",
       "field": "formulaCaptions",
-      "text": "握手引理：度数之和等于边数的两倍。",
+      "text": "有限无向多重图握手引理；自环按两个端部计度。",
       "status": "reviewed-with-proof",
       "proofIds": [
         "handshake"
       ],
-      "note": "有限无向图，自环对度数计两次。"
+      "note": "定理明确规定有限无向多重图、平行边分别计数、自环按两个不同端部计度；证明双计数端部关联。"
     },
     {
       "topic": "discrete/graphs-networks",
@@ -1325,7 +1325,7 @@
       "proofIds": [
         "handshake"
       ],
-      "note": "有限无向图，自环对度数计两次。"
+      "note": "有限无向多重图；明确以两个不同端部定义度数，所以自环计度 2，平行边分别计数。"
     },
     {
       "topic": "discrete/matchings-coloring",
