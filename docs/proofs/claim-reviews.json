@@ -2214,6 +2214,16 @@
         "weighted-residue-theorem"
       ],
       "note": "对应公式显式含 Ind(γ,a_k)，其严谨假设与陈述见同主题定义，并由绕数形式留数定理证明。"
+    },
+    {
+      "topic": "numbertheory/pythagorean-triples",
+      "field": "formulaCaptions",
+      "text": "勾股定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pythagorean-theorem"
+      ],
+      "note": "教材给出四个全等直角三角形的面积拼合法；基础只用矩形/直角三角形面积、全等不变性和有限可加性。整数勾股数参数化是另一个独立命题。"
     }
   ]
 }

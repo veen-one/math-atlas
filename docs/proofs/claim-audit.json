@@ -1690,7 +1690,11 @@
       "topic": "numbertheory/pythagorean-triples",
       "field": "formulaCaptions",
       "text": "勾股定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "pythagorean-theorem"
+      ],
+      "note": "教材给出四个全等直角三角形的面积拼合法；基础只用矩形/直角三角形面积、全等不变性和有限可加性。整数勾股数参数化是另一个独立命题。"
     },
     {
       "topic": "numbertheory/prime-counting",

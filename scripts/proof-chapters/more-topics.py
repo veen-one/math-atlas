@@ -1,6 +1,7 @@
 """Further self-contained core results for previously uncovered atlas topics."""
 def register(P, BASES):
     BASES['def-jordan-separation']=dict(title='平面简单闭曲线分隔事实',statement='本章在多面体欧拉公式的组合证明中使用 Jordan 曲线定理的球面形式：球面上的简单闭曲线补集有两个连通分支，曲线的两侧分别邻接不同分支。该拓扑定理在此作为明确基础；本卷不以组合论推导它。')
+    BASES['def-euclidean-area']=dict(title='欧氏多边形面积的基本性质',statement='本条只用于有限直边图形：正方形边长 s 的面积为 s²；直角三角形两直角边长 a,b 的面积为 ab/2（将其复制一次拼成 a×b 矩形）；全等图形面积相同，有限个内部不交多边形拼成的图形面积等于各面积之和。')
     BASES['def-finite-markov']=dict(title='有限马尔可夫链约定',statement='状态空间 S 有限，转移矩阵 P 的元素非负且每行和为一；分布写作行向量，演化为 μ↦μP。不可约指任意状态可经有限步以正概率到达任意另一状态。')
     BASES['def-linear-control']=dict(title='有限维线性离散控制系统',statement='系统 x_(k+1)=Ax_k+Bu_k，状态 x_k∈R^n、输入 u_k∈R^m；可控指任意初态能在有限步由某输入序列送达任意目标态。')
     P('propositional-completeness','foundations/propositional-logic foundations/soundness-completeness','命题逻辑的真值表完备性',r'在经典命题演算中，一个命题公式若在所有赋值下为真，则可由重言式公理及 modus ponens 证明。','axiom-logic fol-deduction','对变元逐个分支；演绎定理把两个分支合并。',
@@ -15,6 +16,10 @@ def register(P, BASES):
       r'从零状态出发，经过 N 步有 x_N=Σ_(j=0)^(N-1)A^(N-1-j)Bu_j。因此所有可达状态恰为列空间 span{im B,…,im A^(N-1)B}：任意输入给此空间内向量，反向任意列组合可把系数选作输入。',
       r'设 W=span{im B,…,im A^(n-1)B}。Cayley–Hamilton 写 A^n 为 I,A,…,A^(n-1) 的线性组合，故 A^nB 的列仍在 W；递推左乘 A 说明所有更高次 A^kB 列也在 W。于是任意步数可达集合都包含于 W。',
       r'若秩为 n，则 W=R^n，选至多 n 步输入即可实现任意目标（多余输入取零）。若秩小于 n，则 W 是真子空间，任意步的零态可达状态均在 W，不能到达 W 外目标，系统不可控。一般初态与目标之差还含 A^N x_0，但可控的定义要求任意有限时长可选；满秩矩阵给出 n 步可达性，反之零初态已足以否定。$\square$')
+    P('pythagorean-theorem','numbertheory/pythagorean-triples','勾股定理（面积拼合法）',r'欧氏平面中，直角三角形两直角边长为 a,b，斜边长为 c，则 a²+b²=c²。','def-euclidean-area','把四个全等直角三角形放进边长 a+b 的大正方形；中间留下边长 c 的小正方形，比较面积。',
+      r'设直角三角形两个锐角为 α、β。因三角形内角和为 180° 且另一个角为 90°，有 α+β=90°。取四个该三角形的全等副本，分别置于一个大正方形四角，使每个直角顶点落在大正方形顶点，两条直角边分别沿大正方形相邻边放置；邻接副本取镜像方向，使较长边 a 与较短边 b 沿边界依次首尾相接。每条大正方形边由长度 a 和 b 两段组成，故其边长为 a+b。',
+      r'四条斜边围成中间四边形，每条边长都是 c。考察其中一个顶点：它位于大正方形的一条直边上，左右两个相邻直角三角形分别在此贡献锐角 α 与 β；中间四边形的内角与这两个角组成平角，因而等于 180°−(α+β)=90°。四个内角均为直角，所以中间四边形为正方形，边长 c、面积 c²。',
+      r'按有限可加性，大正方形的面积等于中间小正方形与四个三角形面积之和。因此 (a+b)²=c²+4(ab/2)=c²+2ab。展开左边并消去 2ab，得到 a²+b²=c²。证明只使用直角三角形面积、全等不变性和有限面积可加性，没有把勾股定理本身作为前提。$\square$')
     P('pythagorean-parametrization','numbertheory/pythagorean-triples','本原勾股数的参数化',r'正整数本原解 a²+b²=c²（gcd(a,b,c)=1）恰可写成 {a,b}={m²−n²,2mn}、c=m²+n²，其中 m>n>0、gcd(m,n)=1 且 m,n 奇偶性相反。', 'euclid-lemma unique-factorization','奇偶性与互素性迫使两个平方和因子互素，其乘积为平方便各自为平方。',
       r'a,b 不可能都奇：平方模 4 只能为 0 或 1，两个奇平方和为 2 而平方模 4 不为 2。也不可能都偶（本原），故一奇一偶。设奇数边为 a，偶数边为 b。由 c²−a²=b² 得 ((c+a)/2)((c−a)/2)=(b/2)²。两因子为正整数且互素：公共奇因子会同时整除 c,a，公共偶因子则与 c,a 同奇矛盾。',
       r'互素正整数乘积为平方，唯一素因子分解表明每个素数在两因子中的指数分别为偶数，故因子各为平方：令 (c+a)/2=m²、(c−a)/2=n²，m>n。于是 a=m²−n²、c=m²+n²、b=2mn。gcd(m,n)=1，否则其平方公因子整除 a,b,c；二者不能同奇，否则 a,b,c 全偶。因此异奇偶。',

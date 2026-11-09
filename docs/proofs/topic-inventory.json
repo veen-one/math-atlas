@@ -1,5 +1,5 @@
 {
-  "proofCount": 559,
+  "proofCount": 560,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1744,6 +1744,7 @@
       "subject": "数论",
       "branch": "初等数论",
       "proofIds": [
+        "pythagorean-theorem",
         "pythagorean-parametrization"
       ],
       "coverage": "partial",
