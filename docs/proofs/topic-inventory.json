@@ -1,5 +1,5 @@
 {
-  "proofCount": 581,
+  "proofCount": 582,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3848,6 +3848,7 @@
       "proofIds": [
         "chebyshev",
         "weak-law",
+        "almost-sure-implies-in-probability",
         "as-to-probability",
         "probability-subsequence"
       ],
@@ -3860,6 +3861,7 @@
       "subject": "概率与统计",
       "branch": "极限定理",
       "proofIds": [
+        "almost-sure-implies-in-probability",
         "measure-continuity-above",
         "borel-cantelli-first",
         "as-to-probability",

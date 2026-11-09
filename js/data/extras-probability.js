@@ -19,7 +19,7 @@ window.ATLAS.extras['probability/random-variables'] = {
 };
 
 window.ATLAS.extras['probability/distributions'] = {
-  insight: '不同分布对应不同随机机制；正态分布是中心极限定理的极限，因此无处不在。',
+  insight: '不同分布刻画不同随机机制；在独立同分布且均值有限、方差有限非零的条件下，中心极限定理说明标准化和趋于 $N(0,1)$，为正态近似的常见性提供一个基本来源。',
   examples: [
     '抛 $10$ 次公平硬币，正面次数 $X\\sim B(10,0.5)$，$P(X=5)\\approx0.246$。',
     '单位时间事件数常用泊松分布 $\\mathrm{Poisson}(\\lambda)$。'

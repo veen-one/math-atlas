@@ -3422,14 +3422,32 @@
     {
       "topic": "probability/distributions",
       "field": "definition",
-      "text": "正态分布 $N(\\mu, \\sigma^2)$ 的密度为 $\\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-(x-\\mu)^2/(2\\sigma^2)}$，是中心极限定理的极限分布。",
-      "status": "needs-statement-review"
+      "text": "Gaussian 积分定理给出正态密度的归一化常数：对 $\\mu\\in\\mathbb R$、$\\sigma>0$，正态分布 $N(\\mu,\\sigma^2)$ 的密度为 $\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-(x-\\mu)^2/(2\\sigma^2)}$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "gaussian-integral"
+      ],
+      "note": "参数明确限制 σ>0；Gaussian 积分证明归一化常数 √(2π)，平移和缩放给出一般 μ、σ 密度。"
+    },
+    {
+      "topic": "probability/distributions",
+      "field": "definition",
+      "text": "中心极限定理说明，独立同分布且均值有限、方差有限非零时，标准化和依分布趋于 $N(0,1)$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "假设与本卷 i.i.d. 有限非零方差中心极限定理逐项一致；极限对象是标准正态。"
     },
     {
       "topic": "probability/distributions",
       "field": "extraInsight",
-      "text": "不同分布对应不同随机机制；正态分布是中心极限定理的极限，因此无处不在。",
-      "status": "needs-statement-review"
+      "text": "不同分布刻画不同随机机制；在独立同分布且均值有限、方差有限非零的条件下，中心极限定理说明标准化和趋于 $N(0,1)$，为正态近似的常见性提供一个基本来源。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "中心极限定理的例子已限定为独立同分布、有限非零方差；不将此极限误写成对任意分布均成立。"
     },
     {
       "topic": "probability/stopping-times",
@@ -3644,19 +3662,34 @@
       "topic": "probability/convergence-in-probability",
       "field": "example",
       "text": "大数定律中的 $\\bar X_n \\xrightarrow{P} \\mu$ 是依概率收敛；中心极限定理中的标准化和是依分布收敛。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "almost-sure-implies-in-probability",
+        "iid-central-limit"
+      ],
+      "note": "可积 i.i.d. 强大数定律给几乎必然收敛，再由单独证明的蕴含定理得到依概率收敛；有限非零方差 i.i.d. 中心极限定理给标准化和依分布收敛。"
     },
     {
       "topic": "probability/convergence-in-probability",
       "field": "extraExamples",
       "text": "大数定律中的 $\\bar X_n\\to\\mu$ 是依概率收敛。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "almost-sure-implies-in-probability"
+      ],
+      "note": "强大数定律先给几乎必然收敛，再由指标函数与控制收敛证明的蕴含定理推出依概率收敛。"
     },
     {
       "topic": "probability/convergence-in-probability",
       "field": "extraExamples",
       "text": "中心极限定理中的标准化和是依分布收敛。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-central-limit"
+      ],
+      "note": "对应的标准化和及独立同分布、有限非零方差假设见完整中心极限定理证明。"
     },
     {
       "topic": "probability/almost-sure-convergence",
@@ -3672,7 +3705,12 @@
       "topic": "probability/almost-sure-convergence",
       "field": "intuition",
       "text": "强大数定律是几乎处处收敛的经典例子；比依概率收敛更强。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law",
+        "almost-sure-implies-in-probability"
+      ],
+      "note": "可积 i.i.d. 强大数定律给出经典例子；几乎必然蕴含依概率的独立证明说明其收敛模式强于依概率收敛。"
     },
     {
       "topic": "probability/almost-sure-convergence",
@@ -3698,7 +3736,11 @@
       "topic": "probability/almost-sure-convergence",
       "field": "extraExamples",
       "text": "强大数定律是几乎处处收敛。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "iid-integrable-strong-law"
+      ],
+      "note": "独立同分布可积变量的强大数定律已证明，无需有限方差。"
     },
     {
       "topic": "probability/large-deviations",
