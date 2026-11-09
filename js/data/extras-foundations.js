@@ -115,7 +115,7 @@ window.ATLAS.extras['foundations/sequent-calculus'] = {
 };
 
 window.ATLAS.extras['foundations/cut-elimination'] = {
-  insight: '切消定理说明证明中的“引理”总可以被消除，得到的无切证明具有子公式性质。这是证明分析与一致性证明的核心工具，也是自动证明中搜索空间有界的原因。',
+  insight: '命题 LK 的切消定理说明 cut 引理可消去；本卷的构造还证明无切推导具有子公式性质，即其中每个公式都是结论相继式公式的子公式。',
   examples: [
     'Gentzen 结合切消与超限归纳证明了 PA 的相容性。',
     '子公式性质推出直觉主义逻辑的析取性质：若 $\\vdash A\\lor B$，则 $\\vdash A$ 或 $\\vdash B$。'

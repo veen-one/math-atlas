@@ -485,11 +485,12 @@ def register(P, BASES):
       r'稳定子 H={t∈R:Φ_t(p)=p} 是闭加法子群。由轨道局部单射，0 在 H 中孤立，故 H 离散。若 H={0}，φ 既满又单，且为局部微分同胚，因而是开连续双射，其逆连续，给出 R 与紧致 M 的同胚，矛盾。故 H 非零。',
       r'令 T 为 H 中最小正元素：离散性给 H 与 0 的正距离；闭性使正元素下确界仍在 H。对任意 h∈H 作整数除法 h=nT+r、0≤r<T；r∈H，最小性迫使 r=0。因此 H=T Z。流映射诱导双射局部微分同胚 R/(TZ)→M；商圆周紧致、M Hausdorff，双射连续映射为同胚，局部光滑逆使之为微分同胚。R/(TZ) 显然微分同胚于 S¹。$\square$')
     BASES['def-propositional-lk']=dict(title='经典命题 LK 演算',statement='公式用原子、¬、∧、∨生成；相继式 Γ⇒Δ 的语义为“Γ 全真蕴含 Δ 至少一项为真”。初始式 A⇒A，允许左右弱化与交换；¬、∧、∨ 规则分别为通常的经典相继式规则，例如 ∧L 从 Γ,A,B⇒Δ 得 Γ,A∧B⇒Δ，∧R 从 Γ⇒Δ,A 与 Γ⇒Δ,B 得 Γ⇒Δ,A∧B，∨L 对 A、B 分两前提，∨R 把 A、B 同置右侧。LK 还可加入 cut 规则 Γ⇒Δ,A 与 Γ,A⇒Δ 得 Γ⇒Δ。')
-    P('propositional-cut-elimination','foundations/cut-elimination foundations/sequent-calculus','命题 LK 的 cut 消去',r'经典命题 LK 中，若有限相继式 Γ⇒Δ 可由含 cut 的证明推出，则它也有不含 cut 的证明。此处结论限于命题逻辑；不含量词。','def-propositional-lk sequent-calculus-soundness','可靠性给语义有效；按公式复杂度作可逆真值分解，构造 cut-free 证明。',
+    P('propositional-cut-elimination','foundations/cut-elimination foundations/sequent-calculus','命题 LK 的 cut 消去与子公式性质',r'经典命题 LK 中，若有限相继式 Γ⇒Δ 可由含 cut 的证明推出，则它也有不含 cut 的证明；并且可选取一个无 cut 证明，使其中每个公式都是 Γ 或 Δ 中某公式的子公式。此处结论限于命题逻辑；不含量词。','def-propositional-lk sequent-calculus-soundness','可靠性给语义有效；按公式复杂度作可逆真值分解，构造 cut-free 证明，并逐层追踪公式只来自结论的子公式。',
       r'先证 cut-free 完备性。对有效相继式 Γ⇒Δ 的所有公式复杂度总和作归纳。若某原子 A 同时出现在 Γ 与 Δ，则 A⇒A 是初始式，逐次左右弱化其余公式即得 cut-free 证明。',
       r'若左侧含 ¬A，语义有效性等价于 Γ⇒Δ,A 有效；其公式复杂度严格下降，归纳得该前提的 cut-free 证明，再用 ¬L 得原式。若右侧含 ¬A，同理化为 Γ,A⇒Δ 并用 ¬R。左侧含 A∧B 时化为 Γ,A,B⇒Δ 并用 ∧L；右侧含 A∨B 时化为 Γ⇒Δ,A,B 并用 ∨R。每种转化均由相应真值条件直接验证，且前提复杂度下降。',
       r'左侧含 A∨B 时，有效性分别保证 Γ,A⇒Δ 与 Γ,B⇒Δ 有效；对两者用归纳假设，再以 ∨L 合并。右侧含 A∧B 时同理分别得到 Γ⇒Δ,A 与 Γ⇒Δ,B，再用 ∧R。有限公式总复杂度使此分解过程终止；若无复合公式，公式全为原子，有效性必迫使某原子同时出现于左右两侧，已属初始情形。故每个语义有效命题相继式均有 cut-free 推导。',
-      r'现设原相继式在含 cut 的 LK 中可证。由此前的 LK 可靠性，它语义有效；由刚证的命题 cut-free 完备性，它有不含 cut 的推导。这证明 cut 消去。该论证只覆盖有限命题联结词；一阶量词规则还涉及特征变量、替换与量词切消，不能把本证明直接当作一阶 Gentzen 切消定理。$\square$')
+      r'现设原相继式在含 cut 的 LK 中可证。由此前的 LK 可靠性，它语义有效；由刚证的命题 cut-free 完备性，它有不含 cut 的推导。这证明 cut 消去。',
+      r'同一构造还给出子公式性质：起始的原子初始式只含结论左右侧已有原子；归纳步骤只把当前复合公式换成它的直接子公式，再递归处理所得相继式。左右规则随后把这些子公式合回；弱化只加入当前相继式已有的上下文公式。故整棵推导中不会出现非结论公式的公式。该论证只覆盖有限命题联结词；一阶量词规则还涉及特征变量、替换与量词切消，不能把本证明直接当作一阶 Gentzen 切消定理。$\square$')
     BASES['def-effective-arithmetic-coding']=dict(title='算术证明系统的有效编码假设',statement='固定一套可有效判定的有限字符串公式/证明编码，编号记作 ⌜·⌝。替换函数 Sub(e,n) 在 e 是单自由变量公式编码时返回把变量替换为数字 n 后的句子编码。Proof_T(p,n) 表示 p 编码一份 T 中句子编号 n 的有限证明；Prov_T(n):=∃p Proof_T(p,n)。本条 Gödel 论证明确假设 T 能证明其所用每个具体闭项 Sub(k,k) 的正确数值计算，并能在标准自然数结构中正确解释 Proof_T；不在此假装已证明 Robinson Q 对所有原始递归关系的表示定理。')
     P('arithmetical-diagonal-lemma','foundations/godel-first','算术对角引理（闭项编码假设版）',r'对任意单自由变量算术公式 ψ(x)，若 T 能验证具体替换计算，则存在句子 G 及其编号 g，使 T⊢G↔ψ(\bar g)。','def-effective-arithmetic-coding syntax-parse-substitute','把公式的 Gödel 编码代入自身替换函数，构造其不动点句。',
       r'定义 θ(y)=ψ(Sub(y,y))，令 k=⌜θ⌝，并令 G=θ(\bar k)。按替换编码定义，G 的编号 g 正是 Sub(k,k)。',

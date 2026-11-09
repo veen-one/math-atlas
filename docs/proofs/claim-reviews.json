@@ -2800,6 +2800,36 @@
         "banach-contraction"
       ],
       "note": "二分法证明给出连续函数异号区间上的根存在及每步误差界；Banach 压缩映射定理证明完备度量空间上的迭代收敛与唯一不动点。"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "intuition",
+      "text": "命题 LK 切消定理保证含 cut 的可证相继式也有无 cut 证明；本卷的证明还给出子公式性质。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "propositional-cut-elimination"
+      ],
+      "note": "范围严格限于经典纯命题 LK；无 cut 推导存在性及此构造的子公式性质已在同一命题证明中展开，不外推到一阶量词规则。"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "intuition",
+      "text": "命题 LK 切消定理给出的子公式性质限制无 cut 推导中出现的公式形状，可帮助分析自动证明搜索；本卷证明的范围不含一阶量词。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "propositional-cut-elimination"
+      ],
+      "note": "所证构造只从结论公式向子公式递归分解，因此每个推导公式都是结论公式的子公式；证明不含量词。"
+    },
+    {
+      "topic": "foundations/cut-elimination",
+      "field": "extraInsight",
+      "text": "命题 LK 的切消定理说明 cut 引理可消去；本卷的构造还证明无切推导具有子公式性质，即其中每个公式都是结论相继式公式的子公式。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "propositional-cut-elimination"
+      ],
+      "note": "这里的“切消”及子公式结论均限于经典命题 LK，避免把本卷命题演算证明误写成一阶逻辑 Gentzen 定理。"
     }
   ]
 }
