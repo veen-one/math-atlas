@@ -2393,19 +2393,34 @@
       "topic": "geometry/connectedness",
       "field": "intuition",
       "text": "这就是介值定理的拓扑本质。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "continuous-connected",
+        "intermediate-value"
+      ],
+      "note": "连续像保持连通已由原像分离证明；将其用于区间及 R 中连通集的区间性质即可解释介值结论，本卷另有上确界版介值定理证明。"
     },
     {
       "topic": "geometry/connectedness",
       "field": "formulaCaptions",
       "text": "连通性在连续映射下保持（介值定理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "continuous-connected",
+        "intermediate-value"
+      ],
+      "note": "前一命题由分离集原像证明连续像连通；后一命题单独用上确界论证实数区间的介值性质。"
     },
     {
       "topic": "geometry/connectedness",
       "field": "extraInsight",
       "text": "连通性刻画空间“不能被分成两块”；连续映射保持连通性，介值定理正是连通性的拓扑表述。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "continuous-connected",
+        "intermediate-value"
+      ],
+      "note": "前半句是连通定义；连续像命题及实值区间介值命题均有独立证明。"
     },
     {
       "topic": "geometry/compactness",
