@@ -2495,6 +2495,27 @@
         "convolution-l1-cycles"
       ],
       "note": "把 LTI 的输入输出卷积关系明确作为系统模型假设；本卷证明该卷积的 Fourier 变换为乘积。"
+    },
+    {
+      "topic": "analysis/banach-spaces",
+      "field": "extraExamples",
+      "text": "压缩映射原理证明 ODE 解存在唯一：把积分方程 $y(t)=y_0+\\int_0^t f(s,y(s))\\,ds$ 看作 $C[0,T]$ 上的压缩映射，得到 Picard–Lindelöf 定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "banach-contraction",
+        "picard-lindelof"
+      ],
+      "note": "本卷的 Picard–Lindelöf 命题给出标量初值问题、矩形连续性及统一 Lipschitz 条件，并用连续函数空间上的压缩映射定理证明局部存在唯一；这里的 C[0,T] 需取足够短的闭时间区间。"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "extraInsight",
+      "text": "正交投影定理保证闭子空间有唯一最佳逼近，这是最小二乘法与量子测量的几何基础。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "projection-closed-subspace"
+      ],
+      "note": "本卷的详细最小化序列证明明确写在实 Hilbert 空间；唯一最佳逼近与正交余量均已推出。复 Hilbert 版本只在此作概念联系，不声称本条已展开其复内积细节。"
     }
   ]
 }
