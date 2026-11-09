@@ -62,7 +62,7 @@ window.ATLAS.extras['discrete/paths-connectivity'] = {
   insight: '路径与连通性描述网络可达性；Menger 定理把“路径数量”与“最小割”联系起来。',
   examples: [
     '删除割点会使连通分量增加。',
-    'Menger 定理：两点间最大不相交路径数等于最小割的大小。'
+    '有限图的 Menger 定理：边不交路径数对应最小边割；不相邻两端点的内部顶点不交路径数对应最小内部点割。'
   ]
 };
 
@@ -163,7 +163,7 @@ window.ATLAS.extras['discrete/greedy-algorithms'] = {
 };
 
 window.ATLAS.extras['discrete/divide-conquer'] = {
-  insight: '分治把问题拆成独立子问题、递归求解后合并；主定理给出递推复杂度。',
+  insight: '分治把问题拆成独立子问题、递归求解后合并；满足相应增长及正则条件时，主定理给出递推复杂度。',
   examples: [
     '归并排序把数组分成两半，排序后合并，复杂度 $O(n\\log n)$。',
     'FFT 用分治把傅里叶变换降到 $O(n\\log n)$。'

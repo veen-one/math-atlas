@@ -7160,6 +7160,82 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 
 \end{proof}
 
+\begin{theorem}[主定理的三种一般情形及正则条件]\label{thm:master-theorem-three-cases}
+
+设b>1、a≥1，n只取b\textasciicircum{}m，T(1)>0，T(n)=aT(n/b)+f(n)，f非负，α=log\_ba。(1)若f(n)=O(n\textasciicircum{}(α−ε))，ε>0，则T=Θ(n\textasciicircum{}α)；(2)若f=Θ(n\textasciicircum{}α)，则T=Θ(n\textasciicircum{}α log n)；(3)若f(n)=Ω(n\textasciicircum{}(α+ε))且存在c<1使a f(n/b)≤c f(n)最终成立，则T=Θ(f(n))。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}幂次代价的主定理（定理~\ref{thm:master-polynomial}）
+
+\par\noindent\textbf{思路：}归一化为T(b\textasciicircum{}m)/a\textasciicircum{}m后逐层求和；第三种情形的正则条件保证各层代价几何下降。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令t\_m=T(b\textasciicircum{}m)、f\_m=f(b\textasciicircum{}m)，递推逐次展开给 t\_m=a\textasciicircum{}mT(1)+Σ\_(j=1)\textasciicircum{}m a\textasciicircum{}(m−j)f\_j。于是 t\_m/a\textasciicircum{}m=T(1)+Σ\_(j=1)\textasciicircum{}m f\_j/a\textasciicircum{}j。这是后面三种估计共同的精确恒等式，所有项非负。
+
+\item 第一种情形，对充分大j有f\_j/a\textasciicircum{}j≤C b\textasciicircum{}(−εj)。几何级数收敛，加上有限个初始项，归一化和统一有界；下界T(1)>0给t\_m≥a\textasciicircum{}mT(1)，故Θ(a\textasciicircum{}m)=Θ(n\textasciicircum{}α)。
+
+\item 第二种情形，充分大j的f\_j/a\textasciicircum{}j被两个严格正常数夹住。因此归一化和为Θ(m)，得到t\_m=Θ(a\textasciicircum{}m m)=Θ(n\textasciicircum{}α log n)。有限初始层不改渐近阶。
+
+\item 第三种情形，选j₀使a f\_(j−1)≤c f\_j对j≥j₀成立。对j₀≤j≤m，反复使用该式得 a\textasciicircum{}(m−j)f\_j≤c\textasciicircum{}(m−j)f\_m。故这些层之和≤f\_m/(1−c)。前面有限层及叶代价合计O(a\textasciicircum{}m)，而增长假设f\_m≥C a\textasciicircum{}m b\textasciicircum{}(εm)最终成立，使O(a\textasciicircum{}m)=O(f\_m)。所以t\_m=O(f\_m)，根层自身给t\_m≥f\_m，得到Θ(f\_m)。
+
+\item 只写T(n)=aT(n/b)+f(n)并不自动满足三个情形之一；尤其第三种情形不能漏掉所列正则条件。本定理在精确规模b\textasciicircum{}m上证明，不未经说明地处理取整后的任意规模递推。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[临界多对数代价的递推估计]\label{thm:master-logarithmic-borderline}
+
+在同样的非负递推及n=b\textasciicircum{}m、α=log\_ba下，若对n≥b有f(n)=Θ(n\textasciicircum{}α(log n)\textasciicircum{}k)，k为任意固定实数，则k>−1时T=Θ(n\textasciicircum{}α(log n)\textasciicircum{}(k+1))；k=−1时T=Θ(n\textasciicircum{}α log log n)；k<−1时T=Θ(n\textasciicircum{}α)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}主定理的三种一般情形及正则条件（定理~\ref{thm:master-theorem-three-cases}）；微积分第二基本定理（定理~\ref{thm:ftc-second}）
+
+\par\noindent\textbf{思路：}临界情况下每层的归一化代价是j\textasciicircum{}k，所求阶取决于其部分和。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 因log(b\textasciicircum{}j)=j log b，归一化代价f(b\textasciicircum{}j)/a\textasciicircum{}j=Θ(j\textasciicircum{}k)，其中(log b)\textasciicircum{}k为固定正常数。精确展开给T(b\textasciicircum{}m)/a\textasciicircum{}m=T(1)+Σ\_(j=1)\textasciicircum{}m Θ(j\textasciicircum{}k)，有限初始项只改变常数。
+
+\item 对k≥0，单调递增的x\textasciicircum{}k用区间积分夹住求和，得到Σ\_(j≤m)j\textasciicircum{}k=Θ(m\textasciicircum{}(k+1))。对−1<k<0，同样用递减函数的相邻区间积分比较，仍得同一阶。k=−1时调和和与∫₁\textasciicircum{}m dx/x比较，阶为log m；k<−1时正项级数由无穷积分比较收敛，部分和因首项为1而上下均有正常数界。
+
+\item 代回m=log\_b n及a\textasciicircum{}m=n\textasciicircum{}α，得到所列三种结果。log log n公式只作n趋无穷的渐近陈述，有限的小n不存在取对数的定义问题。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[有限图的边不交 Menger 定理]\label{thm:edge-menger-finite}
+
+有限有向图中不同顶点s,t之间边不交有向路径最大数，等于删除后使s不能到达t的最少有向边数。有限无向图的对应结论也成立，允许平行边。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}最大流—最小割定理与整数性（定理~\ref{thm:maxflow-mincut}）
+
+\par\noindent\textbf{思路：}每条边置单位容量，整数最大流分解成路径；无向边用双向弧时先抵消相反方向流。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 有向图每条弧容量1。整数最大流存在，其值为最小s—t割容量，而该容量就是从s侧出到t侧的弧数。任意阻断s到t的删边集D，删后令S为从s仍可达的顶点，t不在S，原图从S到外部的弧全在D，故最小割大小不超过|D|；反向删去割弧自然阻断。因此最小删边数等于最小割。
+
+\item 分解整数流：先消去正流有向环，每次沿环减去1，保持流值并减少正流边数。余流无正环。若流值正，从s沿正流弧前进，内部点由流守恒必有正流出弧，因无环且图有限，最终抵达t。沿该路径减1，流值减1，重复至零。每弧原容量1，所以得到的路径边不相交。反向k条边不交路径各送1单位流，给流值k，完成有向等式。
+
+\item 无向图把每条边变为两个反向单位弧。若整数流在同一无向边两方向同时为1，将两者减1，不改各顶点流守恒与流值。之后每条无向边至多一个方向有正流，按上一步分解得到边不交无向路径。双向网络的s—t割每条跨界无向边只计离开S的那条弧，因此割容量正好是无向跨界边数，得相同结论。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[命题逻辑的真值表完备性]\label{thm:propositional-completeness}
 
 在经典命题演算中，一个命题公式若在所有赋值下为真，则可由重言式公理及 modus ponens 证明。

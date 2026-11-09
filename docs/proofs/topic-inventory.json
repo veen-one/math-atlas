@@ -1,5 +1,5 @@
 {
-  "proofCount": 541,
+  "proofCount": 544,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3212,7 +3212,9 @@
       "branch": "组合数学",
       "proofIds": [
         "formal-generating-recurrence",
-        "master-polynomial"
+        "master-polynomial",
+        "master-theorem-three-cases",
+        "master-logarithmic-borderline"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3273,7 +3275,8 @@
       "branch": "图论",
       "proofIds": [
         "maxflow-mincut",
-        "vertex-menger"
+        "vertex-menger",
+        "edge-menger-finite"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3422,7 +3425,9 @@
       "subject": "离散数学与计算",
       "branch": "算法设计",
       "proofIds": [
-        "master-polynomial"
+        "master-polynomial",
+        "master-theorem-three-cases",
+        "master-logarithmic-borderline"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3479,7 +3484,8 @@
       "subject": "离散数学与计算",
       "branch": "离散优化",
       "proofIds": [
-        "maxflow-mincut"
+        "maxflow-mincut",
+        "edge-menger-finite"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
