@@ -1,5 +1,5 @@
 {
-  "proofCount": 566,
+  "proofCount": 567,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -226,6 +226,7 @@
         "riemann-additivity",
         "convex-primitive",
         "dirichlet-sine-integral-contour",
+        "dirichlet-indicator",
         "one-dimensional-substitution"
       ],
       "coverage": "partial",
@@ -299,7 +300,8 @@
         "rational-density",
         "pointwise-limit-measurable",
         "egorov",
-        "continuous-borel-measurable"
+        "continuous-borel-measurable",
+        "dirichlet-indicator"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -314,6 +316,7 @@
         "monotone-integral",
         "integral-linearity",
         "dominated-convergence",
+        "dirichlet-indicator",
         "tonelli-fubini"
       ],
       "coverage": "partial",

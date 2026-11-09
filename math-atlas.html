@@ -1425,7 +1425,7 @@ window.ATLAS.subjects.analysis.branches.push(
           }
         ],
         example: [
-          'Dirichlet 函数（有理点取 1，无理点取 0）是 Borel 可测的，但不是黎曼可积的；它勒贝格可积且积分为 0。'
+          '在 $[0,1]$ 上，Dirichlet 函数 $1_{\mathbb Q}$ 是 Borel 可测的、不是黎曼可积的，但其 Lebesgue 积分为 $0$；三项性质的证明列于教材。'
         ],
         related: ['sigma-algebras', 'measures', 'lebesgue-integral']
       },
@@ -21146,6 +21146,32 @@ window.ATLAS.proofBook = {
         "若 A_j∈C，则 f⁻¹(∪_(j≥1)A_j)=∪_(j≥1)f⁻¹(A_j)。B(X) 对可数并封闭，因此并集也在 C。以上说明 C 是 R 上的 σ 代数。",
         "若 U⊆R 开，连续性的定义给出 f⁻¹(U) 在 X 中开；每个开集都属于 B(X)，所以 U∈C。于是 C 是一个包含所有实数开集的 σ 代数。Borel σ 代数 B(R) 是包含所有开集的最小 σ 代数，故 B(R)⊆C。",
         "因此任意 B∈B(R) 都满足 f⁻¹(B)∈B(X)，这正是 f 的 Borel 可测性。若 X 另给一个比 B(X) 更小的 σ 代数，连续性本身不能保证相对于那个 σ 代数可测。$\\square$"
+      ]
+    },
+    {
+      "id": "dirichlet-indicator",
+      "topics": [
+        "analysis/measurable-functions",
+        "analysis/lebesgue-integral",
+        "analysis/integration-calculus"
+      ],
+      "title": "有理数指标函数的可测性与两种积分",
+      "statement": "在 [0,1] 上定义 D(x)=1（x 有理）及 D(x)=0（x 无理）。则 D 是 Borel 可测，Lebesgue 可积且积分为 0，但不是 Darboux-Riemann 可积。",
+      "dependencies": [
+        "axiom-measure",
+        "axiom-lebesgue",
+        "axiom-riemann",
+        "axiom-natural",
+        "rational-density",
+        "archimedean"
+      ],
+      "idea": "有理点集是零测的可数 Borel 集；而每个非退化区间同时含有有理数和无理数。",
+      "steps": [
+        "有理数可写成 p/q，其中 p∈Z、q∈N。整数对可按 |p|+q 递增分层，每一层有限，故可数；其像 Q∩[0,1] 至多可数。单点集在 [0,1] 中闭，故 Q∩[0,1] 是闭集的可数并，属于 Borel σ 代数。对任意 Borel 集 B⊆R，D⁻¹(B) 只可能是 ∅、Q∩[0,1]、其补集或全体，皆 Borel，所以 D 可测。",
+        "每个单点 {q} 的 Lebesgue 测度为零：对每个 δ>0，它包含在 [q−δ,q+δ]∩[0,1] 中，该区间测度至多 2δ；由单调性并令 δ↓0 得 μ({q})=0。将有理数集写成单点的可数并，测度的可数次可加性（或由不交化后可数可加性）给 μ(Q∩[0,1])=0。D 是该零测集的指标函数，故按非负简单函数积分定义，∫_[0,1]D dμ=μ(Q∩[0,1])=0，当然有限。",
+        "现证任意开区间 (a,b)⊆[0,1]、a<b 都同时含有有理数和无理数。有理数由稠密性直接得到。再取 q∈Q 使 a<q<(a+b)/2。整数平方的奇偶性证明 √2 无理：若 √2=u/v 为既约整数分数，则 u²=2v² 使 u 为偶数；写 u=2w 后得 v²=2w²，v 也为偶数，矛盾。",
+        "由 Archimedes 性质取 n∈N 充分大，使 0<√2/n<b−q。则 x=q+√2/n 满足 a<x<b；若 x 有理，则 √2=n(x−q) 有理，与已证矛盾。因此每个这样的区间含无理点。",
+        "任取 [0,1] 的分割。每个正长度小区间内 D 的上确界为 1、下确界为 0，所以每个分割的 Darboux 上和都是 ΣΔx=1，下和都是 0。上积分 1 与下积分 0 不相等，依 Darboux 可积定义，D 不黎曼可积。证明同时说明域与测度：更换区间或更换测度时，积分结论须重新检查。$\\square$"
       ]
     },
     {

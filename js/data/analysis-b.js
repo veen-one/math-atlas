@@ -262,7 +262,7 @@ window.ATLAS.subjects.analysis.branches.push(
           }
         ],
         example: [
-          'Dirichlet 函数（有理点取 1，无理点取 0）是 Borel 可测的，但不是黎曼可积的；它勒贝格可积且积分为 0。'
+          '在 $[0,1]$ 上，Dirichlet 函数 $1_{\mathbb Q}$ 是 Borel 可测的、不是黎曼可积的，但其 Lebesgue 积分为 $0$；三项性质的证明列于教材。'
         ],
         related: ['sigma-algebras', 'measures', 'lebesgue-integral']
       },
