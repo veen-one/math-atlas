@@ -1,5 +1,5 @@
 {
-  "proofCount": 503,
+  "proofCount": 506,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -270,6 +270,8 @@
       "proofIds": [
         "measure-continuity",
         "affine-lebesgue-change",
+        "compact-interval-quantile",
+        "compact-interval-measure-subsequence",
         "measure-continuity-above",
         "countable-union-bound"
       ],
@@ -433,6 +435,7 @@
       "subject": "分析",
       "branch": "调和分析",
       "proofIds": [
+        "stationary-herglotz-measure",
         "fejer-uniform-convergence",
         "fourier-coefficient-uniqueness",
         "wiener-khinchin-summable"
@@ -3621,6 +3624,8 @@
       "subject": "概率与统计",
       "branch": "概率基础",
       "proofIds": [
+        "compact-interval-quantile",
+        "compact-interval-measure-subsequence",
         "lotus",
         "tonelli-fubini",
         "gaussian-integral",
@@ -3796,6 +3801,7 @@
       "subject": "概率与统计",
       "branch": "随机过程",
       "proofIds": [
+        "stationary-herglotz-measure",
         "finite-markov-stationary",
         "finite-markov-stationary-unique",
         "stationary-covariance-positive",

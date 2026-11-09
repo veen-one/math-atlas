@@ -3376,9 +3376,10 @@
       "proofIds": [
         "stationary-covariance-positive",
         "wiener-khinchin-summable",
-        "stationary-spectrum-atom-counterexample"
+        "stationary-spectrum-atom-counterexample",
+        "stationary-herglotz-measure"
       ],
-      "note": "明确限定离散时间、二阶宽平稳且协方差绝对可和的密度定理；证明非负、连续、Fourier反演及连续密度唯一性，并给常值随机过程无密度反例。一般谱测度存在定理仍需单独展开。"
+      "note": "离散二阶宽平稳过程的一般谱测度存在唯一性已展开，依赖分位数构造及紧区间测度弱序列紧性；绝对可和协方差进一步给连续谱密度及反演，常值随机过程给原子谱反例。连续时间版本仍需另行展开。"
     },
     {
       "topic": "probability/stationary-processes",
@@ -3388,9 +3389,10 @@
       "proofIds": [
         "stationary-covariance-positive",
         "wiener-khinchin-summable",
-        "stationary-spectrum-atom-counterexample"
+        "stationary-spectrum-atom-counterexample",
+        "stationary-herglotz-measure"
       ],
-      "note": "明确限定离散时间、二阶宽平稳且协方差绝对可和的密度定理；证明非负、连续、Fourier反演及连续密度唯一性，并给常值随机过程无密度反例。一般谱测度存在定理仍需单独展开。"
+      "note": "离散二阶宽平稳过程的一般谱测度存在唯一性已展开，依赖分位数构造及紧区间测度弱序列紧性；绝对可和协方差进一步给连续谱密度及反演，常值随机过程给原子谱反例。连续时间版本仍需另行展开。"
     }
   ]
 }
