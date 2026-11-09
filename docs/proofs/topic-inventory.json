@@ -1,5 +1,5 @@
 {
-  "proofCount": 562,
+  "proofCount": 564,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -40,6 +40,7 @@
         "termwise-differentiation",
         "holomorphic-compact-limit",
         "montel-locally-bounded",
+        "pointwise-limit-measurable",
         "hurwitz-univalent-limit"
       ],
       "coverage": "partial",
@@ -74,7 +75,8 @@
         "nested-intervals",
         "bolzano-weierstrass",
         "cauchy-completeness",
-        "archimedean"
+        "archimedean",
+        "rational-density"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -291,7 +293,9 @@
       "subject": "分析",
       "branch": "测度与积分",
       "proofIds": [
-        "simple-approximation"
+        "simple-approximation",
+        "rational-density",
+        "pointwise-limit-measurable"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
