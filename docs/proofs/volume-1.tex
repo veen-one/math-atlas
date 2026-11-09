@@ -7580,7 +7580,7 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 
 \end{theorem}
 
-\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；测度的下连续性（定理~\ref{thm:measure-continuity}）；实值可测函数列的逐点极限可测（定理~\ref{thm:pointwise-limit-measurable}）
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；测度的下连续性（定理~\ref{thm:measure-continuity}）；测度的可数次次可加性（定理~\ref{thm:measure-countable-subadditivity}）；实值可测函数列的逐点极限可测（定理~\ref{thm:pointwise-limit-measurable}）
 
 \par\noindent\textbf{思路：}对每个精度 1/k，取函数列从某个下标起在几乎全体点上都进入该精度带；有限测度下连续性使这些集合的大测度部分最终出现。
 
@@ -7675,6 +7675,54 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 \item 对任意 a，\{max(f,g)>a\}=\{f>a\}∪\{g>a\}；且 \{min(f,g)>a\}=\{f>a\}∩\{g>a\}，所以最大值与最小值可测。绝对值满足 |f|=max(f,−f)，也可测。
 
 \item 若 u 可测且 φ:R→R 连续，则 φ∘u 可测：对任意 Borel 集 B，φ⁻¹(B) 是 Borel 集（连续映射的逆像把开集送到开集，并与补、可数并相容）；再由 u 的可测性，u⁻¹(φ⁻¹(B))∈Σ。特别 u² 可测。由恒等式 fg=((f+g)²−(f−g)²)/4，乘积也可测，因为前面已证明平方、差及常数倍保持可测。这里函数有限值，故各代数表达处处有定义；商函数须另处理分母零点。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[测度的可数次次可加性]\label{thm:measure-countable-subadditivity}
+
+对任意测度空间 (X,Σ,μ) 与可测集列 A\_n，有 μ(∪\_(n≥1)A\_n)≤Σ\_(n≥1)μ(A\_n)，允许无穷。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）
+
+\par\noindent\textbf{思路：}把集合列逐项去除以前出现的部分，得到不交化，再用测度单调性与可数可加性。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 D₁=A₁，并对 n≥2 令 D\_n=A\_n\textbackslash{}(∪\_(j<n)A\_j)。σ 代数对有限并及差封闭，所以 D\_n 可测。若 i<n，则 D\_n 排除了 A\_i，故 D\_i 与 D\_n 不交；逐项检查也得 ∪\_nD\_n=∪\_nA\_n。
+
+\item 先由测度公理推出单调性：若 E⊆F 且二者可测，则 F=E∪(F\textbackslash{}E) 是不交并，于是 μ(F)=μ(E)+μ(F\textbackslash{}E)≥μ(E)，等式在无穷值下按扩展非负实数理解。因此 μ(D\_n)≤μ(A\_n)。
+
+\item 对不交列 D\_n 用可数可加性，μ(∪A\_n)=μ(∪D\_n)=Σμ(D\_n)≤Σμ(A\_n)。最后的不等式可先对有限部分和逐项比较，再取非降极限；若右侧为无穷，结论直接成立。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[生成 σ 代数的交表示与最小性]\label{thm:generated-sigma-algebra}
+
+给定集合 X 及其子集族 C，包含 C 的 σ 代数至少有一个；所有这类 σ 代数的交仍为 σ 代数，且是包含 C 的最小 σ 代数，记为 σ(C)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}集合论基本构造（约定~\ref{base:axiom-set}）；σ 代数与测度公理（约定~\ref{base:axiom-measure}）
+
+\par\noindent\textbf{思路：}幂集给出候选族非空；逐项从 σ 代数公理验证交仍封闭。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令 F=\{S⊆P(X):S 是 σ 代数且 C⊆S\}。幂集 P(X) 本身是 σ 代数并包含 C，所以 F 非空。定义 S₀=∩\_(S∈F)S。
+
+\item 每个 S∈F 都含 X，故 X∈S₀。若 A∈S₀，则 A 属于每个 S，故 X\textbackslash{}A 属于每个 S，因而属于 S₀。若 A\_n∈S₀ 对所有 n 成立，则每个 S 都含全部 A\_n，并由其对可数并封闭含 ∪A\_n；所以 ∪A\_n∈S₀。故 S₀ 是 σ 代数。
+
+\item 由于 C 被每个 F 中的成员包含，C⊆S₀。若 T 是任意包含 C 的 σ 代数，则 T∈F；交 S₀ 因而包含于 T。故 S₀ 包含 C 且包含于每个其他候选 σ 代数，是唯一最小者，定义 σ(C)=S₀。
 
 \end{enumerate}
 

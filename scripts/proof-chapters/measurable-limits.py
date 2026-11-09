@@ -11,7 +11,7 @@ def register(P, BASES):
       r'反过来，若 x∈E，则存在 q∈Q、q>a 与 N，使所有 n≥N 都有 f_n(x)>q。令 n 趋于无穷并使用 f_n(x)→f(x)，得到 f(x)≥q>a，故 x∈{f>a}。因此 {f>a}=E。',
       r'对每个实数 a，集合 {f>a} 可测。由第一步判据，f 的每个开集原像可测，即 f 是 Borel 可测函数。结论限于逐点收敛到有限实值函数；扩展实值版本还须处理无穷阈值。$\\square$')
 
-    P('egorov','analysis/measurable-functions analysis/function-sequences analysis/integration-limits','Egorov 定理',r'设 (X,Σ,μ) 是有限测度空间，f_n 与 f 为实值可测函数，且 f_n→f 几乎处处。则对每个 ε>0，存在可测集 F⊆X，使 μ(X\F)<ε，并且 f_n 在 F 上一致收敛到 f。','axiom-measure measure-continuity pointwise-limit-measurable','对每个精度 1/k，取函数列从某个下标起在几乎全体点上都进入该精度带；有限测度下连续性使这些集合的大测度部分最终出现。',
+    P('egorov','analysis/measurable-functions analysis/function-sequences analysis/integration-limits','Egorov 定理',r'设 (X,Σ,μ) 是有限测度空间，f_n 与 f 为实值可测函数，且 f_n→f 几乎处处。则对每个 ε>0，存在可测集 F⊆X，使 μ(X\F)<ε，并且 f_n 在 F 上一致收敛到 f。','axiom-measure measure-continuity measure-countable-subadditivity pointwise-limit-measurable','对每个精度 1/k，取函数列从某个下标起在几乎全体点上都进入该精度带；有限测度下连续性使这些集合的大测度部分最终出现。',
       r'取可测零集 N，使对每个 x∈X\N 都有 f_n(x)→f(x)。若原“几乎处处”定义只给出包含异常点的零集，直接采用该可测零集。固定 k,N₀∈N，定义 A_(k,N₀)=(X\N)∩∩_(n≥N₀){x:|f_n(x)−f(x)|≤1/k}。绝对值差是可测函数的连续复合，故每个阈值集可测；可数交后 A_(k,N₀) 仍可测。',
       r'固定 k，集合 A_(k,N₀) 随 N₀ 递增。其并为 X\N：包含关系显然；反过来，对任意 x∈X\N，收敛定义给出某个 N₀，使所有 n≥N₀ 的误差小于 1/k，因而 x∈A_(k,N₀)。',
       r'由测度对递增集列的下连续性，μ(A_(k,N₀))↑μ(X\N)=μ(X)。因此可选 N_k，使 μ((X\N)\A_(k,N_k))<ε/2^(k+1)。令 F=∩_(k≥1)A_(k,N_k)。它可测，且 X\F=N∪∪_(k≥1)((X\N)\A_(k,N_k))。可数次可加性给 μ(X\F)≤μ(N)+Σ_(k≥1)ε/2^(k+1)=ε/2<ε。',
@@ -35,3 +35,12 @@ def register(P, BASES):
       r'右侧是可数个可测集交的并，属于 Σ，所以每个 {f+g>a} 可测，f+g 可测。若 c>0，{cf>a}={f>a/c}；若 c<0，{cf>a}={f<a/c}，而 {f<b}=∪_(r∈Q,r<b){f≤r}=∪_(r∈Q,r<b)(X\{f>r})，仍可测。c=0 时 cf 是常值零函数，可测。于是 −g 与 f−g 均可测。',
       r'对任意 a，{max(f,g)>a}={f>a}∪{g>a}；且 {min(f,g)>a}={f>a}∩{g>a}，所以最大值与最小值可测。绝对值满足 |f|=max(f,−f)，也可测。',
       r'若 u 可测且 φ:R→R 连续，则 φ∘u 可测：对任意 Borel 集 B，φ⁻¹(B) 是 Borel 集（连续映射的逆像把开集送到开集，并与补、可数并相容）；再由 u 的可测性，u⁻¹(φ⁻¹(B))∈Σ。特别 u² 可测。由恒等式 fg=((f+g)²−(f−g)²)/4，乘积也可测，因为前面已证明平方、差及常数倍保持可测。这里函数有限值，故各代数表达处处有定义；商函数须另处理分母零点。$\square$')
+
+    P('measure-countable-subadditivity','analysis/measures analysis/sigma-algebras','测度的可数次次可加性',r'对任意测度空间 (X,Σ,μ) 与可测集列 A_n，有 μ(∪_(n≥1)A_n)≤Σ_(n≥1)μ(A_n)，允许无穷。','axiom-measure','把集合列逐项去除以前出现的部分，得到不交化，再用测度单调性与可数可加性。',
+      r'令 D₁=A₁，并对 n≥2 令 D_n=A_n\(∪_(j<n)A_j)。σ 代数对有限并及差封闭，所以 D_n 可测。若 i<n，则 D_n 排除了 A_i，故 D_i 与 D_n 不交；逐项检查也得 ∪_nD_n=∪_nA_n。',
+      r'先由测度公理推出单调性：若 E⊆F 且二者可测，则 F=E∪(F\E) 是不交并，于是 μ(F)=μ(E)+μ(F\E)≥μ(E)，等式在无穷值下按扩展非负实数理解。因此 μ(D_n)≤μ(A_n)。',
+      r'对不交列 D_n 用可数可加性，μ(∪A_n)=μ(∪D_n)=Σμ(D_n)≤Σμ(A_n)。最后的不等式可先对有限部分和逐项比较，再取非降极限；若右侧为无穷，结论直接成立。$\square$')
+    P('generated-sigma-algebra','analysis/sigma-algebras analysis/measures','生成 σ 代数的交表示与最小性',r'给定集合 X 及其子集族 C，包含 C 的 σ 代数至少有一个；所有这类 σ 代数的交仍为 σ 代数，且是包含 C 的最小 σ 代数，记为 σ(C)。','axiom-set axiom-measure','幂集给出候选族非空；逐项从 σ 代数公理验证交仍封闭。',
+      r'令 F={S⊆P(X):S 是 σ 代数且 C⊆S}。幂集 P(X) 本身是 σ 代数并包含 C，所以 F 非空。定义 S₀=∩_(S∈F)S。',
+      r'每个 S∈F 都含 X，故 X∈S₀。若 A∈S₀，则 A 属于每个 S，故 X\A 属于每个 S，因而属于 S₀。若 A_n∈S₀ 对所有 n 成立，则每个 S 都含全部 A_n，并由其对可数并封闭含 ∪A_n；所以 ∪A_n∈S₀。故 S₀ 是 σ 代数。',
+      r'由于 C 被每个 F 中的成员包含，C⊆S₀。若 T 是任意包含 C 的 σ 代数，则 T∈F；交 S₀ 因而包含于 T。故 S₀ 包含 C 且包含于每个其他候选 σ 代数，是唯一最小者，定义 σ(C)=S₀。$\square$')

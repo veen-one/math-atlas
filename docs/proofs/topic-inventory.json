@@ -1,5 +1,5 @@
 {
-  "proofCount": 568,
+  "proofCount": 570,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -269,6 +269,8 @@
       "subject": "分析",
       "branch": "测度与积分",
       "proofIds": [
+        "measure-countable-subadditivity",
+        "generated-sigma-algebra",
         "pi-lambda"
       ],
       "coverage": "partial",
@@ -284,6 +286,8 @@
         "affine-lebesgue-change",
         "compact-interval-quantile",
         "compact-interval-measure-subsequence",
+        "measure-countable-subadditivity",
+        "generated-sigma-algebra",
         "measure-continuity-above",
         "countable-union-bound"
       ],
