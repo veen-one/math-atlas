@@ -450,8 +450,8 @@ window.ATLAS.subjects.analysis.branches.push(
         brief: '研究时间统计与空间统计的联系',
         keywords: ['遍历性', '不变测度', 'Birkhoff', '混合'],
         definition: [
-          '保测系统 $(X, \\mu, T)$ 称为**遍历**，如果不变集只有零测或全测。此时时间平均几乎处处等于空间平均：$\\frac1n\\sum_{k=0}^{n-1} f(T^k x) \\to \\int f\\,d\\mu$。',
-          'Birkhoff 遍历定理给出这一收敛的严格陈述。'
+          '概率测度空间上的保测系统 $(X, \\mu, T)$ 称为**遍历**，如果不变集只有零测或全测。对每个可积函数 f，此时时间平均几乎处处等于空间平均：$\\frac1n\\sum_{k=0}^{n-1} f(T^k x) \\to \\int f\\,d\\mu$。',
+          'Birkhoff 遍历定理对保测概率系统中的可积函数给出几乎处处和 L¹ 收敛；遍历时极限等于空间平均。'
         ],
         intuition: [
           '遍历性是“一条轨道走遍整个空间”：长期时间平均等于空间平均，可以用单条轨迹估计整体统计。',
@@ -460,7 +460,7 @@ window.ATLAS.subjects.analysis.branches.push(
         formulas: [
           {
             tex: '\\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=0}^{n-1} f(T^k x) = \\int_X f\\,d\\mu',
-            caption: 'Birkhoff 遍历定理。'
+            caption: 'Birkhoff 定理的遍历概率情形：f 可积，等式几乎处处成立。'
           },
           {
             tex: 'T^{-1}(A) = A \\implies \\mu(A) \\in \\{0, 1\\}',

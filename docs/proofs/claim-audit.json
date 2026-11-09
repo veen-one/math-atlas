@@ -632,14 +632,30 @@
     {
       "topic": "analysis/ergodicity",
       "field": "definition",
-      "text": "Birkhoff 遍历定理给出这一收敛的严格陈述。",
-      "status": "needs-statement-review"
+      "text": "Birkhoff 遍历定理对保测概率系统中的可积函数给出几乎处处和 L¹ 收敛；遍历时极限等于空间平均。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "von-neumann-mean-ergodic",
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "ergodic-dense-good-class",
+        "birkhoff-probability-l1"
+      ],
+      "note": "保测概率系统与实L¹函数；从Hopf极大引理及稠密逼近证明几乎处处和L¹收敛，识别不变极限及遍历时的空间平均。"
     },
     {
       "topic": "analysis/ergodicity",
       "field": "formulaCaptions",
-      "text": "Birkhoff 遍历定理。",
-      "status": "needs-statement-review"
+      "text": "Birkhoff 定理的遍历概率情形：f 可积，等式几乎处处成立。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "von-neumann-mean-ergodic",
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "ergodic-dense-good-class",
+        "birkhoff-probability-l1"
+      ],
+      "note": "保测概率系统与实L¹函数；从Hopf极大引理及稠密逼近证明几乎处处和L¹收敛，识别不变极限及遍历时的空间平均。"
     },
     {
       "topic": "foundations/predicates-quantifiers",

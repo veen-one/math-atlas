@@ -1972,6 +1972,34 @@
         "dirichlet-sine-integral-contour"
       ],
       "note": "展开上半圆Jordan显式估计和高阶极点公式；正弦积分先证明广义收敛，再用绕数为零的缩进围道计算小弧−iπ与大弧趋零，避免把路径上的原点当作内部极点。"
+    },
+    {
+      "topic": "analysis/ergodicity",
+      "field": "definition",
+      "text": "Birkhoff 遍历定理对保测概率系统中的可积函数给出几乎处处和 L¹ 收敛；遍历时极限等于空间平均。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "von-neumann-mean-ergodic",
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "ergodic-dense-good-class",
+        "birkhoff-probability-l1"
+      ],
+      "note": "保测概率系统与实L¹函数；从Hopf极大引理及稠密逼近证明几乎处处和L¹收敛，识别不变极限及遍历时的空间平均。"
+    },
+    {
+      "topic": "analysis/ergodicity",
+      "field": "formulaCaptions",
+      "text": "Birkhoff 定理的遍历概率情形：f 可积，等式几乎处处成立。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "von-neumann-mean-ergodic",
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "ergodic-dense-good-class",
+        "birkhoff-probability-l1"
+      ],
+      "note": "保测概率系统与实L¹函数；从Hopf极大引理及稠密逼近证明几乎处处和L¹收敛，识别不变极限及遍历时的空间平均。"
     }
   ]
 }

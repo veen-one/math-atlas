@@ -1,5 +1,5 @@
 {
-  "proofCount": 533,
+  "proofCount": 538,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -373,6 +373,7 @@
         "riesz-representation",
         "hilbert-orthonormal-basis",
         "compact-self-adjoint-spectral",
+        "von-neumann-mean-ergodic",
         "plancherel-schwartz",
         "general-l2-complete",
         "schwartz-density",
@@ -634,6 +635,11 @@
       "subject": "分析",
       "branch": "动力系统",
       "proofIds": [
+        "von-neumann-mean-ergodic",
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "ergodic-dense-good-class",
+        "birkhoff-probability-l1",
         "finite-two-state-ergodic"
       ],
       "coverage": "partial",
@@ -3848,6 +3854,9 @@
       "subject": "概率与统计",
       "branch": "随机过程",
       "proofIds": [
+        "hopf-maximal-ergodic",
+        "ergodic-l1-maximal",
+        "birkhoff-probability-l1",
         "stationary-herglotz-measure",
         "finite-markov-stationary",
         "finite-markov-stationary-unique",
