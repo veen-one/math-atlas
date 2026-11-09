@@ -1269,7 +1269,11 @@
       "topic": "algebra/field-extensions",
       "field": "formulaCaptions",
       "text": "次数的乘性（塔定理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "tower-law"
+      ],
+      "note": "逐句核对已有证明：塔式公式要求相邻扩张有限；Galois对应适用有限正规可分扩张；特征标正交与分解采用有限群的有限维复表示。未以此核定Burnside可解性或其他深层推广。"
     },
     {
       "topic": "algebra/invariant-subspaces",
@@ -1335,7 +1339,14 @@
       "topic": "algebra/irreducible-representations",
       "field": "extraInsight",
       "text": "不可约表示是表示论的“原子”；Schur 引理限制等变映射，特征标正交关系给出分解与计数的工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "schur-lemma",
+        "complex-eigenvalue",
+        "finite-character-orthogonality",
+        "character-multiplicity"
+      ],
+      "note": "逐句核对已有证明：塔式公式要求相邻扩张有限；Galois对应适用有限正规可分扩张；特征标正交与分解采用有限群的有限维复表示。未以此核定Burnside可解性或其他深层推广。"
     },
     {
       "topic": "algebra/exponential-map",
@@ -1444,13 +1455,21 @@
       "topic": "algebra/fundamental-theorem-galois",
       "field": "definition",
       "text": "**基本定理**断言：中间域 $F \\subseteq E \\subseteq K$ 与 $G$ 的子群 $H \\le G$ 之间存在一一对应：$E \\mapsto \\mathrm{Gal}(K/E)$，$H \\mapsto K^H$（$H$ 的不动域）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "galois-correspondence"
+      ],
+      "note": "逐句核对已有证明：塔式公式要求相邻扩张有限；Galois对应适用有限正规可分扩张；特征标正交与分解采用有限群的有限维复表示。未以此核定Burnside可解性或其他深层推广。"
     },
     {
       "topic": "algebra/fundamental-theorem-galois",
       "field": "intuition",
       "text": "伽罗瓦基本定理是“代数与群论的字典”：扩域的中间结构完全由伽罗瓦群的子群结构编码。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "galois-correspondence"
+      ],
+      "note": "逐句核对已有证明：塔式公式要求相邻扩张有限；Galois对应适用有限正规可分扩张；特征标正交与分解采用有限群的有限维复表示。未以此核定Burnside可解性或其他深层推广。"
     },
     {
       "topic": "algebra/quintic",

@@ -1,5 +1,5 @@
 {
-  "proofCount": 512,
+  "proofCount": 515,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1247,7 +1247,10 @@
         "integral-domain-field-test",
         "zariski-lemma",
         "characteristic-zero-separable",
-        "primitive-element-theorem"
+        "primitive-element-theorem",
+        "construction-quadratic-towers",
+        "constructible-degree-obstruction",
+        "sixty-degree-nontrisectable"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
