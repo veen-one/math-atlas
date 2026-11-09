@@ -464,10 +464,10 @@ window.ATLAS.subjects.foundations = {
         {
           id: 'cut-elimination',
           name: '切消定理',
-          brief: '在适用系统中消去切规则',
+          brief: '本卷给出命题 LK 的切消证明',
           keywords: ['切消定理', 'Hauptsatz', '子公式性质', '一致性'],
           definition: [
-            '**切消定理**（Gentzen 的 Hauptsatz）：在相继式演算 LK 或 LJ 中，任何含切规则的证明都可以转换为不含切规则的证明。',
+            '命题切消定理（LK）：任意纯命题相继式若有含切证明，也有不含切证明。本条目关联的教材证明限于命题 LK；一阶量词规则及 LJ 的一般切消证明尚未展开。',
             '无切证明具有**子公式性质**：证明中出现的每个公式都是结论的子公式（或其一部分）。这使证明的分析变得可控。'
           ],
           intuition: [
@@ -477,7 +477,7 @@ window.ATLAS.subjects.foundations = {
           formulas: [
             {
               tex: '\\Gamma \\Rightarrow \\Delta \\ \\text{在 LK 中可证} \\implies \\Gamma \\Rightarrow \\Delta \\ \\text{有无切证明}',
-              caption: '切消定理的内容。'
+              caption: '命题 LK 切消定理（本卷证明范围）。'
             },
             {
               tex: '\\text{若 } \\vdash A \\lor B \\text{ 可证，则 } \\vdash A \\text{ 或 } \\vdash B \\text{ 可证}',

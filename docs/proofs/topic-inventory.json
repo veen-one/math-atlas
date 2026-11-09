@@ -1,5 +1,5 @@
 {
-  "proofCount": 561,
+  "proofCount": 562,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3207,7 +3207,8 @@
       "subject": "离散数学与计算",
       "branch": "组合数学",
       "proofIds": [
-        "binomial-count"
+        "binomial-count",
+        "binomial-theorem"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

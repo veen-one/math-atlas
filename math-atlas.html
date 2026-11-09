@@ -2593,10 +2593,10 @@ window.ATLAS.subjects.foundations = {
         {
           id: 'cut-elimination',
           name: '切消定理',
-          brief: '在适用系统中消去切规则',
+          brief: '本卷给出命题 LK 的切消证明',
           keywords: ['切消定理', 'Hauptsatz', '子公式性质', '一致性'],
           definition: [
-            '**切消定理**（Gentzen 的 Hauptsatz）：在相继式演算 LK 或 LJ 中，任何含切规则的证明都可以转换为不含切规则的证明。',
+            '命题切消定理（LK）：任意纯命题相继式若有含切证明，也有不含切证明。本条目关联的教材证明限于命题 LK；一阶量词规则及 LJ 的一般切消证明尚未展开。',
             '无切证明具有**子公式性质**：证明中出现的每个公式都是结论的子公式（或其一部分）。这使证明的分析变得可控。'
           ],
           intuition: [
@@ -2606,7 +2606,7 @@ window.ATLAS.subjects.foundations = {
           formulas: [
             {
               tex: '\\Gamma \\Rightarrow \\Delta \\ \\text{在 LK 中可证} \\implies \\Gamma \\Rightarrow \\Delta \\ \\text{有无切证明}',
-              caption: '切消定理的内容。'
+              caption: '命题 LK 切消定理（本卷证明范围）。'
             },
             {
               tex: '\\text{若 } \\vdash A \\lor B \\text{ 可证，则 } \\vdash A \\text{ 或 } \\vdash B \\text{ 可证}',
@@ -8529,7 +8529,7 @@ window.ATLAS.subjects.discrete = {
           keywords: ['排列', '组合', '二项式系数', '计数'],
           definition: [
             '从 $n$ 个不同元素中取 $k$ 个的**排列数**为 $P(n, k) = \\frac{n!}{(n-k)!}$（区分顺序）；**组合数**为 $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$（不区分顺序）。',
-            '二项式定理：$(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^k y^{n-k}$。'
+            '二项式定理：对任意非负整数 $n$ 和实数 $x,y$，$(x+y)^n = \\sum_{k=0}^{n} \\binom{n}{k}x^ky^{n-k}$。'
           ],
           intuition: [
             '排列与组合的区别是“顺序是否重要”：选 3 个人组成队伍（组合）与选 3 个人排成一列（排列）。',
@@ -18425,6 +18425,23 @@ window.ATLAS.proofBook = {
       "steps": [
         "若 d≥1，令 x=1/(d+1)。由 log(1+1/d)≤1/d，得 (d/(d+1))^d≥e^(−1)。因此 x(1−x)^d≥1/[e(d+1)]≥p，满足精确局部引理条件。",
         "若 d=0，数值条件使 p≤1/e<1。取任意 p≤x<1 且 x>0，例如 x=(1+p)/2，则 p≤x(1−x)^0，仍可应用精确引理。两种情形都得到正概率存在性。$\\square$"
+      ]
+    },
+    {
+      "id": "binomial-theorem",
+      "topics": [
+        "discrete/permutations-combinations"
+      ],
+      "title": "二项式定理",
+      "statement": "对任意非负整数 n 和实数 x,y，有 (x+y)^n=Σ_(k=0)^n binom(n,k)x^k y^(n−k)。",
+      "dependencies": [
+        "binomial-count"
+      ],
+      "idea": "对 n 归纳；乘以 x+y 后，同次项系数由按是否含新元素分割子集得到 Pascal 恒等式。",
+      "steps": [
+        "n=0 时两边均为 1。假设对某 n 公式成立，则 (x+y)^(n+1)=(x+y)Σ_(k=0)^n binom(n,k)x^k y^(n−k)。把乘 x 的和改指标 j=k+1，把乘 y 的和保留 j=k 后，x^j y^(n+1−j) 的内部系数（1≤j≤n）为 binom(n,j−1)+binom(n,j)。",
+        "这两个组合数之和等于 binom(n+1,j)：把 {1,…,n+1} 的 j 元子集按是否含 n+1 分成互斥两类；不含 n+1 的有 binom(n,j) 个，含 n+1 的删去该元素后有 binom(n,j−1) 个。子集计数及阶乘公式由前置组合数定理给出。",
+        "因此每个内部同次项系数都是 binom(n+1,j)。端点 j=0 只有乘 y 的项，系数为 1=binom(n+1,0)；端点 j=n+1 只有乘 x 的项，系数为 1=binom(n+1,n+1)。故归纳式对 n+1 成立。数学归纳法遂给出所有非负整数 n 的结论。实数乘法可交换，故整理同次幂合法；对不交换代数不作此断言。$\\square$"
       ]
     },
     {

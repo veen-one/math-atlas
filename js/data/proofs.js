@@ -3270,6 +3270,23 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "binomial-theorem",
+      "topics": [
+        "discrete/permutations-combinations"
+      ],
+      "title": "二项式定理",
+      "statement": "对任意非负整数 n 和实数 x,y，有 (x+y)^n=Σ_(k=0)^n binom(n,k)x^k y^(n−k)。",
+      "dependencies": [
+        "binomial-count"
+      ],
+      "idea": "对 n 归纳；乘以 x+y 后，同次项系数由按是否含新元素分割子集得到 Pascal 恒等式。",
+      "steps": [
+        "n=0 时两边均为 1。假设对某 n 公式成立，则 (x+y)^(n+1)=(x+y)Σ_(k=0)^n binom(n,k)x^k y^(n−k)。把乘 x 的和改指标 j=k+1，把乘 y 的和保留 j=k 后，x^j y^(n+1−j) 的内部系数（1≤j≤n）为 binom(n,j−1)+binom(n,j)。",
+        "这两个组合数之和等于 binom(n+1,j)：把 {1,…,n+1} 的 j 元子集按是否含 n+1 分成互斥两类；不含 n+1 的有 binom(n,j) 个，含 n+1 的删去该元素后有 binom(n,j−1) 个。子集计数及阶乘公式由前置组合数定理给出。",
+        "因此每个内部同次项系数都是 binom(n+1,j)。端点 j=0 只有乘 y 的项，系数为 1=binom(n+1,0)；端点 j=n+1 只有乘 x 的项，系数为 1=binom(n+1,n+1)。故归纳式对 n+1 成立。数学归纳法遂给出所有非负整数 n 的结论。实数乘法可交换，故整理同次幂合法；对不交换代数不作此断言。$\\square$"
+      ]
+    },
+    {
       "id": "formal-generating-recurrence",
       "topics": [
         "discrete/generating-functions",

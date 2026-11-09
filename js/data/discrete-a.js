@@ -24,7 +24,7 @@ window.ATLAS.subjects.discrete = {
           keywords: ['排列', '组合', '二项式系数', '计数'],
           definition: [
             '从 $n$ 个不同元素中取 $k$ 个的**排列数**为 $P(n, k) = \\frac{n!}{(n-k)!}$（区分顺序）；**组合数**为 $\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$（不区分顺序）。',
-            '二项式定理：$(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^k y^{n-k}$。'
+            '二项式定理：对任意非负整数 $n$ 和实数 $x,y$，$(x+y)^n = \\sum_{k=0}^{n} \\binom{n}{k}x^ky^{n-k}$。'
           ],
           intuition: [
             '排列与组合的区别是“顺序是否重要”：选 3 个人组成队伍（组合）与选 3 个人排成一列（排列）。',
