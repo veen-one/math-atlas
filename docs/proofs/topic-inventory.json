@@ -1,5 +1,5 @@
 {
-  "proofCount": 554,
+  "proofCount": 559,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -187,7 +187,9 @@
       "proofIds": [
         "limit-unique",
         "small-complex-product",
-        "binomial-exponential-limit"
+        "binomial-exponential-limit",
+        "squeeze-theorem-real",
+        "oscillatory-squeeze-example"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2373,6 +2375,7 @@
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
       "proofIds": [
+        "de-rham-homotopy-formula",
         "singular-path-chain-relations",
         "chain-homotopy"
       ],
@@ -2400,6 +2403,9 @@
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
       "proofIds": [
+        "pullback-exterior-derivative",
+        "de-rham-homotopy-formula",
+        "poincare-lemma-star-shaped",
         "cohomology-d-square-zero"
       ],
       "coverage": "partial",
@@ -2537,6 +2543,8 @@
       "subject": "几何与拓扑",
       "branch": "几何拓扑",
       "proofIds": [
+        "pullback-exterior-derivative",
+        "poincare-lemma-star-shaped",
         "smooth-atlas-transition-cocycle",
         "compact-oriented-one-manifold-circle"
       ],
