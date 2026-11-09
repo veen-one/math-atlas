@@ -1,5 +1,5 @@
 {
-  "proofCount": 570,
+  "proofCount": 571,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -288,6 +288,7 @@
         "compact-interval-measure-subsequence",
         "measure-countable-subadditivity",
         "generated-sigma-algebra",
+        "cantor-set-null-uncountable",
         "measure-continuity-above",
         "countable-union-bound"
       ],

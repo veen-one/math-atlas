@@ -1,5 +1,6 @@
 """Pointwise limits preserve measurability, with the real-density dependency proved."""
 def register(P, BASES):
+    BASES['def-lebesgue-measure']=dict(title='Lebesgue 测度基础',statement='本卷把实线上的 Lebesgue 测度及其完备化作为已给定的基础测度；区间测度等于区间长度，且满足测度公理。测度构造定理本卷不证明。')
     P('rational-density','analysis/completeness-reals analysis/measurable-functions','有理数在实数中的稠密性',r'任意实数 a<b 之间都存在有理数 q，即存在 q∈Q 使 a<q<b。','archimedean axiom-natural axiom-real','先用 Archimedes 性质把区间放大到长度大于一，再在有限整数区间中选最小的越过端点的整数。',
       r'由 Archimedes 性质取正整数 n，使 n(b−a)>1，等价于 1/n<b−a。再取正整数 M>|na|+2；于是区间 [−M,M] 中的整数集合有限，并包含至少一个大于 na 的整数 M。',
       r'在有限集合 {k∈Z:−M≤k≤M 且 k>na} 中取最小元素 m。m>na；且 m−1≤na，否则 m−1 也是集合中的整数并小于 m，违反最小性。因此 0<m−na≤1。',
@@ -23,7 +24,7 @@ def register(P, BASES):
       r'若 U⊆R 开，连续性的定义给出 f⁻¹(U) 在 X 中开；每个开集都属于 B(X)，所以 U∈C。于是 C 是一个包含所有实数开集的 σ 代数。Borel σ 代数 B(R) 是包含所有开集的最小 σ 代数，故 B(R)⊆C。',
       r'因此任意 B∈B(R) 都满足 f⁻¹(B)∈B(X)，这正是 f 的 Borel 可测性。若 X 另给一个比 B(X) 更小的 σ 代数，连续性本身不能保证相对于那个 σ 代数可测。$\square$')
 
-    P('dirichlet-indicator','analysis/measurable-functions analysis/lebesgue-integral analysis/integration-calculus','有理数指标函数的可测性与两种积分',r'在 [0,1] 上定义 D(x)=1（x 有理）及 D(x)=0（x 无理）。则 D 是 Borel 可测，Lebesgue 可积且积分为 0，但不是 Darboux-Riemann 可积。','axiom-measure axiom-lebesgue axiom-riemann axiom-natural rational-density archimedean','有理点集是零测的可数 Borel 集；而每个非退化区间同时含有有理数和无理数。',
+    P('dirichlet-indicator','analysis/measurable-functions analysis/lebesgue-integral analysis/integration-calculus','有理数指标函数的可测性与两种积分',r'在 [0,1] 上定义 D(x)=1（x 有理）及 D(x)=0（x 无理）。则 D 是 Borel 可测，Lebesgue 可积且积分为 0，但不是 Darboux-Riemann 可积。','axiom-measure axiom-lebesgue axiom-riemann axiom-natural def-lebesgue-measure rational-density archimedean','有理点集是零测的可数 Borel 集；而每个非退化区间同时含有有理数和无理数。',
       r'有理数可写成 p/q，其中 p∈Z、q∈N。整数对可按 |p|+q 递增分层，每一层有限，故可数；其像 Q∩[0,1] 至多可数。单点集在 [0,1] 中闭，故 Q∩[0,1] 是闭集的可数并，属于 Borel σ 代数。对任意 Borel 集 B⊆R，D⁻¹(B) 只可能是 ∅、Q∩[0,1]、其补集或全体，皆 Borel，所以 D 可测。',
       r'每个单点 {q} 的 Lebesgue 测度为零：对每个 δ>0，它包含在 [q−δ,q+δ]∩[0,1] 中，该区间测度至多 2δ；由单调性并令 δ↓0 得 μ({q})=0。将有理数集写成单点的可数并，测度的可数次可加性（或由不交化后可数可加性）给 μ(Q∩[0,1])=0。D 是该零测集的指标函数，故按非负简单函数积分定义，∫_[0,1]D dμ=μ(Q∩[0,1])=0，当然有限。',
       r'现证任意开区间 (a,b)⊆[0,1]、a<b 都同时含有有理数和无理数。有理数由稠密性直接得到。再取 q∈Q 使 a<q<(a+b)/2。整数平方的奇偶性证明 √2 无理：若 √2=u/v 为既约整数分数，则 u²=2v² 使 u 为偶数；写 u=2w 后得 v²=2w²，v 也为偶数，矛盾。',
@@ -44,3 +45,10 @@ def register(P, BASES):
       r'令 F={S⊆P(X):S 是 σ 代数且 C⊆S}。幂集 P(X) 本身是 σ 代数并包含 C，所以 F 非空。定义 S₀=∩_(S∈F)S。',
       r'每个 S∈F 都含 X，故 X∈S₀。若 A∈S₀，则 A 属于每个 S，故 X\A 属于每个 S，因而属于 S₀。若 A_n∈S₀ 对所有 n 成立，则每个 S 都含全部 A_n，并由其对可数并封闭含 ∪A_n；所以 ∪A_n∈S₀。故 S₀ 是 σ 代数。',
       r'由于 C 被每个 F 中的成员包含，C⊆S₀。若 T 是任意包含 C 的 σ 代数，则 T∈F；交 S₀ 因而包含于 T。故 S₀ 包含 C 且包含于每个其他候选 σ 代数，是唯一最小者，定义 σ(C)=S₀。$\square$')
+
+    P('cantor-set-null-uncountable','analysis/measures','康托集不可数且勒贝格测度为零',r'令 C₀=[0,1]，并由每个保留闭区间删除其开中三分之一递归得到 C_n；Cantor 集 C=∩_(n≥0)C_n。则 C 是不可数 Borel 集，且其 Lebesgue 测度为零。','axiom-measure axiom-finite def-lebesgue-measure archimedean measure-countable-subadditivity','一方面把每个二进制序列编码为只用三进制数字 0、2 的点；另一方面，第 n 阶覆盖的总长度为 (2/3)^n，趋于零。',
+      r'每一步保留的区间是闭区间，故 C_n 是有限个闭区间之并；C 是闭集的可数交，因而闭且 Borel。归纳可数出 C_n 恰由 2^n 个长度 3^(−n) 的保留区间组成：初始 n=0 有一个长度 1 的区间，每个阶段每个区间换成两个长度为原来三分之一的区间。',
+      r'令 b=(b₁,b₂,…) 为任意二进制序列，定义 x_b=Σ_(j≥1)2b_j3^(−j)。级数收敛，因为尾和至多 Σ_(j>n)2·3^(−j)=3^(−n)→0。记前 n 项和 s_n；尾和在 [0,3^(−n)] 内，所以 x_b∈[s_n,s_n+3^(−n)]，这正是由前 n 个数字选择得到的一个第 n 阶保留区间。因此 x_b∈C。',
+      r'编码是单射。若 b 与 c 首次在第 k 位不同，设 b_k=0,c_k=1。第 k 位给 x_c−x_b 的贡献为 2·3^(−k)；以后各位的最坏抵消量不超过 Σ_(j>k)2·3^(−j)=3^(−k)。故 x_c−x_b≥3^(−k)>0。二进制序列不可数：若可列为 b^(1),b^(2),…，令 c_n=1−b_n^(n)，则 c 在第 n 位不同于第 n 个序列，故不在列表中，矛盾。单射把不可数集合嵌入 C，故 C 不可数。',
+      r'每个 C_n 是 2^n 个区间之并，故由刚证的可数次次可加性（有限并是特例），μ(C_n)≤2^n·3^(−n)=(2/3)^n。幂数趋零可直接验证：归纳得 (1+1/2)^n≥1+n/2；基步 n=0 等号成立，若对 n 成立，则乘以 3/2 后右侧为 3/2+3n/4≥3/2+n/2=1+(n+1)/2。故 (2/3)^n≤(1+n/2)^(−1)→0，由 Archimedes 性质。',
+      r'C⊆C_n 且 C 可测，所以测度单调性给 0≤μ(C)≤(2/3)^n 对所有 n；令 n→∞ 得 μ(C)=0。这里仅证明标准三分康托集的结论，不推广到其他自相似集。$\square$')

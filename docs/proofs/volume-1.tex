@@ -184,6 +184,12 @@ C\_k(X;Z)为连续映射σ:Δ\textasciicircum{}k→X所生成的自由Abel群，
 
 \end{foundation}
 
+\begin{foundation}[Lebesgue 测度基础]\label{base:def-lebesgue-measure}
+
+本卷把实线上的 Lebesgue 测度及其完备化作为已给定的基础测度；区间测度等于区间长度，且满足测度公理。测度构造定理本卷不证明。
+
+\end{foundation}
+
 \begin{foundation}[平面简单闭曲线分隔事实]\label{base:def-jordan-separation}
 
 本章在多面体欧拉公式的组合证明中使用 Jordan 曲线定理的球面形式：球面上的简单闭曲线补集有两个连通分支，曲线的两侧分别邻接不同分支。该拓扑定理在此作为明确基础；本卷不以组合论推导它。
@@ -7632,7 +7638,7 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 
 \end{theorem}
 
-\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；非负及有符号积分的定义（约定~\ref{base:axiom-lebesgue}）；Darboux 积分的定义（约定~\ref{base:axiom-riemann}）；自然数归纳与良序基础（约定~\ref{base:axiom-natural}）；有理数在实数中的稠密性（定理~\ref{thm:rational-density}）；实数的 Archimedes 性质（定理~\ref{thm:archimedean}）
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；非负及有符号积分的定义（约定~\ref{base:axiom-lebesgue}）；Darboux 积分的定义（约定~\ref{base:axiom-riemann}）；自然数归纳与良序基础（约定~\ref{base:axiom-natural}）；Lebesgue 测度基础（约定~\ref{base:def-lebesgue-measure}）；有理数在实数中的稠密性（定理~\ref{thm:rational-density}）；实数的 Archimedes 性质（定理~\ref{thm:archimedean}）
 
 \par\noindent\textbf{思路：}有理点集是零测的可数 Borel 集；而每个非退化区间同时含有有理数和无理数。
 
@@ -7723,6 +7729,34 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 \item 每个 S∈F 都含 X，故 X∈S₀。若 A∈S₀，则 A 属于每个 S，故 X\textbackslash{}A 属于每个 S，因而属于 S₀。若 A\_n∈S₀ 对所有 n 成立，则每个 S 都含全部 A\_n，并由其对可数并封闭含 ∪A\_n；所以 ∪A\_n∈S₀。故 S₀ 是 σ 代数。
 
 \item 由于 C 被每个 F 中的成员包含，C⊆S₀。若 T 是任意包含 C 的 σ 代数，则 T∈F；交 S₀ 因而包含于 T。故 S₀ 包含 C 且包含于每个其他候选 σ 代数，是唯一最小者，定义 σ(C)=S₀。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[康托集不可数且勒贝格测度为零]\label{thm:cantor-set-null-uncountable}
+
+令 C₀=[0,1]，并由每个保留闭区间删除其开中三分之一递归得到 C\_n；Cantor 集 C=∩\_(n≥0)C\_n。则 C 是不可数 Borel 集，且其 Lebesgue 测度为零。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；有限计数与图的定义（约定~\ref{base:axiom-finite}）；Lebesgue 测度基础（约定~\ref{base:def-lebesgue-measure}）；实数的 Archimedes 性质（定理~\ref{thm:archimedean}）；测度的可数次次可加性（定理~\ref{thm:measure-countable-subadditivity}）
+
+\par\noindent\textbf{思路：}一方面把每个二进制序列编码为只用三进制数字 0、2 的点；另一方面，第 n 阶覆盖的总长度为 (2/3)\textasciicircum{}n，趋于零。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 每一步保留的区间是闭区间，故 C\_n 是有限个闭区间之并；C 是闭集的可数交，因而闭且 Borel。归纳可数出 C\_n 恰由 2\textasciicircum{}n 个长度 3\textasciicircum{}(−n) 的保留区间组成：初始 n=0 有一个长度 1 的区间，每个阶段每个区间换成两个长度为原来三分之一的区间。
+
+\item 令 b=(b₁,b₂,…) 为任意二进制序列，定义 x\_b=Σ\_(j≥1)2b\_j3\textasciicircum{}(−j)。级数收敛，因为尾和至多 Σ\_(j>n)2·3\textasciicircum{}(−j)=3\textasciicircum{}(−n)→0。记前 n 项和 s\_n；尾和在 [0,3\textasciicircum{}(−n)] 内，所以 x\_b∈[s\_n,s\_n+3\textasciicircum{}(−n)]，这正是由前 n 个数字选择得到的一个第 n 阶保留区间。因此 x\_b∈C。
+
+\item 编码是单射。若 b 与 c 首次在第 k 位不同，设 b\_k=0,c\_k=1。第 k 位给 x\_c−x\_b 的贡献为 2·3\textasciicircum{}(−k)；以后各位的最坏抵消量不超过 Σ\_(j>k)2·3\textasciicircum{}(−j)=3\textasciicircum{}(−k)。故 x\_c−x\_b≥3\textasciicircum{}(−k)>0。二进制序列不可数：若可列为 b\textasciicircum{}(1),b\textasciicircum{}(2),…，令 c\_n=1−b\_n\textasciicircum{}(n)，则 c 在第 n 位不同于第 n 个序列，故不在列表中，矛盾。单射把不可数集合嵌入 C，故 C 不可数。
+
+\item 每个 C\_n 是 2\textasciicircum{}n 个区间之并，故由刚证的可数次次可加性（有限并是特例），μ(C\_n)≤2\textasciicircum{}n·3\textasciicircum{}(−n)=(2/3)\textasciicircum{}n。幂数趋零可直接验证：归纳得 (1+1/2)\textasciicircum{}n≥1+n/2；基步 n=0 等号成立，若对 n 成立，则乘以 3/2 后右侧为 3/2+3n/4≥3/2+n/2=1+(n+1)/2。故 (2/3)\textasciicircum{}n≤(1+n/2)\textasciicircum{}(−1)→0，由 Archimedes 性质。
+
+\item C⊆C\_n 且 C 可测，所以测度单调性给 0≤μ(C)≤(2/3)\textasciicircum{}n 对所有 n；令 n→∞ 得 μ(C)=0。这里仅证明标准三分康托集的结论，不推广到其他自相似集。
 
 \end{enumerate}
 
