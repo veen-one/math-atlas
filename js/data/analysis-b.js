@@ -403,7 +403,7 @@ window.ATLAS.subjects.analysis.branches.push(
         keywords: ['希尔伯特空间', '内积', '正交投影', 'Riesz 表示'],
         definition: [
           '**希尔伯特空间**是完备的内积空间。内积 $\\langle \\cdot, \\cdot \\rangle$ 诱导范数 $\\|x\\| = \\sqrt{\\langle x, x\\rangle}$。',
-          '核心性质：正交投影定理（闭子空间有最佳逼近）、Riesz 表示定理（连续线性泛函由内积表示）、正交基展开。'
+          '正交投影定理（实 Hilbert 版）：对每个非空闭线性子空间 $M$ 和 $x\\in H$，存在唯一 $m\\in M$ 使 $x-m\\perp M$；$m$ 是距离 $x$ 最近的子空间元素。Riesz 表示定理（实 Hilbert 版）：每个有界线性泛函 $\\ell$ 都唯一表示为 $\\ell(x)=\\langle x,y\\rangle$，且 $\\|\\ell\\|=\\|y\\|$。标准正交基展开：每个实或复 Hilbert 空间有标准正交基 $E$；每个 $x$ 的非零系数至多可数，且 $x=\\sum_{e\\in E}\\langle x,e\\rangle e$ 范数收敛并满足 Parseval 等式。'
         ],
         intuition: [
           '希尔伯特空间是“无限维欧氏空间”：有角度、正交、投影，几何直觉大多适用。',
@@ -420,7 +420,7 @@ window.ATLAS.subjects.analysis.branches.push(
           },
           {
             tex: 'H \\cong H^*',
-            caption: 'Riesz 表示定理：希尔伯特空间自对偶。'
+            caption: 'Riesz 表示定理（实 Hilbert 空间自对偶）。'
           }
         ],
         example: [

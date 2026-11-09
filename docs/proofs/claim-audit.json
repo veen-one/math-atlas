@@ -488,14 +488,32 @@
     {
       "topic": "analysis/hilbert-spaces",
       "field": "definition",
-      "text": "核心性质：正交投影定理（闭子空间有最佳逼近）、Riesz 表示定理（连续线性泛函由内积表示）、正交基展开。",
-      "status": "needs-statement-review"
+      "text": "正交投影定理（实 Hilbert 版）：对每个非空闭线性子空间 $M$ 和 $x\\in H$，存在唯一 $m\\in M$ 使 $x-m\\perp M$；$m$ 是距离 $x$ 最近的子空间元素。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "projection-closed-subspace"
+      ],
+      "note": "与实 Hilbert 版本命题一致；闭子空间中极小化距离的序列由平行四边形恒等式成为柯西列，极限给投影，正交条件给唯一性。"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "definition",
+      "text": "Riesz 表示定理（实 Hilbert 版）：每个有界线性泛函 $\\ell$ 都唯一表示为 $\\ell(x)=\\langle x,y\\rangle$，且 $\\|\\ell\\|=\\|y\\|$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riesz-representation"
+      ],
+      "note": "范围限定为实 Hilbert 空间，与本卷已证版本吻合；先用核的正交补构造表示向量，再用 Cauchy–Schwarz 及取单位方向证明范数相等。"
     },
     {
       "topic": "analysis/hilbert-spaces",
       "field": "formulaCaptions",
-      "text": "Riesz 表示定理：希尔伯特空间自对偶。",
-      "status": "needs-statement-review"
+      "text": "Riesz 表示定理（实 Hilbert 空间自对偶）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riesz-representation"
+      ],
+      "note": "公式的实对偶自同构由实 Hilbert 空间 Riesz 表示定理给出；复空间需按线性/共轭线性约定改写，不在该公式范围内。"
     },
     {
       "topic": "analysis/hilbert-spaces",

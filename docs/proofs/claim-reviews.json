@@ -2275,6 +2275,36 @@
         "picard-lindelof"
       ],
       "note": "对应已收录的标量 Picard–Lindelöf 证明：闭矩形上的连续性与统一 y-Lipschitz 常数保证短时间积分算子自映且压缩；结论只要求局部解，并将唯一性范围明确限在该矩形内。"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "definition",
+      "text": "正交投影定理（实 Hilbert 版）：对每个非空闭线性子空间 $M$ 和 $x\\in H$，存在唯一 $m\\in M$ 使 $x-m\\perp M$；$m$ 是距离 $x$ 最近的子空间元素。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "projection-closed-subspace"
+      ],
+      "note": "与实 Hilbert 版本命题一致；闭子空间中极小化距离的序列由平行四边形恒等式成为柯西列，极限给投影，正交条件给唯一性。"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "definition",
+      "text": "Riesz 表示定理（实 Hilbert 版）：每个有界线性泛函 $\\ell$ 都唯一表示为 $\\ell(x)=\\langle x,y\\rangle$，且 $\\|\\ell\\|=\\|y\\|$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riesz-representation"
+      ],
+      "note": "范围限定为实 Hilbert 空间，与本卷已证版本吻合；先用核的正交补构造表示向量，再用 Cauchy–Schwarz 及取单位方向证明范数相等。"
+    },
+    {
+      "topic": "analysis/hilbert-spaces",
+      "field": "formulaCaptions",
+      "text": "Riesz 表示定理（实 Hilbert 空间自对偶）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "riesz-representation"
+      ],
+      "note": "公式的实对偶自同构由实 Hilbert 空间 Riesz 表示定理给出；复空间需按线性/共轭线性约定改写，不在该公式范围内。"
     }
   ]
 }
