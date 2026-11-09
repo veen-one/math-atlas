@@ -7638,7 +7638,7 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 
 \end{theorem}
 
-\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；非负及有符号积分的定义（约定~\ref{base:axiom-lebesgue}）；Darboux 积分的定义（约定~\ref{base:axiom-riemann}）；自然数归纳与良序基础（约定~\ref{base:axiom-natural}）；Lebesgue 测度基础（约定~\ref{base:def-lebesgue-measure}）；有理数在实数中的稠密性（定理~\ref{thm:rational-density}）；实数的 Archimedes 性质（定理~\ref{thm:archimedean}）
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；非负及有符号积分的定义（约定~\ref{base:axiom-lebesgue}）；Darboux 积分的定义（约定~\ref{base:axiom-riemann}）；自然数归纳与良序基础（约定~\ref{base:axiom-natural}）；Lebesgue 测度基础（约定~\ref{base:def-lebesgue-measure}）；有理数在实数中的稠密性（定理~\ref{thm:rational-density}）；实数的 Archimedes 性质（定理~\ref{thm:archimedean}）；实线中可数集的 Lebesgue 测度为零（定理~\ref{thm:countable-subsets-null}）
 
 \par\noindent\textbf{思路：}有理点集是零测的可数 Borel 集；而每个非退化区间同时含有有理数和无理数。
 
@@ -7648,7 +7648,7 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 
 \item 有理数可写成 p/q，其中 p∈Z、q∈N。整数对可按 |p|+q 递增分层，每一层有限，故可数；其像 Q∩[0,1] 至多可数。单点集在 [0,1] 中闭，故 Q∩[0,1] 是闭集的可数并，属于 Borel σ 代数。对任意 Borel 集 B⊆R，D⁻¹(B) 只可能是 ∅、Q∩[0,1]、其补集或全体，皆 Borel，所以 D 可测。
 
-\item 每个单点 \{q\} 的 Lebesgue 测度为零：对每个 δ>0，它包含在 [q−δ,q+δ]∩[0,1] 中，该区间测度至多 2δ；由单调性并令 δ↓0 得 μ(\{q\})=0。将有理数集写成单点的可数并，测度的可数次可加性（或由不交化后可数可加性）给 μ(Q∩[0,1])=0。D 是该零测集的指标函数，故按非负简单函数积分定义，∫\_[0,1]D dμ=μ(Q∩[0,1])=0，当然有限。
+\item 前一步已证 Q∩[0,1] 可数；套用下列已证的一般引理，它是 Borel 零测集。D 是该集的指标函数，故按非负简单函数积分定义，∫\_[0,1]D dμ=μ(Q∩[0,1])=0，当然有限。
 
 \item 现证任意开区间 (a,b)⊆[0,1]、a<b 都同时含有有理数和无理数。有理数由稠密性直接得到。再取 q∈Q 使 a<q<(a+b)/2。整数平方的奇偶性证明 √2 无理：若 √2=u/v 为既约整数分数，则 u²=2v² 使 u 为偶数；写 u=2w 后得 v²=2w²，v 也为偶数，矛盾。
 
@@ -7757,6 +7757,30 @@ A 的谱位于开单位圆内，当且仅当对每个实对称正定Q存在实�
 \item 每个 C\_n 是 2\textasciicircum{}n 个区间之并，故由刚证的可数次次可加性（有限并是特例），μ(C\_n)≤2\textasciicircum{}n·3\textasciicircum{}(−n)=(2/3)\textasciicircum{}n。幂数趋零可直接验证：归纳得 (1+1/2)\textasciicircum{}n≥1+n/2；基步 n=0 等号成立，若对 n 成立，则乘以 3/2 后右侧为 3/2+3n/4≥3/2+n/2=1+(n+1)/2。故 (2/3)\textasciicircum{}n≤(1+n/2)\textasciicircum{}(−1)→0，由 Archimedes 性质。
 
 \item C⊆C\_n 且 C 可测，所以测度单调性给 0≤μ(C)≤(2/3)\textasciicircum{}n 对所有 n；令 n→∞ 得 μ(C)=0。这里仅证明标准三分康托集的结论，不推广到其他自相似集。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[实线中可数集的 Lebesgue 测度为零]\label{thm:countable-subsets-null}
+
+每个可数集合 A⊆R 都是 Borel 集且 Lebesgue 测度 μ(A)=0。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}σ 代数与测度公理（约定~\ref{base:axiom-measure}）；Lebesgue 测度基础（约定~\ref{base:def-lebesgue-measure}）；测度的可数次次可加性（定理~\ref{thm:measure-countable-subadditivity}）
+
+\par\noindent\textbf{思路：}单点可被任意短区间覆盖而测度为零；再把可数集合写成单点的可数并。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 有限或可数集合 A 可以写成 A=\{x\_n:n≥1\}；有限时允许重复列出元素。每个单点 \{x\_n\} 是闭集，故为 Borel 集；A 是这些单点的可数并，所以 A 也为 Borel 集。
+
+\item 固定任意 n。对每个 δ>0，\{x\_n\}⊆[x\_n−δ,x\_n+δ]，而后者的 Lebesgue 测度等于长度 2δ。由测度单调性，0≤μ(\{x\_n\})≤2δ 对所有 δ>0 成立，令 δ↓0 得 μ(\{x\_n\})=0。
+
+\item 由测度可数次次可加性，μ(A)≤Σ\_(n≥1)μ(\{x\_n\})=Σ\_(n≥1)0=0；测度非负给出 μ(A)≥0，故 μ(A)=0。Borel 可测性已在第一步证明。
 
 \end{enumerate}
 

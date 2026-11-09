@@ -1,5 +1,5 @@
 {
-  "proofCount": 571,
+  "proofCount": 572,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -271,6 +271,7 @@
       "proofIds": [
         "measure-countable-subadditivity",
         "generated-sigma-algebra",
+        "countable-subsets-null",
         "pi-lambda"
       ],
       "coverage": "partial",
@@ -289,6 +290,7 @@
         "measure-countable-subadditivity",
         "generated-sigma-algebra",
         "cantor-set-null-uncountable",
+        "countable-subsets-null",
         "measure-continuity-above",
         "countable-union-bound"
       ],
