@@ -3894,6 +3894,86 @@ R\textasciicircum{}n 中不交非空凸集 C,D，若 C 紧而 D 闭，则存在�
 
 \end{proof}
 
+\begin{theorem}[截断矩母函数的凸对偶逼近]\label{thm:cramer-truncated-dual-limit}
+
+设X为非恒定实随机变量，a=ess inf X、b=ess sup X允许无穷。对a<x<b，令 M\_R(t)=E[e\textasciicircum{}(tX)1\_(|X|≤R)]、I\_R(x)=sup\_t(tx−log M\_R(t))，R取充分大的正整数；M(t)=E e\textasciicircum{}(tX)允许∞，I(x)=sup\_t(tx−log M(t))。则I\_R(x)随R递减且收敛到I(x)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}有界变量的指数倾斜与速率函数（定理~\ref{thm:bounded-exponential-tilt}）；单调收敛定理（定理~\ref{thm:monotone-integral}）；实有界数列的收敛子列定理（定理~\ref{thm:bolzano-weierstrass}）
+
+\par\noindent\textbf{思路：}在x两侧各固定一块正概率质量，统一控制截断对偶的极大化参数，避免极值逃向无穷。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 因a<x<b，可选δ>0及K<∞，使事件A\_+=\{x+δ≤X≤K\}和A\_-=\{−K≤X≤x−δ\}概率分别为p\_+,p\_->0。这是本质上下界的定义及有限截断集合递增到相应半直线所得。R≥K时，条件于|X|≤R的分布有界且本质支持在x两侧，因此其对偶在唯一有限t\_R达到最大，上一有界倾斜命题适用。归一化只给log M\_R增加常数，不改变t\_R。
+
+\item 当t≥0，M\_R(t)≥p\_+e\textasciicircum{}(t(x+δ))，故tx−log M\_R(t)≤−δt−log p\_+。当t≤0，用A\_-得同式≤−δ|t|−log p\_-。另一方面在t=0的目标值为−log P(|X|≤R)≥0，所以最大值非负。上述两界说明全部t\_R位于固定紧区间。
+
+\item M\_R随R增加，故I\_R递减，且M\_R≤M使I\_R≥I。固定首个R₀，I\_R≤I\_(R₀)<∞，故有有限极限L≥I。选R\_j趋无穷并抽子列使t\_(R\_j)→t\_*。对任意固定整数K₁且R\_j≥K₁，M\_(R\_j)(t\_(R\_j))≥M\_(K₁)(t\_(R\_j))。有界截断保证右侧随t连续，因而 L≤t\_*x−log M\_(K₁)(t\_*)。
+
+\item 令K₁趋无穷，单调收敛给M\_(K₁)(t\_*)→M(t\_*)。若后者无穷，上式迫使有限L≤−∞，矛盾；所以M(t\_*)有限，且L≤t\_*x−log M(t\_*)≤I(x)。结合L≥I，证明所需等式。这一步同时证明内部点速率有限，不要求全实轴指数矩存在。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[零邻域指数矩给指数紧性与良速率函数]\label{thm:cramer-exponential-tightness}
+
+设独立同分布实变量X\_i的矩母函数在零的某邻域有限。写S\_n=n⁻¹ΣX\_i、Λ(t)=log E e\textasciicircum{}(tX₁)、I(x)=sup\_t(tx−Λ(t))。则任意A>0可选K使 limsup n⁻¹log P(|S\_n|>K)≤−A；I非负、下半连续，有限次水平集紧。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}Markov 不等式（定理~\ref{thm:markov}）；相互独立变量的有界函数乘积期望（定理~\ref{thm:independent-bounded-products}）；单调收敛定理（定理~\ref{thm:monotone-integral}）；有限维 Heine–Borel 定理（定理~\ref{thm:heine-borel-rn}）
+
+\par\noindent\textbf{思路：}分别用一个正参数和一个负参数控制两侧尾部，两个仿射下界也保证速率函数的次水平集有界。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 选η>0使Λ(η)、Λ(−η)有限。独立性给 E exp(ηΣX\_i)=exp(nΛ(η))。此处虽然指数变量未必有界，可先将每个非负因子截断，利用有界独立乘积公式，再逐因子用单调收敛推广，有限个因子可依次处理。Markov界给P(S\_n>K)≤exp(−n[ηK−Λ(η)])；对−S\_n同理给左尾界。
+
+\item 所以P(|S\_n|>K)≤2 exp(−n[ηK−max(Λ(η),Λ(−η))])。取K充分大即得任意A的指数尾界。I≥0来自t=0；只对Λ有限的t取上确界即可，其余t贡献−∞，所以I是连续仿射函数的上确界，非负且下半连续。
+
+\item 又I(x)≥η|x|−max(Λ(η),Λ(−η))。因此\{I≤c\}有界，且由下半连续性闭，有限维Heine–Borel定理保证紧。这就是大偏差中“良速率函数”的具体含义。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[零邻域指数矩条件下的完整 Cramér 定理]\label{thm:cramer-real-full}
+
+独立同分布实变量X\_i若E e\textasciicircum{}(tX₁)在t=0的某开邻域有限，则样本均值S\_n满足速率I(x)=sup\_(t∈R)\{tx−log E e\textasciicircum{}(tX₁)\}的大偏差原理：任意闭集F有limsup n⁻¹log P(S\_n∈F)≤−inf\_F I，任意开集O有liminf n⁻¹log P(S\_n∈O)≥−inf\_O I。I为良速率函数，允许无穷；约定log0=−∞、inf∅=∞。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}截断矩母函数的凸对偶逼近（定理~\ref{thm:cramer-truncated-dual-limit}）；零邻域指数矩给指数紧性与良速率函数（定理~\ref{thm:cramer-exponential-tightness}）；有界独立同分布变量的完整大偏差原理（定理~\ref{thm:cramer-bounded-full}）；有限维 Heine–Borel 定理（定理~\ref{thm:heine-borel-rn}）；控制收敛定理（实值版）（定理~\ref{thm:dominated-convergence}）
+
+\par\noindent\textbf{思路：}紧集上界用有限指数覆盖；下界把全部样本限制在截断事件内，再取截断速率极限。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 若X恒定，直接用有界版本。以下非恒定。先证紧集K的上界。任取实L<inf\_K I，对每个x∈K选Λ(t\_x)<∞且t\_xx−Λ(t\_x)>L。邻域中仍严格大于L。有限子覆盖及指数Markov界给P(S\_n∈K)≤Ne\textasciicircum{}(−nL)，与有界版本相同，但这里不把S\_n限制在固定支持区间。令L趋inf\_K I得紧集上界。
+
+\item 对闭F，取任意A>0，用指数紧性选K₀使外尾指数上界≤−A。F∩[−K₀,K₀]紧，分拆概率并用u+v≤2max(u,v)，得上极限≤max(−inf\_(F∩[−K₀,K₀])I,−A)≤max(−inf\_F I,−A)。令A趋无穷得到闭集上界，包括inf\_F I=∞的情形。
+
+\item 下界先取x∈O且a<x<b，其中a,b为允许无穷的本质支持端点。令p\_R=P(|X|≤R)>0。独立性使全部n个样本落在截断内的概率p\_R\textasciicircum{}n；给定此事件，它们仍独立同分布，单变量分布为条件分布P\_R。对任何开O，有 P(S\_n∈O)≥p\_R\textasciicircum{}n P\_R\textasciicircum{}(⊗n)(S\_n∈O)。该条件分布有界，其速率J\_R(y)=sup\_t\{ty−log(M\_R(t)/p\_R)\}=I\_R(y)+log p\_R。
+
+\item 应用有界Cramér定理得原概率下极限≥log p\_R−inf\_O J\_R≥log p\_R−J\_R(x)=−I\_R(x)。R趋无穷，由截断凸对偶逼近得≥−I(x)。注意这个步骤不要求用同一个倾斜参数处理所有截断，也覆盖原Λ有效域边界处不可微的情形。
+
+\item 若有限端点b在O且I(b)<∞，因为X≤b几乎必然，tb−Λ(t)=−log E exp(t(X−b))在t≥0时递增，支配收敛给其极限−log P(X=b)。任意t的期望至少P(X=b)，故上确界恰为该极限，所以I(b)=−log P(X=b)。全部变量等于b的事件直接给下界−I(b)。a端点同理。支持区间外I=∞：例如b有限且x>b时，取t趋正无穷并用Λ(t)≤tb即可，a侧类似。
+
+\item 故对O中每个有限速率点均有下界−I(x)，取其上确界即−inf\_O I。若没有有限速率点，所需下界是−∞而自动成立。良速率性质由指数紧性命题已证，完成全部陈述。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[有限偏序集的 Dilworth 定理]\label{thm:dilworth-finite}
 
 有限偏序集 P 的最少链覆盖数等于最大反链大小。可要求链覆盖为互不交的链分割。

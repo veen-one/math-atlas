@@ -1,5 +1,5 @@
 {
-  "proofCount": 509,
+  "proofCount": 512,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3757,6 +3757,9 @@
         "bounded-exponential-tilt",
         "cramer-bounded-full",
         "bernoulli-cramer-rate",
+        "cramer-truncated-dual-limit",
+        "cramer-exponential-tightness",
+        "cramer-real-full",
         "borel-cantelli-first"
       ],
       "coverage": "partial",

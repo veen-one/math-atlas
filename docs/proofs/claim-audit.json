@@ -3354,7 +3354,13 @@
       "topic": "probability/large-deviations",
       "field": "definition",
       "text": "Cramér 定理在独立同分布且矩母函数在零的某邻域有限时，给出样本均值的大偏差原理，其速率函数为 Legendre 变换 $I(a) = \\sup_t (ta - \\log \\mathbb{E}[e^{tX}])$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cramer-truncated-dual-limit",
+        "cramer-exponential-tightness",
+        "cramer-real-full"
+      ],
+      "note": "独立同分布实变量且零邻域矩母函数有限；完整证明任意开集下界、闭集上界和良速率性质，含有限支持端点原子与非陡峭矩母函数情形。"
     },
     {
       "topic": "probability/large-deviations",
@@ -3366,7 +3372,13 @@
       "topic": "probability/large-deviations",
       "field": "formulaCaptions",
       "text": "大偏差原理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cramer-truncated-dual-limit",
+        "cramer-exponential-tightness",
+        "cramer-real-full"
+      ],
+      "note": "独立同分布实变量且零邻域矩母函数有限；完整证明任意开集下界、闭集上界和良速率性质，含有限支持端点原子与非陡峭矩母函数情形。"
     },
     {
       "topic": "probability/stationary-processes",
