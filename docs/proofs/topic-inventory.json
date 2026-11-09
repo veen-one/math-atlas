@@ -1,5 +1,5 @@
 {
-  "proofCount": 483,
+  "proofCount": 487,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -557,6 +557,10 @@
       "subject": "分析",
       "branch": "微分方程",
       "proofIds": [
+        "hurwitz-linear-stability",
+        "continuous-lyapunov-equation",
+        "schur-discrete-stability",
+        "discrete-lyapunov-equation",
         "gronwall-discrete"
       ],
       "coverage": "partial",
@@ -2622,7 +2626,8 @@
       "subject": "应用与计算数学",
       "branch": "数值分析",
       "proofIds": [
-        "linear-system-perturbation"
+        "linear-system-perturbation",
+        "schur-discrete-stability"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2805,6 +2810,9 @@
       "subject": "应用与计算数学",
       "branch": "控制理论",
       "proofIds": [
+        "hurwitz-linear-stability",
+        "schur-discrete-stability",
+        "discrete-lyapunov-equation",
         "linear-controllability-kalman",
         "linear-observability-dual",
         "scalar-feedback-stabilization"
@@ -2831,6 +2839,8 @@
       "branch": "控制理论",
       "proofIds": [
         "small-gain-banach",
+        "hurwitz-linear-stability",
+        "continuous-lyapunov-equation",
         "scalar-feedback-stabilization",
         "scalar-robust-stability"
       ],
@@ -2844,6 +2854,8 @@
       "branch": "控制理论",
       "proofIds": [
         "small-gain-banach",
+        "continuous-lyapunov-equation",
+        "discrete-lyapunov-equation",
         "scalar-robust-stability"
       ],
       "coverage": "partial",

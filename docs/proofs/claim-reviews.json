@@ -1741,6 +1741,17 @@
         "noether-point-symmetry"
       ],
       "note": "有限维光滑拉格朗日系统，点变换满足所列无穷小作用量恒等式，允许全导数边界项；不声称任意连续变换或场论规范对称均已证明。"
+    },
+    {
+      "topic": "analysis/stability",
+      "field": "extraExamples",
+      "text": "线性系统 $\\dot x=Ax$ 渐近稳定当且仅当 $A$ 的所有特征值实部为负（Lyapunov 定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hurwitz-linear-stability",
+        "continuous-lyapunov-equation"
+      ],
+      "note": "限于有限维常系数连续时间实线性系统；Jordan 分解证明充要条件，另给 Lyapunov 方程积分构造、唯一性与反向判据。"
     }
   ]
 }

@@ -598,7 +598,12 @@
       "topic": "analysis/stability",
       "field": "extraExamples",
       "text": "线性系统 $\\dot x=Ax$ 渐近稳定当且仅当 $A$ 的所有特征值实部为负（Lyapunov 定理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hurwitz-linear-stability",
+        "continuous-lyapunov-equation"
+      ],
+      "note": "限于有限维常系数连续时间实线性系统；Jordan 分解证明充要条件，另给 Lyapunov 方程积分构造、唯一性与反向判据。"
     },
     {
       "topic": "analysis/equilibria-periodic-orbits",
