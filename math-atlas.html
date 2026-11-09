@@ -1411,7 +1411,7 @@ window.ATLAS.subjects.analysis.branches.push(
           '可测函数可以用简单函数（有限个可测集指示函数的线性组合）逐点逼近。'
         ],
         intuition: [
-          '可测函数是“可以被积分的函数”：它的水平集足够规整，使得积分有意义。',
+          '可测性使勒贝格积分能够按水平集构造；它本身不保证积分有限，绝对可积还需额外的积分界。',
           '连续性蕴含可测性（在 Borel σ 代数下），但可测函数比连续函数宽泛得多，包括大量不连续函数。'
         ],
         formulas: [
@@ -1420,8 +1420,8 @@ window.ATLAS.subjects.analysis.branches.push(
             caption: '可测性的等价刻画。'
           },
           {
-            tex: 'f_n \\nearrow f \\implies f \\text{ 可测}',
-            caption: '可测函数列的逐点极限可测。'
+            tex: 'f_n \\to f \\implies f \\text{ 可测}',
+            caption: '每个 $f_n$ 可测且逐点收敛到有限实值 $f$ 时，$f$ 可测。'
           }
         ],
         example: [
@@ -21126,6 +21126,26 @@ window.ATLAS.proofBook = {
         "固定 k，集合 A_(k,N₀) 随 N₀ 递增。其并为 X\\N：包含关系显然；反过来，对任意 x∈X\\N，收敛定义给出某个 N₀，使所有 n≥N₀ 的误差小于 1/k，因而 x∈A_(k,N₀)。",
         "由测度对递增集列的下连续性，μ(A_(k,N₀))↑μ(X\\N)=μ(X)。因此可选 N_k，使 μ((X\\N)\\A_(k,N_k))<ε/2^(k+1)。令 F=∩_(k≥1)A_(k,N_k)。它可测，且 X\\F=N∪∪_(k≥1)((X\\N)\\A_(k,N_k))。可数次可加性给 μ(X\\F)≤μ(N)+Σ_(k≥1)ε/2^(k+1)=ε/2<ε。",
         "验证一致收敛：给定 δ>0，取 k 使 1/k<δ。若 n≥N_k 且 x∈F⊆A_(k,N_k)，定义即给 |f_n(x)−f(x)|≤1/k<δ。该 N_k 与 x 无关，所以在 F 上一致收敛。有限测度假设用于令 μ(A_(k,N₀)) 趋于有限的 μ(X) 并控制补集；在无限测度空间此结论一般不成立。$\\square$"
+      ]
+    },
+    {
+      "id": "continuous-borel-measurable",
+      "topics": [
+        "analysis/measurable-functions",
+        "analysis/continuity-uniform"
+      ],
+      "title": "连续映射关于 Borel σ 代数可测",
+      "statement": "设 X 是拓扑空间，赋予其 Borel σ 代数；若 f:X→R 连续，则 f 关于 X 的 Borel σ 代数与 R 的 Borel σ 代数可测。",
+      "dependencies": [
+        "axiom-topology",
+        "axiom-measure"
+      ],
+      "idea": "把 f 原像可测的实数子集收集成 σ 代数；该 σ 代数含所有开集，故含由开集生成的全部 Borel 集。",
+      "steps": [
+        "记 B(X) 为由 X 的开集生成的 Borel σ 代数。定义 C={A⊆R:f⁻¹(A)∈B(X)}。由于 f⁻¹(R)=X，R∈C；且 f⁻¹(R\\A)=X\\f⁻¹(A)，若 A∈C 则补集也在 C。",
+        "若 A_j∈C，则 f⁻¹(∪_(j≥1)A_j)=∪_(j≥1)f⁻¹(A_j)。B(X) 对可数并封闭，因此并集也在 C。以上说明 C 是 R 上的 σ 代数。",
+        "若 U⊆R 开，连续性的定义给出 f⁻¹(U) 在 X 中开；每个开集都属于 B(X)，所以 U∈C。于是 C 是一个包含所有实数开集的 σ 代数。Borel σ 代数 B(R) 是包含所有开集的最小 σ 代数，故 B(R)⊆C。",
+        "因此任意 B∈B(R) 都满足 f⁻¹(B)∈B(X)，这正是 f 的 Borel 可测性。若 X 另给一个比 B(X) 更小的 σ 代数，连续性本身不能保证相对于那个 σ 代数可测。$\\square$"
       ]
     },
     {

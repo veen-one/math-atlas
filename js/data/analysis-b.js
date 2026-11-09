@@ -248,7 +248,7 @@ window.ATLAS.subjects.analysis.branches.push(
           '可测函数可以用简单函数（有限个可测集指示函数的线性组合）逐点逼近。'
         ],
         intuition: [
-          '可测函数是“可以被积分的函数”：它的水平集足够规整，使得积分有意义。',
+          '可测性使勒贝格积分能够按水平集构造；它本身不保证积分有限，绝对可积还需额外的积分界。',
           '连续性蕴含可测性（在 Borel σ 代数下），但可测函数比连续函数宽泛得多，包括大量不连续函数。'
         ],
         formulas: [
@@ -257,8 +257,8 @@ window.ATLAS.subjects.analysis.branches.push(
             caption: '可测性的等价刻画。'
           },
           {
-            tex: 'f_n \\nearrow f \\implies f \\text{ 可测}',
-            caption: '可测函数列的逐点极限可测。'
+            tex: 'f_n \\to f \\implies f \\text{ 可测}',
+            caption: '每个 $f_n$ 可测且逐点收敛到有限实值 $f$ 时，$f$ 可测。'
           }
         ],
         example: [

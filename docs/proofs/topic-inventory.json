@@ -1,5 +1,5 @@
 {
-  "proofCount": 565,
+  "proofCount": 566,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -9,7 +9,8 @@
       "proofIds": [
         "compact-interval",
         "heine-cantor",
-        "intermediate-value"
+        "intermediate-value",
+        "continuous-borel-measurable"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -297,7 +298,8 @@
         "simple-approximation",
         "rational-density",
         "pointwise-limit-measurable",
-        "egorov"
+        "egorov",
+        "continuous-borel-measurable"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

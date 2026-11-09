@@ -5971,6 +5971,26 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "continuous-borel-measurable",
+      "topics": [
+        "analysis/measurable-functions",
+        "analysis/continuity-uniform"
+      ],
+      "title": "连续映射关于 Borel σ 代数可测",
+      "statement": "设 X 是拓扑空间，赋予其 Borel σ 代数；若 f:X→R 连续，则 f 关于 X 的 Borel σ 代数与 R 的 Borel σ 代数可测。",
+      "dependencies": [
+        "axiom-topology",
+        "axiom-measure"
+      ],
+      "idea": "把 f 原像可测的实数子集收集成 σ 代数；该 σ 代数含所有开集，故含由开集生成的全部 Borel 集。",
+      "steps": [
+        "记 B(X) 为由 X 的开集生成的 Borel σ 代数。定义 C={A⊆R:f⁻¹(A)∈B(X)}。由于 f⁻¹(R)=X，R∈C；且 f⁻¹(R\\A)=X\\f⁻¹(A)，若 A∈C 则补集也在 C。",
+        "若 A_j∈C，则 f⁻¹(∪_(j≥1)A_j)=∪_(j≥1)f⁻¹(A_j)。B(X) 对可数并封闭，因此并集也在 C。以上说明 C 是 R 上的 σ 代数。",
+        "若 U⊆R 开，连续性的定义给出 f⁻¹(U) 在 X 中开；每个开集都属于 B(X)，所以 U∈C。于是 C 是一个包含所有实数开集的 σ 代数。Borel σ 代数 B(R) 是包含所有开集的最小 σ 代数，故 B(R)⊆C。",
+        "因此任意 B∈B(R) 都满足 f⁻¹(B)∈B(X)，这正是 f 的 Borel 可测性。若 X 另给一个比 B(X) 更小的 σ 代数，连续性本身不能保证相对于那个 σ 代数可测。$\\square$"
+      ]
+    },
+    {
       "id": "propositional-completeness",
       "topics": [
         "foundations/propositional-logic",
