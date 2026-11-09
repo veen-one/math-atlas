@@ -1896,7 +1896,12 @@
       "topic": "numbertheory/heights",
       "field": "definition",
       "text": "Northcott 定理：给定高度上界 $B$，只有有限多个次数不超过给定值的代数数高度不超过 $B$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "absolute-height-rational",
+        "northcott-algebraic-numbers"
+      ],
+      "note": "绝对乘法高度采用本原整数最小多项式与共轭根乘积的精确定义；用初等对称多项式界控制全部整数系数，证明有界次数和高度的有限性。"
     },
     {
       "topic": "numbertheory/heights",

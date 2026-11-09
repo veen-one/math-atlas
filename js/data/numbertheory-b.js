@@ -115,8 +115,8 @@ window.ATLAS.subjects.numbertheory.branches.push(
             caption: '有理数的高度。'
           },
           {
-            tex: 'h(\\alpha) = \\frac{1}{[\\mathbb{Q}(\\alpha) : \\mathbb{Q}]} \\sum_{v} \\log^+ |\\alpha|_v',
-            caption: 'Weil 高度的局部乘积公式（示意）。'
+            tex: 'H(\\alpha)^d=a_d\\prod_{j=1}^{d}\\max(1,|\\alpha_j|),\\quad h(\\alpha)=\\log H(\\alpha)',
+            caption: '绝对高度：d 为次数，a_d 为本原整数最小多项式的正首项系数，α_j 为全部共轭根。'
           }
         ],
         example: [

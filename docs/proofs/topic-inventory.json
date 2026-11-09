@@ -1,5 +1,5 @@
 {
-  "proofCount": 515,
+  "proofCount": 518,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1917,6 +1917,8 @@
       "subject": "数论",
       "branch": "超越数论",
       "proofIds": [
+        "northcott-algebraic-numbers",
+        "liouville-algebraic-approximation",
         "liouville-constant"
       ],
       "coverage": "partial",
@@ -1939,6 +1941,8 @@
       "subject": "数论",
       "branch": "超越数论",
       "proofIds": [
+        "absolute-height-rational",
+        "northcott-algebraic-numbers",
         "dirichlet-rational-approximation"
       ],
       "coverage": "partial",
@@ -1950,6 +1954,7 @@
       "subject": "数论",
       "branch": "超越数论",
       "proofIds": [
+        "liouville-algebraic-approximation",
         "liouville-lower-bound"
       ],
       "coverage": "partial",
