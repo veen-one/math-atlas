@@ -79,7 +79,7 @@ window.ATLAS.subjects.analysis.branches.push(
         keywords: ['积分', '黎曼和', '原函数', '换元'],
         definition: [
           '黎曼积分用分割的矩形和逼近曲线下面积：$\\int_a^b f(x)\\,dx = \\lim_{\\|P\\| \\to 0} \\sum f(\\xi_i)\\Delta x_i$。',
-          '微积分基本定理把积分与导数联系起来：若 $F\' = f$，则 $\\int_a^b f = F(b) - F(a)$。'
+          '微积分第二基本定理：若 $f$ 在 $[a,b]$ 连续，$F$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $F\' = f$，则 $\int_a^b f(x)\,dx = F(b) - F(a)$。'
         ],
         intuition: [
           '积分是“无限细分后的求和”：把曲线下的区域切成细长条，用矩形面积求和，再让分割无限细化。',

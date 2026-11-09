@@ -123,13 +123,23 @@
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "extraInsight",
       "text": "微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "ftc-second"
+      ],
+      "note": "第一基本定理在连续性条件下给出变上限积分的导数；第二基本定理用同一条件表达积分与任意原函数的端点差。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "extraExamples",
       "text": "由基本定理，$\\frac{d}{dx}\\ln x=1/x$，且 $\\ln1=0$，因此这与通常的对数定义一致。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "log-inequality"
+      ],
+      "note": "此处 ln 按积分定义 ln x=∫₁ˣdt/t；被积函数在 x>0 连续，第一基本定理给导数，积分上下限相等给 ln 1=0。log-inequality 使用的正是该定义。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
@@ -261,7 +271,7 @@
     {
       "topic": "analysis/integration-calculus",
       "field": "definition",
-      "text": "微积分基本定理把积分与导数联系起来：若 $F' = f$，则 $\\int_a^b f = F(b) - F(a)$。",
+      "text": "微积分第二基本定理：若 $f$ 在 $[a,b]$ 连续，$F$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $F' = f$，则 $int_a^b f(x),dx = F(b) - F(a)$。",
       "status": "needs-statement-review"
     },
     {

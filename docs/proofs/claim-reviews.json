@@ -2172,6 +2172,28 @@
         "squeeze-theorem-real"
       ],
       "note": "对 x≠0 有 |sin(1/x)|≤1，故两侧均趋于 0；应用实函数夹逼定理。函数 sin(1/x) 本身在穿孔邻域无极限，但这不影响夹逼。"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraInsight",
+      "text": "微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "ftc-second"
+      ],
+      "note": "第一基本定理在连续性条件下给出变上限积分的导数；第二基本定理用同一条件表达积分与任意原函数的端点差。"
+    },
+    {
+      "topic": "analysis/fundamental-theorem-calculus",
+      "field": "extraExamples",
+      "text": "由基本定理，$\\frac{d}{dx}\\ln x=1/x$，且 $\\ln1=0$，因此这与通常的对数定义一致。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "ftc-first",
+        "log-inequality"
+      ],
+      "note": "此处 ln 按积分定义 ln x=∫₁ˣdt/t；被积函数在 x>0 连续，第一基本定理给导数，积分上下限相等给 ln 1=0。log-inequality 使用的正是该定义。"
     }
   ]
 }
