@@ -1,5 +1,5 @@
 {
-  "proofCount": 560,
+  "proofCount": 561,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1707,6 +1707,7 @@
       "proofIds": [
         "division-algorithm",
         "fermat-little",
+        "carmichael-561",
         "chinese-remainder"
       ],
       "coverage": "partial",
@@ -2092,7 +2093,8 @@
       "branch": "计算数论",
       "proofIds": [
         "wilson-primality-test",
-        "sieve-trial-factorization-complexity"
+        "sieve-trial-factorization-complexity",
+        "carmichael-561"
       ],
       "coverage": "partial",
       "theoremReview": "pending"

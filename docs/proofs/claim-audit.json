@@ -2105,7 +2105,12 @@
       "topic": "numbertheory/primality-testing",
       "field": "formulaCaptions",
       "text": "费马小定理给出必要条件，但存在伪素数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "fermat-little",
+        "carmichael-561"
+      ],
+      "note": "必要条件仅对 p 素且 a 不被 p 整除成立；561=3·11·17 是合数，却对每个与 561 互素的底数都满足 a^560≡1 (mod 561)，由费马小定理及中国剩余定理证明。"
     },
     {
       "topic": "numbertheory/local-global-principle",

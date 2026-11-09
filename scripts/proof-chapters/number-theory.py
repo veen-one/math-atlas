@@ -1,5 +1,9 @@
 """Elementary number theory through quadratic reciprocity and Liouville."""
 def register(P, BASES):
+    P('carmichael-561','numbertheory/primality-testing numbertheory/congruences','561 是 Carmichael 伪素数',r'561=3·11·17 为合数，但对每个整数 a 与 561 互素，均有 a^560≡1 (mod 561)。','fermat-little chinese-remainder','指数 560 是 3、11、17 各自乘法群阶数 p−1 的公倍数，再由中国剩余定理合并。',
+      r'直接计算 561=3·11·17，三个因子互异素数，所以 561 是合数。若 gcd(a,561)=1，则 a 分别不被 3、11、17 整除。',
+      r'对模 3、11、17 分别应用费马小定理，得到 a²≡1 (mod 3)、a¹⁰≡1 (mod 11)、a¹⁶≡1 (mod 17)。因为 2、10、16 均整除 560，对各同余式取相应整数次幂，得 a⁵⁶⁰ 在三个模数下都同余于 1。',
+      r'模数 3、11、17 两两互素。中国剩余定理说明，一个整数若模这三个数都与 1 同余，就模其乘积 561 与 1 同余。因此 a⁵⁶⁰≡1 (mod 561)。这证明 561 对所有可用费马检验的底数都通过，而非仅对少数底数通过；素数性检验的该必要条件不充分。$\square$')
     P('chinese-remainder','numbertheory/congruences numbertheory/local-global-principle','互素模数的中国剩余定理',r'正整数 m₁,…,m_r 两两互素，则任意剩余类组 a_i 存在唯一模 M=∏m_i 的整数类 x，满足 x≡a_i mod m_i。','bezout euclid-lemma unique-factorization','用贝祖等式制造只在某一个模数下等于一的基向量。',
       r'令 M_i=M/m_i。两两互素及素因子唯一分解说明 gcd(M_i,m_i)=1，故贝祖定理给 b_iM_i≡1 mod m_i。取 x=Σ_i a_i b_iM_i。',
       r'模 m_j 时，i≠j 的 M_i 都含 m_j 因子，故相应项消失，第 j 项等于 a_j。因此所有同余同时满足。',

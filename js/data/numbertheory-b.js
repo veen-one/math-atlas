@@ -411,7 +411,7 @@ window.ATLAS.subjects.numbertheory.branches.push(
         ],
         formulas: [
           {
-            tex: 'a^{n-1} \\equiv 1 \\pmod n\\quad \\text{（费马检验，$n$ 素数时必成立）}',
+            tex: '\\text{$n>1$ 为素数，$\\gcd(a,n)=1$}\\implies a^{n-1}\\equiv 1\\pmod n',
             caption: '费马小定理给出必要条件，但存在伪素数。'
           },
           {

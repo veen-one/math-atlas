@@ -5689,7 +5689,7 @@ window.ATLAS.subjects.numbertheory.branches.push(
         ],
         formulas: [
           {
-            tex: 'a^{n-1} \\equiv 1 \\pmod n\\quad \\text{（费马检验，$n$ 素数时必成立）}',
+            tex: '\\text{$n>1$ 为素数，$\\gcd(a,n)=1$}\\implies a^{n-1}\\equiv 1\\pmod n',
             caption: '费马小定理给出必要条件，但存在伪素数。'
           },
           {
@@ -23421,6 +23421,25 @@ window.ATLAS.proofBook = {
         "反向取在 V(I) 消失的 f。若 f 是零多项式，已在 √I。否则在 k[x,t] 中取 J=(I,1−tf)。若 J 真，弱零点定理给 (a,b) 使所有 I 中多项式在 a 为零，且1−bf(a)=0；但 f 在 V(I) 消失给 f(a)=0，矛盾。因此1∈J。",
         "理想生成的定义给有限恒等式1=Σ_jA_j(x,t)h_j(x)+B(x,t)(1−tf(x))，h_j∈I。在分式域中代入 t=1/f，后一项消失。乘以足够高 f^N 清掉各 A_j(x,1/f) 的分母，得到 f^N=Σ_jC_j(x)h_j(x)∈I。若只需N=0则1∈I，此时也有f∈I；故总能选正整数幂，得到 f∈√I。",
         "两包含给等式。对代数集 X=V(J)，有 V(I(X))=X：一侧因 I(X) 全在 X 消失，另一侧由 J⊆I(X) 得到。对根式理想 I，已证 I(V(I))=I。两运算随包含反向，故给所述对应。$\\square$"
+      ]
+    },
+    {
+      "id": "carmichael-561",
+      "topics": [
+        "numbertheory/primality-testing",
+        "numbertheory/congruences"
+      ],
+      "title": "561 是 Carmichael 伪素数",
+      "statement": "561=3·11·17 为合数，但对每个整数 a 与 561 互素，均有 a^560≡1 (mod 561)。",
+      "dependencies": [
+        "fermat-little",
+        "chinese-remainder"
+      ],
+      "idea": "指数 560 是 3、11、17 各自乘法群阶数 p−1 的公倍数，再由中国剩余定理合并。",
+      "steps": [
+        "直接计算 561=3·11·17，三个因子互异素数，所以 561 是合数。若 gcd(a,561)=1，则 a 分别不被 3、11、17 整除。",
+        "对模 3、11、17 分别应用费马小定理，得到 a²≡1 (mod 3)、a¹⁰≡1 (mod 11)、a¹⁶≡1 (mod 17)。因为 2、10、16 均整除 560，对各同余式取相应整数次幂，得 a⁵⁶⁰ 在三个模数下都同余于 1。",
+        "模数 3、11、17 两两互素。中国剩余定理说明，一个整数若模这三个数都与 1 同余，就模其乘积 561 与 1 同余。因此 a⁵⁶⁰≡1 (mod 561)。这证明 561 对所有可用费马检验的底数都通过，而非仅对少数底数通过；素数性检验的该必要条件不充分。$\\square$"
       ]
     },
     {
