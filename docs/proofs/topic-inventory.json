@@ -1,5 +1,5 @@
 {
-  "proofCount": 551,
+  "proofCount": 554,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -2305,7 +2305,8 @@
       "branch": "一般拓扑",
       "proofIds": [
         "continuous-connected",
-        "intermediate-value"
+        "intermediate-value",
+        "singular-hzero-path-components"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2357,6 +2358,7 @@
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
       "proofIds": [
+        "first-hurewicz-isomorphism",
         "contractible-fundamental-group",
         "covering-path-lift-uniqueness",
         "unknot-complement-fundamental-group",
@@ -2371,6 +2373,7 @@
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
       "proofIds": [
+        "singular-path-chain-relations",
         "chain-homotopy"
       ],
       "coverage": "partial",
@@ -2382,6 +2385,9 @@
       "subject": "几何与拓扑",
       "branch": "代数拓扑",
       "proofIds": [
+        "singular-path-chain-relations",
+        "first-hurewicz-isomorphism",
+        "singular-hzero-path-components",
         "cohomology-d-square-zero",
         "chain-components-h0"
       ],

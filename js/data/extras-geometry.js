@@ -139,7 +139,7 @@ window.ATLAS.extras['geometry/homotopy'] = {
 };
 
 window.ATLAS.extras['geometry/homology-groups-topology'] = {
-  insight: '同调群用 Abel 群度量各维洞；它比基本群易算，Hurewicz 定理把一阶同调与基本群的 Abel 化联系起来。',
+  insight: '同调群用 Abel 群度量各维洞；它比基本群易算，一阶 Hurewicz 定理说明路径连通空间的一阶整数奇异同调与基本群的 Abel 化自然同构。',
   examples: [
     '$H_1(S^1)=\\mathbb{Z}$，$H_2(S^2)=\\mathbb{Z}$。',
     '$H_1(T^2)=\\mathbb{Z}^2$，对应两个独立的环。'

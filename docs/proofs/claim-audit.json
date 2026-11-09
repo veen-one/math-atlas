@@ -2270,14 +2270,26 @@
     {
       "topic": "geometry/homology-groups-topology",
       "field": "formulaCaptions",
-      "text": "一阶同调是基本群的 Abel 化（Hurewicz 定理）。",
-      "status": "needs-statement-review"
+      "text": "路径连通空间的一阶整数奇异同调是基本群的 Abel 化（Hurewicz 定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "singular-path-chain-relations",
+        "first-hurewicz-isomorphism",
+        "singular-hzero-path-components"
+      ],
+      "note": "路径连通空间、整数奇异同调；用连接路径构造H₁到π₁ Abel化的逆映射，证明与选择无关且消去二单形边界。另计算H₀与路径分支。"
     },
     {
       "topic": "geometry/homology-groups-topology",
       "field": "extraInsight",
-      "text": "同调群用 Abel 群度量各维洞；它比基本群易算，Hurewicz 定理把一阶同调与基本群的 Abel 化联系起来。",
-      "status": "needs-statement-review"
+      "text": "同调群用 Abel 群度量各维洞；它比基本群易算，一阶 Hurewicz 定理说明路径连通空间的一阶整数奇异同调与基本群的 Abel 化自然同构。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "singular-path-chain-relations",
+        "first-hurewicz-isomorphism",
+        "singular-hzero-path-components"
+      ],
+      "note": "路径连通空间、整数奇异同调；用连接路径构造H₁到π₁ Abel化的逆映射，证明与选择无关且消去二单形边界。另计算H₀与路径分支。"
     },
     {
       "topic": "geometry/cohomology",

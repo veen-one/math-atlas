@@ -587,7 +587,7 @@ window.ATLAS.subjects.geometry = {
             },
             {
               tex: 'H_1(X) \\cong \\pi_1(X)^{\\mathrm{ab}}',
-              caption: '一阶同调是基本群的 Abel 化（Hurewicz 定理）。'
+              caption: '路径连通空间的一阶整数奇异同调是基本群的 Abel 化（Hurewicz 定理）。'
             },
             {
               tex: '\\beta_n = \\mathrm{rank}\\,H_n',
