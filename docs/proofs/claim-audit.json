@@ -122,13 +122,13 @@
     {
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "extraInsight",
-      "text": "微积分基本定理把“求和”与“求变化率”统一起来，但它的成立依赖 $f$ 的连续性。",
+      "text": "本页采用的经典微积分基本定理以 $f$ 连续为条件。",
       "status": "reviewed-with-proof",
       "proofIds": [
         "ftc-first",
         "ftc-second"
       ],
-      "note": "第一基本定理在连续性条件下给出变上限积分的导数；第二基本定理用同一条件表达积分与任意原函数的端点差。"
+      "note": "限定为本页展示的经典版本；弱条件版本在连续点给导数，另有绝对连续函数形式。"
     },
     {
       "topic": "analysis/fundamental-theorem-calculus",
@@ -154,8 +154,12 @@
     {
       "topic": "analysis/fundamental-theorem-calculus",
       "field": "extraExamples",
-      "text": "这说明基本定理的连续性条件不可省略。",
-      "status": "needs-statement-review"
+      "text": "这说明经典微积分基本定理的处处求导结论不能直接推广到任意黎曼可积函数；它不表示连续性对每个具体函数都是必要条件。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "darboux-derivative"
+      ],
+      "note": "跳跃函数不具备导数的介值性，故没有处处可导的原函数；这反驳任意黎曼可积函数版本，并不证明连续性是逐函数必要条件。"
     },
     {
       "topic": "analysis/cauchy-integral-theorem",
