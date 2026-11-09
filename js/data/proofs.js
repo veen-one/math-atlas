@@ -6017,6 +6017,27 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "measurable-algebra-operations",
+      "topics": [
+        "analysis/measurable-functions",
+        "analysis/lebesgue-integral"
+      ],
+      "title": "可测函数的代数运算封闭性",
+      "statement": "在可测空间 (X,Σ) 上，若有限实值 f,g 可测，则 f+g、f−g、fg、|f|、max(f,g)、min(f,g) 及任意常数倍 cf 都可测。",
+      "dependencies": [
+        "axiom-measure",
+        "pointwise-limit-measurable",
+        "continuous-borel-measurable"
+      ],
+      "idea": "先用有理数阈值表达和函数的上水平集，再用连续函数复合及平方恒等式处理其他运算。",
+      "steps": [
+        "用已证的上水平集判据，函数 h:X→R 可测等价于所有 {h>a} 可测。固定 a∈R。我们证明 {f+g>a}=∪_(q∈Q)({f>q}∩{g>a−q})。若 f(x)+g(x)>a，则 a−g(x)<f(x)，有理稠密性给 q 使 a−g(x)<q<f(x)，故 x 在右侧。反之，右侧某个 q 满足 f(x)>q 且 g(x)>a−q，相加即得 f(x)+g(x)>a。",
+        "右侧是可数个可测集交的并，属于 Σ，所以每个 {f+g>a} 可测，f+g 可测。若 c>0，{cf>a}={f>a/c}；若 c<0，{cf>a}={f<a/c}，而 {f<b}=∪_(r∈Q,r<b){f≤r}=∪_(r∈Q,r<b)(X\\{f>r})，仍可测。c=0 时 cf 是常值零函数，可测。于是 −g 与 f−g 均可测。",
+        "对任意 a，{max(f,g)>a}={f>a}∪{g>a}；且 {min(f,g)>a}={f>a}∩{g>a}，所以最大值与最小值可测。绝对值满足 |f|=max(f,−f)，也可测。",
+        "若 u 可测且 φ:R→R 连续，则 φ∘u 可测：对任意 Borel 集 B，φ⁻¹(B) 是 Borel 集（连续映射的逆像把开集送到开集，并与补、可数并相容）；再由 u 的可测性，u⁻¹(φ⁻¹(B))∈Σ。特别 u² 可测。由恒等式 fg=((f+g)²−(f−g)²)/4，乘积也可测，因为前面已证明平方、差及常数倍保持可测。这里函数有限值，故各代数表达处处有定义；商函数须另处理分母零点。$\\square$"
+      ]
+    },
+    {
       "id": "propositional-completeness",
       "topics": [
         "foundations/propositional-logic",

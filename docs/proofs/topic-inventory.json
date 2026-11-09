@@ -1,5 +1,5 @@
 {
-  "proofCount": 567,
+  "proofCount": 568,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -301,7 +301,8 @@
         "pointwise-limit-measurable",
         "egorov",
         "continuous-borel-measurable",
-        "dirichlet-indicator"
+        "dirichlet-indicator",
+        "measurable-algebra-operations"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -317,6 +318,7 @@
         "integral-linearity",
         "dominated-convergence",
         "dirichlet-indicator",
+        "measurable-algebra-operations",
         "tonelli-fubini"
       ],
       "coverage": "partial",
