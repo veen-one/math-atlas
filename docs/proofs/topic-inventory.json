@@ -1,5 +1,5 @@
 {
-  "proofCount": 497,
+  "proofCount": 500,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3005,6 +3005,7 @@
       "subject": "应用与计算数学",
       "branch": "金融数学",
       "proofIds": [
+        "finite-tree-ftap",
         "binomial-risk-neutral-pricing"
       ],
       "coverage": "partial",
@@ -3016,6 +3017,9 @@
       "subject": "应用与计算数学",
       "branch": "金融数学",
       "proofIds": [
+        "finite-state-ftap",
+        "finite-state-completeness-pricing",
+        "finite-tree-ftap",
         "binomial-risk-neutral-pricing"
       ],
       "coverage": "partial",
@@ -3027,6 +3031,8 @@
       "subject": "应用与计算数学",
       "branch": "金融数学",
       "proofIds": [
+        "finite-state-ftap",
+        "finite-state-completeness-pricing",
         "binomial-risk-neutral-pricing"
       ],
       "coverage": "partial",

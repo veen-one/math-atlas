@@ -2661,13 +2661,13 @@
       "topic": "applied/no-arbitrage-pricing",
       "field": "definition",
       "text": "**无套利原理**：不存在无风险、无初始投入而获得正收益的策略。",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "applied/no-arbitrage-pricing",
-      "field": "extraInsight",
-      "text": "无套利等价于存在风险中性测度；期权价格等于折现收益在该测度下的期望，这是衍生品定价的第一原理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-state-ftap",
+        "finite-state-completeness-pricing",
+        "finite-tree-ftap"
+      ],
+      "note": "有限状态或有限事件树、正无风险资产折现、可自由多空、自融资交易；严格正状态权重与无套利等价，复制定价和测度唯一性分别证明。未声称连续时间一般市场只需普通无套利。"
     },
     {
       "topic": "discrete/permutations-combinations",

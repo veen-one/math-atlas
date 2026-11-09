@@ -243,7 +243,7 @@ window.ATLAS.extras['applied/stochastic-price-models'] = {
 };
 
 window.ATLAS.extras['applied/no-arbitrage-pricing'] = {
-  insight: '无套利等价于存在风险中性测度；期权价格等于折现收益在该测度下的期望，这是衍生品定价的第一原理。',
+  insight: '在有限事件树且可自由多空的市场中，无套利等价于存在等价风险中性测度；可复制收益的折现价格等于其折现收益在任一该测度下的期望。不完备市场的不可复制收益一般不能据此得到唯一价格。',
   examples: [
     'Black–Scholes 欧式看涨价格 $C=S_0N(d_1)-Ke^{-rT}N(d_2)$。',
     '风险中性定价 $V_t=e^{-r(T-t)}\\mathbb{E}^{\\mathbb{Q}}[V_T\\mid\\mathcal{F}_t]$。'
