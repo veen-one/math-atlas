@@ -5444,6 +5444,80 @@ R\textasciicircum{}n 中集合紧致当且仅当闭且有界。
 
 \end{proof}
 
+\begin{theorem}[二形式沿光滑流的导数与 Cartan 恒等式]\label{thm:cartan-two-form-flow}
+
+设X为光滑向量场，φ\_t为其光滑局部流，η为光滑二形式，ι\_Xη定义为(ι\_Xη)(Y)=η(X,Y)。则 d/dt(φ\_t*η)=φ\_t*(L\_Xη)，且 L\_Xη=d(ι\_Xη)+ι\_X(dη)。这里流及拉回只在它们有定义的开集和时段使用。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}微分形式、拉回与外微分定义（约定~\ref{base:def-differential-forms}）
+
+\par\noindent\textbf{思路：}对拉回的坐标表达式求导，然后逐项展开外微分，验证三阶指标抵消。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 在坐标中写η=(1/2)Ση\_ij dx\textasciicircum{}i∧dx\textasciicircum{}j，η\_ij=−η\_ji。拉回系数为Σ\_(a,b)η\_ab(φ\_t(x))∂\_iφ\_t\textasciicircum{}a∂\_jφ\_t\textasciicircum{}b。用∂\_tφ\_t\textasciicircum{}a=X\textasciicircum{}a(φ\_t)及链式法则在t=0求导，得到 (L\_Xη)\_ij=Σ\_k[X\textasciicircum{}k∂\_kη\_ij+(∂\_iX\textasciicircum{}k)η\_kj+(∂\_jX\textasciicircum{}k)η\_ik]。
+
+\item 定义α=ι\_Xη，坐标为α\_j=Σ\_k X\textasciicircum{}kη\_kj。于是(dα)\_ij=Σ\_k[(∂\_iX\textasciicircum{}k)η\_kj−(∂\_jX\textasciicircum{}k)η\_ki+X\textasciicircum{}k(∂\_iη\_kj−∂\_jη\_ki)]。又(ι\_Xdη)\_ij=Σ\_kX\textasciicircum{}k(∂\_kη\_ij+∂\_iη\_jk+∂\_jη\_ki)。二式相加，η\_jk=−η\_kj使两组多余偏导相消，剩余项正是上一段的L\_Xη。
+
+\item 对一般时刻t，利用局部流群律φ\_(t+h)=φ\_h∘φ\_t，拉回反序给φ\_(t+h)*η=φ\_t*(φ\_h*η)。对h在0求导，得导数φ\_t*(L\_Xη)。坐标计算在任意坐标域成立，而两边都是由拉回、外微分和收缩定义的形式，故在交叠坐标域一致，得到流形上的恒等式。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Hamilton 局部流保持辛形式和辛体积]\label{thm:hamiltonian-flow-symplectic}
+
+设(M,ω)为光滑辛流形，H为光滑实函数，Hamilton向量场由ι\_(X\_H)ω=dH定义。其光滑局部流φ\_t在有定义时满足φ\_t*ω=ω，并保持辛定向体积形式ω\textasciicircum{}n/n!。不假定流对所有实时间都存在。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}二形式沿光滑流的导数与 Cartan 恒等式（定理~\ref{thm:cartan-two-form-flow}）；辛变换保持相体积（定理~\ref{thm:symplectic-volume-preservation}）
+
+\par\noindent\textbf{思路：}闭性dω=0和二阶外微分d²H=0使辛形式沿流导数为零。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item ω在每点非退化，映射v↦ω(v,·)是切空间到余切空间的可逆线性映射。因此方程定义唯一X\_H，局部坐标中它由光滑非奇异矩阵求逆作用于dH而得，故光滑。这里结论对给定的光滑局部流证明，不借此断言任意Hamilton流全局完备。
+
+\item Cartan二形式恒等式给L\_(X\_H)ω=d(ι\_(X\_H)ω)+ι\_(X\_H)dω=d(dH)+0=0。标量函数的d²H=0可直接由坐标混合偏导相等看出。于是d/dt(φ\_t*ω)=φ\_t*0=0。每个坐标系数沿时间恒定，在t=0有φ₀=id，所以φ\_t*ω=ω。
+
+\item 局部流的逆为φ\_(−t)，故在相应定义域间是局部微分同胚。拉回与外积可交换，所以φ\_t*(ω\textasciicircum{}n/n!)=(φ\_t*ω)\textasciicircum{}n/n!=ω\textasciicircum{}n/n!。这证明辛体积形式守恒；对可积分区域，相应体积守恒还需通常的积分换元公式。
+
+\item 在标准坐标ω=Σdq\_j∧dp\_j下，ι\_Xω=Σ(q̇\_j dp\_j−ṗ\_j dq\_j)=dH，恰给q̇\_j=∂H/∂p\_j、ṗ\_j=−∂H/∂q\_j，与经典Hamilton方程约定一致。
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[标准相空间 Hamilton 流的 Jacobian 体积证明]\label{thm:liouville-jacobian-flow}
+
+在R\textasciicircum{}(2n)中，C² Hamilton量H的C¹局部流φ\_t若对初值可微且导数满足变分方程，则det Dφ\_t=1。更一般，C¹向量场F的这种局部流满足 det Dφ\_t(x)=exp(∫₀\textasciicircum{}t divF(φ\_s(x))ds)。
+
+\end{theorem}
+
+\noindent\textbf{依赖：}连续系数线性方程在紧时间段的存在唯一性（定理~\ref{thm:linear-ode-existence}）；微积分第二基本定理（定理~\ref{thm:ftc-second}）
+
+\par\noindent\textbf{思路：}变分方程与行列式多线性给Jacobi导数公式，Hamilton向量场的散度由混合偏导抵消。
+
+\begin{proof}
+
+\begin{enumerate}[leftmargin=*]
+
+\item 令J(t)=Dφ\_t(x)，变分方程为J′=DF(φ\_t(x))J，J(0)=I。局部流逆的链式法则给J可逆。行列式导数可从对列多线性展开得到：det(I+hB)=1+h trB+O(h²)，因为仅替换一列的一阶项恰为相应对角元之和，其余至少含两个h。
+
+\item 用J(t+h)=J(t)+hJ′(t)+o(h)，提取J(t)得 (detJ)′=detJ·tr(J⁻¹J′)。代入变分方程，再用有限矩阵tr(AB)=tr(BA)（坐标交换两次求和即可），得到(detJ)′=tr(DF(φ\_t(x)))detJ。乘以exp(−∫₀\textasciicircum{}t divF(φ\_s(x))ds)后导数为零，初值1给所列公式。
+
+\item 对F=(H\_p,−H\_q)，有divF=Σ\_j(∂\_(q\_j)∂\_(p\_j)H−∂\_(p\_j)∂\_(q\_j)H)=0，因为H为C²。故detJ恒为1。这个坐标证明同时展示体积守恒的原因；一般散度零仅保证体积，不反过来保证保持完整辛二形式。
+
+\end{enumerate}
+
+\end{proof}
+
 \begin{theorem}[Lebesgue 积分的平移与缩放]\label{thm:affine-lebesgue-change}
 
 a≠0 时，对非负可测 h，有 ∫h(ax+b)dx=|a|⁻¹∫h(u)du；绝对可积时同样成立。

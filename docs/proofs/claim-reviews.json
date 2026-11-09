@@ -1924,6 +1924,30 @@
         "heine-borel-rn"
       ],
       "note": "仅限有限维欧氏空间R^n；对应证明分别展开紧集闭且有界、闭有界推出紧致两个方向。"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "intuition",
+      "text": "Hamilton 方程的解流是辛同胚（Liouville 定理），这解释了为什么相空间体积在时间演化下守恒。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cartan-two-form-flow",
+        "hamiltonian-flow-symplectic",
+        "liouville-jacobian-flow"
+      ],
+      "note": "对光滑Hamilton向量场的局部流，在其定义域和存在时段证明保持辛形式与体积形式。另给满足变分方程的标准坐标流的Jacobian证明；不主张流全局完备，也未以此证明非挤压定理。"
+    },
+    {
+      "topic": "geometry/symplectomorphisms",
+      "field": "extraExamples",
+      "text": "哈密顿方程的解流是辛同胚（Liouville 定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "cartan-two-form-flow",
+        "hamiltonian-flow-symplectic",
+        "liouville-jacobian-flow"
+      ],
+      "note": "对光滑Hamilton向量场的局部流，在其定义域和存在时段证明保持辛形式与体积形式。另给满足变分方程的标准坐标流的Jacobian证明；不主张流全局完备，也未以此证明非挤压定理。"
     }
   ]
 }
