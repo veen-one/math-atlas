@@ -2194,6 +2194,26 @@
         "log-inequality"
       ],
       "note": "此处 ln 按积分定义 ln x=∫₁ˣdt/t；被积函数在 x>0 连续，第一基本定理给导数，积分上下限相等给 ln 1=0。log-inequality 使用的正是该定义。"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "definition",
+      "text": "加权留数定理：设 $\\Omega\\subset\\mathbb C$ 单连通，$a_1,\\ldots,a_N$ 是其中不同点，$f$ 在 $\\Omega\\setminus\\{a_1,\\ldots,a_N\\}$ 全纯，$\\gamma\\subset\\Omega$ 是避开这些点的分段 $C^1$ 闭曲线，记 $\\operatorname{Ind}(\\gamma,a)=(2\\pi i)^{-1}\\oint_\\gamma dz/(z-a)$，则 $\\oint_\\gamma f(z)\\,dz=2\\pi i\\sum_{j=1}^N\\operatorname{Ind}(\\gamma,a_j)\\operatorname{Res}(f,a_j)$；奇点允许为本性奇点。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weighted-residue-theorem"
+      ],
+      "note": "与本卷命题的单连通域、闭路、有限孤立奇点及绕数定义逐项相同。主部在整个穿孔平面全纯，减去主部后可填补为全纯函数；本卷不把简单闭曲线指数为 0/1 的 Jordan 拓扑结论冒充为已证内容。"
+    },
+    {
+      "topic": "analysis/residues",
+      "field": "formulaCaptions",
+      "text": "加权留数定理（绕数形式）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "weighted-residue-theorem"
+      ],
+      "note": "对应公式显式含 Ind(γ,a_k)，其严谨假设与陈述见同主题定义，并由绕数形式留数定理证明。"
     }
   ]
 }
