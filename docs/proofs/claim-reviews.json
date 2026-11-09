@@ -2516,6 +2516,16 @@
         "projection-closed-subspace"
       ],
       "note": "本卷的详细最小化序列证明明确写在实 Hilbert 空间；唯一最佳逼近与正交余量均已推出。复 Hilbert 版本只在此作概念联系，不声称本条已展开其复内积细节。"
+    },
+    {
+      "topic": "numbertheory/prime-number-theorem",
+      "field": "formulaCaptions",
+      "text": "素数定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "此处短标题所指完整结论为 π(x)∼x/log x（x→∞）；教材命题明确给出计数函数定义并由 θ(x)∼x 的证明链推出，不把切比雪夫界误当成素数定理。"
     }
   ]
 }
