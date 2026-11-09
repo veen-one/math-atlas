@@ -213,6 +213,10 @@ window.ATLAS.proofBook = {
       "title": "依赖选择的基础约定",
       "statement": "允许从非空初始集合出发，在每一步总有下一候选时递归作可数次相依选择。这是常用 ZFC 基础中可用的选择原则，不被当作已经证明的数学定理。"
     },
+    "def-boolean-algebra": {
+      "title": "布尔代数的定义",
+      "statement": "布尔代数为含0、1的有补分配格，运算为有限交∧、有限并∨与补¬。序a≤b指a∧b=a；使用结合、交换、吸收、分配、单位元及互补律。"
+    },
     "def-chain": {
       "title": "链复形、链映射与模的定义",
       "statement": "使用环上的模、模同态与商模的定义。链复形的微分 d_n:C_n→C_(n-1) 满足 d_(n-1)d_n=0；链映射与微分交换；H_n(C)=ker d_n/im d_(n+1)。短正合列在每个次数上要求单射、像等于核、满射。"
@@ -2178,6 +2182,28 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "bounded-minkowski-weyl",
+      "topics": [
+        "geometry/polyhedra",
+        "discrete/polyhedral-methods",
+        "applied/linear-programming"
+      ],
+      "title": "有界 Minkowski–Weyl 定理",
+      "statement": "非空集合 P⊆R^n 是有限个闭半空间之交且有界，当且仅当 P 为有限个点的凸包。前一种描述中，P 的顶点有限，且 P 恰为全部顶点的凸包；不要求 P 有非空内部。",
+      "dependencies": [
+        "fourier-motzkin",
+        "rank-nullity"
+      ],
+      "idea": "若活跃约束不满秩，沿其共同零方向走到两侧边界，把点拆成更高活跃秩的两点凸组合。",
+      "steps": [
+        "设 P={x:Ax≤b} 非空有界。对 x∈P，活跃行为满足 a_iᵀx=b_i 的约束行。若这些行张成全对偶空间，则 x 为顶点：若 x 是两个可行点 y,z 的严格凸组合，活跃不等式在 y,z 上也必须取等号；满秩使 y=z=x。",
+        "若活跃行秩小于n，取非零 v 被全部活跃行消灭。其他约束在 x 处有正松弛，数量有限，因此 x±tv 对充分小 t>0 都可行。可行参数集合 I={t:x+tv∈P} 是含零邻域的闭区间；P 有界使它两端 t_-<0<t_+ 都有限，闭性保证端点属于 I。",
+        "每个端点至少有一个新约束取等号，否则有限个松弛仍正，参数还能继续延伸。新活跃行不消灭 v，而旧活跃行全部消灭 v，所以新行不在旧行张成中，端点的活跃秩至少增加一。又 x=[t_+/(t_+−t_-)](x+t_-v)+[−t_-/(t_+−t_-)](x+t_+v)，系数均正且和为1。",
+        "对两个端点重复以上分解，每一步活跃秩严格增加，最多n层后全变成满秩点。因此每个 x 是有限个顶点的凸组合。反向顶点在 P 内且 P 凸，它们的凸包包含在 P。顶点只有有限个：满秩活跃行可选n条独立行，唯一解对应这个约束子集，而有限约束只有有限个n元子集。若某点活跃秩不满，它已被严格拆成两不同可行点，所以不是顶点。",
+        "反向若 P=conv{v₁,…,v_m}，引入系数 λ_i≥0、Σλ_i=1、x=Σλ_iv_i。它们是 (x,λ) 空间中有限线性等式和非严格不等式，等式可拆为两条不等式。Fourier–Motzkin 消去 λ 后，P 为有限非严格线性不等式的解集，即有限闭半空间之交。并且 ‖x‖≤Σλ_i‖v_i‖≤max_i‖v_i‖，所以有界。n=0 时非空集合只有单点，结论直接成立。$\\square$"
+      ]
+    },
+    {
       "id": "hilbert-orthonormal-basis",
       "topics": [
         "analysis/hilbert-spaces"
@@ -2711,6 +2737,116 @@ window.ATLAS.proofBook = {
         "取 D=Ω∩(Q+iQ)，它可数且在 Ω 稠密。逐点局部有界使 f_n(d) 在复平面有收敛子列。依次对 D 的枚举抽取嵌套子列，第 j 个最终下标取第 j 层子列的足够后项，得到严格递增的对角子列，在 D 每点收敛。若 Ω 空结论直接成立。",
         "固定紧 K 及 ε>0，用第一、二步选 δ>0，使距 K 的 δ 邻域中两个相距≤2δ 的点的函数值差小于 ε/3，统一适用于该子列。由 D 稠密及 K 紧，选有限个 D 中点 d₁,…,d_m，其 δ 球覆盖 K，且都在该邻域。D 点处收敛使充分后的两个子列项在每个 d_i 的值差小于 ε/3。对 x∈K 选邻近 d_i，三角不等式给这两个函数在 x 处值差小于 ε。",
         "故子列在任意紧 K 上一致柯西。复数完备性给每点极限，同一估计令一个下标趋∞，得到紧集上一致收敛。单点紧集保证各 K 的极限彼此相容，定义全域函数 f。紧集上一致极限定理使 f 全纯。这个子列对所有紧集同时有效，因为对角化先在固定稠密集 D 上进行。$\\square$"
+      ]
+    },
+    {
+      "id": "compact-closed-strong-separation",
+      "topics": [
+        "geometry/convex-sets",
+        "applied/duality"
+      ],
+      "title": "紧凸集与闭凸集的严格超平面分离",
+      "statement": "R^n 中不交非空凸集 C,D，若 C 紧而 D 闭，则存在非零 u 与 α<β，使全部 d∈D、c∈C 满足 〈u,d〉≤α<β≤〈u,c〉。特别地闭凸集与集外一点可严格分离。",
+      "dependencies": [
+        "convex-projection",
+        "heine-borel-rn"
+      ],
+      "idea": "对闭凸差集 C−D 求离原点最近的点，投影不等式给统一正间隙。",
+      "steps": [
+        "K=C−D 非空且凸。它闭：若 c_j−d_j→z，紧性使某子列 c_j→c∈C，则 d_j=c_j−(c_j−d_j)→c−z，D 闭使 c−z∈D，所以 z∈K。",
+        "因为 C,D 不交，0∉K。闭凸投影定理给 K 中离0最近点 u，且 u≠0。其变分不等式 〈−u,z−u〉≤0 对所有 z∈K 成立，故 〈u,z〉≥‖u‖²。代入 z=c−d 得 〈u,c〉−〈u,d〉≥‖u‖²>0。",
+        "令 β=min_(c∈C)〈u,c〉，紧性保证最小值存在。取达到最小值的 c，可得全部 d 满足 〈u,d〉≤β−‖u‖²。令 α=β−‖u‖²，则 α<β，得到严格分离。C 为单点时仍紧，给点与闭凸集的特例。$\\square$"
+      ]
+    },
+    {
+      "id": "finitely-generated-cone-closed",
+      "topics": [
+        "geometry/convex-sets",
+        "applied/linear-programming"
+      ],
+      "title": "有限生成凸锥是闭集",
+      "statement": "给定实向量 v₁,…,v_m，锥 K={Σ_i t_iv_i:t_i≥0} 为闭凸集。",
+      "dependencies": [
+        "basis-extension",
+        "finite-norm-equivalence"
+      ],
+      "idea": "把每个锥表示约成线性无关支持；有限个支持中取固定一组，系数由连续线性逆恢复。",
+      "steps": [
+        "凸性与锥性由非负系数直接验证。每个 z∈K 可取线性无关正支持的表示：若当前正系数支持的 v_i 相关，取非零关系 Σs_iv_i=0，变号使某 s_i>0，令 λ=min_(s_i>0)t_i/s_i。把系数改为 t_i−λs_i，不改向量，所有系数仍非负，且至少一个正系数变零。有限次重复后支持无关。",
+        "设 z_j∈K 且 z_j→z。所有可能支持有限，取一个无限子列使上述无关支持 S 固定；若所取子列的支持为空则极限为0，直接在K。固定支持的列矩阵 V_S 满列秩，Gram 矩阵 V_SᵀV_S 正定可逆，因为 tᵀV_SᵀV_St=‖V_St‖²>0 对 t≠0。",
+        "相应非负系数为 t_j=(V_SᵀV_S)⁻¹V_Sᵀz_j，连续性使它趋于 t≥0。于是 z=V_St∈K，证明序列闭；有限维度量空间中序列闭等价闭，故 K 闭。$\\square$"
+      ]
+    },
+    {
+      "id": "farkas-alternative",
+      "topics": [
+        "applied/linear-programming",
+        "applied/duality",
+        "geometry/convex-sets"
+      ],
+      "title": "Farkas 引理的等式—非负锥形式",
+      "statement": "对实矩阵 A 与向量 b，下列恰有一个成立：(1) 存在 x≥0 使 Ax=b；(2) 存在 y 使 Aᵀy≥0 且 bᵀy<0。",
+      "dependencies": [
+        "finitely-generated-cone-closed",
+        "convex-projection"
+      ],
+      "idea": "若目标点不在列锥内，对它到该闭凸锥的投影残差取负，即得不可行性证书。",
+      "steps": [
+        "令 K 为 A 各列生成的非负锥，已证闭凸。若 b∈K，第一式成立；此时对任何 Aᵀy≥0，有 bᵀy=xᵀAᵀy≥0，所以第二式不可能成立。",
+        "若 b∉K，取 p=P_Kb，令 v=b−p≠0。投影变分不等式给 〈v,c−p〉≤0 对全部 c∈K。由于0与2p都在K，分别代入得 〈v,p〉≥0 与 ≤0，因此 〈v,p〉=0，遂 〈v,c〉≤0 对全部 c∈K。",
+        "令 y=−v，A 的每列都在K，故 Aᵀy≥0；同时 bᵀy=−〈p+v,v〉=−‖v‖²<0，第二式成立。两种情况穷尽且互斥，得到替代定理。$\\square$"
+      ]
+    },
+    {
+      "id": "dilworth-finite",
+      "topics": [
+        "discrete/partial-orders"
+      ],
+      "title": "有限偏序集的 Dilworth 定理",
+      "statement": "有限偏序集 P 的最少链覆盖数等于最大反链大小。可要求链覆盖为互不交的链分割。",
+      "dependencies": [
+        "hall-konig"
+      ],
+      "idea": "把严格可比关系写成二部图；匹配给链分割，顶点覆盖给同样大小的反链。",
+      "steps": [
+        "令 |P|=n。建立左右各一份 P 的二部图，x_L 与 y_R 相连当且仅当 x<y。取最大匹配 M，大小 m。将每条匹配边视为 P 上箭头 x→y；每点入度、出度至多一，且严格偏序不允许有向环，所以箭头分解成互不交的有向路径及孤立点。每条路径上的点按传递性组成链。n 个点、m 条箭头给 n−m 条链，得到该大小的链分割。",
+        "König 等式给此二部图一个大小 m 的顶点覆盖 C。令 A 为左右副本均不属于 C 的元素集合。覆盖的 m 个顶点最多涉及 m 个原元素，所以 |A|≥n−m。若 A 中有 x<y，则边 x_Ly_R 的两个端点都不在 C，违反覆盖，故 A 为反链。",
+        "任一反链在任一链内至多含一个点，所以任意链覆盖数都至少为最大反链大小。前两步已给 n−m 条链及至少 n−m 个反链元素，二者只能相等。空偏序集时 m=n=0，同样成立。$\\square$"
+      ]
+    },
+    {
+      "id": "lovasz-local-lemma-symmetric",
+      "topics": [
+        "discrete/probabilistic-method"
+      ],
+      "title": "对称 Lovász 局部引理",
+      "statement": "有限事件 A₁,…,A_N 有依赖图，最大度≤d；依赖图指每个 A_i 与全部非邻居事件生成的 σ 代数独立。若 P(A_i)≤p，且存在 0<x<1 使 p≤x(1−x)^d，则 P(∩_i A_i^c)≥(1−x)^N>0。",
+      "dependencies": [
+        "conditional-tower",
+        "integral-linearity"
+      ],
+      "idea": "对条件坏事件概率作集合大小归纳，使逐项排除坏事件的概率保持正下界。",
+      "steps": [
+        "证明对任何 i∉S，都有 P(A_i | ∩_(j∈S)A_j^c)≤x，且这些条件事件概率正。空 S 时 P(A_i)≤p≤x，条件概率为一的全集上定义良好。按 |S| 归纳；由较小集合的条件概率界，任意 k 个事件的补交概率可分解为 k 个至少1−x的条件因子，故为正。这先保证当前分母有定义。",
+        "把 S 分为 i 的邻居 S₁ 与非邻居 S₂。若 S₁ 为空，依赖图定义直接给条件概率=P(A_i)≤p≤x。若 S₁ 非空，令 B=∩_(j∈S₂)A_j^c、C=∩_(j∈S₁)A_j^c，则 P(A_i|B∩C)≤P(A_i|B)/P(C|B)。分子由独立性≤p；分母按 S₁ 逐项展开，每项所条件化的集合最多 |S|−1 个事件，归纳假设使每项≥1−x。因此 P(C|B)≥(1−x)^(|S₁|)。",
+        "于是条件坏事件概率≤p/(1−x)^(|S₁|)≤p/(1−x)^d≤x，归纳完成。最后对全部补事件逐项分解，N 个因子均≥1−x，给总概率下界。这一证明要求与非邻居事件的联合信息独立；仅逐对独立不足以替代该条件。$\\square$"
+      ]
+    },
+    {
+      "id": "lovasz-epd-criterion",
+      "topics": [
+        "discrete/probabilistic-method"
+      ],
+      "title": "局部引理的 e p(d+1)≤1 判据",
+      "statement": "在对称局部引理的相同依赖图条件下，若 e p(d+1)≤1，则全部坏事件同时不发生的概率为正。",
+      "dependencies": [
+        "lovasz-local-lemma-symmetric",
+        "log-inequality"
+      ],
+      "idea": "取 x=1/(d+1)，用对数估计把精确条件化为常用数值判据。",
+      "steps": [
+        "若 d≥1，令 x=1/(d+1)。由 log(1+1/d)≤1/d，得 (d/(d+1))^d≥e^(−1)。因此 x(1−x)^d≥1/[e(d+1)]≥p，满足精确局部引理条件。",
+        "若 d=0，数值条件使 p≤1/e<1。取任意 p≤x<1 且 x>0，例如 x=(1+p)/2，则 p≤x(1−x)^0，仍可应用精确引理。两种情形都得到正概率存在性。$\\square$"
       ]
     },
     {
@@ -3944,6 +4080,65 @@ window.ATLAS.proofBook = {
         "快速衰减使无穷端 x|f(x)|² 为零。对其导数积分，得 ∫|f|²=-2Re∫x f′ overline(f)。所以 ‖f‖₂²≤2‖xf‖₂‖f′‖₂。",
         "由 Fourier 导数公式及 Plancherel，‖f′‖₂=‖ωfhat‖₂/√(2π)，代入得到不等式。",
         "平移 f 改变位置均值而不改变位置方差；乘 exp(iω₀x) 使 Fourier 变量平移，改变频率均值而不改变频率方差。这两公式由定义及仿射换元直接得到。对中心化后的函数用前式，并按空间密度 |f|²/‖f‖₂² 与频率密度 |fhat|²/(2π‖f‖₂²) 计算标准差，即得乘积至少 1/2。$\\square$"
+      ]
+    },
+    {
+      "id": "vector-segment-derivative-bound",
+      "topics": [
+        "analysis/multivariable-calculus"
+      ],
+      "title": "C¹ 映射的线段导数估计",
+      "statement": "若 F 在 R^n 的凸开集内 C¹，且线段 [x,y] 上算子范数 ‖DF‖≤L，则 ‖F(y)−F(x)‖≤L‖y−x‖。若 ‖DF−A‖≤ε，同样有 ‖F(y)−F(x)−A(y−x)‖≤ε‖y−x‖。",
+      "dependencies": [
+        "ftc-second",
+        "complex-cauchy-schwarz"
+      ],
+      "idea": "沿连接线段逐坐标使用基本定理，再用单位方向投影估计向量积分。",
+      "steps": [
+        "令 γ(t)=x+t(y−x)。可微的线性逼近与实参数差商复合，给 dF(γ(t))/dt=DF(γ(t))(y−x)。逐实坐标应用微积分基本定理，得到 F(y)−F(x)=∫₀¹DF(γ(t))(y−x)dt。",
+        "对欧氏向量积分 I，若 I≠0，取单位向量 u=I/‖I‖，则 ‖I‖=〈I,u〉=∫〈v(t),u〉dt≤∫‖v(t)‖dt；I=0 时也成立。因此所列导数界给第一估计。把 F 替成 F(z)−Az 得第二估计。$\\square$"
+      ]
+    },
+    {
+      "id": "inverse-function-rn",
+      "topics": [
+        "analysis/multivariable-calculus",
+        "geometry/smooth-manifolds"
+      ],
+      "title": "有限维 C¹ 逆函数定理",
+      "statement": "开集 Ω⊆R^n 上 F 为 C¹，a∈Ω 且 DF(a) 可逆。则存在 a 的开邻域 U 与 F(a) 的开邻域 V，使 F:U→V 为 C¹ 双射，且 D(F⁻¹)(y)=[DF(F⁻¹(y))]⁻¹。",
+      "dependencies": [
+        "vector-segment-derivative-bound",
+        "banach-contraction",
+        "banach-neumann-series",
+        "finite-norm-equivalence"
+      ],
+      "idea": "先把导数归一成单位矩阵，再把 F(x)=y 写成闭球上的压缩不动点问题。",
+      "steps": [
+        "平移自变量与函数值，并左乘 A⁻¹、A=DF(a)，可归约到 a=0、F(0)=0、DF(0)=I。原定理的开邻域和导数公式可在最后经这些可逆仿射映射还原。由 DF 连续，取 r>0 使闭球 B̄(0,r)⊂Ω 且其上 ‖DF(x)−I‖≤q<1。",
+        "对参数 y，定义 T_y(x)=x−F(x)+y。线段导数估计给 ‖T_y(x)−T_y(z)‖≤q‖x−z‖。又 T_y(0)=y，故当 ‖y‖<(1−q)r/2 时，‖T_y(x)‖≤qr+‖y‖<r 对闭球内 x 成立。因此 T_y 把该完备闭球映入自身且压缩，Banach 定理给唯一固定点 g(y)，即 F(g(y))=y。",
+        "对闭球内任意 x,z，估计 F−I 得 ‖F(x)−F(z)‖≥(1−q)‖x−z‖，故 F 在球内单射。令 V=B(0,(1−q)r/2)、U=F⁻¹(V)∩B(0,r)，U 因连续性而开。固定点满足 ‖g(y)‖≤‖y‖/(1−q)<r/2，所以在 U 内，且 F:U→V 双射。上述下界还给 ‖g(y)−g(v)‖≤‖y−v‖/(1−q)，逆连续且 Lipschitz。",
+        "每个 x∈U 有 ‖DF(x)−I‖≤q<1，Neumann 级数使 DF(x) 可逆，逆范数≤1/(1−q)。固定 y、x=g(y)，令 k=g(y+h)−x，逆的 Lipschitz 界给 ‖k‖=O(‖h‖)。F 的可微性给 h=DF(x)k+o(‖k‖)，左乘固定 DF(x)⁻¹，便得 k=DF(x)⁻¹h+o(‖h‖)，故 g 可微且导数如述。",
+        "逆矩阵连续性可直接由 B⁻¹−C⁻¹=B⁻¹(C−B)C⁻¹ 及统一逆范数界得到。结合 DF、g 连续，Dg(y)=DF(g(y))⁻¹ 连续，所以 g 为 C¹。还原平移及 A 的变换即得一般结论。$\\square$"
+      ]
+    },
+    {
+      "id": "implicit-function-rn",
+      "topics": [
+        "analysis/multivariable-calculus",
+        "geometry/smooth-manifolds"
+      ],
+      "title": "有限维 C¹ 隐函数定理",
+      "statement": "设 F:Ω⊆R^m×R^n→R^n 为 C¹，F(a,b)=0，D_yF(a,b) 可逆。则在 (a,b) 的某乘积邻域，F(x,y)=0 当且仅当 y=φ(x)，其中 φ 为唯一局部 C¹ 函数，且 Dφ(x)=−[D_yF(x,φ(x))]⁻¹D_xF(x,φ(x))。",
+      "dependencies": [
+        "inverse-function-rn"
+      ],
+      "idea": "把参数坐标保留，构造 G(x,y)=(x,F(x,y))，将零水平集变成逆映射的切片。",
+      "steps": [
+        "令 G(x,y)=(x,F(x,y))，其导数作用为 (h,k)↦(h,D_xFh+D_yFk)。在 (a,b)，给定目标 (u,v) 可唯一取 h=u、k=(D_yF)⁻¹(v−D_xFu)，故 DG 可逆。逆函数定理使 G 在某开邻域 U 上有 C¹ 逆，像为 (a,0) 的开邻域 V。",
+        "由于 G 的第一坐标就是 x，逆必形如 G⁻¹(u,v)=(u,ψ(u,v))。取 a 的足够小邻域 A，使 (x,0)∈V，并令 φ(x)=ψ(x,0)，得到 C¹ 函数，φ(a)=b 且 F(x,φ(x))=0。",
+        "取含 (a,b) 的小乘积邻域 A₀×B₀⊂U，再缩小 A₀，使 φ(A₀)⊂B₀ 且 (x,0)∈V。若 (x,y) 在该乘积邻域且 F(x,y)=0，则 G(x,y)=(x,0)=G(x,φ(x))，局部单射性迫使 y=φ(x)，反向已知，故存在与唯一性均成立。",
+        "D_yF 在此邻域内仍可逆，可由逆矩阵的小扰动公式保证，必要时再缩小邻域。对恒等式 F(x,φ(x))=0 求导，链式线性逼近给 D_xF+D_yF·Dφ=0，左乘 (D_yF)⁻¹ 得所列公式。$\\square$"
       ]
     },
     {
@@ -7036,6 +7231,46 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "polyhedral-cone-finite-generation",
+      "topics": [
+        "geometry/polyhedra",
+        "geometry/convex-sets",
+        "discrete/polyhedral-methods"
+      ],
+      "title": "有限线性不等式锥可有限生成",
+      "statement": "若 K={x∈R^n:Ax≤0}，则存在有限向量 v₁,…,v_m，使 K={Σ_jλ_jv_j:λ_j≥0}。零锥可用空生成族表示。",
+      "dependencies": [
+        "bounded-minkowski-weyl"
+      ],
+      "idea": "按有限个坐标正交象限分片，在每片用绝对坐标和等于一截出有界截面。",
+      "steps": [
+        "对每个符号向量 ε∈{−1,1}^n，令 K_ε=K∩{ε_ix_i≥0 对所有i}。该象限内 ℓ_ε(x)=Σ_iε_ix_i=Σ_i|x_i|，所以对非零 x∈K_ε，ℓ_ε(x)>0，且 x/ℓ_ε(x) 属于截面 P_ε={x∈K_ε:ℓ_ε(x)=1}。",
+        "每个 P_ε 是有限闭半空间之交，等式可拆为两不等式；并有 |x_i|≤1，所以有界。若非空，由有界 Minkowski–Weyl，它是有限点集 V_ε 的凸包。于是 K_ε 中任意非零 x 是 V_ε 的非负线性组合：把其归一化凸组合乘以 ℓ_ε(x)。零向量由全零系数给出。若截面为空，该片只有零。",
+        "全部2^n个象限覆盖 R^n，合并有限个 V_ε 得有限族 V，所有 K 中向量都在 cone(V)。反向 V⊆K，而 K 对非负线性组合封闭，所以 cone(V)⊆K。n=0 时只有零向量，直接成立。$\\square$"
+      ]
+    },
+    {
+      "id": "minkowski-weyl-general",
+      "topics": [
+        "geometry/polyhedra",
+        "discrete/polyhedral-methods",
+        "applied/linear-programming"
+      ],
+      "title": "一般 Minkowski–Weyl 定理",
+      "statement": "非空 P⊆R^n 是有限闭半空间之交，当且仅当存在非空有限点集 V 与有限方向集 R，使 P=conv(V)+cone(R)。方向集允许为空；点集中的点不必全是顶点。",
+      "dependencies": [
+        "polyhedral-cone-finite-generation",
+        "fourier-motzkin"
+      ],
+      "idea": "把仿射不等式齐次化为高一维锥，按生成向量首坐标为正或零拆出点与衰退方向。",
+      "steps": [
+        "设 P={x:Ax≤b} 非空。在 R×R^n 中定义锥 K={(t,x):t≥0，Ax≤tb}，由有限齐次线性不等式描述。有限生成定理给 K=cone{(t_j,x_j)}，每个 t_j≥0。将指标分为 J_+={j:t_j>0} 与 J₀={j:t_j=0}。",
+        "因为 P 非空，K 中有首坐标为1的点，所以 J_+ 非空。令 V={x_j/t_j:j∈J_+}、R={x_j:j∈J₀}。对 x∈P，写 (1,x)=Σ_jλ_j(t_j,x_j)，λ_j≥0。比较首坐标得 Σ_(j∈J_+)λ_jt_j=1，所以 x 是 V 的凸组合再加 R 的非负线性组合。",
+        "反向，若 x=Σ_(j∈J_+)α_j(x_j/t_j)+Σ_(j∈J₀)β_jx_j，其中 α,β≥0、Σα=1，则 (1,x)=Σ_(j∈J_+)(α_j/t_j)(t_j,x_j)+Σ_(j∈J₀)β_j(0,x_j)∈K。因此 Ax≤b，得到 P=conv(V)+cone(R)。",
+        "反方向给定有限 V={v_i}、R={r_j}，以变量 α_i,β_j 写 x=Σ_iα_iv_i+Σ_jβ_jr_j、α_i≥0、β_j≥0、Σ_iα_i=1。它们是有限线性等式与不等式。消去 α,β 的 Fourier–Motzkin 定理给 x 的有限非严格线性不等式描述，正是所需半空间交。若 P 含整条直线，R 可包含相反方向，证明仍适用。$\\square$"
+      ]
+    },
+    {
       "id": "psi-theta-error",
       "topics": [
         "numbertheory/prime-counting",
@@ -7960,6 +8195,25 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "stone-boolean-embedding",
+      "topics": [
+        "discrete/boolean-algebras"
+      ],
+      "title": "Stone 表示：布尔代数嵌入幂集代数",
+      "statement": "每个布尔代数 B 都同构于某个幂集代数 P(X) 的布尔子代数；并不声称它同构于整个 P(X)。",
+      "dependencies": [
+        "axiom-zorn",
+        "axiom-set",
+        "def-boolean-algebra"
+      ],
+      "idea": "用所有超滤作点；一个元素对应于包含它的超滤集合，超滤足以分离不同元素。",
+      "steps": [
+        "先设0≠1。B 的真滤子含1、不含0、向上封闭且对有限交封闭。任意非零 a 生成真滤子 {b:a≤b}。包含该滤子的真滤子按包含排序，链的并仍为真滤子，Zorn 给极大真滤子 U。若 b∉U，加入 b 后不能生成真滤子，所以存在 c∈U 满足 c∧b=0；于是 c≤¬b，得到 ¬b∈U。另一方面 b、¬b 不可同时在 U。因此每个 U 对任意 b 恰选 b、¬b 之一。",
+        "令 X 为全部极大真滤子组成的集合，Φ(b)={U∈X:b∈U}。滤子公理给 Φ(0)=空集、Φ(1)=X、Φ(b∧c)=Φ(b)∩Φ(c)，二选一性质给 Φ(¬b)=X\\Φ(b)，再由 De Morgan 律得到 Φ(b∨c)=Φ(b)∪Φ(c)。所以像是 P(X) 的布尔子代数，Φ 保持全部布尔运算。",
+        "若 b≠c，则至少一个 b∧¬c、c∧¬b 非零，否则 b≤c 且 c≤b。对这个非零元素选包含它的极大真滤子，便有其中一个属于该滤子、另一个不属于。因此 Φ(b)≠Φ(c)，Φ 单射，并按定义满射到它的像，故为与该子代数的同构。若 B 平凡即0=1，取 X为空集，P(X) 只有一个元素，直接得到同构。$\\square$"
+      ]
+    },
+    {
       "id": "dominated-optional-stopping",
       "topics": [
         "probability/stopping-times",
@@ -8483,6 +8737,45 @@ window.ATLAS.proofBook = {
       ]
     },
     {
+      "id": "finite-ramsey-two-colors",
+      "topics": [
+        "discrete/extremal-combinatorics"
+      ],
+      "title": "有限双色 Ramsey 定理与二项式上界",
+      "statement": "对正整数 s,t，存在 R(s,t)，使任何至少 R(s,t) 顶点的简单图含 s 顶点完全子图或 t 顶点独立集。且 R(s,t)≤binom(s+t−2,s−1)。",
+      "dependencies": [
+        "binomial-count",
+        "axiom-natural"
+      ],
+      "idea": "对一个顶点的邻点与非邻点分别归纳；Pascal 恒等式解出递推上界。",
+      "steps": [
+        "s=1 或 t=1 时任意单顶点图即满足结论，上界为1。对 s,t≥2，设 A=binom(s+t−3,s−2)、B=binom(s+t−3,s−1)，归纳假设已对 (s−1,t) 与 (s,t−1) 成立。取 A+B 个顶点的任意图及一点 v，其余 A+B−1 点分成 v 的邻点与非邻点。",
+        "若邻点至少 A 个，在其中应用 (s−1,t) 结论：若有 t 独立点已经完成；若有 s−1 完全子图，添入 v 得 s 完全子图。若邻点不足 A，则非邻点至少 B 个，在其中应用 (s,t−1) 结论：若有 s 完全子图已经完成；若有 t−1 独立点，添入 v 得 t 独立点。",
+        "所以 A+B 个顶点足够；Pascal 恒等式给 A+B=binom(s+t−2,s−1)，完成对 s+t 的归纳。更多顶点时取这一数量的诱导子图即可。满足性质的正整数集合非空，良序性保证最小值 R(s,t) 存在。$\\square$"
+      ]
+    },
+    {
+      "id": "turan-general",
+      "topics": [
+        "discrete/extremal-combinatorics"
+      ],
+      "title": "Turán 定理：禁止完全子图的精确极值",
+      "statement": "对整数 r≥1、n≥0，不含 K_(r+1) 的 n 顶点简单图至多有 t_r(n) 条边，其中 t_r(n) 是将 n 个顶点尽量均分为 r 部的完全多部图边数。若 n=qr+s、0≤s<r，则 t_r(n)=[n²−s(q+1)²−(r−s)q²]/2。",
+      "dependencies": [
+        "handshake",
+        "axiom-finite"
+      ],
+      "idea": "在所有极值图中再最大化度数平方和，克隆非相邻顶点迫使它们邻域相同。",
+      "steps": [
+        "固定 n,r，有限个标号图中选不含 K_(r+1) 且边数最大的图 G，再在这些图中选 Σ_vdeg(v)² 最大者。对非相邻 u,v，把 u 的邻域改成 v 的邻域称为将 u 克隆为 v。该操作不产生被禁团：新团若含 u，就不含 v，且把 u 换成 v 得到原图同样大的团；若不含 u，原图中已存在。",
+        "若 deg(u)<deg(v)，将 u 克隆为 v 会增加边数，违背极值性。反向同理，所以任意非相邻 u,v 都有相同度数 d。若它们的邻域不同，令 A=N(u)\\N(v)、B=N(v)\\N(u)，两者大小相同且至少一个非空。",
+        "克隆 u 为 v 后，A 中各点度减1，B 中各点度加1，u 的度仍为 d，其余点度不变。因此度平方和变化为 D₁=Σ_(w∈A)(−2deg(w)+1)+Σ_(w∈B)(2deg(w)+1)。反向克隆 v 为 u 的变化为 D₂=Σ_(w∈A)(2deg(w)+1)+Σ_(w∈B)(−2deg(w)+1)。二者相加为2(|A|+|B|)>0，至少一个为正，违背第二重极值性。因此非相邻顶点必须有相同邻域。",
+        "定义 u~v 当且仅当 u=v 或 u,v 非相邻。对不同的 u,v,w，若 u~v、v~w，则 N(u)=N(v)=N(w)，若 u 与 w 相邻，w∈N(u)=N(v)，与 v,w 非相邻矛盾。因此关系传递，给等价类分割。每类内部无边，不同类间全部相邻，G 是完全多部图。若有超过 r 个非空部，各选一点即有 K_(r+1)，所以部数≤r。",
+        "允许补空部至 r 部，部大小 n₁,…,n_r 的边数为 Σ_(i<j)n_i n_j=(n²−Σ_i n_i²)/2。若 n_i≥n_j+2，将一个顶点从 i 部移到 j 部，平方和减少2(n_i−n_j−1)>0，所以边数增加，仍是不含 K_(r+1) 的完全 r 部图，与极值性矛盾。故极值部大小只能相差至多1，恰为 s 个 q+1 与 r−s 个 q。",
+        "代入即得 t_r(n) 公式。这样的平衡完全 r 部图确实不存在 K_(r+1)，并达到该边数，所以这是精确最大值。n=0 或 r=1 的退化情形也由同一公式给出零边数。该证明构造一个达到上界的极值结构，不在此另行断言全部等号图的分类。$\\square$"
+      ]
+    },
+    {
       "id": "ultrafilter-extension",
       "topics": [
         "foundations/compactness",
@@ -8541,6 +8834,45 @@ window.ATLAS.proofBook = {
         "若 T 有模型，它显然满足 T 的每个有限子集。反向设全部有限子理论可满足，令 I 为 T 的全部有限子集组成的集合，含空集。由集合论收集与选择，给每个 Δ∈I 选一个同语言结构 M_Δ⊨Δ；这一步是在元理论 ZFC 中选择集合族模型，不是声称选择模型可计算。",
         "对每个句子 σ∈T，令 I_σ={Δ∈I:σ∈Δ}。任意有限个这样的集合有非空交，因为取包含这几条句子的有限理论自身即可。若 T 为空，这个族为空，仍有有限交性质，空交为 I。超滤扩张定理给 I 上包含全部 I_σ 的超滤 U。",
         "构造超积 M=∏_UM_Δ。固定 σ∈T，坐标真集 {Δ:M_Δ⊨σ} 包含 I_σ，因而属于 U。Łoś 定理给 M⊨σ。对每条 σ 均成立，所以 M⊨T，紧致性得证。$\\square$"
+      ]
+    },
+    {
+      "id": "convex-closure-interior",
+      "topics": [
+        "geometry/convex-sets"
+      ],
+      "title": "有限维凸集闭包的内部包含于原集",
+      "statement": "若 K⊆R^n 凸，则 int(closure K)⊆K。特别地，若 0∉K 却 0∈closure K，则 0 是 closure K 的边界点。",
+      "dependencies": [
+        "banach-neumann-series",
+        "axiom-vector"
+      ],
+      "idea": "围绕目标点取一个内部包含它的单纯形，再把顶点微扰到 K 内；正重心坐标在小扰动下保持正。",
+      "steps": [
+        "若 x∈int(closure K)，平移使 x=0。n=0 时结论直接成立；设 n≥1。取 ε>0，使顶点 v₀=−εΣ_(i=1)^ne_i、v_i=εe_i（1≤i≤n）都在 closure K 内部。它们仿射无关，且0的重心坐标全部为1/(n+1)。",
+        "把每个 v_i 的坐标末尾添1，得到可逆的 (n+1) 阶矩阵 V。因 v_i∈closure K，可取 k_i∈K 任意靠近 v_i。对应增广列矩阵 W 任意靠近 V；Neumann 小扰动逆公式给 W 可逆且 W⁻¹→V⁻¹。",
+        "因此解 Wλ=(0,…,0,1)ᵀ 的各坐标 λ_i 都可保证严格正，并满足 Σλ_i=1、Σλ_i k_i=0。凸性使0∈K，证明内部包含式。若0∈closure K但0∉K，由已证结论0不能是闭包内部点；闭集中的非内部点即边界点。$\\square$"
+      ]
+    },
+    {
+      "id": "finite-dimensional-weak-separation",
+      "topics": [
+        "geometry/convex-sets",
+        "applied/duality"
+      ],
+      "title": "有限维不交凸集的弱超平面分离",
+      "statement": "R^n 中任意不交非空凸集 C,D，存在非零 u 与实数 α，使对全部 c∈C、d∈D 有 〈u,d〉≤α≤〈u,c〉。这里不保证严格间隙；严格版本需要附加条件。",
+      "dependencies": [
+        "convex-closure-interior",
+        "convex-projection",
+        "finite-dimensional-compactness"
+      ],
+      "idea": "对差集闭包，若原点在外则直接投影；若原点在边界，则用外点的最近点法向量取极限。",
+      "steps": [
+        "令 K=C−D，凸且0∉K，令 H=closure K，仍凸且闭。如果0∉H，投影 p=P_H0 非零，变分不等式给 〈p,z〉≥‖p‖²>0 对全部 z∈H，故取 u=p 有 〈u,c−d〉≥0。",
+        "若0∈H，前一引理使0为 H 的边界。取外点 y_j∉H 且 y_j→0，令 p_j=P_Hy_j、u_j=(p_j−y_j)/‖p_j−y_j‖。因0∈H，最小距离≤‖y_j‖，所以 ‖p_j‖≤2‖y_j‖→0。投影不等式给 〈u_j,z−p_j〉≥0 对全部 z∈H。",
+        "单位球面紧，取子列 u_j→u、‖u‖=1。对任意固定 z∈H 取极限，得 〈u,z〉≥0。该同一子列适用于每个固定 z，因此对全部 z 成立，特别对 z=c−d 有 〈u,c〉≥〈u,d〉。",
+        "两种情形都得到非零 u 及上述逐对不等式。固定 c₀∈C 给 sup_D〈u,d〉≤〈u,c₀〉，固定 d₀∈D 给 inf_C〈u,c〉≥〈u,d₀〉，因此两个界皆有限且 sup_D≤inf_C。任选二者之间 α，得到所列分离。n=0 时不存在不交非空凸集，定理没有待处理实例。$\\square$"
       ]
     }
   ]

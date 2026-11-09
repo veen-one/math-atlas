@@ -99,7 +99,7 @@ window.ATLAS.extras['discrete/lattices'] = {
 };
 
 window.ATLAS.extras['discrete/boolean-algebras'] = {
-  insight: '布尔代数是有补分配格；Stone 表示定理说明它同构于某个幂集代数。',
+  insight: '布尔代数是有补分配格；Stone 表示定理说明它同构于某个幂集代数的布尔子代数。',
   examples: [
     '$\\{0,1\\}$ 在 $\\vee,\\wedge,\\neg$ 下构成二元布尔代数。',
     '德摩根律 $\\neg(a\\vee b)=\\neg a\\wedge\\neg b$。'

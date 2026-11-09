@@ -2327,37 +2327,71 @@
       "topic": "geometry/convex-sets",
       "field": "definition",
       "text": "分离定理：两个不交的凸集可以被超平面分离。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-dimensional-weak-separation",
+        "compact-closed-strong-separation",
+        "farkas-alternative"
+      ],
+      "note": "此处对象为有限维欧氏空间凸集，一般只能弱分离；一侧紧、另一侧闭时已证明严格分离。Farkas结论另有有限生成锥闭性证明。未扩张到任意无限维拓扑向量空间。"
     },
     {
       "topic": "geometry/convex-sets",
       "field": "intuition",
       "text": "分离定理是凸分析的基石：它保证线性泛函可以区分凸集，从而导出对偶理论、Farkas 引理与支持向量机。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-dimensional-weak-separation",
+        "compact-closed-strong-separation",
+        "farkas-alternative"
+      ],
+      "note": "此处对象为有限维欧氏空间凸集，一般只能弱分离；一侧紧、另一侧闭时已证明严格分离。Farkas结论另有有限生成锥闭性证明。未扩张到任意无限维拓扑向量空间。"
     },
     {
       "topic": "geometry/convex-sets",
       "field": "formulaCaptions",
       "text": "超平面分离定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-dimensional-weak-separation",
+        "compact-closed-strong-separation",
+        "farkas-alternative"
+      ],
+      "note": "此处对象为有限维欧氏空间凸集，一般只能弱分离；一侧紧、另一侧闭时已证明严格分离。Farkas结论另有有限生成锥闭性证明。未扩张到任意无限维拓扑向量空间。"
     },
     {
       "topic": "geometry/convex-sets",
       "field": "extraInsight",
       "text": "凸集没有凹陷，分离定理是凸分析的基石；凸性使优化问题具有全局最优性。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "finite-dimensional-weak-separation",
+        "compact-closed-strong-separation",
+        "farkas-alternative"
+      ],
+      "note": "此处对象为有限维欧氏空间凸集，一般只能弱分离；一侧紧、另一侧闭时已证明严格分离。Farkas结论另有有限生成锥闭性证明。未扩张到任意无限维拓扑向量空间。"
     },
     {
       "topic": "geometry/polyhedra",
       "field": "definition",
       "text": "等价地，多面体是有界多胞形，是有限点集的凸包（Minkowski–Weyl 定理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-minkowski-weyl",
+        "minkowski-weyl-general"
+      ],
+      "note": "已证明有界与一般非空版本。一般形式为有限点凸包加有限生成锥，含直线时也适用；只有有界情形可省略锥方向。"
     },
     {
       "topic": "geometry/polyhedra",
       "field": "extraInsight",
-      "text": "多面体有两种描述：半空间的交与顶点的凸包；Minkowski–Weyl 定理说明两种描述等价，这是线性规划对偶的基础。",
-      "status": "needs-statement-review"
+      "text": "有界多面体有两种描述：有限半空间的交与有限顶点的凸包；Minkowski–Weyl 定理说明两种描述等价，这是线性规划对偶的基础。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "bounded-minkowski-weyl",
+        "minkowski-weyl-general"
+      ],
+      "note": "已证明有界与一般非空版本。一般形式为有限点凸包加有限生成锥，含直线时也适用；只有有界情形可省略锥方向。"
     },
     {
       "topic": "geometry/euler-characteristic",
@@ -2591,55 +2625,95 @@
       "topic": "discrete/probabilistic-method",
       "field": "intuition",
       "text": "Lovász 局部引理给出相关坏事件的概率界，是概率组合的核心工具；随机算法也常源于概率方法。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lovasz-local-lemma-symmetric",
+        "lovasz-epd-criterion"
+      ],
+      "note": "对称有限事件版本；依赖图要求与全部非邻居生成的σ代数独立，非仅两两独立。e p(d+1)≤1 是充分判据。"
     },
     {
       "topic": "discrete/probabilistic-method",
       "field": "formulaCaptions",
       "text": "Lovász 局部引理（示意）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lovasz-local-lemma-symmetric",
+        "lovasz-epd-criterion"
+      ],
+      "note": "对称有限事件版本；依赖图要求与全部非邻居生成的σ代数独立，非仅两两独立。e p(d+1)≤1 是充分判据。"
     },
     {
       "topic": "discrete/probabilistic-method",
       "field": "extraInsight",
       "text": "概率方法通过证明随机对象以正概率满足性质来证明存在性；期望论证与 Lovász 局部引理是核心工具。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "lovasz-local-lemma-symmetric",
+        "lovasz-epd-criterion"
+      ],
+      "note": "对称有限事件版本；依赖图要求与全部非邻居生成的σ代数独立，非仅两两独立。e p(d+1)≤1 是充分判据。"
     },
     {
       "topic": "discrete/extremal-combinatorics",
       "field": "definition",
       "text": "例如：不含三角形的图最多有多少条边（Turán 定理）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "mantel"
+      ],
+      "note": "这是Turán定理的三角形特例，即Mantel定理；不视为已证明一般禁团版本。"
     },
     {
       "topic": "discrete/extremal-combinatorics",
       "field": "formulaCaptions",
       "text": "Turán 定理：不含三角形的图的最大边数。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "mantel"
+      ],
+      "note": "这是Turán定理的三角形特例，即Mantel定理；不视为已证明一般禁团版本。"
     },
     {
       "topic": "discrete/extremal-combinatorics",
       "field": "extraInsight",
       "text": "极值组合研究在约束下结构的最大或最小规模；Turán 定理与 Ramsey 理论揭示“无序中的有序”。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "turan-general",
+        "finite-ramsey-two-colors"
+      ],
+      "note": "Turán给出禁止K_(r+1)的精确有限图边数；Ramsey在此证明有限双色图版本及二项式上界，不声称所有无穷或多色推广都已展开。"
     },
     {
       "topic": "discrete/extremal-combinatorics",
       "field": "extraExamples",
       "text": "Turán 定理：不含三角形的 $n$ 个顶点图最多有 $\\lfloor n^2/4\\rfloor$ 条边。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "mantel"
+      ],
+      "note": "这是Turán定理的三角形特例，即Mantel定理；不视为已证明一般禁团版本。"
     },
     {
       "topic": "discrete/graphs-networks",
       "field": "formulaCaptions",
       "text": "握手引理：度数之和等于边数的两倍。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "handshake"
+      ],
+      "note": "有限无向图，自环对度数计两次。"
     },
     {
       "topic": "discrete/graphs-networks",
       "field": "extraExamples",
       "text": "握手引理：$\\sum_v\\deg(v)=2|E|$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "handshake"
+      ],
+      "note": "有限无向图，自环对度数计两次。"
     },
     {
       "topic": "discrete/paths-connectivity",
@@ -2675,13 +2749,21 @@
       "topic": "discrete/matchings-coloring",
       "field": "definition",
       "text": "Hall 定理：二分图存在饱和一侧所有顶点的匹配，当且仅当对该侧任意子集 $S$，其邻域 $N(S)$ 满足 $|N(S)| \\ge |S|$。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "note": "有限二部图版本，需检查所饱和侧的全部子集；三人例已补全三元素子集条件。"
     },
     {
       "topic": "discrete/matchings-coloring",
       "field": "intuition",
       "text": "Hall 定理给出配对可行的充要条件。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "note": "有限二部图版本，需检查所饱和侧的全部子集；三人例已补全三元素子集条件。"
     },
     {
       "topic": "discrete/matchings-coloring",
@@ -2692,20 +2774,32 @@
     {
       "topic": "discrete/matchings-coloring",
       "field": "example",
-      "text": "三个人三份工作，若每人都能胜任至少一份，且任意两人合起来能胜任的工作数不少于 2，则存在完美分配（Hall 定理）。",
-      "status": "needs-statement-review"
+      "text": "三个人三份工作，若每人都能胜任至少一份，任意两人合起来能胜任的工作数不少于 2，且三人合起来能胜任全部三份工作，则存在完美分配（Hall 定理）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "note": "有限二部图版本，需检查所饱和侧的全部子集；三人例已补全三元素子集条件。"
     },
     {
       "topic": "discrete/matchings-coloring",
       "field": "formulaCaptions",
       "text": "Hall 定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "note": "有限二部图版本，需检查所饱和侧的全部子集；三人例已补全三元素子集条件。"
     },
     {
       "topic": "discrete/matchings-coloring",
       "field": "extraInsight",
       "text": "匹配研究配对，着色研究冲突避免；Hall 定理给出二分图匹配的充要条件。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "hall-konig"
+      ],
+      "note": "有限二部图版本，需检查所饱和侧的全部子集；三人例已补全三元素子集条件。"
     },
     {
       "topic": "discrete/matchings-coloring",
@@ -2717,37 +2811,61 @@
       "topic": "discrete/partial-orders",
       "field": "definition",
       "text": "Dilworth 定理：有限偏序集中，覆盖所有元素的最少链数等于最大反链大小。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dilworth-finite"
+      ],
+      "note": "有限偏序集版本；匹配产生互不交链分割，König覆盖产生同样大小反链。"
     },
     {
       "topic": "discrete/partial-orders",
       "field": "intuition",
       "text": "Dilworth 定理联系了二者，是组合优化的经典结果。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dilworth-finite"
+      ],
+      "note": "有限偏序集版本；匹配产生互不交链分割，König覆盖产生同样大小反链。"
     },
     {
       "topic": "discrete/partial-orders",
       "field": "formulaCaptions",
       "text": "Dilworth 定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dilworth-finite"
+      ],
+      "note": "有限偏序集版本；匹配产生互不交链分割，König覆盖产生同样大小反链。"
     },
     {
       "topic": "discrete/partial-orders",
       "field": "extraInsight",
       "text": "偏序允许部分元素不可比较；Dilworth 定理把链覆盖数与最大反链大小联系起来。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "dilworth-finite"
+      ],
+      "note": "有限偏序集版本；匹配产生互不交链分割，König覆盖产生同样大小反链。"
     },
     {
       "topic": "discrete/boolean-algebras",
       "field": "definition",
-      "text": "Stone 表示定理：每个布尔代数同构于某个集合的幂集代数（带并、交、补）。",
-      "status": "needs-statement-review"
+      "text": "Stone 表示定理：每个布尔代数同构于某个集合的幂集代数的一个布尔子代数（带并、交、补）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "stone-boolean-embedding"
+      ],
+      "note": "已改为幂集代数的布尔子代数；超滤分离点证明使用Zorn基础。"
     },
     {
       "topic": "discrete/boolean-algebras",
       "field": "extraInsight",
-      "text": "布尔代数是有补分配格；Stone 表示定理说明它同构于某个幂集代数。",
-      "status": "needs-statement-review"
+      "text": "布尔代数是有补分配格；Stone 表示定理说明它同构于某个幂集代数的布尔子代数。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "stone-boolean-embedding"
+      ],
+      "note": "已改为幂集代数的布尔子代数；超滤分离点证明使用Zorn基础。"
     },
     {
       "topic": "discrete/combinatorial-designs",
@@ -2795,25 +2913,41 @@
       "topic": "discrete/network-flows",
       "field": "definition",
       "text": "**最大流最小割定理**：最大流值等于最小割容量。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maxflow-mincut"
+      ],
+      "note": "有限网络、非负有限容量；整数容量的增广算法终止性另列条件。"
     },
     {
       "topic": "discrete/network-flows",
       "field": "intuition",
       "text": "最大流最小割定理说明“最大输送量 = 瓶颈容量”。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maxflow-mincut"
+      ],
+      "note": "有限网络、非负有限容量；整数容量的增广算法终止性另列条件。"
     },
     {
       "topic": "discrete/network-flows",
       "field": "formulaCaptions",
       "text": "最大流最小割定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maxflow-mincut"
+      ],
+      "note": "有限网络、非负有限容量；整数容量的增广算法终止性另列条件。"
     },
     {
       "topic": "discrete/network-flows",
       "field": "extraInsight",
       "text": "网络流在容量约束下分配流量；最大流最小割定理说明最大输送量等于瓶颈容量。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "maxflow-mincut"
+      ],
+      "note": "有限网络、非负有限容量；整数容量的增广算法终止性另列条件。"
     },
     {
       "topic": "discrete/entropy",

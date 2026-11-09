@@ -287,7 +287,7 @@ window.ATLAS.subjects.discrete = {
             }
           ],
           example: [
-            '三个人三份工作，若每人都能胜任至少一份，且任意两人合起来能胜任的工作数不少于 2，则存在完美分配（Hall 定理）。'
+            '三个人三份工作，若每人都能胜任至少一份，任意两人合起来能胜任的工作数不少于 2，且三人合起来能胜任全部三份工作，则存在完美分配（Hall 定理）。'
           ],
           related: ['graphs-networks', 'network-flows', 'np-completeness']
         },
@@ -396,7 +396,7 @@ window.ATLAS.subjects.discrete = {
           keywords: ['布尔代数', '补元', 'Stone 表示', '逻辑'],
           definition: [
             '**布尔代数**是有补分配格：存在最小元 $0$、最大元 $1$，每个元素 $a$ 有补元 $\\neg a$ 满足 $a \\vee \\neg a = 1$，$a \\wedge \\neg a = 0$。',
-            'Stone 表示定理：每个布尔代数同构于某个集合的幂集代数（带并、交、补）。'
+            'Stone 表示定理：每个布尔代数同构于某个集合的幂集代数的一个布尔子代数（带并、交、补）。'
           ],
           intuition: [
             '布尔代数把真假逻辑的运算规律抽象出来：$\\vee$ 是“或”，$\\wedge$ 是“且”，$\\neg$ 是“非”。',

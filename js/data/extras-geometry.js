@@ -259,7 +259,7 @@ window.ATLAS.extras['geometry/convex-sets'] = {
 };
 
 window.ATLAS.extras['geometry/polyhedra'] = {
-  insight: '多面体有两种描述：半空间的交与顶点的凸包；Minkowski–Weyl 定理说明两种描述等价，这是线性规划对偶的基础。',
+  insight: '有界多面体有两种描述：有限半空间的交与有限顶点的凸包；Minkowski–Weyl 定理说明两种描述等价，这是线性规划对偶的基础。',
   examples: [
     '正八面体有 $6$ 个顶点、$12$ 条边、$8$ 个面。',
     '线性规划的最优解在可行多面体的顶点取得。'

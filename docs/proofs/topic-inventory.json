@@ -1,5 +1,5 @@
 {
-  "proofCount": 441,
+  "proofCount": 458,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -226,7 +226,10 @@
       "subject": "分析",
       "branch": "微积分",
       "proofIds": [
-        "variable-integral"
+        "variable-integral",
+        "vector-segment-derivative-bound",
+        "inverse-function-rn",
+        "implicit-function-rn"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2134,6 +2137,8 @@
       "subject": "几何与拓扑",
       "branch": "微分几何",
       "proofIds": [
+        "inverse-function-rn",
+        "implicit-function-rn",
         "inverse-function-one-dimension",
         "smooth-atlas-transition-cocycle"
       ],
@@ -2445,7 +2450,13 @@
       "branch": "凸与离散几何",
       "proofIds": [
         "convex-intersection",
-        "convex-projection"
+        "compact-closed-strong-separation",
+        "finitely-generated-cone-closed",
+        "farkas-alternative",
+        "convex-projection",
+        "polyhedral-cone-finite-generation",
+        "convex-closure-interior",
+        "finite-dimensional-weak-separation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2456,7 +2467,10 @@
       "subject": "几何与拓扑",
       "branch": "凸与离散几何",
       "proofIds": [
-        "euler-polyhedron-formula"
+        "bounded-minkowski-weyl",
+        "euler-polyhedron-formula",
+        "polyhedral-cone-finite-generation",
+        "minkowski-weyl-general"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2603,8 +2617,12 @@
       "branch": "优化与运筹",
       "proofIds": [
         "weak-duality",
+        "bounded-minkowski-weyl",
+        "finitely-generated-cone-closed",
+        "farkas-alternative",
         "fourier-motzkin",
-        "lp-attainment-vertex"
+        "lp-attainment-vertex",
+        "minkowski-weyl-general"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -2643,7 +2661,10 @@
       "subject": "应用与计算数学",
       "branch": "优化与运筹",
       "proofIds": [
-        "weak-duality"
+        "weak-duality",
+        "compact-closed-strong-separation",
+        "farkas-alternative",
+        "finite-dimensional-weak-separation"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3055,6 +3076,8 @@
       "subject": "离散数学与计算",
       "branch": "组合数学",
       "proofIds": [
+        "lovasz-local-lemma-symmetric",
+        "lovasz-epd-criterion",
         "probabilistic-existence-maxcut"
       ],
       "coverage": "partial",
@@ -3066,7 +3089,9 @@
       "subject": "离散数学与计算",
       "branch": "组合数学",
       "proofIds": [
-        "mantel"
+        "mantel",
+        "finite-ramsey-two-colors",
+        "turan-general"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3134,6 +3159,7 @@
       "subject": "离散数学与计算",
       "branch": "离散结构",
       "proofIds": [
+        "dilworth-finite",
         "finite-poset-linear-extension"
       ],
       "coverage": "partial",
@@ -3156,7 +3182,8 @@
       "subject": "离散数学与计算",
       "branch": "离散结构",
       "proofIds": [
-        "finite-boolean-atoms"
+        "finite-boolean-atoms",
+        "stone-boolean-embedding"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3339,8 +3366,11 @@
       "subject": "离散数学与计算",
       "branch": "离散优化",
       "proofIds": [
+        "bounded-minkowski-weyl",
         "fourier-motzkin",
-        "lp-attainment-vertex"
+        "lp-attainment-vertex",
+        "polyhedral-cone-finite-generation",
+        "minkowski-weyl-general"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
