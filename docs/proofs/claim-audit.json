@@ -1,2205 +1,168 @@
-{
-  "note": "å…³é”®è¯æå–çš„å€™é€‰å¥ï¼Œæœªç»æ•°å­¦æ–­è¨€å»é‡ï¼›ä¸ç­‰äºå…¨éƒ¨å®šç†çš„å®Œæ•´æ¸…å•ã€‚éœ€äººå·¥æå–å‡†ç¡®å‡è®¾ã€ç»“è®ºå¹¶å¯¹åº”è¯æ˜ã€‚",
-  "claims": [
-    {
-      "topic": "analysis/continuity-uniform",
-      "field": "intuition",
-      "text": "ç´§é›†ä¸Šçš„è¿ç»­å‡½æ•°è‡ªåŠ¨ä¸€è‡´è¿ç»­ï¼ˆHeineâ€“Cantor å®šç†ï¼‰ï¼Œè¿™æ˜¯ç´§æ€§æœ€é‡è¦çš„åº”ç”¨ä¹‹ä¸€ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "heine-cantor"
-      ],
-      "note": "é€‚ç”¨äºç´§è‡´åº¦é‡å®šä¹‰åŸŸåˆ°åº¦é‡ç©ºé—´çš„è¿ç»­æ˜ å°„ï¼›è¯æ˜é€ç‚¹é€‰åŠå¾„å¹¶å–æœ‰é™å­è¦†ç›–ã€‚"
-    },
-    {
-      "topic": "analysis/continuity-uniform",
-      "field": "formulaCaptions",
-      "text": "Heineâ€“Cantor å®šç†ï¼šè¿ç»­æ€§åŠ ä¸Šç´§æ€§æ¨å‡ºä¸€è‡´è¿ç»­ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "heine-cantor"
-      ],
-      "note": "é€‚ç”¨äºç´§è‡´åº¦é‡å®šä¹‰åŸŸåˆ°åº¦é‡ç©ºé—´çš„è¿ç»­æ˜ å°„ï¼›è¯æ˜é€ç‚¹é€‰åŠå¾„å¹¶å–æœ‰é™å­è¦†ç›–ã€‚"
-    },
-    {
-      "topic": "analysis/uniform-convergence",
-      "field": "extraInsight",
-      "text": "Dini å®šç†ç»™å‡ºä¸€ä¸ªè¡¥å¿æ¡ä»¶ï¼šåœ¨ç´§è‡´ç©ºé—´ä¸Šï¼Œè¿ç»­å®å€¼å‡½æ•°åˆ—é€ç‚¹å•è°ƒæ”¶æ•›åˆ°è¿ç»­å‡½æ•°æ—¶ï¼Œé€ç‚¹æ”¶æ•›è‡ªåŠ¨å‡çº§ä¸ºä¸€è‡´æ”¶æ•›ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "dini"
-      ],
-      "note": "ç´§è‡´ç©ºé—´ã€è¿ç»­å®å‡½æ•°ã€é€ç‚¹å•è°ƒä¸”æé™è¿ç»­æ˜¯å®Œæ•´æ¡ä»¶ï¼›é€’å‡æƒ…å½¢å–è´Ÿã€‚"
-    },
-    {
-      "topic": "analysis/series",
-      "field": "intuition",
-      "text": "ç»å¯¹æ”¶æ•›çš„çº§æ•°å¯ä»¥ä»»æ„é‡æ’è€Œä¸æ”¹å˜å’Œï¼›æ¡ä»¶æ”¶æ•›åˆ™ä¸è¡Œâ€”â€”é»æ›¼é‡æ’å®šç†æŒ‡å‡ºï¼Œæ¡ä»¶æ”¶æ•›çº§æ•°å¯ä»¥é€šè¿‡é‡æ’å¾—åˆ°ä»»æ„å®æ•°ï¼Œç”šè‡³å‘æ•£ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "absolute-series-rearrangement",
-        "riemann-rearrangement",
-        "riemann-rearrangement-infinite"
-      ],
-      "note": "é™äºå®æ¡ä»¶æ”¶æ•›çº§æ•°ï¼›ä»»æ„å®ç›®æ ‡ã€æ­£è´Ÿæ— ç©·åŠæŒ¯è¡åˆ†åˆ«ç»™å‡ºæ„é€ ï¼›ç»å¯¹æ”¶æ•›éƒ¨åˆ†å¦è¯ã€‚"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "intuition",
-      "text": "å®Œå¤‡æ€§æ˜¯åˆ†æçš„åŸºçŸ³ï¼šä¸­å€¼å®šç†ã€æå€¼å®šç†ã€é»æ›¼å¯ç§¯æ€§ã€å¾®åˆ†æ–¹ç¨‹è§£çš„å­˜åœ¨æ€§ï¼Œéƒ½ä¾èµ–æŸç§å½¢å¼çš„å®Œå¤‡æ€§ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "formulaCaptions",
-      "text": "ç¡®ç•ŒåŸç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "formulaCaptions",
-      "text": "å•è°ƒæœ‰ç•Œå®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-convergence"
-      ],
-      "note": "å®æ•°ä¸Šç¡®ç•Œå…¬ç†æ¨å‡ºå•è°ƒæœ‰ç•Œæ•°åˆ—æ”¶æ•›ï¼›é€’å‡æœ‰ä¸‹ç•Œç‰ˆæœ¬å–è´Ÿã€‚"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "extraInsight",
-      "text": "å®Œå¤‡æ€§æœ‰å¤šç§ç­‰ä»·å½¢å¼ï¼Œå…¶ä¸­â€œç¡®ç•ŒåŸç†â€æœ€å¸¸ç”¨äºå­˜åœ¨æ€§è¯æ˜ï¼šåªè¦è¯æ˜ä¸€ä¸ªé›†åˆéç©ºä¸”æœ‰ä¸Šç•Œï¼Œå°±è‡ªåŠ¨å¾—åˆ°ä¸Šç¡®ç•Œã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "extraExamples",
-      "text": "ç”¨ç¡®ç•ŒåŸç†è¯æ˜å•è°ƒæœ‰ç•Œæ•°åˆ—æ”¶æ•›ï¼šè®¾ $a_n$ å•è°ƒé€’å¢ä¸”æœ‰ä¸Šç•Œï¼Œä»¤ $s=\\sup\\{a_n\\}$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-convergence"
-      ],
-      "note": "æ˜ç¡®ä»¥éç©ºæœ‰ä¸Šç•Œæ•°åˆ—å€¼é›†åˆçš„ä¸Šç¡®ç•Œä½œå€™é€‰æé™ã€‚"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "extraExamples",
-      "text": "é—­åŒºé—´å¥—å®šç†ï¼šè‹¥ $[a_n,b_n]$ æ»¡è¶³ $[a_{n+1},b_{n+1}]\\subseteq[a_n,b_n]$ ä¸”é•¿åº¦è¶‹äº $0$ï¼Œåˆ™äº¤é›†æ°æœ‰ä¸€ä¸ªç‚¹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "nested-intervals"
-      ],
-      "note": "å‡å®šæ¯ä¸ªé—­åŒºé—´éç©ºä¸”ç›¸äº’åµŒå¥—ï¼Œé•¿åº¦è¶‹é›¶ç”¨äºå”¯ä¸€æ€§ã€‚"
-    },
-    {
-      "topic": "analysis/completeness-reals",
-      "field": "extraExamples",
-      "text": "è¿™æ˜¯äºŒåˆ†æ³•æ±‚æ ¹ä¸å‹ç¼©æ˜ å°„åŸç†çš„å‡ ä½•åŸºç¡€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "intuition",
-      "text": "ç¬¬ä¸€åŸºæœ¬å®šç†è¯´ï¼šç´¯ç§¯å†æ±‚å˜åŒ–ç‡ï¼Œå›åˆ°åŸå‡½æ•°ï¼›ç¬¬äºŒåŸºæœ¬å®šç†è¯´ï¼šæ±‚é¢ç§¯å¯ä»¥è½¬åŒ–ä¸ºæ±‚åŸå‡½æ•°çš„ç«¯ç‚¹å€¼ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "ftc-first",
-        "ftc-second"
-      ],
-      "note": "æŒ‰å…³è”å‘½é¢˜çš„æ¡ä»¶è§£è¯»ï¼šç¬¬ä¸€å®šç†åœ¨è¿ç»­ç‚¹ç»™å¯¼æ•°ï¼Œç¬¬äºŒå®šç†é‡‡ç”¨è¿ç»­è¢«ç§¯å‡½æ•°åŠåŸå‡½æ•°ï¼›ä¸å£°ç§°è¿ç»­æ€§å¯¹æ‰€æœ‰æ¨å¹¿ç‰ˆæœ¬å¿…è¦ã€‚"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "formulaCaptions",
-      "text": "ç¬¬ä¸€åŸºæœ¬å®šç†ï¼šè¿ç»­å‡½æ•°çš„å˜ä¸Šé™ç§¯åˆ†æ˜¯å…¶åŸå‡½æ•°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "ftc-first",
-        "ftc-second"
-      ],
-      "note": "æŒ‰å…³è”å‘½é¢˜çš„æ¡ä»¶è§£è¯»ï¼šç¬¬ä¸€å®šç†åœ¨è¿ç»­ç‚¹ç»™å¯¼æ•°ï¼Œç¬¬äºŒå®šç†é‡‡ç”¨è¿ç»­è¢«ç§¯å‡½æ•°åŠåŸå‡½æ•°ï¼›ä¸å£°ç§°è¿ç»­æ€§å¯¹æ‰€æœ‰æ¨å¹¿ç‰ˆæœ¬å¿…è¦ã€‚"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "extraInsight",
-      "text": "æœ¬é¡µé‡‡ç”¨çš„ç»å…¸å¾®ç§¯åˆ†åŸºæœ¬å®šç†ä»¥ $f$ è¿ç»­ä¸ºæ¡ä»¶ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "ftc-first",
-        "ftc-second"
-      ],
-      "note": "é™å®šä¸ºæœ¬é¡µå±•ç¤ºçš„ç»å…¸ç‰ˆæœ¬ï¼›å¼±æ¡ä»¶ç‰ˆæœ¬åœ¨è¿ç»­ç‚¹ç»™å¯¼æ•°ï¼Œå¦æœ‰ç»å¯¹è¿ç»­å‡½æ•°å½¢å¼ã€‚"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "extraExamples",
-      "text": "ç”±åŸºæœ¬å®šç†ï¼Œ$\\frac{d}{dx}\\ln x=1/x$ï¼Œä¸” $\\ln1=0$ï¼Œå› æ­¤è¿™ä¸é€šå¸¸çš„å¯¹æ•°å®šä¹‰ä¸€è‡´ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "ftc-first",
-        "log-inequality"
-      ],
-      "note": "æ­¤å¤„ ln æŒ‰ç§¯åˆ†å®šä¹‰ ln x=âˆ«â‚Ë£dt/tï¼›è¢«ç§¯å‡½æ•°åœ¨ x>0 è¿ç»­ï¼Œç¬¬ä¸€åŸºæœ¬å®šç†ç»™å¯¼æ•°ï¼Œç§¯åˆ†ä¸Šä¸‹é™ç›¸ç­‰ç»™ ln 1=0ã€‚log-inequality ä½¿ç”¨çš„æ­£æ˜¯è¯¥å®šä¹‰ã€‚"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "extraExamples",
-      "text": "è‹¥ $f$ æœ‰è·³è·ƒé—´æ–­ï¼Œä¾‹å¦‚ $f(x)=0$ï¼ˆ$x<0$ï¼‰ä¸ $1$ï¼ˆ$x\\ge0$ï¼‰ï¼Œåˆ™ $\\int_{-1}^1 f=1$ï¼Œä½† $f$ æ²¡æœ‰åŸå‡½æ•°ï¼ˆè¾¾å¸ƒå®šç†ï¼šå¯¼æ•°å…·æœ‰ä»‹å€¼æ€§ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "darboux-derivative"
-      ],
-      "note": "è·³è·ƒå‡½æ•°ä¸å…·å¤‡å¯¼æ•°çš„ä»‹å€¼æ€§ï¼Œå› æ­¤ä¸å¯èƒ½å­˜åœ¨å¤„å¤„å¯å¯¼çš„åŸå‡½æ•°ã€‚"
-    },
-    {
-      "topic": "analysis/fundamental-theorem-calculus",
-      "field": "extraExamples",
-      "text": "è¿™è¯´æ˜ç»å…¸å¾®ç§¯åˆ†åŸºæœ¬å®šç†çš„å¤„å¤„æ±‚å¯¼ç»“è®ºä¸èƒ½ç›´æ¥æ¨å¹¿åˆ°ä»»æ„é»æ›¼å¯ç§¯å‡½æ•°ï¼›å®ƒä¸è¡¨ç¤ºè¿ç»­æ€§å¯¹æ¯ä¸ªå…·ä½“å‡½æ•°éƒ½æ˜¯å¿…è¦æ¡ä»¶ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "darboux-derivative"
-      ],
-      "note": "è·³è·ƒå‡½æ•°ä¸å…·å¤‡å¯¼æ•°çš„ä»‹å€¼æ€§ï¼Œæ•…æ²¡æœ‰å¤„å¤„å¯å¯¼çš„åŸå‡½æ•°ï¼›è¿™åé©³ä»»æ„é»æ›¼å¯ç§¯å‡½æ•°ç‰ˆæœ¬ï¼Œå¹¶ä¸è¯æ˜è¿ç»­æ€§æ˜¯é€å‡½æ•°å¿…è¦æ¡ä»¶ã€‚"
-    },
-    {
-      "topic": "analysis/cauchy-integral-theorem",
-      "field": "intuition",
-      "text": "è¿™æ˜¯å¤åˆ†æâ€œåˆšæ€§â€çš„æ ¸å¿ƒï¼Œä¹Ÿæ˜¯ç•™æ•°å®šç†ä¸æœ€å¤§æ¨¡åŸç†çš„æ¥æºã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/cauchy-integral-theorem",
-      "field": "formulaCaptions",
-      "text": "æŸ¯è¥¿ç§¯åˆ†å®šç†ï¼šå•è¿é€šåŒºåŸŸå†…å…¨çº¯å‡½æ•°çš„é—­è·¯ç§¯åˆ†ä¸ºé›¶ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "cauchy-homotopy",
-        "cauchy-simply-connected"
-      ],
-      "note": "é—­è·¯è¦æ±‚åˆ†æ®µ CÂ¹ï¼›è¿ç»­åŒä¼¦æ— éœ€å¯å¾®ã€‚å•è¿é€šä¸ºå……åˆ†åŸŸæ¡ä»¶ï¼Œéç‰¹å®šå‡½æ•°çš„å¿…è¦æ¡ä»¶ï¼›æœ‰æ´åŸŸä¸­æ ¸å‡½æ•°å¯èƒ½äº§ç”Ÿéé›¶ç§¯åˆ†ã€‚"
-    },
-    {
-      "topic": "analysis/cauchy-integral-theorem",
-      "field": "extraInsight",
-      "text": "æŸ¯è¥¿åŒä¼¦å®šç†è¯´æ˜ï¼šå…¨çº¯å‡½æ•°æ²¿ä¿æŒç«¯ç‚¹åŒä¼¦çš„ä¸¤æ¡è·¯å¾„ç§¯åˆ†ç›¸åŒï¼›åœ¨å•è¿é€šåŸŸä¸­ï¼Œè·¯å¾„ç§¯åˆ†ä»…ä¾èµ–ç«¯ç‚¹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "cauchy-homotopy",
-        "cauchy-simply-connected"
-      ],
-      "note": "é—­è·¯è¦æ±‚åˆ†æ®µ CÂ¹ï¼›è¿ç»­åŒä¼¦æ— éœ€å¯å¾®ã€‚å•è¿é€šä¸ºå……åˆ†åŸŸæ¡ä»¶ï¼Œéç‰¹å®šå‡½æ•°çš„å¿…è¦æ¡ä»¶ï¼›æœ‰æ´åŸŸä¸­æ ¸å‡½æ•°å¯èƒ½äº§ç”Ÿéé›¶ç§¯åˆ†ã€‚"
-    },
-    {
-      "topic": "analysis/residues",
-      "field": "definition",
-      "text": "åŠ æƒç•™æ•°å®šç†ï¼šè®¾ $\\Omega\\subset\\mathbb C$ å•è¿é€šï¼Œ$a_1,\\ldots,a_N$ æ˜¯å…¶ä¸­ä¸åŒç‚¹ï¼Œ$f$ åœ¨ $\\Omega\\setminus\\{a_1,\\ldots,a_N\\}$ å…¨çº¯ï¼Œ$\\gamma\\subset\\Omega$ æ˜¯é¿å¼€è¿™äº›ç‚¹çš„åˆ†æ®µ $C^1$ é—­æ›²çº¿ï¼Œè®° $\\operatorname{Ind}(\\gamma,a)=(2\\pi i)^{-1}\\oint_\\gamma dz/(z-a)$ï¼Œåˆ™ $\\oint_\\gamma f(z)\\,dz=2\\pi i\\sum_{j=1}^N\\operatorname{Ind}(\\gamma,a_j)\\operatorname{Res}(f,a_j)$ï¼›å¥‡ç‚¹å…è®¸ä¸ºæœ¬æ€§å¥‡ç‚¹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "weighted-residue-theorem"
-      ],
-      "note": "ä¸æœ¬å·å‘½é¢˜çš„å•è¿é€šåŸŸã€é—­è·¯ã€æœ‰é™å­¤ç«‹å¥‡ç‚¹åŠç»•æ•°å®šä¹‰é€é¡¹ç›¸åŒã€‚ä¸»éƒ¨åœ¨æ•´ä¸ªç©¿å­”å¹³é¢å…¨çº¯ï¼Œå‡å»ä¸»éƒ¨åå¯å¡«è¡¥ä¸ºå…¨çº¯å‡½æ•°ï¼›æœ¬å·ä¸æŠŠç®€å•é—­æ›²çº¿æŒ‡æ•°ä¸º 0/1 çš„ Jordan æ‹“æ‰‘ç»“è®ºå†’å……ä¸ºå·²è¯å†…å®¹ã€‚"
-    },
-    {
-      "topic": "analysis/residues",
-      "field": "intuition",
-      "text": "ç•™æ•°å®šç†æŠŠå¤æ‚çš„å›´é“ç§¯åˆ†åŒ–ä¸ºä»£æ•°è®¡ç®—ï¼ˆæ±‚ç³»æ•°ï¼‰ï¼Œæ˜¯è®¡ç®—å®ç§¯åˆ†çš„å¼ºå¤§å·¥å…·ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/residues",
-      "field": "formulaCaptions",
-      "text": "åŠ æƒç•™æ•°å®šç†ï¼ˆç»•æ•°å½¢å¼ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "weighted-residue-theorem"
-      ],
-      "note": "å¯¹åº”å…¬å¼æ˜¾å¼å« Ind(Î³,a_k)ï¼Œå…¶ä¸¥è°¨å‡è®¾ä¸é™ˆè¿°è§åŒä¸»é¢˜å®šä¹‰ï¼Œå¹¶ç”±ç»•æ•°å½¢å¼ç•™æ•°å®šç†è¯æ˜ã€‚"
-    },
-    {
-      "topic": "analysis/residues",
-      "field": "extraInsight",
-      "text": "è®¡ç®—å®ç§¯åˆ†æ—¶ï¼Œå¸¸ç”¨å¤§åœ†å¼§å¼•ç†ä¸çº¦å½“å¼•ç†æ§åˆ¶è¾…åŠ©å¼§ä¸Šçš„ç§¯åˆ†ï¼Œä½¿å›´é“ç§¯åˆ†åŒ–ä¸ºç•™æ•°å’Œï¼›é«˜é˜¶æç‚¹å¯ç”¨æ±‚å¯¼å…¬å¼è®¡ç®—ç•™æ•°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "jordan-upper-semicircle",
-        "pole-residue-derivative",
-        "dirichlet-sine-integral-contour"
-      ],
-      "note": "å±•å¼€ä¸ŠåŠåœ†Jordanæ˜¾å¼ä¼°è®¡å’Œé«˜é˜¶æç‚¹å…¬å¼ï¼›æ­£å¼¦ç§¯åˆ†å…ˆè¯æ˜å¹¿ä¹‰æ”¶æ•›ï¼Œå†ç”¨ç»•æ•°ä¸ºé›¶çš„ç¼©è¿›å›´é“è®¡ç®—å°å¼§âˆ’iÏ€ä¸å¤§å¼§è¶‹é›¶ï¼Œé¿å…æŠŠè·¯å¾„ä¸Šçš„åŸç‚¹å½“ä½œå†…éƒ¨æç‚¹ã€‚"
-    },
-    {
-      "topic": "analysis/residues",
-      "field": "extraExamples",
-      "text": "$z=0$ å¤„ç•™æ•°ä¸º $1$ï¼Œå°å¼§ç§¯åˆ†è¶‹äº $-i\\pi$ï¼Œçº¦å½“å¼•ç†ç»™å‡ºå¤§å¼§ç§¯åˆ†è¶‹äº $0$ï¼Œæ•…ç§¯åˆ†ä¸º $\\pi/2$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "jordan-upper-semicircle",
-        "pole-residue-derivative",
-        "dirichlet-sine-integral-contour"
-      ],
-      "note": "å±•å¼€ä¸ŠåŠåœ†Jordanæ˜¾å¼ä¼°è®¡å’Œé«˜é˜¶æç‚¹å…¬å¼ï¼›æ­£å¼¦ç§¯åˆ†å…ˆè¯æ˜å¹¿ä¹‰æ”¶æ•›ï¼Œå†ç”¨ç»•æ•°ä¸ºé›¶çš„ç¼©è¿›å›´é“è®¡ç®—å°å¼§âˆ’iÏ€ä¸å¤§å¼§è¶‹é›¶ï¼Œé¿å…æŠŠè·¯å¾„ä¸Šçš„åŸç‚¹å½“ä½œå†…éƒ¨æç‚¹ã€‚"
-    },
-    {
-      "topic": "analysis/conformal-maps",
-      "field": "definition",
-      "text": "é»æ›¼æ˜ å°„å®šç†ï¼šä»»ä½•å•è¿é€šéç©ºçœŸå¼€é›† $\\Omega \\subsetneq \\mathbb{C}$ éƒ½å¯å…±å½¢åœ°æ˜ åˆ°å•ä½åœ†ç›˜ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "riemann-mapping-existence"
-      ],
-      "note": "æ¡ä»¶ä¸ºéç©ºå•è¿é€šçœŸåŸŸï¼›æ•´å¹³é¢æ’é™¤ï¼Œå›  Liouville å®šç†ä¸å¯èƒ½åŒå…¨çº¯åˆ°åœ†ç›˜ã€‚è¯æ˜å±•å¼€å¹³æ–¹æ ¹åˆ†æ”¯ã€RouchÃ©ã€å•å¶æé™ã€Montelã€å¯¼æ•°æå€¼ä¸æ»¡å°„æ€§ï¼›å½’ä¸€åŒ–å›ºå®šä¸€ç‚¹åŠæ­£å®å¯¼æ•°åå”¯ä¸€ã€‚"
-    },
-    {
-      "topic": "analysis/conformal-maps",
-      "field": "extraInsight",
-      "text": "é»æ›¼æ˜ å°„å®šç†ä¿è¯éç©ºå•è¿é€šçœŸåŸŸéƒ½èƒ½å…±å½¢åœ°å˜æˆåœ†ç›˜ï¼Œä½†æ˜ å°„ä¸€èˆ¬æ²¡æœ‰åˆç­‰è¡¨è¾¾å¼ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "riemann-mapping-existence"
-      ],
-      "note": "æ¡ä»¶ä¸ºéç©ºå•è¿é€šçœŸåŸŸï¼›æ•´å¹³é¢æ’é™¤ï¼Œå›  Liouville å®šç†ä¸å¯èƒ½åŒå…¨çº¯åˆ°åœ†ç›˜ã€‚è¯æ˜å±•å¼€å¹³æ–¹æ ¹åˆ†æ”¯ã€RouchÃ©ã€å•å¶æé™ã€Montelã€å¯¼æ•°æå€¼ä¸æ»¡å°„æ€§ï¼›å½’ä¸€åŒ–å›ºå®šä¸€ç‚¹åŠæ­£å®å¯¼æ•°åå”¯ä¸€ã€‚"
-    },
-    {
-      "topic": "analysis/limits",
-      "field": "extraExamples",
-      "text": "ç”¨å¤¹é€¼å®šç†æ±‚æé™ï¼š$0\\le|x^2\\sin(1/x)|\\le x^2$ï¼Œæ•… $\\lim_{x\\to0}x^2\\sin(1/x)=0$ï¼Œå³ä½¿ $\\sin(1/x)$ æœ¬èº«åœ¨ $0$ é™„è¿‘æ— é™æŒ¯è¡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "squeeze-theorem-real"
-      ],
-      "note": "å¯¹ xâ‰ 0 æœ‰ |sin(1/x)|â‰¤1ï¼Œæ•…ä¸¤ä¾§å‡è¶‹äº 0ï¼›åº”ç”¨å®å‡½æ•°å¤¹é€¼å®šç†ã€‚å‡½æ•° sin(1/x) æœ¬èº«åœ¨ç©¿å­”é‚»åŸŸæ— æé™ï¼Œä½†è¿™ä¸å½±å“å¤¹é€¼ã€‚"
-    },
-    {
-      "topic": "analysis/derivatives",
-      "field": "extraInsight",
-      "text": "å¯å¯¼å¿…è¿ç»­ï¼Œä½†è¿ç»­ä¸å¿…å¯å¯¼ï¼›è¾¾å¸ƒå®šç†è¿›ä¸€æ­¥æŒ‡å‡ºå¯¼æ•°è™½ç„¶æœªå¿…è¿ç»­ï¼Œå´ä¸èƒ½æœ‰è·³è·ƒé—´æ–­ï¼Œè¿™æ˜¯å¯¼æ•°åŒºåˆ«äºä¸€èˆ¬å‡½æ•°çš„é‡è¦æ€§è´¨ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "derivative-continuity",
-        "darboux-derivative"
-      ],
-      "note": "å¯å¯¼è•´å«è¿ç»­åŠå¯¼æ•°ä»‹å€¼æ€§å·²é€æ­¥è¯æ˜ï¼›æ­¤å¥ä¸å£°ç§°æ¯ä¸ªå…·ä»‹å€¼æ€§çš„å‡½æ•°éƒ½æ˜¯å¯¼æ•°ã€‚"
-    },
-    {
-      "topic": "analysis/integration-calculus",
-      "field": "definition",
-      "text": "å¾®ç§¯åˆ†ç¬¬äºŒåŸºæœ¬å®šç†ï¼šè‹¥ $f$ åœ¨ $[a,b]$ è¿ç»­ï¼Œ$F$ åœ¨ $[a,b]$ è¿ç»­ã€åœ¨ $(a,b)$ å¯å¯¼ä¸” $F' = f$ï¼Œåˆ™ $\\int_a^b f(x)\\,dx = F(b) - F(a)$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "ftc-second"
-      ],
-      "note": "å‡è®¾ä¸æœ¬å·å‘½é¢˜é€é¡¹ä¸€è‡´ï¼›ç”±ç¬¬ä¸€åŸºæœ¬å®šç†æ„é€ å˜ä¸Šé™ç§¯åˆ†ï¼Œå†ç”¨å¯¼æ•°ä¸ºé›¶çš„å‡½æ•°åœ¨åŒºé—´ä¸Šä¸ºå¸¸æ•°ã€‚"
-    },
-    {
-      "topic": "analysis/multivariable-calculus",
-      "field": "intuition",
-      "text": "é‡ç§¯åˆ†ä¸æ›²çº¿æ›²é¢ç§¯åˆ†é€šè¿‡æ ¼æ—ã€é«˜æ–¯ã€æ–¯æ‰˜å…‹æ–¯å®šç†ç›¸äº’è½¬æ¢ï¼Œæœ¬è´¨æ˜¯â€œè¾¹ç•Œä¸Šçš„ç§¯åˆ†ç­‰äºå†…éƒ¨å¯¼æ•°çš„ç§¯åˆ†â€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/multivariable-calculus",
-      "field": "formulaCaptions",
-      "text": "é«˜æ–¯æ•£åº¦å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/analytic-continuation",
-      "field": "definition",
-      "text": "è§£æå»¶æ‹“è‹¥å­˜åœ¨åˆ™å”¯ä¸€ï¼ˆåŒä¸€æ€§å®šç†ï¼‰ï¼šä¸¤ä¸ªåœ¨ $D$ ä¸Šç›¸ç­‰çš„è§£æå‡½æ•°ï¼Œåœ¨å…¶å…¬å…±è¿é€šå®šä¹‰åŸŸä¸Šå¤„å¤„ç›¸ç­‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "holomorphic-identity"
-      ],
-      "note": "æ¯”è¾ƒåŸŸå¿…é¡»è¿é€šï¼Œèšç‚¹å¿…é¡»åœ¨è¯¥åŸŸå†…éƒ¨ï¼›åœ¨å…±åŒè¿é€šé‡å åŸŸä¸Šå”¯ä¸€ï¼Œä¸ä¿è¯ç©¿è¿‡å¥‡ç‚¹çš„å…¨å±€å•å€¼å»¶æ‹“å­˜åœ¨ã€‚"
-    },
-    {
-      "topic": "analysis/analytic-continuation",
-      "field": "intuition",
-      "text": "$\\zeta$ å‡½æ•°ã€$\\Gamma$ å‡½æ•°éƒ½é€šè¿‡è§£æå»¶æ‹“å®šä¹‰åˆ°æ›´å¤§èŒƒå›´ï¼Œé»æ›¼çŒœæƒ³æ­£æ˜¯å…³äº $\\zeta$ å»¶æ‹“åçš„é›¶ç‚¹åˆ†å¸ƒã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/analytic-continuation",
-      "field": "extraInsight",
-      "text": "è§£æå»¶æ‹“çš„å”¯ä¸€æ€§æ¥è‡ªåŒä¸€æ€§å®šç†ï¼šä¸¤ä¸ªåœ¨åŒºåŸŸä¸Šå…¨çº¯çš„å‡½æ•°è‹¥åœ¨ä¸€ä¸ªäºè¯¥è¿é€šåŸŸå†…éƒ¨æœ‰èšç‚¹çš„é›†åˆä¸Šç›¸ç­‰ï¼Œåˆ™å¤„å¤„ç›¸ç­‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "holomorphic-identity"
-      ],
-      "note": "æ¯”è¾ƒåŸŸå¿…é¡»è¿é€šï¼Œèšç‚¹å¿…é¡»åœ¨è¯¥åŸŸå†…éƒ¨ï¼›åœ¨å…±åŒè¿é€šé‡å åŸŸä¸Šå”¯ä¸€ï¼Œä¸ä¿è¯ç©¿è¿‡å¥‡ç‚¹çš„å…¨å±€å•å€¼å»¶æ‹“å­˜åœ¨ã€‚"
-    },
-    {
-      "topic": "analysis/lebesgue-integral",
-      "field": "extraInsight",
-      "text": "å®ƒçš„ä¼˜åŠ¿åœ¨äºæé™å®šç†â€”â€”å•è°ƒæ”¶æ•›ä¸æ§åˆ¶æ”¶æ•›ä½¿â€œç§¯åˆ†ä¸æé™äº¤æ¢â€æœ‰ç®€å•è€Œå¼ºå¤§çš„åˆ¤æ®ï¼Œè¿™æ˜¯é»æ›¼ç§¯åˆ†åšä¸åˆ°çš„ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "definition",
-      "text": "**å•è°ƒæ”¶æ•›å®šç†**ï¼šè‹¥ $0 \\le f_n \\nearrow f$ï¼Œåˆ™ $\\int f_n \\to \\int f$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "definition",
-      "text": "**æ§åˆ¶æ”¶æ•›å®šç†**ï¼šè‹¥ $f_n \\to f$ ä¸” $|f_n| \\le g$ï¼ˆ$g$ å¯ç§¯ï¼‰ï¼Œåˆ™ $\\int f_n \\to \\int f$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "definition",
-      "text": "Fatou å¼•ç†ç»™å‡ºä¸‹ç•Œã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "intuition",
-      "text": "æ§åˆ¶æ”¶æ•›å®šç†æ˜¯æ¦‚ç‡è®ºä¸­â€œæœŸæœ›ä¸æé™äº¤æ¢â€çš„æ ‡å‡†å·¥å…·ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "formulaCaptions",
-      "text": "å•è°ƒæ”¶æ•›å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "formulaCaptions",
-      "text": "æ§åˆ¶æ”¶æ•›å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "formulaCaptions",
-      "text": "Fatou å¼•ç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/integration-limits",
-      "field": "extraInsight",
-      "text": "ä¸‰å¤§æ”¶æ•›å®šç†ï¼ˆå•è°ƒæ”¶æ•›ã€Fatouã€æ§åˆ¶æ”¶æ•›ï¼‰ç»™å‡ºç§¯åˆ†ä¸æé™äº¤æ¢çš„å……åˆ†æ¡ä»¶ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "monotone-integral",
-        "dominated-convergence",
-        "fatou"
-      ],
-      "note": "ä½¿ç”¨å¯æµ‹å‡½æ•°ä¸åŒä¸€æµ‹åº¦ç©ºé—´ï¼›å•è°ƒæ”¶æ•›é™éè´Ÿå‡½æ•°ï¼ŒFatou é™éè´Ÿå‡½æ•°ï¼Œæ§åˆ¶æ”¶æ•›é™ç”±å›ºå®šå¯ç§¯å‡½æ•°æ§åˆ¶çš„å‡ ä¹å¤„å¤„æ”¶æ•›åºåˆ—ã€‚æ­£æ–‡ç®€å¼åº”è¿åŒè¿™äº›æ¡ä»¶é˜…è¯»ã€‚"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "definition",
-      "text": "æ ¸å¿ƒå®šç†ï¼šå‹ç¼©æ˜ å°„åŸç†ï¼ˆä¸åŠ¨ç‚¹ï¼‰ã€ä¸€è‡´æœ‰ç•ŒåŸç†ï¼ˆBanachâ€“Steinhausï¼‰ã€å¼€æ˜ å°„å®šç†ä¸é—­å›¾åƒå®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "banach-contraction",
-        "uniform-boundedness",
-        "open-mapping-banach",
-        "closed-graph-banach"
-      ],
-      "note": "å®Œæ•´æ¡ä»¶è§å…³è”å®šç†ï¼šä¸€è‡´æœ‰ç•Œè¦æ±‚å®šä¹‰åŸŸ Banachã€ç®—å­é€ç‚¹æœ‰ç•Œï¼›å¼€æ˜ å°„è¦æ±‚ä¸¤ç©ºé—´ Banach ä¸”ç®—å­æœ‰ç•Œæ»¡å°„ï¼›é—­å›¾åƒè¦æ±‚å®šä¹‰åŸŸä¸ºå…¨éƒ¨ Banach ç©ºé—´ï¼›ODE è¯æ˜ä¸ºæ ‡é‡å±€éƒ¨ Lipschitz ç‰ˆæœ¬ã€‚"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "intuition",
-      "text": "å‹ç¼©æ˜ å°„åŸç†æ˜¯å¾®åˆ†æ–¹ç¨‹è§£å­˜åœ¨å”¯ä¸€æ€§ï¼ˆPicardâ€“LindelÃ¶fï¼‰çš„åŸºç¡€ï¼›ä¸€è‡´æœ‰ç•ŒåŸç†è¯´æ˜é€ç‚¹æœ‰ç•Œçš„ç®—å­æ—ä¸€è‡´æœ‰ç•Œã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "banach-contraction",
-        "picard-lindelof",
-        "uniform-boundedness"
-      ],
-      "note": "å®Œæ•´æ¡ä»¶è§å…³è”å®šç†ï¼šä¸€è‡´æœ‰ç•Œè¦æ±‚å®šä¹‰åŸŸ Banachã€ç®—å­é€ç‚¹æœ‰ç•Œï¼›å¼€æ˜ å°„è¦æ±‚ä¸¤ç©ºé—´ Banach ä¸”ç®—å­æœ‰ç•Œæ»¡å°„ï¼›é—­å›¾åƒè¦æ±‚å®šä¹‰åŸŸä¸ºå…¨éƒ¨ Banach ç©ºé—´ï¼›ODE è¯æ˜ä¸ºæ ‡é‡å±€éƒ¨ Lipschitz ç‰ˆæœ¬ã€‚"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "formulaCaptions",
-      "text": "å‹ç¼©æ˜ å°„åŸç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "banach-contraction"
-      ],
-      "note": "å®Œæ•´æ¡ä»¶è§å…³è”å®šç†ï¼šä¸€è‡´æœ‰ç•Œè¦æ±‚å®šä¹‰åŸŸ Banachã€ç®—å­é€ç‚¹æœ‰ç•Œï¼›å¼€æ˜ å°„è¦æ±‚ä¸¤ç©ºé—´ Banach ä¸”ç®—å­æœ‰ç•Œæ»¡å°„ï¼›é—­å›¾åƒè¦æ±‚å®šä¹‰åŸŸä¸ºå…¨éƒ¨ Banach ç©ºé—´ï¼›ODE è¯æ˜ä¸ºæ ‡é‡å±€éƒ¨ Lipschitz ç‰ˆæœ¬ã€‚"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "extraInsight",
-      "text": "å·´æ‹¿èµ«ç©ºé—´æ˜¯å®Œå¤‡èµ‹èŒƒç©ºé—´ï¼Œå®Œå¤‡æ€§ä¿è¯æŸ¯è¥¿åˆ—æœ‰æé™ï¼Œä»è€Œä½¿å‹ç¼©æ˜ å°„åŸç†ã€ä¸€è‡´æœ‰ç•ŒåŸç†ã€å¼€æ˜ å°„å®šç†ç­‰æˆç«‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "banach-contraction",
-        "uniform-boundedness",
-        "open-mapping-banach"
-      ],
-      "note": "å®Œæ•´æ¡ä»¶è§å…³è”å®šç†ï¼šä¸€è‡´æœ‰ç•Œè¦æ±‚å®šä¹‰åŸŸ Banachã€ç®—å­é€ç‚¹æœ‰ç•Œï¼›å¼€æ˜ å°„è¦æ±‚ä¸¤ç©ºé—´ Banach ä¸”ç®—å­æœ‰ç•Œæ»¡å°„ï¼›é—­å›¾åƒè¦æ±‚å®šä¹‰åŸŸä¸ºå…¨éƒ¨ Banach ç©ºé—´ï¼›ODE è¯æ˜ä¸ºæ ‡é‡å±€éƒ¨ Lipschitz ç‰ˆæœ¬ã€‚"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "extraInsight",
-      "text": "è¿™äº›å®šç†æ˜¯å¾®åˆ†æ–¹ç¨‹ã€æ•°å€¼åˆ†æä¸ç®—å­ç†è®ºçš„åŸºçŸ³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/banach-spaces",
-      "field": "extraExamples",
-      "text": "å‹ç¼©æ˜ å°„åŸç†è¯æ˜ ODE è§£å­˜åœ¨å”¯ä¸€ï¼šæŠŠç§¯åˆ†æ–¹ç¨‹ $y(t)=y_0+\\int_0^t f(s,y(s))\\,ds$ çœ‹ä½œ $C[0,T]$ ä¸Šçš„å‹ç¼©æ˜ å°„ï¼Œå¾—åˆ° Picardâ€“LindelÃ¶f å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "banach-contraction",
-        "picard-lindelof"
-      ],
-      "note": "æœ¬å·çš„ Picardâ€“LindelÃ¶f å‘½é¢˜ç»™å‡ºæ ‡é‡åˆå€¼é—®é¢˜ã€çŸ©å½¢è¿ç»­æ€§åŠç»Ÿä¸€ Lipschitz æ¡ä»¶ï¼Œå¹¶ç”¨è¿ç»­å‡½æ•°ç©ºé—´ä¸Šçš„å‹ç¼©æ˜ å°„å®šç†è¯æ˜å±€éƒ¨å­˜åœ¨å”¯ä¸€ï¼›è¿™é‡Œçš„ C[0,T] éœ€å–è¶³å¤ŸçŸ­çš„é—­æ—¶é—´åŒºé—´ã€‚"
-    },
-    {
-      "topic": "analysis/hilbert-spaces",
-      "field": "definition",
-      "text": "æ­£äº¤æŠ•å½±å®šç†ï¼ˆå® Hilbert ç‰ˆï¼‰ï¼šå¯¹æ¯ä¸ªéç©ºé—­çº¿æ€§å­ç©ºé—´ $M$ å’Œ $x\\in H$ï¼Œå­˜åœ¨å”¯ä¸€ $m\\in M$ ä½¿ $x-m\\perp M$ï¼›$m$ æ˜¯è·ç¦» $x$ æœ€è¿‘çš„å­ç©ºé—´å…ƒç´ ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "projection-closed-subspace"
-      ],
-      "note": "ä¸å® Hilbert ç‰ˆæœ¬å‘½é¢˜ä¸€è‡´ï¼›é—­å­ç©ºé—´ä¸­æå°åŒ–è·ç¦»çš„åºåˆ—ç”±å¹³è¡Œå››è¾¹å½¢æ’ç­‰å¼æˆä¸ºæŸ¯è¥¿åˆ—ï¼Œæé™ç»™æŠ•å½±ï¼Œæ­£äº¤æ¡ä»¶ç»™å”¯ä¸€æ€§ã€‚"
-    },
-    {
-      "topic": "analysis/hilbert-spaces",
-      "field": "definition",
-      "text": "Riesz è¡¨ç¤ºå®šç†ï¼ˆå® Hilbert ç‰ˆï¼‰ï¼šæ¯ä¸ªæœ‰ç•Œçº¿æ€§æ³›å‡½ $\\ell$ éƒ½å”¯ä¸€è¡¨ç¤ºä¸º $\\ell(x)=\\langle x,y\\rangle$ï¼Œä¸” $\\|\\ell\\|=\\|y\\|$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "riesz-representation"
-      ],
-      "note": "èŒƒå›´é™å®šä¸ºå® Hilbert ç©ºé—´ï¼Œä¸æœ¬å·å·²è¯ç‰ˆæœ¬å»åˆï¼›å…ˆç”¨æ ¸çš„æ­£äº¤è¡¥æ„é€ è¡¨ç¤ºå‘é‡ï¼Œå†ç”¨ Cauchyâ€“Schwarz åŠå–å•ä½æ–¹å‘è¯æ˜èŒƒæ•°ç›¸ç­‰ã€‚"
-    },
-    {
-      "topic": "analysis/hilbert-spaces",
-      "field": "formulaCaptions",
-      "text": "Riesz è¡¨ç¤ºå®šç†ï¼ˆå® Hilbert ç©ºé—´è‡ªå¯¹å¶ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "riesz-representation"
-      ],
-      "note": "å…¬å¼çš„å®å¯¹å¶è‡ªåŒæ„ç”±å® Hilbert ç©ºé—´ Riesz è¡¨ç¤ºå®šç†ç»™å‡ºï¼›å¤ç©ºé—´éœ€æŒ‰çº¿æ€§/å…±è½­çº¿æ€§çº¦å®šæ”¹å†™ï¼Œä¸åœ¨è¯¥å…¬å¼èŒƒå›´å†…ã€‚"
-    },
-    {
-      "topic": "analysis/hilbert-spaces",
-      "field": "extraInsight",
-      "text": "æ­£äº¤æŠ•å½±å®šç†ä¿è¯é—­å­ç©ºé—´æœ‰å”¯ä¸€æœ€ä½³é€¼è¿‘ï¼Œè¿™æ˜¯æœ€å°äºŒä¹˜æ³•ä¸é‡å­æµ‹é‡çš„å‡ ä½•åŸºç¡€ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "projection-closed-subspace"
-      ],
-      "note": "æœ¬å·çš„è¯¦ç»†æœ€å°åŒ–åºåˆ—è¯æ˜æ˜ç¡®å†™åœ¨å® Hilbert ç©ºé—´ï¼›å”¯ä¸€æœ€ä½³é€¼è¿‘ä¸æ­£äº¤ä½™é‡å‡å·²æ¨å‡ºã€‚å¤ Hilbert ç‰ˆæœ¬åªåœ¨æ­¤ä½œæ¦‚å¿µè”ç³»ï¼Œä¸å£°ç§°æœ¬æ¡å·²å±•å¼€å…¶å¤å†…ç§¯ç»†èŠ‚ã€‚"
-    },
-    {
-      "topic": "analysis/spectral-theory",
-      "field": "definition",
-      "text": "ç´§è‡ªä¼´ç®—å­çš„è°±å®šç†ï¼šå­˜åœ¨æ­£äº¤ç‰¹å¾åŸºï¼Œ$T = \\sum \\lambda_i \\langle \\cdot, e_i\\rangle e_i$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "compact-self-adjoint-spectral"
-      ],
-      "note": "è¯æ˜é€‚ç”¨äºä»»æ„å®æˆ–å¤ Hilbert ç©ºé—´ä¸Šçš„æœ‰ç•Œç´§è‡ªä¼´ç®—å­ï¼›éé›¶ç‰¹å¾åˆ—å¤–é¡»è¡¥æ ¸çš„æ­£äº¤åŸºã€‚å±•å¼€åœ¨èŒƒæ•°ä¸‹æˆç«‹ï¼Œç®—å­æˆªæ–­ä¹ŸæŒ‰èŒƒæ•°æ”¶æ•›ï¼›ä¸€èˆ¬éç´§ç®—å­çš„è°±æµ‹åº¦ç‰ˆæœ¬ä¸ç”±æ­¤æ¨å‡ºã€‚"
-    },
-    {
-      "topic": "analysis/spectral-theory",
-      "field": "formulaCaptions",
-      "text": "ç´§è‡ªä¼´ç®—å­çš„è°±åˆ†è§£ï¼›ä¸€èˆ¬è‡ªä¼´ç®—å­çš„è°±æµ‹åº¦å®šç†æœªåœ¨æœ¬å·è¯æ˜ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "compact-self-adjoint-spectral"
-      ],
-      "note": "å¼•ç”¨çš„è¯æ˜åªè¦†ç›–æœ‰ç•Œç´§è‡ªä¼´ç®—å­ï¼›å¥ä¸­åŒæ—¶æ˜ç¡®ä¸€èˆ¬è‡ªä¼´è°±æµ‹åº¦å®šç†æœªè¯æ˜ã€‚"
-    },
-    {
-      "topic": "analysis/linear-operators",
-      "field": "definition",
-      "text": "å¯¹å¶ç©ºé—´ $X^*$ æ˜¯ $X$ ä¸Šè¿ç»­çº¿æ€§æ³›å‡½çš„ç©ºé—´ï¼›å¯¹éé›¶å®æˆ–å¤èµ‹èŒƒç©ºé—´ï¼ŒHahnâ€“Banach å®šç†ä¿è¯éé›¶è¿ç»­çº¿æ€§æ³›å‡½çš„å­˜åœ¨ï¼Œä¸”å¯ä¿èŒƒæ•°å»¶æ‹“å­ç©ºé—´ä¸Šçš„æœ‰ç•Œçº¿æ€§æ³›å‡½ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hahn-banach-normed",
-        "norming-functional"
-      ],
-      "note": "å·²è¡¥éé›¶ç©ºé—´æ¡ä»¶ï¼›é›¶ç©ºé—´æ²¡æœ‰éé›¶æ³›å‡½ã€‚å®ã€å¤ç‰ˆæœ¬å‡æä¾›ä¿èŒƒæ•°å»¶æ‹“è¯æ˜ï¼Œä½¿ç”¨æ˜ç¡®çš„ Zorn é€‰æ‹©åŸºç¡€ï¼Œä¸è¦æ±‚å®Œå¤‡ã€‚"
-    },
-    {
-      "topic": "analysis/linear-operators",
-      "field": "example",
-      "text": "å‚…é‡Œå¶å˜æ¢ $\\mathcal{F}: L^2(\\mathbb{R}) \\to L^2(\\mathbb{R})$ æ˜¯æœ‰ç•Œçº¿æ€§ç®—å­ï¼Œä¸”æ˜¯é…‰ç®—å­ï¼ˆPlancherel å®šç†ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/linear-operators",
-      "field": "extraExamples",
-      "text": "å‚…é‡Œå¶å˜æ¢æ˜¯ $L^2$ ä¸Šçš„é…‰ç®—å­ï¼Œå› æ­¤ä¿æŒå†…ç§¯ä¸èŒƒæ•°ï¼ˆPlancherel å®šç†ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/fourier-series",
-      "field": "extraInsight",
-      "text": "é€ç‚¹æ”¶æ•›æ›´å¾®å¦™ï¼ˆCarleson å®šç†ï¼š$L^2$ å‡½æ•°å‡ ä¹å¤„å¤„æ”¶æ•›ï¼‰ï¼Œè€Œä¸è¿ç»­ç‚¹é™„è¿‘ä¼šå‡ºç° Gibbs ç°è±¡ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/fourier-transform",
-      "field": "definition",
-      "text": "Plancherel å®šç†ï¼šè¯¥å˜æ¢ä» Schwartz å‡½æ•°å”¯ä¸€è¿ç»­å»¶æ‹“åˆ° $L^2(\\mathbb R)$ï¼Œå¹¶æ»¡è¶³ $\\|\\hat f\\|_2=\\|f\\|_2$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "plancherel-l2-cycles"
-      ],
-      "note": "æŒ‰ e^(âˆ’2Ï€iÎ¾x) çº¦å®šçš„ä¸€ç»´å®çº¿ç‰ˆæœ¬ï¼›ç”±è§’é¢‘ç‡ Plancherel ç»ç¼©æ”¾æ¨å‡º LÂ² å”¯ä¸€å»¶æ‹“ã€‚"
-    },
-    {
-      "topic": "analysis/fourier-transform",
-      "field": "formulaCaptions",
-      "text": "Plancherel å®šç†ï¼ˆ$e^{-2\\pi i\\xi x}$ çº¦å®šï¼Œ$L^2(\\mathbb R)$ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "plancherel-l2-cycles"
-      ],
-      "note": "å…¬å¼æ˜ç¡®çº¦å®š $e^{-2Ï€iÎ¾x}$ ä¸”å®šä¹‰åŸŸä¸º $LÂ²(R)$ï¼›è¯æ˜å«ç¼©æ”¾ä¸æ»¡å°„æ€§ã€‚"
-    },
-    {
-      "topic": "analysis/convolution",
-      "field": "definition",
-      "text": "åœ¨ $\\hat f(\\xi)=\\int f(x)e^{-2\\pi i\\xi x}dx$ çº¦å®šä¸‹ï¼Œ$f,g\\in L^1$ æ»¡è¶³å·ç§¯å®šç† $\\widehat{f*g}(\\xi)=\\hat f(\\xi)\\hat g(\\xi)$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "convolution-l1-cycles"
-      ],
-      "note": "å‡è®¾ f,gâˆˆLÂ¹(R)ï¼ŒæŒ‰ e^(âˆ’2Ï€iÎ¾x) é¢‘ç‡çº¦å®šï¼›ç”±è§’é¢‘ç‡ç‰ˆå®šç†ä»£å…¥ t=2Ï€Î¾ã€‚"
-    },
-    {
-      "topic": "analysis/convolution",
-      "field": "intuition",
-      "text": "çº¿æ€§æ—¶ä¸å˜ç³»ç»Ÿçš„è¾“å‡ºç­‰äºè¾“å…¥ä¸å†²æ¿€å“åº”çš„å·ç§¯ï¼›å·ç§¯å®šç†è®©æ»¤æ³¢å™¨è®¾è®¡åœ¨é¢‘åŸŸå®Œæˆã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "convolution-l1-cycles"
-      ],
-      "note": "æŠŠ LTI çš„è¾“å…¥è¾“å‡ºå·ç§¯å…³ç³»æ˜ç¡®ä½œä¸ºç³»ç»Ÿæ¨¡å‹å‡è®¾ï¼›æœ¬å·è¯æ˜è¯¥å·ç§¯çš„ Fourier å˜æ¢ä¸ºä¹˜ç§¯ã€‚"
-    },
-    {
-      "topic": "analysis/convolution",
-      "field": "example",
-      "text": "Gaussian å·ç§¯å®šç†ï¼šä¸­å¿ƒé«˜æ–¯å¯†åº¦ $\\phi_\\sigma$ ä¸ $\\phi_\\tau$ å·ç§¯ä¸º $\\phi_{\\sqrt{\\sigma^2+\\tau^2}}$ï¼Œå¯ç”±é…æ–¹ç›´æ¥éªŒè¯ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "gaussian-convolution-variance"
-      ],
-      "note": "å¯¹ Ïƒ,Ï„>0 çš„å½’ä¸€åŒ–ä¸­å¿ƒ Gaussianï¼Œå®Œæˆå¹³æ–¹å¹¶è°ƒç”¨å·²è¯ Gaussian ç§¯åˆ†ã€‚"
-    },
-    {
-      "topic": "analysis/convolution",
-      "field": "formulaCaptions",
-      "text": "å·ç§¯å®šç†ï¼ˆ$f,g\\in L^1(\\mathbb R)$ï¼ŒæŒ‰ $e^{-2\\pi i\\xi x}$ çº¦å®šï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "convolution-l1-cycles"
-      ],
-      "note": "ç­‰å¼å¯¹æ¯ä¸ªé¢‘ç‡æˆç«‹ï¼›å‡½æ•°ç©ºé—´å’Œ Fourier çº¦å®šä¸é™ˆè¿°ç›¸åŒã€‚"
-    },
-    {
-      "topic": "analysis/convolution",
-      "field": "extraInsight",
-      "text": "è‹¥è¿ç»­çº¿æ€§æ—¶ä¸å˜ç³»ç»Ÿä»¥å·ç§¯è¡¨ç¤ºè¾“å…¥ä¸å†²æ¿€å“åº”ï¼Œå·ç§¯å®šç†å°±æŠŠå…¶é¢‘åŸŸè¡¨ç¤ºåŒ–ä¸ºä¹˜æ³•ï¼›å‰è€…æ˜¯ç³»ç»Ÿæ¨¡å‹å‡è®¾ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/time-frequency",
-      "field": "definition",
-      "text": "Heisenberg ä¸ç¡®å®šæ€§åŸç†ï¼ˆè§’é¢‘ç‡çº¦å®šï¼‰ï¼šå–éé›¶ Schwartz å‡½æ•° $f\\in\\mathcal S(\\mathbb R)$ï¼Œå®šä¹‰ $\\hat f(\\omega)=\\int_{\\mathbb R}f(t)e^{-i\\omega t}dt$ã€$\\bar t=\\|f\\|_2^{-2}\\int t|f(t)|^2dt$ã€$\\bar\\omega=(2\\pi\\|f\\|_2^2)^{-1}\\int\\omega|\\hat f(\\omega)|^2d\\omega$ï¼›$\\Delta t^2=\\|f\\|_2^{-2}\\int(t-\\bar t)^2|f(t)|^2dt$ï¼Œ$\\Delta\\omega^2=(2\\pi\\|f\\|_2^2)^{-1}\\int(\\omega-\\bar\\omega)^2|\\hat f(\\omega)|^2d\\omega$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "heisenberg-uncertainty"
-      ],
-      "note": "ä¸è¯æ˜æ‰€ç”¨ Fourier æ ¸ e^(âˆ’iÏ‰t)ã€Parseval å› å­ 2Ï€ åŠ Schwartz å‡è®¾ä¸€è‡´ï¼›æ–¹å·®åˆ†åˆ«æŒ‰æ—¶é—´å¯†åº¦ |f|Â²/â€–fâ€–Â² å’Œè§’é¢‘ç‡å¯†åº¦ |fhat|Â²/(2Ï€â€–fâ€–Â²) å®šä¹‰ã€‚"
-    },
-    {
-      "topic": "analysis/time-frequency",
-      "field": "intuition",
-      "text": "åœ¨è§’é¢‘ç‡å‚…é‡Œå¶çº¦å®šä¸‹ï¼ŒHeisenberg ä¸ç¡®å®šæ€§åŸç†è¯´æ˜åŒä¸€éé›¶ Schwartz ä¿¡å·çš„å‡æ–¹æ ¹æ—¶é—´å®½åº¦ä¸é¢‘ç‡å®½åº¦ä¹˜ç§¯è‡³å°‘ä¸º $1/2$ï¼›æ—¶é—´çª—è¶Šçª„ï¼Œé¢‘è°±å°±è¶Šå®½ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "heisenberg-uncertainty"
-      ],
-      "note": "ä¸¥æ ¼ä¸ç­‰å¼ç»“è®ºå’Œ Schwartz/è§’é¢‘ç‡çº¦å®šç”± Heisenberg è¯æ˜ç»™å‡ºï¼›â€œæ—¶é—´çª—è¶Šçª„ï¼Œé¢‘è°±è¶Šå®½â€æ˜¯è¯¥ä¹˜ç§¯ä¸‹ç•Œçš„å®šæ€§æ¦‚è¿°ã€‚"
-    },
-    {
-      "topic": "analysis/time-frequency",
-      "field": "formulaCaptions",
-      "text": "Heisenberg ä¸ç¡®å®šæ€§åŸç†ï¼ˆéé›¶ Schwartz ä¿¡å·ï¼Œè§’é¢‘ç‡çº¦å®šï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "heisenberg-uncertainty"
-      ],
-      "note": "å…¬å¼ä¸­çš„ Î”tã€Î”Ï‰ å’Œè§’é¢‘ç‡ Fourier çº¦å®šåœ¨æœ¬ä¸»é¢˜å®šä¹‰ä¸­ç»™å‡ºï¼Œç²¾ç¡®çš„ Schwartz ç‰ˆæœ¬æœ‰å¯¹åº”æ¨å¯¼ã€‚"
-    },
-    {
-      "topic": "analysis/time-frequency",
-      "field": "extraInsight",
-      "text": "æ—¶é¢‘åˆ†æåœ¨â€œæ—¶é—´â€”é¢‘ç‡â€å¹³é¢ä¸Šè¡¨ç¤ºä¿¡å·ï¼›ä¸ç¡®å®šæ€§åŸç†é™åˆ¶äº†ä¸¤è€…çš„è”åˆåˆ†è¾¨ç‡ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/odes",
-      "field": "definition",
-      "text": "Picardâ€“LindelÃ¶f å®šç†ï¼ˆæ ‡é‡å±€éƒ¨ç‰ˆï¼‰ï¼šè‹¥ $f$ åœ¨ $(t_0,y_0)$ çš„ä¸€ä¸ªé—­çŸ©å½¢é‚»åŸŸè¿ç»­ï¼Œä¸”å­˜åœ¨ $L\\ge0$ ä½¿çŸ©å½¢å†… $|f(t,y_1)-f(t,y_2)|\\le L|y_1-y_2|$ï¼Œåˆ™åˆå€¼é—®é¢˜ $y'=f(t,y)$ã€$y(t_0)=y_0$ æœ‰å®šä¹‰åœ¨ $t_0$ é™„è¿‘çš„å”¯ä¸€ $C^1$ è§£ï¼›å”¯ä¸€æ€§æŒ‡è§£ç•™åœ¨è¯¥çŸ©å½¢æ—¶æˆç«‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "picard-lindelof"
-      ],
-      "note": "å¯¹åº”å·²æ”¶å½•çš„æ ‡é‡ Picardâ€“LindelÃ¶f è¯æ˜ï¼šé—­çŸ©å½¢ä¸Šçš„è¿ç»­æ€§ä¸ç»Ÿä¸€ y-Lipschitz å¸¸æ•°ä¿è¯çŸ­æ—¶é—´ç§¯åˆ†ç®—å­è‡ªæ˜ ä¸”å‹ç¼©ï¼›ç»“è®ºåªè¦æ±‚å±€éƒ¨è§£ï¼Œå¹¶å°†å”¯ä¸€æ€§èŒƒå›´æ˜ç¡®é™åœ¨è¯¥çŸ©å½¢å†…ã€‚"
-    },
-    {
-      "topic": "analysis/weak-solutions",
-      "field": "extraInsight",
-      "text": "Sobolev ç©ºé—´æ˜¯å¼±è§£çš„å¤©ç„¶èˆå°ï¼›Laxâ€“Milgram å®šç†ç»™å‡ºæ¤­åœ†å‹å¼±è§£å­˜åœ¨å”¯ä¸€çš„æŠ½è±¡æ¡†æ¶ï¼Œä¹Ÿæ˜¯æœ‰é™å…ƒæ–¹æ³•çš„ç†è®ºåŸºç¡€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/weak-solutions",
-      "field": "extraExamples",
-      "text": "æœ‰é™å…ƒæ–¹æ³•åœ¨ $H^1$ ç©ºé—´ä¸­å¯»æ‰¾å¼±è§£ï¼Œç”¨åˆ†ç‰‡å¤šé¡¹å¼é€¼è¿‘ï¼Œè¯¯å·®ç”± CÃ©a å¼•ç†æ§åˆ¶ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/stability",
-      "field": "extraExamples",
-      "text": "çº¿æ€§ç³»ç»Ÿ $\\dot x=Ax$ æ¸è¿‘ç¨³å®šå½“ä¸”ä»…å½“ $A$ çš„æ‰€æœ‰ç‰¹å¾å€¼å®éƒ¨ä¸ºè´Ÿï¼ˆLyapunov å®šç†ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hurwitz-linear-stability",
-        "continuous-lyapunov-equation"
-      ],
-      "note": "é™äºæœ‰é™ç»´å¸¸ç³»æ•°è¿ç»­æ—¶é—´å®çº¿æ€§ç³»ç»Ÿï¼›Jordan åˆ†è§£è¯æ˜å……è¦æ¡ä»¶ï¼Œå¦ç»™ Lyapunov æ–¹ç¨‹ç§¯åˆ†æ„é€ ã€å”¯ä¸€æ€§ä¸åå‘åˆ¤æ®ã€‚"
-    },
-    {
-      "topic": "analysis/equilibria-periodic-orbits",
-      "field": "intuition",
-      "text": "å‘¨æœŸè½¨é“å¯èƒ½ç¨³å®šï¼ˆå¸å¼•ï¼‰æˆ–ä¸ç¨³å®šï¼›PoincarÃ©â€“Bendixson å®šç†è¯´æ˜å¹³é¢ç³»ç»Ÿçš„æé™è¡Œä¸ºå—é™äºå¹³è¡¡ç‚¹ä¸å‘¨æœŸè½¨ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/equilibria-periodic-orbits",
-      "field": "extraInsight",
-      "text": "PoincarÃ©â€“Bendixson å®šç†è¯´æ˜å¹³é¢è‡ªæ²»ç³»ç»Ÿçš„æé™é›†åªèƒ½æ˜¯å¹³è¡¡ç‚¹ã€å‘¨æœŸè½¨æˆ–è¿æ¥å®ƒä»¬çš„è½¨é“ï¼Œè¿™æ˜¯å¹³é¢åŠ¨åŠ›ç³»ç»Ÿçš„åŸºæœ¬ç»“æ„å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "analysis/ergodicity",
-      "field": "definition",
-      "text": "Birkhoff éå†å®šç†å¯¹ä¿æµ‹æ¦‚ç‡ç³»ç»Ÿä¸­çš„å¯ç§¯å‡½æ•°ç»™å‡ºå‡ ä¹å¤„å¤„å’Œ LÂ¹ æ”¶æ•›ï¼›éå†æ—¶æé™ç­‰äºç©ºé—´å¹³å‡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "von-neumann-mean-ergodic",
-        "hopf-maximal-ergodic",
-        "ergodic-l1-maximal",
-        "ergodic-dense-good-class",
-        "birkhoff-probability-l1"
-      ],
-      "note": "ä¿æµ‹æ¦‚ç‡ç³»ç»Ÿä¸å®LÂ¹å‡½æ•°ï¼›ä»Hopfæå¤§å¼•ç†åŠç¨ å¯†é€¼è¿‘è¯æ˜å‡ ä¹å¤„å¤„å’ŒLÂ¹æ”¶æ•›ï¼Œè¯†åˆ«ä¸å˜æé™åŠéå†æ—¶çš„ç©ºé—´å¹³å‡ã€‚"
-    },
-    {
-      "topic": "analysis/ergodicity",
-      "field": "formulaCaptions",
-      "text": "Birkhoff å®šç†çš„éå†æ¦‚ç‡æƒ…å½¢ï¼šf å¯ç§¯ï¼Œç­‰å¼å‡ ä¹å¤„å¤„æˆç«‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "von-neumann-mean-ergodic",
-        "hopf-maximal-ergodic",
-        "ergodic-l1-maximal",
-        "ergodic-dense-good-class",
-        "birkhoff-probability-l1"
-      ],
-      "note": "ä¿æµ‹æ¦‚ç‡ç³»ç»Ÿä¸å®LÂ¹å‡½æ•°ï¼›ä»Hopfæå¤§å¼•ç†åŠç¨ å¯†é€¼è¿‘è¯æ˜å‡ ä¹å¤„å¤„å’ŒLÂ¹æ”¶æ•›ï¼Œè¯†åˆ«ä¸å˜æé™åŠéå†æ—¶çš„ç©ºé—´å¹³å‡ã€‚"
-    },
-    {
-      "topic": "foundations/predicates-quantifiers",
-      "field": "formulaCaptions",
-      "text": "é‡è¯å¦å®šå¾‹ï¼šå…¨ç§°å‘½é¢˜çš„å¦å®šæ˜¯å­˜åœ¨åä¾‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "quantifier-negation"
-      ],
-      "note": "ç»å…¸è¯­ä¹‰ç‰ˆæœ¬ï¼Œä¸æ¬åˆ°ç›´è§‰ä¸»ä¹‰æ¼”ç®—ä¸­ã€‚"
-    },
-    {
-      "topic": "foundations/formal-language",
-      "field": "intuition",
-      "text": "å½¢å¼è¯­è¨€æ˜¯è¯æ˜è®ºã€æ¨¡å‹è®ºä¸è®¡ç®—æœºç§‘å­¦çš„å…±åŒåŸºç¡€ï¼šç¨‹åºè¯­è¨€çš„è¯­æ³•ã€ç¼–è¯‘å™¨çš„è§£æã€å®šç†è¯æ˜å™¨çš„è¾“å…¥æ ¼å¼ï¼Œéƒ½æ˜¯å½¢å¼è¯­è¨€çš„å…·ä½“å®ä¾‹ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "definition",
-      "text": "å“¥å¾·å°”å®Œå…¨æ€§å®šç†ï¼ˆ1929ï¼‰è¯æ˜ï¼šæ ‡å‡†çš„ä¸€é˜¶é€»è¾‘è¯æ˜ç³»ç»Ÿæ—¢å¯é åˆå®Œå¤‡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general"
-      ],
-      "note": "æ ‡å‡†ç»å…¸ä¸€é˜¶å¥å­ç†è®ºï¼Œéç©ºç»“æ„è¯­ä¹‰ï¼›ä¸€èˆ¬è¯­è¨€ç‰ˆæœ¬ç”±ç´§è‡´æ€§åŠæœ‰é™ç­¾åå½’çº¦è¯æ˜ï¼Œä¸æ¶‰åŠç®—æœ¯ç†è®ºçš„å¥å­å®Œå¤‡æ€§ã€‚"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "intuition",
-      "text": "æ³¨æ„ä¸è¦ä¸**ä¸å®Œå¤‡æ€§å®šç†**æ··æ·†ï¼šå®Œå…¨æ€§è¯´çš„æ˜¯é€»è¾‘ç³»ç»Ÿæœ¬èº«ï¼ˆä¸€é˜¶é€»è¾‘ï¼‰è¶³å¤Ÿå¼ºï¼Œä¸å®Œå¤‡æ€§è¯´çš„æ˜¯åŒ…å«ç®—æœ¯çš„ç‰¹å®šç†è®ºï¼ˆå¦‚ PAã€ZFCï¼‰æ— æ³•åˆ¤å®šæ‰€æœ‰å‘½é¢˜ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "formulaCaptions",
-      "text": "å“¥å¾·å°”å®Œå…¨æ€§å®šç†ï¼šè¯­ä¹‰è•´å«å¯ç”±å½¢å¼è¯æ˜æ•è·ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general"
-      ],
-      "note": "æ ‡å‡†ç»å…¸ä¸€é˜¶å¥å­ç†è®ºï¼Œéç©ºç»“æ„è¯­ä¹‰ï¼›ä¸€èˆ¬è¯­è¨€ç‰ˆæœ¬ç”±ç´§è‡´æ€§åŠæœ‰é™ç­¾åå½’çº¦è¯æ˜ï¼Œä¸æ¶‰åŠç®—æœ¯ç†è®ºçš„å¥å­å®Œå¤‡æ€§ã€‚"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "formulaCaptions",
-      "text": "å®Œå¤‡æ€§çš„ç­‰ä»·è¡¨è¿°ï¼ˆæ¨¡å‹å­˜åœ¨å®šç†ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general"
-      ],
-      "note": "æ ‡å‡†ç»å…¸ä¸€é˜¶å¥å­ç†è®ºï¼Œéç©ºç»“æ„è¯­ä¹‰ï¼›ä¸€èˆ¬è¯­è¨€ç‰ˆæœ¬ç”±ç´§è‡´æ€§åŠæœ‰é™ç­¾åå½’çº¦è¯æ˜ï¼Œä¸æ¶‰åŠç®—æœ¯ç†è®ºçš„å¥å­å®Œå¤‡æ€§ã€‚"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "extraInsight",
-      "text": "å“¥å¾·å°”å®Œå…¨æ€§å®šç†è¯´æ˜æ ‡å‡†ä¸€é˜¶è¯æ˜ç³»ç»Ÿè¶³å¤Ÿå¼ºï¼›å®ƒä¸ä¸å®Œå¤‡æ€§å®šç†å¹¶ä¸çŸ›ç›¾ï¼Œåè€…é’ˆå¯¹çš„æ˜¯åŒ…å«ç®—æœ¯çš„ç‰¹å®šç†è®ºã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/soundness-completeness",
-      "field": "extraExamples",
-      "text": "ä¸€é˜¶é€»è¾‘å®Œå¤‡æ€§ç­‰ä»·äºæ¨¡å‹å­˜åœ¨å®šç†ï¼šç›¸å®¹çš„ç†è®ºä¸€å®šæœ‰æ¨¡å‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general"
-      ],
-      "note": "æ ‡å‡†ç»å…¸ä¸€é˜¶å¥å­ç†è®ºï¼Œéç©ºç»“æ„è¯­ä¹‰ï¼›ä¸€èˆ¬è¯­è¨€ç‰ˆæœ¬ç”±ç´§è‡´æ€§åŠæœ‰é™ç­¾åå½’çº¦è¯æ˜ï¼Œä¸æ¶‰åŠç®—æœ¯ç†è®ºçš„å¥å­å®Œå¤‡æ€§ã€‚"
-    },
-    {
-      "topic": "foundations/cardinality",
-      "field": "definition",
-      "text": "åº·æ‰˜å®šç†ï¼šå¯¹ä»»æ„é›†åˆ $A$ï¼Œ$|\\mathcal{P}(A)| > |A|$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "cantor"
-      ],
-      "note": "å¯¹è§’é›†åˆæ’é™¤æ»¡å°„ï¼Œå•å…ƒç´ é›†åˆç»™åå‘å•å°„ã€‚"
-    },
-    {
-      "topic": "foundations/cardinality",
-      "field": "formulaCaptions",
-      "text": "åº·æ‰˜å®šç†ï¼šå¹‚é›†çš„åŸºæ•°ä¸¥æ ¼å¤§äºåŸé›†åˆã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "cantor"
-      ],
-      "note": "å¯¹è§’é›†åˆæ’é™¤æ»¡å°„ï¼Œå•å…ƒç´ é›†åˆç»™åå‘å•å°„ã€‚"
-    },
-    {
-      "topic": "foundations/cardinality",
-      "field": "extraInsight",
-      "text": "åº·æ‰˜å®šç†è¯´æ˜å¹‚é›†ä¸¥æ ¼æ›´å¤§ï¼Œä»è€Œäº§ç”Ÿæ— ç©·å¤šä¸ªåŸºæ•°å±‚çº§ï¼›è¿ç»­ç»Ÿå‡è®¾é—®çš„æ­£æ˜¯ $\\mathbb{R}$ çš„åŸºæ•°æ˜¯å¦æ˜¯æœ€å°çš„ä¸å¯æ•°åŸºæ•°ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/ordinal-analysis",
-      "field": "intuition",
-      "text": "å“¥å¾·å°”ç¬¬äºŒä¸å®Œå¤‡æ€§å®šç†è¯´æ˜ PA æ— æ³•è¯æ˜è‡ªèº«ç›¸å®¹æ€§ï¼›Gentzen çš„è¯æ˜ä¹‹æ‰€ä»¥å¯èƒ½ï¼Œæ˜¯å› ä¸ºä½¿ç”¨äº†ä¸èƒ½ä»…ç”± PA è¯æ˜å…¶å……åˆ†å¼ºåº¦çš„è¶…é™å½’çº³åŸåˆ™ï¼ˆåˆ° $\\varepsilon_0$ï¼‰â€”â€”å¼ºåº¦è¢«â€œå€Ÿâ€äº†å‡ºå»ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/ordinal-analysis",
-      "field": "example",
-      "text": "PA å¯ä»¥è¯æ˜æ¯ä¸ª $\\omega$-æŒ‡æ•°å¡”ï¼ˆæœ‰é™é«˜ï¼‰è‰¯åºï¼Œä½†æ— æ³•è¯æ˜ $\\varepsilon_0$ è‰¯åºï¼›Gentzen ç”¨è¶…é™å½’çº³åˆ° $\\varepsilon_0$ è¯å‡º PA çš„ç›¸å®¹æ€§ï¼Œè¿™æ­£æ˜¯ç¬¬äºŒä¸å®Œå¤‡æ€§å®šç†åˆ’å®šçš„è¾¹ç•Œã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/zfc-axioms",
-      "field": "definition",
-      "text": "é€‰æ‹©å…¬ç†ï¼ˆACï¼‰æ–­è¨€ï¼šä»»æ„éç©ºé›†åˆæ—éƒ½æœ‰é€‰æ‹©å‡½æ•°ï¼Œç­‰ä»·äºä»»æ„é›†åˆéƒ½å¯è‰¯åºåŒ–ã€ä»»æ„å‘é‡ç©ºé—´éƒ½æœ‰åŸºã€Zorn å¼•ç†ç­‰é™ˆè¿°ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/zfc-axioms",
-      "field": "example",
-      "text": "åœ¨ ZF ä¸­æ— æ³•æ„é€ å‡ºâ€œæ¯ä¸ªå‘é‡ç©ºé—´éƒ½æœ‰åŸºâ€çš„è¯æ˜ï¼›åŠ ä¸Šé€‰æ‹©å…¬ç†åï¼ŒZorn å¼•ç†å¯ç”¨ï¼Œä»è€Œå¾—åˆ°åŸºçš„å­˜åœ¨æ€§ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/zfc-axioms",
-      "field": "extraInsight",
-      "text": "é€‰æ‹©å…¬ç†æ˜¯éæ„é€ æ€§çš„ï¼Œä½†å®ƒç­‰ä»·äºè‰¯åºå®šç†ä¸ Zorn å¼•ç†ï¼Œåœ¨ç°ä»£æ•°å­¦ä¸­è¢«å¹¿æ³›ä½¿ç”¨ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/zfc-axioms",
-      "field": "extraExamples",
-      "text": "ç”± Zorn å¼•ç†å¯æ¨å‡ºæ¯ä¸ªå‘é‡ç©ºé—´éƒ½æœ‰åŸºï¼Œå³ä½¿åŸºæ— æ³•æ˜¾å¼æ„é€ ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/formal-proof",
-      "field": "definition",
-      "text": "æœ€åä¸€é¡¹ç§°ä¸ºå®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/formal-proof",
-      "field": "extraInsight",
-      "text": "å½¢å¼è¯æ˜æŠŠæ¨ç†å˜æˆå¯æœºæ¢°æ£€éªŒçš„ç¬¦å·åºåˆ—ï¼Œæ˜¯å¸Œå°”ä¼¯ç‰¹çº²é¢†ä¸è‡ªåŠ¨å®šç†è¯æ˜çš„åŸºç¡€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/formal-proof",
-      "field": "extraExamples",
-      "text": "åœ¨ Hilbert ç³»ç»Ÿä¸­ï¼Œ$p\\to(q\\to p)$ æ˜¯å…¬ç†ï¼Œç”±è‚¯å®šå‰ä»¶å¯æ¨å‡ºå…·ä½“å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "definition",
-      "text": "å‘½é¢˜åˆ‡æ¶ˆå®šç†ï¼ˆLKï¼‰ï¼šä»»æ„çº¯å‘½é¢˜ç›¸ç»§å¼è‹¥æœ‰å«åˆ‡è¯æ˜ï¼Œä¹Ÿæœ‰ä¸å«åˆ‡è¯æ˜ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "propositional-cut-elimination"
-      ],
-      "note": "èŒƒå›´æ˜ç¡®ä¸ºæ— é‡è¯çš„ç»å…¸å‘½é¢˜ LKï¼Œä¸æœ¬å·æŒ‰å…¬å¼å¤æ‚åº¦è¯æ˜çš„å‘½é¢˜åˆ‡æ¶ˆç»“è®ºä¸€è‡´ï¼›ä¸€é˜¶ LK/LJ çš„é‡è¯åˆ‡æ¶ˆæœªæ®æ­¤å®£ç§°å·²è¯ã€‚"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "intuition",
-      "text": "åˆ‡è§„åˆ™å¯¹åº”æ•°å­¦ä¸­çš„â€œå¼•ç†â€ï¼šå…ˆè¯æ˜å¼•ç† $A$ï¼Œå†ç”¨å®ƒè¯æ˜ä¸»å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "intuition",
-      "text": "åˆ‡æ¶ˆå®šç†è¯´å¼•ç†æ€»æ˜¯å¯ä»¥è¢«â€œå±•å¼€â€ç›´æ¥åµŒå…¥ä¸»è¯æ˜ï¼Œè™½ç„¶è¯æ˜ä¼šå˜é•¿ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "intuition",
-      "text": "å­å…¬å¼æ€§è´¨æ˜¯è‡ªåŠ¨è¯æ˜ä¸è¯æ˜å¤æ‚æ€§çš„åŸºç¡€ï¼šå®ƒé™åˆ¶äº†è¯æ˜ä¸­å‡ºç°çš„å…¬å¼å½¢çŠ¶ï¼Œä½†ä¸€é˜¶é‡è¯å®ä¾‹ä»å¯èƒ½äº§ç”Ÿæ— é™æœç´¢ï¼Œä¸èƒ½æ®æ­¤æ¨å‡ºä¸€é˜¶é€»è¾‘å¯åˆ¤å®šï¼Œä¹Ÿç»™å‡ºäº†ç›´è§‰ä¸»ä¹‰é€»è¾‘çš„æå–æ€§è´¨ç­‰å…ƒå®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "example",
-      "text": "Gentzen å¯¹ PA çš„ç›¸å®¹æ€§è¯æ˜ç»“åˆäº†è¯æ˜çº¦åŒ–ä¸åˆ° $\\varepsilon_0$ çš„é€‚å½“è¶…é™å½’çº³ï¼Œå¹¶éåªé çº¯é€»è¾‘çš„åˆ‡æ¶ˆå®šç†ï¼šè‹¥ $\\vdash 0=1$ï¼Œå¯å¯¹å‡å®šè¯æ˜ä½œåºæ•°ä¸‹é™åˆ†æï¼›é¢å¤–çš„è¶…é™å½’çº³æ’é™¤è¿™ç§æ— é™ä¸‹é™ï¼Œä»è€Œæ’é™¤çŸ›ç›¾è¯æ˜ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "formulaCaptions",
-      "text": "å‘½é¢˜ LK åˆ‡æ¶ˆå®šç†ï¼ˆæœ¬å·è¯æ˜èŒƒå›´ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "propositional-cut-elimination"
-      ],
-      "note": "è¯¥å…¬å¼è¡¨è¾¾çš„ç»“è®ºä¸¥æ ¼é™å®šåœ¨å‘½é¢˜ LKï¼Œä¸å·²æ”¶å½•è¯æ˜èŒƒå›´ç›¸ç¬¦ã€‚"
-    },
-    {
-      "topic": "foundations/cut-elimination",
-      "field": "extraInsight",
-      "text": "åˆ‡æ¶ˆå®šç†è¯´æ˜è¯æ˜ä¸­çš„â€œå¼•ç†â€æ€»å¯ä»¥è¢«æ¶ˆé™¤ï¼Œå¾—åˆ°çš„æ— åˆ‡è¯æ˜å…·æœ‰å­å…¬å¼æ€§è´¨ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/halting-problem",
-      "field": "formulaCaptions",
-      "text": "å›¾çµ 1936 å¹´çš„å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "halting-diagonal",
-        "rice-function-properties"
-      ],
-      "note": "åœæœºå½’çº¦é’ˆå¯¹ç¨‹åºç¼–å·ï¼›Rice ç»“è®ºé™éƒ¨åˆ†å¯è®¡ç®—å‡½æ•°çš„éå¹³å‡¡ã€å¤–å»¶ä¸å˜è¯­ä¹‰æ€§è´¨ï¼Œèº«ä»½å‡½æ•°ä¸å…¨åŸŸåœæœºæ€§è´¨å‡æ»¡è¶³ã€‚"
-    },
-    {
-      "topic": "foundations/halting-problem",
-      "field": "extraInsight",
-      "text": "è±æ–¯å®šç†è¿›ä¸€æ­¥æŒ‡å‡ºï¼šç¨‹åºçš„ä»»ä½•éå¹³å‡¡è¯­ä¹‰æ€§è´¨éƒ½ä¸å¯åˆ¤å®šã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "halting-diagonal",
-        "rice-function-properties"
-      ],
-      "note": "åœæœºå½’çº¦é’ˆå¯¹ç¨‹åºç¼–å·ï¼›Rice ç»“è®ºé™éƒ¨åˆ†å¯è®¡ç®—å‡½æ•°çš„éå¹³å‡¡ã€å¤–å»¶ä¸å˜è¯­ä¹‰æ€§è´¨ï¼Œèº«ä»½å‡½æ•°ä¸å…¨åŸŸåœæœºæ€§è´¨å‡æ»¡è¶³ã€‚"
-    },
-    {
-      "topic": "foundations/halting-problem",
-      "field": "extraExamples",
-      "text": "è±æ–¯å®šç†ï¼šåˆ¤æ–­ä¸€ä¸ªç¨‹åºæ˜¯å¦è®¡ç®—æ’ç­‰å‡½æ•°ã€æ˜¯å¦å¯¹æ‰€æœ‰è¾“å…¥åœæœºç­‰æ€§è´¨éƒ½ä¸å¯åˆ¤å®šã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "halting-diagonal",
-        "rice-function-properties"
-      ],
-      "note": "åœæœºå½’çº¦é’ˆå¯¹ç¨‹åºç¼–å·ï¼›Rice ç»“è®ºé™éƒ¨åˆ†å¯è®¡ç®—å‡½æ•°çš„éå¹³å‡¡ã€å¤–å»¶ä¸å˜è¯­ä¹‰æ€§è´¨ï¼Œèº«ä»½å‡½æ•°ä¸å…¨åŸŸåœæœºæ€§è´¨å‡æ»¡è¶³ã€‚"
-    },
-    {
-      "topic": "foundations/enumerability",
-      "field": "intuition",
-      "text": "Post å®šç†ï¼š$L$ å¯åˆ¤å®šå½“ä¸”ä»…å½“ $L$ ä¸å®ƒçš„è¡¥é›†éƒ½å¯æšä¸¾ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "semi-decision-complement",
-        "enumeration-semidecision"
-      ],
-      "note": "å…è®¸ç©ºè¯­è¨€ã€é‡å¤è¾“å‡ºï¼›å¯æšä¸¾ä¸åŠåˆ¤å®šç­‰ä»·ï¼Œå†äº¤é”™æ¨¡æ‹Ÿä¸¤ä¾§åŠåˆ¤å®šå™¨ã€‚"
-    },
-    {
-      "topic": "foundations/enumerability",
-      "field": "formulaCaptions",
-      "text": "Post å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "semi-decision-complement",
-        "enumeration-semidecision"
-      ],
-      "note": "å…è®¸ç©ºè¯­è¨€ã€é‡å¤è¾“å‡ºï¼›å¯æšä¸¾ä¸åŠåˆ¤å®šç­‰ä»·ï¼Œå†äº¤é”™æ¨¡æ‹Ÿä¸¤ä¾§åŠåˆ¤å®šå™¨ã€‚"
-    },
-    {
-      "topic": "foundations/enumerability",
-      "field": "extraInsight",
-      "text": "å¯æšä¸¾é›†æ˜¯â€œå¯ä»¥è¢«ç®—æ³•åˆ—å‡ºâ€çš„é›†åˆï¼›Post å®šç†æŠŠå¯åˆ¤å®šæ€§ä¸è¡¥é›†çš„å¯æšä¸¾æ€§è”ç³»èµ·æ¥ï¼š$L$ å¯åˆ¤å®šå½“ä¸”ä»…å½“ $L$ ä¸ $\\overline L$ éƒ½å¯æšä¸¾ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "semi-decision-complement",
-        "enumeration-semidecision"
-      ],
-      "note": "å…è®¸ç©ºè¯­è¨€ã€é‡å¤è¾“å‡ºï¼›å¯æšä¸¾ä¸åŠåˆ¤å®šç­‰ä»·ï¼Œå†äº¤é”™æ¨¡æ‹Ÿä¸¤ä¾§åŠåˆ¤å®šå™¨ã€‚"
-    },
-    {
-      "topic": "foundations/objects-morphisms",
-      "field": "intuition",
-      "text": "è¿™ç§â€œå…³ç³»ä¼˜å…ˆâ€çš„è§†è§’è®©å®ƒèƒ½åœ¨ä¸åŒæ•°å­¦é¢†åŸŸä¹‹é—´è¿ç§»æ„é€ ä¸å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/axiomatic-method",
-      "field": "intuition",
-      "text": "å…¬ç†åŒ–æŠŠæ•°å­¦ç†è®ºå˜æˆâ€œè‹¥å…¬ç†æˆç«‹ï¼Œåˆ™å®šç†æˆç«‹â€çš„æ¡ä»¶æ€§çŸ¥è¯†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/axiomatic-method",
-      "field": "extraInsight",
-      "text": "å…¬ç†åŒ–æŠŠç†è®ºå˜æˆâ€œè‹¥å…¬ç†æˆç«‹ï¼Œåˆ™å®šç†æˆç«‹â€çš„æ¡ä»¶æ€§çŸ¥è¯†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/godel-first",
-      "field": "definition",
-      "text": "æœ¬å·è¯æ˜çš„ GÃ¶del ç¬¬ä¸€ä¸å®Œå¤‡æ€§å®šç†ç‰ˆæœ¬ï¼šè‹¥ $T$ æ˜¯å¯é ä¸”æœ‰æ•ˆå¯å…¬ç†åŒ–ã€å«è¶³å¤Ÿç®—æœ¯çš„ç†è®ºï¼Œå¹¶æ»¡è¶³æœ¬ç« æ˜¾å¼é—­é¡¹ç¼–ç è®¡ç®—å‡è®¾ï¼Œåˆ™å­˜åœ¨å¥å­ $G_T$ï¼Œä½¿ $T \\nvdash G_T$ ä¸” $T \\nvdash \\neg G_T$ï¼›$G_T$ åœ¨æ ‡å‡†è‡ªç„¶æ•°æ¨¡å‹ä¸­ä¸ºçœŸã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "godel-first-sound-theory"
-      ],
-      "note": "é¡µé¢ç°ä¸å®é™…è¯æ˜çš„å¯é æ€§å‡è®¾ã€æœ‰æ•ˆå…¬ç†åŒ–ã€ç®—æœ¯è¡¨è¾¾åŠ›åŠé—­é¡¹ç¼–ç å‡è®¾ä¸€è‡´ã€‚è¯¥ç‰ˆæœ¬å¼ºäºå•çº¯ä¸€è‡´æ€§å‡è®¾ï¼›Rosser å°†ä¸€è‡´æ€§å‡å¼±åˆ°ä¸€è‡´æ€§çš„ç»å…¸åŠ å¼ºåœ¨æœ¬å·æœªè¯ã€‚"
-    },
-    {
-      "topic": "foundations/godel-first",
-      "field": "formulaCaptions",
-      "text": "GÃ¶del ç¬¬ä¸€ä¸å®Œå¤‡æ€§å®šç†ï¼ˆå¯é ç†è®ºç‰ˆæœ¬ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "godel-first-sound-theory"
-      ],
-      "note": "å…¬å¼å’Œæ ‡é¢˜æ˜ç¡®é™å®šä¸ºæœ¬å·å·²ç»è¯æ˜çš„å¯é ç†è®ºç‰ˆæœ¬ï¼›å…¶ä¾èµ–åŒ…æ‹¬å¯¹è§’å¼•ç†å’Œé—­é¡¹ç¼–ç åŸºç¡€ã€‚"
-    },
-    {
-      "topic": "foundations/godel-second",
-      "field": "definition",
-      "text": "æœ¬å·è¯æ˜çš„ GÃ¶del ç¬¬äºŒä¸å®Œå¤‡æ€§å®šç†ç‰ˆæœ¬ï¼šè‹¥ $T$ ä¸€è‡´ã€æœ‰æ•ˆå¯å…¬ç†åŒ–ã€èƒ½æ„é€ æ‰€éœ€å¯¹è§’å¥ï¼Œä¸”æ ‡å‡†è¯æ˜è°“è¯æ»¡è¶³æœ¬ç« æ˜åˆ—çš„ D1â€“D3 ä¸ç¼–ç å‡è®¾ï¼Œåˆ™ $T$ ä¸è¯æ˜è‡ªèº«ä¸€è‡´æ€§å¥ $\\mathrm{Con}(T)=\\neg\\mathrm{Prov}_T(\\ulcorner 0=1 \\urcorner)$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "godel-second-incompleteness"
-      ],
-      "note": "ç»“è®ºä¸æ¡ä»¶åŒ–è¯æ˜ä¸€è‡´ï¼šLÃ¶b å®šç†éœ€è¦å¯¹è§’å¥åŠ D1â€“D3ï¼›D1â€“D3 çš„é€‚ç”¨åˆä¾èµ–æ˜ç¡®çš„è¯æ˜æ£€æŸ¥ä¸ç¼–ç æ¡ä»¶ã€‚æœ¬å·æ²¡æœ‰æŠŠæ¡ä»¶æœªç»è¯æ˜åœ°æ¨å¹¿åˆ°æ‰€æœ‰åŒ…å« PA çš„ç†è®ºã€‚"
-    },
-    {
-      "topic": "foundations/godel-second",
-      "field": "formulaCaptions",
-      "text": "ç¬¬äºŒä¸å®Œå¤‡æ€§å®šç†ï¼ˆD1â€“D3 æ¡ä»¶ç‰ˆï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "godel-second-incompleteness"
-      ],
-      "note": "å…¬å¼æ ‡é¢˜é™å®šåœ¨å·²è¯æ˜çš„ D1â€“D3 æ¡ä»¶ç‰ˆæœ¬ï¼›Con(T) æŒ‰æœ¬å·å®šä¹‰ä¸º Â¬Prov_T(âŒœ0=1âŒ)ã€‚"
-    },
-    {
-      "topic": "foundations/godel-second",
-      "field": "extraExamples",
-      "text": "Gentzen ç”¨ $\\varepsilon_0$ è¶…é™å½’çº³è¯æ˜ PA ç›¸å®¹ï¼Œä½†è¿™ä¸€å½’çº³åŸç†æœ¬èº«è¶…å‡º PAã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/consistency",
-      "field": "definition",
-      "text": "ç”±å®Œå¤‡æ€§å®šç†ï¼Œ$T$ ç›¸å®¹å½“ä¸”ä»…å½“ $T$ æœ‰æ¨¡å‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general",
-        "classical-explosion"
-      ],
-      "note": "ç›¸å®¹ä¸å¯æ»¡è¶³ç­‰ä»·é™æ ‡å‡†ç»å…¸ä¸€é˜¶æ¼”ç®—ï¼›çˆ†ç‚¸åŸç†æ˜¯è¯¥æ¼”ç®—çš„å‘½é¢˜å…¬ç†åæœã€‚"
-    },
-    {
-      "topic": "foundations/consistency",
-      "field": "intuition",
-      "text": "ä¸€ä¸ªä¸ç›¸å®¹çš„ç†è®ºå¯ä»¥è¯æ˜ä»»ä½•å‘½é¢˜ï¼ˆçˆ†ç‚¸åŸç† ex falsoï¼‰ï¼Œå› æ­¤æ¯«æ— ä¿¡æ¯é‡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general",
-        "classical-explosion"
-      ],
-      "note": "ç›¸å®¹ä¸å¯æ»¡è¶³ç­‰ä»·é™æ ‡å‡†ç»å…¸ä¸€é˜¶æ¼”ç®—ï¼›çˆ†ç‚¸åŸç†æ˜¯è¯¥æ¼”ç®—çš„å‘½é¢˜å…¬ç†åæœã€‚"
-    },
-    {
-      "topic": "foundations/consistency",
-      "field": "formulaCaptions",
-      "text": "çˆ†ç‚¸åŸç†ï¼šä¸ç›¸å®¹çš„ç†è®ºè¯æ˜ä¸€åˆ‡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general",
-        "classical-explosion"
-      ],
-      "note": "ç›¸å®¹ä¸å¯æ»¡è¶³ç­‰ä»·é™æ ‡å‡†ç»å…¸ä¸€é˜¶æ¼”ç®—ï¼›çˆ†ç‚¸åŸç†æ˜¯è¯¥æ¼”ç®—çš„å‘½é¢˜å…¬ç†åæœã€‚"
-    },
-    {
-      "topic": "foundations/consistency",
-      "field": "extraInsight",
-      "text": "ç›¸å®¹æ€§æ˜¯ç†è®ºæœ‰æ„ä¹‰çš„æœ€ä½è¦æ±‚ï¼›ç”±çˆ†ç‚¸åŸç†ï¼Œä¸ç›¸å®¹çš„ç†è®ºå¯ä»¥è¯æ˜ä»»ä½•å‘½é¢˜ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "fol-completeness-general",
-        "classical-explosion"
-      ],
-      "note": "ç›¸å®¹ä¸å¯æ»¡è¶³ç­‰ä»·é™æ ‡å‡†ç»å…¸ä¸€é˜¶æ¼”ç®—ï¼›çˆ†ç‚¸åŸç†æ˜¯è¯¥æ¼”ç®—çš„å‘½é¢˜å…¬ç†åæœã€‚"
-    },
-    {
-      "topic": "foundations/dependent-types",
-      "field": "definition",
-      "text": "ä¾èµ–ç±»å‹ç³»ç»Ÿå¯ä»¥è¡¨è¾¾â€œé•¿åº¦ä¸º $n$ çš„å‘é‡â€â€œå¯¹æ¯ä¸ªç¾¤ $G$ çš„å®šç†â€ç­‰ç²¾ç»†ç»“æ„ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/inductive-types",
-      "field": "definition",
-      "text": "ä¸å½’çº³ç±»å‹é…å¥—çš„æ˜¯**é€’å½’å­**ï¼ˆrecursorï¼‰ï¼Œå®ƒå®ç°ç»“æ„é€’å½’ï¼Œå¹¶å¯¹åº”å½’çº³è¯æ˜åŸç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/inductive-types",
-      "field": "extraInsight",
-      "text": "å½’çº³ç±»å‹ç”±æ„é€ å­ç”Ÿæˆï¼Œé€’å½’å­å®ç°ç»“æ„é€’å½’å¹¶å¯¹åº”å½’çº³è¯æ˜åŸç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/proof-assistants",
-      "field": "definition",
-      "text": "**è¯æ˜åŠ©ç†**æ˜¯åŸºäºç±»å‹è®ºçš„äº¤äº’å¼è½¯ä»¶ç³»ç»Ÿï¼Œç”¨æˆ·åœ¨å…¶ä¸­æ„é€ å½¢å¼è¯æ˜ï¼Œç³»ç»Ÿé€æ­¥æ£€æŸ¥æ¯ä¸€æ­¥çš„ç±»å‹æ­£ç¡®æ€§ï¼Œæœ€ç»ˆä¿è¯å®šç†æˆç«‹ï¼ˆç›¸å¯¹äºåº•å±‚å…¬ç†ä¸å®ç°çš„å¯ä¿¡æ€§ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/proof-assistants",
-      "field": "intuition",
-      "text": "å¤§è§„æ¨¡å½¢å¼åŒ–é¡¹ç›®ï¼ˆå¦‚å››è‰²å®šç†ã€å¥‡ç‚¹æ¶ˆè§£ã€Liquid Tensor Experimentï¼‰å±•ç¤ºäº†å…¶èƒ½åŠ›ï¼›ä½†å½¢å¼åŒ–æˆæœ¬ä»ç„¶å¾ˆé«˜ï¼Œéœ€è¦å¤§é‡äººåŠ›ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/proof-assistants",
-      "field": "extraExamples",
-      "text": "å››è‰²å®šç†ã€å¥‡ç‚¹æ¶ˆè§£ç­‰å¤§å‹å®šç†éƒ½å·²åœ¨ Coq/Lean ä¸­å½¢å¼åŒ–ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/classification-of-models",
-      "field": "definition",
-      "text": "å¯¹ç»™å®šç†è®º $T$ï¼Œç ”ç©¶å…¶æ¨¡å‹ç±»çš„ç»“æ„ï¼šåŒæ„ã€åˆç­‰åµŒå…¥ã€é¥±å’Œæ€§ã€ç¨³å®šæ€§ç­‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "foundations/compactness",
-      "field": "definition",
-      "text": "ç´§è‡´æ€§å®šç†ï¼šä¸€é˜¶ç†è®º $T$ æœ‰æ¨¡å‹ï¼Œå½“ä¸”ä»…å½“å®ƒçš„æ¯ä¸ªæœ‰é™å­é›†éƒ½æœ‰æ¨¡å‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "compactness-arbitrary-language",
-        "fol-completeness-compactness"
-      ],
-      "note": "è¶…ç§¯è¯æ˜é€‚ç”¨äºä»»æ„é›†åˆå¤§å°ä¸€é˜¶è¯­è¨€ï¼›æœ¬å· Henkin å®Œå¤‡æ€§è¯æ˜å¦é™å¯æ•°è¯­è¨€ã€‚è¶…æ»¤æ‰©å¼ ä¸åæ ‡è§è¯ä½¿ç”¨æ˜åˆ—çš„ZFCé€‰æ‹©åŸºç¡€ã€‚"
-    },
-    {
-      "topic": "foundations/compactness",
-      "field": "definition",
-      "text": "å®ƒæ˜¯å“¥å¾·å°”å®Œå…¨æ€§å®šç†çš„æ¨è®ºï¼Œä¹Ÿå¯ä»¥ç”¨è¶…ç§¯æˆ– Henkin æ„é€ ç›´æ¥è¯æ˜ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "compactness-arbitrary-language",
-        "fol-completeness-compactness"
-      ],
-      "note": "è¶…ç§¯è¯æ˜é€‚ç”¨äºä»»æ„é›†åˆå¤§å°ä¸€é˜¶è¯­è¨€ï¼›æœ¬å· Henkin å®Œå¤‡æ€§è¯æ˜å¦é™å¯æ•°è¯­è¨€ã€‚è¶…æ»¤æ‰©å¼ ä¸åæ ‡è§è¯ä½¿ç”¨æ˜åˆ—çš„ZFCé€‰æ‹©åŸºç¡€ã€‚"
-    },
-    {
-      "topic": "foundations/compactness",
-      "field": "formulaCaptions",
-      "text": "ç´§è‡´æ€§å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "compactness-arbitrary-language",
-        "fol-completeness-compactness"
-      ],
-      "note": "è¶…ç§¯è¯æ˜é€‚ç”¨äºä»»æ„é›†åˆå¤§å°ä¸€é˜¶è¯­è¨€ï¼›æœ¬å· Henkin å®Œå¤‡æ€§è¯æ˜å¦é™å¯æ•°è¯­è¨€ã€‚è¶…æ»¤æ‰©å¼ ä¸åæ ‡è§è¯ä½¿ç”¨æ˜åˆ—çš„ZFCé€‰æ‹©åŸºç¡€ã€‚"
-    },
-    {
-      "topic": "algebra/groups-subgroups",
-      "field": "formulaCaptions",
-      "text": "Lagrange å®šç†ï¼šå­ç¾¤çš„é˜¶æ•´é™¤ç¾¤çš„é˜¶ï¼ˆæœ‰é™ç¾¤ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "lagrange"
-      ],
-      "note": "åªé‡‡ç”¨æœ‰é™ç¾¤çš„é˜¶æ•´é™¤ç»“è®ºã€‚"
-    },
-    {
-      "topic": "algebra/groups-subgroups",
-      "field": "extraInsight",
-      "text": "Lagrange å®šç†æ˜¯æœ€æ—©çš„ç»“æ„çº¦æŸï¼šå­ç¾¤çš„é˜¶æ•´é™¤ç¾¤çš„é˜¶ï¼Œè¿™é™åˆ¶äº†è®¸å¤šç¾¤çš„å¯èƒ½ç»“æ„ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "lagrange"
-      ],
-      "note": "åªé‡‡ç”¨æœ‰é™ç¾¤çš„é˜¶æ•´é™¤ç»“è®ºã€‚"
-    },
-    {
-      "topic": "algebra/homomorphisms-quotients",
-      "field": "formulaCaptions",
-      "text": "ç¬¬ä¸€åŒæ„å®šç†ï¼šå•†æ‰æ ¸åŒæ„äºåƒã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "first-isomorphism"
-      ],
-      "note": "æ ¸ä¸ºæ­£è§„å­ç¾¤ï¼›å•†ç¾¤åˆ°åƒçš„æ˜ å°„å·²é€æ­¥éªŒè¯è‰¯å®šä¹‰å’ŒåŒå°„ã€‚"
-    },
-    {
-      "topic": "algebra/homomorphisms-quotients",
-      "field": "extraInsight",
-      "text": "åŒæ€çš„æ ¸è¡¡é‡ä¿¡æ¯æŸå¤±ï¼Œç¬¬ä¸€åŒæ„å®šç† $G/\\ker\\varphi\\cong\\operatorname{im}\\varphi$ æŠŠâ€œå‹ç¼©â€ä¸â€œåƒâ€è”ç³»èµ·æ¥ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "first-isomorphism"
-      ],
-      "note": "æ ¸ä¸ºæ­£è§„å­ç¾¤ï¼›å•†ç¾¤åˆ°åƒçš„æ˜ å°„å·²é€æ­¥éªŒè¯è‰¯å®šä¹‰å’ŒåŒå°„ã€‚"
-    },
-    {
-      "topic": "algebra/group-actions",
-      "field": "intuition",
-      "text": "ç¾¤ä½œç”¨ç»Ÿä¸€äº†è®¸å¤šè®¡æ•°é—®é¢˜ï¼šç”¨ Burnside å¼•ç†æ•°â€œæœ¬è´¨ä¸åŒçš„æŸ“è‰²æ–¹æ¡ˆâ€ï¼Œç”¨è½¨é“åˆ†è§£ç†è§£å¯¹ç§°æ€§ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "burnside-orbit-count"
-      ],
-      "note": "è¦æ±‚ç¾¤ä¸è¢«ä½œç”¨é›†åˆæœ‰é™ï¼›æ­£æ–¹å½¢ä¾‹çš„å››æ¬¡ä¸åŠ¨ç‚¹è®¡æ•°ä¸º16ã€2ã€4ã€2ã€‚"
-    },
-    {
-      "topic": "algebra/group-actions",
-      "field": "example",
-      "text": "ç”¨ä¸¤ç§é¢œè‰²ç»™æ­£æ–¹å½¢çš„å››ä¸ªé¡¶ç‚¹æŸ“è‰²ï¼Œå…± $2^4 = 16$ ç§ï¼›è‹¥æŠŠæ—‹è½¬åç›¸åŒçš„æ–¹æ¡ˆè§†ä¸ºåŒä¸€ç§ï¼Œç”¨ Burnside å¼•ç†ï¼ˆæ—‹è½¬ç¾¤ $C_4$ ä½œç”¨ï¼‰å¾—åˆ°ä¸åŒæ–¹æ¡ˆæ•°ä¸º $6$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "burnside-orbit-count"
-      ],
-      "note": "è¦æ±‚ç¾¤ä¸è¢«ä½œç”¨é›†åˆæœ‰é™ï¼›æ­£æ–¹å½¢ä¾‹çš„å››æ¬¡ä¸åŠ¨ç‚¹è®¡æ•°ä¸º16ã€2ã€4ã€2ã€‚"
-    },
-    {
-      "topic": "algebra/group-actions",
-      "field": "formulaCaptions",
-      "text": "Burnside å¼•ç†ï¼šè½¨é“æ•°ç­‰äºå¹³å‡ä¸åŠ¨ç‚¹æ•°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "burnside-orbit-count"
-      ],
-      "note": "è¦æ±‚ç¾¤ä¸è¢«ä½œç”¨é›†åˆæœ‰é™ï¼›æ­£æ–¹å½¢ä¾‹çš„å››æ¬¡ä¸åŠ¨ç‚¹è®¡æ•°ä¸º16ã€2ã€4ã€2ã€‚"
-    },
-    {
-      "topic": "algebra/group-actions",
-      "field": "extraInsight",
-      "text": "ç¾¤ä½œç”¨æŠŠæŠ½è±¡ç¾¤å®ç°ä¸ºç½®æ¢ç¾¤ï¼›è½¨é“åˆ†è§£ä¸ Burnside å¼•ç†æŠŠå¯¹ç§°æ€§è½¬åŒ–ä¸ºè®¡æ•°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "burnside-orbit-count"
-      ],
-      "note": "è¦æ±‚ç¾¤ä¸è¢«ä½œç”¨é›†åˆæœ‰é™ï¼›æ­£æ–¹å½¢ä¾‹çš„å››æ¬¡ä¸åŠ¨ç‚¹è®¡æ•°ä¸º16ã€2ã€4ã€2ã€‚"
-    },
-    {
-      "topic": "algebra/group-actions",
-      "field": "extraExamples",
-      "text": "æ—‹è½¬ç¾¤ $C_4$ ä½œç”¨åœ¨æ­£æ–¹å½¢é¡¶ç‚¹çš„ä¸¤ç§æŸ“è‰²ä¸Šï¼ŒBurnside å¼•ç†ç»™å‡º $6$ ç§æœ¬è´¨ä¸åŒçš„æ–¹æ¡ˆã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "burnside-orbit-count"
-      ],
-      "note": "è¦æ±‚ç¾¤ä¸è¢«ä½œç”¨é›†åˆæœ‰é™ï¼›æ­£æ–¹å½¢ä¾‹çš„å››æ¬¡ä¸åŠ¨ç‚¹è®¡æ•°ä¸º16ã€2ã€4ã€2ã€‚"
-    },
-    {
-      "topic": "algebra/orbits-stabilizers",
-      "field": "definition",
-      "text": "è½¨é“-ç¨³å®šå­å®šç†ï¼š$|\\mathrm{Orb}(x)| = [G : \\mathrm{Stab}(x)]$ï¼ˆå¯¹æœ‰é™ç¾¤å³ $|G|/|\\mathrm{Stab}(x)|$ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "orbit-coset-class-equation"
-      ],
-      "note": "ä»»æ„ç¾¤çš„é™ªé›†é›†åˆä¸è½¨é“ç›´æ¥åŒå°„ï¼›å•†ç¾¤ç»“æ„å¹¶éå¿…è¦ï¼Œæœ‰é™æƒ…å½¢å†å–åŸºæ•°ã€‚ç±»æ–¹ç¨‹åªå¯¹æœ‰é™ç¾¤æŒ‰æ™®é€šæ•´æ•°æ±‚å’Œã€‚"
-    },
-    {
-      "topic": "algebra/orbits-stabilizers",
-      "field": "intuition",
-      "text": "ç±»æ–¹ç¨‹ $|G| = |Z(G)| + \\sum [G : C_G(x_i)]$ æ˜¯è¯æ˜è®¸å¤šæœ‰é™ç¾¤å®šç†çš„å…³é”®ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "orbit-coset-class-equation"
-      ],
-      "note": "ä»»æ„ç¾¤çš„é™ªé›†é›†åˆä¸è½¨é“ç›´æ¥åŒå°„ï¼›å•†ç¾¤ç»“æ„å¹¶éå¿…è¦ï¼Œæœ‰é™æƒ…å½¢å†å–åŸºæ•°ã€‚ç±»æ–¹ç¨‹åªå¯¹æœ‰é™ç¾¤æŒ‰æ™®é€šæ•´æ•°æ±‚å’Œã€‚"
-    },
-    {
-      "topic": "algebra/orbits-stabilizers",
-      "field": "formulaCaptions",
-      "text": "è½¨é“-ç¨³å®šå­å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "orbit-coset-class-equation"
-      ],
-      "note": "ä»»æ„ç¾¤çš„é™ªé›†é›†åˆä¸è½¨é“ç›´æ¥åŒå°„ï¼›å•†ç¾¤ç»“æ„å¹¶éå¿…è¦ï¼Œæœ‰é™æƒ…å½¢å†å–åŸºæ•°ã€‚ç±»æ–¹ç¨‹åªå¯¹æœ‰é™ç¾¤æŒ‰æ™®é€šæ•´æ•°æ±‚å’Œã€‚"
-    },
-    {
-      "topic": "algebra/orbits-stabilizers",
-      "field": "extraInsight",
-      "text": "è½¨é“-ç¨³å®šå­å®šç† $|\\mathrm{Orb}(x)|=[G:\\mathrm{Stab}(x)]$ æ˜¯è®¡æ•°ä¸åˆ†ç±»çš„åŸºæœ¬å…¬å¼ï¼›ç¨³å®šå­è¶Šå¤§ï¼Œè½¨é“è¶Šå°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "orbit-coset-class-equation"
-      ],
-      "note": "ä»»æ„ç¾¤çš„é™ªé›†é›†åˆä¸è½¨é“ç›´æ¥åŒå°„ï¼›å•†ç¾¤ç»“æ„å¹¶éå¿…è¦ï¼Œæœ‰é™æƒ…å½¢å†å–åŸºæ•°ã€‚ç±»æ–¹ç¨‹åªå¯¹æœ‰é™ç¾¤æŒ‰æ™®é€šæ•´æ•°æ±‚å’Œã€‚"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "definition",
-      "text": "Lagrange å®šç†è¯´æ˜å­ç¾¤çš„é˜¶æ•´é™¤ç¾¤çš„é˜¶ï¼Œä½†åä¹‹ä¸æˆç«‹ï¼ˆå¦‚ $A_4$ æ—  6 é˜¶å­ç¾¤ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "sylow-existence",
-        "sylow-conjugacy-count",
-        "order-fifteen-cyclic",
-        "alternating-four-no-six"
-      ],
-      "note": "æœ‰é™ç¾¤å‡è®¾ï¼›ä»»æ„è¢«ç¾¤é˜¶æ•´é™¤çš„ç´ æ•°å¹‚é˜¶å­ç¾¤ç”± Sylow å­˜åœ¨æ€§åŠ  p ç¾¤å­ç¾¤é“¾ç»™å‡ºï¼›å…±è½­ä¸ä¸ªæ•°çº¦æŸå¦è¯ã€‚Aâ‚„ ä¸15é˜¶ä¾‹å‡å±•å¼€ã€‚"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "definition",
-      "text": "**Sylow å®šç†**ç»™å‡ºéƒ¨åˆ†é€†å‘½é¢˜ï¼šè‹¥ $p^k$ æ•´é™¤ $|G|$ï¼Œåˆ™ $G$ æœ‰ $p^k$ é˜¶å­ç¾¤ï¼›ç‰¹åˆ«åœ°ï¼ŒSylow $p$-å­ç¾¤å­˜åœ¨ä¸”ä¸¤ä¸¤å…±è½­ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "sylow-existence",
-        "sylow-conjugacy-count",
-        "order-fifteen-cyclic",
-        "alternating-four-no-six"
-      ],
-      "note": "æœ‰é™ç¾¤å‡è®¾ï¼›ä»»æ„è¢«ç¾¤é˜¶æ•´é™¤çš„ç´ æ•°å¹‚é˜¶å­ç¾¤ç”± Sylow å­˜åœ¨æ€§åŠ  p ç¾¤å­ç¾¤é“¾ç»™å‡ºï¼›å…±è½­ä¸ä¸ªæ•°çº¦æŸå¦è¯ã€‚Aâ‚„ ä¸15é˜¶ä¾‹å‡å±•å¼€ã€‚"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "intuition",
-      "text": "å•ç¾¤æ˜¯â€œä¸å¯å†åˆ†â€çš„æ„ä»¶ï¼Œæœ‰é™å•ç¾¤åˆ†ç±»å®šç†ï¼ˆ20 ä¸–çºªæ•°å­¦çš„å·¨è‘—ï¼‰åˆ—å‡ºäº†æ‰€æœ‰æœ‰é™å•ç¾¤ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "formulaCaptions",
-      "text": "Sylow å®šç†ï¼šSylow $p$-å­ç¾¤ä¸ªæ•° $n_p$ çš„çº¦æŸã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "sylow-existence",
-        "sylow-conjugacy-count",
-        "order-fifteen-cyclic",
-        "alternating-four-no-six"
-      ],
-      "note": "æœ‰é™ç¾¤å‡è®¾ï¼›ä»»æ„è¢«ç¾¤é˜¶æ•´é™¤çš„ç´ æ•°å¹‚é˜¶å­ç¾¤ç”± Sylow å­˜åœ¨æ€§åŠ  p ç¾¤å­ç¾¤é“¾ç»™å‡ºï¼›å…±è½­ä¸ä¸ªæ•°çº¦æŸå¦è¯ã€‚Aâ‚„ ä¸15é˜¶ä¾‹å‡å±•å¼€ã€‚"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "extraInsight",
-      "text": "æœ‰é™ç¾¤è®ºçš„æ ¸å¿ƒæ˜¯åˆ†ç±»ï¼›Sylow å®šç†ç»™å‡ºç´ æ•°å¹‚å­ç¾¤çš„å­˜åœ¨ä¸å…±è½­æ€§ï¼Œæ˜¯è¯æ˜ç¾¤ç»“æ„çš„æœ‰åŠ›å·¥å…·ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "sylow-existence",
-        "sylow-conjugacy-count",
-        "order-fifteen-cyclic",
-        "alternating-four-no-six"
-      ],
-      "note": "æœ‰é™ç¾¤å‡è®¾ï¼›ä»»æ„è¢«ç¾¤é˜¶æ•´é™¤çš„ç´ æ•°å¹‚é˜¶å­ç¾¤ç”± Sylow å­˜åœ¨æ€§åŠ  p ç¾¤å­ç¾¤é“¾ç»™å‡ºï¼›å…±è½­ä¸ä¸ªæ•°çº¦æŸå¦è¯ã€‚Aâ‚„ ä¸15é˜¶ä¾‹å‡å±•å¼€ã€‚"
-    },
-    {
-      "topic": "algebra/finite-groups",
-      "field": "extraExamples",
-      "text": "åˆ©ç”¨ Sylow å®šç†å¯è¯ $15$ é˜¶ç¾¤å¿…ä¸ºå¾ªç¯ç¾¤ï¼ˆ$n_3=n_5=1$ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "sylow-existence",
-        "sylow-conjugacy-count",
-        "order-fifteen-cyclic",
-        "alternating-four-no-six"
-      ],
-      "note": "æœ‰é™ç¾¤å‡è®¾ï¼›ä»»æ„è¢«ç¾¤é˜¶æ•´é™¤çš„ç´ æ•°å¹‚é˜¶å­ç¾¤ç”± Sylow å­˜åœ¨æ€§åŠ  p ç¾¤å­ç¾¤é“¾ç»™å‡ºï¼›å…±è½­ä¸ä¸ªæ•°çº¦æŸå¦è¯ã€‚Aâ‚„ ä¸15é˜¶ä¾‹å‡å±•å¼€ã€‚"
-    },
-    {
-      "topic": "algebra/ideals",
-      "field": "intuition",
-      "text": "ç†æƒ³æ›¿ä»£äº†â€œå…ƒç´ â€çš„è§’è‰²ï¼šåœ¨ä»£æ•°æ•°è®ºä¸­ï¼Œä»£æ•°æ•´æ•°ç¯ä¸ä¸€å®šæœ‰å”¯ä¸€åˆ†è§£ï¼Œä½†**ç†æƒ³**æœ‰å”¯ä¸€åˆ†è§£ï¼Œè¿™ä¿®å¤äº†ç®—æœ¯åŸºæœ¬å®šç†çš„å¤±æ•ˆã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/field-extensions",
-      "field": "intuition",
-      "text": "è¿™ä¸€ç®€å•æ€§è´¨æ˜¯ä¼½ç½—ç“¦ç†è®ºä¸­â€œå¡”å®šç†â€çš„åŸºç¡€ï¼Œä¹Ÿæ˜¯è¯æ˜å¤å¸Œè…Šä¸‰å¤§ä½œå›¾ä¸å¯èƒ½çš„å…³é”®ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/field-extensions",
-      "field": "formulaCaptions",
-      "text": "æ¬¡æ•°çš„ä¹˜æ€§ï¼ˆå¡”å®šç†ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "tower-law"
-      ],
-      "note": "é€å¥æ ¸å¯¹å·²æœ‰è¯æ˜ï¼šå¡”å¼å…¬å¼è¦æ±‚ç›¸é‚»æ‰©å¼ æœ‰é™ï¼›Galoiså¯¹åº”é€‚ç”¨æœ‰é™æ­£è§„å¯åˆ†æ‰©å¼ ï¼›ç‰¹å¾æ ‡æ­£äº¤ä¸åˆ†è§£é‡‡ç”¨æœ‰é™ç¾¤çš„æœ‰é™ç»´å¤è¡¨ç¤ºã€‚æœªä»¥æ­¤æ ¸å®šBurnsideå¯è§£æ€§æˆ–å…¶ä»–æ·±å±‚æ¨å¹¿ã€‚"
-    },
-    {
-      "topic": "algebra/invariant-subspaces",
-      "field": "definition",
-      "text": "æœ‰é™ç¾¤åœ¨ç‰¹å¾é›¶åŸŸä¸Šçš„æ¯ä¸ªæœ‰é™ç»´è¡¨ç¤ºéƒ½å®Œå…¨å¯çº¦ï¼ˆMaschke å®šç†ï¼‰ï¼Œå³åˆ†è§£ä¸ºä¸å¯çº¦è¡¨ç¤ºçš„ç›´å’Œã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "maschke"
-      ],
-      "note": "æœ¬å·è¯æ˜æœ‰é™ç»´ç‰ˆæœ¬ï¼›åŸŸç‰¹å¾ä¸æ•´é™¤æœ‰é™ç¾¤é˜¶ï¼Œç‰¹å¾é›¶æ˜¯å……åˆ†æ¡ä»¶ã€‚"
-    },
-    {
-      "topic": "algebra/invariant-subspaces",
-      "field": "intuition",
-      "text": "Maschke å®šç†è¯´æ˜ï¼Œç‰¹å¾ä¸æ•´é™¤ç¾¤é˜¶æ—¶ï¼Œæœ‰é™ç¾¤çš„æœ‰é™ç»´è¡¨ç¤ºå®Œå…¨å¯çº¦ï¼Œè¿™ä½¿å¾—æœ‰é™ç¾¤è¡¨ç¤ºè®ºå˜æˆâ€œç‰¹å¾æ ‡ç†è®ºâ€â€”â€”é—®é¢˜å½’ç»“ä¸ºç ”ç©¶ä¸å¯çº¦æˆåˆ†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "maschke"
-      ],
-      "note": "æœ¬å·è¯æ˜æœ‰é™ç»´ç‰ˆæœ¬ï¼›åŸŸç‰¹å¾ä¸æ•´é™¤æœ‰é™ç¾¤é˜¶ï¼Œç‰¹å¾é›¶æ˜¯å……åˆ†æ¡ä»¶ã€‚"
-    },
-    {
-      "topic": "algebra/invariant-subspaces",
-      "field": "extraInsight",
-      "text": "ä¸å˜å­ç©ºé—´æ˜¯è¡¨ç¤ºä½œç”¨ä¸‹çš„â€œå°é—­åŒºåŸŸâ€ï¼›Maschke å®šç†ä¿è¯æœ‰é™ç¾¤åœ¨ç‰¹å¾é›¶åŸŸä¸Šå®Œå…¨å¯çº¦ï¼Œå› æ­¤è¡¨ç¤ºè®ºå¯ä»¥å½’ç»“ä¸ºä¸å¯çº¦è¡¨ç¤ºã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "maschke"
-      ],
-      "note": "æœ¬å·è¯æ˜æœ‰é™ç»´ç‰ˆæœ¬ï¼›åŸŸç‰¹å¾ä¸æ•´é™¤æœ‰é™ç¾¤é˜¶ï¼Œç‰¹å¾é›¶æ˜¯å……åˆ†æ¡ä»¶ã€‚"
-    },
-    {
-      "topic": "algebra/irreducible-representations",
-      "field": "definition",
-      "text": "**Schur å¼•ç†**ï¼šè‹¥ $V, W$ æ˜¯ä¸å¯çº¦è¡¨ç¤ºï¼Œä¸” $T: V \\to W$ æ˜¯ $G$-ç­‰å˜æ˜ å°„ï¼Œåˆ™ $T = 0$ æˆ– $T$ æ˜¯åŒæ„ï¼›ç‰¹åˆ«åœ°ï¼Œåœ¨æœ‰é™ç»´å¤è¡¨ç¤ºä¸­ï¼Œè‹¥ $V = W$ï¼Œåˆ™ $T = \\lambda I$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "schur-lemma",
-        "complex-eigenvalue",
-        "real-schur-counterexample"
-      ],
-      "note": "éé›¶ç­‰å˜æ˜ å°„åŒæ„ç»“è®ºé€‚ç”¨ä¸€èˆ¬åŸŸï¼›æ ‡é‡ç»“è®ºåœ¨æ­¤é™å®šæœ‰é™ç»´å¤è¡¨ç¤ºï¼Œå®åŸŸåä¾‹å¦è¯ã€‚"
-    },
-    {
-      "topic": "algebra/irreducible-representations",
-      "field": "intuition",
-      "text": "Schur å¼•ç†è¿æ¥è¡¨ç¤ºä¸ä»£æ•°ï¼šåœ¨æœ‰é™ç»´å¤è¡¨ç¤ºä¸­ï¼Œä¸å¯çº¦è¡¨ç¤ºçš„ç­‰å˜è‡ªåŒæ€åªæœ‰æ•°ä¹˜ï¼Œä»è€Œå¯¼å‡ºç‰¹å¾æ ‡çš„æ­£äº¤å…³ç³»ä¸ Burnside å®šç†ï¼ˆ$p^a q^b$ é˜¶ç¾¤å¯è§£ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/irreducible-representations",
-      "field": "formulaCaptions",
-      "text": "Schur å¼•ç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "schur-lemma",
-        "complex-eigenvalue",
-        "real-schur-counterexample"
-      ],
-      "note": "éé›¶ç­‰å˜æ˜ å°„åŒæ„ç»“è®ºé€‚ç”¨ä¸€èˆ¬åŸŸï¼›æ ‡é‡ç»“è®ºåœ¨æ­¤é™å®šæœ‰é™ç»´å¤è¡¨ç¤ºï¼Œå®åŸŸåä¾‹å¦è¯ã€‚"
-    },
-    {
-      "topic": "algebra/irreducible-representations",
-      "field": "extraInsight",
-      "text": "ä¸å¯çº¦è¡¨ç¤ºæ˜¯è¡¨ç¤ºè®ºçš„â€œåŸå­â€ï¼›Schur å¼•ç†é™åˆ¶ç­‰å˜æ˜ å°„ï¼Œç‰¹å¾æ ‡æ­£äº¤å…³ç³»ç»™å‡ºåˆ†è§£ä¸è®¡æ•°çš„å·¥å…·ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "schur-lemma",
-        "complex-eigenvalue",
-        "finite-character-orthogonality",
-        "character-multiplicity"
-      ],
-      "note": "é€å¥æ ¸å¯¹å·²æœ‰è¯æ˜ï¼šå¡”å¼å…¬å¼è¦æ±‚ç›¸é‚»æ‰©å¼ æœ‰é™ï¼›Galoiså¯¹åº”é€‚ç”¨æœ‰é™æ­£è§„å¯åˆ†æ‰©å¼ ï¼›ç‰¹å¾æ ‡æ­£äº¤ä¸åˆ†è§£é‡‡ç”¨æœ‰é™ç¾¤çš„æœ‰é™ç»´å¤è¡¨ç¤ºã€‚æœªä»¥æ­¤æ ¸å®šBurnsideå¯è§£æ€§æˆ–å…¶ä»–æ·±å±‚æ¨å¹¿ã€‚"
-    },
-    {
-      "topic": "algebra/exponential-map",
-      "field": "intuition",
-      "text": "æŒ‡æ•°æ˜ å°„åœ¨å•ä½å…ƒé™„è¿‘æ˜¯å±€éƒ¨å¾®åˆ†åŒèƒšï¼ˆç”±é€†å‡½æ•°å®šç†ï¼‰ï¼Œå› æ­¤æä»£æ•°åœ¨å±€éƒ¨å®Œå…¨å†³å®šäº†æç¾¤ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/characters",
-      "field": "intuition",
-      "text": "å¯¹ç´§æç¾¤ï¼Œç‰¹å¾æ ‡æ˜¯ç±»å‡½æ•°ï¼Œå¯ä»¥ç”¨ Fourier åˆ†æï¼ˆPeterâ€“Weyl å®šç†ï¼‰å±•å¼€ï¼Œä»è€ŒæŠŠè¡¨ç¤ºè®ºä¸è°ƒå’Œåˆ†æè”ç³»èµ·æ¥ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/noetherian",
-      "field": "definition",
-      "text": "Hilbert åŸºå®šç†ï¼šè‹¥ $R$ æ˜¯è¯ºç‰¹ç¯ï¼Œåˆ™å¤šé¡¹å¼ç¯ $R[x]$ ä¹Ÿæ˜¯è¯ºç‰¹ç¯ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hilbert-basis",
-        "noetherian-equivalence"
-      ],
-      "note": "å«å¹ºäº¤æ¢ç¯ç‰ˆæœ¬ï¼›æœ‰é™ä¸ªå˜å…ƒé‡å¤åº”ç”¨åŸºå®šç†ã€‚"
-    },
-    {
-      "topic": "algebra/noetherian",
-      "field": "intuition",
-      "text": "è¯ºç‰¹ç¯æ˜¯ç°ä»£ä»£æ•°å‡ ä½•çš„åŸºç¡€ï¼šHilbert åŸºå®šç†ä¿è¯å¤šé¡¹å¼ç¯çš„ç†æƒ³æœ‰é™ç”Ÿæˆï¼Œä»è€Œä»£æ•°ç°‡å¯ä»¥ç”±æœ‰é™å¤šä¸ªæ–¹ç¨‹å®šä¹‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hilbert-basis",
-        "noetherian-equivalence"
-      ],
-      "note": "å«å¹ºäº¤æ¢ç¯ç‰ˆæœ¬ï¼›æœ‰é™ä¸ªå˜å…ƒé‡å¤åº”ç”¨åŸºå®šç†ã€‚"
-    },
-    {
-      "topic": "algebra/noetherian",
-      "field": "formulaCaptions",
-      "text": "Hilbert åŸºå®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hilbert-basis",
-        "noetherian-equivalence"
-      ],
-      "note": "å«å¹ºäº¤æ¢ç¯ç‰ˆæœ¬ï¼›æœ‰é™ä¸ªå˜å…ƒé‡å¤åº”ç”¨åŸºå®šç†ã€‚"
-    },
-    {
-      "topic": "algebra/noetherian",
-      "field": "extraInsight",
-      "text": "è¯ºç‰¹æ¡ä»¶ä¿è¯ç†æƒ³é“¾ç¨³å®šï¼Œä½¿æœ‰é™ç”Ÿæˆæˆä¸ºå¯èƒ½ï¼›Hilbert åŸºå®šç†ä¿è¯å¤šé¡¹å¼ç¯è¯ºç‰¹ï¼Œä»è€Œä»£æ•°ç°‡å¯ç”±æœ‰é™æ–¹ç¨‹å®šä¹‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "hilbert-basis",
-        "noetherian-equivalence"
-      ],
-      "note": "å«å¹ºäº¤æ¢ç¯ç‰ˆæœ¬ï¼›æœ‰é™ä¸ªå˜å…ƒé‡å¤åº”ç”¨åŸºå®šç†ã€‚"
-    },
-    {
-      "topic": "algebra/modules",
-      "field": "intuition",
-      "text": "æœ‰é™ç”Ÿæˆæ¨¡çš„ç»“æ„å®šç†ï¼ˆPID ä¸Šï¼‰ç»™å‡º $M \\cong R^r \\oplus \\bigoplus R/(d_i)$ï¼Œæ˜¯çº¿æ€§ä»£æ•°ä¸­ Jordan æ ‡å‡†å½¢çš„ä»£æ•°æ ¹æºã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "pid-module-decomposition",
-        "pid-invariant-factors-unique",
-        "complex-jordan-form"
-      ],
-      "note": "PIDä¸Šæœ‰é™ç”Ÿæˆæ¨¡çš„å­˜åœ¨ã€å”¯ä¸€æ€§ä¸å¤Jordanæ ‡å‡†å½¢å‡å·²å±•å¼€ï¼›Jordanç»“è®ºåœ¨æ­¤é™å¤æœ‰é™ç»´ç®—å­ï¼Œä¸æŠŠéä»£æ•°é—­åŸŸä¸Šçš„æœ‰ç†æ ‡å‡†å½¢æ··ä¸ºåŒä¸€è¡¨è¿°ã€‚"
-    },
-    {
-      "topic": "algebra/modules",
-      "field": "extraInsight",
-      "text": "PID ä¸Šæœ‰é™ç”Ÿæˆæ¨¡æœ‰ç»“æ„å®šç†ï¼Œæ˜¯çº¿æ€§ä»£æ•° Jordan æ ‡å‡†å½¢çš„æ¥æºã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "pid-module-decomposition",
-        "pid-invariant-factors-unique",
-        "complex-jordan-form"
-      ],
-      "note": "PIDä¸Šæœ‰é™ç”Ÿæˆæ¨¡çš„å­˜åœ¨ã€å”¯ä¸€æ€§ä¸å¤Jordanæ ‡å‡†å½¢å‡å·²å±•å¼€ï¼›Jordanç»“è®ºåœ¨æ­¤é™å¤æœ‰é™ç»´ç®—å­ï¼Œä¸æŠŠéä»£æ•°é—­åŸŸä¸Šçš„æœ‰ç†æ ‡å‡†å½¢æ··ä¸ºåŒä¸€è¡¨è¿°ã€‚"
-    },
-    {
-      "topic": "algebra/prime-ideals",
-      "field": "intuition",
-      "text": "é›¶ç‚¹å®šç†ï¼ˆNullstellensatzï¼‰å»ºç«‹äº†ä»£æ•°ä¸å‡ ä½•çš„å­—å…¸ï¼šç†æƒ³ â†” ä»£æ•°ç°‡ï¼Œç´ ç†æƒ³ â†” ä¸å¯çº¦ç°‡ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "weak-nullstellensatz",
-        "strong-nullstellensatz",
-        "irreducible-prime-correspondence"
-      ],
-      "note": "é™ä»£æ•°é—­åŸŸä¸Šçš„æœ‰é™å˜é‡å¤šé¡¹å¼ç¯ï¼›ä»£æ•°é›†å¯¹åº”æ ¹å¼ç†æƒ³ï¼Œéç©ºä¸å¯çº¦ä»£æ•°é›†å¯¹åº”ç´ ç†æƒ³ï¼Œæå¤§ç†æƒ³å¯¹åº”kç‚¹ï¼Œå„å¯¹åº”å‡å·²è¯æ˜ã€‚"
-    },
-    {
-      "topic": "algebra/dimension-theory",
-      "field": "definition",
-      "text": "å¯¹åŸŸ $k$ ä¸Šæœ‰é™ç”Ÿæˆæ•´ç¯ï¼Œ$\\dim R$ ç­‰äºå…¶åˆ†å¼åŸŸåœ¨ $k$ ä¸Šçš„è¶…è¶Šæ¬¡æ•°ï¼ˆNoether æ­£è§„åŒ–å¼•ç†ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "noether-normalization",
-        "affine-domain-dimension-formula"
-      ],
-      "note": "æœ‰é™ç”Ÿæˆæ•´ç¯ç‰ˆæœ¬ï¼Œä»»æ„åŸºåŸŸï¼›å®Œæ•´é“¾åŒ…æ‹¬æ­£è§„åŒ–ã€æ•´æ‰©å¼ ç´ ç†æƒ³æ€§è´¨ã€å¤šé¡¹å¼ç¯ç»´æ•°åŠè¶…è¶ŠåŸºäº¤æ¢ã€‚"
-    },
-    {
-      "topic": "algebra/fundamental-theorem-galois",
-      "field": "definition",
-      "text": "**åŸºæœ¬å®šç†**æ–­è¨€ï¼šä¸­é—´åŸŸ $F \\subseteq E \\subseteq K$ ä¸ $G$ çš„å­ç¾¤ $H \\le G$ ä¹‹é—´å­˜åœ¨ä¸€ä¸€å¯¹åº”ï¼š$E \\mapsto \\mathrm{Gal}(K/E)$ï¼Œ$H \\mapsto K^H$ï¼ˆ$H$ çš„ä¸åŠ¨åŸŸï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "galois-correspondence"
-      ],
-      "note": "é€å¥æ ¸å¯¹å·²æœ‰è¯æ˜ï¼šå¡”å¼å…¬å¼è¦æ±‚ç›¸é‚»æ‰©å¼ æœ‰é™ï¼›Galoiså¯¹åº”é€‚ç”¨æœ‰é™æ­£è§„å¯åˆ†æ‰©å¼ ï¼›ç‰¹å¾æ ‡æ­£äº¤ä¸åˆ†è§£é‡‡ç”¨æœ‰é™ç¾¤çš„æœ‰é™ç»´å¤è¡¨ç¤ºã€‚æœªä»¥æ­¤æ ¸å®šBurnsideå¯è§£æ€§æˆ–å…¶ä»–æ·±å±‚æ¨å¹¿ã€‚"
-    },
-    {
-      "topic": "algebra/fundamental-theorem-galois",
-      "field": "intuition",
-      "text": "ä¼½ç½—ç“¦åŸºæœ¬å®šç†æ˜¯â€œä»£æ•°ä¸ç¾¤è®ºçš„å­—å…¸â€ï¼šæ‰©åŸŸçš„ä¸­é—´ç»“æ„å®Œå…¨ç”±ä¼½ç½—ç“¦ç¾¤çš„å­ç¾¤ç»“æ„ç¼–ç ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "galois-correspondence"
-      ],
-      "note": "é€å¥æ ¸å¯¹å·²æœ‰è¯æ˜ï¼šå¡”å¼å…¬å¼è¦æ±‚ç›¸é‚»æ‰©å¼ æœ‰é™ï¼›Galoiså¯¹åº”é€‚ç”¨æœ‰é™æ­£è§„å¯åˆ†æ‰©å¼ ï¼›ç‰¹å¾æ ‡æ­£äº¤ä¸åˆ†è§£é‡‡ç”¨æœ‰é™ç¾¤çš„æœ‰é™ç»´å¤è¡¨ç¤ºã€‚æœªä»¥æ­¤æ ¸å®šBurnsideå¯è§£æ€§æˆ–å…¶ä»–æ·±å±‚æ¨å¹¿ã€‚"
-    },
-    {
-      "topic": "algebra/quintic",
-      "field": "definition",
-      "text": "**Abelâ€“Ruffini å®šç†**ï¼ˆ1824ï¼‰ï¼šä¸€èˆ¬äº”æ¬¡åŠæ›´é«˜æ¬¡æ–¹ç¨‹ä¸å­˜åœ¨åªæ¶‰åŠç³»æ•°ã€åŠ å‡ä¹˜é™¤ä¸å¼€æ–¹çš„é€šç”¨æ±‚æ ¹å…¬å¼ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/quintic",
-      "field": "intuition",
-      "text": "è¿™å¹¶ä¸æ„å‘³ç€æ‰€æœ‰äº”æ¬¡æ–¹ç¨‹éƒ½æ— è§£â€”â€”æ¯ä¸ªå¤šé¡¹å¼åœ¨å¤æ•°åŸŸä¸Šéƒ½æœ‰æ ¹ï¼ˆä»£æ•°åŸºæœ¬å®šç†ï¼‰ï¼Œåªæ˜¯ä¸èƒ½ç”¨æ ¹å¼è¡¨è¾¾ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/quintic",
-      "field": "extraExamples",
-      "text": "æ•°å€¼æ–¹æ³•ï¼ˆå¦‚ Newton æ³•ï¼‰ä»å¯é«˜ç²¾åº¦æ±‚æ ¹ï¼›ä»£æ•°åŸºæœ¬å®šç†ä¿è¯å¤æ•°åŸŸä¸Šæ€»æœ‰æ ¹ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "algebra/linear-maps",
-      "field": "definition",
-      "text": "é€‰å®šåŸºåï¼Œçº¿æ€§æ˜ å°„ç”±çŸ©é˜µå”¯ä¸€è¡¨ç¤ºï¼›**æ ¸** $\\ker T$ ä¸**åƒ** $\\mathrm{im}\\,T$ éƒ½æ˜¯å­ç©ºé—´ï¼Œç§©-é›¶åŒ–åº¦å®šç†ç»™å‡º $\\dim V = \\dim \\ker T + \\dim \\mathrm{im}\\,T$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "rank-nullity"
-      ],
-      "note": "é™å®šå®šä¹‰åŸŸæœ‰é™ç»´ï¼›å°†æ ¸çš„åŸºæ‰©å……åå…¶ä½™åŸºå‘é‡çš„åƒæ„æˆåƒç©ºé—´åŸºã€‚"
-    },
-    {
-      "topic": "algebra/linear-maps",
-      "field": "formulaCaptions",
-      "text": "ç§©-é›¶åŒ–åº¦å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "rank-nullity"
-      ],
-      "note": "é™å®šå®šä¹‰åŸŸæœ‰é™ç»´ï¼›å°†æ ¸çš„åŸºæ‰©å……åå…¶ä½™åŸºå‘é‡çš„åƒæ„æˆåƒç©ºé—´åŸºã€‚"
-    },
-    {
-      "topic": "algebra/linear-maps",
-      "field": "extraInsight",
-      "text": "çº¿æ€§æ˜ å°„ç”±çŸ©é˜µè¡¨ç¤ºï¼›ç§©-é›¶åŒ–åº¦å®šç† $\\dim V=\\dim\\ker T+\\dim\\operatorname{im}T$ è”ç³»æ ¸ä¸åƒçš„ç»´æ•°ï¼Œæ˜¯çº¿æ€§ä»£æ•°çš„åŸºæœ¬å®ˆæ’å¾‹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "rank-nullity"
-      ],
-      "note": "é™å®šå®šä¹‰åŸŸæœ‰é™ç»´ï¼›å°†æ ¸çš„åŸºæ‰©å……åå…¶ä½™åŸºå‘é‡çš„åƒæ„æˆåƒç©ºé—´åŸºã€‚"
-    },
-    {
-      "topic": "numbertheory/divisibility-primes",
-      "field": "definition",
-      "text": "**ç®—æœ¯åŸºæœ¬å®šç†**ï¼šæ¯ä¸ªå¤§äº 1 çš„æ•´æ•°éƒ½èƒ½å”¯ä¸€åˆ†è§£ä¸ºç´ æ•°çš„ä¹˜ç§¯ï¼ˆä¸è®¡æ¬¡åºï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "unique-factorization"
-      ],
-      "note": "å¯¹å¤§äº1çš„æ•´æ•°ç»™å‡ºå­˜åœ¨åŠå”¯ä¸€æ€§ï¼›æ•´æ•°1ä¸ºç©ºç§¯ï¼Œè´Ÿæ•´æ•°å¦è®¡å•ä½ç¬¦å·ã€‚"
-    },
-    {
-      "topic": "numbertheory/divisibility-primes",
-      "field": "intuition",
-      "text": "è¿™ç§å”¯ä¸€åˆ†è§£æ˜¯æ•°è®ºæœ€æ ¹æœ¬çš„ç»“æ„å®šç†ï¼Œä¹Ÿæ˜¯è®¸å¤šç®—æ³•ï¼ˆå¦‚ RSAï¼‰çš„åŸºç¡€ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "unique-factorization"
-      ],
-      "note": "å¯¹å¤§äº1çš„æ•´æ•°ç»™å‡ºå­˜åœ¨åŠå”¯ä¸€æ€§ï¼›æ•´æ•°1ä¸ºç©ºç§¯ï¼Œè´Ÿæ•´æ•°å¦è®¡å•ä½ç¬¦å·ã€‚"
-    },
-    {
-      "topic": "numbertheory/divisibility-primes",
-      "field": "formulaCaptions",
-      "text": "ç®—æœ¯åŸºæœ¬å®šç†ï¼šå”¯ä¸€ç´ æ•°åˆ†è§£ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "unique-factorization"
-      ],
-      "note": "å¯¹å¤§äº1çš„æ•´æ•°ç»™å‡ºå­˜åœ¨åŠå”¯ä¸€æ€§ï¼›æ•´æ•°1ä¸ºç©ºç§¯ï¼Œè´Ÿæ•´æ•°å¦è®¡å•ä½ç¬¦å·ã€‚"
-    },
-    {
-      "topic": "numbertheory/divisibility-primes",
-      "field": "extraInsight",
-      "text": "ç®—æœ¯åŸºæœ¬å®šç†æ˜¯æ•°è®ºçš„åŸºçŸ³ï¼šæ¯ä¸ªæ•´æ•°éƒ½æœ‰å”¯ä¸€çš„ç´ æ•°åˆ†è§£ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "unique-factorization"
-      ],
-      "note": "å¯¹å¤§äº1çš„æ•´æ•°ç»™å‡ºå­˜åœ¨åŠå”¯ä¸€æ€§ï¼›æ•´æ•°1ä¸ºç©ºç§¯ï¼Œè´Ÿæ•´æ•°å¦è®¡å•ä½ç¬¦å·ã€‚"
-    },
-    {
-      "topic": "numbertheory/congruences",
-      "field": "intuition",
-      "text": "ä¸­å›½å‰©ä½™å®šç†è¯´æ˜ï¼šå…³äºäº’ç´ æ¨¡æ•°çš„åŒä½™æ¡ä»¶å¯ä»¥ç‹¬ç«‹æ±‚è§£å†åˆå¹¶ï¼›è´¹é©¬å°å®šç†è¯´æ˜æ¨¡ç´ æ•°æ—¶å¹‚è¿ç®—å…·æœ‰å‘¨æœŸæ€§ï¼ˆ$a^{p-1} \\equiv 1$ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chinese-remainder",
-        "fermat-little"
-      ],
-      "note": "ä¸­å›½å‰©ä½™å®šç†è¦æ±‚æ¨¡æ•°ä¸¤ä¸¤äº’ç´ ï¼›è´¹é©¬éé›¶ç±»å½¢å¼è¦æ±‚ç´ æ•°pä¸æ•´é™¤åº•æ•°aã€‚"
-    },
-    {
-      "topic": "numbertheory/congruences",
-      "field": "formulaCaptions",
-      "text": "ä¸­å›½å‰©ä½™å®šç†ï¼šæ¨¡äº’ç´ çš„åŒä½™æ–¹ç¨‹ç»„åœ¨æ¨¡ $m_1 m_2$ ä¸‹æœ‰å”¯ä¸€è§£ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chinese-remainder",
-        "fermat-little"
-      ],
-      "note": "ä¸­å›½å‰©ä½™å®šç†è¦æ±‚æ¨¡æ•°ä¸¤ä¸¤äº’ç´ ï¼›è´¹é©¬éé›¶ç±»å½¢å¼è¦æ±‚ç´ æ•°pä¸æ•´é™¤åº•æ•°aã€‚"
-    },
-    {
-      "topic": "numbertheory/congruences",
-      "field": "formulaCaptions",
-      "text": "è´¹é©¬å°å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chinese-remainder",
-        "fermat-little"
-      ],
-      "note": "ä¸­å›½å‰©ä½™å®šç†è¦æ±‚æ¨¡æ•°ä¸¤ä¸¤äº’ç´ ï¼›è´¹é©¬éé›¶ç±»å½¢å¼è¦æ±‚ç´ æ•°pä¸æ•´é™¤åº•æ•°aã€‚"
-    },
-    {
-      "topic": "numbertheory/congruences",
-      "field": "extraInsight",
-      "text": "åŒä½™æŠŠæ•´æ•°æŒ‰ä½™æ•°åˆ†ç±»ï¼Œæ¨¡è¿ç®—ä¿æŒåŠ æ³•ä¸ä¹˜æ³•ï¼›ä¸­å›½å‰©ä½™å®šç†æŠŠäº’ç´ æ¨¡çš„æ¡ä»¶è§£è€¦ï¼Œæ˜¯ç®—æ³•ä¸å¯†ç å­¦çš„åŸºæœ¬å·¥å…·ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chinese-remainder",
-        "fermat-little"
-      ],
-      "note": "ä¸­å›½å‰©ä½™å®šç†è¦æ±‚æ¨¡æ•°ä¸¤ä¸¤äº’ç´ ï¼›è´¹é©¬éé›¶ç±»å½¢å¼è¦æ±‚ç´ æ•°pä¸æ•´é™¤åº•æ•°aã€‚"
-    },
-    {
-      "topic": "numbertheory/congruences",
-      "field": "extraExamples",
-      "text": "è´¹é©¬å°å®šç†ï¼š$2^{10}\\equiv1\\pmod{11}$ï¼Œå› ä¸º $2^{10}=1024=93\\cdot11+1$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chinese-remainder",
-        "fermat-little"
-      ],
-      "note": "ä¸­å›½å‰©ä½™å®šç†è¦æ±‚æ¨¡æ•°ä¸¤ä¸¤äº’ç´ ï¼›è´¹é©¬éé›¶ç±»å½¢å¼è¦æ±‚ç´ æ•°pä¸æ•´é™¤åº•æ•°aã€‚"
-    },
-    {
-      "topic": "numbertheory/quadratic-residues",
-      "field": "intuition",
-      "text": "äºŒæ¬¡äº’åå¾‹æ˜¯æ•°è®ºä¸­çš„â€œé»„é‡‘å®šç†â€ï¼šå®ƒæŠŠ $\\left(\\frac{p}{q}\\right)$ ä¸ $\\left(\\frac{q}{p}\\right)$ è”ç³»èµ·æ¥ï¼Œä½¿åˆ¤å®šäºŒæ¬¡å‰©ä½™å˜æˆé€’å½’çš„ç®—æ³•ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "quadratic-reciprocity",
-        "euler-quadratic-criterion"
-      ],
-      "note": "äº’åå¾‹é€‚ç”¨äºä¸åŒå¥‡ç´ æ•°ï¼Œæ¬§æ‹‰åˆ¤åˆ«é’ˆå¯¹å¥‡ç´ æ¨¡ï¼›è¡¥å……å¾‹åœ¨åŒç« è¯æ˜ã€‚"
-    },
-    {
-      "topic": "numbertheory/quadratic-residues",
-      "field": "extraInsight",
-      "text": "äºŒæ¬¡å‰©ä½™åˆ¤å®šç”±æ¬§æ‹‰åˆ¤åˆ«æ³•ç»™å‡ºï¼›äºŒæ¬¡äº’åå¾‹æŠŠ $\\left(\\frac pq\\right)$ ä¸ $\\left(\\frac qp\\right)$ è”ç³»èµ·æ¥ï¼Œä½¿åˆ¤å®šå˜æˆé€’å½’ç®—æ³•ï¼Œè¢«ç§°ä¸ºæ•°è®ºçš„â€œé»„é‡‘å®šç†â€ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "quadratic-reciprocity",
-        "euler-quadratic-criterion"
-      ],
-      "note": "äº’åå¾‹é€‚ç”¨äºä¸åŒå¥‡ç´ æ•°ï¼Œæ¬§æ‹‰åˆ¤åˆ«é’ˆå¯¹å¥‡ç´ æ¨¡ï¼›è¡¥å……å¾‹åœ¨åŒç« è¯æ˜ã€‚"
-    },
-    {
-      "topic": "numbertheory/pythagorean-triples",
-      "field": "formulaCaptions",
-      "text": "å‹¾è‚¡å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "pythagorean-theorem"
-      ],
-      "note": "æ•™æç»™å‡ºå››ä¸ªå…¨ç­‰ç›´è§’ä¸‰è§’å½¢çš„é¢ç§¯æ‹¼åˆæ³•ï¼›åŸºç¡€åªç”¨çŸ©å½¢/ç›´è§’ä¸‰è§’å½¢é¢ç§¯ã€å…¨ç­‰ä¸å˜æ€§å’Œæœ‰é™å¯åŠ æ€§ã€‚æ•´æ•°å‹¾è‚¡æ•°å‚æ•°åŒ–æ˜¯å¦ä¸€ä¸ªç‹¬ç«‹å‘½é¢˜ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-counting",
-      "field": "intuition",
-      "text": "ç´ æ•°åˆ†å¸ƒå¹¶éå®Œå…¨éšæœºï¼šå®ƒæœ‰ç»Ÿè®¡è§„å¾‹ï¼ˆç´ æ•°å®šç†ï¼‰ï¼Œä½†ä¹Ÿæœ‰å±€éƒ¨æ³¢åŠ¨ï¼ˆç´ æ•°é—´éš™ã€ç®—æœ¯çº§æ•°ä¸­çš„åˆ†å¸ƒï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/prime-counting",
-      "field": "formulaCaptions",
-      "text": "ç´ æ•°å®šç†ï¼ˆPNTï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "ç”± Chebyshev çš„ Î¸ æ¸è¿‘åŠæ˜¾å¼å¤¹é€¼è¯æ˜ Ï€(x)âˆ¼x/log xï¼›å‘½é¢˜å·²å®šä¹‰ Ï€(x) ä¸ºä¸è¶…è¿‡ x çš„ç´ æ•°æ•°ç›®ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-counting",
-      "field": "formulaCaptions",
-      "text": "ç´ æ•°å®šç†çš„æé™å½¢å¼ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "æé™å¼ lim_{xâ†’âˆ} Ï€(x)/(x/log x)=1 ä¸ Ï€(x)âˆ¼x/log x æŒ‰æ¸è¿‘ç­‰ä»·å®šä¹‰ç›¸åŒï¼Œè¯æ˜è§ç´ æ•°å®šç†æ¡ç›®ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-counting",
-      "field": "extraInsight",
-      "text": "$\\pi(x)$ çš„å®è§‚å¢é•¿ç”±ç´ æ•°å®šç†æè¿°ï¼Œä½†å±€éƒ¨æ³¢åŠ¨å¾ˆå¤§ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/prime-counting",
-      "field": "extraInsight",
-      "text": "åˆ‡æ¯”é›ªå¤«ç•Œç»™å‡ºåˆç­‰çš„ä¸Šä¸‹ç•Œï¼Œä¸ºç´ æ•°å®šç†çš„è¯æ˜é“ºè·¯ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "chebyshev-two-sided-primes",
-        "prime-number-theorem-proof"
-      ],
-      "note": "æœ¬å·åˆ†åˆ«è¯æ˜ c x/log xâ‰¤Ï€(x)â‰¤C x/log x çš„ Chebyshev ç•Œï¼Œä»¥åŠç”± Î¸(x)âˆ¼x æ¨å‡ºç²¾ç¡®æ¸è¿‘çš„ç´ æ•°å®šç†ï¼›Chebyshev ç•Œæœ¬èº«å¼±äºç´ æ•°å®šç†ï¼Œå¹¶åœ¨è§£æè¯æ˜é“¾ä¸­æä¾› Î¸ çš„ä¸Šç•Œã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "definition",
-      "text": "**ç´ æ•°å®šç†**ï¼š$\\pi(x) \\sim x/\\log x$ï¼ˆå½“ $x \\to \\infty$ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "è¯æ˜çš„å‘½é¢˜ç›´æ¥å– Ï€(x)=#{pâ‰¤x}ï¼Œå¹¶æ¨å‡º Ï€(x)log(x)/xâ†’1ï¼›æ¡ä»¶ä¸é¡µé¢å®šä¹‰ä¸€è‡´ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "definition",
-      "text": "è¯¥å®šç†ç”± Hadamard ä¸ de la VallÃ©e Poussin äº 1896 å¹´ç‹¬ç«‹è¯æ˜ï¼Œä½¿ç”¨å¤åˆ†æå·¥å…·ï¼ˆRiemann Î¶ å‡½æ•°æ— é›¶ç‚¹åŒºåŸŸï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "intuition",
-      "text": "ç´ æ•°å®šç†ç»™å‡ºç´ æ•°åˆ†å¸ƒçš„â€œå®è§‚è§„å¾‹â€ï¼šéšæœºé€‰ä¸€ä¸ªå¤§å°ä¸º $x$ çš„æ•°ï¼Œå®ƒæ˜¯ç´ æ•°çš„æ¦‚ç‡çº¦ä¸º $1/\\log x$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "ç²¾ç¡®è§£é‡Šä¸ºä»æ•´æ•° {1,â€¦,âŒŠxâŒ‹} å‡åŒ€æŠ½æ ·æ—¶æ¦‚ç‡ Ï€(âŒŠxâŒ‹)/âŒŠxâŒ‹âˆ¼1/log xï¼›åŸå¥æ˜¯æ¸è¿‘è¿‘ä¼¼ï¼Œä¸æ˜¯ç‹¬ç«‹éšæœºæ¨¡å‹å‡è®¾ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "intuition",
-      "text": "é»æ›¼çŒœæƒ³çš„æ›´å¼ºå½¢å¼ä¼šç»™å‡ºæ›´ç²¾ç¡®çš„è¯¯å·®é¡¹ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "formulaCaptions",
-      "text": "ç´ æ•°å®šç†ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "æ­¤å¤„çŸ­æ ‡é¢˜æ‰€æŒ‡å®Œæ•´ç»“è®ºä¸º Ï€(x)âˆ¼x/log xï¼ˆxâ†’âˆï¼‰ï¼›æ•™æå‘½é¢˜æ˜ç¡®ç»™å‡ºè®¡æ•°å‡½æ•°å®šä¹‰å¹¶ç”± Î¸(x)âˆ¼x çš„è¯æ˜é“¾æ¨å‡ºï¼Œä¸æŠŠåˆ‡æ¯”é›ªå¤«ç•Œè¯¯å½“æˆç´ æ•°å®šç†ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "extraInsight",
-      "text": "ç´ æ•°å®šç†ç­‰ä»·äº $\\psi(x)\\sim x$ï¼›è¯æ˜çš„å…³é”®æ˜¯è¯æ˜ $\\zeta(s)$ åœ¨ $\\operatorname{Re}s=1$ ä¸Šæ— é›¶ç‚¹ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "pnt-psi-equivalence",
-        "theta-asymptotic-prime-theorem"
-      ],
-      "note": "æœ¬å·å±•å¼€ Ïˆã€Î¸ã€Ï€ ä¸‰ç§æ¸è¿‘å½¢å¼çš„ç­‰ä»·ï¼›ä½¿ç”¨ Newman Tauberian é“¾ï¼Œè€Œå…¶å‰ç½®éƒ¨åˆ†è¯æ˜ Î¶(s) åœ¨ Re(s)=1 ä¸Šæ— é›¶ç‚¹ã€‚å°†â€œå…³é”®â€ç†è§£ä¸ºæœ¬å·æ‰€é‡‡ç”¨è¯æ˜è·¯çº¿çš„ä¾èµ–ï¼Œä¸å®£ç§°è¿™æ˜¯æ‰€æœ‰è¯æ˜è·¯çº¿å”¯ä¸€å…³é”®ã€‚"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "extraInsight",
-      "text": "é»æ›¼çŒœæƒ³ä¼šç»™å‡ºæ›´ç²¾ç¡®çš„è¯¯å·®é¡¹ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/prime-number-theorem",
-      "field": "extraExamples",
-      "text": "ç´ æ•°å®šç†çš„ç­‰ä»·å½¢å¼ï¼š$\\lim_{x\\to\\infty}\\frac{\\pi(x)\\log x}{x}=1$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "prime-number-theorem-proof"
-      ],
-      "note": "æŒ‰æ¸è¿‘ç­‰ä»·å®šä¹‰ï¼ŒÏ€(x)âˆ¼x/log x ç­‰ä»·äºè¯¥æ¯”å€¼è¶‹äº 1ï¼›æœ¬å·æœ€åä¸€æ­¥æ˜ç¡®å¾—åˆ°æ­¤æé™ã€‚"
-    },
-    {
-      "topic": "numbertheory/exponential-sums",
-      "field": "intuition",
-      "text": "è¿™ç§æŒ¯è¡ä¼°è®¡ç”¨äºç´ æ•°åˆ†å¸ƒã€Waring é—®é¢˜å’Œå“¥å¾·å·´èµ«é—®é¢˜çš„ç ”ç©¶ï¼›è¿™é‡Œä¸å£°ç§°å·²è¯æ˜å“¥å¾·å·´èµ«çŒœæƒ³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/zeta-l-functions",
-      "field": "intuition",
-      "text": "é»æ›¼çŒœæƒ³æ–­è¨€ Î¶ çš„éå¹³å‡¡é›¶ç‚¹éƒ½åœ¨ä¸´ç•Œçº¿ $\\mathrm{Re}(s) = 1/2$ ä¸Šï¼›å®ƒç­‰ä»·äºç´ æ•°å®šç†çš„æå¼ºè¯¯å·®ä¼°è®¡ï¼Œæ˜¯åƒç¦§å¹´å¤§å¥–éš¾é¢˜ä¹‹ä¸€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/zeta-l-functions",
-      "field": "extraInsight",
-      "text": "Î¶ å‡½æ•°çš„æ¬§æ‹‰ä¹˜ç§¯æŠŠç´ æ•°ä¿¡æ¯ç¼–ç è¿›å¤åˆ†æï¼›è§£æå»¶æ‹“ä¸å‡½æ•°æ–¹ç¨‹ä½¿å…¶æˆä¸ºæ•°è®ºçš„æ ¸å¿ƒå¯¹è±¡ï¼Œé»æ›¼çŒœæƒ³æè¿°å…¶é›¶ç‚¹åˆ†å¸ƒã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/sieve-methods",
-      "field": "definition",
-      "text": "ç°ä»£ç­›æ³•ï¼ˆSelberg ç­›ã€å¤§ç­›ï¼‰é€šè¿‡åŠ æƒä¼°è®¡å‰©ä½™é›†åˆçš„å¤§å°ï¼Œæ˜¯ç ”ç©¶ç´ æ•°å¯¹ã€å“¥å¾·å·´èµ«çŒœæƒ³ä¸å­ªç”Ÿç´ æ•°çš„é‡è¦å·¥å…·ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/sieve-methods",
-      "field": "intuition",
-      "text": "é™ˆæ™¯æ¶¦çš„â€œ1+2â€å®šç†ã€å¼ ç›Šå”çš„æœ‰ç•Œç´ æ•°é—´éš™ç»“æœéƒ½ä¾èµ–ç²¾ç»†çš„ç­›æ³•æ”¹è¿›ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/sieve-methods",
-      "field": "extraInsight",
-      "text": "ç­›æ³•é€æ­¥æ’é™¤ä¸æ»¡è¶³æ¡ä»¶çš„æ•´æ•°ï¼›ç°ä»£ç­›æ³•é€šè¿‡åŠ æƒä¼°è®¡å‰©ä½™é›†åˆå¤§å°ï¼Œç”¨äºå­ªç”Ÿç´ æ•°ä¸å“¥å¾·å·´èµ«çŒœæƒ³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/sieve-methods",
-      "field": "extraExamples",
-      "text": "Selberg ç­›ç»™å‡ºç´ æ•°å¯¹çš„éå¹³å‡¡ä¸Šç•Œï¼Œæ˜¯é™ˆæ™¯æ¶¦å®šç†çš„å·¥å…·ä¹‹ä¸€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/number-fields",
-      "field": "definition",
-      "text": "æ•°åŸŸ $K$ å¯ä»¥å†™æˆ $K = \\mathbb{Q}(\\alpha)$ï¼ˆæœ¬åŸå…ƒç´ å®šç†ï¼‰ï¼šæ¯ä¸ªæ•°åŸŸéƒ½ç”±å•ä¸ªå…ƒç´ ç”Ÿæˆã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "characteristic-zero-separable",
-        "primitive-element-theorem"
-      ],
-      "note": "æ•°åŸŸæ˜¯Qçš„æœ‰é™æ‰©å¼ ï¼Œç‰¹å¾é›¶ä¿è¯å¯åˆ†ï¼Œå› æ­¤æœ¬åŸå…ƒç´ å®šç†é€‚ç”¨ã€‚è¿™æ˜¯åŸŸçš„å•ç”Ÿæˆç»“è®ºï¼Œä¸å£°ç§°æ•´æ•°ç¯æœ‰å¹‚æ•´åŸºã€‚"
-    },
-    {
-      "topic": "numbertheory/number-fields",
-      "field": "extraInsight",
-      "text": "æ•°åŸŸæ˜¯ $\\mathbb{Q}$ çš„æœ‰é™æ‰©å¼ ï¼Œæœ¬åŸå…ƒç´ å®šç†ä¿è¯å®ƒç”±å•ä¸ªå…ƒç´ ç”Ÿæˆã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "characteristic-zero-separable",
-        "primitive-element-theorem"
-      ],
-      "note": "æ•°åŸŸæ˜¯Qçš„æœ‰é™æ‰©å¼ ï¼Œç‰¹å¾é›¶ä¿è¯å¯åˆ†ï¼Œå› æ­¤æœ¬åŸå…ƒç´ å®šç†é€‚ç”¨ã€‚è¿™æ˜¯åŸŸçš„å•ç”Ÿæˆç»“è®ºï¼Œä¸å£°ç§°æ•´æ•°ç¯æœ‰å¹‚æ•´åŸºã€‚"
-    },
-    {
-      "topic": "numbertheory/ideal-factorization",
-      "field": "intuition",
-      "text": "ç†æƒ³åˆ†è§£æ˜¯â€œæˆ´å¾·é‡‘æ•´ç¯ç‰ˆçš„ç®—æœ¯åŸºæœ¬å®šç†â€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/class-groups",
-      "field": "intuition",
-      "text": "è¿™æ˜¯ä»£æ•°æ•°è®ºçš„æ ¸å¿ƒå®šç†ä¹‹ä¸€ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/points-over-finite-fields",
-      "field": "definition",
-      "text": "Weil çŒœæƒ³ï¼ˆDeligne è¯æ˜ï¼‰æè¿°ä»£æ•°ç°‡åœ¨æœ‰é™åŸŸä¸Šçš„ç‚¹æ•°çš„ç²¾ç¡®å…¬å¼ï¼Œç”¨ Frobenius è‡ªåŒæ€çš„ç‰¹å¾å€¼ä¸ Î¶ å‡½æ•°è¡¨è¾¾ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/points-over-finite-fields",
-      "field": "intuition",
-      "text": "Weil çŒœæƒ³æ˜¯ç®—æœ¯å‡ ä½•çš„é‡Œç¨‹ç¢‘ï¼šå®ƒæŠŠæ‹“æ‰‘ï¼ˆBetti æ•°ï¼‰ä¸ç®—æœ¯ï¼ˆç‚¹æ•°ï¼‰è”ç³»èµ·æ¥ï¼ŒDeligne å› æ­¤è·å¾—è²å°”å…¹å¥–ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/points-over-finite-fields",
-      "field": "extraInsight",
-      "text": "æœ‰é™åŸŸä¸Šçš„ç‚¹æ•°ç¼–ç ä»£æ•°ç°‡çš„ç®—æœ¯ä¿¡æ¯ï¼›Weil çŒœæƒ³ç”¨ Frobenius è‡ªåŒæ€çš„ç‰¹å¾å€¼æè¿°ç‚¹æ•°ï¼Œæ˜¯ç®—æœ¯å‡ ä½•çš„é‡Œç¨‹ç¢‘ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/elliptic-curves",
-      "field": "intuition",
-      "text": "æ¤­åœ†æ›²çº¿æ˜¯æ•°è®ºä¸ç°ä»£å¯†ç å­¦çš„æ ¸å¿ƒï¼šMordellâ€“Weil å®šç†è¯´æœ‰ç†ç‚¹ç¾¤æœ‰é™ç”Ÿæˆï¼›Birchâ€“Swinnerton-Dyer çŒœæƒ³è”ç³»ç§©ä¸ L å‡½æ•°ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/elliptic-curves",
-      "field": "formulaCaptions",
-      "text": "Mordellâ€“Weil å®šç†ï¼šæœ‰ç†ç‚¹ç¾¤æœ‰é™ç”Ÿæˆã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/elliptic-curves",
-      "field": "extraInsight",
-      "text": "æ¤­åœ†æ›²çº¿å¸¦æœ‰ç¾¤å¾‹ï¼Œæœ‰ç†ç‚¹ç¾¤æœ‰é™ç”Ÿæˆï¼ˆMordellâ€“Weil å®šç†ï¼‰ï¼›æ¨¡æ€§å®šç†æŠŠæ¤­åœ†æ›²çº¿ä¸æ¨¡å½¢å¼å¯¹åº”ï¼Œæ˜¯è´¹é©¬å¤§å®šç†è¯æ˜çš„å…³é”®ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/elliptic-curves",
-      "field": "extraExamples",
-      "text": "BSD çŒœæƒ³æŠŠæ¤­åœ†æ›²çº¿çš„ç§©ä¸å…¶ $L$ å‡½æ•°åœ¨ $s=1$ çš„é›¶ç‚¹é˜¶æ•°è”ç³»èµ·æ¥ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/algebraic-varieties-arithmetic",
-      "field": "intuition",
-      "text": "Fermat å¤§å®šç†ã€Faltings å®šç†ã€Mordell çŒœæƒ³éƒ½æ˜¯è¿™ä¸ªæ–¹å‘çš„æ ¸å¿ƒç»“æœã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/algebraic-varieties-arithmetic",
-      "field": "example",
-      "text": "$x^2 + y^2 = 1$ æ˜¯æœ‰ç†ç‚¹ä¸°å¯Œçš„åœ†é”¥æ›²çº¿ï¼Œå¯é€šè¿‡æœ‰ç†å‚æ•°åŒ–æè¿°å…¨éƒ¨æœ‰ç†ç‚¹ï¼›$x^n + y^n = 1$ï¼ˆ$n \\ge 3$ï¼‰åªæœ‰å¹³å‡¡æœ‰ç†ç‚¹ï¼ˆFermat å¤§å®šç†ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/algebraic-varieties-arithmetic",
-      "field": "extraInsight",
-      "text": "ç®—æœ¯å‡ ä½•ç ”ç©¶å®šä¹‰åœ¨æ•°åŸŸä¸Šçš„ä»£æ•°ç°‡åŠå…¶æœ‰ç†ç‚¹ï¼›Faltings å®šç†è¯´æ˜äºæ ¼ $\\ge2$ çš„æ›²çº¿åªæœ‰æœ‰é™å¤šä¸ªæœ‰ç†ç‚¹ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/algebraic-varieties-arithmetic",
-      "field": "extraExamples",
-      "text": "$x^n+y^n=1$ï¼ˆ$n\\ge3$ï¼‰åªæœ‰å¹³å‡¡æœ‰ç†ç‚¹ï¼Œè¿™æ­£æ˜¯è´¹é©¬å¤§å®šç†ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/transcendental-numbers",
-      "field": "intuition",
-      "text": "Lindemannâ€“Weierstrass å®šç†ç»™å‡ºä¸€èˆ¬åˆ¤æ®ï¼šè‹¥ $\\alpha_1, \\dots, \\alpha_n$ æ˜¯ $\\mathbb{Q}$ ä¸Šçº¿æ€§æ— å…³çš„ä»£æ•°æ•°ï¼Œåˆ™ $e^{\\alpha_i}$ åœ¨ $\\overline{\\mathbb{Q}}$ ä¸Šä»£æ•°æ— å…³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/transcendental-numbers",
-      "field": "example",
-      "text": "$2^{\\sqrt2}$ æ˜¯è¶…è¶Šæ•°ï¼ˆGelfondâ€“Schneider å®šç†ï¼‰ï¼›$\\pi + e$ ä¸ $\\pi e$ çš„è¶…è¶Šæ€§ä»æœªå®Œå…¨è§£å†³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/transcendental-numbers",
-      "field": "formulaCaptions",
-      "text": "Euler æ’ç­‰å¼ï¼›ç”± Lindemann å®šç†æ¨å‡º $\\pi$ è¶…è¶Šã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/transcendental-numbers",
-      "field": "extraInsight",
-      "text": "è¶…è¶Šæ•°ä¸èƒ½ç”¨æœ‰é™æ¬¡ä»£æ•°è¿ç®—æè¿°ï¼›Lindemannâ€“Weierstrass å®šç†ç»™å‡ºä¸€èˆ¬åˆ¤æ®ï¼šçº¿æ€§æ— å…³ä»£æ•°æ•°çš„æŒ‡æ•°åœ¨ä»£æ•°ä¸Šæ— å…³ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/transcendental-numbers",
-      "field": "extraExamples",
-      "text": "$2^{\\sqrt2}$ æ˜¯è¶…è¶Šæ•°ï¼ˆGelfondâ€“Schneider å®šç†ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/heights",
-      "field": "definition",
-      "text": "Northcott å®šç†ï¼šç»™å®šé«˜åº¦ä¸Šç•Œ $B$ï¼Œåªæœ‰æœ‰é™å¤šä¸ªæ¬¡æ•°ä¸è¶…è¿‡ç»™å®šå€¼çš„ä»£æ•°æ•°é«˜åº¦ä¸è¶…è¿‡ $B$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "absolute-height-rational",
-        "northcott-algebraic-numbers"
-      ],
-      "note": "ç»å¯¹ä¹˜æ³•é«˜åº¦é‡‡ç”¨æœ¬åŸæ•´æ•°æœ€å°å¤šé¡¹å¼ä¸å…±è½­æ ¹ä¹˜ç§¯çš„ç²¾ç¡®å®šä¹‰ï¼›ç”¨åˆç­‰å¯¹ç§°å¤šé¡¹å¼ç•Œæ§åˆ¶å…¨éƒ¨æ•´æ•°ç³»æ•°ï¼Œè¯æ˜æœ‰ç•Œæ¬¡æ•°å’Œé«˜åº¦çš„æœ‰é™æ€§ã€‚"
-    },
-    {
-      "topic": "numbertheory/heights",
-      "field": "intuition",
-      "text": "é«˜åº¦åœ¨ä¸¢ç•ªå›¾å‡ ä½•ä¸­æ˜¯åŸºæœ¬å·¥å…·ï¼šMordellâ€“Weil å®šç†çš„è¯æ˜ç”¨é«˜åº¦å‡½æ•°è¯æ˜æœ‰ç†ç‚¹ç¾¤æœ‰é™ç”Ÿæˆã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/heights",
-      "field": "extraInsight",
-      "text": "é«˜åº¦è¡¡é‡æœ‰ç†ç‚¹çš„ç®—æœ¯å¤æ‚åº¦ï¼›Northcott å®šç†ä¿è¯ç»™å®šé«˜åº¦ä¸Šç•Œåªæœ‰æœ‰é™å¤šä¸ªä½å¤æ‚åº¦ä»£æ•°æ•°ï¼Œæ˜¯ Mordellâ€“Weil å®šç†çš„å·¥å…·ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/heights",
-      "field": "extraExamples",
-      "text": "Mordellâ€“Weil å®šç†çš„è¯æ˜ç”¨é«˜åº¦å‡½æ•°è¯æ˜æœ‰ç†ç‚¹ç¾¤æœ‰é™ç”Ÿæˆã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "definition",
-      "text": "Dirichlet å®šç†ï¼šå¯¹ä»»æ„æ— ç†æ•° $\\alpha$ï¼Œå­˜åœ¨æ— ç©·å¤šä¸ªäº’å¼‚æ—¢çº¦åˆ†æ•° $p/q$ï¼ˆ$p\\in\\mathbb Z$ã€$q\\in\\mathbb N$ï¼‰ä½¿ $|\\alpha - p/q| < 1/q^2$ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "dirichlet-rational-approximation"
-      ],
-      "note": "è¯æ˜å…ˆç»™æ¯ä¸ª Q ä¸€ä¸ª |qÎ±âˆ’p|<1/Qã€1â‰¤qâ‰¤Q çš„é€¼è¿‘ï¼Œå†ç”±è¯¯å·®è¶‹é›¶æ¨å‡ºæœ‰æ— ç©·å¤šä¸ªä¸åŒæœ‰ç†æ•°å€¼ï¼Œå¹¶çº¦åˆ†ï¼›çº¦åˆ†ååˆ†æ¯å˜å°ï¼Œä¸¥æ ¼çš„ 1/qÂ² ä¸Šç•Œä»æˆç«‹ã€‚"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "definition",
-      "text": "Roth å®šç†ï¼ˆ1955ï¼‰è¯æ˜ï¼šå¯¹ä»£æ•°æ•° $\\alpha$ï¼Œ$|\\alpha - p/q| < 1/q^{2+\\varepsilon}$ åªæœ‰æœ‰é™å¤šä¸ªè§£ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "intuition",
-      "text": "Roth å®šç†è¯´æ˜ä»£æ•°æ•°ä¸èƒ½è¢«æœ‰ç†æ•°â€œé€¼è¿‘å¾—å¤ªå¿«â€ï¼Œè¿™æ˜¯è¶…è¶Šæ•°è®ºçš„æ ¸å¿ƒç»“æœï¼ŒRoth å› æ­¤è·å¾—è²å°”å…¹å¥–ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "formulaCaptions",
-      "text": "Dirichlet é€¼è¿‘å®šç†ï¼ˆè§å®šä¹‰ä¸­çš„æ— ç©·æ€§ä¸æ—¢çº¦æ¡ä»¶ï¼‰ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "dirichlet-rational-approximation"
-      ],
-      "note": "å…¬å¼é€‚ç”¨æ¡ä»¶ä¸å®šç†é™ˆè¿°ç›¸åŒï¼›ä»»æ„æ— ç† Î±ã€äº’å¼‚æ—¢çº¦ p/qã€q>0ã€‚"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "formulaCaptions",
-      "text": "Roth å®šç†ï¼šå¯¹ä»£æ•°æ•° $\\alpha$ï¼Œæ­¤ä¸ç­‰å¼åªæœ‰æœ‰é™å¤šä¸ªè§£ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "extraInsight",
-      "text": "Dirichlet å®šç†ä¿è¯æ¯ä¸ªæ— ç†æ•°éƒ½æœ‰æ— ç©·å¤šä¸ª $1/q^2$ ç²¾åº¦çš„æœ‰ç†é€¼è¿‘ï¼›Roth å®šç†è¯´æ˜ä»£æ•°æ•°ä¸èƒ½è¢«é€¼è¿‘å¾—æ›´å¿«ï¼ˆæŒ‡æ•°è¶…è¿‡ 2 æ—¶åªæœ‰æœ‰é™è§£ï¼‰ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/diophantine-approximation",
-      "field": "extraExamples",
-      "text": "Roth å®šç†ï¼šå¯¹ä»£æ•°æ•° $\\alpha$ï¼Œ$|\\alpha-p/q|<1/q^{2+\\varepsilon}$ åªæœ‰æœ‰é™å¤šä¸ªè§£ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/liouville-numbers",
-      "field": "definition",
-      "text": "Liouville å®šç†ï¼šä»£æ•°æ•°ä¸èƒ½è¢«æœ‰ç†æ•°é€¼è¿‘å¾—å¦‚æ­¤å¿«ï¼ˆå­˜åœ¨ä¸æ¬¡æ•°ç›¸å…³çš„ä¸‹ç•Œï¼‰ï¼Œå› æ­¤åˆ˜ç»´å°”æ•°æ˜¯è¶…è¶Šæ•°ã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "liouville-lower-bound",
-        "liouville-constant"
-      ],
-      "note": "ä»£æ•°æ•°é€¼è¿‘ç•Œçš„æŒ‡æ•°ä¸æ¬¡æ•°æœ‰å…³ï¼Œå¸¸æ•°ä¾èµ–è¯¥ä»£æ•°æ•°ï¼›åˆ˜ç»´å°”æ•°çš„ä»»æ„é«˜é˜¶é€¼è¿‘ä¸ä¹‹çŸ›ç›¾ã€‚"
-    },
-    {
-      "topic": "numbertheory/liouville-numbers",
-      "field": "extraInsight",
-      "text": "åˆ˜ç»´å°”å®šç†ç»™å‡ºäº†ä»£æ•°æ•°çš„é€¼è¿‘ä¸‹ç•Œã€‚",
-      "status": "reviewed-with-proof",
-      "proofIds": [
-        "liouville-lower-bound",
-        "liouville-constant"
-      ],
-      "note": "ä»£æ•°æ•°é€¼è¿‘ç•Œçš„æŒ‡æ•°ä¸æ¬¡æ•°æœ‰å…³ï¼Œå¸¸æ•°ä¾èµ–è¯¥ä»£æ•°æ•°ï¼›åˆ˜ç»´å°”æ•°çš„ä»»æ„é«˜é˜¶é€¼è¿‘ä¸ä¹‹çŸ›ç›¾ã€‚"
-    },
-    {
-      "topic": "numbertheory/cusp-forms",
-      "field": "intuition",
-      "text": "æ¤­åœ†æ›²çº¿çš„æ¨¡æ€§å®šç†æŠŠæ¤­åœ†æ›²çº¿çš„ L å‡½æ•°ä¸ä¸€ä¸ªæƒé‡ 2 çš„å°–ç‚¹å½¢å¼å¯¹åº”èµ·æ¥ï¼Œè¿™æ˜¯è´¹é©¬å¤§å®šç†è¯æ˜çš„å…³é”®ã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/cusp-forms",
-      "field": "extraInsight",
-      "text": "å°–ç‚¹å½¢å¼åœ¨å°–ç‚¹å¤„æ¶ˆå¤±ï¼Œå…·æœ‰è‰¯å¥½çš„è§£ææ€§è´¨ï¼›æƒé‡ $2$ çš„å°–ç‚¹å½¢å¼å¯¹åº”æ¤­åœ†æ›²çº¿ï¼Œæ˜¯æ¨¡æ€§å®šç†çš„æ ¸å¿ƒã€‚",
-      "status": "needs-statement-review"
-    },
-    {
-      "topic": "numbertheory/fourier-expansion",
-      "field": "intuition",
-      "text": "æ¨¡å½¢å¼çš„ L å‡½æ•°ç”± $a_n$ æ„é€ ï¼Œå…¶è§£ææ€§è´¨ï¼ˆè§£æå»¶æ‹“ã€å‡½æ•°æ–¹ç¨‹ï¼‰æ˜¯æ¨¡æ€§å®šç†ä¸ Langlands çº²é¢†çš„æ ¸å¿ƒã€‚",
+YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíçÏ}ñ:-jZ.¶›­–)Ş³W°¢&æ÷FR#¢.X[>™JîŠøŞhùXùny¨NX	˜Xú^ûÈÎiÊ®{¸şi[ZÚnijŞŠˆXë¾˜xŞûÉ¾KˆŞzØK¨îXZ˜:Zé®yny¨NZèÎi[Nkˆ^XÙ^8.™ÈK«®[z^hùXùnXxnzîX~Šëî8{¹>Šë®[›nZû[©NŠøiˆî8""À¢&6Æ–×2#¢°¢°¢'F÷–2#¢&æÇ—6—2ö6öçF–çV—G’×Væ–f÷&Ò"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.{J~™¸nKˆ®y¨N‹ùî{ºŞX{Şi[ˆz®XªKˆˆ{N‹ùî{ºŞûÈ„†V–æ^(	46çF÷"Zé®ynûÈûÈÎ‹ùiŠş{J~h
+~iÈ˜xŞŠhy¨N[©NyJK˜¾Kˆ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†V–æRÖ6çF÷" ¢ÒÀ¢&æ÷FR#¢.˜.yJK¨î{J~ˆ{N[ªn˜xşZé®K˜YùşX‹[ªn˜xşz›®™{Ny¨N‹ùî{ºŞiŠ[NûÉ¾Šøiˆî˜	x+˜XØ®[èN[›nXùniÈ™™ZÙŠhny¹n8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçF–çV—G’×Væ–f÷&Ò"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$†V–æ^(	46çF÷"Zé®ynûÉ®‹ùî{ºŞh
+~XªKˆ®{J~h
+~hêX{®Kˆˆ{N‹ùî{ºŞ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†V–æRÖ6çF÷" ¢ÒÀ¢&æ÷FR#¢.˜.yJK¨î{J~ˆ{N[ªn˜xşZé®K˜YùşX‹[ªn˜xşz›®™{Ny¨N‹ùî{ºŞiŠ[NûÉ¾Šøiˆî˜	x+˜XØ®[èN[›nXùniÈ™™ZÙŠhny¹n8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷Væ–f÷&ÒÖ6öçfW&vVæ6R"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢$F–æ’Zé®yn{¹X{®KˆKŠ®Š^XşiÚK»nûÉ®YÊ{J~ˆ{Nz›®™{NKˆ®ûÈÎ‹ùî{ºŞZéîXÎX{Şi[X‰~˜	x+XÙ^‹>iKniY¾X‹‹ùî{ºŞX{Şi[i{nûÈÎ˜	x+iKniY¾ˆz®XªXØ~{ª~K‹®Kˆˆ{NiKniY¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&F–æ’ ¢ÒÀ¢&æ÷FR#¢.{J~ˆ{Nz›®™{N8‹ùî{ºŞZéîX{Şi[8˜	x+XÙ^‹>K‰Niè™™‹ùî{ºŞiŠşZèÎi[NiÚK»nûÉ¾˜	.Xxşh8^[Ú.Xùn‹Iş8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷6W&–W2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.{¹ŞZûiKniY¾y¨N{ª~i[XúşKº^K»¾hHş˜xŞhé.ˆÎKˆŞiKXùY(ÎûÉ¾iÚK»niKniY¾X‰KˆŞŠÎ(	N(	N›¸îi»Î˜xŞhé.Zé®ynhÈ~X{®ûÈÎiÚK»niKniY¾{ª~i[XúşKº^˜	®‹ø~˜xŞhé.[é~X‹K»¾hHşZéîi[ûÈÎyI®ˆ{>XùiZ>8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'6öÇWFR×6W&–W2×&V'&ævVÖVçB"À¢'&–VÖæâ×&V'&ævVÖVçB"À¢'&–VÖæâ×&V'&ævVÖVçBÖ–æf–æ—FR ¢ÒÀ¢&æ÷FR#¢.™™K¨îZéîiÚK»niKniY¾{ª~i[ûÉ¾K»¾hHşZéîyºîj~8jÚ>‹Işizz›~Xø®hÊşˆÚXˆnXŠ¾{¹X{®ièN˜
+ûÉ¾{¹ŞZûiKniY¾˜:XˆnXúnŠø8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.ZèÎZH~h
+~iŠşXˆniéy¨NYû®yû>ûÉ®KŠŞXÎZé®yn8ièXÎZé®yn8›¸îi»ÎXúşzzşh
+~8[êîXˆnikzˆ¾Šz>y¨NZÙYÊh
+~ûÈÎ˜;ŞKéŞ‹YniùzxŞ[Ú.[Èşy¨NZèÎZH~h
+~8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.zîyXÎXéşyn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.XÙ^‹>iÈyXÎZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ6öçfW&vVæ6R ¢ÒÀ¢&æ÷FR#¢.Zéîi[Kˆ®zîyXÎXZÎynhêX{®XÙ^‹>iÈyXÎi[X‰~iKniY¾ûÉ¾˜	.XxşiÈKˆ¾yXÎx˜iÊÎXùn‹Iş8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.ZèÎZH~h
+~iÈZI®zxŞzØK»~[Ú.[ÈşûÈÎX[nKŠŞ(	ÎzîyXÎXéşyn(	ŞiÈ[‹yJK¨îZÙYÊh
+~ŠøiˆîûÉ®Xú®ŠhŠøiˆîKˆKŠ®™¸nY™Ùîz›®K‰NiÈKˆ®yXÎûÈÎ[ˆz®Xª[é~X‹Kˆ®zîyXÎ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.yJzîyXÎXéşynŠøiˆîXÙ^‹>iÈyXÎi[X‰~iKniY¾ûÉ®ŠëâFöâBXÙ^‹>˜	.Z)îK‰NiÈKˆ®yXÎûÈÎKºBG3ÕÅÇ7WÅÇ¶öåÅÇÒN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ6öçfW&vVæ6R ¢ÒÀ¢&æ÷FR#¢.iˆîzîKº^™Ùîz›®iÈKˆ®yXÎi[X‰~XÎ™¸nYy¨NKˆ®zîyXÎKÙÎX	˜iè™™8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.™zŞXË®™{NZY~Zé®ynûÉ®ˆºRE¶öâÆ%öåÒBkº‹k2E¶÷¶â³ÒÆ%÷¶â³ÕÕÅÇ7V'6WFW¶öâÆ%öåÒBK‰N™[ş[ªn‹h¾K¨âCNûÈÎX‰KªN™¸nhiÈKˆKŠ®x+8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&æW7FVBÖ–çFW'fÇ2 ¢ÒÀ¢&æ÷FR#¢.X~Zé®jøşKŠ®™zŞXË®™{N™Ùîz›®K‰Ny»K©.[XÎZY~ûÈÎ™[ş[ªn‹h¾™»nyJK¨îYJşKˆh
+~8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6ö×ÆWFVæW72×&VÇ2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.‹ùiŠşK¨ÎXˆnk9^k.jKˆîXè¾{ÊiŠ[NXéşyny¨NXzKÙ^Yû®z8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.zÊÎKˆYû®iÊÎZé®ynŠûNûÉ®{JşzzşXhŞk.XùXÉnxè~ûÈÎY¹îX‹XéşX{Şi[ûÉ¾zÊÎK¨ÎYû®iÊÎZé®ynŠûNûÉ®k.™Ú.zzşXúşKº^‹ÚÎXÉnK‹®k.XéşX{Şi[y¨Nzºşx+XÎ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&gF2Öf—'7B"À¢&gF2×6V6öæB ¢ÒÀ¢&æ÷FR#¢.hÈX[>ˆNYŞš)y¨NiÚK»nŠz>Šû¾ûÉ®zÊÎKˆZé®ynYÊ‹ùî{ºŞx+{¹ZûÎi[ûÈÎzÊÎK¨ÎZé®yn˜x~yJ‹ùî{ºŞŠ*¾zzşX{Şi[Xø®XéşX{Şi[ûÉ¾KˆŞZ;z{‹ùî{ºŞh
+~Zûh˜iÈhê[›şx˜iÊÎ[ø^Šh8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.zÊÎKˆYû®iÊÎZé®ynûÉ®‹ùî{ºŞX{Şi[y¨NXùKˆ®™™zzşXˆniŠşX[nXéşX{Şi[8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&gF2Öf—'7B"À¢&gF2×6V6öæB ¢ÒÀ¢&æ÷FR#¢.hÈX[>ˆNYŞš)y¨NiÚK»nŠz>Šû¾ûÉ®zÊÎKˆZé®ynYÊ‹ùî{ºŞx+{¹ZûÎi[ûÈÎzÊÎK¨ÎZé®yn˜x~yJ‹ùî{ºŞŠ*¾zzşX{Şi[Xø®XéşX{Şi[ûÉ¾KˆŞZ;z{‹ùî{ºŞh
+~Zûh˜iÈhê[›şx˜iÊÎ[ø^Šh8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.iÊÎš^˜x~yJy¨N{¸şX[[êîzzşXˆnYû®iÊÎZé®ynKºRFbB‹ùî{ºŞK‹®iÚK»n8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&gF2Öf—'7B"À¢&gF2×6V6öæB ¢ÒÀ¢&æ÷FR#¢.™™Zé®K‹®iÊÎš^[^zK®y¨N{¸şX[x˜iÊÎûÉ¾[ËiÚK»nx˜iÊÎYÊ‹ùî{ºŞx+{¹ZûÎi[ûÈÎXúniÈ{¹ŞZû‹ùî{ºŞX{Şi[[Ú.[Èş8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.yKYû®iÊÎZé®ynûÈÂEÅÆg&7¶G×¶G‡ÕÅÆÆâƒÓ÷‚NûÈÎK‰BEÅÆÆãÓNûÈÎYºjÚN‹ùKˆî˜	®[‹y¨NZûi[Zé®K˜Kˆˆ{N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&gF2Öf—'7B"À¢&ÆörÖ–æWVÆ—G’ ¢ÒÀ¢&æ÷FR#¢.jÚNZHBÆâhÈzzşXˆnZé®K˜’ÆâƒŞ(Š¾((º6GB÷NûÉ¾Š*¾zzşX{Şi[YÊ‚ƒã‹ùî{ºŞûÈÎzÊÎKˆYû®iÊÎZé®yn{¹ZûÎi[ûÈÎzzşXˆnKˆ®Kˆ¾™™y»zØ{¹’ÆâÓ8&ÆörÖ–æWVÆ—G’KÛşyJy¨NjÚ>iŠşŠú^Zé®K˜8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.ˆºRFbBiÈ‹{>‹x>™{NijŞûÈÎKè¾Zh"Fb‡‚“ÓNûÈ‚GƒÃNûÈKˆâCNûÈ‚G…ÅÆvSNûÈûÈÎX‰’EÅÆ–çE÷²ÓÕãcÓNûÈÎKØbFbBk*iÈXéşX{Şi[ûÈ‹ëî[ˆ>Zé®ynûÉ®ZûÎi[X[~iÈK¸¾XÎh
+~ûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&F&&÷W‚ÖFW&—fF—fR ¢ÒÀ¢&æ÷FR#¢.‹{>‹x>X{Şi[KˆŞX[~ZH~ZûÎi[y¨NK¸¾XÎh
+~ûÈÎYºjÚNKˆŞXúşˆ;ŞZÙYÊZHNZHNXúşZûÎy¨NXéşX{Şi[8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ögVæFÖVçFÂ×F†V÷&VÒÖ6Æ7VÇW2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.‹ùŠûNiˆî{¸şX[[êîzzşXˆnYû®iÊÎZé®yny¨NZHNZHNk.ZûÎ{¹>Šë®KˆŞˆ;Şy»Nhê^hê[›şX‹K»¾hHş›¸îi»ÎXúşzzşX{Şi[ûÉ¾Zè>KˆŞŠzK®‹ùî{ºŞh
+~ZûjøşKŠ®X[~KÙ>X{Şi[˜;ŞiŠş[ø^ŠhiÚK»n8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&F&&÷W‚ÖFW&—fF—fR ¢ÒÀ¢&æ÷FR#¢.‹{>‹x>X{Şi[KˆŞX[~ZH~ZûÎi[y¨NK¸¾XÎh
+~ûÈÎiX^k*iÈZHNZHNXúşZûÎy¨NXéşX{Şi[ûÉ¾‹ùXøŞš›>K»¾hHş›¸îi»ÎXúşzzşX{Şi[x˜iÊÎûÈÎ[›nKˆŞŠøiˆî‹ùî{ºŞh
+~iŠş˜	X{Şi[[ø^ŠhiÚK»n8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6V6‡’Ö–çFVw&Â×F†V÷&VÒ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.‹ùiŠşZHŞXˆnié(	ÎX‰®h
+~(	Şy¨Nj[ø>ûÈÎK™şiŠşyYi[Zé®ynKˆîiÈZJ~jŠXéşyny¨NiÚ^k©8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6V6‡’Ö–çFVw&Â×F†V÷&VÒ"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.iúşŠ[şzzşXˆnZé®ynûÉ®XÙ^‹ùî˜	®XË®YùşXh^XZ{ªşX{Şi[y¨N™zŞ‹zşzzşXˆnK‹®™»n8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6V6‡’Ö†öÖ÷F÷’"À¢&6V6‡’×6–×Ç’Ö6öææV7FVB ¢ÒÀ¢&æ÷FR#¢.™zŞ‹zşŠhk.XˆnjëR<+ûÉ¾‹ùî{ºŞYÎKÊniz™ÈXúş[êî8.XÙ^‹ùî˜	®K‹®XX^XˆnYùşiÚK»nûÈÎ™Ùîx›Zé®X{Şi[y¨N[ø^ŠhiÚK»nûÉ¾iÈkIîYùşKŠŞjX{Şi[Xúşˆ;ŞKª~yIş™Ùî™»nzzşXˆn8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6V6‡’Ö–çFVw&Â×F†V÷&VÒ"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.iúşŠ[şYÎKÊnZé®ynŠûNiˆîûÉ®XZ{ªşX{Şi[k+şKùŞhÈzºşx+YÎKÊny¨NKŠNiÚ‹zş[èNzzşXˆny»YÎûÉ¾YÊXÙ^‹ùî˜	®YùşKŠŞûÈÎ‹zş[èNzzşXˆnK¸^KéŞ‹Ynzºşx+8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6V6‡’Ö†öÖ÷F÷’"À¢&6V6‡’×6–×Ç’Ö6öææV7FVB ¢ÒÀ¢&æ÷FR#¢.™zŞ‹zşŠhk.XˆnjëR<+ûÉ¾‹ùî{ºŞYÎKÊniz™ÈXúş[êî8.XÙ^‹ùî˜	®K‹®XX^XˆnYùşiÚK»nûÈÎ™Ùîx›Zé®X{Şi[y¨N[ø^ŠhiÚK»nûÉ¾iÈkIîYùşKŠŞjX{Şi[Xúşˆ;ŞKª~yIş™Ùî™»nzzşXˆn8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷&W6–GVW2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.XªiØ>yYi[Zé®ynûÉ®ŠëâEÅÄöÖVvÅÇ7V'6WEÅÆÖF†&"2BXÙ^‹ùî˜	®ûÈÂFóÅÅÆÆF÷G2ÆôâBiŠşX[nKŠŞKˆŞYÎx+ûÈÂFbBYÊ‚EÅÄöÖVvÅÇ6WFÖ–çW5ÅÇ¶óÅÅÆÆF÷G2ÆôåÅÇÒBXZ{ªşûÈÂEÅÆvÖÖÅÇ7V'6WEÅÄöÖVvBiŠş˜ş[È‹ùK©¾x+y¨NXˆnjëRD5ãB™zŞi».{«şûÈÎŠëEÅÆ÷W&F÷&æÖW´–æGÒ…ÅÆvÖÖÆ“Òƒ%ÅÇ’’•ç²ÓÕÅÆö–çEõÅÆvÖÖG¢ò‡¢Ö’NûÈÎX‰’EÅÆö–çEõÅÆvÖÖb‡¢•ÅÂÆG£Ó%ÅÇ’•ÅÇ7VÕ÷¶£ÓÕäåÅÆ÷W&F÷&æÖW´–æGÒ…ÅÆvÖÖÆö¢•ÅÆ÷W&F÷&æÖWµ&W7Ò†bÆö¢’NûÉ¾ZX~x+XXŠëK‹®iÊÎh
+~ZX~x+8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'vV–v‡FVB×&W6–GVR×F†V÷&VÒ ¢ÒÀ¢&æ÷FR#¢.KˆîiÊÎXÛ~YŞš)y¨NXÙ^‹ùî˜	®Yùş8™zŞ‹zş8iÈ™™ZÚNz¸¾ZX~x+Xø®{¹^i[Zé®K˜˜	šy»YÎ8.K‹¾˜:YÊi[NKŠ®z›şZÙN[›>™Ú.XZ{ªşûÈÎXxşXë¾K‹¾˜:YîXúşZ¾Š^K‹®XZ{ªşX{Şi[ûÉ¾iÊÎXÛ~KˆŞh¨®zèXÙ^™zŞi».{«şhÈ~i[K‹¢óy¨B¦÷&Fâh¹>h™{¹>Šë®Xi.XX^K‹®[{.ŠøXh^Zë8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷&W6–GVW2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.yYi[Zé®ynh¨®ZHŞiØ.y¨NY»N˜>zzşXˆnXÉnK‹®Kº>i[Šêzé~ûÈk.{;¾i[ûÈûÈÎiŠşŠêzé~ZéîzzşXˆny¨N[Ë®ZJ~[z^X[~8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷&W6–GVW2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.XªiØ>yYi[Zé®ynûÈ{¹^i[[Ú.[ÈşûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'vV–v‡FVB×&W6–GVR×F†V÷&VÒ ¢ÒÀ¢&æ÷FR#¢.Zû[©NXZÎ[Èşi‹î[ÈşY
+²–æBŒë2Æö²ûÈÎX[nKŠ^‹
+X~ŠëîKˆî™˜‹ûŠxYÎK‹¾š)Zé®K˜ûÈÎ[›nyK{¹^i[[Ú.[ÈşyYi[Zé®ynŠøiˆî8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷&W6–GVW2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Šêzé~ZéîzzşXˆni{nûÈÎ[‹yJZJ~YÈn[Ê~[É^ynKˆî{ªn[Ù>[É^ynhê~X‹n‹è^Xª[Ê~Kˆ®y¨NzzşXˆnûÈÎKÛşY»N˜>zzşXˆnXÉnK‹®yYi[Y(ÎûÉ¾š¹™‹nièx+XúşyJk.ZûÎXZÎ[ÈşŠêzé~yYi[8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&¦÷&Fâ×WW"×6VÖ–6—&6ÆR"À¢'öÆR×&W6–GVRÖFW&—fF—fR"À¢&F—&–6†ÆWB×6–æRÖ–çFVw&ÂÖ6öçF÷W" ¢ÒÀ¢&æ÷FR#¢.[^[ÈKˆ®XØ®YÈd¦÷&Fîi‹î[ÈşKËŠêY(Îš¹™‹nièx+XZÎ[ÈşûÉ¾jÚ>[ÊnzzşXˆnXXŠøiˆî[›şK˜iKniY¾ûÈÎXhŞyJ{¹^i[K‹®™»ny¨N{Ê‹ù¾Y»N˜>Šêzé~[ş[Ê~(‰&œøKˆîZJ~[Ê~‹h¾™»nûÈÎ˜şXXŞh¨®‹zş[èNKˆ®y¨NXéşx+[Ù>KÙÎXh^˜:ièx+8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷&W6–GVW2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢"G£ÓBZHNyYi[K‹¢CNûÈÎ[ş[Ê~zzşXˆn‹h¾K¨âBÖ•ÅÇ’NûÈÎ{ªn[Ù>[É^yn{¹X{®ZJ~[Ê~zzşXˆn‹h¾K¨âCNûÈÎiX^zzşXˆnK‹¢EÅÇ’ó"N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&¦÷&Fâ×WW"×6VÖ–6—&6ÆR"À¢'öÆR×&W6–GVRÖFW&—fF—fR"À¢&F—&–6†ÆWB×6–æRÖ–çFVw&ÂÖ6öçF÷W" ¢ÒÀ¢&æ÷FR#¢.[^[ÈKˆ®XØ®YÈd¦÷&Fîi‹î[ÈşKËŠêY(Îš¹™‹nièx+XZÎ[ÈşûÉ¾jÚ>[ÊnzzşXˆnXXŠøiˆî[›şK˜iKniY¾ûÈÎXhŞyJ{¹^i[K‹®™»ny¨N{Ê‹ù¾Y»N˜>Šêzé~[ş[Ê~(‰&œøKˆîZJ~[Ê~‹h¾™»nûÈÎ˜şXXŞh¨®‹zş[èNKˆ®y¨NXéşx+[Ù>KÙÎXh^˜:ièx+8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öæf÷&ÖÂÖÖ2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.›¸îi»ÎiŠ[NZé®ynûÉ®K»¾KÙ^XÙ^‹ùî˜	®™Ùîz›®yÉş[È™¸bEÅÄöÖVvÅÇ7V'6WFæWÅÆÖF†&'´7ÒB˜;ŞXúşX[[Ú.YËiŠX‹XÙ^KØŞYÈny¹8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&–VÖæâÖÖ–ærÖW†—7FVæ6R ¢ÒÀ¢&æ÷FR#¢.iÚK»nK‹®™Ùîz›®XÙ^‹ùî˜	®yÉşYùşûÉ¾i[N[›>™Ú.hé.™šNûÈÎYºÆ–÷Wf–ÆÆRZé®ynKˆŞXúşˆ;ŞXøÎXZ{ªşX‹YÈny¹8.Šøiˆî[^[È[›>ikjXˆniJş8&÷V6Œ:8XÙ^Xûniè™™8ÖöçFVÎ8ZûÎi[ièXÎKˆîkº[Nh
+~ûÉ¾[Ù.KˆXÉnY»®Zé®Kˆx+Xø®jÚ>ZéîZûÎi[YîYJşKˆ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öæf÷&ÖÂÖÖ2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.›¸îi»ÎiŠ[NZé®ynKùŞŠø™Ùîz›®XÙ^‹ùî˜	®yÉşYùş˜;Şˆ;ŞX[[Ú.YËXùh‰YÈny¹ûÈÎKØniŠ[NKˆˆŠÎk*iÈX‰ŞzØŠ‹ëî[Èş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&–VÖæâÖÖ–ærÖW†—7FVæ6R ¢ÒÀ¢&æ÷FR#¢.iÚK»nK‹®™Ùîz›®XÙ^‹ùî˜	®yÉşYùşûÉ¾i[N[›>™Ú.hé.™šNûÈÎYºÆ–÷Wf–ÆÆRZé®ynKˆŞXúşˆ;ŞXøÎXZ{ªşX‹YÈny¹8.Šøiˆî[^[È[›>ikjXˆniJş8&÷V6Œ:8XÙ^Xûniè™™8ÖöçFVÎ8ZûÎi[ièXÎKˆîkº[Nh
+~ûÉ¾[Ù.KˆXÉnY»®Zé®Kˆx+Xø®jÚ>ZéîZûÎi[YîYJşKˆ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öÆ–Ö—G2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.yJZK˜ÎZé®ynk.iè™™ûÉ¢CÅÆÆWÇ…ã%ÅÇ6–âƒ÷‚—ÅÅÆÆR…ã"NûÈÎiXREÅÆÆ–Õ÷·…ÅÇFó×…ã%ÅÇ6–âƒ÷‚“ÓNûÈÎXÛ>KÛòEÅÇ6–âƒ÷‚’BiÊÎ‹ª¾YÊ‚CB™˜N‹ùiz™™hÊşˆÚ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7VVW¦R×F†V÷&VÒ×&VÂ ¢ÒÀ¢&æ÷FR#¢.Zû’(šiÈ’Ç6–âƒ÷‚—Î(šCûÈÎiX^KŠNKê~YØ~‹h¾K¨âûÉ¾[©NyJZéîX{Şi[ZK˜ÎZé®yn8.X{Şi[6–âƒ÷‚’iÊÎ‹ª¾YÊz›şZÙN˜+¾Yùşiziè™™ûÈÎKØn‹ùKˆŞ[ÛY8ŞZK˜Î8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öFW&—fF—fW2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.XúşZûÎ[ø^‹ùî{ºŞûÈÎKØn‹ùî{ºŞKˆŞ[ø^XúşZûÎûÉ¾‹ëî[ˆ>Zé®yn‹ù¾KˆjÚ^hÈ~X{®ZûÎi[‰›ŞxKniÊ®[ø^‹ùî{ºŞûÈÎXÛNKˆŞˆ;ŞiÈ‹{>‹x>™{NijŞûÈÎ‹ùiŠşZûÎi[XË®XŠ¾K¨îKˆˆŠÎX{Şi[y¨N˜xŞŠhh
+~‹J8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&FW&—fF—fRÖ6öçF–çV—G’"À¢&F&&÷W‚ÖFW&—fF—fR ¢ÒÀ¢&æ÷FR#¢.XúşZûÎ‰[NY
+¾‹ùî{ºŞXø®ZûÎi[K¸¾XÎh
+~[{.˜	jÚ^ŠøiˆîûÉ¾jÚNXú^KˆŞZ;z{jøşKŠ®X[~K¸¾XÎh
+~y¨NX{Şi[˜;ŞiŠşZûÎi[8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖ6Æ7VÇW2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.[êîzzşXˆnzÊÎK¨ÎYû®iÊÎZé®ynûÉ®ˆºRFbBYÊ‚E¶Æ%ÒB‹ùî{ºŞûÈÂDbBYÊ‚E¶Æ%ÒB‹ùî{ºŞ8YÊ‚B†Æ"’BXúşZûÎK‰BDbrÒbNûÈÎX‰’EÅÆ–çEöæ"b‡‚•ÅÂÆG‚Òb†"’Òb†’N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&gF2×6V6öæB ¢ÒÀ¢&æ÷FR#¢.X~ŠëîKˆîiÊÎXÛ~YŞš)˜	šKˆˆ{NûÉ¾yKzÊÎKˆYû®iÊÎZé®ynièN˜
+XùKˆ®™™zzşXˆnûÈÎXhŞyJZûÎi[K‹®™»ny¨NX{Şi[YÊXË®™{NKˆ®K‹®[‹i[8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö×VÇF—f&–&ÆRÖ6Æ7VÇW2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.˜xŞzzşXˆnKˆîi».{«şi».™Ú.zzşXˆn˜	®‹ø~jÎié~8š¹ijş8ijşh™XX¾ijşZé®yny»K©.‹ÚÎhÚ.ûÈÎiÊÎ‹JiŠş(	Î‹ëyXÎKˆ®y¨NzzşXˆnzØK¨îXh^˜:ZûÎi[y¨NzzşXˆn(	Ş8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö×VÇF—f&–&ÆRÖ6Æ7VÇW2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.š¹ijşiZ>[ªnZé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öæÇ—F–2Ö6öçF–çVF–öâ"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.Šz>ié[»nh¹>ˆº^ZÙYÊX‰YJşKˆûÈYÎKˆh
+~Zé®ynûÈûÉ®KŠNKŠ®YÊ‚DBBKˆ®y»zØy¨NŠz>iéX{Şi[ûÈÎYÊX[nXZÎX[‹ùî˜	®Zé®K˜YùşKˆ®ZHNZHNy»zØ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†öÆöÖ÷'†–2Ö–FVçF—G’ ¢ÒÀ¢&æ÷FR#¢.jùN‹è>Yùş[ø^š¾‹ùî˜	®ûÈÎˆ®x+[ø^š¾YÊŠú^YùşXh^˜:ûÉ¾YÊX[YÎ‹ùî˜	®˜xŞXúYùşKˆ®YJşKˆûÈÎKˆŞKùŞŠøz›ş‹ø~ZX~x+y¨NXZ[XÙ^XÎ[»nh¹>ZÙYÊ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öæÇ—F–2Ö6öçF–çVF–öâ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢"EÅÇ¦WFBX{Şi[8EÅÄvÖÖBX{Şi[˜;Ş˜	®‹ø~Šz>ié[»nh¹>Zé®K˜X‹i»NZJ~ˆÈ>Y»NûÈÎ›¸îi»ÎxÉÎh;>jÚ>iŠşX[>K¨âEÅÇ¦WFB[»nh¹>Yîy¨N™»nx+Xˆn[ˆ>8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öæÇ—F–2Ö6öçF–çVF–öâ"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Šz>ié[»nh¹>y¨NYJşKˆh
+~iÚ^ˆz®YÎKˆh
+~Zé®ynûÉ®KŠNKŠ®YÊXË®YùşKˆ®XZ{ªşy¨NX{Şi[ˆº^YÊKˆKŠ®K¨îŠú^‹ùî˜	®YùşXh^˜:iÈˆ®x+y¨N™¸nYKˆ®y»zØûÈÎX‰ZHNZHNy»zØ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†öÆöÖ÷'†–2Ö–FVçF—G’ ¢ÒÀ¢&æ÷FR#¢.jùN‹è>Yùş[ø^š¾‹ùî˜	®ûÈÎˆ®x+[ø^š¾YÊŠú^YùşXh^˜:ûÉ¾YÊX[YÎ‹ùî˜	®˜xŞXúYùşKˆ®YJşKˆûÈÎKˆŞKùŞŠøz›ş‹ø~ZX~x+y¨NXZ[XÙ^XÎ[»nh¹>ZÙYÊ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öÆV&W6wVRÖ–çFVw&Â"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Zè>y¨NKÉX«şYÊK¨îiè™™Zé®yn(	N(	NXÙ^‹>iKniY¾Kˆîhê~X‹niKniY¾KÛş(	ÎzzşXˆnKˆîiè™™KªNhÚ.(	ŞiÈzèXÙ^ˆÎ[Ë®ZJ~y¨NXŠNhÚîûÈÎ‹ùiŠş›¸îi»ÎzzşXˆnX®KˆŞX‹y¨N8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢"¢®XÙ^‹>iKniY¾Zé®yb¢®ûÉ®ˆºRCÅÆÆReöâÅÆæV'&÷rbNûÈÎX‰’EÅÆ–çBeöâÅÇFòÅÆ–çBbN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢"¢®hê~X‹niKniY¾Zé®yb¢®ûÉ®ˆºRFeöâÅÇFòbBK‰BGÆeöçÂÅÆÆRrNûÈ‚FrBXúşzzşûÈûÈÎX‰’EÅÆ–çBeöâÅÇFòÅÆ–çBbN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢$fF÷R[É^yn{¹X{®Kˆ¾yXÎ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.hê~X‹niKniY¾Zé®yniŠşjh.xè~Šë®KŠŞ(	ÎiÉşiÉ¾Kˆîiè™™KªNhÚ.(	Şy¨Nj~Xxn[z^X[~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.XÙ^‹>iKniY¾Zé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.hê~X‹niKniY¾Zé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$fF÷R[É^yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö–çFVw&F–öâÖÆ–Ö—G2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.KˆZJ~iKniY¾Zé®ynûÈXÙ^‹>iKniY¾8fF÷^8hê~X‹niKniY¾ûÈ{¹X{®zzşXˆnKˆîiè™™KªNhÚ.y¨NXX^XˆniÚK»n8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ööæ÷FöæRÖ–çFVw&Â"À¢&FöÖ–æFVBÖ6öçfW&vVæ6R"À¢&fF÷R ¢ÒÀ¢&æ÷FR#¢.KÛşyJXúşkX¾X{Şi[KˆîYÎKˆkX¾[ªnz›®™{NûÉ¾XÙ^‹>iKniY¾™™™Ùî‹IşX{Şi[ûÈÄfF÷R™™™Ùî‹IşX{Şi[ûÈÎhê~X‹niKniY¾™™yKY»®Zé®XúşzzşX{Şi[hê~X‹ny¨NXzK˜îZHNZHNiKniY¾[¨şX‰~8.jÚ>ih~zè[Èş[©N‹ùîYÎ‹ùK©¾iÚK»n™ˆ^Šû¾8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.j[ø>Zé®ynûÉ®Xè¾{ÊiŠ[NXéşynûÈKˆŞXªx+ûÈ8Kˆˆ{NiÈyXÎXéşynûÈ„&æ6(	57FV–æ†W>ûÈ8[ÈiŠ[NZé®ynKˆî™zŞY»îX8şZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&&æ6‚Ö6öçG&7F–öâ"À¢'Væ–f÷&ÒÖ&÷VæFVFæW72"À¢&÷VâÖÖ–ærÖ&æ6‚"À¢&6Æ÷6VBÖw&‚Ö&æ6‚ ¢ÒÀ¢&æ÷FR#¢.ZèÎi[NiÚK»nŠxX[>ˆNZé®ynûÉ®Kˆˆ{NiÈyXÎŠhk.Zé®K˜Yùò&æ68zé~ZÙ˜	x+iÈyXÎûÉ¾[ÈiŠ[NŠhk.KŠNz›®™{B&æ6‚K‰Nzé~ZÙiÈyXÎkº[NûÉ¾™zŞY»îX8şŠhk.Zé®K˜YùşK‹®XZ˜:‚&æ6‚z›®™{NûÉ´ôDRŠøiˆîK‹®j~˜xş[˜:‚Æ—66†—G¢x˜iÊÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Xè¾{ÊiŠ[NXéşyniŠş[êîXˆnikzˆ¾Šz>ZÙYÊYJşKˆh
+~ûÈ…–6&N(	4Æ–æFVÌ;fnûÈy¨NYû®zûÉ¾Kˆˆ{NiÈyXÎXéşynŠûNiˆî˜	x+iÈyXÎy¨Nzé~ZÙixşKˆˆ{NiÈyXÎ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&&æ6‚Ö6öçG&7F–öâ"À¢'–6&BÖÆ–æFVÆöb"À¢'Væ–f÷&ÒÖ&÷VæFVFæW72 ¢ÒÀ¢&æ÷FR#¢.ZèÎi[NiÚK»nŠxX[>ˆNZé®ynûÉ®Kˆˆ{NiÈyXÎŠhk.Zé®K˜Yùò&æ68zé~ZÙ˜	x+iÈyXÎûÉ¾[ÈiŠ[NŠhk.KŠNz›®™{B&æ6‚K‰Nzé~ZÙiÈyXÎkº[NûÉ¾™zŞY»îX8şŠhk.Zé®K˜YùşK‹®XZ˜:‚&æ6‚z›®™{NûÉ´ôDRŠøiˆîK‹®j~˜xş[˜:‚Æ—66†—G¢x˜iÊÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.Xè¾{ÊiŠ[NXéşyn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&&æ6‚Ö6öçG&7F–öâ ¢ÒÀ¢&æ÷FR#¢.ZèÎi[NiÚK»nŠxX[>ˆNZé®ynûÉ®Kˆˆ{NiÈyXÎŠhk.Zé®K˜Yùò&æ68zé~ZÙ˜	x+iÈyXÎûÉ¾[ÈiŠ[NŠhk.KŠNz›®™{B&æ6‚K‰Nzé~ZÙiÈyXÎkº[NûÉ¾™zŞY»îX8şŠhk.Zé®K˜YùşK‹®XZ˜:‚&æ6‚z›®™{NûÉ´ôDRŠøiˆîK‹®j~˜xş[˜:‚Æ—66†—G¢x˜iÊÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.[{Nh»ş‹Z¾z›®™{NiŠşZèÎZH~‹X¾ˆÈ>z›®™{NûÈÎZèÎZH~h
+~KùŞŠøiúşŠ[şX‰~iÈiè™™ûÈÎK¸îˆÎKÛşXè¾{ÊiŠ[NXéşyn8Kˆˆ{NiÈyXÎXéşyn8[ÈiŠ[NZé®ynzØh‰z¸¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&&æ6‚Ö6öçG&7F–öâ"À¢'Væ–f÷&ÒÖ&÷VæFVFæW72"À¢&÷VâÖÖ–ærÖ&æ6‚ ¢ÒÀ¢&æ÷FR#¢.ZèÎi[NiÚK»nŠxX[>ˆNZé®ynûÉ®Kˆˆ{NiÈyXÎŠhk.Zé®K˜Yùò&æ68zé~ZÙ˜	x+iÈyXÎûÉ¾[ÈiŠ[NŠhk.KŠNz›®™{B&æ6‚K‰Nzé~ZÙiÈyXÎkº[NûÉ¾™zŞY»îX8şŠhk.Zé®K˜YùşK‹®XZ˜:‚&æ6‚z›®™{NûÉ´ôDRŠøiˆîK‹®j~˜xş[˜:‚Æ—66†—G¢x˜iÊÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.‹ùK©¾Zé®yniŠş[êîXˆnikzˆ¾8i[XÎXˆniéKˆîzé~ZÙynŠë®y¨NYû®yû>8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö&æ6‚×76W2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.Xè¾{ÊiŠ[NXéşynŠøiˆâôDRŠz>ZÙYÊYJşKˆûÉ®h¨®zzşXˆnikzˆ²G’‡B“×•óµÅÆ–çEóçBb‡2Ç’‡2’•ÅÂÆG2ByÈ¾KÙÂD5³ÅEÒBKˆ®y¨NXè¾{ÊiŠ[NûÈÎ[é~X‹–6&N(	4Æ–æFVÌ;fbZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&&æ6‚Ö6öçG&7F–öâ"À¢'–6&BÖÆ–æFVÆöb ¢ÒÀ¢&æ÷FR#¢.iÊÎXÛ~y¨B–6&N(	4Æ–æFVÌ;fbYŞš){¹X{®j~˜xşX‰ŞXÎ™zîš)8yú[Ú.‹ùî{ºŞh
+~Xø®{¹şKˆÆ—66†—G¢iÚK»nûÈÎ[›nyJ‹ùî{ºŞX{Şi[z›®™{NKˆ®y¨NXè¾{ÊiŠ[NZé®ynŠøiˆî[˜:ZÙYÊYJşKˆûÉ¾‹ù˜xÎy¨B5³ÅEÒ™ÈXùn‹k>ZIşyúŞy¨N™zŞi{n™{NXË®™{N8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö†–Æ&W'B×76W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.jÚ>KªNh©^[ÛZé®ynûÈZéâ†–Æ&W'Bx˜ûÈûÉ®ZûjøşKŠ®™Ùîz›®™zŞ{«şh
+~ZÙz›®™{BDÒBY(ÂG…ÅÆ–â‚NûÈÎZÙYÊYJşKˆFÕÅÆ–âÒBKÛòG‚ÖÕÅÇW'ÒNûÉ²FÒBiŠş‹yŞzk²G‚BiÈ‹ùy¨NZÙz›®™{NXX>{J8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&ö¦V7F–öâÖ6Æ÷6VB×7V'76R ¢ÒÀ¢&æ÷FR#¢.KˆîZéâ†–Æ&W'Bx˜iÊÎYŞš)Kˆˆ{NûÉ¾™zŞZÙz›®™{NKŠŞiè[şXÉn‹yŞzk¾y¨N[¨şX‰~yK[›>ŠÎY¹¾‹ë[Ú.h.zØ[Èşh‰K‹®iúşŠ[şX‰~ûÈÎiè™™{¹h©^[ÛûÈÎjÚ>KªNiÚK»n{¹YJşKˆh
+~8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö†–Æ&W'B×76W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢%&–W7¢ŠzK®Zé®ynûÈZéâ†–Æ&W'Bx˜ûÈûÉ®jøşKŠ®iÈyXÎ{«şh
+~k9¾X{ÒEÅÆVÆÂB˜;ŞYJşKˆŠzK®K‹¢EÅÆVÆÂ‡‚“ÕÅÆÆævÆR‚Ç•ÅÇ&ævÆRNûÈÎK‰BEÅÇÅÅÆVÆÅÅÇÃÕÅÇÇ•ÅÇÂN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&–W7¢×&W&W6VçFF–öâ ¢ÒÀ¢&æ÷FR#¢.ˆÈ>Y»N™™Zé®K‹®Zéâ†–Æ&W'Bz›®™{NûÈÎKˆîiÊÎXÛ~[{.Šøx˜iÊÎY¾YûÉ¾XXyJjy¨NjÚ>KªNŠ^ièN˜
+ŠzK®Y	˜xşûÈÎXhŞyJ‚6V6‡(	566‡v'¢Xø®XùnXÙ^KØŞikY	ŠøiˆîˆÈ>i[y»zØ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö†–Æ&W'B×76W2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢%&–W7¢ŠzK®Zé®ynûÈZéâ†–Æ&W'Bz›®™{Nˆz®ZûXnûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&–W7¢×&W&W6VçFF–öâ ¢ÒÀ¢&æ÷FR#¢.XZÎ[Èşy¨NZéîZûXnˆz®YÎièNyKZéâ†–Æ&W'Bz›®™{B&–W7¢ŠzK®Zé®yn{¹X{®ûÉ¾ZHŞz›®™{N™ÈhÈ{«şh
+rşX[‹ÚŞ{«şh
+~{ªnZé®iKXiûÈÎKˆŞYÊŠú^XZÎ[ÈşˆÈ>Y»NXh^8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö†–Æ&W'B×76W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.jÚ>KªNh©^[ÛZé®ynKùŞŠø™zŞZÙz›®™{NiÈYJşKˆiÈKÛ>˜Î‹ùûÈÎ‹ùiŠşiÈ[şK¨ÎK™k9^Kˆî˜xşZÙkX¾˜xşy¨NXzKÙ^Yû®z8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&ö¦V7F–öâÖ6Æ÷6VB×7V'76R ¢ÒÀ¢&æ÷FR#¢.iÊÎXÛ~y¨NŠún{¸niÈ[şXÉn[¨şX‰~ŠøiˆîiˆîzîXiYÊZéâ†–Æ&W'Bz›®™{NûÉ¾YJşKˆiÈKÛ>˜Î‹ùKˆîjÚ>KªNKÙ˜xşYØ~[{.hêX{®8.ZHÒ†–Æ&W'Bx˜iÊÎXú®YÊjÚNKÙÎjh.[û^ˆN{;¾ûÈÎKˆŞZ;z{iÊÎiÚ[{.[^[ÈX[nZHŞXh^zzş{¸nˆ¨.8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷7V7G&Â×F†V÷'’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.{J~ˆz®KËNzé~ZÙy¨N‹Zé®ynûÉ®ZÙYÊjÚ>KªNx›[èYû®ûÈÂEBÒÅÇ7VÒÅÆÆÖ&Fö’ÅÆÆævÆRÅÆ6F÷BÂUö•ÅÇ&ævÆRUö’N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6ö×7B×6VÆbÖF¦ö–çB×7V7G&Â ¢ÒÀ¢&æ÷FR#¢.Šøiˆî˜.yJK¨îK»¾hHşZéîh‰nZHÒ†–Æ&W'Bz›®™{NKˆ®y¨NiÈyXÎ{J~ˆz®KËNzé~ZÙûÉ¾™Ùî™»nx›[èX‰~ZInš¾Š^jy¨NjÚ>KªNYû®8.[^[ÈYÊˆÈ>i[Kˆ¾h‰z¸¾ûÈÎzé~ZÙhŠ®ijŞK™şhÈˆÈ>i[iKniY¾ûÉ¾KˆˆŠÎ™Ùî{J~zé~ZÙy¨N‹kX¾[ªnx˜iÊÎKˆŞyKjÚNhêX{®8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷7V7G&Â×F†V÷'’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.{J~ˆz®KËNzé~ZÙy¨N‹XˆnŠz>ûÉ¾KˆˆŠÎˆz®KËNzé~ZÙy¨N‹kX¾[ªnZé®yniÊ®YÊiÊÎXÛ~Šøiˆî8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6ö×7B×6VÆbÖF¦ö–çB×7V7G&Â ¢ÒÀ¢&æ÷FR#¢.[É^yJy¨NŠøiˆîXú®Šhny¹niÈyXÎ{J~ˆz®KËNzé~ZÙûÉ¾Xú^KŠŞYÎi{niˆîzîKˆˆŠÎˆz®KËN‹kX¾[ªnZé®yniÊ®Šøiˆî8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öÆ–æV"Ö÷W&F÷'2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.ZûXnz›®™{BE…â¢BiŠòE‚BKˆ®‹ùî{ºŞ{«şh
+~k9¾X{Şy¨Nz›®™{NûÉ¾Zû™Ùî™»nZéîh‰nZHŞ‹X¾ˆÈ>z›®™{NûÈÄ††î(	4&æ6‚Zé®ynKùŞŠø™Ùî™»n‹ùî{ºŞ{«şh
+~k9¾X{Şy¨NZÙYÊûÈÎK‰NXúşKùŞˆÈ>i[[»nh¹>ZÙz›®™{NKˆ®y¨NiÈyXÎ{«şh
+~k9¾X{Ş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&††âÖ&æ6‚Öæ÷&ÖVB"À¢&æ÷&Ö–ærÖgVæ7F–öæÂ ¢ÒÀ¢&æ÷FR#¢.[{.Š^™Ùî™»nz›®™{NiÚK»nûÉ¾™»nz›®™{Nk*iÈ™Ùî™»nk9¾X{Ş8.Zéî8ZHŞx˜iÊÎYØ~hùKé¾KùŞˆÈ>i[[»nh¹>ŠøiˆîûÈÎKÛşyJiˆîzîy¨B¦÷&â˜hºYû®zûÈÎKˆŞŠhk.ZèÎZH~8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öÆ–æV"Ö÷W&F÷'2"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢.X(^˜xÎXûnXùhÚ"EÅÆÖF†6Ç´gÓ¢Åã"…ÅÆÖF†&'µ'Ò’ÅÇFòÅã"…ÅÆÖF†&'µ'Ò’BiŠşiÈyXÎ{«şh
+~zé~ZÙûÈÎK‰NiŠş˜Xzé~ZÙûÈ…Ææ6†W&VÂZé®ynûÈ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öÆ–æV"Ö÷W&F÷'2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.X(^˜xÎXûnXùhÚ.iŠòDÅã"BKˆ®y¨N˜Xzé~ZÙûÈÎYºjÚNKùŞhÈXh^zzşKˆîˆÈ>i[ûÈ…Ææ6†W&VÂZé®ynûÈ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öf÷W&–W"×6W&–W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.˜	x+iKniY¾i»N[êîZiûÈ„6&ÆW6öâZé®ynûÉ¢DÅã"BX{Şi[XzK˜îZHNZHNiKniY¾ûÈûÈÎˆÎKˆŞ‹ùî{ºŞx+™˜N‹ùKÉ®X{®xëv–&'2xë‹8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öf÷W&–W"×G&ç6f÷&Ò"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢%Ææ6†W&VÂZé®ynûÉ®Šú^XùhÚ.K¸â66‡v'G¢X{Şi[YJşKˆ‹ùî{ºŞ[»nh¹>X‹DÅã"…ÅÆÖF†&""’NûÈÎ[›nkº‹k2EÅÇÅÅÆ†BeÅÇÅó#ÕÅÇÆeÅÇÅó"N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'Ææ6†W&VÂÖÃ"Ö7–6ÆW2 ¢ÒÀ¢&æ÷FR#¢.hÈ’Uâ(‰#,øœëç‚’{ªnZé®y¨NKˆ{»NZéî{«şx˜iÊÎûÉ¾yKŠy.š)xèrÆæ6†W&VÂ{¸ş{ÊiKîhêX{¢Ì+"YJşKˆ[»nh¹>8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öf÷W&–W"×G&ç6f÷&Ò"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢%Ææ6†W&VÂZé®ynûÈ‚FUç²Ó%ÅÇ’•ÅÇ†’‡ÒB{ªnZé®ûÈÂDÅã"…ÅÆÖF†&""’NûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'Ææ6†W&VÂÖÃ"Ö7–6ÆW2 ¢ÒÀ¢&æ÷FR#¢.XZÎ[Èşiˆîzî{ªnZé¢FUç²Ó,øœëç‡ÒBK‰NZé®K˜YùşK‹¢DÌ+"…"’NûÉ¾ŠøiˆîY
+¾{ÊiKîKˆîkº[Nh
+~8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçföÇWF–öâ"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.YÊ‚EÅÆ†Bb…ÅÇ†’“ÕÅÆ–çBb‡‚–Uç²Ó%ÅÇ’•ÅÇ†’‡ÖG‚B{ªnZé®Kˆ¾ûÈÂFbÆuÅÆ–âÅãBkº‹k>XÛ~zzşZé®ybEÅÇv–FV†G¶b¦wÒ…ÅÇ†’“ÕÅÆ†Bb…ÅÇ†’•ÅÆ†Br…ÅÇ†’’N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6öçföÇWF–öâÖÃÖ7–6ÆW2 ¢ÒÀ¢&æ÷FR#¢.X~ŠëâbÆ~(ˆ„Ì+’…"ûÈÎhÈ’Uâ(‰#,øœëç‚’š)xè~{ªnZé®ûÉ¾yKŠy.š)xè~x˜Zé®ynKº>XZRCÓ,øëî8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçföÇWF–öâ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.{«şh
+~i{nKˆŞXù{;¾{¹şy¨N‹é>X{®zØK¨î‹é>XZ^KˆîXk.køY8Ş[©Ny¨NXÛ~zzşûÉ¾XÛ~zzşZé®ynŠêkºNk:.YšŠëîŠêYÊš)YùşZèÎh‰8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6öçföÇWF–öâÖÃÖ7–6ÆW2 ¢ÒÀ¢&æ÷FR#¢.h¨¢ÅD’y¨N‹é>XZ^‹é>X{®XÛ~zzşX[>{;¾iˆîzîKÙÎK‹®{;¾{¹şjŠYè¾X~ŠëîûÉ¾iÊÎXÛ~ŠøiˆîŠú^XÛ~zzşy¨Bf÷W&–W"XùhÚ.K‹®K™zzş8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçföÇWF–öâ"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢$vW76–âXÛ~zzşZé®ynûÉ®KŠŞ[ø>š¹ijşZøn[ªbEÅÇ†•õÅÇ6–vÖBKˆâEÅÇ†•õÅÇFRBXÛ~zzşK‹¢EÅÇ†•÷µÅÇ7'GµÅÇ6–vÖã"µÅÇFUã'×ÒNûÈÎXúşyK˜XŞiky»Nhê^š¨ÎŠø8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&vW76–âÖ6öçföÇWF–öâ×f&–æ6R ¢ÒÀ¢&æ÷FR#¢.Zû’ø2ÌøCãy¨N[Ù.KˆXÉnKŠŞ[ø2vW76–îûÈÎZèÎh‰[›>ik[›n‹>yJ[{.ŠøvW76–âzzşXˆn8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçföÇWF–öâ"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.XÛ~zzşZé®ynûÈ‚FbÆuÅÆ–âÅã…ÅÆÖF†&""’NûÈÎhÈ’FUç²Ó%ÅÇ’•ÅÇ†’‡ÒB{ªnZé®ûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6öçföÇWF–öâÖÃÖ7–6ÆW2 ¢ÒÀ¢&æ÷FR#¢.zØ[ÈşZûjøşKŠ®š)xè~h‰z¸¾ûÉ¾X{Şi[z›®™{NY(Âf÷W&–W"{ªnZé®Kˆî™˜‹ûy»YÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ö6öçföÇWF–öâ"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.ˆº^‹ùî{ºŞ{«şh
+~i{nKˆŞXù{;¾{¹şKº^XÛ~zzşŠzK®‹é>XZ^KˆîXk.køY8Ş[©NûÈÎXÛ~zzşZé®yn[h¨®X[nš)YùşŠzK®XÉnK‹®K™k9^ûÉ¾X˜Şˆ^iŠş{;¾{¹şjŠYè¾X~Šëî8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷F–ÖRÖg&WVVæ7’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢$†V—6Væ&W&rKˆŞzîZé®h
+~XéşynûÈŠy.š)xè~{ªnZé®ûÈûÉ®Xùn™Ùî™»b66‡v'G¢X{Şi[FeÅÆ–åÅÆÖF†6Â2…ÅÆÖF†&""’NûÈÎZé®K˜’EÅÆ†Bb…ÅÆöÖVv“ÕÅÆ–çE÷µÅÆÖF†&"'Öb‡B–Uç²Ö•ÅÆöÖVvGÖGBN8EÅÆ&"CÕÅÇÆeÅÇÅó%ç²Ó'ÕÅÆ–çBGÆb‡B—Åã&GBN8EÅÆ&%ÅÆöÖVvÒƒ%ÅÇ•ÅÇÆeÅÇÅó%ã"•ç²ÓÕÅÆ–çEÅÆöÖVvÅÅÆ†Bb…ÅÆöÖVv—Åã&EÅÆöÖVvNûÉ²EÅÄFVÇFEã#ÕÅÇÆeÅÇÅó%ç²Ó'ÕÅÆ–çB‡BÕÅÆ&"B•ã'Æb‡B—Åã&GBNûÈÂEÅÄFVÇFÅÆöÖVvã#Òƒ%ÅÇ•ÅÇÆeÅÇÅó%ã"•ç²ÓÕÅÆ–çB…ÅÆöÖVvÕÅÆ&%ÅÆöÖVv•ã'ÅÅÆ†Bb…ÅÆöÖVv—Åã&EÅÆöÖVvN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†V—6Væ&W&r×Væ6W'F–çG’ ¢ÒÀ¢&æ÷FR#¢.KˆîŠøiˆîh˜yJ‚f÷W&–W"j‚Uâ(‰&œø—B8'6WfÂYºZÙ,øXø¢66‡v'G¢X~ŠëîKˆˆ{NûÉ¾ik[zîXˆnXŠ¾hÈi{n™{NZøn[ªbÆgÌ+"ş(	fn(	l+"Y(ÎŠy.š)xè~Zøn[ªbÆf†GÌ+"òƒ,ø(	fn(	l+"’Zé®K˜8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷F–ÖRÖg&WVVæ7’"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.YÊŠy.š)xè~X(^˜xÎXûn{ªnZé®Kˆ¾ûÈÄ†V—6Væ&W&rKˆŞzîZé®h
+~XéşynŠûNiˆîYÎKˆ™Ùî™»b66‡v'G¢KúXû~y¨NYØ~ikji{n™{NZëŞ[ªnKˆîš)xè~ZëŞ[ªnK™zzşˆ{>[	K‹¢Có"NûÉ¾i{n™{Nz©~‹h®z¨NûÈÎš)‹[‹h®ZëŞ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†V—6Væ&W&r×Væ6W'F–çG’ ¢ÒÀ¢&æ÷FR#¢.KŠ^jÎKˆŞzØ[Èş{¹>Šë®Y(Â66‡v'G¢şŠy.š)xè~{ªnZé®yK†V—6Væ&W&rŠøiˆî{¹X{®ûÉ¾(	Îi{n™{Nz©~‹h®z¨NûÈÎš)‹‹h®ZëŞ(	ŞiŠşŠú^K™zzşKˆ¾yXÎy¨NZé®h
+~jh.‹û8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷F–ÖRÖg&WVVæ7’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$†V—6Væ&W&rKˆŞzîZé®h
+~XéşynûÈ™Ùî™»b66‡v'G¢KúXû~ûÈÎŠy.š)xè~{ªnZé®ûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†V—6Væ&W&r×Væ6W'F–çG’ ¢ÒÀ¢&æ÷FR#¢.XZÎ[ÈşKŠŞy¨BéGN8éLø’Y(ÎŠy.š)xèrf÷W&–W"{ªnZé®YÊiÊÎK‹¾š)Zé®K˜KŠŞ{¹X{®ûÈÎ{+îzîy¨B66‡v'G¢x˜iÊÎiÈZû[©NhêZûÎ8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷F–ÖRÖg&WVVæ7’"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.i{nš)XˆniéYÊ(	Îi{n™{N(	Nš)xè~(	Ş[›>™Ú.Kˆ®ŠzK®KúXû~ûÉ¾KˆŞzîZé®h
+~Xéşyn™™X‹nK¨nKŠNˆ^y¨NˆNYXˆn‹êxè~8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2ööFW2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢%–6&N(	4Æ–æFVÌ;fbZé®ynûÈj~˜xş[˜:x˜ûÈûÉ®ˆºRFbBYÊ‚B‡EóÇ•ó’By¨NKˆKŠ®™zŞyú[Ú.˜+¾Yùş‹ùî{ºŞûÈÎK‰NZÙYÊ‚DÅÅÆvSBKÛşyú[Ú.XhRGÆb‡BÇ•ó’Öb‡BÇ•ó"—ÅÅÆÆRÇÇ•ó×•ó'ÂNûÈÎX‰X‰ŞXÎ™zîš)‚G’sÖb‡BÇ’’N8G’‡Eó“×•óBiÈZé®K˜YÊ‚GEóB™˜N‹ùy¨NYJşKˆD5ãBŠz>ûÉ¾YJşKˆh
+~hÈ~Šz>yYYÊŠú^yú[Ú.i{nh‰z¸¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'–6&BÖÆ–æFVÆöb ¢ÒÀ¢&æ÷FR#¢.Zû[©N[{.iKn[Ù^y¨Nj~˜xò–6&N(	4Æ–æFVÌ;fbŠøiˆîûÉ®™zŞyú[Ú.Kˆ®y¨N‹ùî{ºŞh
+~Kˆî{¹şKˆ’ÔÆ—66†—G¢[‹i[KùŞŠøyúŞi{n™{NzzşXˆnzé~ZÙˆz®iŠK‰NXè¾{ÊûÉ¾{¹>Šë®Xú®Šhk.[˜:Šz>ûÈÎ[›n[nYJşKˆh
+~ˆÈ>Y»Niˆîzî™™YÊŠú^yú[Ú.Xh^8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷vV²×6öÇWF–öç2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢%6ö&öÆWbz›®™{NiŠş[ËŠz>y¨NZJxKnˆ‰îXûûÉ´Æ(	4Ö–Æw&ÒZé®yn{¹X{®jJŞYÈnYè¾[ËŠz>ZÙYÊYJşKˆy¨Nh«Ş‹jniënûÈÎK™şiŠşiÈ™™XX>ikk9^y¨NynŠë®Yû®z8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷vV²×6öÇWF–öç2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.iÈ™™XX>ikk9^YÊ‚D…ãBz›®™{NKŠŞZû¾h›î[ËŠz>ûÈÎyJXˆnx˜~ZI®š[Èş˜Î‹ùûÈÎŠúş[zîyK<:–[É^ynhê~X‹n8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2÷7F&–Æ—G’"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.{«şh
+~{;¾{¹òEÅÆF÷BƒÔ‚Bk‰‹ùz‹>Zé®[Ù>K‰NK¸^[Ù2DBy¨Nh˜iÈx›[èXÎZéî˜:K‹®‹IşûÈ„Ç–Væ÷bZé®ynûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&‡W'v—G¢ÖÆ–æV"×7F&–Æ—G’"À¢&6öçF–çV÷W2ÖÇ–Væ÷bÖWVF–öâ ¢ÒÀ¢&æ÷FR#¢.™™K¨îiÈ™™{»N[‹{;¾i[‹ùî{ºŞi{n™{NZéî{«şh
+~{;¾{¹şûÉ´¦÷&FâXˆnŠz>ŠøiˆîXX^ŠhiÚK»nûÈÎXún{¹’Ç–Væ÷bikzˆ¾zzşXˆnièN˜
+8YJşKˆh
+~KˆîXøŞY	XŠNhÚî8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öWV–Æ–'&–×W&–öF–2Ö÷&&—G2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.YiÉş‹Ú˜>Xúşˆ;Şz‹>Zé®ûÈY[É^ûÈh‰nKˆŞz‹>Zé®ûÉµö–æ6,:(	4&VæF—‡6öâZé®ynŠûNiˆî[›>™Ú.{;¾{¹şy¨Niè™™ŠÎK‹®Xù~™™K¨î[›>Šx+KˆîYiÉş‹Ú8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öWV–Æ–'&–×W&–öF–2Ö÷&&—G2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢%ö–æ6,:(	4&VæF—‡6öâZé®ynŠûNiˆî[›>™Ú.ˆz®k+¾{;¾{¹şy¨Niè™™™¸nXú®ˆ;ŞiŠş[›>Šx+8YiÉş‹Úh‰n‹ùîhê^Zè>KºÎy¨N‹Ú˜>ûÈÎ‹ùiŠş[›>™Ú.XªX©¾{;¾{¹şy¨NYû®iÊÎ{¹>ièNZé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öW&vöF–6—G’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢$&—&¶†öfb˜ŞXènZé®ynZûKùŞkX¾jh.xè~{;¾{¹şKŠŞy¨NXúşzzşX{Şi[{¹X{®XzK˜îZHNZHNY(ÂÌ+’iKniY¾ûÉ¾˜ŞXèni{niè™™zØK¨îz›®™{N[›>YØ~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'föâÖæWVÖæâÖÖVâÖW&vöF–2"À¢&†÷bÖÖ†–ÖÂÖW&vöF–2"À¢&W&vöF–2ÖÃÖÖ†–ÖÂ"À¢&W&vöF–2ÖFVç6RÖvööBÖ6Æ72"À¢&&—&¶†öfb×&ö&&–Æ—G’ÖÃ ¢ÒÀ¢&æ÷FR#¢.KùŞkX¾jh.xè~{;¾{¹şKˆîZéäÌ+X{Şi[ûÉ¾K¸ä†÷nièZJ~[É^ynXø®zŠZøn˜Î‹ùŠøiˆîXzK˜îZHNZHNY(ÄÌ+iKniY¾ûÈÎŠønXŠ¾KˆŞXùiè™™Xø®˜ŞXèni{ny¨Nz›®™{N[›>YØ~8" ¢ÒÀ¢°¢'F÷–2#¢&æÇ—6—2öW&vöF–6—G’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$&—&¶†öfbZé®yny¨N˜ŞXènjh.xè~h8^[Ú.ûÉ¦bXúşzzşûÈÎzØ[ÈşXzK˜îZHNZHNh‰z¸¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'föâÖæWVÖæâÖÖVâÖW&vöF–2"À¢&†÷bÖÖ†–ÖÂÖW&vöF–2"À¢&W&vöF–2ÖÃÖÖ†–ÖÂ"À¢&W&vöF–2ÖFVç6RÖvööBÖ6Æ72"À¢&&—&¶†öfb×&ö&&–Æ—G’ÖÃ ¢ÒÀ¢&æ÷FR#¢.KùŞkX¾jh.xè~{;¾{¹şKˆîZéäÌ+X{Şi[ûÉ¾K¸ä†÷nièZJ~[É^ynXø®zŠZøn˜Î‹ùŠøiˆîXzK˜îZHNZHNY(ÄÌ+iKniY¾ûÈÎŠønXŠ¾KˆŞXùiè™™Xø®˜ŞXèni{ny¨Nz›®™{N[›>YØ~8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷&VF–6FW2×VçF–f–W'2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.˜xşŠøŞY
+nZé®[è¾ûÉ®XZz{YŞš)y¨NY
+nZé®iŠşZÙYÊXøŞKè¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'VçF–f–W"ÖæVvF–öâ ¢ÒÀ¢&æ÷FR#¢.{¸şX[ŠúŞK˜x˜iÊÎûÈÎKˆŞi
+ÎX‹y»NŠxK‹¾K˜kÉNzé~KŠŞ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öf÷&ÖÂÖÆæwVvR"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.[Ú.[ÈşŠúŞŠˆiŠşŠøiˆîŠë®8jŠYè¾Šë®KˆîŠêzé~iË®zyZÚny¨NX[YÎYû®zûÉ®zˆ¾[¨şŠúŞŠˆy¨NŠúŞk9^8{ÉnŠùYšy¨NŠz>ié8Zé®ynŠøiˆîYšy¨N‹é>XZ^jÎ[ÈşûÈÎ˜;ŞiŠş[Ú.[ÈşŠúŞŠˆy¨NX[~KÙ>ZéîKè¾8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.Y:^[ë~[	NZèÎXZh
+~Zé®ynûÈƒ“#ûÈŠøiˆîûÉ®j~Xxny¨NKˆ™‹n˜¾‹éŠøiˆî{;¾{¹şiz.Xúş™ÚXøZèÎZH~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â ¢ÒÀ¢&æ÷FR#¢.j~Xxn{¸şX[Kˆ™‹nXú^ZÙynŠë®ûÈÎ™Ùîz›®{¹>ièNŠúŞK˜ûÉ¾KˆˆŠÎŠúŞŠˆx˜iÊÎyK{J~ˆ{Nh
+~Xø®iÈ™™zÛîYŞ[Ù.{ªnŠøiˆîûÈÎKˆŞkhXø®zé~iÊşynŠë®y¨NXú^ZÙZèÎZH~h
+~8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.k:hHşKˆŞŠhKˆâ¢®KˆŞZèÎZH~h
+~Zé®yb¢®k{~kxnûÉ®ZèÎXZh
+~ŠûNy¨NiŠş˜¾‹é{;¾{¹şiÊÎ‹ª¾ûÈKˆ™‹n˜¾‹éûÈ‹k>ZIş[Ë®ûÈÎKˆŞZèÎZH~h
+~ŠûNy¨NiŠşXÈ^Y
+¾zé~iÊşy¨Nx›Zé®ynŠë®ûÈZh"8¤d>ûÈizk9^XŠNZé®h˜iÈYŞš)8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.Y:^[ë~[	NZèÎXZh
+~Zé®ynûÉ®ŠúŞK˜‰[NY
+¾XúşyK[Ú.[ÈşŠøiˆîhÙ^ˆë~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â ¢ÒÀ¢&æ÷FR#¢.j~Xxn{¸şX[Kˆ™‹nXú^ZÙynŠë®ûÈÎ™Ùîz›®{¹>ièNŠúŞK˜ûÉ¾KˆˆŠÎŠúŞŠˆx˜iÊÎyK{J~ˆ{Nh
+~Xø®iÈ™™zÛîYŞ[Ù.{ªnŠøiˆîûÈÎKˆŞkhXø®zé~iÊşynŠë®y¨NXú^ZÙZèÎZH~h
+~8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.ZèÎZH~h
+~y¨NzØK»~Š‹ûûÈjŠYè¾ZÙYÊZé®ynûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â ¢ÒÀ¢&æ÷FR#¢.j~Xxn{¸şX[Kˆ™‹nXú^ZÙynŠë®ûÈÎ™Ùîz›®{¹>ièNŠúŞK˜ûÉ¾KˆˆŠÎŠúŞŠˆx˜iÊÎyK{J~ˆ{Nh
+~Xø®iÈ™™zÛîYŞ[Ù.{ªnŠøiˆîûÈÎKˆŞkhXø®zé~iÊşynŠë®y¨NXú^ZÙZèÎZH~h
+~8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Y:^[ë~[	NZèÎXZh
+~Zé®ynŠûNiˆîj~XxnKˆ™‹nŠøiˆî{;¾{¹ş‹k>ZIş[Ë®ûÉ¾Zè>KˆîKˆŞZèÎZH~h
+~Zé®yn[›nKˆŞyù¾y»îûÈÎYîˆ^™(Zûy¨NiŠşXÈ^Y
+¾zé~iÊşy¨Nx›Zé®ynŠë®8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷6÷VæFæW72Ö6ö×ÆWFVæW72"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.Kˆ™‹n˜¾‹éZèÎZH~h
+~zØK»~K¨îjŠYè¾ZÙYÊZé®ynûÉ®y»Zëy¨NynŠë®KˆZé®iÈjŠYè¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â ¢ÒÀ¢&æ÷FR#¢.j~Xxn{¸şX[Kˆ™‹nXú^ZÙynŠë®ûÈÎ™Ùîz›®{¹>ièNŠúŞK˜ûÉ¾KˆˆŠÎŠúŞŠˆx˜iÊÎyK{J~ˆ{Nh
+~Xø®iÈ™™zÛîYŞ[Ù.{ªnŠøiˆîûÈÎKˆŞkhXø®zé~iÊşynŠë®y¨NXú^ZÙZèÎZH~h
+~8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6&F–æÆ—G’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.[«~h™Zé®ynûÉ®ZûK»¾hHş™¸nY‚DNûÈÂGÅÅÆÖF†6ÇµÒ„—ÂâÄÂN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6çF÷" ¢ÒÀ¢&æ÷FR#¢.ZûŠy.™¸nYhé.™šNkº[NûÈÎXÙ^XX>{J™¸nY{¹XøŞY	XÙ^[N8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6&F–æÆ—G’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.[«~h™Zé®ynûÉ®[˜.™¸ny¨NYû®i[KŠ^jÎZJ~K¨îXéş™¸nY8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6çF÷" ¢ÒÀ¢&æ÷FR#¢.ZûŠy.™¸nYhé.™šNkº[NûÈÎXÙ^XX>{J™¸nY{¹XøŞY	XÙ^[N8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6&F–æÆ—G’"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.[«~h™Zé®ynŠûNiˆî[˜.™¸nKŠ^jÎi»NZJ~ûÈÎK¸îˆÎKª~yIşizz›~ZI®KŠ®Yû®i[[.{ª~ûÉ¾‹ùî{ºŞ{¹şX~Šëî™zîy¨NjÚ>iŠòEÅÆÖF†&'µ'ÒBy¨NYû®i[iŠşY
+niŠşiÈ[şy¨NKˆŞXúşi[Yû®i[8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö÷&F–æÂÖæÇ—6—2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Y:^[ë~[	NzÊÎK¨ÎKˆŞZèÎZH~h
+~Zé®ynŠûNiˆâizk9^Šøiˆîˆz®‹ª¾y»Zëh
+~ûÉ´vVçG¦Vây¨NŠøiˆîK˜¾h˜Kº^Xúşˆ;ŞûÈÎiŠşYºK‹®KÛşyJK¨nKˆŞˆ;ŞK¸^yKŠøiˆîX[nXX^Xˆn[Ë®[ªny¨N‹h^™™[Ù.{«>XéşX‰ûÈX‹EÅÇf&W6–ÆöåóNûÈ(	N(	N[Ë®[ªnŠ*¾(	ÎX	ş(	ŞK¨nX{®Xë¾8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö÷&F–æÂÖæÇ—6—2"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢%XúşKº^ŠøiˆîjøşKŠ¢EÅÆöÖVvBŞhÈ~i[ZNûÈiÈ™™š¹ûÈˆšş[¨şûÈÎKØnizk9^ŠøiˆâEÅÇf&W6–ÆöåóBˆšş[¨şûÉ´vVçG¦VâyJ‹h^™™[Ù.{«>X‹EÅÇf&W6–ÆöåóBŠøX{¢y¨Ny»Zëh
+~ûÈÎ‹ùjÚ>iŠşzÊÎK¨ÎKˆŞZèÎZH~h
+~Zé®ynX‰.Zé®y¨N‹ëyXÎ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷¦f2Ö†–ö×2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.˜hºXZÎynûÈ„>ûÈijŞŠˆûÉ®K»¾hHş™Ùîz›®™¸nYixş˜;ŞiÈ˜hºX{Şi[ûÈÎzØK»~K¨îK»¾hHş™¸nY˜;ŞXúşˆšş[¨şXÉn8K»¾hHşY	˜xşz›®™{N˜;ŞiÈYû®8¦÷&â[É^ynzØ™˜‹û8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷¦f2Ö†–ö×2"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢.YÊ‚¤bKŠŞizk9^ièN˜
+X{®(	ÎjøşKŠ®Y	˜xşz›®™{N˜;ŞiÈYû®(	Şy¨NŠøiˆîûÉ¾XªKˆ®˜hºXZÎynYîûÈÅ¦÷&â[É^ynXúşyJûÈÎK¸îˆÎ[é~X‹Yû®y¨NZÙYÊh
+~8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷¦f2Ö†–ö×2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.˜hºXZÎyniŠş™ÙîièN˜
+h
+~y¨NûÈÎKØnZè>zØK»~K¨îˆšş[¨şZé®ynKˆâ¦÷&â[É^ynûÈÎYÊxëKº>i[ZÚnKŠŞŠ*¾[›şk9¾KÛşyJ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷¦f2Ö†–ö×2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.yK¦÷&â[É^ynXúşhêX{®jøşKŠ®Y	˜xşz›®™{N˜;ŞiÈYû®ûÈÎXÛ>KÛşYû®izk9^i‹î[ÈşièN˜
+8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öf÷&ÖÂ×&ööb"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.iÈYîKˆšz{K‹®Zé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öf÷&ÖÂ×&ööb"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.[Ú.[ÈşŠøiˆîh¨®hêynXùh‰XúşiË®j+j8š¨Îy¨NzÊnXû~[¨şX‰~ûÈÎiŠş[ˆÎ[	NKÊşx›{«.š(nKˆîˆz®XªZé®ynŠøiˆîy¨NYû®z8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öf÷&ÖÂ×&ööb"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.YÊ‚†–Æ&W'B{;¾{¹şKŠŞûÈÂGÅÇFò‡ÅÇFò’BiŠşXZÎynûÈÎyKˆ*şZé®X˜ŞK»nXúşhêX{®X[~KÙ>Zé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.YŞš)Xˆ~khZé®ynûÈ„Ä¾ûÈûÉ®K»¾hHş{ªşYŞš)y»{º~[Èşˆº^iÈY
+¾Xˆ~ŠøiˆîûÈÎK™şiÈKˆŞY
+¾Xˆ~Šøiˆî8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&÷÷6—F–öæÂÖ7WBÖVÆ–Ö–æF–öâ ¢ÒÀ¢&æ÷FR#¢.ˆÈ>Y»NiˆîzîK‹®iz˜xşŠøŞy¨N{¸şX[YŞš)‚Ä¾ûÈÎKˆîiÊÎXÛ~hÈXZÎ[ÈşZHŞiØ.[ªnŠøiˆîy¨NYŞš)Xˆ~kh{¹>Šë®Kˆˆ{NûÉ¾Kˆ™‹bÄ²ôÄ¢y¨N˜xşŠøŞXˆ~khiÊ®hÚîjÚNZê>z{[{.Šø8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Xˆ~ŠxNX‰Zû[©Ni[ZÚnKŠŞy¨N(	Î[É^yn(	ŞûÉ®XXŠøiˆî[É^ybDNûÈÎXhŞyJZè>ŠøiˆîK‹¾Zé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Xˆ~khZé®ynŠûN[É^ynh¾iŠşXúşKº^Š*¾(	Î[^[È(	Şy»Nhê^[XÎXZ^K‹¾ŠøiˆîûÈÎ‰›ŞxKnŠøiˆîKÉ®Xù™[ş8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.ZÙXZÎ[Èşh
+~‹JiŠşˆz®XªŠøiˆîKˆîŠøiˆîZHŞiØ.h
+~y¨NYû®zûÉ®Zè>™™X‹nK¨nŠøiˆîKŠŞX{®xëy¨NXZÎ[Èş[Ú.x«nûÈÎKØnKˆ™‹n˜xşŠøŞZéîKè¾K¸ŞXúşˆ;ŞKª~yIşiz™™i	Î{J.ûÈÎKˆŞˆ;ŞhÚîjÚNhêX{®Kˆ™‹n˜¾‹éXúşXŠNZé®ûÈÎK™ş{¹X{®K¨ny»NŠxK‹¾K˜˜¾‹éy¨NiéXùnh
+~‹JzØXX>Zé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢$vVçG¦VâZû’y¨Ny»Zëh
+~Šøiˆî{¹>YK¨nŠøiˆî{ªnXÉnKˆîX‹EÅÇf&W6–ÆöåóBy¨N˜.[Ù>‹h^™™[Ù.{«>ûÈÎ[›n™ÙîXú®™Ú{ªş˜¾‹éy¨NXˆ~khZé®ynûÉ®ˆºREÅÇfF6‚ÓNûÈÎXúşZûX~Zé®ŠøiˆîKÙÎ[¨şi[Kˆ¾™˜ŞXˆniéûÉ¾š)ŞZIny¨N‹h^™™[Ù.{«>hé.™šN‹ùzxŞiz™™Kˆ¾™˜ŞûÈÎK¸îˆÎhé.™šNyù¾y»îŠøiˆî8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.YŞš)‚Ä²Xˆ~khZé®ynûÈiÊÎXÛ~ŠøiˆîˆÈ>Y»NûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'&÷÷6—F–öæÂÖ7WBÖVÆ–Ö–æF–öâ ¢ÒÀ¢&æ÷FR#¢.Šú^XZÎ[ÈşŠ‹ëîy¨N{¹>Šë®KŠ^jÎ™™Zé®YÊYŞš)‚Ä¾ûÈÎKˆî[{.iKn[Ù^ŠøiˆîˆÈ>Y»Ny»zÊn8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö7WBÖVÆ–Ö–æF–öâ"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Xˆ~khZé®ynŠûNiˆîŠøiˆîKŠŞy¨N(	Î[É^yn(	Şh¾XúşKº^Š*¾kh™šNûÈÎ[é~X‹y¨NizXˆ~ŠøiˆîX[~iÈZÙXZÎ[Èşh
+~‹J8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö†ÇF–ær×&ö&ÆVÒ"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.Y»îxR“3b[›Ny¨NZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†ÇF–ærÖF–vöæÂ"À¢'&–6RÖgVæ7F–öâ×&÷W'F–W2 ¢ÒÀ¢&æ÷FR#¢.XÎiË®[Ù.{ªn™(Zûzˆ¾[¨ş{ÉnXû~ûÉµ&–6R{¹>Šë®™™˜:XˆnXúşŠêzé~X{Şi[y¨N™Ùî[›>Xz8ZIn[»nKˆŞXùŠúŞK˜h
+~‹JûÈÎ‹ª¾K»ŞX{Şi[KˆîXZYùşXÎiË®h
+~‹JYØ~kº‹k>8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö†ÇF–ær×&ö&ÆVÒ"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.ˆëijşZé®yn‹ù¾KˆjÚ^hÈ~X{®ûÉ®zˆ¾[¨şy¨NK»¾KÙ^™Ùî[›>XzŠúŞK˜h
+~‹J˜;ŞKˆŞXúşXŠNZé®8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†ÇF–ærÖF–vöæÂ"À¢'&–6RÖgVæ7F–öâ×&÷W'F–W2 ¢ÒÀ¢&æ÷FR#¢.XÎiË®[Ù.{ªn™(Zûzˆ¾[¨ş{ÉnXû~ûÉµ&–6R{¹>Šë®™™˜:XˆnXúşŠêzé~X{Şi[y¨N™Ùî[›>Xz8ZIn[»nKˆŞXùŠúŞK˜h
+~‹JûÈÎ‹ª¾K»ŞX{Şi[KˆîXZYùşXÎiË®h
+~‹JYØ~kº‹k>8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö†ÇF–ær×&ö&ÆVÒ"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.ˆëijşZé®ynûÉ®XŠNijŞKˆKŠ®zˆ¾[¨şiŠşY
+nŠêzé~h.zØX{Şi[8iŠşY
+nZûh˜iÈ‹é>XZ^XÎiË®zØh
+~‹J˜;ŞKˆŞXúşXŠNZé®8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†ÇF–ærÖF–vöæÂ"À¢'&–6RÖgVæ7F–öâ×&÷W'F–W2 ¢ÒÀ¢&æ÷FR#¢.XÎiË®[Ù.{ªn™(Zûzˆ¾[¨ş{ÉnXû~ûÉµ&–6R{¹>Šë®™™˜:XˆnXúşŠêzé~X{Şi[y¨N™Ùî[›>Xz8ZIn[»nKˆŞXùŠúŞK˜h
+~‹JûÈÎ‹ª¾K»ŞX{Şi[KˆîXZYùşXÎiË®h
+~‹JYØ~kº‹k>8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öVçVÖW&&–Æ—G’"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢%÷7BZé®ynûÉ¢DÂBXúşXŠNZé®[Ù>K‰NK¸^[Ù2DÂBKˆîZè>y¨NŠ^™¸n˜;ŞXúşié®K‹î8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'6VÖ’ÖFV6—6–öâÖ6ö×ÆVÖVçB"À¢&VçVÖW&F–öâ×6VÖ–FV6—6–öâ ¢ÒÀ¢&æ÷FR#¢.XXŠëz›®ŠúŞŠˆ8˜xŞZHŞ‹é>X{®ûÉ¾Xúşié®K‹îKˆîXØ®XŠNZé®zØK»~ûÈÎXhŞKªN™IjŠh¹şKŠNKê~XØ®XŠNZé®Yš8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öVçVÖW&&–Æ—G’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢%÷7BZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'6VÖ’ÖFV6—6–öâÖ6ö×ÆVÖVçB"À¢&VçVÖW&F–öâ×6VÖ–FV6—6–öâ ¢ÒÀ¢&æ÷FR#¢.XXŠëz›®ŠúŞŠˆ8˜xŞZHŞ‹é>X{®ûÉ¾Xúşié®K‹îKˆîXØ®XŠNZé®zØK»~ûÈÎXhŞKªN™IjŠh¹şKŠNKê~XØ®XŠNZé®Yš8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öVçVÖW&&–Æ—G’"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Xúşié®K‹î™¸niŠş(	ÎXúşKº^Š*¾zé~k9^X‰~X{®(	Şy¨N™¸nYûÉµ÷7BZé®ynh¨®XúşXŠNZé®h
+~KˆîŠ^™¸ny¨NXúşié®K‹îh
+~ˆN{;¾‹[~iÚ^ûÉ¢DÂBXúşXŠNZé®[Ù>K‰NK¸^[Ù2DÂBKˆâEÅÆ÷fW&Æ–æRÂB˜;ŞXúşié®K‹î8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'6VÖ’ÖFV6—6–öâÖ6ö×ÆVÖVçB"À¢&VçVÖW&F–öâ×6VÖ–FV6—6–öâ ¢ÒÀ¢&æ÷FR#¢.XXŠëz›®ŠúŞŠˆ8˜xŞZHŞ‹é>X{®ûÉ¾Xúşié®K‹îKˆîXØ®XŠNZé®zØK»~ûÈÎXhŞKªN™IjŠh¹şKŠNKê~XØ®XŠNZé®Yš8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öö&¦V7G2ÖÖ÷'†—6×2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.‹ùzxŞ(	ÎX[>{;¾KÉXX(	Şy¨NŠxnŠy.ŠêZè>ˆ;ŞYÊKˆŞYÎi[ZÚnš(nYùşK˜¾™{N‹øz{¾ièN˜
+KˆîZé®yn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö†–öÖF–2ÖÖWF†öB"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.XZÎynXÉnh¨®i[ZÚnynŠë®Xùh‰(	Îˆº^XZÎynh‰z¸¾ûÈÎX‰Zé®ynh‰z¸¾(	Şy¨NiÚK»nh
+~yú^Šøn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö†–öÖF–2ÖÖWF†öB"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.XZÎynXÉnh¨®ynŠë®Xùh‰(	Îˆº^XZÎynh‰z¸¾ûÈÎX‰Zé®ynh‰z¸¾(	Şy¨NiÚK»nh
+~yú^Šøn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2övöFVÂÖf—'7B"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.iÊÎXÛ~Šøiˆîy¨B|;fFVÂzÊÎKˆKˆŞZèÎZH~h
+~Zé®ynx˜iÊÎûÉ®ˆºREBBiŠşXúş™ÚK‰NiÈiXXúşXZÎynXÉn8Y
+¾‹k>ZIşzé~iÊşy¨NynŠë®ûÈÎ[›nkº‹k>iÊÎzºi‹î[Èş™zŞš{ÉnzŠêzé~X~ŠëîûÈÎX‰ZÙYÊXú^ZÙDuõBNûÈÎKÛòEBÅÆçfF6‚uõBBK‰BEBÅÆçfF6‚ÅÆæVruõBNûÉ²DuõBBYÊj~Xxnˆz®xKni[jŠYè¾KŠŞK‹®yÉş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&vöFVÂÖf—'7B×6÷VæB×F†V÷'’ ¢ÒÀ¢&æ÷FR#¢.š^™Ú.xëKˆîZéî™˜^Šøiˆîy¨NXúş™Úh
+~X~Šëî8iÈiXXZÎynXÉn8zé~iÊşŠ‹ëîX©¾Xø®™zŞš{ÉnzX~ŠëîKˆˆ{N8.Šú^x˜iÊÎ[Ë®K¨îXÙ^{ªşKˆˆ{Nh
+~X~ŠëîûÉµ&÷76W"[nKˆˆ{Nh
+~Xxş[ËX‹Kˆˆ{Nh
+~y¨N{¸şX[Xª[Ë®YÊiÊÎXÛ~iÊ®Šø8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2övöFVÂÖf—'7B"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$|;fFVÂzÊÎKˆKˆŞZèÎZH~h
+~Zé®ynûÈXúş™ÚynŠë®x˜iÊÎûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&vöFVÂÖf—'7B×6÷VæB×F†V÷'’ ¢ÒÀ¢&æ÷FR#¢.XZÎ[ÈşY(Îj~š)iˆîzî™™Zé®K‹®iÊÎXÛ~[{.{¸şŠøiˆîy¨NXúş™ÚynŠë®x˜iÊÎûÉ¾X[nKéŞ‹YnXÈ^hºÎZûŠy.[É^ynY(Î™zŞš{ÉnzYû®z8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2övöFVÂ×6V6öæB"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.iÊÎXÛ~Šøiˆîy¨B|;fFVÂzÊÎK¨ÎKˆŞZèÎZH~h
+~Zé®ynx˜iÊÎûÉ®ˆºREBBKˆˆ{N8iÈiXXúşXZÎynXÉn8ˆ;ŞièN˜
+h˜™ÈZûŠy.Xú^ûÈÎK‰Nj~XxnŠøiˆî‹	>ŠøŞkº‹k>iÊÎzºiˆîX‰~y¨BC(	4C2Kˆî{ÉnzX~ŠëîûÈÎX‰’EBBKˆŞŠøiˆîˆz®‹ª¾Kˆˆ{Nh
+~XúREÅÆÖF‡&×´6öçÒ…B“ÕÅÆæVuÅÆÖF‡&×µ&÷gÕõB…ÅÇVÆ6÷&æW"ÓÅÇW&6÷&æW"’N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&vöFVÂ×6V6öæBÖ–æ6ö×ÆWFVæW72 ¢ÒÀ¢&æ÷FR#¢.{¹>Šë®KˆîiÚK»nXÉnŠøiˆîKˆˆ{NûÉ¤Ì;f"Zé®yn™ÈŠhZûŠy.Xú^Xø¢C(	4C>ûÉ´C(	4C2y¨N˜.yJXøKéŞ‹Yniˆîzîy¨NŠøiˆîj8iú^Kˆî{ÉnziÚK»n8.iÊÎXÛ~k*iÈh¨®iÚK»niÊ®{¸şŠøiˆîYËhê[›şX‹h˜iÈXÈ^Y
+²y¨NynŠë®8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2övöFVÂ×6V6öæB"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.zÊÎK¨ÎKˆŞZèÎZH~h
+~Zé®ynûÈ„C(	4C2iÚK»nx˜ûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&vöFVÂ×6V6öæBÖ–æ6ö×ÆWFVæW72 ¢ÒÀ¢&æ÷FR#¢.XZÎ[Èşj~š)™™Zé®YÊ[{.Šøiˆîy¨BC(	4C2iÚK»nx˜iÊÎûÉ´6öâ…B’hÈiÊÎXÛ~Zé®K˜K‹¢*Å&÷eõB(ÉÃÓ(ÉÒ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2övöFVÂ×6V6öæB"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢$vVçG¦VâyJ‚EÅÇf&W6–ÆöåóB‹h^™™[Ù.{«>Šøiˆây»ZëûÈÎKØn‹ùKˆ[Ù.{«>XéşyniÊÎ‹ª¾‹h^X{¢8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6öç6—7FVæ7’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.yKZèÎZH~h
+~Zé®ynûÈÂEBBy»Zë[Ù>K‰NK¸^[Ù2EBBiÈjŠYè¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â"À¢&6Æ76–6ÂÖW‡Æ÷6–öâ ¢ÒÀ¢&æ÷FR#¢.y»ZëKˆîXúşkº‹k>zØK»~™™j~Xxn{¸şX[Kˆ™‹nkÉNzé~ûÉ¾xˆnx+XéşyniŠşŠú^kÉNzé~y¨NYŞš)XZÎynYîiéÎ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6öç6—7FVæ7’"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.KˆKŠ®KˆŞy»Zëy¨NynŠë®XúşKº^ŠøiˆîK»¾KÙ^YŞš)ûÈxˆnx+XéşybW‚fÇ6şûÈûÈÎYºjÚNjú¾izKúhş˜xş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â"À¢&6Æ76–6ÂÖW‡Æ÷6–öâ ¢ÒÀ¢&æ÷FR#¢.y»ZëKˆîXúşkº‹k>zØK»~™™j~Xxn{¸şX[Kˆ™‹nkÉNzé~ûÉ¾xˆnx+XéşyniŠşŠú^kÉNzé~y¨NYŞš)XZÎynYîiéÎ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6öç6—7FVæ7’"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.xˆnx+XéşynûÉ®KˆŞy»Zëy¨NynŠë®ŠøiˆîKˆXˆ~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â"À¢&6Æ76–6ÂÖW‡Æ÷6–öâ ¢ÒÀ¢&æ÷FR#¢.y»ZëKˆîXúşkº‹k>zØK»~™™j~Xxn{¸şX[Kˆ™‹nkÉNzé~ûÉ¾xˆnx+XéşyniŠşŠú^kÉNzé~y¨NYŞš)XZÎynYîiéÎ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6öç6—7FVæ7’"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.y»Zëh
+~iŠşynŠë®iÈhHşK˜y¨NiÈKØîŠhk.ûÉ¾yKxˆnx+XéşynûÈÎKˆŞy»Zëy¨NynŠë®XúşKº^ŠøiˆîK»¾KÙ^YŞš)8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&föÂÖ6ö×ÆWFVæW72ÖvVæW&Â"À¢&6Æ76–6ÂÖW‡Æ÷6–öâ ¢ÒÀ¢&æ÷FR#¢.y»ZëKˆîXúşkº‹k>zØK»~™™j~Xxn{¸şX[Kˆ™‹nkÉNzé~ûÉ¾xˆnx+XéşyniŠşŠú^kÉNzé~y¨NYŞš)XZÎynYîiéÎ8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2öFWVæFVçB×G—W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.KéŞ‹Yn{¾Yè¾{;¾{¹şXúşKº^Š‹ëî(	Î™[ş[ªnK‹¢FâBy¨NY	˜xş(	Ş(	ÎZûjøşKŠ®{êBDrBy¨NZé®yn(	ŞzØ{+î{¸n{¹>ièN8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö–æGV7F—fR×G—W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.Kˆî[Ù.{«>{¾Yè¾˜XŞZY~y¨NiŠò¢®˜	.[Ù.ZÙ¢®ûÈ‡&V7W'6÷.ûÈûÈÎZè>Zéîxë{¹>ièN˜	.[Ù.ûÈÎ[›nZû[©N[Ù.{«>ŠøiˆîXéşyn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö–æGV7F—fR×G—W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.[Ù.{«>{¾Yè¾yKièN˜
+ZÙyIşh‰ûÈÎ˜	.[Ù.ZÙZéîxë{¹>ièN˜	.[Ù.[›nZû[©N[Ù.{«>ŠøiˆîXéşyn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷&ööbÖ76—7FçG2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢"¢®ŠøiˆîXªyb¢®iŠşYû®K¨î{¾Yè¾Šë®y¨NKªNK©.[Èş‹ÚşK»n{;¾{¹şûÈÎyJh‹~YÊX[nKŠŞièN˜
+[Ú.[ÈşŠøiˆîûÈÎ{;¾{¹ş˜	jÚ^j8iú^jøşKˆjÚ^y¨N{¾Yè¾jÚ>zîh
+~ûÈÎiÈ{¸KùŞŠøZé®ynh‰z¸¾ûÈy»ZûK¨î[©^[.XZÎynKˆîZéîxëy¨NXúşKúh
+~ûÈ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷&ööbÖ76—7FçG2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.ZJ~ŠxNjŠ[Ú.[ÈşXÉnšyºîûÈZh.Y¹¾ˆ›.Zé®yn8ZX~x+khŠz>8Æ—V–BFVç6÷"W‡W&–ÖVçNûÈ[^zK®K¨nX[nˆ;ŞX©¾ûÉ¾KØn[Ú.[ÈşXÉnh‰iÊÎK¸ŞxKn[èš¹ûÈÎ™ÈŠhZJ~˜xşK«®X©¾8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2÷&ööbÖ76—7FçG2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.Y¹¾ˆ›.Zé®yn8ZX~x+khŠz>zØZJ~Yè¾Zé®yn˜;Ş[{.YÊ‚6÷ôÆVâKŠŞ[Ú.[ÈşXÉn8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6Æ76–f–6F–öâÖöbÖÖöFVÇ2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.Zû{¹Zé®ynŠë¢EBNûÈÎz	Nz›nX[njŠYè¾{¾y¨N{¹>ièNûÉ®YÎièN8X‰ŞzØ[XÎXZ^8š[Y(Îh
+~8z‹>Zé®h
+~zØ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6ö×7FæW72"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.{J~ˆ{Nh
+~Zé®ynûÉ®Kˆ™‹nynŠë¢EBBiÈjŠYè¾ûÈÎ[Ù>K‰NK¸^[Ù>Zè>y¨NjøşKŠ®iÈ™™ZÙ™¸n˜;ŞiÈjŠYè¾8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6ö×7FæW72Ö&&—G&'’ÖÆæwVvR"À¢&föÂÖ6ö×ÆWFVæW72Ö6ö×7FæW72 ¢ÒÀ¢&æ÷FR#¢.‹h^zzşŠøiˆî˜.yJK¨îK»¾hHş™¸nYZJ~[şKˆ™‹nŠúŞŠˆûÉ¾iÊÎXÛr†Væ¶–âZèÎZH~h
+~ŠøiˆîXún™™Xúşi[ŠúŞŠˆ8.‹h^kºNhš[ÊKˆîYÙj~ŠxŠøKÛşyJiˆîX‰~y¨E¤d>˜hºYû®z8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6ö×7FæW72"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.Zè>iŠşY:^[ë~[	NZèÎXZh
+~Zé®yny¨NhêŠë®ûÈÎK™şXúşKº^yJ‹h^zzşh‰b†Væ¶–âièN˜
+y»Nhê^Šøiˆî8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6ö×7FæW72Ö&&—G&'’ÖÆæwVvR"À¢&föÂÖ6ö×ÆWFVæW72Ö6ö×7FæW72 ¢ÒÀ¢&æ÷FR#¢.‹h^zzşŠøiˆî˜.yJK¨îK»¾hHş™¸nYZJ~[şKˆ™‹nŠúŞŠˆûÉ¾iÊÎXÛr†Væ¶–âZèÎZH~h
+~ŠøiˆîXún™™Xúşi[ŠúŞŠˆ8.‹h^kºNhš[ÊKˆîYÙj~ŠxŠøKÛşyJiˆîX‰~y¨E¤d>˜hºYû®z8" ¢ÒÀ¢°¢'F÷–2#¢&f÷VæFF–öç2ö6ö×7FæW72"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.{J~ˆ{Nh
+~Zé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&6ö×7FæW72Ö&&—G&'’ÖÆæwVvR"À¢&föÂÖ6ö×ÆWFVæW72Ö6ö×7FæW72 ¢ÒÀ¢&æ÷FR#¢.‹h^zzşŠøiˆî˜.yJK¨îK»¾hHş™¸nYZJ~[şKˆ™‹nŠúŞŠˆûÉ¾iÊÎXÛr†Væ¶–âZèÎZH~h
+~ŠøiˆîXún™™Xúşi[ŠúŞŠˆ8.‹h^kºNhš[ÊKˆîYÙj~ŠxŠøKÛşyJiˆîX‰~y¨E¤d>˜hºYû®z8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷W2×7V&w&÷W2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$Æw&ævRZé®ynûÉ®ZÙ{êNy¨N™‹ni[N™šN{êNy¨N™‹nûÈiÈ™™{êNûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Æw&ævR ¢ÒÀ¢&æ÷FR#¢.Xú®˜x~yJiÈ™™{êNy¨N™‹ni[N™šN{¹>Šë®8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷W2×7V&w&÷W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢$Æw&ævRZé®yniŠşiÈizy¨N{¹>ièN{ªniÙşûÉ®ZÙ{êNy¨N™‹ni[N™šN{êNy¨N™‹nûÈÎ‹ù™™X‹nK¨nŠëZI®{êNy¨NXúşˆ;Ş{¹>ièN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Æw&ævR ¢ÒÀ¢&æ÷FR#¢.Xú®˜x~yJiÈ™™{êNy¨N™‹ni[N™šN{¹>Šë®8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö†öÖöÖ÷'†—6×2×V÷F–VçG2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.zÊÎKˆYÎièNZé®ynûÉ®YXnhèjYÎièNK¨îX8ş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&f—'7BÖ—6öÖ÷'†—6Ò ¢ÒÀ¢&æ÷FR#¢.jK‹®jÚ>ŠxNZÙ{êNûÉ¾YXn{êNX‹X8şy¨NiŠ[N[{.˜	jÚ^š¨ÎŠøˆšşZé®K˜Y(ÎXøÎ[N8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö†öÖöÖ÷'†—6×2×V÷F–VçG2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.YÎhy¨NjŠ˜xşKúhşhÙşZKûÈÎzÊÎKˆYÎièNZé®ybDrõÅÆ¶W%ÅÇf'†•ÅÆ6öæuÅÆ÷W&F÷&æÖW¶–×ÕÅÇf'†’Bh¨®(	ÎXè¾{Ê(	ŞKˆî(	ÎX8ş(	ŞˆN{;¾‹[~iÚ^8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&f—'7BÖ—6öÖ÷'†—6Ò ¢ÒÀ¢&æ÷FR#¢.jK‹®jÚ>ŠxNZÙ{êNûÉ¾YXn{êNX‹X8şy¨NiŠ[N[{.˜	jÚ^š¨ÎŠøˆšşZé®K˜Y(ÎXøÎ[N8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷WÖ7F–öç2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.{êNKÙÎyJ{¹şKˆK¨nŠëZI®Šêi[™zîš)ûÉ®yJ‚'W&ç6–FR[É^yni[(	ÎiÊÎ‹JKˆŞYÎy¨Niù>ˆ›.ikj(	ŞûÈÎyJ‹Ú˜>XˆnŠz>ynŠz>Zûz{h
+~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'W&ç6–FRÖ÷&&—BÖ6÷VçB ¢ÒÀ¢&æ÷FR#¢.Šhk.{êNKˆîŠ*¾KÙÎyJ™¸nYiÈ™™ûÉ¾jÚ>ik[Ú.Kè¾y¨NY¹¾jÊKˆŞXªx+Šêi[K‹£n8.8N8.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷WÖ7F–öç2"À¢&f–VÆB#¢&W†×ÆR"À¢'FW‡B#¢.yJKŠNzxŞš)Îˆ›.{¹jÚ>ik[Ú.y¨NY¹¾KŠ®šnx+iù>ˆ›.ûÈÎX[C%ãBÒbBzxŞûÉ¾ˆº^h¨®ix¾‹ÚÎYîy»YÎy¨NikjŠxnK‹®YÎKˆzxŞûÈÎyJ‚'W&ç6–FR[É^ynûÈix¾‹ÚÎ{êBD5óBBKÙÎyJûÈ[é~X‹KˆŞYÎikji[K‹¢CbN8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'W&ç6–FRÖ÷&&—BÖ6÷VçB ¢ÒÀ¢&æ÷FR#¢.Šhk.{êNKˆîŠ*¾KÙÎyJ™¸nYiÈ™™ûÉ¾jÚ>ik[Ú.Kè¾y¨NY¹¾jÊKˆŞXªx+Šêi[K‹£n8.8N8.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷WÖ7F–öç2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$'W&ç6–FR[É^ynûÉ®‹Ú˜>i[zØK¨î[›>YØ~KˆŞXªx+i[8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'W&ç6–FRÖ÷&&—BÖ6÷VçB ¢ÒÀ¢&æ÷FR#¢.Šhk.{êNKˆîŠ*¾KÙÎyJ™¸nYiÈ™™ûÉ¾jÚ>ik[Ú.Kè¾y¨NY¹¾jÊKˆŞXªx+Šêi[K‹£n8.8N8.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷WÖ7F–öç2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.{êNKÙÎyJh¨®h«Ş‹{êNZéîxëK‹®{ÚîhÚ.{êNûÉ¾‹Ú˜>XˆnŠz>Kˆâ'W&ç6–FR[É^ynh¨®Zûz{h
+~‹ÚÎXÉnK‹®Šêi[8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'W&ç6–FRÖ÷&&—BÖ6÷VçB ¢ÒÀ¢&æ÷FR#¢.Šhk.{êNKˆîŠ*¾KÙÎyJ™¸nYiÈ™™ûÉ¾jÚ>ik[Ú.Kè¾y¨NY¹¾jÊKˆŞXªx+Šêi[K‹£n8.8N8.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öw&÷WÖ7F–öç2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.ix¾‹ÚÎ{êBD5óBBKÙÎyJYÊjÚ>ik[Ú.šnx+y¨NKŠNzxŞiù>ˆ›.Kˆ®ûÈÄ'W&ç6–FR[É^yn{¹X{¢CbBzxŞiÊÎ‹JKˆŞYÎy¨Nikj8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&'W&ç6–FRÖ÷&&—BÖ6÷VçB ¢ÒÀ¢&æ÷FR#¢.Šhk.{êNKˆîŠ*¾KÙÎyJ™¸nYiÈ™™ûÉ¾jÚ>ik[Ú.Kè¾y¨NY¹¾jÊKˆŞXªx+Šêi[K‹£n8.8N8.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö÷&&—G2×7F&–Æ—¦W'2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.‹Ú˜2Şz‹>Zé®ZÙZé®ynûÉ¢GÅÅÆÖF‡&×´÷&'Ò‡‚—ÂÒ´r¢ÅÆÖF‡&×µ7F'Ò‡‚•ÒNûÈZûiÈ™™{êNXÛ2GÄwÂ÷ÅÅÆÖF‡&×µ7F'Ò‡‚—ÂNûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&÷&&—BÖ6÷6WBÖ6Æ72ÖWVF–öâ ¢ÒÀ¢&æ÷FR#¢.K»¾hHş{êNy¨N™š®™¸n™¸nYKˆî‹Ú˜>y»Nhê^XøÎ[NûÉ¾YXn{êN{¹>ièN[›n™Ùî[ø^ŠhûÈÎiÈ™™h8^[Ú.XhŞXùnYû®i[8.{¾ikzˆ¾Xú®ZûiÈ™™{êNhÈišî˜	®i[Ni[k.Y(Î8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö÷&&—G2×7F&–Æ—¦W'2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.{¾ikzˆ²GÄwÂÒÅ¢„r—Â²ÅÇ7VÒ´r¢5ôr‡…ö’•ÒBiŠşŠøiˆîŠëZI®iÈ™™{êNZé®yny¨NX[>™Jî8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&÷&&—BÖ6÷6WBÖ6Æ72ÖWVF–öâ ¢ÒÀ¢&æ÷FR#¢.K»¾hHş{êNy¨N™š®™¸n™¸nYKˆî‹Ú˜>y»Nhê^XøÎ[NûÉ¾YXn{êN{¹>ièN[›n™Ùî[ø^ŠhûÈÎiÈ™™h8^[Ú.XhŞXùnYû®i[8.{¾ikzˆ¾Xú®ZûiÈ™™{êNhÈišî˜	®i[Ni[k.Y(Î8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö÷&&—G2×7F&–Æ—¦W'2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.‹Ú˜2Şz‹>Zé®ZÙZé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&÷&&—BÖ6÷6WBÖ6Æ72ÖWVF–öâ ¢ÒÀ¢&æ÷FR#¢.K»¾hHş{êNy¨N™š®™¸n™¸nYKˆî‹Ú˜>y»Nhê^XøÎ[NûÉ¾YXn{êN{¹>ièN[›n™Ùî[ø^ŠhûÈÎiÈ™™h8^[Ú.XhŞXùnYû®i[8.{¾ikzˆ¾Xú®ZûiÈ™™{êNhÈišî˜	®i[Ni[k.Y(Î8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö÷&&—G2×7F&–Æ—¦W'2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.‹Ú˜2Şz‹>Zé®ZÙZé®ybGÅÅÆÖF‡&×´÷&'Ò‡‚—ÃÕ´s¥ÅÆÖF‡&×µ7F'Ò‡‚•ÒBiŠşŠêi[KˆîXˆn{¾y¨NYû®iÊÎXZÎ[ÈşûÉ¾z‹>Zé®ZÙ‹h®ZJ~ûÈÎ‹Ú˜>‹h®[ş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&÷&&—BÖ6÷6WBÖ6Æ72ÖWVF–öâ ¢ÒÀ¢&æ÷FR#¢.K»¾hHş{êNy¨N™š®™¸n™¸nYKˆî‹Ú˜>y»Nhê^XøÎ[NûÉ¾YXn{êN{¹>ièN[›n™Ùî[ø^ŠhûÈÎiÈ™™h8^[Ú.XhŞXùnYû®i[8.{¾ikzˆ¾Xú®ZûiÈ™™{êNhÈišî˜	®i[Ni[k.Y(Î8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢$Æw&ævRZé®ynŠûNiˆîZÙ{êNy¨N™‹ni[N™šN{êNy¨N™‹nûÈÎKØnXøŞK˜¾KˆŞh‰z¸¾ûÈZh"DóBBizb™‹nZÙ{êNûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7–Æ÷rÖW†—7FVæ6R"À¢'7–Æ÷rÖ6öæ§Vv7’Ö6÷VçB"À¢&÷&FW"Öf–gFVVâÖ7–6Æ–2"À¢&ÇFW&æF–ærÖf÷W"Öæò×6—‚ ¢ÒÀ¢&æ÷FR#¢.iÈ™™{êNX~ŠëîûÉ¾K»¾hHşŠ*¾{êN™‹ni[N™šNy¨N{Ji[[˜.™‹nZÙ{êNyK7–Æ÷rZÙYÊh
+~Xª{êNZÙ{êN™;î{¹X{®ûÉ¾X[‹ÚŞKˆîKŠ®i[{ªniÙşXúnŠø8$((BKˆã^™‹nKè¾YØ~[^[È8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢"¢¥7–Æ÷rZé®yb¢®{¹X{®˜:Xˆn˜nYŞš)ûÉ®ˆºRGæ²Bi[N™šBGÄwÂNûÈÎX‰’DrBiÈ’Gæ²B™‹nZÙ{êNûÉ¾x›XŠ¾YËûÈÅ7–Æ÷rGBŞZÙ{êNZÙYÊK‰NKŠNKŠNX[‹ÚŞ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7–Æ÷rÖW†—7FVæ6R"À¢'7–Æ÷rÖ6öæ§Vv7’Ö6÷VçB"À¢&÷&FW"Öf–gFVVâÖ7–6Æ–2"À¢&ÇFW&æF–ærÖf÷W"Öæò×6—‚ ¢ÒÀ¢&æ÷FR#¢.iÈ™™{êNX~ŠëîûÉ¾K»¾hHşŠ*¾{êN™‹ni[N™šNy¨N{Ji[[˜.™‹nZÙ{êNyK7–Æ÷rZÙYÊh
+~Xª{êNZÙ{êN™;î{¹X{®ûÉ¾X[‹ÚŞKˆîKŠ®i[{ªniÙşXúnŠø8$((BKˆã^™‹nKè¾YØ~[^[È8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.XÙ^{êNiŠş(	ÎKˆŞXúşXhŞXˆn(	Şy¨NièNK»nûÈÎiÈ™™XÙ^{êNXˆn{¾Zé®ynûÈƒ#K‰n{ª®i[ZÚny¨N[z‰~ûÈX‰~X{®K¨nh˜iÈiÈ™™XÙ^{êN8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢%7–Æ÷rZé®ynûÉ¥7–Æ÷rGBŞZÙ{êNKŠ®i[Få÷By¨N{ªniÙş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7–Æ÷rÖW†—7FVæ6R"À¢'7–Æ÷rÖ6öæ§Vv7’Ö6÷VçB"À¢&÷&FW"Öf–gFVVâÖ7–6Æ–2"À¢&ÇFW&æF–ærÖf÷W"Öæò×6—‚ ¢ÒÀ¢&æ÷FR#¢.iÈ™™{êNX~ŠëîûÉ¾K»¾hHşŠ*¾{êN™‹ni[N™šNy¨N{Ji[[˜.™‹nZÙ{êNyK7–Æ÷rZÙYÊh
+~Xª{êNZÙ{êN™;î{¹X{®ûÉ¾X[‹ÚŞKˆîKŠ®i[{ªniÙşXúnŠø8$((BKˆã^™‹nKè¾YØ~[^[È8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.iÈ™™{êNŠë®y¨Nj[ø>iŠşXˆn{¾ûÉµ7–Æ÷rZé®yn{¹X{®{Ji[[˜.ZÙ{êNy¨NZÙYÊKˆîX[‹ÚŞh
+~ûÈÎiŠşŠøiˆî{êN{¹>ièNy¨NiÈX©¾[z^X[~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7–Æ÷rÖW†—7FVæ6R"À¢'7–Æ÷rÖ6öæ§Vv7’Ö6÷VçB"À¢&÷&FW"Öf–gFVVâÖ7–6Æ–2"À¢&ÇFW&æF–ærÖf÷W"Öæò×6—‚ ¢ÒÀ¢&æ÷FR#¢.iÈ™™{êNX~ŠëîûÉ¾K»¾hHşŠ*¾{êN™‹ni[N™šNy¨N{Ji[[˜.™‹nZÙ{êNyK7–Æ÷rZÙYÊh
+~Xª{êNZÙ{êN™;î{¹X{®ûÉ¾X[‹ÚŞKˆîKŠ®i[{ªniÙşXúnŠø8$((BKˆã^™‹nKè¾YØ~[^[È8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–æ—FRÖw&÷W2"À¢&f–VÆB#¢&W‡G&W†×ÆW2"À¢'FW‡B#¢.XŠyJ‚7–Æ÷rZé®ynXúşŠøCRB™‹n{êN[ø^K‹®[ê®xêş{êNûÈ‚Fåó3ÖåóSÓNûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'7–Æ÷rÖW†—7FVæ6R"À¢'7–Æ÷rÖ6öæ§Vv7’Ö6÷VçB"À¢&÷&FW"Öf–gFVVâÖ7–6Æ–2"À¢&ÇFW&æF–ærÖf÷W"Öæò×6—‚ ¢ÒÀ¢&æ÷FR#¢.iÈ™™{êNX~ŠëîûÉ¾K»¾hHşŠ*¾{êN™‹ni[N™šNy¨N{Ji[[˜.™‹nZÙ{êNyK7–Æ÷rZÙYÊh
+~Xª{êNZÙ{êN™;î{¹X{®ûÉ¾X[‹ÚŞKˆîKŠ®i[{ªniÙşXúnŠø8$((BKˆã^™‹nKè¾YØ~[^[È8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö–FVÇ2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.ynh;>i»şKº>K¨n(	ÎXX>{J(	Şy¨NŠy.ˆ›.ûÉ®YÊKº>i[i[Šë®KŠŞûÈÎKº>i[i[Ni[xêşKˆŞKˆZé®iÈYJşKˆXˆnŠz>ûÈÎKØb¢®ynh;2¢®iÈYJşKˆXˆnŠz>ûÈÎ‹ùKúîZHŞK¨nzé~iÊşYû®iÊÎZé®yny¨NZKiX8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–VÆBÖW‡FVç6–öç2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.‹ùKˆzèXÙ^h
+~‹JiŠşKËŞ{Ù~y:nynŠë®KŠŞ(	ÎZNZé®yn(	Şy¨NYû®zûÈÎK™şiŠşŠøiˆîXúN[ˆÎˆX®KˆZJ~KÙÎY»îKˆŞXúşˆ;Şy¨NX[>™Jî8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öf–VÆBÖW‡FVç6–öç2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢.jÊi[y¨NK™h
+~ûÈZNZé®ynûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'F÷vW"ÖÆr ¢ÒÀ¢&æ÷FR#¢.˜	Xú^jZû[{.iÈŠøiˆîûÉ®ZN[ÈşXZÎ[ÈşŠhk.y»˜+¾hš[ÊiÈ™™ûÉ´vÆö—>Zû[©N˜.yJiÈ™™jÚ>ŠxNXúşXˆnhš[ÊûÉ¾x›[èj~jÚ>KªNKˆîXˆnŠz>˜x~yJiÈ™™{êNy¨NiÈ™™{»NZHŞŠzK®8.iÊ®Kº^jÚNjZé¤'W&ç6–F^XúşŠz>h
+~h‰nX[nK¹nk{[.hê[›ş8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö–çf&–çB×7V'76W2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.iÈ™™{êNYÊx›[è™»nYùşKˆ®y¨NjøşKŠ®iÈ™™{»NŠzK®˜;ŞZèÎXZXúş{ªnûÈ„Ö66†¶RZé®ynûÈûÈÎXÛ>XˆnŠz>K‹®KˆŞXúş{ªnŠzK®y¨Ny»NY(Î8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ö66†¶R ¢ÒÀ¢&æ÷FR#¢.iÊÎXÛ~ŠøiˆîiÈ™™{»Nx˜iÊÎûÉ¾Yùşx›[èKˆŞi[N™šNiÈ™™{êN™‹nûÈÎx›[è™»niŠşXX^XˆniÚK»n8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö–çf&–çB×7V'76W2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢$Ö66†¶RZé®ynŠûNiˆîûÈÎx›[èKˆŞi[N™šN{êN™‹ni{nûÈÎiÈ™™{êNy¨NiÈ™™{»NŠzK®ZèÎXZXúş{ªnûÈÎ‹ùKÛş[é~iÈ™™{êNŠzK®Šë®Xùh‰(	Îx›[èj~ynŠë®(	Ş(	N(	N™zîš)[Ù.{¹>K‹®z	Nz›nKˆŞXúş{ªnh‰Xˆn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ö66†¶R ¢ÒÀ¢&æ÷FR#¢.iÊÎXÛ~ŠøiˆîiÈ™™{»Nx˜iÊÎûÉ¾Yùşx›[èKˆŞi[N™šNiÈ™™{êN™‹nûÈÎx›[è™»niŠşXX^XˆniÚK»n8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö–çf&–çB×7V'76W2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.KˆŞXùZÙz›®™{NiŠşŠzK®KÙÎyJKˆ¾y¨N(	Î[™zŞXË®Yùş(	ŞûÉ´Ö66†¶RZé®ynKùŞŠøiÈ™™{êNYÊx›[è™»nYùşKˆ®ZèÎXZXúş{ªnûÈÎYºjÚNŠzK®Šë®XúşKº^[Ù.{¹>K‹®KˆŞXúş{ªnŠzK®8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&Ö66†¶R ¢ÒÀ¢&æ÷FR#¢.iÊÎXÛ~ŠøiˆîiÈ™™{»Nx˜iÊÎûÉ¾Yùşx›[èKˆŞi[N™šNiÈ™™{êN™‹nûÈÎx›[è™»niŠşXX^XˆniÚK»n8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö—'&VGV6–&ÆR×&W&W6VçFF–öç2"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢"¢¥66‡W"[É^yb¢®ûÉ®ˆºREbÂrBiŠşKˆŞXúş{ªnŠzK®ûÈÎK‰BEC¢bÅÇFòrBiŠòDrBŞzØXùiŠ[NûÈÎX‰’EBÒBh‰bEBBiŠşYÎièNûÉ¾x›XŠ¾YËûÈÎYÊiÈ™™{»NZHŞŠzK®KŠŞûÈÎˆºREbÒrNûÈÎX‰’EBÒÅÆÆÖ&F’N8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'66‡W"ÖÆVÖÖ"À¢&6ö×ÆW‚ÖV–vVçfÇVR"À¢'&VÂ×66‡W"Ö6÷VçFW&W†×ÆR ¢ÒÀ¢&æ÷FR#¢.™Ùî™»nzØXùiŠ[NYÎièN{¹>Šë®˜.yJKˆˆŠÎYùşûÉ¾j~˜xş{¹>Šë®YÊjÚN™™Zé®iÈ™™{»NZHŞŠzK®ûÈÎZéîYùşXøŞKè¾XúnŠø8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö—'&VGV6–&ÆR×&W&W6VçFF–öç2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢%66‡W"[É^yn‹ùîhê^ŠzK®KˆîKº>i[ûÉ®YÊiÈ™™{»NZHŞŠzK®KŠŞûÈÎKˆŞXúş{ªnŠzK®y¨NzØXùˆz®YÎhXú®iÈi[K™ûÈÎK¸îˆÎZûÎX{®x›[èj~y¨NjÚ>KªNX[>{;¾Kˆâ'W&ç6–FRZé®ynûÈ‚Gææ"B™‹n{êNXúşŠz>ûÈ8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö—'&VGV6–&ÆR×&W&W6VçFF–öç2"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢%66‡W"[É^yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'66‡W"ÖÆVÖÖ"À¢&6ö×ÆW‚ÖV–vVçfÇVR"À¢'&VÂ×66‡W"Ö6÷VçFW&W†×ÆR ¢ÒÀ¢&æ÷FR#¢.™Ùî™»nzØXùiŠ[NYÎièN{¹>Šë®˜.yJKˆˆŠÎYùşûÉ¾j~˜xş{¹>Šë®YÊjÚN™™Zé®iÈ™™{»NZHŞŠzK®ûÈÎZéîYùşXøŞKè¾XúnŠø8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö—'&VGV6–&ÆR×&W&W6VçFF–öç2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.KˆŞXúş{ªnŠzK®iŠşŠzK®Šë®y¨N(	ÎXéşZÙ(	ŞûÉµ66‡W"[É^yn™™X‹nzØXùiŠ[NûÈÎx›[èj~jÚ>KªNX[>{;¾{¹X{®XˆnŠz>KˆîŠêi[y¨N[z^X[~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'66‡W"ÖÆVÖÖ"À¢&6ö×ÆW‚ÖV–vVçfÇVR"À¢&f–æ—FRÖ6†&7FW"Ö÷'F†övöæÆ—G’"À¢&6†&7FW"Ö×VÇF—Æ–6—G’ ¢ÒÀ¢&æ÷FR#¢.˜	Xú^jZû[{.iÈŠøiˆîûÉ®ZN[ÈşXZÎ[ÈşŠhk.y»˜+¾hš[ÊiÈ™™ûÉ´vÆö—>Zû[©N˜.yJiÈ™™jÚ>ŠxNXúşXˆnhš[ÊûÉ¾x›[èj~jÚ>KªNKˆîXˆnŠz>˜x~yJiÈ™™{êNy¨NiÈ™™{»NZHŞŠzK®8.iÊ®Kº^jÚNjZé¤'W&ç6–F^XúşŠz>h
+~h‰nX[nK¹nk{[.hê[›ş8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öW‡öæVçF–ÂÖÖ"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.hÈ~i[iŠ[NYÊXÙ^KØŞXX>™˜N‹ùiŠş[˜:[êîXˆnYÎˆ9®ûÈyK˜nX{Şi[Zé®ynûÈûÈÎYºjÚNiØîKº>i[YÊ[˜:ZèÎXZXk>Zé®K¨niØî{êN8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ö6†&7FW'2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Zû{J~iØî{êNûÈÎx›[èj~iŠş{¾X{Şi[ûÈÎXúşKº^yJ‚f÷W&–W"XˆniéûÈ…WFW.(	5vW–ÂZé®ynûÈ[^[ÈûÈÎK¸îˆÎh¨®ŠzK®Šë®Kˆî‹>Y(ÎXˆniéˆN{;¾‹[~iÚ^8""À¢'7FGW2#¢&æVVG2×7FFVÖVçB×&Wf–Wr ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öæöWF†W&–â"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢$†–Æ&W'BYû®Zé®ynûÉ®ˆºRE"BiŠşŠû®x›xêşûÈÎX‰ZI®š[ÈşxêòE%·…ÒBK™şiŠşŠû®x›xêş8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†–Æ&W'BÖ&6—2"À¢&æöWF†W&–âÖWV—fÆVæ6R ¢ÒÀ¢&æ÷FR#¢.Y
+¾[›®KªNhÚ.xêşx˜iÊÎûÉ¾iÈ™™KŠ®XùXX>˜xŞZHŞ[©NyJYû®Zé®yn8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öæöWF†W&–â"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.Šû®x›xêşiŠşxëKº>Kº>i[XzKÙ^y¨NYû®zûÉ¤†–Æ&W'BYû®Zé®ynKùŞŠøZI®š[Èşxêşy¨Nynh;>iÈ™™yIşh‰ûÈÎK¸îˆÎKº>i[{~XúşKº^yKiÈ™™ZI®KŠ®ikzˆ¾Zé®K˜8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†–Æ&W'BÖ&6—2"À¢&æöWF†W&–âÖWV—fÆVæ6R ¢ÒÀ¢&æ÷FR#¢.Y
+¾[›®KªNhÚ.xêşx˜iÊÎûÉ¾iÈ™™KŠ®XùXX>˜xŞZHŞ[©NyJYû®Zé®yn8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öæöWF†W&–â"À¢&f–VÆB#¢&f÷&×VÆ6F–öç2"À¢'FW‡B#¢$†–Æ&W'BYû®Zé®yn8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†–Æ&W'BÖ&6—2"À¢&æöWF†W&–âÖWV—fÆVæ6R ¢ÒÀ¢&æ÷FR#¢.Y
+¾[›®KªNhÚ.xêşx˜iÊÎûÉ¾iÈ™™KŠ®XùXX>˜xŞZHŞ[©NyJYû®Zé®yn8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öæöWF†W&–â"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢.Šû®x›iÚK»nKùŞŠøynh;>™;îz‹>Zé®ûÈÎKÛşiÈ™™yIşh‰h‰K‹®Xúşˆ;ŞûÉ´†–Æ&W'BYû®Zé®ynKùŞŠøZI®š[ÈşxêşŠû®x›ûÈÎK¸îˆÎKº>i[{~XúşyKiÈ™™ikzˆ¾Zé®K˜8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&†–Æ&W'BÖ&6—2"À¢&æöWF†W&–âÖWV—fÆVæ6R ¢ÒÀ¢&æ÷FR#¢.Y
+¾[›®KªNhÚ.xêşx˜iÊÎûÉ¾iÈ™™KŠ®XùXX>˜xŞZHŞ[©NyJYû®Zé®yn8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öÖöGVÆW2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.iÈ™™yIşh‰jŠy¨N{¹>ièNZé®ynûÈ…”BKˆ®ûÈ{¹X{¢DÒÅÆ6öær%ç"ÅÆ÷ÇW2ÅÆ&–v÷ÇW2"ò†Eö’’NûÈÎiŠş{«şh
+~Kº>i[KŠÒ¦÷&Fâj~Xxn[Ú.y¨NKº>i[jk©8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'–BÖÖöGVÆRÖFV6ö×÷6—F–öâ"À¢'–BÖ–çf&–çBÖf7F÷'2×Væ—VR"À¢&6ö×ÆW‚Ö¦÷&FâÖf÷&Ò ¢ÒÀ¢&æ÷FR#¢%”NKˆ®iÈ™™yIşh‰jŠy¨NZÙYÊ8YJşKˆh
+~KˆîZHÔ¦÷&Fîj~Xxn[Ú.YØ~[{.[^[ÈûÉ´¦÷&Fî{¹>Šë®YÊjÚN™™ZHŞiÈ™™{»Nzé~ZÙûÈÎKˆŞh¨®™ÙîKº>i[™zŞYùşKˆ®y¨NiÈynj~Xxn[Ú.k{~K‹®YÎKˆŠ‹û8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öÖöGVÆW2"À¢&f–VÆB#¢&W‡G&–ç6–v‡B"À¢'FW‡B#¢%”BKˆ®iÈ™™yIşh‰jŠiÈ{¹>ièNZé®ynûÈÎiŠş{«şh
+~Kº>i[¦÷&Fâj~Xxn[Ú.y¨NiÚ^k©8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'–BÖÖöGVÆRÖFV6ö×÷6—F–öâ"À¢'–BÖ–çf&–çBÖf7F÷'2×Væ—VR"À¢&6ö×ÆW‚Ö¦÷&FâÖf÷&Ò ¢ÒÀ¢&æ÷FR#¢%”NKˆ®iÈ™™yIşh‰jŠy¨NZÙYÊ8YJşKˆh
+~KˆîZHÔ¦÷&Fîj~Xxn[Ú.YØ~[{.[^[ÈûÉ´¦÷&Fî{¹>Šë®YÊjÚN™™ZHŞiÈ™™{»Nzé~ZÙûÈÎKˆŞh¨®™ÙîKº>i[™zŞYùşKˆ®y¨NiÈynj~Xxn[Ú.k{~K‹®YÎKˆŠ‹û8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&÷&–ÖRÖ–FVÇ2"À¢&f–VÆB#¢&–çGV—F–öâ"À¢'FW‡B#¢.™»nx+Zé®ynûÈ„çVÆÇ7FVÆÆVç6G®ûÈ[»®z¸¾K¨nKº>i[KˆîXzKÙ^y¨NZÙ~X[ûÉ®ynh;2(iBKº>i[{~ûÈÎ{Jynh;2(iBKˆŞXúş{ªn{~8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢'vV²ÖçVÆÇ7FVÆÆVç6G¢"À¢'7G&öærÖçVÆÇ7FVÆÆVç6G¢"À¢&—'&VGV6–&ÆR×&–ÖRÖ6÷'&W7öæFVæ6R ¢ÒÀ¢&æ÷FR#¢.™™Kº>i[™zŞYùşKˆ®y¨NiÈ™™Xù˜xşZI®š[ÈşxêşûÉ¾Kº>i[™¸nZû[©Nj[Èşynh;>ûÈÎ™Ùîz›®KˆŞXúş{ªnKº>i[™¸nZû[©N{Jynh;>ûÈÎièZJ~ynh;>Zû[©F¾x+ûÈÎYNZû[©NYØ~[{.Šøiˆî8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&öF–ÖVç6–öâ×F†V÷'’"À¢&f–VÆB#¢&FVf–æ—F–öâ"À¢'FW‡B#¢.ZûYùòF²BKˆ®iÈ™™yIşh‰i[NxêşûÈÂEÅÆF–Ò"BzØK¨îX[nXˆn[ÈşYùşYÊ‚F²BKˆ®y¨N‹h^‹h®jÊi[ûÈ„æöWF†W"jÚ>ŠxNXÉn[É^ynûÈ8""À¢'7FGW2#¢'&Wf–WvVB×v—F‚×&ööb"À¢'&ööd–G2#¢°¢&æöWF†W"Öæ÷&ÖÆ—¦F–öâ"À¢&ff–æRÖFöÖ–âÖF–ÖVç6–öâÖf÷&×VÆ ¢ÒÀ¢&æ÷FR#¢.iÈ™™yIşh‰i[Nxêşx˜iÊÎûÈÎK»¾hHşYû®YùşûÉ¾ZèÎi[N™;îXÈ^hºÎjÚ>ŠxNXÉn8i[Nhš[Ê{Jynh;>h
+~‹J8ZI®š[Èşxêş{»Ni[Xø®‹h^‹h®Yû®KªNhÚ.8" ¢ÒÀ¢°¢'F÷–2#¢&ÆvV'&ögVæFÖVçFÂ×O=÷Ëh‘éì¶»§q«^unds çº²é¢†çš„æ ¸å¿ƒã€‚",
       "status": "needs-statement-review"
     },
     {
@@ -2462,7 +425,13 @@
       "topic": "geometry/compactness",
       "field": "extraInsight",
       "text": "ç´§è‡´æ€§æŠŠæ— é™è¦†ç›–åŒ–ä¸ºæœ‰é™è¦†ç›–ï¼Œæ˜¯åˆ†æä¸­â€œæå€¼å­˜åœ¨â€â€œä¸€è‡´è¿ç»­â€çš„æ ¹æºï¼›Heineâ€“Borel å®šç†ç»™å‡º $\\mathbb{R}^n$ ä¸­çš„åˆ¤æ®ã€‚",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "extreme-value-compact",
+        "heine-cantor",
+        "heine-borel-rn"
+      ],
+      "note": "ç´§è‡´å®šä¹‰å³æœ‰é™å­è¦†ç›–ï¼›ä¸€èˆ¬ç´§è‡´ç©ºé—´ä¸Šçš„æå€¼å®šç†ä¸ Heineâ€“Cantor å®šç†å·²è¯æ˜ï¼Œæœ‰é™ç»´æ¬§æ°ç©ºé—´çš„é—­æœ‰ç•Œåˆ¤æ®ç”± Heineâ€“Borel è¯æ˜ã€‚"
     },
     {
       "topic": "geometry/homology-groups-topology",

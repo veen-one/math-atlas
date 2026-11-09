@@ -2755,6 +2755,18 @@
         "intermediate-value"
       ],
       "note": "前半句是连通定义；连续像命题及实值区间介值命题均有独立证明。"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "extraInsight",
+      "text": "紧致性把无限覆盖化为有限覆盖，是分析中“极值存在”“一致连续”的根源；Heine–Borel 定理给出 $\\mathbb{R}^n$ 中的判据。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "extreme-value-compact",
+        "heine-cantor",
+        "heine-borel-rn"
+      ],
+      "note": "紧致定义即有限子覆盖；一般紧致空间上的极值定理与 Heine–Cantor 定理已证明，有限维欧氏空间的闭有界判据由 Heine–Borel 证明。"
     }
   ]
 }
