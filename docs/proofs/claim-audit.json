@@ -3001,6 +3001,16 @@
       "note": "有限无向多重图；明确以两个不同端部定义度数，所以自环计度 2，平行边分别计数。"
     },
     {
+      "topic": "discrete/graphs-networks",
+      "field": "extraExamples",
+      "text": "Euler 定理：含边的有限无向多重图中，忽略孤立点后连通且奇度顶点数为 0 或 2，当且仅当存在经过每条边恰一次的 Euler 通路；0 个奇顶点时可闭合。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "euler-trail-criterion"
+      ],
+      "note": "精确假设为有限无向多重图、含边、非孤立顶点连通；证明必要性与 Hierholzer 式闭游走拼接构造，两个奇点时加辅助边再切开。"
+    },
+    {
       "topic": "discrete/paths-connectivity",
       "field": "definition",
       "text": "有限图的 Menger 定理：边不交路径最大数等于最小边割大小；对不相邻的两端点，内部顶点不交路径最大数等于最小内部点割大小。",

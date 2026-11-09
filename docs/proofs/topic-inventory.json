@@ -1,5 +1,5 @@
 {
-  "proofCount": 572,
+  "proofCount": 573,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -3292,7 +3292,8 @@
       "subject": "离散数学与计算",
       "branch": "图论",
       "proofIds": [
-        "handshake"
+        "handshake",
+        "euler-trail-criterion"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -3317,6 +3318,7 @@
       "proofIds": [
         "maxflow-mincut",
         "vertex-menger",
+        "euler-trail-criterion",
         "edge-menger-finite"
       ],
       "coverage": "partial",
