@@ -2767,6 +2767,28 @@
         "heine-borel-rn"
       ],
       "note": "紧致定义即有限子覆盖；一般紧致空间上的极值定理与 Heine–Cantor 定理已证明，有限维欧氏空间的闭有界判据由 Heine–Borel 证明。"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "formulaCaptions",
+      "text": "确界原理。",
+      "status": "reviewed-as-foundation",
+      "proofIds": [],
+      "foundationIds": [
+        "axiom-real"
+      ],
+      "note": "本卷将实数的确界性质列为实数完备性基础 axiom-real；这是明确采用的公理前提，不把它伪称为已证明定理。"
+    },
+    {
+      "topic": "analysis/completeness-reals",
+      "field": "extraInsight",
+      "text": "完备性有多种等价形式，其中“确界原理”最常用于存在性证明：只要证明一个集合非空且有上界，就自动得到上确界。",
+      "status": "reviewed-as-foundation",
+      "proofIds": [],
+      "foundationIds": [
+        "axiom-real"
+      ],
+      "note": "“非空且有上界的实数集存在上确界”正是本卷明确列出的 axiom-real 完备性公理，属于基础而非推导。"
     }
   ]
 }
