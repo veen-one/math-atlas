@@ -2345,6 +2345,26 @@
         "binomial-theorem"
       ],
       "note": "取定理中的 y=1 得第一式，再令 x=1 得所有二项式系数之和为 2^n；此处 n 为非负整数。省略的求和范围为 k=0,…,n。"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "formulaCaptions",
+      "text": "素数定理（PNT）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "由 Chebyshev 的 θ 渐近及显式夹逼证明 π(x)∼x/log x；命题已定义 π(x) 为不超过 x 的素数数目。"
+    },
+    {
+      "topic": "numbertheory/prime-counting",
+      "field": "formulaCaptions",
+      "text": "素数定理的极限形式。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "极限式 lim_{x→∞} π(x)/(x/log x)=1 与 π(x)∼x/log x 按渐近等价定义相同，证明见素数定理条目。"
     }
   ]
 }

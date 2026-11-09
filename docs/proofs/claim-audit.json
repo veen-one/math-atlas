@@ -1740,13 +1740,21 @@
       "topic": "numbertheory/prime-counting",
       "field": "formulaCaptions",
       "text": "素数定理（PNT）。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "由 Chebyshev 的 θ 渐近及显式夹逼证明 π(x)∼x/log x；命题已定义 π(x) 为不超过 x 的素数数目。"
     },
     {
       "topic": "numbertheory/prime-counting",
       "field": "formulaCaptions",
       "text": "素数定理的极限形式。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "prime-number-theorem-proof"
+      ],
+      "note": "极限式 lim_{x→∞} π(x)/(x/log x)=1 与 π(x)∼x/log x 按渐近等价定义相同，证明见素数定理条目。"
     },
     {
       "topic": "numbertheory/prime-counting",

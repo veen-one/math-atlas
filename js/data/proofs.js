@@ -7862,7 +7862,8 @@ window.ATLAS.proofBook = {
     {
       "id": "prime-number-theorem-proof",
       "topics": [
-        "numbertheory/prime-number-theorem"
+        "numbertheory/prime-number-theorem",
+        "numbertheory/prime-counting"
       ],
       "title": "素数定理",
       "statement": "令 π(x)=#{p≤x}，则 π(x)∼x/log x。",

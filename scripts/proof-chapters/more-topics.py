@@ -446,7 +446,7 @@ def register(P, BASES):
       r'定义 f(t)=e^(−t)θ(e^t)−1。Chebyshev 上界使 f 有界，且局部可积。其 Laplace 变换对 Re(z)>0 为 g(z)=Φ(z+1)/(z+1)−1/z。令 H(s)=Φ(s)−1/(s−1)，前引理给 H 在 Re(s)≥1 邻域解析，于是 g(z)=H(z+1)/(z+1)−1/(z+1)，在 Re(z)≥0 解析。Newman 定理遂给 ∫₀∞f(t)dt 收敛，即 ∫₁∞(θ(x)−x)x^(−2)dx 收敛。',
       r'若某固定 λ>1 时有任意大 x 满足 θ(x)≥λx，则由 θ 单调，对 x≤t≤λx 有 θ(t)−t≥λx−t。因此偏差积分在该区间至少为 ∫_x^(λx)(λx−t)t^(−2)dt=∫₁^λ(λ−u)u^(−2)du>0，与收敛积分的尾段必须趋零矛盾。',
       r'若固定 0<λ<1 时有任意大 x 满足 θ(x)≤λx，则在 λx≤t≤x 有 θ(t)−t≤λx−t，偏差积分至多为 ∫_λ^1(λ−u)u^(−2)du<0，同样矛盾。故对任意 λ>1，最终 θ(x)<λx；对任意 λ<1，最终 θ(x)>λx。即 θ(x)/x→1。$\square$')
-    P('prime-number-theorem-proof','numbertheory/prime-number-theorem','素数定理',r'令 π(x)=#{p≤x}，则 π(x)∼x/log x。','theta-asymptotic-prime-theorem','θ(x)∼x 给下界；排除小素数后，以任意固定 ε>0 控制其余素数的对数权重。',
+    P('prime-number-theorem-proof','numbertheory/prime-number-theorem numbertheory/prime-counting','素数定理',r'令 π(x)=#{p≤x}，则 π(x)∼x/log x。','theta-asymptotic-prime-theorem','θ(x)∼x 给下界；排除小素数后，以任意固定 ε>0 控制其余素数的对数权重。',
       r'θ(x)≤π(x)log x，因为每个 p≤x 的权重 log p≤log x。因此 π(x)≥θ(x)/log x，给出 liminf π(x)log x/x≥1。',
       r'固定 0<ε<1。将 p<x^(1−ε) 的素数至多 x^(1−ε) 个单独计入；其余 p∈[x^(1−ε),x] 满足 log p≥(1−ε)log x。因此 θ(x)≥(1−ε)log x[π(x)−x^(1−ε)]。',
       r'整理得 limsup π(x)log x/x≤1/(1−ε)，因为 x^(1−ε)log x/x→0。令 ε↓0 得 limsup≤1。结合下界，π(x)log x/x→1，即素数定理。',
