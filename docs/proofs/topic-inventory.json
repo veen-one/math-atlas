@@ -1,5 +1,5 @@
 {
-  "proofCount": 580,
+  "proofCount": 581,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -10,6 +10,7 @@
         "compact-interval",
         "heine-cantor",
         "intermediate-value",
+        "extreme-value-compact",
         "continuous-borel-measurable"
       ],
       "coverage": "partial",
@@ -2355,6 +2356,7 @@
         "compact-interval",
         "continuous-compact",
         "finite-dimensional-compactness",
+        "extreme-value-compact",
         "closed-subset-compact",
         "compact-hausdorff-closed",
         "compact-metric-subsequence",

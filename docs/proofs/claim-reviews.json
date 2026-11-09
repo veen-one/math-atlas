@@ -2598,6 +2598,16 @@
         "pythagorean-theorem"
       ],
       "note": "坐标差向量为 (3,4)，距离平方为 3²+4²；由面积拼合法证明的勾股定理得到距离 5。"
+    },
+    {
+      "topic": "geometry/compactness",
+      "field": "formulaCaptions",
+      "text": "极值定理。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "extreme-value-compact"
+      ],
+      "note": "本卷给出一般非空紧致拓扑空间到 R 的完整证明：连续像紧致，紧致实集有界且闭，上下确界由闭性落在像集中。"
     }
   ]
 }
