@@ -2365,6 +2365,46 @@
         "prime-number-theorem-proof"
       ],
       "note": "极限式 lim_{x→∞} π(x)/(x/log x)=1 与 π(x)∼x/log x 按渐近等价定义相同，证明见素数定理条目。"
+    },
+    {
+      "topic": "foundations/godel-first",
+      "field": "definition",
+      "text": "本卷证明的 Gödel 第一不完备性定理版本：若 $T$ 是可靠且有效可公理化、含足够算术的理论，并满足本章显式闭项编码计算假设，则存在句子 $G_T$，使 $T \\nvdash G_T$ 且 $T \\nvdash \\neg G_T$；$G_T$ 在标准自然数模型中为真。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "godel-first-sound-theory"
+      ],
+      "note": "页面现与实际证明的可靠性假设、有效公理化、算术表达力及闭项编码假设一致。该版本强于单纯一致性假设；Rosser 将一致性减弱到一致性的经典加强在本卷未证。"
+    },
+    {
+      "topic": "foundations/godel-first",
+      "field": "formulaCaptions",
+      "text": "Gödel 第一不完备性定理（可靠理论版本）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "godel-first-sound-theory"
+      ],
+      "note": "公式和标题明确限定为本卷已经证明的可靠理论版本；其依赖包括对角引理和闭项编码基础。"
+    },
+    {
+      "topic": "foundations/godel-second",
+      "field": "definition",
+      "text": "本卷证明的 Gödel 第二不完备性定理版本：若 $T$ 一致、有效可公理化、能构造所需对角句，且标准证明谓词满足本章明列的 D1–D3 与编码假设，则 $T$ 不证明自身一致性句 $\\mathrm{Con}(T)=\\neg\\mathrm{Prov}_T(\\ulcorner 0=1 \\urcorner)$。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "godel-second-incompleteness"
+      ],
+      "note": "结论与条件化证明一致：Löb 定理需要对角句及 D1–D3；D1–D3 的适用又依赖明确的证明检查与编码条件。本卷没有把条件未经证明地推广到所有包含 PA 的理论。"
+    },
+    {
+      "topic": "foundations/godel-second",
+      "field": "formulaCaptions",
+      "text": "第二不完备性定理（D1–D3 条件版）。",
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "godel-second-incompleteness"
+      ],
+      "note": "公式标题限定在已证明的 D1–D3 条件版本；Con(T) 按本卷定义为 ¬Prov_T(⌜0=1⌝)。"
     }
   ]
 }

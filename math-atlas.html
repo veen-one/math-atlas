@@ -2959,10 +2959,10 @@ window.ATLAS.subjects.foundations.branches.push(
       {
         id: 'godel-first',
         name: '第一不完备性',
-        brief: '足够强的相容公理化理论有不可判定句',
+        brief: '可靠且有效公理化的算术理论有不可判定句',
         keywords: ['哥德尔不完备性', '哥德尔编码', '不可判定', '自指'],
         definition: [
-          '哥德尔第一不完备性定理（1931）：任何足以表达基本算术（如包含 PA 或 Q）的**有效公理化**且**相容**的理论 $T$，都存在一个句子 $G_T$，使得 $T \\nvdash G_T$ 且 $T \\nvdash \\neg G_T$。',
+          '本卷证明的 Gödel 第一不完备性定理版本：若 $T$ 是可靠且有效可公理化、含足够算术的理论，并满足本章显式闭项编码计算假设，则存在句子 $G_T$，使 $T \\nvdash G_T$ 且 $T \\nvdash \\neg G_T$；$G_T$ 在标准自然数模型中为真。本卷尚未证明仅以一致性为前提的 Rosser 强化。',
           '该句子在标准自然数模型中为真，但 $T$ 无法证明它。这就是“存在不可判定的真命题”。'
         ],
         intuition: [
@@ -2971,8 +2971,8 @@ window.ATLAS.subjects.foundations.branches.push(
         ],
         formulas: [
           {
-            tex: 'T \\supseteq \\mathrm{PA},\\ T \\text{ 相容且有效公理化} \\implies \\exists G_T:\\ T \\nvdash G_T \\ \\text{且}\\ T \\nvdash \\neg G_T',
-            caption: '第一不完备性定理。'
+            tex: '\\operatorname{Sound}(T),\\quad \\text{有效公理化、含足够算术且满足闭项编码条件} \\implies \\exists G_T:\\ T \\nvdash G_T \\land T \\nvdash \\neg G_T',
+            caption: 'Gödel 第一不完备性定理（可靠理论版本）。'
           },
           {
             tex: 'G_T \\leftrightarrow \\neg \\mathrm{Prov}_T(\\ulcorner G_T \\urcorner)',
@@ -2990,7 +2990,7 @@ window.ATLAS.subjects.foundations.branches.push(
         brief: '在相应条件下不能证明自身相容',
         keywords: ['第二不完备性', '一致性陈述', '可证性谓词', 'Hilbert 纲领'],
         definition: [
-          '哥德尔第二不完备性定理：若 $T$ 是包含 PA 的有效公理化理论，则 $T$ 不能在自身内部证明其相容性陈述 $\\mathrm{Con}(T)$，除非 $T$ 本身不相容。',
+          '本卷证明的 Gödel 第二不完备性定理版本：若 $T$ 一致、有效可公理化、能构造所需对角句，且标准证明谓词满足本章明列的 D1–D3 与编码假设，则 $T$ 不证明自身一致性句 $\\mathrm{Con}(T)=\\neg\\mathrm{Prov}_T(\\ulcorner 0=1 \\urcorner)$。对所有包含 PA 的理论验证这些算术化条件，未在本卷一并展开。',
           '形式化地：$T \\nvdash \\mathrm{Con}(T)$（在 $T$ 相容的前提下）。'
         ],
         intuition: [
@@ -2999,8 +2999,8 @@ window.ATLAS.subjects.foundations.branches.push(
         ],
         formulas: [
           {
-            tex: 'T \\supseteq \\mathrm{PA},\\ T \\text{ 相容} \\implies T \\nvdash \\mathrm{Con}(T)',
-            caption: '第二不完备性定理。'
+            tex: 'T\\text{ 一致、有效，且满足对角句及 D1--D3 编码条件}\\implies T\\nvdash\\mathrm{Con}(T)',
+            caption: '第二不完备性定理（D1–D3 条件版）。'
           },
           {
             tex: '\\mathrm{Con}(T) \\equiv \\neg \\mathrm{Prov}_T(\\ulcorner 0=1 \\urcorner)',
