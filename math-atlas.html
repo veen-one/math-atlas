@@ -11046,7 +11046,7 @@ window.ATLAS.extras['analysis/cauchy-integral-theorem'] = {
 window.ATLAS.extras['analysis/residues'] = {
   insight: '留数是洛朗展开中 $1/(z-a)$ 项的系数，只依赖奇点附近的局部行为。计算实积分时，常用大圆弧引理与约当引理控制辅助弧上的积分，使围道积分化为留数和；高阶极点可用求导公式计算留数。',
   examples: [
-    '计算 $\\int_0^\\infty\\frac{\\sin x}{x}\\,dx$：考虑 $\\oint\\frac{e^{iz}}{z}\\,dz$ 沿上半平面大半圆。$z=0$ 处留数为 $1$，约当引理给出弧上积分趋于 $0$，故积分为 $\\pi/2$。',
+    '计算 $\\int_0^\\infty\\frac{\\sin x}{x}\\,dx$：考虑 $\\oint\\frac{e^{iz}}{z}\\,dz$ 沿上半平面大半圆，并在原点用顺时针小上半圆缩进。$z=0$ 处留数为 $1$，小弧积分趋于 $-i\\pi$，约当引理给出大弧积分趋于 $0$，故积分为 $\\pi/2$。',
     '二阶极点留数：$f(z)=\\frac{1}{(z-1)^2(z+1)}$ 在 $z=1$ 的留数为 $\\frac{d}{dz}\\left[\\frac{1}{z+1}\\right]_{z=1}=-\\frac14$。'
   ]
 };
@@ -20101,6 +20101,64 @@ window.ATLAS.proofBook = {
         "给阿贝尔群G定义整数数乘：非负整数为重复加法，负整数先取逆。交换律与结合律验证Z模公理；反向Z模的加法群阿贝尔。群同态恰是Z模同态，因为它保持重复加法与逆。因此两类对象的有限生成与同构一致。",
         "Z是PID：非零理想取最小正整数d，对任意元素除以d，余数仍在理想中且小于d，只能零，故理想为dZ。PID有限生成模结构及唯一性给G的直和分解。将不变因子乘单位±1改成正数，删除单位1因子，便有2≤d₁|…|d_r，且各数及自由秩唯一。",
         "若s>0，直和含无限循环子群，群无限；若s=0，各循环因子有限，其直积基数为∏d_i。因此有限群情形恰是s=0，阶数公式成立，空积对应平凡群。$\\square$"
+      ]
+    },
+    {
+      "id": "jordan-upper-semicircle",
+      "topics": [
+        "analysis/residues",
+        "analysis/cauchy-integral-theorem"
+      ],
+      "title": "上半圆的 Jordan 引理与显式界",
+      "statement": "设a>0，Γ_R为上半圆z=Re^(iθ)、0≤θ≤π，g在弧上连续，M_R=sup_(Γ_R)|g|。则 |∫_(Γ_R)e^(iaz)g(z)dz|≤πM_R/a。因而M_R→0时弧积分趋零。",
+      "dependencies": [
+        "contour-estimate",
+        "ftc-second"
+      ],
+      "idea": "指数模为e^(−aR sinθ)，用正弦在半区间的线性下界消去弧长增长。",
+      "steps": [
+        "参数化得积分模至多 RM_R∫₀^π e^(−aR sinθ)dθ。sin在[0,π/2]上凹，故位于连接端点的弦之上，即sinθ≥2θ/π；这也可由二阶导数−sinθ≤0及导数单调直接证明弦不等式。另一半区间用sin(π−θ)=sinθ。",
+        "因此该积分至多2RM_R∫₀^(π/2)e^(−2aRθ/π)dθ≤2RM_R·π/(2aR)=πM_R/a。若M_R→0，右侧趋零。上界只要求弧上连续，不要求g在内部全纯；内部全纯性属于之后使用围道定理的独立条件。$\\square$"
+      ]
+    },
+    {
+      "id": "pole-residue-derivative",
+      "topics": [
+        "analysis/residues"
+      ],
+      "title": "有限阶极点的留数求导公式",
+      "statement": "若f在a处至多有m阶极点，m≥1，h(z)=(z−a)^m f(z)可全纯延拓到a，则 Res(f,a)=h^((m−1))(a)/(m−1)!。若f的极点阶数恰为m，还要求h(a)≠0。",
+      "dependencies": [
+        "holomorphic-taylor",
+        "local-laurent-expansion"
+      ],
+      "idea": "留数对应h的Taylor级数中恰好抵消m−1个幂的系数。",
+      "steps": [
+        "在a的邻域写h(z)=Σ_(k≥0)c_k(z−a)^k，其中c_k=h^(k)(a)/k!。除以(z−a)^m得f(z)=Σ_(k≥0)c_k(z−a)^(k−m)，这就是穿孔盘的Laurent展开，或由Laurent唯一性与已知展开比较。",
+        "幂次−1仅在k=m−1出现，故留数等于c_(m−1)，得到公式。若h(a)=0，极点可能降阶或可去，但公式仍成立；若h(a)≠0，最低非零项恰为(z−a)^(−m)，所以阶数恰为m。$\\square$"
+      ]
+    },
+    {
+      "id": "dirichlet-sine-integral-contour",
+      "topics": [
+        "analysis/residues",
+        "analysis/integration-calculus"
+      ],
+      "title": "Dirichlet 积分的缩进围道完整证明",
+      "statement": "广义积分∫₀∞ sinx/x dx收敛且等于π/2。使用e^(iz)/z时，原点在实轴积分路径上，必须以小半圆缩进处理，不能直接把它当作普通内部极点。",
+      "dependencies": [
+        "jordan-upper-semicircle",
+        "weighted-residue-theorem",
+        "contour-estimate",
+        "ftc-second"
+      ],
+      "idea": "大弧由Jordan引理趋零，小弧保留半个极点贡献，实轴两段合起来给正弦积分。",
+      "steps": [
+        "先证尾积分收敛。对B>A≥1，分部积分得 ∫_A^B sinx/x dx=[−cosx/x]_A^B−∫_A^B cosx/x² dx，绝对值至多1/A+1/B+1/A≤3/A。尾积分满足Cauchy条件。原点sinx/x连续填值1，因此下限0也无发散。",
+        "取0<ε<R，围道按−R到−ε的实轴段、小上半圆εe^(iθ)（θ从π降到0）、ε到R的实轴段、大上半圆Re^(iθ)（θ从0升到π）连接。它避开0。f=e^(iz)/z在C上仅有孤立奇点0；带绕数留数定理给总积分为2πi乘绕数，因为Res(f,0)=1。",
+        "该围道对0绕数为零，可直接算核积分而不借Jordan曲线定理：两实轴段的∫dz/z分别为logε−logR及logR−logε，相消；小弧为−iπ，大弧为iπ，也相消。因此总f积分为零。",
+        "小弧积分为∫_π^0 i exp(iεe^(iθ))dθ，ε→0时一致趋于−iπ；一致性可由指数幂级数给|e^w−1|≤|w|e^|w|。大弧取g=1/z，M_R=1/R，Jordan界给其模≤π/R→0。实轴两段则相加为2i∫_ε^R sinx/x dx，余弦部分因奇性相消。",
+        "固定R先令ε→0，总积分等式给2i∫₀^R sinx/x dx−iπ+大弧积分=0。再令R→∞，使用已证收敛和大弧估计，得2i∫₀∞sinx/x dx=iπ，即所列值。小弧的半极点贡献不可遗漏。$\\square$"
       ]
     },
     {

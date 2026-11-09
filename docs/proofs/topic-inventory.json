@@ -1,5 +1,5 @@
 {
-  "proofCount": 530,
+  "proofCount": 533,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -131,6 +131,7 @@
         "continuous-path-primitive-integral",
         "cauchy-homotopy",
         "cauchy-simply-connected",
+        "jordan-upper-semicircle",
         "weighted-residue-theorem"
       ],
       "coverage": "partial",
@@ -143,6 +144,9 @@
       "branch": "复分析",
       "proofIds": [
         "contour-estimate",
+        "jordan-upper-semicircle",
+        "pole-residue-derivative",
+        "dirichlet-sine-integral-contour",
         "local-laurent-expansion",
         "isolated-singularity-classification",
         "weighted-residue-theorem",
@@ -215,6 +219,7 @@
         "riemann-linearity",
         "riemann-additivity",
         "convex-primitive",
+        "dirichlet-sine-integral-contour",
         "one-dimensional-substitution"
       ],
       "coverage": "partial",

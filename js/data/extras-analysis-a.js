@@ -69,7 +69,7 @@ window.ATLAS.extras['analysis/cauchy-integral-theorem'] = {
 window.ATLAS.extras['analysis/residues'] = {
   insight: '留数是洛朗展开中 $1/(z-a)$ 项的系数，只依赖奇点附近的局部行为。计算实积分时，常用大圆弧引理与约当引理控制辅助弧上的积分，使围道积分化为留数和；高阶极点可用求导公式计算留数。',
   examples: [
-    '计算 $\\int_0^\\infty\\frac{\\sin x}{x}\\,dx$：考虑 $\\oint\\frac{e^{iz}}{z}\\,dz$ 沿上半平面大半圆。$z=0$ 处留数为 $1$，约当引理给出弧上积分趋于 $0$，故积分为 $\\pi/2$。',
+    '计算 $\\int_0^\\infty\\frac{\\sin x}{x}\\,dx$：考虑 $\\oint\\frac{e^{iz}}{z}\\,dz$ 沿上半平面大半圆，并在原点用顺时针小上半圆缩进。$z=0$ 处留数为 $1$，小弧积分趋于 $-i\\pi$，约当引理给出大弧积分趋于 $0$，故积分为 $\\pi/2$。',
     '二阶极点留数：$f(z)=\\frac{1}{(z-1)^2(z+1)}$ 在 $z=1$ 的留数为 $\\frac{d}{dz}\\left[\\frac{1}{z+1}\\right]_{z=1}=-\\frac14$。'
   ]
 };
