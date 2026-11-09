@@ -1,5 +1,5 @@
 {
-  "proofCount": 538,
+  "proofCount": 541,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -1278,6 +1278,8 @@
       "branch": "表示论",
       "proofIds": [
         "finite-representation-unitary",
+        "regular-representation-multiplicities",
+        "complex-group-algebra-matrix-blocks",
         "representation-kernel",
         "character-class-function"
       ],
@@ -1306,6 +1308,8 @@
         "complex-eigenvalue",
         "finite-character-orthogonality",
         "real-schur-counterexample",
+        "regular-representation-multiplicities",
+        "irreducible-characters-class-basis",
         "maschke",
         "schur-lemma"
       ],
@@ -1366,6 +1370,9 @@
         "finite-representation-unitary",
         "finite-character-orthogonality",
         "character-multiplicity",
+        "regular-representation-multiplicities",
+        "irreducible-characters-class-basis",
+        "complex-group-algebra-matrix-blocks",
         "schur-lemma",
         "character-class-function"
       ],
