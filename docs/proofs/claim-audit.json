@@ -2157,7 +2157,13 @@
       "topic": "geometry/curves-surfaces",
       "field": "intuition",
       "text": "高斯绝妙定理：高斯曲率只由第一基本形式决定，与曲面如何嵌入空间无关——这是内蕴几何的开端。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "surface-gauss-weingarten",
+        "surface-gauss-equation",
+        "gauss-theorema-egregium"
+      ],
+      "note": "C³正则参数曲面；由混合偏导相等推导Gauss方程，明确给第一基本形式及至多二阶导数的曲率表达式，并证明局部等距保持曲率。"
     },
     {
       "topic": "geometry/curves-surfaces",
@@ -2199,7 +2205,11 @@
       "topic": "geometry/compactness",
       "field": "definition",
       "text": "Heine–Borel 定理：$\\mathbb{R}^n$ 的子集紧致当且仅当它有界且闭。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heine-borel-rn"
+      ],
+      "note": "仅限有限维欧氏空间R^n；对应证明分别展开紧集闭且有界、闭有界推出紧致两个方向。"
     },
     {
       "topic": "geometry/compactness",
@@ -2211,7 +2221,11 @@
       "topic": "geometry/compactness",
       "field": "formulaCaptions",
       "text": "Heine–Borel 定理。",
-      "status": "needs-statement-review"
+      "status": "reviewed-with-proof",
+      "proofIds": [
+        "heine-borel-rn"
+      ],
+      "note": "仅限有限维欧氏空间R^n；对应证明分别展开紧集闭且有界、闭有界推出紧致两个方向。"
     },
     {
       "topic": "geometry/compactness",
