@@ -1,5 +1,5 @@
 {
-  "proofCount": 487,
+  "proofCount": 493,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -503,6 +503,7 @@
       "proofIds": [
         "banach-contraction",
         "picard-lindelof",
+        "linear-ode-existence",
         "gronwall-discrete",
         "ode-flow-semigroup",
         "illposed-differentiation"
@@ -2810,6 +2811,10 @@
       "subject": "应用与计算数学",
       "branch": "控制理论",
       "proofIds": [
+        "finite-horizon-lqr-verification",
+        "linear-ode-existence",
+        "finite-horizon-riccati-existence",
+        "finite-horizon-lqr-complete",
         "hurwitz-linear-stability",
         "schur-discrete-stability",
         "discrete-lyapunov-equation",
@@ -2867,6 +2872,11 @@
       "subject": "应用与计算数学",
       "branch": "控制理论",
       "proofIds": [
+        "deterministic-bellman-principle",
+        "classical-hjb-verification",
+        "finite-horizon-lqr-verification",
+        "finite-horizon-riccati-existence",
+        "finite-horizon-lqr-complete",
         "euler-lagrange-variation"
       ],
       "coverage": "partial",
