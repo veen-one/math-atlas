@@ -1,5 +1,5 @@
 {
-  "proofCount": 583,
+  "proofCount": 584,
   "topics": [
     {
       "key": "analysis/continuity-uniform",
@@ -25,7 +25,8 @@
         "uniform-continuous-limit",
         "dini",
         "weierstrass-m",
-        "uniform-integration"
+        "uniform-integration",
+        "arzela-ascoli-sequential"
       ],
       "coverage": "partial",
       "theoremReview": "pending"
@@ -40,6 +41,7 @@
         "weierstrass-m",
         "continuous-functions-complete",
         "termwise-differentiation",
+        "arzela-ascoli-sequential",
         "holomorphic-compact-limit",
         "montel-locally-bounded",
         "pointwise-limit-measurable",
@@ -2358,6 +2360,7 @@
         "compact-interval",
         "continuous-compact",
         "finite-dimensional-compactness",
+        "arzela-ascoli-sequential",
         "extreme-value-compact",
         "closed-subset-compact",
         "compact-hausdorff-closed",
